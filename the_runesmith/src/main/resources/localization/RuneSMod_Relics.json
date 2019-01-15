@@ -1,0 +1,9 @@
+{
+	"Blueberries": {
+		"NAME": "Blueberries",
+		"FLAVOR": "A mysterious berries left by the forgotten one.",
+		"DESCRIPTIONS": [
+			"Gain 8 max HP."
+		]
+	}
+}
