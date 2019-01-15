@@ -80,7 +80,7 @@ public class Terraform extends CustomCard {
 			);
 		}
 		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, 
-				new TerraPower(AbstractDungeon.player, TERRA_AMT)));
+				new TerraPower(AbstractDungeon.player, TERRA_AMT),TERRA_AMT));
 	}
 	
 	public AbstractCard makeCopy() {

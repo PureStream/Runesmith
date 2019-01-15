@@ -61,9 +61,9 @@ public class HeatedChisel extends CustomCard {
 		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, 
 				new VulnerablePower(m, this.magicNumber, false), this.magicNumber));
 		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, 
-				new IgnisPower(AbstractDungeon.player, ELEMENT_AMT)));
+				new IgnisPower(AbstractDungeon.player, ELEMENT_AMT),ELEMENT_AMT));
 		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, 
-				new TerraPower(AbstractDungeon.player, ELEMENT_AMT)));
+				new TerraPower(AbstractDungeon.player, ELEMENT_AMT),ELEMENT_AMT));
 	}
 
 	public AbstractCard makeCopy() {
