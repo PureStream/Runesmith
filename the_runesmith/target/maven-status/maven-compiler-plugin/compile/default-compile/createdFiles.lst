@@ -1,10 +1,13 @@
+runesmith\actions\RuneChannelAction.class
 runesmith\patches\PlayerClassEnum.class
 runesmith\orbs\FirestoneRune.class
 runesmith\cards\Runesmith\Strike_RS.class
 runesmith\relics\Blueberries.class
 runesmith\orbs\RuneOrb.class
 runesmith\patches\LibraryTypeEnum.class
+runesmith\cards\Runesmith\Fortify.class
 runesmith\relics\BrokenRuby.class
+runesmith\cards\Runesmith\CraftFirestone.class
 runesmith\cards\Runesmith\Defend_RS.class
 runesmith\patches\AbstractCardEnum.class
 runesmith\character\player\RunesmithCharacter.class

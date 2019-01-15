@@ -56,9 +56,9 @@ public abstract class RuneOrb extends AbstractOrb {
 	@Override
 	public void updateDescription() {
 		String tmpDesc;
-		if(this.upgraded)		tmpDesc = this.descriptions[0];
+		if(!this.upgraded)		tmpDesc = this.descriptions[0];
 		else tmpDesc = this.descriptions[1];
-		this.description = tmpDesc.replace("{pot}", this.potential+"");
+		this.description = tmpDesc.replace("{Pot}", this.potential+"");
 	}
 	
 	public void onStartOfTurn() {

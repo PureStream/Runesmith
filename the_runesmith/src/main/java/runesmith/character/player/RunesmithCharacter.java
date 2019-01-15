@@ -62,6 +62,7 @@ public class RunesmithCharacter extends CustomPlayer {
 		retVal.add("Defend_RS");
 		retVal.add("Defend_RS");
 		retVal.add("Defend_RS");
+		retVal.add("CraftFirestone");
 		//retVal.add("MyCard2");
 		return retVal;
 	}

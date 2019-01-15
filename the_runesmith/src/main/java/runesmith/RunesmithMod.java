@@ -22,9 +22,9 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import basemod.BaseMod;
 import basemod.abstracts.CustomRelic;
 import basemod.interfaces.EditCharactersSubscriber;
-import runesmith.cards.Runesmith.Defend_RS;
-import runesmith.cards.Runesmith.Strike_RS;
+import runesmith.cards.Runesmith.*;
 import runesmith.character.player.RunesmithCharacter;
+import runesmith.helpers.PotencyVariable;
 import runesmith.patches.AbstractCardEnum;
 import runesmith.patches.PlayerClassEnum;
 import runesmith.relics.Blueberries;
@@ -250,6 +250,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
 	@Override
 	public void receiveEditCards() {
 		logger.info("begin editting cards");
+		BaseMod.addDynamicVariable(new PotencyVariable());
 		
 		loadCardsToAdd();
 		
@@ -266,6 +267,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
 		cardsToAdd.clear();
 		cardsToAdd.add(new Strike_RS());
 		cardsToAdd.add(new Defend_RS());
+		cardsToAdd.add(new CraftFirestone());
 	}
 
 	@Override

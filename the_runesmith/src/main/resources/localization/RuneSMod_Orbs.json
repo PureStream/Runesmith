@@ -2,7 +2,7 @@
   "Firestone": {
     "NAME": "Firestone",
     "DESCRIPTION": [
-      "Deal #b{pot} damage at the start of your turn."
+      "Deal {Pot} damage at the start of your turn."
     ]
   }
 }
