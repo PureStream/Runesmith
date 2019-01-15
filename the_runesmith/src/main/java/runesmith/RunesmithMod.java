@@ -84,7 +84,6 @@ public class RunesmithMod implements PostExhaustSubscriber,
 	}
 		
 	public static void initialize() {
-		
 		new RunesmithMod();
 	}
 	

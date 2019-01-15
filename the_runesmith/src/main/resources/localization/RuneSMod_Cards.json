@@ -1,0 +1,10 @@
+{
+	"Strike_RS": {
+		"NAME": "Strike",
+		"DESCRIPTION": "Deal !D! damage."
+	},
+	"Defend_RS": {
+		"NAME": "Defend",
+		"DESCRIPTION": "Gain !B! Block."
+	},
+}

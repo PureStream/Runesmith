@@ -45,15 +45,15 @@ public class RunesmithCharacter extends CustomPlayer {
 	
 	public ArrayList<String> getStartingDeck() { // starting deck 'nuff said
 		ArrayList<String> retVal = new ArrayList<>();
-		retVal.add("MyCard0");
-		retVal.add("MyCard0");
-		retVal.add("MyCard0");
-		retVal.add("MyCard0");
-		retVal.add("MyCard1");
-		retVal.add("MyCard1");
-		retVal.add("MyCard1");
-		retVal.add("MyCard1");
-		retVal.add("MyCard2");
+		retVal.add("Strike_RS");
+		retVal.add("Strike_RS");
+		retVal.add("Strike_RS");
+		retVal.add("Strike_RS");
+		retVal.add("Defend_RS");
+		retVal.add("Defend_RS");
+		retVal.add("Defend_RS");
+		retVal.add("Defend_RS");
+		//retVal.add("MyCard2");
 		return retVal;
 	}
 	
@@ -70,7 +70,8 @@ public class RunesmithCharacter extends CustomPlayer {
     public static final int HAND_SIZE = 5;
     public static final int ORB_SLOTS = 1;
     
-	public CharSelectInfo getLoadout() { // the rest of the character loadout so includes your character select screen info plus hp and starting gold
+	public CharSelectInfo getLoadout() { 
+		// the rest of the character loadout so includes your character select screen info plus hp and starting gold
 		return new CharSelectInfo("My Character", "My character is a person from the outer worlds. He makes magic stuff happen.",
 				STARTING_HP, MAX_HP, ORB_SLOTS, STARTING_GOLD, HAND_SIZE,
 			this, getStartingRelics(), getStartingDeck(), false);
