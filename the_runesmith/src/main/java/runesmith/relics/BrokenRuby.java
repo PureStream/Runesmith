@@ -40,7 +40,7 @@ public class BrokenRuby extends CustomRelic {
 			if (this.counter % NUM_CARDS == 0) {
 				this.counter = 0;
 				flash();
-				RunesmithMod.logger.info("MiniHakkero : Applying ChargeUpPower for using card : " + card.cardID);
+				RunesmithMod.logger.info("BrokenRuby : Applying Ignis for using 3 attack cards");
 				AbstractDungeon.actionManager.addToTop(
 				          new ApplyPowerAction(
 				              AbstractDungeon.player,
