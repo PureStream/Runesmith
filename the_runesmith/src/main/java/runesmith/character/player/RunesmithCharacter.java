@@ -68,10 +68,8 @@ public class RunesmithCharacter extends CustomPlayer {
 	
 	public ArrayList<String> getStartingRelics() { // starting relics - also simple
 		ArrayList<String> retVal = new ArrayList<>();
-		//retVal.add("MyRelic");
-		//UnlockTracker.markRelicAsSeen("MyRelic");
-		retVal.add("Blueberries");
-		UnlockTracker.markRelicAsSeen("Blueberries");
+		retVal.add("BrokenRuby");
+		UnlockTracker.markRelicAsSeen("BrokenRuby");
 		return retVal;
 	}
 	
