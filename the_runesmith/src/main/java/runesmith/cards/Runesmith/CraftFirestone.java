@@ -63,7 +63,7 @@ public class CraftFirestone extends AbstractRunicCard {
 		              AbstractDungeon.player,
 		              AbstractDungeon.player,
 		              new IgnisPower(AbstractDungeon.player, IGNIS_AMT),
-		              1
+		              IGNIS_AMT
 		          )
 		      );
 	}
