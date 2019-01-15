@@ -49,11 +49,10 @@ public class Terraform extends CustomCard {
 		} else {
 			multiplier = 2;
 		}
-		if (p.hasPower("ChargeUpPower")) {
-			this.baseBlock += p.getPower("ChargeUpPower").amount;
+		if (p.hasPower("TerraPower")) {
+			this.baseBlock += (p.getPower("TerraPower").amount * multiplier);
 			super.applyPowers();
 		}
-
 		if (this.block > 0) {
 			String extendString = EXTENDED_DESCRIPTION[0] + this.block + EXTENDED_DESCRIPTION[1];
 		if (!this.upgraded) {
