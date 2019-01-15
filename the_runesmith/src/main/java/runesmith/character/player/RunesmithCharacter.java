@@ -37,7 +37,7 @@ public class RunesmithCharacter extends CustomPlayer {
 //		this.dialogX = (this.drawX + 0.0F * Settings.scale); // set location for text bubbles
 //		this.dialogY = (this.drawY + 220.0F * Settings.scale); // you can just copy these values
 		
-//		loadAnimation(MY_CHARACTER_SKELETON_ATLAS, MY_CHARCTER_SKELETON_JSON, 1.0F);
+		loadAnimation(MY_CHARACTER_SKELETON_ATLAS, MY_CHARACTER_SKELETON_JSON, 1.0F);
 		
 //		AnimationState.TrackEntry e = this.state.setAnimation(0, "animation", true);
 //		e.setTime(e.getEndTime() * MathUtils.random());
