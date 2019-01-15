@@ -1,8 +1,8 @@
 {
-  "Firestone": {
+  "Runesmith:Firestone": {
     "NAME": "Firestone",
     "DESCRIPTION": [
-      "Deal !P! damage at the start of your turn."
+      "Deal {Pot} damage at the start of your turn."
     ]
   }
 }

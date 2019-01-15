@@ -7,6 +7,10 @@
 		"NAME": "Defend",
 		"DESCRIPTION": "Gain !B! Block."
 	},
+	"Runesmith:CraftFirestone": {
+		"NAME": "Craft Firestone",
+		"DESCRIPTION": "#r2 Ignis: Craft a Firestone Rune with !Pot! potency."
+	},
 	"Runesmith:ChiselStab": {
 		"NAME": "Chisel Stab",
 		"DESCRIPTION": "Deal !D! Damage. Gain !M! Ignis."

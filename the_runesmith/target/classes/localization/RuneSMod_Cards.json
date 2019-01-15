@@ -1,14 +1,22 @@
 {
-	"Strike_RS": {
+	"Runesmith:Strike_RS": {
 		"NAME": "Strike",
 		"DESCRIPTION": "Deal !D! damage."
 	},
-	"Defend_RS": {
+	"Runesmith:Defend_RS": {
 		"NAME": "Defend",
 		"DESCRIPTION": "Gain !B! Block."
 	},
-	"CraftFirestone": {
+	"Runesmith:CraftFirestone": {
 		"NAME": "Craft Firestone",
-		"DESCRIPTION": "2 Ignis: Craft Firestone with !P! potency."
+		"DESCRIPTION": "#r2 Ignis: Craft a Firestone Rune with !Pot! potency."
+	},
+	"Runesmith:ChiselStab": {
+		"NAME": "Chisel Stab",
+		"DESCRIPTION": "Deal !D! Damage. Gain !M! Ignis."
+	},
+	"Runesmith:EarthShield": {
+		"NAME": "Earth Shield",
+		"DESCRIPTION": "Gain !D! Block. Gain !M! Terra."
 	}
 }
