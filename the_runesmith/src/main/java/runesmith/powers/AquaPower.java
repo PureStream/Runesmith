@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 
 public class AquaPower extends AbstractPower {
 	
-	public static final String POWER_ID = "ChargeUpPower";
+	public static final String POWER_ID = "AquaPower";
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
@@ -18,6 +18,7 @@ public class AquaPower extends AbstractPower {
 		this.ID = POWER_ID;
 		this.owner = owner;
 		this.amount = amount;
+		this.priority = 2;
 		this.type = AbstractPower.PowerType.BUFF;
 		updateDescription();
 		this.img = new Texture("images/powers/xxx.png"); //<--------------Some img things

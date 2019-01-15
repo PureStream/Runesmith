@@ -21,6 +21,7 @@ public class IgnisPower extends AbstractPower {
 		this.owner = owner;
 		this.amount = amount;
 		this.priority = 0;
+		this.type = AbstractPower.PowerType.BUFF;
 		updateDescription();
 		this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/Ignis.png"), 0, 0, 84, 84);
 	    this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/IgnisSmall.png"), 0, 0, 32, 32);
