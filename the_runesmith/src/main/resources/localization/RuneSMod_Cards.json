@@ -13,7 +13,7 @@
 	},
 	"Runesmith:ChiselStab": {
 		"NAME": "Chisel Stab",
-		"DESCRIPTION": "Deal !D! Damage. Gain !M! Ignis."
+		"DESCRIPTION": "Deal !D! Damage. Gain 2 Ignis."
 	},
 	"Runesmith:EarthShield": {
 		"NAME": "Earth Shield",
