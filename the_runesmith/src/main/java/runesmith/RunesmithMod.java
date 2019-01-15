@@ -24,6 +24,7 @@ import basemod.abstracts.CustomRelic;
 import basemod.interfaces.EditCharactersSubscriber;
 import runesmith.cards.Runesmith.ChiselStab;
 import runesmith.cards.Runesmith.Defend_RS;
+import runesmith.cards.Runesmith.EarthShield;
 import runesmith.cards.Runesmith.Strike_RS;
 import runesmith.character.player.RunesmithCharacter;
 import runesmith.patches.AbstractCardEnum;
@@ -268,6 +269,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
 		cardsToAdd.add(new Strike_RS());
 		cardsToAdd.add(new Defend_RS());
 		cardsToAdd.add(new ChiselStab());
+		cardsToAdd.add(new EarthShield());
 	}
 
 	@Override

@@ -11,4 +11,8 @@
 		"NAME": "Chisel Stab",
 		"DESCRIPTION": "Deal !D! Damage. Gain !M! Ignis."
 	}
+	"Runesmith:EarthShield": {
+		"NAME": "Earth Shield",
+		"DESCRIPTION": "Gain !D! Block. Gain !M! Terra."
+	}
 }
