@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 import basemod.abstracts.CustomRelic;
@@ -14,12 +15,12 @@ import runesmith.powers.IgnisPower;
 public class BrokenRuby extends CustomRelic {
 	
 	public static final String ID = "BrokenRuby";
-	private static final String IMG = ""; //<--------- Need some img
+	private static final String IMG = "images/relics/BrokenRuby.png"; //<--------- Need some img
 	private static final int IGNIS_AMT = 1;
 	private static final int NUM_CARDS = 3;
 	
 	public BrokenRuby() {
-		super(ID, IMG, RelicTier.STARTER, LandingSound.MAGICAL); 
+		super(ID, ImageMaster.loadImage(IMG), RelicTier.STARTER, LandingSound.MAGICAL); 
 	
 	}
 	

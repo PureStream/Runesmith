@@ -1,0 +1,16 @@
+{
+	"Blueberries": {
+		"NAME": "Blueberries",
+		"FLAVOR": "A mysterious berries left by the forgotten one.",
+		"DESCRIPTIONS": [
+			"Gain 8 max HP."
+		]
+	},
+	"BrokenRuby": {
+		"NAME": "Broken Ruby",
+		"FLAVOR": "Once was used by the greatest Runesmith",
+		"DESCRIPTIONS": [
+			"Gain #b1 #yIgnis at the start of the combat. Every three attacks played gives #b1 #yIgnis."
+		]
+	}
+}
