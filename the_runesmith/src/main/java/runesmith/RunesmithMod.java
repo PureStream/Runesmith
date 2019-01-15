@@ -61,13 +61,13 @@ public class RunesmithMod implements PostExhaustSubscriber,
 	
 	private static final String RUNESMITH_BUTTON = "images/character/runesmithButton.png";
 	private static final String RUNESMITH_PORTRAIT = "images/character/runesmithPortrait.png";
-	private static Color BEIGE = new Color(245f/255f, 245f/255f, 220f/255f, 1f);
+	public static Color BEIGE = new Color(245f/255f, 245f/255f, 220f/255f, 1f);
 	
 	private static final String CARD_STRING = "localization/RuneSMod_Cards.json";
-	private static final String RELIC_STRING = "localization/RuneSMod_Relics";
-	private static final String POWER_STRING = "localization/RuneSMod_Powers";
-	private static final String POTION_STRING = "localization/RuneSMod_Potions";
-	private static final String KEYWORD_STRING = "localization/RuneSMod_Keywords";
+	private static final String RELIC_STRING = "localization/RuneSMod_Relics.json";
+	private static final String POWER_STRING = "localization/RuneSMod_Powers.json";
+	private static final String POTION_STRING = "localization/RuneSMod_Potions.json";
+	private static final String KEYWORD_STRING = "localization/RuneSMod_Keywords.json";
 
 	public RunesmithMod() {
 		BaseMod.subscribe(this);
@@ -82,12 +82,12 @@ public class RunesmithMod implements PostExhaustSubscriber,
 				"images/cardui/1024/bg_attack_beige.png", //attackBgPortrait
 				"images/cardui/1024/bg_skill_beige.png", //skillBgPortrait
 				"images/cardui/1024/bg_power_beige.png", //powerBgPortrait
-				"images/cardui/1024/card_beige_orb", //energyOrbPortrait
+				"images/cardui/1024/card_beige_orb.png", //energyOrbPortrait
 				"images/cardui/description_beige_orb.png"  ); //cardEnergyOrb
 	}
 		
 	public static void initialize() {
-		new RunesmithMod();
+		RunesmithMod mod = new RunesmithMod();
 	}
 	
 	@Override
@@ -150,10 +150,10 @@ public class RunesmithMod implements PostExhaustSubscriber,
 		  potion = POTION_STRING;
 		}*/
 		
-		relicStrings = Gdx.files.internal(relic).readString(
-		    String.valueOf(StandardCharsets.UTF_8)
-		);
-		BaseMod.loadCustomStrings(RelicStrings.class, relicStrings);
+//		relicStrings = Gdx.files.internal(relic).readString(
+//		    String.valueOf(StandardCharsets.UTF_8)
+//		);
+//		BaseMod.loadCustomStrings(RelicStrings.class, relicStrings);
 		cardStrings = Gdx.files.internal(card).readString(
 		    String.valueOf(StandardCharsets.UTF_8)
 		);
@@ -161,11 +161,11 @@ public class RunesmithMod implements PostExhaustSubscriber,
 		powerStrings = Gdx.files.internal(power).readString(
 		    String.valueOf(StandardCharsets.UTF_8)
 		);
-		BaseMod.loadCustomStrings(PowerStrings.class, powerStrings);
-		potionStrings = Gdx.files.internal(potion).readString(
-		    String.valueOf(StandardCharsets.UTF_8)
-		);
-		BaseMod.loadCustomStrings(PotionStrings.class, potionStrings);
+//		BaseMod.loadCustomStrings(PowerStrings.class, powerStrings);
+//		potionStrings = Gdx.files.internal(potion).readString(
+//		    String.valueOf(StandardCharsets.UTF_8)
+//		);
+//		BaseMod.loadCustomStrings(PotionStrings.class, potionStrings);
 		
 		logger.info("done editing strings");
 	}
@@ -195,15 +195,15 @@ public class RunesmithMod implements PostExhaustSubscriber,
 	        keywordsPath = KEYWORD_STRING;
 	        break;
 	    }*/
-	    keywordsPath = KEYWORD_STRING;
-
-	    Gson gson = new Gson();
-	    Keywords keywords;
-	    keywords = gson.fromJson(loadJson(keywordsPath), Keywords.class);
-	    for (Keyword key : keywords.keywords) {
-	      logger.info("Loading keyword : " + key.NAMES[0]);
-	      BaseMod.addKeyword(key.NAMES, key.DESCRIPTION);
-	    }
+//	    keywordsPath = KEYWORD_STRING;
+//
+//	    Gson gson = new Gson();
+//	    Keywords keywords;
+//	    keywords = gson.fromJson(loadJson(keywordsPath), Keywords.class);
+//	    for (Keyword key : keywords.keywords) {
+//	      logger.info("Loading keyword : " + key.NAMES[0]);
+//	      BaseMod.addKeyword(key.NAMES, key.DESCRIPTION);
+//	    }
 	    logger.info("Keywords setting finished.");
 	}
 	
