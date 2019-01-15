@@ -270,6 +270,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
 		cardsToAdd.add(new CraftFirestone());
 		cardsToAdd.add(new ChiselStab());
 		cardsToAdd.add(new EarthShield());
+		cardsToAdd.add(new RuneHurl());
 		cardsToAdd.add(new HeatedChisel());
 		cardsToAdd.add(new Terraform());
 	}

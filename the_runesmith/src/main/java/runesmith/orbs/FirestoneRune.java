@@ -19,17 +19,26 @@ public class FirestoneRune extends RuneOrb {
 	}
 	
 	@Override
-	public void onEndOfTurn() {
+	public void onStartOfTurn() {
 		this.activateEffect();
-		
+		//get random target
 		 AbstractCreature m = AbstractDungeon.getMonsters().getRandomMonster(true);
-		 new DamageAction(m,
+		 //damage enemy
+		 AbstractDungeon.actionManager.addToBottom(
+		 new DamageRandomEnemyAction(
 					new DamageInfo(AbstractDungeon.player, 
 							this.potential, 
 							DamageInfo.DamageType.THORNS),
 					AbstractGameAction.AttackEffect.FIRE
-				);
-		}
+				)
+		 );
+	}
+	
+	@Override
+	public void onBreak() {
+		onStartOfTurn();
+		onStartOfTurn();
+	}
 
 	@Override
 	public AbstractOrb makeCopy() { return new FirestoneRune(this.potential); }

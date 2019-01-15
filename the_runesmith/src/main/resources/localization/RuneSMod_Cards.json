@@ -9,7 +9,7 @@
 	},
 	"Runesmith:CraftFirestone": {
 		"NAME": "Craft Firestone",
-		"DESCRIPTION": "#r2 Ignis: Craft a Firestone Rune with !Pot! potency."
+		"DESCRIPTION": "2 Ignis: Craft a Firestone Rune with !Pot! potency."
 	},
 	"Runesmith:ChiselStab": {
 		"NAME": "Chisel Stab",
@@ -31,5 +31,9 @@
 			" NL (Gain ",
 			" Block.)"
 		]
+	},
+	"Runesmith:RuneHurl": {
+		"NAME": "Rune Hurl",
+		"DESCRIPTION": "Break oldest rune to deal !D! damage."
 	}
 }
