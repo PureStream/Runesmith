@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.Keyword;
+import com.megacrit.cardcrawl.localization.OrbStrings;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
@@ -150,10 +151,10 @@ public class RunesmithMod implements PostExhaustSubscriber,
 		  potion = POTION_STRING;
 		}*/
 		
-//		relicStrings = Gdx.files.internal(relic).readString(
-//		    String.valueOf(StandardCharsets.UTF_8)
-//		);
-//		BaseMod.loadCustomStrings(RelicStrings.class, relicStrings);
+		relicStrings = Gdx.files.internal(relic).readString(
+		    String.valueOf(StandardCharsets.UTF_8)
+		);
+		BaseMod.loadCustomStrings(RelicStrings.class, relicStrings);
 		cardStrings = Gdx.files.internal(card).readString(
 		    String.valueOf(StandardCharsets.UTF_8)
 		);
@@ -161,10 +162,13 @@ public class RunesmithMod implements PostExhaustSubscriber,
 		powerStrings = Gdx.files.internal(power).readString(
 		    String.valueOf(StandardCharsets.UTF_8)
 		);
-//		BaseMod.loadCustomStrings(PowerStrings.class, powerStrings);
-//		potionStrings = Gdx.files.internal(potion).readString(
-//		    String.valueOf(StandardCharsets.UTF_8)
-//		);
+		BaseMod.loadCustomStrings(PowerStrings.class, powerStrings);
+		potionStrings = Gdx.files.internal(potion).readString(
+		    String.valueOf(StandardCharsets.UTF_8)
+		);
+		
+		String orbStrings = Gdx.files.internal("localization/RuneSMod_Orbs.json").readString(String.valueOf(StandardCharsets.UTF_8));
+        BaseMod.loadCustomStrings(OrbStrings.class, orbStrings);
 //		BaseMod.loadCustomStrings(PotionStrings.class, potionStrings);
 		
 		logger.info("done editing strings");

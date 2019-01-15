@@ -1,14 +1,14 @@
 {
 	"IgnisPower": {
 		"NAME": "Ignis",
-		"DESCRIPTIONS": ["You currently have #b", " #yIgnis."]
+		"DESCRIPTIONS": ["You currently have #b Ignis", " #yIgnis."]
 	},
 	"TerraPower": {
 		"NAME": "Terra",
-		"DESCRIPTIONS": ["You currently have #b", " #yTerra."]
+		"DESCRIPTIONS": ["You currently have #b Terra", " #yTerra."]
 	},
 	"AquaPower": {
 		"NAME": "Aqua",
-		"DESCRIPTIONS": ["You currently have #b", " #yAqua."]
+		"DESCRIPTIONS": ["You currently have #b Aqua", " #yAqua."]
 	}
 }
