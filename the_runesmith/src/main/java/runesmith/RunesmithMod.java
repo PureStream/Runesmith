@@ -1,5 +1,7 @@
 package runesmith;
 
+import static runesmith.patches.AbstractCardEnum.RUNESMITH_BEIGE;
+
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 
@@ -17,14 +19,19 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
 import basemod.BaseMod;
+import basemod.abstracts.CustomRelic;
 import basemod.interfaces.EditCharactersSubscriber;
 import runesmith.cards.Runesmith.Defend_RS;
 import runesmith.cards.Runesmith.Strike_RS;
 import runesmith.character.player.RunesmithCharacter;
 import runesmith.patches.AbstractCardEnum;
 import runesmith.patches.PlayerClassEnum;
+import runesmith.relics.Blueberries;
+import runesmith.relics.BrokenRuby;
 
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -68,12 +75,15 @@ public class RunesmithMod implements PostExhaustSubscriber,
 	private static final String POWER_STRING = "localization/RuneSMod_Powers.json";
 	private static final String POTION_STRING = "localization/RuneSMod_Potions.json";
 	private static final String KEYWORD_STRING = "localization/RuneSMod_Keywords.json";
+	
+	private List<AbstractCard> cardsToAdd = new ArrayList<>();
+	private List<CustomRelic> relicsToAdd = new ArrayList<>();
 
 	public RunesmithMod() {
 		BaseMod.subscribe(this);
 		logger.info("creating the color : RUNESMITH_BEIGE");
 		BaseMod.addColor(
-				AbstractCardEnum.RUNESMITH_BEIGE,
+				RUNESMITH_BEIGE,
 				BEIGE,
 				"images/cardui/512/bg_attack_beige.png", //attackBg
 				"images/cardui/512/bg_skill_beige.png", //skillBg
@@ -236,20 +246,38 @@ public class RunesmithMod implements PostExhaustSubscriber,
 	@Override
 	public void receiveEditCards() {
 		logger.info("begin editting cards");
+		
+		loadCardsToAdd();
+		
 	    logger.info("add cards for the Runesmith");
-	    
-	    BaseMod.addCard(new Strike_RS());
-	    UnlockTracker.unlockCard("Strike_RS");
-	    BaseMod.addCard(new Defend_RS());
-	    UnlockTracker.unlockCard("Defend_RS");
+	   
+	    for (AbstractCard card : cardsToAdd) {
+	    	BaseMod.addCard(card);
+	    }
 		
 	    logger.info("done editing cards");
+	}
+	
+	private void loadCardsToAdd() {
+		cardsToAdd.clear();
+		cardsToAdd.add(new Strike_RS());
+		cardsToAdd.add(new Defend_RS());
 	}
 
 	@Override
 	public void receiveEditRelics() {
-		// TODO Auto-generated method stub
+		logger.info("Begin editing relics.");
 		
+		loadRelicsToAdd();
+		
+		for (CustomRelic relic : relicsToAdd) {
+			BaseMod.addRelicToCustomPool(relic, RUNESMITH_BEIGE);
+		}
+	}
+	
+	private void loadRelicsToAdd() {
+		relicsToAdd.clear();
+		relicsToAdd.add(new Blueberries());
 	}
 
 	@Override
