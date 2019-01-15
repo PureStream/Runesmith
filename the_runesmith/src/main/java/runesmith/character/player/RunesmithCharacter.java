@@ -20,11 +20,11 @@ import runesmith.patches.PlayerClassEnum;
 public class RunesmithCharacter extends CustomPlayer {
 	public static final int ENERGY_PER_TURN = 3;
 	
-	public static final String MY_CHARACTER_SHOULDER_2 = "img/char/shoulder2.png"; // campfire pose
-    public static final String MY_CHARACTER_SHOULDER_1 = "img/char/shoulder1.png"; // another campfire pose
-    public static final String MY_CHARACTER_CORPSE = "img/char/corpse.png"; // dead corpse
-    public static final String MY_CHARACTER_SKELETON_ATLAS = "img/char/skeleton.atlas"; // spine animation atlas
-    public static final String MY_CHARACTER_SKELETON_JSON = "img/char/skeleton.json"; // spine animation json
+	public static final String MY_CHARACTER_SHOULDER_2 = "images/character/shoulder2.png"; // campfire pose
+    public static final String MY_CHARACTER_SHOULDER_1 = "images/character/shoulder1.png"; // another campfire pose
+    public static final String MY_CHARACTER_CORPSE = "images/character/corpse.png"; // dead corpse
+    public static final String MY_CHARACTER_SKELETON_ATLAS = "images/character/skeleton.atlas"; // spine animation atlas
+    public static final String MY_CHARACTER_SKELETON_JSON = "images/character/skeleton.json"; // spine animation json
 	
 	public RunesmithCharacter (String name) {
 		super(name, PlayerClassEnum.RUNESMITH_CLASS, null, null);
@@ -64,8 +64,8 @@ public class RunesmithCharacter extends CustomPlayer {
 		return retVal;
 	}
 	
-    public static final int STARTING_HP = 75;
-    public static final int MAX_HP = 75;
+    public static final int STARTING_HP = 70;
+    public static final int MAX_HP = 70;
     public static final int STARTING_GOLD = 99;
     public static final int HAND_SIZE = 5;
     public static final int ORB_SLOTS = 1;
@@ -156,8 +156,7 @@ public class RunesmithCharacter extends CustomPlayer {
 
 	@Override
 	public String getVampireText() {
-		// TODO Auto-generated method stub
-		return null;
+		return com.megacrit.cardcrawl.events.city.Vampires.DESCRIPTIONS[0];
 	}
 
 	@Override
