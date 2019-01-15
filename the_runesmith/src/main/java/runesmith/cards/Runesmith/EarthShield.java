@@ -38,7 +38,6 @@ public class EarthShield extends CustomCard {
 			AbstractCard.CardTarget.SELF
 		);
 		this.baseBlock = BLOCK_AMT;
-		this.baseMagicNumber = this.magicNumber = TERRA_AMT;
 	}
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {

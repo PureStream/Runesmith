@@ -13,24 +13,28 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
 
 import basemod.abstracts.CustomCard;
 import basemod.helpers.BaseModCardTags;
 import runesmith.patches.AbstractCardEnum;
 import runesmith.powers.IgnisPower;
+import runesmith.powers.TerraPower;
 
-public class ChiselStab extends CustomCard {
-	public static final String ID = "Runesmith:ChiselStab";
+public class HeatedChisel extends CustomCard {
+	public static final String ID = "Runesmith:HeatedChisel";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String IMG_PATH = "images/cards/strike_RS.png"; //<-------------- need some img
-	private static final int COST = 0;
-	private static final int ATTACK_DMG = 4;
-	private static final int UPGRADE_PLUS_DMG = 2;
-	private static final int IGNIS_AMT = 2;
+	private static final int COST = 1;
+	private static final int ATTACK_DMG = 5;
+	private static final int UPGRADE_PLUS_DMG = 1;
+	private static final int ELEMENT_AMT = 1;
+	private static final int VULNERABLE_AMT = 1;
+	private static final int UPGRADE_PLUS_VULNERABLE_AMT = 1;
 
-	public ChiselStab() {
+	public HeatedChisel() {
 		super(
 			ID,
 			NAME,
@@ -43,6 +47,7 @@ public class ChiselStab extends CustomCard {
 			CardTarget.ENEMY
 		);
 		this.baseDamage = ATTACK_DMG;
+		this.baseMagicNumber = this.magicNumber = VULNERABLE_AMT;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
@@ -53,18 +58,23 @@ public class ChiselStab extends CustomCard {
 				AbstractGameAction.AttackEffect.SLASH_DIAGONAL
 			)
 		);
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, 
+				new VulnerablePower(m, this.magicNumber, false), this.magicNumber));
 		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, 
-				new IgnisPower(AbstractDungeon.player, IGNIS_AMT)));
+				new IgnisPower(AbstractDungeon.player, ELEMENT_AMT)));
+		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, 
+				new TerraPower(AbstractDungeon.player, ELEMENT_AMT)));
 	}
 
 	public AbstractCard makeCopy() {
-		return new ChiselStab();
+		return new HeatedChisel();
 	}
 
 	public void upgrade() {
 		if (!this.upgraded) {
 		  upgradeName();
 		  upgradeDamage(UPGRADE_PLUS_DMG);
+		  upgradeMagicNumber(UPGRADE_PLUS_VULNERABLE_AMT);
 		}
 	}
 }

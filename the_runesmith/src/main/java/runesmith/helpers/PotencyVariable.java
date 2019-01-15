@@ -26,7 +26,6 @@ public class PotencyVariable extends DynamicVariable{
         // Set to true if the value is modified from the base value.
     }
 
-    @Override
     public void setIsModified(AbstractCard card, boolean v)
     {
         // Do something such that isModified will return the value v.
