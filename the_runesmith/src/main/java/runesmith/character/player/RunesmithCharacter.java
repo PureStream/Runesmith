@@ -54,23 +54,23 @@ public class RunesmithCharacter extends CustomPlayer {
 	
 	public ArrayList<String> getStartingDeck() { // starting deck 'nuff said
 		ArrayList<String> retVal = new ArrayList<>();
-		retVal.add("Strike_RS");
-		retVal.add("Strike_RS");
-		retVal.add("Strike_RS");
-		retVal.add("Strike_RS");
-		retVal.add("Defend_RS");
-		retVal.add("Defend_RS");
-		retVal.add("Defend_RS");
-		retVal.add("Defend_RS");
-		retVal.add("CraftFirestone");
+		retVal.add("Runesmith:Strike_RS");
+		retVal.add("Runesmith:Strike_RS");
+		retVal.add("Runesmith:Strike_RS");
+		retVal.add("Runesmith:Strike_RS");
+		retVal.add("Runesmith:Defend_RS");
+		retVal.add("Runesmith:Defend_RS");
+		retVal.add("Runesmith:Defend_RS");
+		retVal.add("Runesmith:Defend_RS");
+		retVal.add("Runesmith:CraftFirestone");
 		//retVal.add("MyCard2");
 		return retVal;
 	}
 	
 	public ArrayList<String> getStartingRelics() { // starting relics - also simple
 		ArrayList<String> retVal = new ArrayList<>();
-		retVal.add("BrokenRuby");
-		UnlockTracker.markRelicAsSeen("BrokenRuby");
+		retVal.add("Runesmith:BrokenRuby");
+		UnlockTracker.markRelicAsSeen("Runesmith:BrokenRuby");
 		return retVal;
 	}
 	

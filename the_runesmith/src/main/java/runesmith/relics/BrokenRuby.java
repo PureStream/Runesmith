@@ -14,7 +14,7 @@ import runesmith.powers.IgnisPower;
 
 public class BrokenRuby extends CustomRelic {
 	
-	public static final String ID = "BrokenRuby";
+	public static final String ID = "Runesmith:BrokenRuby";
 	private static final String IMG = "images/relics/BrokenRuby.png"; //<--------- Need some img
 	private static final int IGNIS_AMT = 1;
 	private static final int NUM_CARDS = 3;
