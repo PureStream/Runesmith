@@ -79,8 +79,8 @@ public class Terraform extends CustomCard {
 			  new GainBlockAction(p, p, this.block)
 			);
 		}
-		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, 
-				new TerraPower(AbstractDungeon.player, TERRA_AMT),TERRA_AMT));
+		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, 
+				new TerraPower(p, TERRA_AMT),TERRA_AMT));
 	}
 	
 	public AbstractCard makeCopy() {

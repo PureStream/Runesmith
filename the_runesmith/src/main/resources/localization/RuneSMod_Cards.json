@@ -23,8 +23,8 @@
 		"NAME": "Heated Chisel",
 		"DESCRIPTION": "Deal !D! damage. Apply !M! vulnerable. Gain 1 Ignis and 1 Terra."
 	},
-	"Terraform": {
-		"NAME": "Runesmith:Terraform",
+	"Runesmith:Terraform": {
+		"NAME": "Terraform",
 		"DESCRIPTION": "Gain block equals to the number of Terra twice. Gain 1 Terra.",
 		"UPGRADE_DESCRIPTION": "Gain block equals to the number of Terra thrice. Gain 1 Terra.",
 		"EXTENDED_DESCRIPTION":[
