@@ -6,5 +6,9 @@
 	"Defend_RS": {
 		"NAME": "Defend",
 		"DESCRIPTION": "Gain !B! Block."
+	},
+	"ChiselStab": {
+		"NAME": "Chisel Stab",
+		"DESCRIPTION": "Deal !D! Damage. Gain !M! Ignis."
 	}
 }

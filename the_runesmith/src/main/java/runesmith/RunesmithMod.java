@@ -22,6 +22,7 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import basemod.BaseMod;
 import basemod.abstracts.CustomRelic;
 import basemod.interfaces.EditCharactersSubscriber;
+import runesmith.cards.Runesmith.ChiselStab;
 import runesmith.cards.Runesmith.Defend_RS;
 import runesmith.cards.Runesmith.Strike_RS;
 import runesmith.character.player.RunesmithCharacter;
@@ -266,6 +267,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
 		cardsToAdd.clear();
 		cardsToAdd.add(new Strike_RS());
 		cardsToAdd.add(new Defend_RS());
+		cardsToAdd.add(new ChiselStab());
 	}
 
 	@Override
