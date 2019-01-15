@@ -56,8 +56,8 @@ public class RunesmithMod implements PostExhaustSubscriber,
 	
 	public static final Logger logger = LogManager.getLogger(RunesmithMod.class.getName());
 	
-	private static final String RUNESMITH_BUTTON = null;
-	private static final String RUNESMITH_PORTRAIT = null;
+	private static final String RUNESMITH_BUTTON = "images/character/runesmithButton.png";
+	private static final String RUNESMITH_PORTRAIT = "images/character/runesmithPortrait.png";
 	private static Color BEIGE = new Color(245f/255f, 245f/255f, 220f/255f, 1f);
 	
 	private static final String CARD_STRING = "localization/RuneSMod_Cards.json";
@@ -72,15 +72,15 @@ public class RunesmithMod implements PostExhaustSubscriber,
 		BaseMod.addColor(
 				AbstractCardEnum.RUNESMITH_BEIGE,
 				BEIGE,
-				"", //attackBg
-				"", //skillBg
-				"", //powerBg
-				"", //energyOrb
-				"", //attackBgPortrait
-				"", //skillBgPortrait
-				"", //powerBgPortrait
-				"", //energyOrbPortrait
-				""  ); //cardEnergyOrb
+				"images/cardui/512/bg_attack_beige.png", //attackBg
+				"images/cardui/512/bg_skill_beige.png", //skillBg
+				"images/cardui/512/bg_power_beige.png", //powerBg
+				"images/cardui/512/card_beige_orb.png", //energyOrb
+				"images/cardui/1024/bg_attack_beige.png", //attackBgPortrait
+				"images/cardui/1024/bg_skill_beige.png", //skillBgPortrait
+				"images/cardui/1024/bg_power_beige.png", //powerBgPortrait
+				"images/cardui/1024/card_beige_orb", //energyOrbPortrait
+				"images/cardui/description_beige_orb.png"  ); //cardEnergyOrb
 	}
 		
 	public static void initialize() {
