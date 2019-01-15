@@ -52,5 +52,3 @@ public class BreakRuneAction extends AbstractGameAction{
 		    tickDuration();
 		  }
 	}
-
-}
