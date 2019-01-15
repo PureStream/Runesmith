@@ -17,7 +17,7 @@ public class Blueberries extends CustomRelic {
 	
 	@Override
 	public String getUpdatedDescription() {
-		return DESCRIPTIONS[0] + HP_PER_CARD + DESCRIPTIONS[1]; // DESCRIPTIONS pulls from your localization file
+		return DESCRIPTIONS[0]; // DESCRIPTIONS pulls from your localization file
 	}
 	
 	@Override
