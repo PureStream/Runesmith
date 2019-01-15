@@ -70,7 +70,7 @@ public class RuneHurl extends CustomCard {
 	}
 
 	public AbstractCard makeCopy() {
-		return new Strike_RS();
+		return new RuneHurl();
 	}
 
 	@Override
