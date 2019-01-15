@@ -14,9 +14,12 @@ import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
 import basemod.BaseMod;
 import basemod.interfaces.EditCharactersSubscriber;
+import runesmith.cards.Runesmith.Defend_RS;
+import runesmith.cards.Runesmith.Strike_RS;
 import runesmith.character.player.RunesmithCharacter;
 import runesmith.patches.AbstractCardEnum;
 import runesmith.patches.PlayerClassEnum;
@@ -234,7 +237,13 @@ public class RunesmithMod implements PostExhaustSubscriber,
 	public void receiveEditCards() {
 		logger.info("begin editting cards");
 	    logger.info("add cards for the Runesmith");
+	    
+	    BaseMod.addCard(new Strike_RS());
+	    UnlockTracker.unlockCard("Strike_RS");
+	    BaseMod.addCard(new Defend_RS());
+	    UnlockTracker.unlockCard("Defend_RS");
 		
+	    logger.info("done editing cards");
 	}
 
 	@Override
