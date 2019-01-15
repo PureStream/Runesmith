@@ -1,8 +1,10 @@
 package runesmith.powers;
 
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
@@ -20,8 +22,8 @@ public class IgnisPower extends AbstractPower {
 		this.amount = amount;
 		this.type = AbstractPower.PowerType.BUFF;
 		updateDescription();
-		this.img = new Texture("images/powers/xxx.png"); //<--------------Some img things
-
+		this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/Ignis.png"), 0, 0, 84, 84);
+	    this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/IgnisSmall.png"), 0, 0, 32, 32);
 	}
 	
 	public void stackPower(int stackAmount) {
