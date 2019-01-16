@@ -88,7 +88,7 @@
 	},
 	"Runesmith:OneForEveryOne": {
 		"NAME": "One for Every One",
-		"DESCRIPTION": "Break a random Rune and gain 1 Energy. Deal 1 damage to all enemies. Gain 1 block. Gain 1 of each element."
+		"DESCRIPTION": "Break a random Rune and gain [E] . Deal 1 damage to all enemies. Gain 1 block. Gain 1 of each element."
 	},
 	"Runesmith:RunicBullets": {
 		"NAME": "Runic Bullets",
@@ -219,7 +219,7 @@
 	},
 	"Runesmith:ManaExplosion": {
 		"NAME": "Mana Explosion",
-		"DESCRIPTION": "Break ALL of your Runes. Draw a card and gain 1 Energy for each Rune destroyed."
+		"DESCRIPTION": "Break ALL of your Runes. Draw a card and gain [E] for each Rune destroyed."
 	},
 	"Runesmith:CreatorForm": {
 		"NAME": "Creator Form",
