@@ -2,19 +2,70 @@
   "Firestone": {
     "NAME": "Firestone",
     "DESCRIPTION": [
-      "Deal {Pot} damage at the start of your turn."
+      "Deal #b{Pot} damage at the start of your turn."
     ]
   },
   "Protectio": {
     "NAME": "Protectio",
     "DESCRIPTION": [
-      "Gain {Pot} Block at the start of your turn."
+      "Gain #b{Pot} Block at the start of your turn."
     ]
   },
   "Incendium": {
     "NAME": "Incendium",
     "DESCRIPTION": [
-      "Deal {Pot} damage to all enemies at the start of your turn."
+      "Deal #b{Pot} damage to all enemies at the start of your turn."
+    ]
+  },
+  "Reservo": {
+    "NAME": "Reservo",
+    "DESCRIPTION": [
+      "At the end of the turn #yRetain up to #b1 card.",
+      "At the end of the turn #yRetain up to #b2 card."
+    ]
+  },
+  "Spiculum": {
+    "NAME": "Spiculum",
+    "DESCRIPTION": [
+      "Gain #b{Pot} Thorns."
+    ]
+  },
+  "Potentia": {
+    "NAME": "Potentia",
+    "DESCRIPTION": [
+      "Gain #b{Pot} Potency."
+    ]
+  },
+  "Ferro": {
+    "NAME": "Ferro",
+    "DESCRIPTION": [
+      "Gain #b{Pot} Plated Armor."
+    ]
+  },
+  "Prismatic": {
+    "NAME": "Prismatic",
+    "DESCRIPTION": [
+      "Give a random class card each turn.",
+      "give a random upgraded class card each turn."
+    ]
+  },
+  "Industria": {
+    "NAME": "Industria",
+    "DESCRIPTION": [
+      "Gain 1 energy at the start of your turn."
+    ]
+  },
+  "Medicinae": {
+    "NAME": "Medicinae",
+    "DESCRIPTION": [
+      "Heals {Pot} HP twice on Break."
+    ]
+  },
+  "WWWWWWWWWWWWWW": {
+    "NAME": "WWWWWWWWWWWWWW",
+    "DESCRIPTION": [
+      "WWWWWWWWWWWWWW"
     ]
   }
+  
 }

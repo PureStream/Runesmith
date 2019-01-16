@@ -2,17 +2,12 @@
 	"keywords": [
 		{
 			"NAMES": [
-			"incendium rune",
-			"Incendium Rune"
-			],
-			"DESCRIPTION": "Deal damage to all enemies depending on Potency."
-		},
-		{
-			"NAMES": [
 			"enhance",
-			"Enhance"
+			"Enhance",
+			"enchanced",
+			"Enchanced"
 			],
-			"DESCRIPTION": "Increase the efficiency of the card by #b50%. Can be stacked multiplicatively. Enhance is removed after the card is played."
+			"DESCRIPTION": "Increase damage and #yBlock of the card by #b50%. Can be stacked multiplicatively. #yEnhance is removed after the card is played."
 		},
 		{
 			"NAMES": [
@@ -26,58 +21,36 @@
 			"downgrade",
 			"Downgrade"
 			],
-			"DESCRIPTION": "Prevent a card from being exhausted once. Stasis is removed after the card is played."
-		},
-		{
-			"NAMES": [
-			"rune",
-			"Rune"
-			],
-			"DESCRIPTION": "Grants active and/or passive effect. You can't have more than 10 runes at once."
+			"DESCRIPTION": "Prevent a card from being exhausted once. #yStasis is removed after the card is played."
 		},
 		{
 			"NAMES": [
 			"potency",
 			"Potency"
 			],
-			"DESCRIPTION": "The power of rune upon creating the rune."
+			"DESCRIPTION": "Potency is the power of a rune when it is #yCrafted."
 		},
 		{
 			"NAMES": [
 			"craft",
 			"Craft"
 			],
-			"DESCRIPTION": "Create a rune using elements. Otherwise, gain that much elements instead."
+			"DESCRIPTION": "Create a rune using #yElements. If #yElements are insufficient, gain that much #yElements instead."
 		},
 		{
 			"NAMES": [
 			"elements",
 			"Elements",
 			"element",
-			"Element"
-			],
-			"DESCRIPTION": "Elements(Ignis, Terra and Aqua) are spent to craft rune and use for other utilities."
-		},
-		{
-			"NAMES": [
+			"Element",
 			"ignis",
-			"Ignis"
-			],
-			"DESCRIPTION": "One of the elements."
-		},
-		{
-			"NAMES": [
+			"Ignis",
 			"terra",
-			"Terra"
-			],
-			"DESCRIPTION": "One of the elements."
-		},
-		{
-			"NAMES": [
+			"Terra",
 			"aqua",
 			"Aqua"
 			],
-			"DESCRIPTION": "One of the elements."
+			"DESCRIPTION": "Elements(Ignis, Terra and Aqua) are spent to #yCraft runes and used for other utilities."
 		},
 		{
 			"NAMES": [
@@ -85,6 +58,91 @@
 			"Break"
 			],
 			"DESCRIPTION": "Destroy a rune and activate its effect twice. Passive effects will be removed at the start of your next turn."
+		},
+		{
+			"NAMES": [
+			"incendium",
+			"Incendium"
+			],
+			"DESCRIPTION": "Rune: Deals damage to ALL enemies."
+		},
+		{
+			"NAMES": [
+			"firestone",
+			"Firestone"
+			],
+			"DESCRIPTION": "Rune: Deals damage to random enemies."
+		},
+		{
+			"NAMES": [
+			"protectio",
+			"Protectio"
+			],
+			"DESCRIPTION": "Rune: Gain #yBlock."
+		},
+		{
+			"NAMES": [
+			"reservo",
+			"Reservo",
+			"reservo+",
+			"Reservo+"
+			],
+			"DESCRIPTION": "#yRetain a card(s)."
+		},
+		{
+			"NAMES": [
+			"spiculum",
+			"Spiculum"
+			],
+			"DESCRIPTION": "Gain #yThorns."
+		},
+		{
+			"NAMES": [
+			"potentia",
+			"Potentia"
+			],
+			"DESCRIPTION": "Gain #yPotency"
+		},
+		{
+			"NAMES": [
+			"ferro",
+			"Ferro"
+			],
+			"DESCRIPTION": "Gain #yPlated #yArmor."
+		},
+		{
+			"NAMES": [
+			"prismatic",
+			"Prismatic"
+			],
+			"DESCRIPTION": "Give a random class card each turn."
+		},
+		{
+			"NAMES": [
+			"prismatic+",
+			"Prismatic+"
+			],
+			"DESCRIPTION": "give a random upgraded class card each turn."
+		},
+		{
+			"NAMES": [
+			"industria",
+			"Industria"
+			],
+			"DESCRIPTION": "Gain 1 energy at the start of your turn."
+		},
+		{
+			"NAMES": [
+			"medicinae",
+			"Medicinae"
+			],
+			"DESCRIPTION": "Heals on #yBreak"
+		},
+		{
+			"NAMES": [
+			"WWWWWWWWWWWWWWWWW"
+			],
+			"DESCRIPTION": "WWWWWWWWWWWWWWWWW"
 		}
 	]
 }
