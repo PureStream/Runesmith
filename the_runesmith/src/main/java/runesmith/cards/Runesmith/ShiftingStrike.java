@@ -38,7 +38,7 @@ public class ShiftingStrike extends CustomCard{
 			DESCRIPTION,
 			CardType.ATTACK,
 			AbstractCardEnum.RUNESMITH_BEIGE,
-			CardRarity.COMMON,
+			CardRarity.UNCOMMON,
 			CardTarget.ENEMY
 		);
 		this.baseDamage = ATTACK_DMG;

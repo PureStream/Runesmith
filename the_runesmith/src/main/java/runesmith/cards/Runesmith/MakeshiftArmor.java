@@ -36,7 +36,7 @@ public class MakeshiftArmor extends CustomCard {
 			DESCRIPTION,
 			AbstractCard.CardType.SKILL,
 			AbstractCardEnum.RUNESMITH_BEIGE,
-			AbstractCard.CardRarity.BASIC,
+			AbstractCard.CardRarity.UNCOMMON,
 			AbstractCard.CardTarget.SELF
 		);
 		this.tags.add(BaseModCardTags.BASIC_DEFEND);
