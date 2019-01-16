@@ -9,11 +9,11 @@
 	},
 	"Runesmith:CraftFirestone": {
 		"NAME": "Craft Firestone",
-		"DESCRIPTION": "2 Ignis: Craft a Firestone Rune with !Pot! Potency."
+		"DESCRIPTION": "2 Ignis: Craft a Firestone rune with !Pot! Potency."
 	},
 	"Runesmith:CraftProtectio": {
 		"NAME": "Craft Protectio",
-		"DESCRIPTION": "2 Terra: Craft a Protectio Rune with !Pot! Potency."
+		"DESCRIPTION": "2 Terra: Craft a Protectio rune with !Pot! Potency."
 	},
 	"Runesmith:Fortify": {
 		"NAME": "Fortify",
@@ -43,16 +43,21 @@
 	},
 	"Runesmith:RuneHurl": {
 		"NAME": "Rune Hurl",
-		"DESCRIPTION": "Break oldest Rune to deal !D! damage."
+		"DESCRIPTION": "Break oldest rune to deal !D! damage."
 	},
 	"Runesmith:CraftIncendium": {
 		"NAME": "Craft Incendium",
-		"DESCRIPTION": "3 Ignis: Craft an Incendium Rune with !Pot! Potency."
+		"DESCRIPTION": "3 Ignis: Craft an Incendium rune with !Pot! Potency."
 	},
 	"Runesmith:HammerSlam": {
 		"NAME": "Hammer Slam",
+<<<<<<< HEAD
 		"DESCRIPTION": "Deal !D! damage. Draw cards equal to the number of different Runes.",
 		"UPGRADE_DESCRIPTION": "Deal !D! damage. Draw cards equal to the number of different Runes plus 1."
+=======
+		"DESCRIPTION": "Deal !D! damage. Draw cards equal to the number of different runes.",
+		"UPGRADE_DESCRIPTION": "Deal !D! damage. Draw cards equal to the number of different runes plus 1."
+>>>>>>> refs/remotes/origin/development
 	},
 	"Runesmith:ElementalConversion": {
 		"NAME": "Elemental Conversion",
@@ -85,11 +90,15 @@
 	},
 	"Runesmith:HammerThrow": {
 		"NAME": "Hammer Throw",
-		"DESCRIPTION": "Deal !D! damage then draw !M! card and upgrade it."
+		"DESCRIPTION": "Deal !D! damage then draw !M! card and Upgrade them."
 	},
 	"Runesmith:OneForEveryOne": {
 		"NAME": "One for Every One",
+<<<<<<< HEAD
 		"DESCRIPTION": "Break a random Rune and gain [E] . Deal 1 damage to all enemies. Gain 1 Block. Gain 1 of each Element."
+=======
+		"DESCRIPTION": "Break a random rune and gain [E] . Deal 1 damage to all enemies. Gain 1 Block. Gain 1 of each Element."
+>>>>>>> refs/remotes/origin/development
 	},
 	"Runesmith:RunicBullets": {
 		"NAME": "Runic Bullets",
@@ -148,7 +157,11 @@
 	},
 	"Runesmith:HammerTime": {
 		"NAME": "Hammer Time",
+<<<<<<< HEAD
 		"DESCRIPTION": "Enhance ALL of your cards containing ï¿½gHammerï¿½h. Deal !D! damage."
+=======
+		"DESCRIPTION": "Enhance ALL of your cards containing Hammer. Deal !D! damage."
+>>>>>>> refs/remotes/origin/development
 	},
 	"Runesmith:MakeshiftArmor": {
 		"NAME": "Makeshift Armor",
@@ -160,7 +173,7 @@
 	},
 	"Runesmith:ChaoticBlast": {
 		"NAME": "Chaotic Blast",
-		"DESCRIPTION": "Deal !D! damage. 1 Ignis 1 Terra 1 Aqua: Craft a random Rune."
+		"DESCRIPTION": "Deal !D! damage. 1 Ignis 1 Terra 1 Aqua: Craft a random rune."
 	},
 	"Runesmith:ElementalBurst": {
 		"NAME": "Elemental Burst",
@@ -172,8 +185,8 @@
 	},
 	"Runesmith:Shatter": {
 		"NAME": "Shatter",
-		"DESCRIPTION": "Break your oldest Rune X times.",
-		"UPGRADE_DESCRIPTION": "Break your oldest Rune X+1 times."
+		"DESCRIPTION": "Break your oldest rune X times.",
+		"UPGRADE_DESCRIPTION": "Break your oldest rune X+1 times."
 	},
 	"Runesmith:Empowerment": {
 		"NAME": "Empowerment",
@@ -190,7 +203,7 @@
 	},
 	"Runesmith:Duplicate": {
 		"NAME": "Duplicate",
-		"DESCRIPTION": "Create a copy of the next !M! Rune you craft this turn."
+		"DESCRIPTION": "Create a copy of the next !M! rune you craft this turn."
 	},
 	"Runesmith:ConstructBifrost": {
 		"NAME": "Construct Bifrost",
@@ -224,7 +237,7 @@
 	},
 	"Runesmith:ManaExplosion": {
 		"NAME": "Mana Explosion",
-		"DESCRIPTION": "Break ALL of your Runes. Draw a card and gain [E] for each Rune destroyed."
+		"DESCRIPTION": "Break ALL of your runes. Draw a card and gain [E] for each rune destroyed."
 	},
 	"Runesmith:CreatorForm": {
 		"NAME": "Creator Form",
@@ -250,10 +263,17 @@
 		"NAME": "Rune Magnet",
 		"DESCRIPTION": "Draw until you get a Craft card and discard ALL other cards drawn. NL Exhaust."
 	},
+<<<<<<< HEAD
 	"Runesmith:ThatsALotOfDAMAGE": {
 		"NAME": "Thatï¿½fs a lot of DAMAGE",
 		"DESCRIPTION": "Halves enemies current HP and block. NL Exhaust.",
 		"UPGRADE_DESCRIPTION": "Halves enemies current HP and block. NL Innate. NL Exhaust."
+=======
+	"Runesmith:ThatsALotOfDAMAGE": {
+		"NAME": "Thatfs a lot of DAMAGE",
+		"DESCRIPTION": "Halves enemies current HP and Block. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Halves enemies current HP and Block. NL Innate. NL Exhaust."
+>>>>>>> refs/remotes/origin/development
 	},
 	"Runesmith:WWWWWWWWWWWWWWWWWWWW": {
 		"NAME": "WWWWWWWWWWWWWWWWWWWW",
