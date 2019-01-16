@@ -31,15 +31,17 @@ public class EnhancedCardValueModified {
 //        	logger.info("patching enhance");
         	if(EnhanceCountField.enhanceCount.get(self)!=0) {
 
-	            int tmp = self.baseDamage;
-	            self.damage = (int) Math.floor((self.baseDamage * (Math.pow(1.5,EnhanceCountField.enhanceCount.get(self)))));
+	            int tmp = self.damage;
+//	            self.damage = (int) Math.floor((self.baseDamage * (Math.pow(1.5,EnhanceCountField.enhanceCount.get(self)))));
+	            self.damage = self.damage + MathUtils.floor(self.damage * (0.5F * EnhanceCountField.enhanceCount.get(self)));
 	            if (self.damage != tmp) {
 	                self.isDamageModified = true;
 	            }
 	            
 	            if(self instanceof AbstractRunicCard) {
-	            	int tmp2 = ((AbstractRunicCard) self).basePotency;
-	            	((AbstractRunicCard) self).potency = (int) Math.floor(tmp2 * (Math.pow(1.5,EnhanceCountField.enhanceCount.get(self))));
+	            	int tmp2 = ((AbstractRunicCard) self).potency;
+//	            	((AbstractRunicCard) self).potency = (int) Math.floor(tmp2 * (Math.pow(1.5,EnhanceCountField.enhanceCount.get(self))));
+	            	((AbstractRunicCard) self).potency = ((AbstractRunicCard) self).potency + MathUtils.floor(((AbstractRunicCard) self).potency * (0.5F * EnhanceCountField.enhanceCount.get(self)));
 	            	if(tmp2 != ((AbstractRunicCard) self).potency) {
 	            		((AbstractRunicCard) self).isPotencyModified = true;
 	            	}
@@ -48,12 +50,6 @@ public class EnhancedCardValueModified {
         }
     }
 	
-//	@SpirePatch(clz = "AbstractCard.class", method = "enhance"){
-//		public static class enhance{
-//			public static void
-//		}
-//	}
-
     @SpirePatch(cls = "com.megacrit.cardcrawl.cards.AbstractCard", method="applyPowersToBlock")
     public static class applyPowersToBlock {
         public static void Postfix(AbstractCard self)
@@ -61,7 +57,8 @@ public class EnhancedCardValueModified {
         	if(EnhanceCountField.enhanceCount.get(self)!=0) {
         	
 	            int tmp = self.block;
-	            self.block = (int) Math.floor((self.baseBlock * (Math.pow(1.5F,EnhanceCountField.enhanceCount.get(self)))));
+//	            self.block = (int) Math.floor((self.baseBlock * (Math.pow(1.5F,EnhanceCountField.enhanceCount.get(self)))));
+	            self.block = self.block + MathUtils.floor(self.block * (0.5F * EnhanceCountField.enhanceCount.get(self)));
 	            if (self.block != tmp) {
 	                self.isBlockModified = true;
 	            }
@@ -76,14 +73,25 @@ public class EnhancedCardValueModified {
         public static void Postfix(AbstractCard self, AbstractMonster mo)
         {
         	if(EnhanceCountField.enhanceCount.get(self)!=0) {
-	        	int tmp = self.baseDamage;
-	        	self.damage = (int) Math.floor((tmp * (Math.pow(1.5F,EnhanceCountField.enhanceCount.get(self)))));
+	        	int tmp = self.damage;
+//	        	self.damage = (int) Math.floor((tmp * (Math.pow(1.5F,EnhanceCountField.enhanceCount.get(self)))));
 
-	            logger.info("enchanced: "+EnhanceCountField.enhanceCount.get(self)+" damage: "+self.damage);
-	
+//	            logger.info("enchanced: "+EnhanceCountField.enhanceCount.get(self)+" damage: "+self.damage);
+	        	
+	            self.damage = self.damage+MathUtils.floor(self.damage * (0.5F * EnhanceCountField.enhanceCount.get(self)));
+
+	            if ((boolean)ReflectionHacks.getPrivate(self, AbstractCard.class, "isMultiDamage")) {
+	                for (int i = 0; i < self.multiDamage.length; i++) {
+	                    self.multiDamage[i] = self.multiDamage[i]+MathUtils.floor(self.multiDamage[i] * (0.5F * EnhanceCountField.enhanceCount.get(self)));
+	                }
+	            }
+	            
+	            logger.info("Current block: "+self.block+" with "+EnhanceCountField.enhanceCount.get(self)+" enhancement");
+	            
 	            if (self.damage != tmp) {
 	                self.isDamageModified = true;
 	            }
+	            
         	}
         }
     }
