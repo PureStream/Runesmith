@@ -17,6 +17,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import basemod.ReflectionHacks;
+import basemod.interfaces.OnCardUseSubscriber;
 import runesmith.cards.Runesmith.AbstractRunicCard;
 
 
@@ -28,21 +29,23 @@ public class EnhancedCardValueModified {
         public static void Postfix(AbstractCard self)
         {
 //        	logger.info("patching enhance");
-        	if(EnhanceCountField.enhanceCount.get(self)==0) return;
+        	if(EnhanceCountField.enhanceCount.get(self)!=0) {
 
-            int tmp = self.damage;
-            self.damage = self.damage + MathUtils.floor((float) (self.damage * (Math.pow(0.5F,EnhanceCountField.enhanceCount.get(self)))));
-            if (self.damage != tmp) {
-                self.isDamageModified = true;
-            }
-            
-            if(self instanceof AbstractRunicCard) {
-            	int tmp2 = ((AbstractRunicCard) self).potency;
-            	((AbstractRunicCard) self).potency = tmp2 + MathUtils.floor((float) (tmp2 * (Math.pow(0.5F,EnhanceCountField.enhanceCount.get(self)))));
-            	if(tmp2 != ((AbstractRunicCard) self).potency) {
-            		((AbstractRunicCard) self).isPotencyModified = true;
-            	}
-            }
+	            int tmp = self.damage;
+	            
+	            self.damage = self.damage + MathUtils.floor((float) (self.damage * (Math.pow(0.5F,EnhanceCountField.enhanceCount.get(self)))));
+	            if (self.damage != tmp) {
+	                self.isDamageModified = true;
+	            }
+	            
+	            if(self instanceof AbstractRunicCard) {
+	            	int tmp2 = ((AbstractRunicCard) self).potency;
+	            	((AbstractRunicCard) self).potency = tmp2 + MathUtils.floor((float) (tmp2 * (Math.pow(0.5F,EnhanceCountField.enhanceCount.get(self)))));
+	            	if(tmp2 != ((AbstractRunicCard) self).potency) {
+	            		((AbstractRunicCard) self).isPotencyModified = true;
+	            	}
+	            }
+        	}
         }
     }
 	
@@ -56,13 +59,14 @@ public class EnhancedCardValueModified {
     public static class applyPowersToBlock {
         public static void Postfix(AbstractCard self)
         {
-        	if(EnhanceCountField.enhanceCount.get(self)==0) return;
+        	if(EnhanceCountField.enhanceCount.get(self)!=0) {
         	
-            int tmp = self.block;
-            self.block = self.block+MathUtils.floor((float) (self.block * (Math.pow(0.5F,EnhanceCountField.enhanceCount.get(self)))));
-            if (self.block != tmp) {
-                self.isBlockModified = true;
-            }
+	            int tmp = self.block;
+	            self.block = self.block+MathUtils.floor((float) (self.block * (Math.pow(0.5F,EnhanceCountField.enhanceCount.get(self)))));
+	            if (self.block != tmp) {
+	                self.isBlockModified = true;
+	            }
+        	}
         }
     }
     
@@ -72,19 +76,20 @@ public class EnhancedCardValueModified {
     public static class calculateCardDamage {
         public static void Postfix(AbstractCard self, AbstractMonster mo)
         {
-        	if(EnhanceCountField.enhanceCount.get(self)==0) return;
-        	int tmp = self.damage;
-        	self.damage = self.damage+MathUtils.floor((float) (self.damage * (Math.pow(0.5F,EnhanceCountField.enhanceCount.get(self)))));
-
-            if ((boolean)ReflectionHacks.getPrivate(self, AbstractCard.class, "isMultiDamage")) {
-                for (int i = 0; i < self.multiDamage.length; i++) {
-                    self.multiDamage[i] = self.multiDamage[i]+MathUtils.floor((float) (self.multiDamage[i] * (Math.pow(0.5F,EnhanceCountField.enhanceCount.get(self)))));
-                }
-            }
-
-            if (self.damage != tmp) {
-                self.isDamageModified = true;
-            }
+        	if(EnhanceCountField.enhanceCount.get(self)==0) {
+	        	int tmp = self.damage;
+	        	self.damage = self.damage+MathUtils.floor((float) (self.damage * (Math.pow(0.5F,EnhanceCountField.enhanceCount.get(self)))));
+	
+	            if ((boolean)ReflectionHacks.getPrivate(self, AbstractCard.class, "isMultiDamage")) {
+	                for (int i = 0; i < self.multiDamage.length; i++) {
+	                    self.multiDamage[i] = self.multiDamage[i]+MathUtils.floor((float) (self.multiDamage[i] * (Math.pow(0.5F,EnhanceCountField.enhanceCount.get(self)))));
+	                }
+	            }
+	
+	            if (self.damage != tmp) {
+	                self.isDamageModified = true;
+	            }
+        	}
         }
     }
     
@@ -138,6 +143,11 @@ public class EnhancedCardValueModified {
 			return SpireReturn.Continue();
 		}
     }
+
+//	@Override
+//	public void receiveCardUsed(AbstractCard card) {
+//		EnhanceCountField.enhanceCount.set(card,0);
+//	}
     
     
 }
