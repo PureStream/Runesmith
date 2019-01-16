@@ -26,7 +26,7 @@ public class HammerSlam extends CustomCard{
 	private static final int COST = 2;
 	private static final int ATTACK_DMG = 11;
 	private static final int UPGRADE_PLUS_DMG = 4;
-	private static final int BASE_DRAW = 0;
+	private static final int BASE_DRAW = 1;
 	private static final int UPGRADE_PLUS_DRAW = 1;
 	
 	public HammerSlam() {
@@ -54,7 +54,7 @@ public class HammerSlam extends CustomCard{
 		if (!this.upgraded) {
 			  upgradeName();
 			  upgradeDamage(UPGRADE_PLUS_DMG);
-			  upgradeMagicNumber(UPGRADE_PLUS_DRAW);
+//			  upgradeMagicNumber(UPGRADE_PLUS_DRAW);
 			}
 	}
 
@@ -69,7 +69,7 @@ public class HammerSlam extends CustomCard{
 			);
 		
 		AbstractDungeon.actionManager.addToBottom(
-				new HammerSlamAction(p, this.magicNumber)
+				new HammerSlamAction(p, this.magicNumber,1)
 				);
 	}
 	

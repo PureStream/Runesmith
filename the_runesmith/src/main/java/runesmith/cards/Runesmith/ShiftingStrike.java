@@ -45,7 +45,7 @@ public class ShiftingStrike extends CustomCard{
 	}
 	
 	public AbstractCard makeCopy() {
-		return new HammerSlam();
+		return new ShiftingStrike();
 	}
 
 	@Override
@@ -67,10 +67,10 @@ public class ShiftingStrike extends CustomCard{
 			);
 		
 		AbstractDungeon.actionManager.addToBottom(
-				new ArmamentsAction(false)
+				new DowngradeCardInHandAction(p, false)
 		);
 		AbstractDungeon.actionManager.addToBottom(
-				new DowngradeCardInHandAction(p, false)
+				new ArmamentsAction(false)
 		);
 	}
 	

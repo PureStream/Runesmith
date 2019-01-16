@@ -10,8 +10,11 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import runesmith.orbs.RuneOrb;
 
 public class HammerSlamAction extends AbstractGameAction{
-	public HammerSlamAction(AbstractPlayer p, int amount) {
+	private int add;
+	
+	public HammerSlamAction(AbstractPlayer p, int amount, int addi) {
 		setValues(this.target, source, amount);
+		this.add = addi;
 		this.actionType = AbstractGameAction.ActionType.WAIT;
 	}
 	
@@ -23,7 +26,7 @@ public class HammerSlamAction extends AbstractGameAction{
 				runeList.add(o.ID);
 			}
 		}
-		int toDraw = runeList.size() + this.amount;
+		int toDraw = runeList.size() * this.amount + this.add;
 		if(toDraw > 0) {
 			AbstractDungeon.actionManager.addToTop(new com.megacrit.cardcrawl.actions.common.DrawCardAction(this.source, toDraw));
 		}
