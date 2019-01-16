@@ -80,11 +80,11 @@ public class EnhancedCardValueModified {
 	        	
 	            self.damage = self.damage+MathUtils.floor(self.damage * (0.5F * EnhanceCountField.enhanceCount.get(self)));
 
-	            if ((boolean)ReflectionHacks.getPrivate(self, AbstractCard.class, "isMultiDamage")) {
-	                for (int i = 0; i < self.multiDamage.length; i++) {
-	                    self.multiDamage[i] = self.multiDamage[i]+MathUtils.floor(self.multiDamage[i] * (0.5F * EnhanceCountField.enhanceCount.get(self)));
-	                }
-	            }
+//	            if ((boolean)ReflectionHacks.getPrivate(self, AbstractCard.class, "isMultiDamage")) {
+//	                for (int i = 0; i < self.multiDamage.length; i++) {
+//	                    self.multiDamage[i] = self.multiDamage[i]+MathUtils.floor(self.multiDamage[i] * (0.5F * EnhanceCountField.enhanceCount.get(self)));
+//	                }
+//	            }
 	            
 	            logger.info("Current block: "+self.block+" with "+EnhanceCountField.enhanceCount.get(self)+" enhancement");
 	            
@@ -92,6 +92,9 @@ public class EnhancedCardValueModified {
 	                self.isDamageModified = true;
 	            }
 	            
+	            if(EnhanceCountField.enhanceReset.get(self)) {
+	            	EnhanceCountField.enhanceCount.set(self,0);
+	            }
         	}
         }
     }
@@ -112,6 +115,7 @@ public class EnhancedCardValueModified {
 //    	public static void PostFix(AbstractPlayer self, AbstractCard card, AbstractCreature target, int energyOnUse) {
 //    		//Reset Enhance counter on card use
 //    		EnhanceCountField.enhanceCount.set(card,0);
+//    		logger.info("remove enhancement");
 //    	}
 //    }
     
@@ -129,10 +133,13 @@ public class EnhancedCardValueModified {
 				self.magicNumber = self.baseMagicNumber;
 				self.isMagicNumberModified = false;
 				self.damageTypeForTurn = (DamageInfo.DamageType)ReflectionHacks.getPrivate(self, AbstractCard.class, "damageType");
+				EnhanceCountField.enhanceReset.set(self,false);
 				if(self instanceof AbstractRunicCard) {
 					((AbstractRunicCard) self).potency = ((AbstractRunicCard) self).basePotency;
 					((AbstractRunicCard) self).isPotencyModified = false;
 				}
+				
+				logger.info("reset attributes");
 				
 //	            if(self instanceof AbstractRunicCard) {
 //	            	int tmp2 = ((AbstractRunicCard) self).potency;

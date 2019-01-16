@@ -255,7 +255,8 @@ public class RunesmithMod implements PostExhaustSubscriber,
 
 	@Override
 	public void receiveCardUsed(AbstractCard c) {
-		EnhanceCountField.enhanceCount.set(c,0);
+		EnhanceCountField.enhanceReset.set(c,true);
+		logger.info("reset enhancement");
 	}
 
 	@Override

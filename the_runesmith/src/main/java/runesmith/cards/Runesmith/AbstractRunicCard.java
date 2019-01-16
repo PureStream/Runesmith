@@ -21,7 +21,6 @@ public abstract class AbstractRunicCard extends CustomCard {
 				color, rarity, target);
 	}
 	
-	
 	public int potency;
 	public int basePotency;
 	public boolean potencyUpgraded;
