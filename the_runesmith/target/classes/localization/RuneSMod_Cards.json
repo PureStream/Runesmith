@@ -9,11 +9,11 @@
 	},
 	"Runesmith:CraftFirestone": {
 		"NAME": "Craft Firestone",
-		"DESCRIPTION": "2 Ignis: Craft a Firestone Rune with !Pot! potency."
+		"DESCRIPTION": "2 Ignis: Craft a Firestone Rune with !Pot! Potency."
 	},
 	"Runesmith:CraftProtectio": {
 		"NAME": "Craft Protectio",
-		"DESCRIPTION": "2 Terra: Craft a Protectio Rune with !Pot! potency."
+		"DESCRIPTION": "2 Terra: Craft a Protectio Rune with !Pot! Potency."
 	},
 	"Runesmith:Fortify": {
 		"NAME": "Fortify",
@@ -26,16 +26,16 @@
 	},
 	"Runesmith:EarthShield": {
 		"NAME": "Earth Shield",
-		"DESCRIPTION": "Gain !D! Block. Gain 2 Terra."
+		"DESCRIPTION": "Gain !B! Block. Gain 2 Terra."
 	},
 	"Runesmith:HeatedChisel": {
 		"NAME": "Heated Chisel",
-		"DESCRIPTION": "Deal !D! damage. Apply !M! vulnerable. Gain 1 Ignis and 1 Terra."
+		"DESCRIPTION": "Deal !D! damage. Apply !M! Vulnerable. Gain 1 Ignis and 1 Terra."
 	},
 	"Runesmith:Terraform": {
 		"NAME": "Terraform",
-		"DESCRIPTION": "Gain block equals to the number of Terra twice. Gain 1 Terra.",
-		"UPGRADE_DESCRIPTION": "Gain block equals to the number of Terra thrice. Gain 1 Terra.",
+		"DESCRIPTION": "Gain Block equals to the number of Terra twice. Gain 1 Terra.",
+		"UPGRADE_DESCRIPTION": "Gain Block equals to the number of Terra thrice. Gain 1 Terra.",
 		"EXTENDED_DESCRIPTION":[
 			" NL (Gain ",
 			" Block.)"
@@ -43,10 +43,18 @@
 	},
 	"Runesmith:RuneHurl": {
 		"NAME": "Rune Hurl",
+<<<<<<< HEAD
 		"DESCRIPTION": "Break oldest rune to deal !D! damage."
 	},
 	"Runesmith:CraftIncendium": {
 		"NAME": "Craft Incendium",
 		"DESCRIPTION": "3 Ignis: Craft an Incendium rune with !Pot! potency."
+=======
+		"DESCRIPTION": "Break oldest Rune to deal !D! damage."
+	},
+	"Runesmith:CraftIncendium": {
+		"NAME": "Craft Incendium",
+		"DESCRIPTION": "3 Ignis: Craft an Incendium Rune with !Pot! Potency."
+>>>>>>> refs/remotes/origin/development
 	}
 }

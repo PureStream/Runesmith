@@ -1,0 +1,90 @@
+{
+	"keywords": [
+		{
+			"NAMES": [
+			"enhance",
+			"Enhance"
+			],
+			"DESCRIPTION": "Increase the efficiency of the card by #b50%. Can be stacked multiplicatively. Enhance is removed after the card is played."
+		},
+		{
+			"NAMES": [
+			"downgrade",
+			"Downgrade"
+			],
+			"DESCRIPTION": "Remove an upgrade from a card to play a powerful card."
+		},
+		{
+			"NAMES": [
+			"downgrade",
+			"Downgrade"
+			],
+			"DESCRIPTION": "Prevent a card from being exhausted once. Stasis is removed after the card is played."
+		},
+		{
+			"NAMES": [
+			"rune",
+			"Rune"
+			],
+			"DESCRIPTION": "Grants active and/or passive effect. You can't have more than 10 runes at once."
+		},
+		{
+			"NAMES": [
+			"potency",
+			"Potency"
+			],
+			"DESCRIPTION": "The power of rune upon creating the rune."
+		},
+		{
+			"NAMES": [
+			"craft",
+			"Craft"
+			],
+			"DESCRIPTION": "Create a rune using elements. Otherwise, gain that much elements instead."
+		},
+		{
+			"NAMES": [
+			"elements",
+			"Elements",
+			"element",
+			"Element"
+			],
+			"DESCRIPTION": "Elements(Ignis, Terra and Aqua) are spent to craft rune and use for other utilities."
+		},
+		{
+			"NAMES": [
+			"ignis",
+			"Ignis"
+			],
+			"DESCRIPTION": "One of the elements."
+		},
+		{
+			"NAMES": [
+			"terra",
+			"Terra"
+			],
+			"DESCRIPTION": "One of the elements."
+		},
+		{
+			"NAMES": [
+			"aqua",
+			"Aqua"
+			],
+			"DESCRIPTION": "One of the elements."
+		},
+		{
+			"NAMES": [
+			"break",
+			"Break"
+			],
+			"DESCRIPTION": "Destroy a rune and activate its effect twice. Passive effects will be removed at the start of your next turn."
+		},
+		{
+			"NAMES": [
+			"incendium rune",
+			"Incendium Rune"
+			],
+			"DESCRIPTION": "Deal damage to all enemies depending on Potency."
+		}
+	]
+}
