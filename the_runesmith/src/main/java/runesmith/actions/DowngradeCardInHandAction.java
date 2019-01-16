@@ -79,8 +79,8 @@ public class DowngradeCardInHandAction extends AbstractGameAction{
 			if(!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {
 				for(AbstractCard c : AbstractDungeon.handCardSelectScreen.selectedCards.group) {
 					AbstractDungeon.effectList.add(new ExhaustCardEffect(c));
-					replaceCard(this.p.hand.group, c);
-					//this.p.hand.addToTop(c);
+					//replaceCard(this.p.hand.group, c);
+					this.p.hand.addToTop(c.makeCopy());
 				}
 				
 				returnCards();
