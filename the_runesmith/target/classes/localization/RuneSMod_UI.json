@@ -3,5 +3,10 @@
       "TEXT": [
         "Enhance"
       ]
+    },
+    "Runesmith:DowngradeAction": {
+      "TEXT": [
+        "Downgrade"
+      ]
     }
 }

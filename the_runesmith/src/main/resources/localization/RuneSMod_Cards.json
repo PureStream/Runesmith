@@ -156,7 +156,7 @@
 	},
 	"Runesmith:ShiftingStrike": {
 		"NAME": "Shifting Strike",
-		"DESCRIPTION": "Deal !D! damage. Downgrade a card then Upgrade a card in your hand."
+		"DESCRIPTION": "Deal !D! damage. Downgrade a card. Upgrade a card."
 	},
 	"Runesmith:ChaoticBlast": {
 		"NAME": "Chaotic Blast",

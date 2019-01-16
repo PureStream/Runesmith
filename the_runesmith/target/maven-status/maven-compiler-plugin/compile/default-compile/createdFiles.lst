@@ -13,12 +13,13 @@ runesmith\cards\Runesmith\CraftProtectio.class
 runesmith\cards\Runesmith\CraftFirestone.class
 runesmith\actions\BreakRuneAction.class
 runesmith\cards\Runesmith\HeatedChisel.class
-runesmith\actions\HammerThrowAction.class
+runesmith\actions\DowngradeCardInHandAction.class
 runesmith\cards\Runesmith\AbstractRunicCard.class
 runesmith\actions\cards\FortifyAction.class
 runesmith\patches\EnhancedCardValueModified$resetAttributes.class
 runesmith\patches\EnhancedCardValueModified$calculateCardDamage.class
 runesmith\powers\IgnisPower.class
+runesmith\cards\Runesmith\ShiftingStrike.class
 runesmith\cards\Runesmith\MakeshiftArmor.class
 runesmith\RunesmithMod.class
 runesmith\actions\RuneChannelAction.class
