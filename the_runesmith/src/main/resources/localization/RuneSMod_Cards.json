@@ -48,5 +48,210 @@
 	"Runesmith:CraftIncendium": {
 		"NAME": "Craft Incendium",
 		"DESCRIPTION": "3 Ignis: Craft an Incendium Rune with !Pot! Potency."
+	},
+	"Runesmith:HammerSlam": {
+		"NAME": "Hammer Slam",
+		"DESCRIPTION": "Deal !D! damage. Draw cards equal to the number of different runes."
+	},
+	"Runesmith:ElementalConversion": {
+		"NAME": "Elemental Conversion",
+		"DESCRIPTION": "Choose: Convert Ignis, Convert Terra, Convert Aqua.",
+		"UPGRADE_DESCRIPTION": "Choose: Convert Ignis+, Convert Terra+, Convert Aqua+."
+	},
+	"Runesmith:ConvertIgnis": {
+		"NAME": "Convert Ignis",
+		"DESCRIPTION": "Convert 2 Ignis to !M! Terra and 1 Aqua"
+	},
+	"Runesmith:ConvertTerra": {
+		"NAME": "Convert Terra",
+		"DESCRIPTION": "Convert 2 Terra to !M! Ignis and 1 Aqua."
+	},
+	"Runesmith:ConvertAqua": {
+		"NAME": "Convert Aqua",
+		"DESCRIPTION": "Convert 2 Aqua to !M! Ignis and 1 Terra"
+	},
+	"Runesmith:Repurpose": {
+		"NAME": "Repurpose",
+		"DESCRIPTION": "Exhaust a card. Attack: Gain !M! Ignis, Skill: Gain !M! Terra, Power: Gain !M! Aqua. Status card: Gain 1 of each."
+	},
+	"Runesmith:EnchantedChisel": {
+		"NAME": "Enchanted Chisel",
+		"DESCRIPTION": "Deal !D! damage. Gain !B! block. Apply !M! weak. Gain 1 Ignis and 1 Aqua."
+	},
+	"Runesmith:UnstableHammer": {
+		"NAME": "Unstable Hammer",
+		"DESCRIPTION": "Deal !D! damage. Craft a dud rune (no effect). Gain 1 random element."
+	},
+	"Runesmith:HammerThrow": {
+		"NAME": "Hammer Throw",
+		"DESCRIPTION": "Deal !D! damage then draw !M! card and upgrade it."
+	},
+	"Runesmith:OneForEveryOne": {
+		"NAME": "One for Every One",
+		"DESCRIPTION": "Break a random Rune and gain 1 Energy. Deal 1 damage to all enemies. Gain 1 block. Gain 1 of each element."
+	},
+	"Runesmith:RunicBullets": {
+		"NAME": "Runic Bullets",
+		"DESCRIPTION": "Deal !D! damage to random enemy for runes you have."
+	},
+	"Runesmith:StaticCage": {
+		"NAME": "Static Cage",
+		"DESCRIPTION": "Break rune. Stasis a random card.",
+		"UPGRADE_DESCRIPTION": "Break rune. Stasis a chosen card."
+	},
+	"Runesmith:ElementalShield": {
+		"NAME": "Elemental Shield",
+		"DESCRIPTION": "Remove all elements. Gain block equals to !M! times the amount of element removed."
+	},
+	"Runesmith:Grindstone": {
+		"NAME": "Grindstone",
+		"DESCRIPTION": "Gain !B! block. All cards played this turn become upgraded."
+	},
+	"Runesmith:FieryHammer": {
+		"NAME": "Fiery Hammer",
+		"DESCRIPTION": "Deal !D! damage to all enemies. Can be upgraded any number of times."
+	},
+	"Runesmith:CraftReservo": {
+		"NAME": "Craft Reservo",
+		"DESCRIPTION": "2 Aqua: Craft a Reservo Rune. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "2 Aqua: Craft a Reservo+ Rune. NL Exhaust."
+	},
+	"Runesmith:HammerPolish": {
+		"NAME": "Hammer Polish",
+		"DESCRIPTION": "Gain !M! Potency."
+	},
+	"Runesmith:Firestorm": {
+		"NAME": "Firestorm",
+		"DESCRIPTION": "Gain !M! Ignis and !M! Terra at the start of your turn."
+	},
+	"Runesmith:RunicBlueprint": {
+		"NAME": "Runic Blueprint",
+		"DESCRIPTION": "Add a random Craft card to your hand. It costs 0 this turn. Gain 2 Aqua."
+	},
+	"Runesmith:CraftSpiculum": {
+		"NAME": "Craft Spiculum",
+		"DESCRIPTION": "3 Ignis 2 Aqua: Craft a Spiculum Rune with !Pot! Potency. NL Exhaust."
+	},
+	"Runesmith:CraftPotentia": {
+		"NAME": "Craft Potentia",
+		"DESCRIPTION": "2 Ignis 2 Terra 2 Aqua: Craft a Potentia Rune with !Pot! potency. Remove your oldest rune."
+	},
+	"Runesmith:CraftFerro": {
+		"NAME": "Craft Ferro",
+		"DESCRIPTION": "2 Terra 1 Aqua: Craft an Ferro rune with !Pot! potency. Exhaust.",
+		"UPGRADE_DESCRIPTION": "2 Terra 1 Aqua: Craft an Ferro rune with !Pot! potency."
+	},
+	"Runesmith:HammerTime": {
+		"NAME": "Hammer Time",
+		"DESCRIPTION": "Enhance ALL of your cards containing ÅgHammerÅh. Deal !D! damage."
+	},
+	"Runesmith:MakeshiftArmor": {
+		"NAME": "Makeshift Armor",
+		"DESCRIPTION": "Downgrade a random card in your deck. Gain !B! Block. Gain 1 Terra."
+	},
+	"Runesmith:ShiftingStrike": {
+		"NAME": "Shifting Strike",
+		"DESCRIPTION": "Deal !D! damage. Downgrade a card. Upgrade a card."
+	},
+	"Runesmith:ChaoticBlast": {
+		"NAME": "Chaotic Blast",
+		"DESCRIPTION": "Deal !D! damage. 1 Ignis 1 Terra 1 Aqua: Craft a random Rune."
+	},
+	"Runesmith:ElementalBurst": {
+		"NAME": "Elemental Burst",
+		"DESCRIPTION": "Deal damage equals to the amount of elements gained this combat to all enemies.",
+		"EXTENDED_DESCRIPTION":[
+			" NL (Deal ",
+			" damage.)"
+		]
+	},
+	"Runesmith:Shatter": {
+		"NAME": "Shatter",
+		"DESCRIPTION": "Break your oldest Rune X times.",
+		"UPGRADE_DESCRIPTION": "Break your oldest Rune X+1 times."
+	},
+	"Runesmith:Empowerment": {
+		"NAME": "Empowerment",
+		"DESCRIPTION": "Gain Strength equal to Ignis and gain Dexterity equal to Terra this turn."
+	},
+	"Runesmith:RunicSmithing": {
+		"NAME": "Runic Smithing",
+		"DESCRIPTION": "For each card you enhance, you gain 1 of each elements.",
+		"UPGRADE_DESCRIPTION": "For each card you enhance, you gain 1 of each elements. NL Innate."
+	},
+	"Runesmith:Runesonance": {
+		"NAME": "Runesonance",
+		"DESCRIPTION": "This turn, gain double Elements."
+	},
+	"Runesmith:Duplicate": {
+		"NAME": "Duplicate",
+		"DESCRIPTION": "Create a copy of the next !M! Rune you craft this turn."
+	},
+	"Runesmith:ConstructBifrost": {
+		"NAME": "Construct Bifrost",
+		"DESCRIPTION": "Downgrade a card in your deck. 3 Ignis 3 Terra 3 Aqua: Craft a prismatic rune. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Downgrade a card in your deck. 3 Ignis 3 Terra 3 Aqua: Craft a prismatic+ rune. NL Exhaust."
+	},
+	"Runesmith:CraftIndustria": {
+		"NAME": "Craft Industria",
+		"DESCRIPTION": "2 Ignis 2 Aqua: Craft an Industria Rune."
+	},
+	"Runesmith:CraftMedicinae": {
+		"NAME": "Craft Medicinae",
+		"DESCRIPTION": "5 Terra: Craft a Medicinae Rune with !Pot! potency. NL Exhaust."
+	},
+	"Runesmith:LastStand": {
+		"NAME": "Last Stand",
+		"DESCRIPTION": "Downgrade all cards in your deck. Remove all elements. Deal !M! times the number of downgraded cards to all enemies. NL Exhaust."
+	},
+	"Runesmith:Demonforge": {
+		"NAME": "Demonforge",
+		"DESCRIPTION": "Gain !Pot! Potency. Lose 1 Potency at the end of each turn."
+	},
+	"Runesmith:SpecialReserve": {
+		"NAME": "Special Reserve",
+		"DESCRIPTION": "Deal !D! damage and stasis !M! card in your deck."
+	},
+	"Runesmith:RunicArmor": {
+		"NAME": "Runic Armor",
+		"DESCRIPTION": "Remove X rune and gain X buffer.",
+		"UPGRADE_DESCRIPTION": "Remove X+1 rune and gain X+1 buffer."
+	},
+	"Runesmith:ManaExplosion": {
+		"NAME": "Mana Explosion",
+		"DESCRIPTION": "Break ALL of your Runes. Draw a card and gain 1 Energy for each Rune destroyed."
+	},
+	"Runesmith:CreatorForm": {
+		"NAME": "Creator Form",
+		"DESCRIPTION": "Enhance !M! cards at the start of your turn."
+	},
+	"Runesmith:FlexTape": {
+		"NAME": "Flex Tape",
+		"DESCRIPTION": "Stasis !M! card in your hand each turn."
+	},
+	"Runesmith:MetallurgicalResearch": {
+		"NAME": "Metallurgical Research",
+		"DESCRIPTION": "Downgrade your entire deck then Upgrade and Enhance your entire deck after !M! turns. NL Exhaust."
+	},
+	"Runesmith:ArmorUp": {
+		"NAME": "Armor Up",
+		"DESCRIPTION": "Gain Block equal to !M! times the numbers of card Enhanced this combat."
+	},
+	"Runesmith:Border Wall": {
+		"NAME": "Border Wall",
+		"DESCRIPTION": "Gain !B! block. 4 Terra: Craft 2 Protectio Rune with !Pot! potency."
+	},
+	"Runesmith:RuneMagnet": {
+		"NAME": "Rune Magnet",
+		"DESCRIPTION": "Draw until you get a Craft card and discard ALL other cards drawn. NL Exhaust."
+	},
+	"Runesmith:ThatsALotOfDAMAGE": {
+		"NAME": "ThatÅfs a lot of DAMAGE",
+		"DESCRIPTION": "Halves enemies current HP and block. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Halves enemies current HP and block. NL Innate. NL Exhaust."
+	},
+	"Runesmith:WWWWWWWWWWWWWWWWWWWW": {
+		"NAME": "WWWWWWWWWWWWWWWWWWWW",
+		"DESCRIPTION": "WWWWWWWWWWWWWWWWWWWW"
 	}
 }
