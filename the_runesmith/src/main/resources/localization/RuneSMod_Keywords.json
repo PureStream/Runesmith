@@ -136,7 +136,14 @@
 			"medicinae",
 			"Medicinae"
 			],
-			"DESCRIPTION": "Heals on #yBreak"
+			"DESCRIPTION": "Heals on #yBreak."
+		},
+		{
+			"NAMES": [
+			"Dud",
+			"dud"
+			],
+			"DESCRIPTION": "No effect."
 		},
 		{
 			"NAMES": [
