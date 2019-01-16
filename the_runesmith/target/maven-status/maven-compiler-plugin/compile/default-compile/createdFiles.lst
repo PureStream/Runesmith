@@ -11,7 +11,10 @@ runesmith\patches\LibraryTypeEnum.class
 runesmith\cards\Runesmith\Terraform.class
 runesmith\cards\Runesmith\ChiselStab.class
 runesmith\patches\EnhancedCardValueModified$applyPowers.class
+<<<<<<< HEAD
+=======
 runesmith\cards\Runesmith\CraftProtectio.class
+>>>>>>> refs/remotes/origin/development
 runesmith\cards\Runesmith\Fortify.class
 runesmith\relics\BrokenRuby.class
 runesmith\cards\Runesmith\CraftFirestone.class
@@ -20,11 +23,17 @@ runesmith\cards\Runesmith\RuneHurl.class
 runesmith\patches\AbstractCardEnum.class
 runesmith\actions\BreakRuneAction.class
 runesmith\cards\Runesmith\HeatedChisel.class
+<<<<<<< HEAD
+=======
 runesmith\orbs\ProtectioRune.class
+>>>>>>> refs/remotes/origin/development
 runesmith\cards\Runesmith\AbstractRunicCard.class
 runesmith\character\player\RunesmithCharacter.class
 runesmith\actions\cards\FortifyAction.class
+<<<<<<< HEAD
+=======
 runesmith\patches\EnhancedCardValueModified$enhanceRmv.class
+>>>>>>> refs/remotes/origin/development
 runesmith\powers\TerraPower.class
 runesmith\actions\EnhanceCard.class
 runesmith\helpers\PotencyVariable.class

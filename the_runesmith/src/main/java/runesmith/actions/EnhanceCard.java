@@ -12,6 +12,9 @@ public abstract class EnhanceCard {
 		//add 1 to enhance counter
 		EnhanceCountField.enhanceCount.set(c,EnhanceCountField.enhanceCount.get(c) + 1);
 		int currentEnhance = EnhanceCountField.enhanceCount.get(c);
+		if(currentEnhance > 10) {
+			EnhanceCountField.enhanceCount.set(c,10);
+		}
 //		if(currentEnhance == 1)	c.rawDescription += "NL (Enhanced "+currentEnhance+" time.)";
 //		else c.rawDescription +=  "NL (Enhanced "+currentEnhance+" times.)";
 //		c.initializeDescription();

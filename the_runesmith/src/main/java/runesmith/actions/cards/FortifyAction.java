@@ -29,13 +29,9 @@ public class FortifyAction extends AbstractGameAction{
 		this.upgraded = fortifyPlus;
 	}
 	
-	private boolean canEnhance(AbstractCard c) {
-		if(c.type == CardType.CURSE || c.type == CardType.STATUS) return false;
-		else return true;
-	}
-	
 	public void update() {
 		if(this.duration == Settings.ACTION_DUR_FAST) {
+
 			for (AbstractCard c : this.p.hand.group) {
 				if (!canEnhance(c)) {
 					this.cannotEnhance.add(c);
@@ -47,54 +43,64 @@ public class FortifyAction extends AbstractGameAction{
 				return;
 			}
 			
-			if(this.upgraded) {
-				if(this.p.hand.group.size() - this.cannotEnhance.size() == 1) {
-					for(AbstractCard c : this.p.hand.group) {
-						if(canEnhance(c)) {
-							EnhanceCard.enhance(c);
-						}
+			if(!this.upgraded) {
+				AbstractCard selectedCard = this.p.hand.getRandomCard(AbstractDungeon.cardRandomRng);
+				EnhanceCard.enhance(selectedCard);
+				selectedCard.superFlash(RunesmithMod.BEIGE);
+				this.isDone = true;
+				return;
+			}
+			
+			if(this.p.hand.group.size() - this.cannotEnhance.size() == 1) {
+				for(AbstractCard c : this.p.hand.group) {
+					if(canEnhance(c)) {
+						EnhanceCard.enhance(c);
+//						c.upgrade();
 						c.superFlash(RunesmithMod.BEIGE);
 						this.isDone = true;
 						return;
 					}
 				}
-				
-				this.p.hand.group.removeAll(this.cannotEnhance);
-				
-				if (this.p.hand.group.size() > 1) {	
-					AbstractDungeon.handCardSelectScreen.open(TEXT[0], 1, false, false, false, true);
-					tickDuration();
-					return;
-				}
-				if(this.p.hand.group.size() == 1) {
-					EnhanceCard.enhance(this.p.hand.getTopCard());
-					this.p.hand.getTopCard().superFlash(RunesmithMod.BEIGE);
-					returnCards();
-					this.isDone = true;
-				}
-			}
-			else {
-				AbstractCard selectedCard = this.p.hand.getRandomCard(AbstractDungeon.cardRandomRng);
-				EnhanceCard.enhance(selectedCard);
-				selectedCard.superFlash(RunesmithMod.BEIGE);
-				this.isDone = true;
 			}
 			
-			if(!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {
-				for(AbstractCard c : AbstractDungeon.handCardSelectScreen.selectedCards.group) {
-					EnhanceCard.enhance(c);
-					c.superFlash(RunesmithMod.BEIGE);
-					this.p.hand.addToTop(c);
-				}
-				
+			this.p.hand.group.removeAll(this.cannotEnhance);
+			
+			if (this.p.hand.group.size() > 1) {	
+				AbstractDungeon.handCardSelectScreen.open(TEXT[0], 1, false, false, false, true);
+				tickDuration();
+				return;
+			}
+			if(this.p.hand.group.size() == 1) {
+				EnhanceCard.enhance(this.p.hand.getTopCard());
+//				this.p.hand.getTopCard().upgrade();
+				this.p.hand.getTopCard().superFlash(RunesmithMod.BEIGE);
 				returnCards();
-				AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;
-				AbstractDungeon.handCardSelectScreen.selectedCards.group.clear();
 				this.isDone = true;
 			}
 			
-			tickDuration();
 		}
+		
+		
+		if(!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {
+			for(AbstractCard c : AbstractDungeon.handCardSelectScreen.selectedCards.group) {
+				EnhanceCard.enhance(c);
+//				c.upgrade();
+				c.superFlash(RunesmithMod.BEIGE);
+				this.p.hand.addToTop(c);
+			}
+			
+			returnCards();
+			AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;
+			AbstractDungeon.handCardSelectScreen.selectedCards.group.clear();
+			this.isDone = true;
+		}
+		
+		tickDuration();
+	}
+	
+	private boolean canEnhance(AbstractCard c) {
+		if(c.type == CardType.CURSE || c.type == CardType.STATUS) return false;
+		else return true;
 	}
 	
 	private void returnCards() {
