@@ -6,13 +6,17 @@ runesmith\cards\Runesmith\EarthShield.class
 runesmith\orbs\FirestoneRune.class
 runesmith\patches\EnhanceCountField.class
 runesmith\cards\Runesmith\Strike_RS.class
+runesmith\cards\Runesmith\EnchantedChisel.class
 runesmith\relics\Blueberries.class
 runesmith\orbs\RuneOrb.class
+runesmith\orbs\DudRune.class
+runesmith\cards\Runesmith\UnstableHammer.class
 runesmith\orbs\IncendiumRune.class
 runesmith\patches\LibraryTypeEnum.class
 runesmith\cards\Runesmith\Terraform.class
 runesmith\cards\Runesmith\ChiselStab.class
 runesmith\patches\EnhancedCardValueModified$applyPowers.class
+runesmith\cards\Runesmith\ElementalShield.class
 runesmith\cards\Runesmith\CraftProtectio.class
 runesmith\cards\Runesmith\Fortify.class
 runesmith\relics\BrokenRuby.class
