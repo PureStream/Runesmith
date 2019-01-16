@@ -76,7 +76,7 @@
 	},
 	"Runesmith:EnchantedChisel": {
 		"NAME": "Enchanted Chisel",
-		"DESCRIPTION": "Deal !D! damage. Gain !B! block. Apply !M! weak. Gain 1 Ignis and 1 Aqua."
+		"DESCRIPTION": "Deal !D! damage. Gain !B! Block. Apply !M! Weak. Gain 1 Ignis and 1 Aqua."
 	},
 	"Runesmith:UnstableHammer": {
 		"NAME": "Unstable Hammer",
@@ -88,7 +88,7 @@
 	},
 	"Runesmith:OneForEveryOne": {
 		"NAME": "One for Every One",
-		"DESCRIPTION": "Break a random Rune and gain [E] . Deal 1 damage to all enemies. Gain 1 block. Gain 1 of each element."
+		"DESCRIPTION": "Break a random Rune and gain [E] . Deal 1 damage to all enemies. Gain 1 Block. Gain 1 of each element."
 	},
 	"Runesmith:RunicBullets": {
 		"NAME": "Runic Bullets",
@@ -101,7 +101,7 @@
 	},
 	"Runesmith:ElementalShield": {
 		"NAME": "Elemental Shield",
-		"DESCRIPTION": "Remove all elements. Gain block equals to !M! times the amount of element removed.",
+		"DESCRIPTION": "Remove all elements. Gain Block equals to !M! times the amount of element removed.",
 		"EXTENDED_DESCRIPTION":[
 			" NL (Gain ",
 			" Block.)"
@@ -109,7 +109,7 @@
 	},
 	"Runesmith:Grindstone": {
 		"NAME": "Grindstone",
-		"DESCRIPTION": "Gain !B! block. All cards played this turn become upgraded."
+		"DESCRIPTION": "Gain !B! Block. All cards played this turn become upgraded."
 	},
 	"Runesmith:FieryHammer": {
 		"NAME": "Fiery Hammer",
@@ -117,8 +117,8 @@
 	},
 	"Runesmith:CraftReservo": {
 		"NAME": "Craft Reservo",
-		"DESCRIPTION": "2 Aqua: Craft a Reservo Rune. NL Exhaust.",
-		"UPGRADE_DESCRIPTION": "2 Aqua: Craft a Reservo+ Rune. NL Exhaust."
+		"DESCRIPTION": "2 Aqua: Craft a Reservo rune. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "2 Aqua: Craft a Reservo+ rune. NL Exhaust."
 	},
 	"Runesmith:HammerPolish": {
 		"NAME": "Hammer Polish",
@@ -134,11 +134,11 @@
 	},
 	"Runesmith:CraftSpiculum": {
 		"NAME": "Craft Spiculum",
-		"DESCRIPTION": "3 Ignis 2 Aqua: Craft a Spiculum Rune with !Pot! Potency. NL Exhaust."
+		"DESCRIPTION": "3 Ignis 2 Aqua: Craft a Spiculum rune with !Pot! Potency. NL Exhaust."
 	},
 	"Runesmith:CraftPotentia": {
 		"NAME": "Craft Potentia",
-		"DESCRIPTION": "2 Ignis 2 Terra 2 Aqua: Craft a Potentia Rune with !Pot! potency. Remove your oldest rune."
+		"DESCRIPTION": "2 Ignis 2 Terra 2 Aqua: Craft a Potentia rune with !Pot! potency. Remove your oldest rune."
 	},
 	"Runesmith:CraftFerro": {
 		"NAME": "Craft Ferro",
@@ -193,16 +193,16 @@
 	},
 	"Runesmith:ConstructBifrost": {
 		"NAME": "Construct Bifrost",
-		"DESCRIPTION": "Downgrade a card in your deck. 3 Ignis 3 Terra 3 Aqua: Craft a Prismatic Rune. NL Exhaust.",
-		"UPGRADE_DESCRIPTION": "Downgrade a card in your deck. 3 Ignis 3 Terra 3 Aqua: Craft a Prismatic+ Rune. NL Exhaust."
+		"DESCRIPTION": "Downgrade a card in your deck. 3 Ignis 3 Terra 3 Aqua: Craft a Prismatic rune. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Downgrade a card in your deck. 3 Ignis 3 Terra 3 Aqua: Craft a Prismatic+ rune. NL Exhaust."
 	},
 	"Runesmith:CraftIndustria": {
 		"NAME": "Craft Industria",
-		"DESCRIPTION": "2 Ignis 2 Aqua: Craft an Industria Rune."
+		"DESCRIPTION": "2 Ignis 2 Aqua: Craft an Industria rune."
 	},
 	"Runesmith:CraftMedicinae": {
 		"NAME": "Craft Medicinae",
-		"DESCRIPTION": "5 Terra: Craft a Medicinae Rune with !Pot! potency. NL Exhaust."
+		"DESCRIPTION": "5 Terra: Craft a Medicinae rune with !Pot! potency. NL Exhaust."
 	},
 	"Runesmith:LastStand": {
 		"NAME": "Last Stand",
@@ -243,7 +243,7 @@
 	},
 	"Runesmith:Border Wall": {
 		"NAME": "Border Wall",
-		"DESCRIPTION": "Gain !B! block. 4 Terra: Craft 2 Protectio Rune with !Pot! potency."
+		"DESCRIPTION": "Gain !B! Block. 4 Terra: Craft 2 Protectio rune with !Pot! potency."
 	},
 	"Runesmith:RuneMagnet": {
 		"NAME": "Rune Magnet",
@@ -251,8 +251,8 @@
 	},
 	"Runesmith:ThatsALotOfDAMAGE": {
 		"NAME": "ThatÅfs a lot of DAMAGE",
-		"DESCRIPTION": "Halves enemies current HP and block. NL Exhaust.",
-		"UPGRADE_DESCRIPTION": "Halves enemies current HP and block. NL Innate. NL Exhaust."
+		"DESCRIPTION": "Halves enemies current HP and Block. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Halves enemies current HP and Block. NL Innate. NL Exhaust."
 	},
 	"Runesmith:WWWWWWWWWWWWWWWWWWWW": {
 		"NAME": "WWWWWWWWWWWWWWWWWWWW",
