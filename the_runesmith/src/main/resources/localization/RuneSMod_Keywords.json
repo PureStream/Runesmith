@@ -3,7 +3,9 @@
 		{
 			"NAMES": [
 			"enhance",
-			"Enhance"
+			"Enhance",
+			"enchanced",
+			"Enchanced"
 			],
 			"DESCRIPTION": "Increase the efficiency of the card by #b50%. Can be stacked multiplicatively. Enhance is removed after the card is played."
 		},
@@ -24,7 +26,9 @@
 		{
 			"NAMES": [
 			"rune",
-			"Rune"
+			"Rune",
+			"runes",
+			"Runes"
 			],
 			"DESCRIPTION": "Grants active and/or passive effect. You can't have more than 10 runes at once."
 		},
@@ -47,30 +51,15 @@
 			"elements",
 			"Elements",
 			"element",
-			"Element"
-			],
-			"DESCRIPTION": "Elements(Ignis, Terra and Aqua) are spent to craft rune and use for other utilities."
-		},
-		{
-			"NAMES": [
+			"Element",
 			"ignis",
-			"Ignis"
-			],
-			"DESCRIPTION": "One of the elements."
-		},
-		{
-			"NAMES": [
+			"Ignis",
 			"terra",
-			"Terra"
-			],
-			"DESCRIPTION": "One of the elements."
-		},
-		{
-			"NAMES": [
+			"Terra",
 			"aqua",
 			"Aqua"
 			],
-			"DESCRIPTION": "One of the elements."
+			"DESCRIPTION": "Elements(Ignis, Terra and Aqua) are spent to craft rune and used for other utilities."
 		},
 		{
 			"NAMES": [
@@ -81,8 +70,8 @@
 		},
 		{
 			"NAMES": [
-			"incendium rune",
-			"Incendium Rune"
+			"incendium",
+			"Incendium"
 			],
 			"DESCRIPTION": "Deal damage to all enemies depending on Potency."
 		}

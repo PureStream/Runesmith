@@ -2,6 +2,13 @@
 	"keywords": [
 		{
 			"NAMES": [
+			"incendium rune",
+			"Incendium Rune"
+			],
+			"DESCRIPTION": "Deal damage to all enemies depending on Potency."
+		},
+		{
+			"NAMES": [
 			"enhance",
 			"Enhance"
 			],
@@ -78,13 +85,6 @@
 			"Break"
 			],
 			"DESCRIPTION": "Destroy a rune and activate its effect twice. Passive effects will be removed at the start of your next turn."
-		},
-		{
-			"NAMES": [
-			"incendium rune",
-			"Incendium Rune"
-			],
-			"DESCRIPTION": "Deal damage to all enemies depending on Potency."
 		}
 	]
 }
