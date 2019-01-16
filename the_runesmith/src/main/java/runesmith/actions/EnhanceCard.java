@@ -1,7 +1,5 @@
 package runesmith.actions;
 
-import com.badlogic.gdx.math.MathUtils;
-import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 
 import runesmith.patches.EnhanceCountField;

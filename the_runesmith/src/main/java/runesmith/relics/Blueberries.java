@@ -1,6 +1,5 @@
 package runesmith.relics;
 
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
@@ -8,7 +7,7 @@ import basemod.abstracts.CustomRelic;
 
 public class Blueberries extends CustomRelic {
 	public static final String ID = "Blueberries";
-	private static final int HP_PER_CARD = 1;
+	//private static final int HP_PER_CARD = 1;
 	
 	public Blueberries() {
 		super(ID, "", // <------------------------------------ Some img needed
