@@ -2,13 +2,13 @@
   "Firestone": {
     "NAME": "Firestone",
     "DESCRIPTION": [
-      "Deal #b{Pot} damage at the start of your turn."
+      "Deal #b{Pot} damage at the start of your turn [E] ."
     ]
   },
   "Protectio": {
     "NAME": "Protectio",
     "DESCRIPTION": [
-      "Gain #b{Pot} Block at the start of your turn."
+      "Gain #b{Pot} #yBlock at the start of your turn."
     ]
   },
   "Incendium": {
@@ -27,19 +27,19 @@
   "Spiculum": {
     "NAME": "Spiculum",
     "DESCRIPTION": [
-      "Gain #b{Pot} Thorns."
+      "Gain #b{Pot} #yThorns."
     ]
   },
   "Potentia": {
     "NAME": "Potentia",
     "DESCRIPTION": [
-      "Gain #b{Pot} Potency."
+      "Gain #b{Pot} #yPotency."
     ]
   },
   "Ferro": {
     "NAME": "Ferro",
     "DESCRIPTION": [
-      "Gain #b{Pot} Plated Armor."
+      "Gain #b{Pot} #yPlated #yArmor."
     ]
   },
   "Prismatic": {
@@ -58,7 +58,7 @@
   "Medicinae": {
     "NAME": "Medicinae",
     "DESCRIPTION": [
-      "Heals {Pot} HP twice on Break."
+      "Heals {Pot} HP twice on #yBreak."
     ]
   },
   "WWWWWWWWWWWWWW": {
