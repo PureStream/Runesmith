@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import runesmith.actions.RuneChannelAction;
-import runesmith.orbs.FirestoneRune;
 import runesmith.orbs.IncendiumRune;
 import runesmith.patches.AbstractCardEnum;
 

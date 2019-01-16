@@ -1,7 +1,5 @@
 package runesmith.cards.Runesmith;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -10,11 +8,8 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import runesmith.actions.RuneChannelAction;
-import runesmith.orbs.FirestoneRune;
 import runesmith.orbs.ProtectioRune;
 import runesmith.patches.AbstractCardEnum;
-import runesmith.powers.IgnisPower;
-import runesmith.powers.TerraPower;
 
 public class CraftProtectio extends AbstractRunicCard {
 

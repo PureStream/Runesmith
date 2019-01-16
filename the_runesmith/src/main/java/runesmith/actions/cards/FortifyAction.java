@@ -19,7 +19,7 @@ public class FortifyAction extends AbstractGameAction{
 	public static final String[] TEXT = uiStrings.TEXT;
 	
 	private AbstractPlayer p;
-	private ArrayList<AbstractCard> cannotEnhance = new ArrayList();
+	private ArrayList<AbstractCard> cannotEnhance = new ArrayList<>();
 	private boolean upgraded = false;
 	
 	public FortifyAction(boolean fortifyPlus) {
