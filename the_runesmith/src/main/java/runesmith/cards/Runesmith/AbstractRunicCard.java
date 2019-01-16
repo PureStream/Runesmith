@@ -1,6 +1,18 @@
 package runesmith.cards.Runesmith;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+
 import basemod.abstracts.CustomCard;
+import runesmith.RunesmithMod;
+import runesmith.powers.AquaPower;
+import runesmith.powers.IgnisPower;
+import runesmith.powers.TerraPower;
 
 public abstract class AbstractRunicCard extends CustomCard {
 	public AbstractRunicCard(String id, String name, String img, int cost, String rawDescription, CardType type, CardColor color,
@@ -8,6 +20,7 @@ public abstract class AbstractRunicCard extends CustomCard {
 		super(id, name, img, cost, rawDescription, type,
 				color, rarity, target);
 	}
+	
 	
 	public int potency;
 	public int basePotency;
@@ -18,5 +31,85 @@ public abstract class AbstractRunicCard extends CustomCard {
 		this.basePotency += amount; 
 		this.potency = this.basePotency;
 		if(this.potency > this.basePotency || amount>0) isPotencyModified = true;
+	}
+	
+	public boolean checkElements(int ignis, int terra, int aqua) {
+		Logger logger = LogManager.getLogger(RunesmithMod.class.getName());
+		logger.info("Start checking elements.");
+		AbstractPlayer p = AbstractDungeon.player;
+		int pIgnis = 0, pTerra = 0, pAqua = 0;
+		if (p.hasPower("IgnisPower")) {
+			pIgnis = p.getPower("IgnisPower").amount;
+		}
+		if (p.hasPower("TerraPower")) {
+			pTerra = p.getPower("TerraPower").amount;
+		}
+		if (p.hasPower("AquaPower")) {
+			pAqua = p.getPower("AquaPower").amount;
+		}
+		if (pIgnis >= ignis && pTerra >= terra && pAqua >= aqua) {
+			logger.info("Have enough elements.");
+			if (pIgnis > 0 && ignis > 0) {
+				p.getPower("IgnisPower").reducePower(ignis);
+				if (p.getPower("IgnisPower").amount == 0)
+					AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, "IgnisPower"));
+			}
+			if (pTerra > 0 && terra > 0) {
+				p.getPower("TerraPower").reducePower(terra);
+				if (p.getPower("TerraPower").amount == 0)
+					AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, "TerraPower"));
+			}
+			if (pAqua > 0 && aqua > 0) {
+				p.getPower("AquaPower").reducePower(aqua);
+				if (p.getPower("AquaPower").amount == 0)
+					AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, "AquaPower"));
+			}
+			return true;
+		}
+		logger.info("Not enough elements.");
+		if (ignis != 0) {
+			addPower("IgnisPower",ignis);
+		}
+		if (terra != 0) {
+			addPower("TerraPower",terra);
+		}
+		if (aqua != 0) {
+			addPower("AquaPower",aqua);
+		}
+		return false;
+	}
+	
+	public void addPower(String element, int value) {
+		AbstractPlayer p = AbstractDungeon.player;
+		if (element.equals("IgnisPower")) {
+			AbstractDungeon.actionManager.addToTop(
+			          new ApplyPowerAction(
+			              p,
+			              p,
+			              new IgnisPower(p, value),
+			              value
+			          )
+			      );
+		}
+		else if (element.equals("TerraPower")) {
+			AbstractDungeon.actionManager.addToTop(
+			          new ApplyPowerAction(
+			              p,
+			              p,
+			              new TerraPower(p, value),
+			              value
+			          )
+			      );
+		}
+		else {
+			AbstractDungeon.actionManager.addToTop(
+			          new ApplyPowerAction(
+			              p,
+			              p,
+			              new AquaPower(p, value),
+			              value
+			          )
+			      );
+		}
 	}
 }

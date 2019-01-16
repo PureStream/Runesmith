@@ -4,5 +4,11 @@
     "DESCRIPTION": [
       "Deal {Pot} damage at the start of your turn."
     ]
+  },
+  "Protectio": {
+    "NAME": "Protectio",
+    "DESCRIPTION": [
+      "Gain {Pot} Block at the start of your turn."
+    ]
   }
 }
