@@ -34,8 +34,8 @@
 	},
 	"Runesmith:Terraform": {
 		"NAME": "Terraform",
-		"DESCRIPTION": "Gain Block equals to the number of Terra twice. Gain 1 Terra.",
-		"UPGRADE_DESCRIPTION": "Gain Block equals to the number of Terra thrice. Gain 1 Terra.",
+		"DESCRIPTION": "Gain Block equals to the number of Terra twice. NL Gain 1 Terra.",
+		"UPGRADE_DESCRIPTION": "Gain Block equals to the number of Terra thrice. NL Gain 1 Terra.",
 		"EXTENDED_DESCRIPTION":[
 			" NL (Gain ",
 			" Block.)"
@@ -102,7 +102,8 @@
 	},
 	"Runesmith:ElementalShield": {
 		"NAME": "Elemental Shield",
-		"DESCRIPTION": "Remove all Elements. Gain Block equals to !M! times the amount of Element removed.",
+		"DESCRIPTION": "Remove all Elements. NL Gain Block equals to the amount of ALL Elements removed twice.",
+		"UPGRADE_DESCRIPTION": "Remove all Elements. NL Gain Block equals to the amount of ALL Elements removed thrice.",
 		"EXTENDED_DESCRIPTION":[
 			" NL (Gain ",
 			" Block.)"

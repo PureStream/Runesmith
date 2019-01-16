@@ -18,8 +18,8 @@
 		},
 		{
 			"NAMES": [
-			"downgrade",
-			"Downgrade"
+			"stasis",
+			"Stasis"
 			],
 			"DESCRIPTION": "Prevent a card from being exhausted once. #yStasis is removed after the card is played."
 		},
