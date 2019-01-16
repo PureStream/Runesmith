@@ -9,19 +9,24 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.Keyword;
 import com.megacrit.cardcrawl.localization.OrbStrings;
+import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
+
 import basemod.BaseMod;
 import basemod.abstracts.CustomRelic;
 import basemod.interfaces.EditCharactersSubscriber;
 import runesmith.cards.Runesmith.*;
 import runesmith.character.player.RunesmithCharacter;
 import runesmith.helpers.PotencyVariable;
+import runesmith.patches.AbstractCardEnum;
 import runesmith.patches.EnhanceCountField;
 import runesmith.patches.PlayerClassEnum;
 import runesmith.relics.Blueberries;
@@ -35,6 +40,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import basemod.interfaces.EditCardsSubscriber;
+import basemod.interfaces.EditCharactersSubscriber;
 import basemod.interfaces.EditKeywordsSubscriber;
 import basemod.interfaces.EditRelicsSubscriber;
 import basemod.interfaces.EditStringsSubscriber;
@@ -95,7 +101,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
 	}
 		
 	public static void initialize() {
-		new RunesmithMod();
+		RunesmithMod mod = new RunesmithMod();
 	}
 	
 	@Override
@@ -284,6 +290,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
 		cardsToAdd.add(new CraftIncendium());
 		cardsToAdd.add(new ElementalShield());
 		cardsToAdd.add(new UnstableHammer());
+		cardsToAdd.add(new HammerSlam());
 		cardsToAdd.add(new EnchantedChisel());
 	}
 
