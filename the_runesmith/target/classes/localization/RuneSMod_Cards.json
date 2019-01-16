@@ -44,5 +44,9 @@
 	"Runesmith:RuneHurl": {
 		"NAME": "Rune Hurl",
 		"DESCRIPTION": "Break oldest rune to deal !D! damage."
+	},
+	"Runesmith:CraftIncendium": {
+		"NAME": "Craft Incendium",
+		"DESCRIPTION": "3 Ignis: Craft an Incendium rune with !Pot! potency."
 	}
 }

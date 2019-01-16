@@ -92,6 +92,8 @@ public class EnhancedCardValueModified {
 	                self.isDamageModified = true;
 	            }
 	            
+	            //reset enhancement after card use
+	            //enhanceReset is true after the card is played
 	            if(EnhanceCountField.enhanceReset.get(self)) {
 	            	EnhanceCountField.enhanceCount.set(self,0);
 	            }
@@ -124,20 +126,19 @@ public class EnhancedCardValueModified {
     	public static SpireReturn Prefix(AbstractCard self) {
     	// Check required for Compendium
 			if (AbstractDungeon.player != null) {
-
-				
 				self.block = self.baseBlock;
 				self.isBlockModified = false;
 				self.damage = self.baseDamage;
 				self.isDamageModified = false;
-				self.magicNumber = self.baseMagicNumber;
-				self.isMagicNumberModified = false;
-				self.damageTypeForTurn = (DamageInfo.DamageType)ReflectionHacks.getPrivate(self, AbstractCard.class, "damageType");
-				EnhanceCountField.enhanceReset.set(self,false);
 				if(self instanceof AbstractRunicCard) {
 					((AbstractRunicCard) self).potency = ((AbstractRunicCard) self).basePotency;
 					((AbstractRunicCard) self).isPotencyModified = false;
 				}
+				self.magicNumber = self.baseMagicNumber;
+				self.isMagicNumberModified = false;
+				self.damageTypeForTurn = (DamageInfo.DamageType)ReflectionHacks.getPrivate(self, AbstractCard.class, "damageType");
+				EnhanceCountField.enhanceReset.set(self,false);
+				
 				
 				logger.info("reset attributes");
 				
