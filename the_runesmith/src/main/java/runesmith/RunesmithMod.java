@@ -221,15 +221,15 @@ public class RunesmithMod implements PostExhaustSubscriber,
 	        keywordsPath = KEYWORD_STRING;
 	        break;
 	    }*/
-//	    keywordsPath = KEYWORD_STRING;
-//
-//	    Gson gson = new Gson();
-//	    Keywords keywords;
-//	    keywords = gson.fromJson(loadJson(keywordsPath), Keywords.class);
-//	    for (Keyword key : keywords.keywords) {
-//	      logger.info("Loading keyword : " + key.NAMES[0]);
-//	      BaseMod.addKeyword(key.NAMES, key.DESCRIPTION);
-//	    }
+	    keywordsPath = KEYWORD_STRING;
+
+	    Gson gson = new Gson();
+	    Keywords keywords;
+	    keywords = gson.fromJson(loadJson(keywordsPath), Keywords.class);
+	    for (Keyword key : keywords.keywords) {
+	      logger.info("Loading keyword : " + key.NAMES[0]);
+	      BaseMod.addKeyword(key.NAMES, key.DESCRIPTION);
+	    }
 	    logger.info("Keywords setting finished.");
 	}
 	

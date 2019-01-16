@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import basemod.abstracts.CustomCard;
 import runesmith.patches.AbstractCardEnum;
 import runesmith.powers.IgnisPower;
+import runesmith.powers.TerraPower;
 
 public class EarthShield extends CustomCard {
 	public static final String ID = "Runesmith:EarthShield";
