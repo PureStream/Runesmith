@@ -189,8 +189,8 @@
 	},
 	"Runesmith:ConstructBifrost": {
 		"NAME": "Construct Bifrost",
-		"DESCRIPTION": "Downgrade a card in your deck. 3 Ignis 3 Terra 3 Aqua: Craft a prismatic rune. NL Exhaust.",
-		"UPGRADE_DESCRIPTION": "Downgrade a card in your deck. 3 Ignis 3 Terra 3 Aqua: Craft a prismatic+ rune. NL Exhaust."
+		"DESCRIPTION": "Downgrade a card in your deck. 3 Ignis 3 Terra 3 Aqua: Craft a Prismatic Rune. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Downgrade a card in your deck. 3 Ignis 3 Terra 3 Aqua: Craft a Prismatic+ Rune. NL Exhaust."
 	},
 	"Runesmith:CraftIndustria": {
 		"NAME": "Craft Industria",
