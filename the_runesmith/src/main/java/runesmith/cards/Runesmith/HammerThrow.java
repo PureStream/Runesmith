@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import basemod.abstracts.CustomCard;
-import runesmith.actions.HammerThrowAction;
+import runesmith.actions.UpgradeDrawAction;
 import runesmith.patches.AbstractCardEnum;
 
 public class HammerThrow extends CustomCard {
@@ -49,8 +49,8 @@ public class HammerThrow extends CustomCard {
 				AbstractGameAction.AttackEffect.BLUNT_HEAVY
 			)
 		);
-		AbstractDungeon.actionManager.addToBottom(
-				new HammerThrowAction(p, this.magicNumber)
+		AbstractDungeon.actionManager.addToTop(
+				new UpgradeDrawAction(p, this.magicNumber)
 				);
 	}
 

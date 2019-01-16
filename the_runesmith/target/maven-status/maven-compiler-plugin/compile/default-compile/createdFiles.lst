@@ -46,4 +46,5 @@ runesmith\helpers\PotencyVariable.class
 runesmith\powers\AquaPower.class
 runesmith\RunesmithMod$Keywords.class
 runesmith\patches\EnhancedCardValueModified.class
+runesmith\actions\UpgradeDrawAction.class
 runesmith\character\player\RunesmithPlayer.class
