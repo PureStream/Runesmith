@@ -27,6 +27,7 @@ import runesmith.cards.Runesmith.*;
 import runesmith.character.player.RunesmithCharacter;
 import runesmith.helpers.PotencyVariable;
 import runesmith.patches.AbstractCardEnum;
+import runesmith.patches.EnhanceCountField;
 import runesmith.patches.PlayerClassEnum;
 import runesmith.relics.Blueberries;
 import runesmith.relics.BrokenRuby;
@@ -253,9 +254,8 @@ public class RunesmithMod implements PostExhaustSubscriber,
 	}
 
 	@Override
-	public void receiveCardUsed(AbstractCard arg0) {
-		// TODO Auto-generated method stub
-		
+	public void receiveCardUsed(AbstractCard card) {
+		EnhanceCountField.enhanceCount.set(card,0);
 	}
 
 	@Override
