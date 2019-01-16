@@ -22,16 +22,16 @@ public class FirestoneRune extends RuneOrb {
 	public void onStartOfTurn() {
 		this.activateEffect();
 		//get random target
-		 AbstractCreature m = AbstractDungeon.getMonsters().getRandomMonster(true);
-		 //damage enemy
-		 AbstractDungeon.actionManager.addToBottom(
-		 new DamageRandomEnemyAction(
+		AbstractCreature m = AbstractDungeon.getMonsters().getRandomMonster(true);
+		//damage enemy
+		AbstractDungeon.actionManager.addToBottom(
+		new DamageRandomEnemyAction(
 					new DamageInfo(AbstractDungeon.player, 
 							this.potential, 
 							DamageInfo.DamageType.THORNS),
 					AbstractGameAction.AttackEffect.FIRE
 				)
-		 );
+		);
 	}
 	
 	@Override
