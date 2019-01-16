@@ -34,7 +34,7 @@ public class Fortify extends CustomCard {
 			DESCRIPTION,
 			AbstractCard.CardType.SKILL,
 			AbstractCardEnum.RUNESMITH_BEIGE,
-			AbstractCard.CardRarity.COMMON,
+			AbstractCard.CardRarity.BASIC,
 			AbstractCard.CardTarget.SELF
 		);
 		//this.tags.add(BaseModCardTags.BASIC_DEFEND);
