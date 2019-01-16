@@ -139,12 +139,12 @@
 	},
 	"Runesmith:CraftPotentia": {
 		"NAME": "Craft Potentia",
-		"DESCRIPTION": "2 Ignis 2 Terra 2 Aqua: Craft a Potentia rune with !Pot! potency. Remove your oldest rune."
+		"DESCRIPTION": "2 Ignis 2 Terra 2 Aqua: Craft a Potentia rune with !Pot! Potency. Remove your oldest rune."
 	},
 	"Runesmith:CraftFerro": {
 		"NAME": "Craft Ferro",
-		"DESCRIPTION": "2 Terra 1 Aqua: Craft an Ferro rune with !Pot! potency. Exhaust.",
-		"UPGRADE_DESCRIPTION": "2 Terra 1 Aqua: Craft an Ferro rune with !Pot! potency."
+		"DESCRIPTION": "2 Terra 1 Aqua: Craft an Ferro rune with !Pot! Potency. Exhaust.",
+		"UPGRADE_DESCRIPTION": "2 Terra 1 Aqua: Craft an Ferro rune with !Pot! Potency."
 	},
 	"Runesmith:HammerTime": {
 		"NAME": "Hammer Time",
@@ -203,7 +203,7 @@
 	},
 	"Runesmith:CraftMedicinae": {
 		"NAME": "Craft Medicinae",
-		"DESCRIPTION": "5 Terra: Craft a Medicinae rune with !Pot! potency. NL Exhaust."
+		"DESCRIPTION": "5 Terra: Craft a Medicinae rune with !Pot! Potency. NL Exhaust."
 	},
 	"Runesmith:LastStand": {
 		"NAME": "Last Stand",
@@ -244,7 +244,7 @@
 	},
 	"Runesmith:Border Wall": {
 		"NAME": "Border Wall",
-		"DESCRIPTION": "Gain !B! Block. 4 Terra: Craft 2 Protectio rune with !Pot! potency."
+		"DESCRIPTION": "Gain !B! Block. 4 Terra: Craft 2 Protectio rune with !Pot! Potency."
 	},
 	"Runesmith:RuneMagnet": {
 		"NAME": "Rune Magnet",
