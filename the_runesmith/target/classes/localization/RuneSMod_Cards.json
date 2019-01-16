@@ -11,13 +11,31 @@
 		"NAME": "Craft Firestone",
 		"DESCRIPTION": "2 Ignis: Craft a Firestone Rune with !Pot! potency."
 	},
+	"Runesmith:Fortify": {
+		"NAME": "Fortify",
+		"DESCRIPTION": "Gain !B! Block. Enhance a random card in your hand.",
+		"UPGRADE_DESCRIPTION": "Gain !B! Block. Enhance a card in your hand."
+	},
 	"Runesmith:ChiselStab": {
 		"NAME": "Chisel Stab",
-		"DESCRIPTION": "Deal !D! Damage. Gain !M! Ignis."
+		"DESCRIPTION": "Deal !D! Damage. Gain 2 Ignis."
 	},
 	"Runesmith:EarthShield": {
 		"NAME": "Earth Shield",
-		"DESCRIPTION": "Gain !D! Block. Gain !M! Terra."
+		"DESCRIPTION": "Gain !D! Block. Gain 2 Terra."
+	},
+	"Runesmith:HeatedChisel": {
+		"NAME": "Heated Chisel",
+		"DESCRIPTION": "Deal !D! damage. Apply !M! vulnerable. Gain 1 Ignis and 1 Terra."
+	},
+	"Runesmith:Terraform": {
+		"NAME": "Terraform",
+		"DESCRIPTION": "Gain block equals to the number of Terra twice. Gain 1 Terra.",
+		"UPGRADE_DESCRIPTION": "Gain block equals to the number of Terra thrice. Gain 1 Terra.",
+		"EXTENDED_DESCRIPTION":[
+			" NL (Gain ",
+			" Block.)"
+		]
 	},
 	"Runesmith:RuneHurl": {
 		"NAME": "Rune Hurl",

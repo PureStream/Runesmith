@@ -16,6 +16,7 @@ import com.megacrit.cardcrawl.localization.OrbStrings;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
+import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
@@ -75,6 +76,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
 	private static final String RELIC_STRING = "localization/RuneSMod_Relics.json";
 	private static final String POWER_STRING = "localization/RuneSMod_Powers.json";
 	private static final String POTION_STRING = "localization/RuneSMod_Potions.json";
+	private static final String UI_STRING = "localization/RuneSMod_UI.json";
 	private static final String KEYWORD_STRING = "localization/RuneSMod_Keywords.json";
 	
 	private List<AbstractCard> cardsToAdd = new ArrayList<>();
@@ -115,13 +117,14 @@ public class RunesmithMod implements PostExhaustSubscriber,
 	public void receiveEditStrings() {
 	    logger.info("start editing strings");
 	
-		String relicStrings, cardStrings, powerStrings, potionStrings, relic, card, power, potion;
+		String relicStrings, cardStrings, powerStrings, potionStrings, relic, card, power, potion, ui, uiStrings;
 		
 		logger.info("lang == eng");
 		card = CARD_STRING;
 		relic = RELIC_STRING;
 		power = POWER_STRING;
 		potion = POTION_STRING;
+		ui = UI_STRING;
 		
 		/*if (Settings.language == Settings.GameLanguage.ZHS) {
 		  logger.info("lang == zhs");
@@ -165,17 +168,25 @@ public class RunesmithMod implements PostExhaustSubscriber,
 		    String.valueOf(StandardCharsets.UTF_8)
 		);
 		BaseMod.loadCustomStrings(RelicStrings.class, relicStrings);
+		
 		cardStrings = Gdx.files.internal(card).readString(
 		    String.valueOf(StandardCharsets.UTF_8)
 		);
 		BaseMod.loadCustomStrings(CardStrings.class, cardStrings);
+		
 		powerStrings = Gdx.files.internal(power).readString(
 		    String.valueOf(StandardCharsets.UTF_8)
 		);
 		BaseMod.loadCustomStrings(PowerStrings.class, powerStrings);
+		
 		potionStrings = Gdx.files.internal(potion).readString(
 		    String.valueOf(StandardCharsets.UTF_8)
 		);
+		
+		uiStrings = Gdx.files.internal(ui).readString(
+			String.valueOf(StandardCharsets.UTF_8)
+		);
+		BaseMod.loadCustomStrings(UIStrings.class, uiStrings);
 		
 		String orbStrings = Gdx.files.internal("localization/RuneSMod_Orbs.json").readString(String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(OrbStrings.class, orbStrings);
@@ -268,6 +279,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
 		cardsToAdd.add(new Strike_RS());
 		cardsToAdd.add(new Defend_RS());
 		cardsToAdd.add(new CraftFirestone());
+		cardsToAdd.add(new Fortify());
 		cardsToAdd.add(new ChiselStab());
 		cardsToAdd.add(new EarthShield());
 		cardsToAdd.add(new RuneHurl());

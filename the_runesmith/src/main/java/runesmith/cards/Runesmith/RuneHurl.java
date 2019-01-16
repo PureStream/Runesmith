@@ -55,7 +55,7 @@ public class RuneHurl extends CustomCard {
 		}
 		if(r == null) return;
 		
-		AbstractDungeon.actionManager.addToBottom(
+		AbstractDungeon.actionManager.addToTop(
 			new DamageAction(
 				m,
 				new DamageInfo(p, this.damage, this.damageTypeForTurn),

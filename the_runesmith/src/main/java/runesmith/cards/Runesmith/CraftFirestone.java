@@ -51,7 +51,7 @@ public class CraftFirestone extends AbstractRunicCard {
 			if(p.getPower("IgnisPower").amount>=2) {
 				AbstractDungeon.actionManager.addToBottom(
 						new RuneChannelAction(
-								new FirestoneRune(this.POTENCY)));
+								new FirestoneRune(this.potency)));
 				p.getPower("IgnisPower").reducePower(2);
 			}else addPower();
 		}else addPower();

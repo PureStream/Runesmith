@@ -11,6 +11,11 @@
 		"NAME": "Craft Firestone",
 		"DESCRIPTION": "2 Ignis: Craft a Firestone Rune with !Pot! potency."
 	},
+	"Runesmith:Fortify": {
+		"NAME": "Fortify",
+		"DESCRIPTION": "Gain !B! Block. Enhance a random card in your hand.",
+		"UPGRADE_DESCRIPTION": "Gain !B! Block. Enhance a card in your hand."
+	},
 	"Runesmith:ChiselStab": {
 		"NAME": "Chisel Stab",
 		"DESCRIPTION": "Deal !D! Damage. Gain 2 Ignis."
