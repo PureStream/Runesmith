@@ -20,7 +20,6 @@ public class AquaPower extends AbstractPower {
 		this.owner = owner;
 		this.amount = amount;
 		this.priority = 2;
-		this.type = AbstractPower.PowerType.BUFF;
 		updateDescription();
 		this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/Aqua.png"), 0, 0, 84, 84);
 	    this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/AquaSmall.png"), 0, 0, 32, 32);

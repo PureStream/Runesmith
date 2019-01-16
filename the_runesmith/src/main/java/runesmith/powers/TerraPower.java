@@ -20,7 +20,6 @@ public class TerraPower extends AbstractPower {
 		this.owner = owner;
 		this.amount = amount;
 		this.priority = 1;
-		this.type = AbstractPower.PowerType.BUFF;
 		updateDescription();
 		this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/Terra.png"), 0, 0, 84, 84);
 	    this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/TerraSmall.png"), 0, 0, 32, 32);

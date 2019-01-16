@@ -10,5 +10,9 @@
 	"AquaPower": {
 		"NAME": "Aqua",
 		"DESCRIPTIONS": ["You currently have #b", " #yAqua."]
+	},
+	"GrindstonePower": {
+		"NAME": "Grindstone",
+		"DESCRIPTIONS": ["ALL cards played this turn become #yUpgraded."]
 	}
 }
