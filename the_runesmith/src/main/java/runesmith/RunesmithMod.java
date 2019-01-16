@@ -292,6 +292,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
 		cardsToAdd.add(new UnstableHammer());
 		cardsToAdd.add(new HammerSlam());
 		cardsToAdd.add(new EnchantedChisel());
+		cardsToAdd.add(new MakeshiftArmor());
 	}
 
 	@Override
