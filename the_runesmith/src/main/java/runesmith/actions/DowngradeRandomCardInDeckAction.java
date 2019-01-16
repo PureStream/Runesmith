@@ -52,8 +52,9 @@ public class DowngradeRandomCardInDeckAction extends AbstractGameAction{
 	
 	private void replaceCard(ArrayList<AbstractCard> group, AbstractCard select) {
 		int index = group.indexOf(select);
-		group.add(index, select.makeCopy());
-		group.remove(index+1);
+//		group.add(index, select.makeCopy());
+//		group.remove(index+1);
+		group.set(index, select.makeCopy());
 	}
 	
 }

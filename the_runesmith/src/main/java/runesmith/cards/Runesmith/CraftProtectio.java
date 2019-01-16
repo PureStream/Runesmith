@@ -14,7 +14,7 @@ import runesmith.patches.AbstractCardEnum;
 public class CraftProtectio extends AbstractRunicCard {
 
 	public static final String ID = "Runesmith:CraftProtectio";
-	public static final String IMG_PATH = "images/cards/defend_RS.png";
+	public static final String IMG_PATH = "images/cards/CraftProtectio.png";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
