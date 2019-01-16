@@ -45,7 +45,7 @@ public class ShiftingStrike extends CustomCard{
 	}
 	
 	public AbstractCard makeCopy() {
-		return new HammerSlam();
+		return new ShiftingStrike();
 	}
 
 	@Override

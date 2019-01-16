@@ -51,8 +51,8 @@
 	},
 	"Runesmith:HammerSlam": {
 		"NAME": "Hammer Slam",
-		"DESCRIPTION": "Deal !D! damage. Draw !M! card for each unique Rune you have.",
-		"UPGRADE_DESCRIPTION": "Deal !D! damage. Draw !M! card for each unique Rune you have plus one."
+		"DESCRIPTION": "Deal !D! damage. NL Draw !M! card for each unique Rune you have.",
+		"UPGRADE_DESCRIPTION": "Deal !D! damage. NL Draw !M! card for each unique Rune you have plus one."
 	},
 	"Runesmith:ElementalConversion": {
 		"NAME": "Elemental Conversion",
