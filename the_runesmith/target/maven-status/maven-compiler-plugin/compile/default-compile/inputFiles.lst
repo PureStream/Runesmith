@@ -2,7 +2,6 @@ C:\Users\RYZEN7\git\Runesmith\the_runesmith\src\main\java\runesmith\helpers\Pote
 C:\Users\RYZEN7\git\Runesmith\the_runesmith\src\main\java\runesmith\orbs\ProtectioRune.java
 C:\Users\RYZEN7\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\AbstractRunicCard.java
 C:\Users\RYZEN7\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\HeatedChisel.java
-C:\Users\RYZEN7\git\Runesmith\the_runesmith\src\main\java\runesmith\actions\HammerThrowAction.java
 C:\Users\RYZEN7\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\HammerThrow.java
 C:\Users\RYZEN7\git\Runesmith\the_runesmith\src\main\java\runesmith\actions\EnhanceCard.java
 C:\Users\RYZEN7\git\Runesmith\the_runesmith\src\main\java\runesmith\character\player\RunesmithPlayer.java
@@ -10,11 +9,14 @@ C:\Users\RYZEN7\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesm
 C:\Users\RYZEN7\git\Runesmith\the_runesmith\src\main\java\runesmith\orbs\IncendiumRune.java
 C:\Users\RYZEN7\git\Runesmith\the_runesmith\src\main\java\runesmith\patches\EnhanceCountField.java
 C:\Users\RYZEN7\git\Runesmith\the_runesmith\src\main\java\runesmith\relics\BrokenRuby.java
+C:\Users\RYZEN7\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\ShiftingStrike.java
 C:\Users\RYZEN7\git\Runesmith\the_runesmith\src\main\java\runesmith\patches\AbstractCardEnum.java
 C:\Users\RYZEN7\git\Runesmith\the_runesmith\src\main\java\runesmith\patches\LibraryTypeEnum.java
+C:\Users\RYZEN7\git\Runesmith\the_runesmith\src\main\java\runesmith\actions\UpgradeDrawAction.java
 C:\Users\RYZEN7\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\CraftIncendium.java
 C:\Users\RYZEN7\git\Runesmith\the_runesmith\src\main\java\runesmith\orbs\DudRune.java
 C:\Users\RYZEN7\git\Runesmith\the_runesmith\src\main\java\runesmith\actions\cards\HammerSlamAction.java
+C:\Users\RYZEN7\git\Runesmith\the_runesmith\src\main\java\runesmith\actions\DowngradeCardInHandAction.java
 C:\Users\RYZEN7\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\Fortify.java
 C:\Users\RYZEN7\git\Runesmith\the_runesmith\src\main\java\runesmith\patches\PlayerClassEnum.java
 C:\Users\RYZEN7\git\Runesmith\the_runesmith\src\main\java\runesmith\powers\IgnisPower.java
