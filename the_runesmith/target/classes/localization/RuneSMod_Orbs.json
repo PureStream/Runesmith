@@ -2,7 +2,7 @@
   "Firestone": {
     "NAME": "Firestone",
     "DESCRIPTION": [
-      "Deal #b{Pot} damage at the start of your turn [E] ."
+      "Deal #b{Pot} damage at the start of your turn."
     ]
   },
   "Protectio": {
@@ -52,13 +52,19 @@
   "Industria": {
     "NAME": "Industria",
     "DESCRIPTION": [
-      "Gain 1 energy at the start of your turn."
+      "Gain [E] at the start of your turn."
     ]
   },
   "Medicinae": {
     "NAME": "Medicinae",
     "DESCRIPTION": [
       "Heals {Pot} HP twice on #yBreak."
+    ]
+  },
+  "Dud": {
+    "NAME": "Dud",
+    "DESCRIPTION": [
+      "No effect."
     ]
   },
   "WWWWWWWWWWWWWW": {

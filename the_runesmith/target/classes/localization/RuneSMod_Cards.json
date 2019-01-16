@@ -80,7 +80,7 @@
 	},
 	"Runesmith:UnstableHammer": {
 		"NAME": "Unstable Hammer",
-		"DESCRIPTION": "Deal !D! damage. Craft a dud rune (no effect). Gain 1 random element."
+		"DESCRIPTION": "Deal !D! damage. Craft a Dud rune (no effect). Gain 1 random element."
 	},
 	"Runesmith:HammerThrow": {
 		"NAME": "Hammer Throw",
@@ -88,7 +88,7 @@
 	},
 	"Runesmith:OneForEveryOne": {
 		"NAME": "One for Every One",
-		"DESCRIPTION": "Break a random Rune and gain 1 Energy. Deal 1 damage to all enemies. Gain 1 block. Gain 1 of each element."
+		"DESCRIPTION": "Break a random Rune and gain [E] . Deal 1 damage to all enemies. Gain 1 block. Gain 1 of each element."
 	},
 	"Runesmith:RunicBullets": {
 		"NAME": "Runic Bullets",
@@ -101,7 +101,11 @@
 	},
 	"Runesmith:ElementalShield": {
 		"NAME": "Elemental Shield",
-		"DESCRIPTION": "Remove all elements. Gain block equals to !M! times the amount of element removed."
+		"DESCRIPTION": "Remove all elements. Gain block equals to !M! times the amount of element removed.",
+		"EXTENDED_DESCRIPTION":[
+			" NL (Gain ",
+			" Block.)"
+		]
 	},
 	"Runesmith:Grindstone": {
 		"NAME": "Grindstone",
@@ -219,7 +223,7 @@
 	},
 	"Runesmith:ManaExplosion": {
 		"NAME": "Mana Explosion",
-		"DESCRIPTION": "Break ALL of your Runes. Draw a card and gain 1 Energy for each Rune destroyed."
+		"DESCRIPTION": "Break ALL of your Runes. Draw a card and gain [E] for each Rune destroyed."
 	},
 	"Runesmith:CreatorForm": {
 		"NAME": "Creator Form",
