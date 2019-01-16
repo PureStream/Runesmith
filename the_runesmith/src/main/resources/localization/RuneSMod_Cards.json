@@ -51,8 +51,8 @@
 	},
 	"Runesmith:HammerSlam": {
 		"NAME": "Hammer Slam",
-		"DESCRIPTION": "Deal !D! damage. Draw cards equal to the number of different Runes.",
-		"UPGRADE_DESCRIPTION": "Deal !D! damage. Draw cards equal to the number of different Runes plus 1."
+		"DESCRIPTION": "Deal !D! damage. Draw cards equal to the number of different runes.",
+		"UPGRADE_DESCRIPTION": "Deal !D! damage. Draw cards equal to the number of different runes plus 1."
 	},
 	"Runesmith:ElementalConversion": {
 		"NAME": "Elemental Conversion",
@@ -224,7 +224,7 @@
 	},
 	"Runesmith:ManaExplosion": {
 		"NAME": "Mana Explosion",
-		"DESCRIPTION": "Break ALL of your Runes. Draw a card and gain [E] for each rune destroyed."
+		"DESCRIPTION": "Break ALL of your runes. Draw a card and gain [E] for each rune destroyed."
 	},
 	"Runesmith:CreatorForm": {
 		"NAME": "Creator Form",
@@ -250,17 +250,10 @@
 		"NAME": "Rune Magnet",
 		"DESCRIPTION": "Draw until you get a Craft card and discard ALL other cards drawn. NL Exhaust."
 	},
-<<<<<<< HEAD
 	"Runesmith:ThatsALotOfDAMAGE": {
 		"NAME": "Thatfs a lot of DAMAGE",
 		"DESCRIPTION": "Halves enemies current HP and Block. NL Exhaust.",
 		"UPGRADE_DESCRIPTION": "Halves enemies current HP and Block. NL Innate. NL Exhaust."
-=======
-	"Runesmith:ThatsALotOfDAMAGE": {
-		"NAME": "Thatï¿½fs a lot of DAMAGE",
-		"DESCRIPTION": "Halves enemies current HP and block. NL Exhaust.",
-		"UPGRADE_DESCRIPTION": "Halves enemies current HP and block. NL Innate. NL Exhaust."
->>>>>>> branch 'development' of https://github.com/PureStream/Runesmith.git
 	},
 	"Runesmith:WWWWWWWWWWWWWWWWWWWW": {
 		"NAME": "WWWWWWWWWWWWWWWWWWWW",
