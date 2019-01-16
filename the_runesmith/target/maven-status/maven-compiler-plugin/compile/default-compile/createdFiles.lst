@@ -32,6 +32,7 @@ runesmith\relics\Blueberries.class
 runesmith\cards\Runesmith\Terraform.class
 runesmith\patches\EnhancedCardValueModified$applyPowers.class
 runesmith\cards\Runesmith\ElementalShield.class
+runesmith\cards\Runesmith\Grindstone.class
 runesmith\cards\Runesmith\HammerThrow.class
 runesmith\cards\Runesmith\Fortify.class
 runesmith\relics\BrokenRuby.class
@@ -45,6 +46,7 @@ runesmith\powers\TerraPower.class
 runesmith\actions\EnhanceCard.class
 runesmith\helpers\PotencyVariable.class
 runesmith\powers\AquaPower.class
+runesmith\powers\GrindstonePower.class
 runesmith\RunesmithMod$Keywords.class
 runesmith\patches\EnhancedCardValueModified.class
 runesmith\actions\UpgradeDrawAction.class
