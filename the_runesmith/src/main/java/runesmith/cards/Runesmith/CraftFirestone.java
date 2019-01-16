@@ -48,7 +48,7 @@ public class CraftFirestone extends AbstractRunicCard {
 	}
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		if (checkElements(2,0,0)) {
+		if (checkElements(IGNIS_AMT,0,0)) {
 			AbstractDungeon.actionManager.addToBottom(
 					new RuneChannelAction(
 							new FirestoneRune(this.potency)));
