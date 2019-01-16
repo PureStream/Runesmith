@@ -8,7 +8,13 @@
   "Protectio": {
     "NAME": "Protectio",
     "DESCRIPTION": [
-      "Gain {Pot} block at the start of your turn."
+      "Gain {Pot} Block at the start of your turn."
+    ]
+  },
+  "Incendium": {
+    "NAME": "Incendium",
+    "DESCRIPTION": [
+      "Deal {Pot} damage to all enemies at the start of your turn."
     ]
   }
 }

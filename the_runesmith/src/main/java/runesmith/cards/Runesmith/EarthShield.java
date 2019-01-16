@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import basemod.abstracts.CustomCard;
 import runesmith.patches.AbstractCardEnum;
 import runesmith.powers.IgnisPower;
+import runesmith.powers.TerraPower;
 
 public class EarthShield extends CustomCard {
 	public static final String ID = "Runesmith:EarthShield";
@@ -44,7 +45,7 @@ public class EarthShield extends CustomCard {
 			new GainBlockAction(p, p, this.block)
 		);
 		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, 
-				new IgnisPower(p, TERRA_AMT),TERRA_AMT));
+				new TerraPower(p, TERRA_AMT),TERRA_AMT));
 	}
 	
 	public AbstractCard makeCopy() {
