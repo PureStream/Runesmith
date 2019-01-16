@@ -68,9 +68,15 @@ public class HammerSlam extends CustomCard{
 				)
 			);
 		
+		if(this.upgraded) {
 		AbstractDungeon.actionManager.addToBottom(
 				new HammerSlamAction(p, this.magicNumber,1)
 				);
+		}else {
+			AbstractDungeon.actionManager.addToBottom(
+				new HammerSlamAction(p, this.magicNumber,0)
+				);	
+		}
 	}
 	
 	
