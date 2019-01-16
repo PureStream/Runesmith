@@ -43,6 +43,7 @@ public class Terraform extends CustomCard {
 	public void applyPowers() {
 		AbstractPlayer p = AbstractDungeon.player;
 		int multiplier;
+		this.baseBlock = 0;
 		if (this.upgraded) {
 			multiplier = 3;
 		} else {

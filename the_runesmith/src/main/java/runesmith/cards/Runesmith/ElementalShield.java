@@ -1,6 +1,7 @@
 package runesmith.cards.Runesmith;
 
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -44,6 +45,7 @@ public class ElementalShield extends CustomCard {
 		AbstractPlayer p = AbstractDungeon.player;
 		int multiplier;
 		int totalElements = 0;
+		this.baseBlock = 0;
 		if (this.upgraded) {
 			multiplier = 3;
 		} else {
@@ -88,7 +90,15 @@ public class ElementalShield extends CustomCard {
 			  new GainBlockAction(p, p, this.block)
 			);
 		}
-		
+		if (p.hasPower("IgnisPower")) {
+			AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, "IgnisPower"));
+		}
+		if (p.hasPower("TerraPower")) {
+			AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, "TerraPower"));
+		}
+		if (p.hasPower("AquaPower")) {
+			AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, "AquaPower"));
+		}
 	}
 	
 	public AbstractCard makeCopy() {
