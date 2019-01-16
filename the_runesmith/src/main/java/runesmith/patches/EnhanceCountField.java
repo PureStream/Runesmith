@@ -7,4 +7,5 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 @SpirePatch(clz=AbstractCard.class, method=SpirePatch.CLASS)
 public class EnhanceCountField {
 	public static SpireField<Integer> enhanceCount = new SpireField<Integer>(() -> 0);
+	public static SpireField<Boolean> enhanceReset = new SpireField<Boolean>(() -> false);
 }
