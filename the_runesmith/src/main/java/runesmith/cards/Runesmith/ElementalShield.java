@@ -11,21 +11,21 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import basemod.abstracts.CustomCard;
 import runesmith.patches.AbstractCardEnum;
-import runesmith.powers.IgnisPower;
 import runesmith.powers.TerraPower;
 
-public class Terraform extends CustomCard {
-	public static final String ID = "Runesmith:Terraform";
+public class ElementalShield extends CustomCard {
+	public static final String ID = "Runesmith:ElementalShield";
 	public static final String IMG_PATH = "images/cards/defend_RS.png"; //<-------- Image needed
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
 	private static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
-	private static final int COST = 1;
-	private static final int TERRA_AMT = 1;
+	private static final int COST = 0;
+	private static final int TIMES_AMT = 2;
+	private static final int UPGRADE_TIMES_AMT = 1;
 	
-	public Terraform() {
+	public ElementalShield() {
 		super(
 			ID,
 			NAME,
@@ -38,19 +38,30 @@ public class Terraform extends CustomCard {
 			AbstractCard.CardTarget.SELF
 		);
 		this.baseBlock = this.block = 0;
+		this.baseMagicNumber = this.magicNumber = TIMES_AMT;
 	}
 	
 	@Override
 	public void applyPowers() {
 		AbstractPlayer p = AbstractDungeon.player;
 		int multiplier;
+		int totalElements = 0;
 		if (this.upgraded) {
 			multiplier = 3;
 		} else {
 			multiplier = 2;
 		}
+		if (p.hasPower("IgnisPower")) {
+			totalElements += p.getPower("IgnisPower").amount;
+		}
 		if (p.hasPower("TerraPower")) {
-			this.baseBlock += (p.getPower("TerraPower").amount * multiplier);
+			totalElements += p.getPower("TerraPower").amount;
+		}
+		if (p.hasPower("AquaPower")) {
+			totalElements += p.getPower("AquaPower").amount;
+		}
+		if (totalElements > 0) {
+			this.baseBlock += (totalElements * multiplier);
 			super.applyPowers();
 		}
 		if (this.block > 0) {
@@ -79,18 +90,17 @@ public class Terraform extends CustomCard {
 			  new GainBlockAction(p, p, this.block)
 			);
 		}
-		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, 
-				new TerraPower(p, TERRA_AMT),TERRA_AMT));
+		
 	}
 	
 	public AbstractCard makeCopy() {
-		return new Terraform();
+		return new ElementalShield();
 	}
 	
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			this.rawDescription = DESCRIPTION_UPG;
+			upgradeMagicNumber(UPGRADE_TIMES_AMT);
 			initializeDescription();
 		}
 	}

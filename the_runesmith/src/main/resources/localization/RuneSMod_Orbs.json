@@ -61,6 +61,12 @@
       "Heals {Pot} HP twice on #yBreak."
     ]
   },
+  "Dud": {
+    "NAME": "Dud",
+    "DESCRIPTION": [
+      "No effect."
+    ]
+  },
   "WWWWWWWWWWWWWW": {
     "NAME": "WWWWWWWWWWWWWW",
     "DESCRIPTION": [

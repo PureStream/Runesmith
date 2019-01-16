@@ -81,7 +81,7 @@
 	},
 	"Runesmith:UnstableHammer": {
 		"NAME": "Unstable Hammer",
-		"DESCRIPTION": "Deal !D! damage. Craft a dud rune (no effect). Gain 1 random element."
+		"DESCRIPTION": "Deal !D! damage. Craft a Dud rune (no effect). Gain 1 random element."
 	},
 	"Runesmith:HammerThrow": {
 		"NAME": "Hammer Throw",
@@ -102,7 +102,11 @@
 	},
 	"Runesmith:ElementalShield": {
 		"NAME": "Elemental Shield",
-		"DESCRIPTION": "Remove all elements. Gain block equals to !M! times the amount of element removed."
+		"DESCRIPTION": "Remove all elements. Gain block equals to !M! times the amount of element removed.",
+		"EXTENDED_DESCRIPTION":[
+			" NL (Gain ",
+			" Block.)"
+		]
 	},
 	"Runesmith:Grindstone": {
 		"NAME": "Grindstone",

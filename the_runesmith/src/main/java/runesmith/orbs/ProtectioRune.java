@@ -34,6 +34,6 @@ public class ProtectioRune extends RuneOrb {
 	}
 
 	@Override
-	public AbstractOrb makeCopy() { return new FirestoneRune(this.potential); }
+	public AbstractOrb makeCopy() { return new ProtectioRune(this.potential); }
 
 }
