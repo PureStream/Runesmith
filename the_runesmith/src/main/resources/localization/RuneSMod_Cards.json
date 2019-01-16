@@ -11,6 +11,10 @@
 		"NAME": "Craft Firestone",
 		"DESCRIPTION": "2 Ignis: Craft a Firestone Rune with !Pot! potency."
 	},
+	"Runesmith:CraftProtectio": {
+		"NAME": "Craft Protectio",
+		"DESCRIPTION": "2 Terra: Craft a Protectio Rune with !Pot! potency."
+	},
 	"Runesmith:Fortify": {
 		"NAME": "Fortify",
 		"DESCRIPTION": "Gain !B! Block. Enhance a random card in your hand.",
