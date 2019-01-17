@@ -6,7 +6,9 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 
 public class ProtectioRune extends RuneOrb {
-
+	
+	public static final int basePotency = 2;
+	
 	public ProtectioRune(int potential) {
 		super( "Protectio",
 				false,
