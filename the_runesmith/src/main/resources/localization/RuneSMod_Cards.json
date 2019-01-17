@@ -61,15 +61,15 @@
 	},
 	"Runesmith:ConvertIgnis": {
 		"NAME": "Convert Ignis",
-		"DESCRIPTION": "Convert 2 Ignis to !M! Terra and 1 Aqua"
+		"DESCRIPTION": "Lose 2 Ignis. NL Gain !M! Terra and 1 Aqua."
 	},
 	"Runesmith:ConvertTerra": {
 		"NAME": "Convert Terra",
-		"DESCRIPTION": "Convert 2 Terra to !M! Ignis and 1 Aqua."
+		"DESCRIPTION": "Lose 2 Terra. NL Gain !M! Ignis and 1 Aqua."
 	},
 	"Runesmith:ConvertAqua": {
 		"NAME": "Convert Aqua",
-		"DESCRIPTION": "Convert 2 Aqua to !M! Ignis and 1 Terra"
+		"DESCRIPTION": "Lose 2 Aqua. NL Gain !M! Ignis and 1 Terra."
 	},
 	"Runesmith:Repurpose": {
 		"NAME": "Repurpose",
@@ -263,7 +263,7 @@
 	},
 	"Runesmith:Rearm": {
 		"NAME": "Rearm",
-		"DESCRIPTION": "Shuffle all Upgraded cards in discard pile into draw pile.  NL Draw 1(2) cards. NL Exhaust."
+		"DESCRIPTION": "Shuffle all Upgraded cards in discard pile into draw pile.  NL Draw !M! cards. NL Exhaust."
 	},
 	"Runesmith:UnlimitedPower": {
 		"NAME": "Unlimited Power",
