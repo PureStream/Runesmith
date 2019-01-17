@@ -41,9 +41,7 @@ public class StasisExhaustPrevention {
 		public static void Replace(CardGroup self, AbstractCard c) {
 			if(CardStasisStatus.isStatis.get(c)) {
 				logger.info("Attempting exhaust prevention");
-				CardStasisStatus.isStatis.set(c, false);
-				//AbstractDungeon.player.discardPile.addToTop(c);
-				
+				CardStasisStatus.isStatis.set(c, false);				
 				if (AbstractDungeon.player.hoveredCard == c) {
 					AbstractDungeon.player.releaseCard();
 				}
@@ -54,7 +52,8 @@ public class StasisExhaustPrevention {
 				self.group.remove(c);
 				//update card description
 				AdditionalCardDescriptions.modifyDescription(c);
-				AbstractDungeon.effectList.add(new ShowCardAndAddToDiscardEffect(c));
+				AbstractDungeon.player.discardPile.addToTop(c);
+				//AbstractDungeon.effectList.add(new ShowCardAndAddToDiscardEffect(c));
 				return;
 			}
 			for (AbstractRelic r : AbstractDungeon.player.relics) {

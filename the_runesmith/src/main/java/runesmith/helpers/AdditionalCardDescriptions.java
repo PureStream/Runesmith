@@ -26,20 +26,23 @@ public abstract class AdditionalCardDescriptions {
 		
 		logger.info("now modifying: "+c.rawDescription);
 		logger.info("enhanceCount: "+EnhanceCountField.enhanceCount.get(c));
-		if(EnhanceCountField.enhanceCount.get(c)!=0) {
-			if(EnhanceCountField.enhanceCount.get(c)==1) {
-				if(!c.rawDescription.contains(" "+ENHANCE_TEXT[0]+". ")) {
-					addString = addString+" "+ENHANCE_TEXT[0]+". ";
+		if(!EnhanceCountField.enhanceReset.get(c)) {
+			if(EnhanceCountField.enhanceCount.get(c)!=0) {
+				if(EnhanceCountField.enhanceCount.get(c)==1) {
+					if(!c.rawDescription.contains(" "+ENHANCE_TEXT[0]+". ")) {
+						addString = addString+" "+ENHANCE_TEXT[0]+". ";
+					}
+				}else{
+					c.rawDescription = c.rawDescription.replace(" "+ENHANCE_TEXT[0]+".", "");
+					c.rawDescription = c.rawDescription.replace(" "+ENHANCE_TEXT[0]+" +"+(EnhanceCountField.enhanceCount.get(c)-1)+".", "");
+					logger.info("replacing: "+" "+ENHANCE_TEXT[0]+".");
+					addString = addString+" "+ENHANCE_TEXT[0]+" +"+EnhanceCountField.enhanceCount.get(c)+".";
 				}
-			}else {
-				c.rawDescription = c.rawDescription.replace(" "+ENHANCE_TEXT[0]+".", "");
-				logger.info("replacing: "+" "+ENHANCE_TEXT[0]+".");
-				addString = addString+" "+ENHANCE_TEXT[0]+" +"+EnhanceCountField.enhanceCount.get(c)+".";
 			}
-			if(EnhanceCountField.enhanceReset.get(c)) {
-				logger.info("deleting enhance text");
-				c.rawDescription = c.rawDescription.replace(addString, "");
-			}
+		}else{
+			c.rawDescription = c.rawDescription.replace(" "+ENHANCE_TEXT[0]+".", "");
+			c.rawDescription = c.rawDescription.replace(" "+ENHANCE_TEXT[0]+" +"+EnhanceCountField.enhanceCount.get(c)+".", "");
+			c.rawDescription = c.rawDescription.replace(addString, "");
 		}
 		
 		if(!CardStasisStatus.isStatis.get(c)) {
@@ -47,8 +50,6 @@ public abstract class AdditionalCardDescriptions {
 			c.rawDescription = c.rawDescription.replace(" "+STASIS_TEXT[0]+".", "");
 		}else if(!c.rawDescription.contains(" "+STASIS_TEXT[0]+".")) {
 			addString = addString+" "+STASIS_TEXT[0]+".";
-		}else {
-			c.rawDescription = c.rawDescription.replace(" "+STASIS_TEXT[0]+".", "");
 		}
 		c.rawDescription = c.rawDescription + addString;
 		c.initializeDescription();
