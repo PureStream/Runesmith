@@ -305,6 +305,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
 		cardsToAdd.add(new Demonforge());
 		cardsToAdd.add(new UnlimitedPower());
 		cardsToAdd.add(new CraftMedicinae());
+		cardsToAdd.add(new OneForEveryone());
 	}
 
 	@Override
