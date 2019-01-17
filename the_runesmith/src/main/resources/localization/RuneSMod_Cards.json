@@ -200,7 +200,8 @@
 	},
 	"Runesmith:CraftIndustria": {
 		"NAME": "Craft Industria",
-		"DESCRIPTION": "2 Ignis 2 Aqua: Craft an Industria rune."
+		"DESCRIPTION": "!M! Aqua: Craft an Industria rune."
+		"UPGRADE_DESCRIPTION": "!M! Aqua: Craft two Industria rune."
 	},
 	"Runesmith:CraftMedicinae": {
 		"NAME": "Craft Medicinae",

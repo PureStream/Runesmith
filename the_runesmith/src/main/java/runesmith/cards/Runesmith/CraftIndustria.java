@@ -21,8 +21,8 @@ public class CraftIndustria extends AbstractRunicCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 2;
-	private static final int UPG_COST = 1;
-	private static final int ELEMENT_AMT = 2;
+	private static final int AQUA_AMT = 4;
+	private static final int UPG_AQUA_AMT = 1;
 	
 	public CraftIndustria() {
 		super(
@@ -41,10 +41,15 @@ public class CraftIndustria extends AbstractRunicCard {
 	}
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		if (checkElements(ELEMENT_AMT,0,ELEMENT_AMT)) {
+		if (checkElements(AQUA_AMT,0,AQUA_AMT)) {
 			AbstractDungeon.actionManager.addToBottom(
 					new RuneChannelAction(
 							new IndustriaRune()));
+			if (this.upgraded) {
+				AbstractDungeon.actionManager.addToBottom(
+						new RuneChannelAction(
+								new IndustriaRune()));
+			}
 		}
 	}
 	
@@ -55,7 +60,7 @@ public class CraftIndustria extends AbstractRunicCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 		  upgradeName();
-		  upgradeBaseCost(UPG_COST);
+		  upgradeMagicNumber(UPG_AQUA_AMT);
 		}
 	}
 	
