@@ -1,7 +1,11 @@
 package runesmith.orbs;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -58,6 +62,17 @@ public abstract class RuneOrb extends AbstractOrb {
 		if(!this.upgraded)		tmpDesc = this.descriptions[0];
 		else tmpDesc = this.descriptions[1];
 		this.description = tmpDesc.replace("{Pot}", this.potential+"");
+	}
+	
+	public static RuneOrb getRandomRune(boolean useCardRng, int playerPotency) {
+		List<RuneOrb> runes = new ArrayList<>();
+		runes.add(new DudRune());
+		runes.add(new FirestoneRune(FirestoneRune.basePotency + playerPotency));
+		runes.add(new IncendiumRune(IncendiumRune.basePotency + playerPotency));
+		runes.add(new ProtectioRune(ProtectioRune.basePotency + playerPotency));
+		
+		if (useCardRng) return runes.get(AbstractDungeon.cardRandomRng.random(runes.size() - 1));
+		return runes.get(MathUtils.random(runes.size() - 1));
 	}
 	
 	public void onStartOfTurn() {
