@@ -12,7 +12,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import basemod.abstracts.CustomCard;
 import runesmith.patches.AbstractCardEnum;
 import runesmith.powers.GrindstonePower;
-import runesmith.powers.TerraPower;
 
 public class Grindstone extends CustomCard {
 	public static final String ID = "Runesmith:Grindstone";
