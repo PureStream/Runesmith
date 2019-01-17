@@ -310,6 +310,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
 		cardsToAdd.add(new ConvertIgnis());
 		cardsToAdd.add(new ConvertTerra());
 		cardsToAdd.add(new ConvertAqua());
+		cardsToAdd.add(new FieryHammer());
 	}
 
 	@Override
