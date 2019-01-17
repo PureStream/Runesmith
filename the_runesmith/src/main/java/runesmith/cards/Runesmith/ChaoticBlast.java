@@ -51,7 +51,7 @@ public class ChaoticBlast extends AbstractRunicCard {
 		if (checkElements(ELEMENT_AMT,ELEMENT_AMT,ELEMENT_AMT)) {
 			AbstractDungeon.actionManager.addToBottom(
 					new RuneChannelAction(
-							RuneOrb.getRandomRune(true,0))); // <---------- Need to edit some player's Potency
+							RuneOrb.getRandomRune(true,(p.hasPower("PotentialPower")) ? p.getPower("PotentialPower").amount : 0)));
 		}
 	}
 
