@@ -36,6 +36,9 @@ public class DuplicatePower extends AbstractPower {
 	public void stackPower(int stackAmount) {
 		this.fontScale = 8.0F;
 		this.amount += stackAmount;
+		if (this.amount == 0) {
+			AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, "DuplicatePower"));
+		}
 	}
 	
 	public void onUseCard(AbstractCard card, UseCardAction action) {

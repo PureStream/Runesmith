@@ -32,6 +32,14 @@ public abstract class AbstractRunicCard extends CustomCard {
 		if(this.potency > this.basePotency || amount>0) isPotencyModified = true;
 	}
 	
+	public int checkPotential() {
+		AbstractPlayer p = AbstractDungeon.player;
+		if (p.hasPower("PotentialPower")) {
+			return p.getPower("Potential").amount;
+		}
+		return 0;
+	}
+	
 	public boolean checkElements(int ignis, int terra, int aqua) {
 		Logger logger = LogManager.getLogger(RunesmithMod.class.getName());
 		logger.info("Start checking elements.");

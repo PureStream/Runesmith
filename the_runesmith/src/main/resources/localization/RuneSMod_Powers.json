@@ -22,5 +22,9 @@
 	"DuplicatePower": {
 		"NAME": "Duplicate",
 		"DESCRIPTIONS": ["your next #b"," #yCraft card is played twice."]
+	},
+	"PotentialPower": {
+		"NAME": "Potential",
+		"DESCRIPTIONS": ["Gain #b"," #yPotency."]
 	}
 }

@@ -43,6 +43,13 @@ public class CraftFirestone extends AbstractRunicCard {
 
 	}
 	
+	@Override
+	public void applyPowers() {
+		this.potency = this.basePotency + checkPotential();
+		super.applyPowers();
+		initializeDescription();
+	}
+	
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		if (checkElements(IGNIS_AMT,0,0)) {
 			AbstractDungeon.actionManager.addToBottom(
