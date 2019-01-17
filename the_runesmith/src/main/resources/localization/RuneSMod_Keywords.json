@@ -147,6 +147,12 @@
 		},
 		{
 			"NAMES": [
+			"magma"
+			],
+			"DESCRIPTION": "Deals damage to random enemy. NL Gain block."
+		},
+		{
+			"NAMES": [
 			"WWWWWWWWWWWWWWWWW"
 			],
 			"DESCRIPTION": "WWWWWWWWWWWWWWWWW"

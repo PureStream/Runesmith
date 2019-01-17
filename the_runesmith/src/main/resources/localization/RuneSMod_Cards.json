@@ -257,6 +257,14 @@
 		"DESCRIPTION": "Halves enemies current HP and Block. NL Exhaust.",
 		"UPGRADE_DESCRIPTION": "Halves enemies current HP and Block. NL Innate. NL Exhaust."
 	},
+	"Runesmith:CraftMagma": {
+		"NAME": "Craft Magma",
+		"DESCRIPTION": "2 Ignis 1 Terra: Craft a Magma rune with !Pot! Potency."
+	},
+	"Runesmith:Rearm": {
+		"NAME": "Rearm",
+		"DESCRIPTION": "Shuffle all Upgraded cards in discard pile into draw pile.  NL Draw 1(2) cards. NL Exhaust."
+	},
 	"Runesmith:WWWWWWWWWWWWWWWWWWWW": {
 		"NAME": "WWWWWWWWWWWWWWWWWWWW",
 		"DESCRIPTION": "WWWWWWWWWWWWWWWWWWWW"
