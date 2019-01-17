@@ -14,5 +14,9 @@
 	"GrindstonePower": {
 		"NAME": "Grindstone",
 		"DESCRIPTIONS": ["ALL cards played this turn become #yUpgraded."]
+	},
+	"FirestormPower": {
+		"NAME": "Firestorm",
+		"DESCRIPTIONS": ["Gain #b"," Ignis and #b"," Terra at the start of your turn."]
 	}
 }
