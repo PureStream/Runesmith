@@ -88,9 +88,9 @@
 		"NAME": "Hammer Throw",
 		"DESCRIPTION": "Deal !D! damage then draw !M! card and Upgrade them."
 	},
-	"Runesmith:OneForEveryOne": {
-		"NAME": "One for Every One",
-		"DESCRIPTION": "Break your oldest rune and gain [E] . Deal 1 damage to all enemies. Gain 1 Block. Gain 1 of each Element."
+	"Runesmith:OneForEveryone": {
+		"NAME": "One for Everyone",
+		"DESCRIPTION": "Break your oldest rune to gain [E] , NL Deal 1 damage, apply 1 Weak and Vulnerable to all enemies, NL gain 1 Block, and gain 1 of each Element."
 	},
 	"Runesmith:RunicBullets": {
 		"NAME": "Runic Bullets",

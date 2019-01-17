@@ -33,6 +33,7 @@ runesmith\actions\cards\FortifyAction.class
 runesmith\patches\EnhancedCardValueModified$resetAttributes.class
 runesmith\patches\EnhancedCardValueModified$calculateCardDamage.class
 runesmith\powers\UnlimitedPowerPower.class
+runesmith\cards\Runesmith\OneForEveryone.class
 runesmith\cards\Runesmith\HammerPolish.class
 runesmith\powers\IgnisPower.class
 runesmith\patches\StasisExhaustPrevention$preventExhaust.class

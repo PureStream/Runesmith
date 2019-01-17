@@ -1,15 +1,12 @@
 package runesmith.cards.Runesmith;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -19,8 +16,6 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
-import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
-
 import basemod.abstracts.CustomCard;
 import runesmith.actions.BreakRuneAction;
 import runesmith.orbs.RuneOrb;
@@ -34,7 +29,11 @@ public class OneForEveryone extends CustomCard {
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+<<<<<<< HEAD
 	public static final String IMG_PATH = "images/cards/OneForEvery.png";
+=======
+	public static final String IMG_PATH = "images/cards/OFE.png";
+>>>>>>> refs/remotes/origin/development
 	private static final int COST = 1;
 	private static final int COST_UPGRADE = 0;
 	private static final int ATTACK_DMG = 1;
