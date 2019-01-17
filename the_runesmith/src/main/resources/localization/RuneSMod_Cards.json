@@ -132,7 +132,7 @@
 	},
 	"Runesmith:RunicBlueprint": {
 		"NAME": "Runic Blueprint",
-		"DESCRIPTION": "Add a random Craft card to your hand. It costs 0 this turn. Gain 2 Aqua."
+		"DESCRIPTION": "Add a random Craft card to your hand. NL It costs 0 this turn. NL Gain 2 Aqua. NL Exhaust."
 	},
 	"Runesmith:CraftSpiculum": {
 		"NAME": "Craft Spiculum",

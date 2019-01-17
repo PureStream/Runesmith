@@ -19,6 +19,7 @@ runesmith\cards\Runesmith\CraftFirestone.class
 runesmith\cards\Runesmith\CraftIndustria.class
 runesmith\cards\Runesmith\ChaoticBlast.class
 runesmith\actions\BreakRuneAction.class
+runesmith\actions\cards\RunicBulletsAction.class
 runesmith\cards\Runesmith\HeatedChisel.class
 runesmith\actions\DowngradeCardInHandAction.class
 runesmith\cards\Runesmith\AbstractRunicCard.class
@@ -54,6 +55,7 @@ runesmith\cards\Runesmith\HammerThrow.class
 runesmith\patches\StasisExhaustPrevention.class
 runesmith\cards\Runesmith\Fortify.class
 runesmith\relics\BrokenRuby.class
+runesmith\cards\Runesmith\RunicBullets.class
 runesmith\cards\Runesmith\Defend_RS.class
 runesmith\cards\Runesmith\RuneHurl.class
 runesmith\cards\Runesmith\HammerTime.class
@@ -76,3 +78,4 @@ runesmith\patches\EnhancedCardValueModified.class
 runesmith\actions\UpgradeDrawAction.class
 runesmith\actions\cards\HammerTimeAction.class
 runesmith\character\player\RunesmithPlayer.class
+runesmith\cards\Runesmith\RunicBlueprint.class

@@ -22,15 +22,15 @@
 	},
 	"Runesmith:ChiselStab": {
 		"NAME": "Chisel Stab",
-		"DESCRIPTION": "Deal !D! Damage. Gain 2 Ignis."
+		"DESCRIPTION": "Deal !D! Damage. NL Gain 2 Ignis."
 	},
 	"Runesmith:EarthShield": {
 		"NAME": "Earth Shield",
-		"DESCRIPTION": "Gain !B! Block. Gain 2 Terra."
+		"DESCRIPTION": "Gain !B! Block. NL Gain 2 Terra."
 	},
 	"Runesmith:HeatedChisel": {
 		"NAME": "Heated Chisel",
-		"DESCRIPTION": "Deal !D! damage. Apply !M! Vulnerable. Gain 1 Ignis and 1 Terra."
+		"DESCRIPTION": "Deal !D! damage. Apply !M! Vulnerable. NL Gain 1 Ignis and 1 Terra."
 	},
 	"Runesmith:Terraform": {
 		"NAME": "Terraform",
@@ -78,11 +78,11 @@
 	},
 	"Runesmith:EnchantedChisel": {
 		"NAME": "Enchanted Chisel",
-		"DESCRIPTION": "Deal !D! damage. Gain !B! Block. Apply !M! Weak. Gain 1 Ignis and 1 Aqua."
+		"DESCRIPTION": "Deal !D! damage. Gain !B! Block. Apply !M! Weak. NL Gain 1 Ignis and 1 Aqua."
 	},
 	"Runesmith:UnstableHammer": {
 		"NAME": "Unstable Hammer",
-		"DESCRIPTION": "Deal !D! damage. Craft a Dud rune (no effect). Gain 1 random Element."
+		"DESCRIPTION": "Deal !D! damage. Craft a Dud rune. NL Gain 1 random Element."
 	},
 	"Runesmith:HammerThrow": {
 		"NAME": "Hammer Throw",
@@ -90,11 +90,11 @@
 	},
 	"Runesmith:OneForEveryOne": {
 		"NAME": "One for Every One",
-		"DESCRIPTION": "Break a random rune and gain [E] . Deal 1 damage to all enemies. Gain 1 Block. Gain 1 of each Element."
+		"DESCRIPTION": "Break your oldest rune and gain [E] . Deal 1 damage to all enemies. Gain 1 Block. Gain 1 of each Element."
 	},
 	"Runesmith:RunicBullets": {
 		"NAME": "Runic Bullets",
-		"DESCRIPTION": "Deal !D! damage to random enemy for runes you have."
+		"DESCRIPTION": "Deal !D! damage for each rune you have."
 	},
 	"Runesmith:StaticCage": {
 		"NAME": "Static Cage",
@@ -115,7 +115,7 @@
 	},
 	"Runesmith:FieryHammer": {
 		"NAME": "Fiery Hammer",
-		"DESCRIPTION": "Deal !D! damage to all enemies. Can be upgraded any number of times."
+		"DESCRIPTION": "Deal !D! damage to all enemies. NL Can be upgraded any number of times."
 	},
 	"Runesmith:CraftReservo": {
 		"NAME": "Craft Reservo",
@@ -132,7 +132,7 @@
 	},
 	"Runesmith:RunicBlueprint": {
 		"NAME": "Runic Blueprint",
-		"DESCRIPTION": "Add a random Craft card to your hand. It costs 0 this turn. Gain 2 Aqua."
+		"DESCRIPTION": "Add a random Craft card to your hand. NL It costs 0 this turn. NL Gain 2 Aqua. NL Exhaust."
 	},
 	"Runesmith:CraftSpiculum": {
 		"NAME": "Craft Spiculum",
@@ -256,6 +256,14 @@
 		"NAME": "That's a lot of DAMAGE",
 		"DESCRIPTION": "Halves enemies current HP and Block. NL Exhaust.",
 		"UPGRADE_DESCRIPTION": "Halves enemies current HP and Block. NL Innate. NL Exhaust."
+	},
+	"Runesmith:CraftMagma": {
+		"NAME": "Craft Magma",
+		"DESCRIPTION": "2 Ignis 1 Terra: Craft a Magma rune with !Pot! Potency."
+	},
+	"Runesmith:Rearm": {
+		"NAME": "Rearm",
+		"DESCRIPTION": "Shuffle all Upgraded cards in discard pile into draw pile.  NL Draw 1(2) cards. NL Exhaust."
 	},
 	"Runesmith:WWWWWWWWWWWWWWWWWWWW": {
 		"NAME": "WWWWWWWWWWWWWWWWWWWW",

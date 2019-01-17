@@ -67,6 +67,12 @@
       "No effect."
     ]
   },
+  "Magma": {
+    "NAME": "Magma",
+    "DESCRIPTION": [
+      "Deal #b{Pot} damage to random enemy. Gain #b{Pot}/2 block"
+    ]
+  },
   "WWWWWWWWWWWWWW": {
     "NAME": "WWWWWWWWWWWWWW",
     "DESCRIPTION": [

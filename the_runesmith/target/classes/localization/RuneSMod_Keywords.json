@@ -50,7 +50,7 @@
 			"aqua",
 			"Aqua"
 			],
-			"DESCRIPTION": "Elements(Ignis, Terra and Aqua) are spent to #yCraft runes and used for other utilities."
+			"DESCRIPTION": "Elements (Ignis, Terra and Aqua) are spent to #yCraft runes and are used for other utilities."
 		},
 		{
 			"NAMES": [
@@ -144,6 +144,12 @@
 			"dud"
 			],
 			"DESCRIPTION": "No effect."
+		},
+		{
+			"NAMES": [
+			"magma"
+			],
+			"DESCRIPTION": "Deals damage to random enemy. NL Gain block."
 		},
 		{
 			"NAMES": [
