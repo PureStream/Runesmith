@@ -322,7 +322,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
 	
 	private void loadRelicsToAdd() {
 		relicsToAdd.clear();
-		relicsToAdd.add(new Blueberries());
+//		relicsToAdd.add(new Blueberries());
 		relicsToAdd.add(new BrokenRuby());
 	}
 

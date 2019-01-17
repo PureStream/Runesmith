@@ -38,11 +38,11 @@ public class CraftIndustria extends AbstractRunicCard {
 			AbstractCard.CardTarget.SELF
 		);
 		this.tags.add(CRAFT);
-		
+		this.baseMagicNumber = this.magicNumber = AQUA_AMT;
 	}
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		if (checkElements(AQUA_AMT,0,AQUA_AMT)) {
+		if (checkElements(0,0,this.magicNumber)) {
 			AbstractDungeon.actionManager.addToBottom(
 					new RuneChannelAction(
 							new IndustriaRune()));

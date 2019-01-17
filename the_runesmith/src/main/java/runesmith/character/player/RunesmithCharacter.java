@@ -25,7 +25,7 @@ public class RunesmithCharacter extends CustomPlayer {
 	public static final int ENERGY_PER_TURN = 3;
 	
 	public static final String THE_RUNESMITH_SHOULDER_2 = "images/character/shoulder2.png"; // campfire pose
-    public static final String THE_RUNESMITH_SHOULDER_1 = "images/character/shoulder1.png"; // another campfire pose
+    public static final String THE_RUNESMITH_SHOULDER_1 = "images/character/shoulder.png"; // another campfire pose
     public static final String THE_RUNESMITH_CORPSE = "images/character/corpse.png"; // dead corpse
     public static final String THE_RUNESMITH_SKELETON_ATLAS = "images/character/idle/skeleton.atlas"; // spine animation atlas
     public static final String THE_RUNESMITH_SKELETON_JSON = "images/character/idle/skeleton.json"; // spine animation json
