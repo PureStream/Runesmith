@@ -40,14 +40,14 @@ public class FieryHammer extends CustomCard{
 			CardType.ATTACK,
 			AbstractCardEnum.RUNESMITH_BEIGE,
 			CardRarity.UNCOMMON,
-			CardTarget.ENEMY
+			CardTarget.ALL_ENEMY
 		);
 		this.baseDamage = ATTACK_DMG;
 		this.tags.add(HAMMER);
 	}
 	
 	public AbstractCard makeCopy() {
-		return new FieryHammer();
+		return new FieryHammer(this.timesUpgraded);
 	}
 
 	@Override
@@ -57,6 +57,7 @@ public class FieryHammer extends CustomCard{
 			this.timesUpgraded += 1;
 			this.upgraded = true;
 			this.name = (NAME + "+" + this.timesUpgraded);
+			initializeTitle();
 		}
 	}
 
@@ -71,5 +72,9 @@ public class FieryHammer extends CustomCard{
 			);
 	}
 	
+	@Override
+	public boolean canUpgrade() {
+		return true;
+	}
 	
 }
