@@ -300,6 +300,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
 		cardsToAdd.add(new HammerTime());
 		cardsToAdd.add(new Firestorm());
 		cardsToAdd.add(new StaticCage());
+		cardsToAdd.add(new Duplicate());
 	}
 
 	@Override

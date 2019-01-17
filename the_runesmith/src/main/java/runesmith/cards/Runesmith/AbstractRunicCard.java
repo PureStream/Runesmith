@@ -36,6 +36,9 @@ public abstract class AbstractRunicCard extends CustomCard {
 		Logger logger = LogManager.getLogger(RunesmithMod.class.getName());
 		logger.info("Start checking elements.");
 		AbstractPlayer p = AbstractDungeon.player;
+		
+		if (freeToPlayOnce == true) return true;
+		
 		int pIgnis = 0, pTerra = 0, pAqua = 0;
 		if (p.hasPower("IgnisPower")) {
 			pIgnis = p.getPower("IgnisPower").amount;

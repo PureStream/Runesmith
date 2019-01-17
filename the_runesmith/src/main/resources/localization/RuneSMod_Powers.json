@@ -17,6 +17,10 @@
 	},
 	"FirestormPower": {
 		"NAME": "Firestorm",
-		"DESCRIPTIONS": ["Gain #b"," Ignis and #b"," Terra at the start of your turn."]
+		"DESCRIPTIONS": ["Gain #b"," #yIgnis and #b"," #yTerra at the start of your turn."]
+	},
+	"DuplicatePower": {
+		"NAME": "Duplicate",
+		"DESCRIPTIONS": ["your next #b"," #yCraft card is played twice."]
 	}
 }
