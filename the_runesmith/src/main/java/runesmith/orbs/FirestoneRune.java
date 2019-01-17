@@ -7,6 +7,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 
 public class FirestoneRune extends RuneOrb {
+	
+	public static final int basePotency = 5;
 
 	public FirestoneRune(int potential) {
 		super( "Firestone",

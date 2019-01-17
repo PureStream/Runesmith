@@ -1,8 +1,6 @@
 package runesmith.cards.Runesmith;
 
-import static runesmith.patches.CardTagEnum.HAMMER;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -12,26 +10,22 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import basemod.abstracts.CustomCard;
 import runesmith.actions.RuneChannelAction;
-import runesmith.orbs.DudRune;
+import runesmith.orbs.RuneOrb;
 import runesmith.patches.AbstractCardEnum;
-import runesmith.powers.AquaPower;
-import runesmith.powers.IgnisPower;
-import runesmith.powers.TerraPower;
 
-public class UnstableHammer extends CustomCard {
-	public static final String ID = "Runesmith:UnstableHammer";
+public class ChaoticBlast extends AbstractRunicCard {
+	public static final String ID = "Runesmith:ChaoticBlast";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String IMG_PATH = "images/cards/strike_RS.png"; //<-------------- need some img
-	private static final int COST = 0;
-	private static final int ATTACK_DMG = 7;
+	private static final int COST = 2;
+	private static final int ATTACK_DMG = 9;
 	private static final int UPGRADE_PLUS_DMG = 3;
 	private static final int ELEMENT_AMT = 1;
 
-	public UnstableHammer() {
+	public ChaoticBlast() {
 		super(
 			ID,
 			NAME,
@@ -40,11 +34,10 @@ public class UnstableHammer extends CustomCard {
 			DESCRIPTION,
 			CardType.ATTACK,
 			AbstractCardEnum.RUNESMITH_BEIGE,
-			CardRarity.COMMON,
+			CardRarity.UNCOMMON,
 			CardTarget.ENEMY
 		);
 		this.baseDamage = ATTACK_DMG;
-		this.tags.add(HAMMER);
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
@@ -55,20 +48,15 @@ public class UnstableHammer extends CustomCard {
 				AbstractGameAction.AttackEffect.BLUNT_HEAVY
 			)
 		);
-		AbstractDungeon.actionManager.addToBottom(
-				new RuneChannelAction(
-						new DudRune()));
-		int random = (int) (Math.random()*3);
-		if (random == 0) 
-			AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new IgnisPower(p, ELEMENT_AMT), ELEMENT_AMT));
-		else if (random == 1)
-			AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new TerraPower(p, ELEMENT_AMT), ELEMENT_AMT));
-		else
-			AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new AquaPower(p, ELEMENT_AMT), ELEMENT_AMT));
+		if (checkElements(ELEMENT_AMT,ELEMENT_AMT,ELEMENT_AMT)) {
+			AbstractDungeon.actionManager.addToBottom(
+					new RuneChannelAction(
+							RuneOrb.getRandomRune(true,0))); // <---------- Need to edit some player's Potency
+		}
 	}
 
 	public AbstractCard makeCopy() {
-		return new UnstableHammer();
+		return new ChaoticBlast();
 	}
 
 	public void upgrade() {

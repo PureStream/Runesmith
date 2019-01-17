@@ -7,7 +7,9 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 
 public class IncendiumRune extends RuneOrb {
-
+	
+	public static final int basePotency = 4;
+	
 	public IncendiumRune(int potential) {
 		super( "Incendium",
 				false,
