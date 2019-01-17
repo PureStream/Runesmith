@@ -22,15 +22,15 @@
 	},
 	"Runesmith:ChiselStab": {
 		"NAME": "Chisel Stab",
-		"DESCRIPTION": "Deal !D! Damage. Gain 2 Ignis."
+		"DESCRIPTION": "Deal !D! Damage. NL Gain 2 Ignis."
 	},
 	"Runesmith:EarthShield": {
 		"NAME": "Earth Shield",
-		"DESCRIPTION": "Gain !B! Block. Gain 2 Terra."
+		"DESCRIPTION": "Gain !B! Block. NL Gain 2 Terra."
 	},
 	"Runesmith:HeatedChisel": {
 		"NAME": "Heated Chisel",
-		"DESCRIPTION": "Deal !D! damage. Apply !M! Vulnerable. Gain 1 Ignis and 1 Terra."
+		"DESCRIPTION": "Deal !D! damage. Apply !M! Vulnerable. NL Gain 1 Ignis and 1 Terra."
 	},
 	"Runesmith:Terraform": {
 		"NAME": "Terraform",
@@ -78,11 +78,11 @@
 	},
 	"Runesmith:EnchantedChisel": {
 		"NAME": "Enchanted Chisel",
-		"DESCRIPTION": "Deal !D! damage. Gain !B! Block. Apply !M! Weak. Gain 1 Ignis and 1 Aqua."
+		"DESCRIPTION": "Deal !D! damage. Gain !B! Block. Apply !M! Weak. NL Gain 1 Ignis and 1 Aqua."
 	},
 	"Runesmith:UnstableHammer": {
 		"NAME": "Unstable Hammer",
-		"DESCRIPTION": "Deal !D! damage. Craft a Dud rune (no effect). Gain 1 random Element."
+		"DESCRIPTION": "Deal !D! damage. Craft a Dud rune. NL Gain 1 random Element."
 	},
 	"Runesmith:HammerThrow": {
 		"NAME": "Hammer Throw",
@@ -115,7 +115,7 @@
 	},
 	"Runesmith:FieryHammer": {
 		"NAME": "Fiery Hammer",
-		"DESCRIPTION": "Deal !D! damage to all enemies. Can be upgraded any number of times."
+		"DESCRIPTION": "Deal !D! damage to all enemies. NL Can be upgraded any number of times."
 	},
 	"Runesmith:CraftReservo": {
 		"NAME": "Craft Reservo",

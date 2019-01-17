@@ -2,12 +2,16 @@ package runesmith.powers;
 
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+
+import runesmith.cards.Runesmith.AbstractRunicCard;
 
 public class PotentialPower extends AbstractPower {
 	
@@ -21,6 +25,7 @@ public class PotentialPower extends AbstractPower {
 		this.ID = POWER_ID;
 		this.owner = owner;
 		this.amount = amount;
+		this.type = PowerType.BUFF;
 		this.priority = 0;
 		updateDescription();
 		this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/Ignis.png"), 0, 0, 84, 84);
@@ -30,8 +35,26 @@ public class PotentialPower extends AbstractPower {
 	public void stackPower(int stackAmount) {
 		this.fontScale = 8.0F;
 		this.amount += stackAmount;
-		if (this.amount == 0) {
-			AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, "PotentialPower"));
+		updatePotencialEffects();
+	}
+	
+	public void onInitialApplication() {
+		updatePotencialEffects();
+	}
+
+	public void onDrawOrDiscard() {
+		updatePotencialEffects();
+	}
+	
+	/*public void onAfterUseCard(AbstractCard card, UseCardAction action) {
+		updatePotencialEffects();
+	}*/
+	
+	public void updatePotencialEffects() {
+		for (AbstractCard c : AbstractDungeon.player.hand.group) {
+			if (c instanceof AbstractRunicCard){
+				((AbstractRunicCard) c).upgradePotency(0);
+			}
 		}
 	}
 
