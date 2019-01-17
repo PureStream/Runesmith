@@ -23,12 +23,14 @@ runesmith\cards\Runesmith\CraftMedicinae.class
 runesmith\cards\Runesmith\CraftFirestone.class
 runesmith\cards\Runesmith\CraftIndustria.class
 runesmith\cards\Runesmith\CraftMagma.class
+runesmith\actions\ShuffleUpgradedCardAction.class
 runesmith\cards\Runesmith\ChaoticBlast.class
 runesmith\actions\BreakRuneAction.class
 runesmith\actions\cards\RunicBulletsAction.class
 runesmith\cards\Runesmith\HeatedChisel.class
 runesmith\actions\DowngradeCardInHandAction.class
 runesmith\cards\Runesmith\AbstractRunicCard.class
+runesmith\cards\Runesmith\FieryHammer.class
 runesmith\patches\CardTagEnum.class
 runesmith\actions\cards\FortifyAction.class
 runesmith\patches\EnhancedCardValueModified$resetAttributes.class
@@ -39,6 +41,7 @@ runesmith\cards\Runesmith\HammerPolish.class
 runesmith\powers\IgnisPower.class
 runesmith\patches\StasisExhaustPrevention$preventExhaust.class
 runesmith\cards\Runesmith\ShiftingStrike.class
+runesmith\cards\Runesmith\Rearm.class
 runesmith\cards\Runesmith\MakeshiftArmor.class
 runesmith\RunesmithMod.class
 runesmith\powers\FirestormPower.class

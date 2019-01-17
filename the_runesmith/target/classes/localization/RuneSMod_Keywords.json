@@ -48,7 +48,10 @@
 			"terra",
 			"Terra",
 			"aqua",
-			"Aqua"
+			"Aqua",
+			"ignis+",
+			"aqua+",
+			"terra+"
 			],
 			"DESCRIPTION": "Elements (Ignis, Terra and Aqua) are spent to #yCraft runes and are used for other utilities."
 		},
