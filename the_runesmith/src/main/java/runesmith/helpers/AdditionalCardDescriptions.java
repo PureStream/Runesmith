@@ -57,11 +57,11 @@ public abstract class AdditionalCardDescriptions {
 		c.initializeDescription();
 	}
 	
-	@SpirePatch(cls = "com.megacrit.cardcrawl.cards.AbstractCard", method="upgrade")
-    public static class updateDescOnUpgrade {
-	        public static void Postfix(AbstractCard self)
-	        {
-	        	AdditionalCardDescriptions.modifyDescription(self);
-	        }
-    }
+//	@SpirePatch(cls = "com.megacrit.cardcrawl.cards.AbstractCard", method="upgrade")
+//    public static class updateDescOnUpgrade {
+//	        public static void Postfix(AbstractCard self)
+//	        {
+//	        	AdditionalCardDescriptions.modifyDescription(self);
+//	        }
+//    }
 }
