@@ -1,5 +1,6 @@
 runesmith\cards\Runesmith\CraftIncendium.class
 runesmith\patches\CardStasisStatus.class
+runesmith\powers\DemonforgePower.class
 runesmith\patches\PlayerClassEnum.class
 runesmith\powers\DuplicatePower.class
 runesmith\actions\BreakWithoutRemovingRuneAction.class
@@ -14,9 +15,12 @@ runesmith\cards\Runesmith\UnstableHammer.class
 runesmith\orbs\IncendiumRune.class
 runesmith\patches\LibraryTypeEnum.class
 runesmith\cards\Runesmith\ChiselStab.class
+runesmith\cards\Runesmith\Demonforge.class
 runesmith\cards\Runesmith\CraftProtectio.class
+runesmith\cards\Runesmith\CraftMedicinae.class
 runesmith\cards\Runesmith\CraftFirestone.class
 runesmith\cards\Runesmith\CraftIndustria.class
+runesmith\cards\Runesmith\CraftMagma.class
 runesmith\cards\Runesmith\ChaoticBlast.class
 runesmith\actions\BreakRuneAction.class
 runesmith\actions\cards\RunicBulletsAction.class
@@ -52,6 +56,7 @@ runesmith\cards\Runesmith\ElementalShield.class
 runesmith\cards\Runesmith\Grindstone.class
 runesmith\actions\cards\RepurposeAction$1.class
 runesmith\cards\Runesmith\HammerThrow.class
+runesmith\orbs\MagmaRune.class
 runesmith\patches\StasisExhaustPrevention.class
 runesmith\cards\Runesmith\Fortify.class
 runesmith\relics\BrokenRuby.class
@@ -75,6 +80,7 @@ runesmith\powers\GrindstonePower.class
 runesmith\RunesmithMod$Keywords.class
 runesmith\orbs\IndustriaRune.class
 runesmith\patches\EnhancedCardValueModified.class
+runesmith\orbs\MedicinaeRune.class
 runesmith\actions\UpgradeDrawAction.class
 runesmith\actions\cards\HammerTimeAction.class
 runesmith\character\player\RunesmithPlayer.class

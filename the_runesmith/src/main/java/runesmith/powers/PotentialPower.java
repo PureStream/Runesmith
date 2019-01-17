@@ -26,7 +26,7 @@ public class PotentialPower extends AbstractPower {
 		this.owner = owner;
 		this.amount = amount;
 		this.type = PowerType.BUFF;
-		this.priority = 0;
+		this.canGoNegative = true;
 		updateDescription();
 		this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/Ignis.png"), 0, 0, 84, 84);
 	    this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/IgnisSmall.png"), 0, 0, 32, 32);
@@ -35,6 +35,18 @@ public class PotentialPower extends AbstractPower {
 	public void stackPower(int stackAmount) {
 		this.fontScale = 8.0F;
 		this.amount += stackAmount;
+		if (this.amount == 0) {
+			AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, "PotentialPower"));
+		}
+		updatePotencialEffects();
+	}
+	
+	public void reducePower(int reduceAmount) {
+		this.fontScale = 8.0F;
+		this.amount -= reduceAmount;
+		if (this.amount == 0) {
+			AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, "PotentialPower"));
+		}
 		updatePotencialEffects();
 	}
 	
