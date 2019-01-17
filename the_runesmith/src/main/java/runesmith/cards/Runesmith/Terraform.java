@@ -53,15 +53,13 @@ public class Terraform extends CustomCard {
 			this.baseBlock += (p.getPower("TerraPower").amount * multiplier);
 			super.applyPowers();
 		}
-		if (this.block > 0) {
-			String extendString = EXTENDED_DESCRIPTION[0] + this.block + EXTENDED_DESCRIPTION[1];
-			if (!this.upgraded) {
-				this.rawDescription = DESCRIPTION + extendString;
-			} else {
-				this.rawDescription = DESCRIPTION_UPG + extendString;
-			}
-			initializeDescription();
+		String extendString = EXTENDED_DESCRIPTION[0] + (this.block + ((this.upgraded) ? 3 : 2)) + EXTENDED_DESCRIPTION[1];
+		if (!this.upgraded) {
+			this.rawDescription = DESCRIPTION + extendString;
+		} else {
+			this.rawDescription = DESCRIPTION_UPG + extendString;
 		}
+		initializeDescription();
 	}
 	
 	public void onMoveToDiscard() {
@@ -74,13 +72,13 @@ public class Terraform extends CustomCard {
 	}
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {
+		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, 
+				new TerraPower(p, TERRA_AMT),TERRA_AMT));
 		if (this.block > 0) {
 			AbstractDungeon.actionManager.addToBottom(
 			  new GainBlockAction(p, p, this.block)
 			);
 		}
-		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, 
-				new TerraPower(p, TERRA_AMT),TERRA_AMT));
 	}
 	
 	public AbstractCard makeCopy() {
