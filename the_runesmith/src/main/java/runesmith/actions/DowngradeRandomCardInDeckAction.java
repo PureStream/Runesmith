@@ -5,10 +5,13 @@ import java.util.ArrayList;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.cards.red.SearingBlow;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.cardManip.ExhaustCardEffect;
+
+import runesmith.cards.Runesmith.FieryHammer;
 
 public class DowngradeRandomCardInDeckAction extends AbstractGameAction{
 
@@ -50,10 +53,24 @@ public class DowngradeRandomCardInDeckAction extends AbstractGameAction{
 	}
 	
 	private void replaceCard(ArrayList<AbstractCard> group, AbstractCard select) {
-		int index = group.indexOf(select);
-//		group.add(index, select.makeCopy());
-//		group.remove(index+1);
-		group.set(index, select.makeCopy());
+		if(!((select instanceof SearingBlow)||(select instanceof FieryHammer))) {
+			int index = group.indexOf(select);
+			group.set(index, select.makeCopy());
+		}else if(select instanceof SearingBlow){
+			int index = group.indexOf(select);
+			AbstractCard tmp = new SearingBlow();
+			for(int i = 0; i < select.timesUpgraded - 1; i++) {
+				tmp.upgrade();
+			}
+			group.set(index, tmp);
+		}else if(select instanceof FieryHammer) {
+			int index = group.indexOf(select);
+			AbstractCard tmp = new FieryHammer();
+			for(int i = 0; i < select.timesUpgraded - 1; i++) {
+				tmp.upgrade();
+			}
+			group.set(index, tmp);
+		}
 	}
 	
 }
