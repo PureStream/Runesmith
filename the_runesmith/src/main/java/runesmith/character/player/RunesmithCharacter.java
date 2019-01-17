@@ -74,7 +74,7 @@ public class RunesmithCharacter extends CustomPlayer {
     public static final int MAX_HP = 70;
     public static final int STARTING_GOLD = 99;
     public static final int HAND_SIZE = 5;
-    public static final int ORB_SLOTS = 1;
+    public static final int ORB_SLOTS = 0;
     
 	public CharSelectInfo getLoadout() { // the rest of the character loadout so includes your character select screen info plus hp and starting gold
 		return new CharSelectInfo("The Runesmith", "TODO",

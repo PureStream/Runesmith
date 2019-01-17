@@ -5,6 +5,6 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 
 @SpirePatch(clz=AbstractCard.class, method=SpirePatch.CLASS)
-public class CardStatisStatus {
+public class CardStasisStatus {
 	public static SpireField<Boolean> isStatis = new SpireField<Boolean>(( )-> false);
 }
