@@ -191,7 +191,7 @@
 	},
 	"Runesmith:Duplicate": {
 		"NAME": "Duplicate",
-		"DESCRIPTION": "Create a copy of the next !M! rune you craft this turn."
+		"DESCRIPTION": "This turn, your next !M! Craft card is played twice."
 	},
 	"Runesmith:ConstructBifrost": {
 		"NAME": "Construct Bifrost",
@@ -200,7 +200,8 @@
 	},
 	"Runesmith:CraftIndustria": {
 		"NAME": "Craft Industria",
-		"DESCRIPTION": "2 Ignis 2 Aqua: Craft an Industria rune."
+		"DESCRIPTION": "!M! Aqua: Craft an Industria rune."
+		"UPGRADE_DESCRIPTION": "!M! Aqua: Craft two Industria rune."
 	},
 	"Runesmith:CraftMedicinae": {
 		"NAME": "Craft Medicinae",

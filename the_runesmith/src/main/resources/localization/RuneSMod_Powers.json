@@ -14,5 +14,13 @@
 	"GrindstonePower": {
 		"NAME": "Grindstone",
 		"DESCRIPTIONS": ["ALL cards played this turn become #yUpgraded."]
+	},
+	"FirestormPower": {
+		"NAME": "Firestorm",
+		"DESCRIPTIONS": ["Gain #b"," #yIgnis and #b"," #yTerra at the start of your turn."]
+	},
+	"DuplicatePower": {
+		"NAME": "Duplicate",
+		"DESCRIPTIONS": ["your next #b"," #yCraft card is played twice."]
 	}
 }
