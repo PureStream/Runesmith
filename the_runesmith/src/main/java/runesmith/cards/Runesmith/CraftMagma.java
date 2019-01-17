@@ -41,7 +41,6 @@ public class CraftMagma extends AbstractRunicCard {
 		
 		this.potency = this.basePotency = POTENCY;
 		this.tags.add(CRAFT);
-
 	}
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {
@@ -60,7 +59,6 @@ public class CraftMagma extends AbstractRunicCard {
 		if (!this.upgraded) {
 		  upgradeName();
 		  upgradePotency(UPGRADE_PLUS_POT);
-		  upgradeBaseCost(COST_UPGRADE);
 		}
 	}
 	

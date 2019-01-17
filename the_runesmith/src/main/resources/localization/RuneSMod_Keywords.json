@@ -7,7 +7,7 @@
 			"enhanced",
 			"Enhanced"
 			],
-			"DESCRIPTION": "Increase damage and #yBlock of a card by #b50%. Can be stacked additively. #yEnhance is removed after the card is played."
+			"DESCRIPTION": "Increase damage, #yBlock and #yPotency of a card by #b50%. Can be stacked additively. #yEnhance is removed after the card is played."
 		},
 		{
 			"NAMES": [
@@ -149,7 +149,7 @@
 			"NAMES": [
 			"magma"
 			],
-			"DESCRIPTION": "Deals damage to random enemy. NL Gain block."
+			"DESCRIPTION": "Deals damage to random enemy and gain Block."
 		},
 		{
 			"NAMES": [

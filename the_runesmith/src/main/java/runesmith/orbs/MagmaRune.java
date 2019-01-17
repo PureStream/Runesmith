@@ -13,7 +13,7 @@ public class MagmaRune extends RuneOrb {
 	public static final int basePotency = 4;
 	
 	public MagmaRune(int potential) {
-		super( "Protectio",
+		super( "Magma",
 				false,
 				potential);
 		

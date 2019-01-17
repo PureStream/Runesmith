@@ -34,15 +34,6 @@ public class EnhancedCardValueModified {
 	                self.isDamageModified = true;
 	            }
 	            
-	            if(self instanceof AbstractRunicCard) {
-	            	int tmp2 = ((AbstractRunicCard) self).potency;
-//	            	((AbstractRunicCard) self).potency = (int) Math.floor(tmp2 * (Math.pow(1.5,EnhanceCountField.enhanceCount.get(self))));
-	            	logger.info("adjusting potency");
-	            	((AbstractRunicCard) self).potency = ((AbstractRunicCard) self).potency + MathUtils.floor(((AbstractRunicCard) self).potency * (0.25F * EnhanceCountField.enhanceCount.get(self)));
-	            	if(tmp2 != ((AbstractRunicCard) self).potency) {
-	            		((AbstractRunicCard) self).isPotencyModified = true;
-	            	}
-	            }
         	}
         }
     }
@@ -59,6 +50,16 @@ public class EnhancedCardValueModified {
 	            self.block = self.block + MathUtils.floor(self.block * (0.5F * EnhanceCountField.enhanceCount.get(self)));
 	            if (self.block != tmp) {
 	                self.isBlockModified = true;
+	            }
+	            
+	            if(self instanceof AbstractRunicCard) {
+	            	int tmp2 = ((AbstractRunicCard) self).potency;
+//	            	((AbstractRunicCard) self).potency = (int) Math.floor(tmp2 * (Math.pow(1.5,EnhanceCountField.enhanceCount.get(self))));
+	            	logger.info("adjusting potency");
+	            	((AbstractRunicCard) self).potency = ((AbstractRunicCard) self).potency + MathUtils.floor(((AbstractRunicCard) self).potency * (0.5F * EnhanceCountField.enhanceCount.get(self)));
+	            	if(tmp2 != ((AbstractRunicCard) self).potency) {
+	            		((AbstractRunicCard) self).isPotencyModified = true;
+	            	}
 	            }
         	}
         }
