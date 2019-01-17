@@ -53,11 +53,6 @@ public class Fortify extends CustomCard {
 		return new Fortify();
 	}
 	
-	@Override
-	public boolean isDefend() {
-		return true;
-	}
-	
 	public void upgrade() {
 		if (!this.upgraded) {
 		  upgradeName();

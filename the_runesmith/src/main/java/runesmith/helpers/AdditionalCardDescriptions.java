@@ -3,6 +3,8 @@ package runesmith.helpers;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.badlogic.gdx.math.MathUtils;
+import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
@@ -54,4 +56,12 @@ public abstract class AdditionalCardDescriptions {
 		c.rawDescription = c.rawDescription + addString;
 		c.initializeDescription();
 	}
+	
+	@SpirePatch(cls = "com.megacrit.cardcrawl.cards.AbstractCard", method="upgrade")
+    public static class updateDescOnUpgrade {
+	        public static void Postfix(AbstractCard self)
+	        {
+	        	AdditionalCardDescriptions.modifyDescription(self);
+	        }
+    }
 }
