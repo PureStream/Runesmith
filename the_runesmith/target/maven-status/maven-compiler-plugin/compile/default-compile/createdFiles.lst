@@ -4,6 +4,7 @@ runesmith\powers\DemonforgePower.class
 runesmith\patches\PlayerClassEnum.class
 runesmith\powers\DuplicatePower.class
 runesmith\actions\BreakWithoutRemovingRuneAction.class
+runesmith\cards\Runesmith\UnlimitedPower.class
 runesmith\actions\cards\ShatteruneAction.class
 runesmith\patches\EnhanceCountField.class
 runesmith\cards\Runesmith\EnchantedChisel.class
@@ -31,6 +32,7 @@ runesmith\patches\CardTagEnum.class
 runesmith\actions\cards\FortifyAction.class
 runesmith\patches\EnhancedCardValueModified$resetAttributes.class
 runesmith\patches\EnhancedCardValueModified$calculateCardDamage.class
+runesmith\powers\UnlimitedPowerPower.class
 runesmith\cards\Runesmith\HammerPolish.class
 runesmith\powers\IgnisPower.class
 runesmith\patches\StasisExhaustPrevention$preventExhaust.class

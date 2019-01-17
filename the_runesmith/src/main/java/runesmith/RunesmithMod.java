@@ -303,6 +303,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
 		cardsToAdd.add(new RunicBlueprint());
 		cardsToAdd.add(new CraftMagma());
 		cardsToAdd.add(new Demonforge());
+		cardsToAdd.add(new UnlimitedPower());
 	}
 
 	@Override

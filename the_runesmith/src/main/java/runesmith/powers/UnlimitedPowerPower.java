@@ -24,4 +24,8 @@ public class UnlimitedPowerPower extends AbstractPower {
 	    this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/IgnisSmall.png"), 0, 0, 32, 32); //<-------- NEED SOME IMG
 	}
 	
+	public void updateDescription() {
+		this.description = DESCRIPTIONS[0];
+	}
+	
 }
