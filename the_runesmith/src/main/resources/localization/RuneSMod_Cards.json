@@ -90,11 +90,11 @@
 	},
 	"Runesmith:OneForEveryOne": {
 		"NAME": "One for Every One",
-		"DESCRIPTION": "Break a random rune and gain [E] . Deal 1 damage to all enemies. Gain 1 Block. Gain 1 of each Element."
+		"DESCRIPTION": "Break your oldest rune and gain [E] . Deal 1 damage to all enemies. Gain 1 Block. Gain 1 of each Element."
 	},
 	"Runesmith:RunicBullets": {
 		"NAME": "Runic Bullets",
-		"DESCRIPTION": "Deal !D! damage to random enemy for runes you have."
+		"DESCRIPTION": "Deal !D! damage for each rune you have."
 	},
 	"Runesmith:StaticCage": {
 		"NAME": "Static Cage",
