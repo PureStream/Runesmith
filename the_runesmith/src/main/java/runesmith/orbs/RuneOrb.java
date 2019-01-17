@@ -70,6 +70,7 @@ public abstract class RuneOrb extends AbstractOrb {
 		runes.add(new FirestoneRune(FirestoneRune.basePotency + playerPotency));
 		runes.add(new IncendiumRune(IncendiumRune.basePotency + playerPotency));
 		runes.add(new ProtectioRune(ProtectioRune.basePotency + playerPotency));
+		runes.add(new IndustriaRune());
 		
 		if (useCardRng) return runes.get(AbstractDungeon.cardRandomRng.random(runes.size() - 1));
 		return runes.get(MathUtils.random(runes.size() - 1));
