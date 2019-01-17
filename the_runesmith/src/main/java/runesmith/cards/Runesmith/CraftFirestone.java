@@ -37,17 +37,9 @@ public class CraftFirestone extends AbstractRunicCard {
 			AbstractCard.CardTarget.SELF
 		);
 		
-		this.basePotency = POTENCY;
-		this.potency = this.basePotency;
+		this.potency = this.basePotency = POTENCY;
 		this.tags.add(CRAFT);
 
-	}
-	
-	@Override
-	public void applyPowers() {
-		this.potency = this.basePotency + checkPotential();
-		super.applyPowers();
-		initializeDescription();
 	}
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {

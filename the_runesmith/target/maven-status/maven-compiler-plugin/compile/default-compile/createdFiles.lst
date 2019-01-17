@@ -31,6 +31,7 @@ runesmith\cards\Runesmith\ShiftingStrike.class
 runesmith\cards\Runesmith\MakeshiftArmor.class
 runesmith\RunesmithMod.class
 runesmith\powers\FirestormPower.class
+runesmith\actions\StasisCard.class
 runesmith\cards\Runesmith\Firestorm.class
 runesmith\actions\RuneChannelAction.class
 runesmith\patches\EnhancedCardValueModified$applyPowersToBlock.class
@@ -56,6 +57,7 @@ runesmith\cards\Runesmith\HammerTime.class
 runesmith\actions\cards\HammerSlamAction.class
 runesmith\patches\AbstractCardEnum.class
 runesmith\cards\Runesmith\StaticCage.class
+runesmith\helpers\AdditionalCardDescriptions.class
 runesmith\orbs\ProtectioRune.class
 runesmith\character\player\RunesmithCharacter.class
 runesmith\powers\TerraPower.class
