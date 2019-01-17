@@ -66,7 +66,7 @@ public class FortifyAction extends AbstractGameAction{
 			this.p.hand.group.removeAll(this.cannotEnhance);
 			
 			if (this.p.hand.group.size() > 1) {	
-				AbstractDungeon.handCardSelectScreen.open(TEXT[0], 1, false, false, false, true);
+				AbstractDungeon.handCardSelectScreen.open(TEXT[0], 1, false, false, false, false);
 				tickDuration();
 				return;
 			}

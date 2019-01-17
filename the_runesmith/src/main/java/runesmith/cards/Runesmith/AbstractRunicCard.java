@@ -35,7 +35,7 @@ public abstract class AbstractRunicCard extends CustomCard {
 		if(this.potency > this.basePotency || amount>0 || this.potency < this.basePotency) isPotencyModified = true;
 	}
 	
-	public int getPotentialBonus() {
+	private int getPotentialBonus() {
 		AbstractPlayer p = AbstractDungeon.player;
 		if (p != null) {
 			if (p.hasPower("PotentialPower")) {
