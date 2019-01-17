@@ -1,7 +1,5 @@
 package runesmith.cards.Runesmith;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -10,11 +8,8 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import basemod.abstracts.CustomCard;
-import basemod.helpers.BaseModCardTags;
-import runesmith.actions.DowngradeRandomCardInDeckAction;
 import runesmith.actions.cards.RepurposeAction;
 import runesmith.patches.AbstractCardEnum;
-import runesmith.powers.TerraPower;
 
 public class Repurpose extends CustomCard {
 

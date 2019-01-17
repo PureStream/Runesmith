@@ -7,8 +7,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 
-import runesmith.orbs.RuneOrb;
-
 public class HammerSlamAction extends AbstractGameAction{
 	private int add;
 	

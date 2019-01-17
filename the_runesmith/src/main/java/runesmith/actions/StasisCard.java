@@ -4,7 +4,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 
 import runesmith.helpers.AdditionalCardDescriptions;
 import runesmith.patches.CardStasisStatus;
-import runesmith.patches.EnhanceCountField;
 
 public abstract class StasisCard {
 	
