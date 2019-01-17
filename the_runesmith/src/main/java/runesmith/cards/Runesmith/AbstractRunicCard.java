@@ -1,15 +1,24 @@
 package runesmith.cards.Runesmith;
 
+import java.util.ArrayList;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.cards.red.HeavyBlade;
+import com.megacrit.cardcrawl.cards.red.PerfectedStrike;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import basemod.abstracts.CustomCard;
 import runesmith.RunesmithMod;
+import runesmith.patches.EnhanceCountField;
 import runesmith.powers.AquaPower;
 import runesmith.powers.IgnisPower;
 import runesmith.powers.TerraPower;
@@ -29,6 +38,7 @@ public abstract class AbstractRunicCard extends CustomCard {
 	public void upgradePotency(int amount) {
 		this.basePotency += amount; 
 		this.potency = this.basePotency + getPotentialBonus();
+		this.potency = this.potency + MathUtils.floor(this.potency * (0.5F * EnhanceCountField.enhanceCount.get(this)));
 		if(this.potency > this.basePotency || amount>0) isPotencyModified = true;
 	}
 	
@@ -124,4 +134,5 @@ public abstract class AbstractRunicCard extends CustomCard {
 			      );
 		}
 	}
+	
 }

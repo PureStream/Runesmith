@@ -61,11 +61,11 @@ public class MagmaRune extends RuneOrb {
 		if (!this.showEvokeValue && this.showPotentialValue) {
 			//Block
 			FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, 
-					Integer.toString(this.evokeAmount), this.cX + NUM_X_OFFSET, this.cY + this.bobEffect.y / 2.0F + NUM_Y_OFFSET,
-					new Color(0.2F, 0.4F, 0.9F, this.c.a), this.fontScale);
+					Integer.toString(this.potential/2), this.cX + NUM_X_OFFSET, this.cY + this.bobEffect.y / 2.0F - NUM_Y_OFFSET,
+					new Color(0.4F, 0.5F, 0.9F, this.c.a), this.fontScale);
 			//Damage
 			FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, 
-					Integer.toString(this.potential), this.cX + NUM_X_OFFSET, this.cY + this.bobEffect.y / 2.0F + NUM_Y_OFFSET + NUM_Y_OFFSET,
+					Integer.toString(this.potential), this.cX + NUM_X_OFFSET, this.cY + this.bobEffect.y / 2.0F + NUM_Y_OFFSET ,
 					Color.WHITE.cpy(), this.fontScale);
 		}
 	}
