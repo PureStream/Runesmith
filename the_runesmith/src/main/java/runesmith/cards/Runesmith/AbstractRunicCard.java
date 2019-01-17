@@ -1,7 +1,5 @@
 package runesmith.cards.Runesmith;
 
-import java.util.ArrayList;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -39,7 +37,7 @@ public abstract class AbstractRunicCard extends CustomCard {
 		this.basePotency += amount; 
 		this.potency = this.basePotency + getPotentialBonus();
 		this.potency = this.potency + MathUtils.floor(this.potency * (0.5F * EnhanceCountField.enhanceCount.get(this)));
-		if(this.potency > this.basePotency || amount>0) isPotencyModified = true;
+		if(this.potency > this.basePotency || amount>0 || this.potency < this.basePotency) isPotencyModified = true;
 	}
 	
 	public int getPotentialBonus() {
@@ -134,5 +132,4 @@ public abstract class AbstractRunicCard extends CustomCard {
 			      );
 		}
 	}
-	
 }

@@ -26,5 +26,9 @@
 	"PotentialPower": {
 		"NAME": "Potential",
 		"DESCRIPTIONS": ["Gain #b"," #yPotency."]
+	},
+	"DemonforgePower": {
+		"NAME": "Demonforge Backlash",
+		"DESCRIPTIONS": ["Lose #b"," #yPotency at the end of your turn."]
 	}
 }
