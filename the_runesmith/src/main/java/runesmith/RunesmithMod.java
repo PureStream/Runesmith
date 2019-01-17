@@ -306,6 +306,10 @@ public class RunesmithMod implements PostExhaustSubscriber,
 		cardsToAdd.add(new UnlimitedPower());
 		cardsToAdd.add(new CraftMedicinae());
 		cardsToAdd.add(new OneForEveryone());
+		cardsToAdd.add(new ElementalConversion());
+		cardsToAdd.add(new ConvertIgnis());
+		cardsToAdd.add(new ConvertTerra());
+		cardsToAdd.add(new ConvertAqua());
 	}
 
 	@Override

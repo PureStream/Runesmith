@@ -1,8 +1,10 @@
 package runesmith.powers;
 
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -28,6 +30,9 @@ public class AquaPower extends AbstractPower {
 	public void stackPower(int stackAmount) {
 		this.fontScale = 8.0F;
 		this.amount += stackAmount;
+		if (this.amount <= 0) {
+			AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, "AquaPower"));
+		}
 	}
 
 	public void updateDescription() {

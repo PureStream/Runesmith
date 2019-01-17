@@ -55,9 +55,9 @@
 		"UPGRADE_DESCRIPTION": "Deal !D! damage. NL Draw !M! card for each unique Rune you have plus one."
 	},
 	"Runesmith:ElementalConversion": {
-		"NAME": "Elemental Conversion",
-		"DESCRIPTION": "Choose: Convert Ignis, Convert Terra, Convert Aqua.",
-		"UPGRADE_DESCRIPTION": "Choose: Convert Ignis+, Convert Terra+, Convert Aqua+."
+		"NAME": "Convert Elements",
+		"DESCRIPTION": "Choose: Convert Ignis, Convert Terra or Convert Aqua.",
+		"UPGRADE_DESCRIPTION": "Choose: Convert Ignis+, Convert Terra+ or Convert Aqua+."
 	},
 	"Runesmith:ConvertIgnis": {
 		"NAME": "Convert Ignis",
