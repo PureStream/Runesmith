@@ -171,8 +171,8 @@
 			" damage.)"
 		]
 	},
-	"Runesmith:Shatter": {
-		"NAME": "Shatter",
+	"Runesmith:Shatterune": {
+		"NAME": "Shatterune",
 		"DESCRIPTION": "Break your oldest rune X times.",
 		"UPGRADE_DESCRIPTION": "Break your oldest rune X+1 times."
 	},
