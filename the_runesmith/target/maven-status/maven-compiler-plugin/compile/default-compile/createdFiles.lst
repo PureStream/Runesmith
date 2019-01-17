@@ -15,6 +15,7 @@ runesmith\orbs\DudRune.class
 runesmith\cards\Runesmith\UnstableHammer.class
 runesmith\orbs\IncendiumRune.class
 runesmith\patches\LibraryTypeEnum.class
+runesmith\cards\Runesmith\ElementalConversion.class
 runesmith\cards\Runesmith\ChiselStab.class
 runesmith\cards\Runesmith\Demonforge.class
 runesmith\cards\Runesmith\CraftProtectio.class
@@ -51,6 +52,7 @@ runesmith\cards\Runesmith\Shatterune.class
 runesmith\cards\Runesmith\Duplicate.class
 runesmith\orbs\FirestoneRune.class
 runesmith\cards\Runesmith\Strike_RS.class
+runesmith\cards\Runesmith\ConvertTerra.class
 runesmith\actions\DowngradeRandomCardInDeckAction.class
 runesmith\relics\Blueberries.class
 runesmith\cards\Runesmith\Terraform.class
@@ -61,6 +63,7 @@ runesmith\actions\cards\RepurposeAction$1.class
 runesmith\cards\Runesmith\HammerThrow.class
 runesmith\orbs\MagmaRune.class
 runesmith\patches\StasisExhaustPrevention.class
+runesmith\cards\Runesmith\ConvertAqua.class
 runesmith\cards\Runesmith\Fortify.class
 runesmith\relics\BrokenRuby.class
 runesmith\cards\Runesmith\RunicBullets.class
@@ -88,3 +91,4 @@ runesmith\actions\UpgradeDrawAction.class
 runesmith\actions\cards\HammerTimeAction.class
 runesmith\character\player\RunesmithPlayer.class
 runesmith\cards\Runesmith\RunicBlueprint.class
+runesmith\cards\Runesmith\ConvertIgnis.class
