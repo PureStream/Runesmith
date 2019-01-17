@@ -10,6 +10,8 @@ import runesmith.actions.RuneChannelAction;
 import runesmith.orbs.FirestoneRune;
 import runesmith.patches.AbstractCardEnum;
 
+import static runesmith.patches.CardTagEnum.CRAFT;
+
 public class CraftFirestone extends AbstractRunicCard {
 
 	public static final String ID = "Runesmith:CraftFirestone";
@@ -37,6 +39,7 @@ public class CraftFirestone extends AbstractRunicCard {
 		
 		this.basePotency = POTENCY;
 		this.potency = this.basePotency;
+		this.tags.add(CRAFT);
 
 	}
 	

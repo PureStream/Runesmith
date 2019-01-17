@@ -1,5 +1,7 @@
 package runesmith.cards.Runesmith;
 
+import static runesmith.patches.CardTagEnum.CRAFT;
+
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -38,6 +40,7 @@ public class CraftProtectio extends AbstractRunicCard {
 		
 		this.basePotency = POTENCY;
 		this.potency = this.basePotency;
+		this.tags.add(CRAFT);
 
 	}
 	

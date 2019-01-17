@@ -1,5 +1,6 @@
 package runesmith.cards.Runesmith;
 
+import static runesmith.patches.CardTagEnum.HAMMER;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -43,6 +44,7 @@ public class UnstableHammer extends CustomCard {
 			CardTarget.ENEMY
 		);
 		this.baseDamage = ATTACK_DMG;
+		this.tags.add(HAMMER);
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {

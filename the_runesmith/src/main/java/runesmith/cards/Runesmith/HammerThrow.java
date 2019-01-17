@@ -1,5 +1,6 @@
 package runesmith.cards.Runesmith;
 
+import static runesmith.patches.CardTagEnum.HAMMER;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -39,6 +40,7 @@ public class HammerThrow extends CustomCard {
 		);
 		this.baseDamage = ATTACK_DMG;
 		this.baseMagicNumber = this.magicNumber = DRAW_AMT;
+		this.tags.add(HAMMER);
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
