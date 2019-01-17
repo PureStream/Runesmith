@@ -25,6 +25,7 @@ import basemod.abstracts.CustomRelic;
 import basemod.interfaces.EditCharactersSubscriber;
 import runesmith.cards.Runesmith.*;
 import runesmith.character.player.RunesmithCharacter;
+import runesmith.helpers.AdditionalCardDescriptions;
 import runesmith.helpers.PotencyVariable;
 import runesmith.patches.AbstractCardEnum;
 import runesmith.patches.EnhanceCountField;
@@ -256,7 +257,8 @@ public class RunesmithMod implements PostExhaustSubscriber,
 	@Override
 	public void receiveCardUsed(AbstractCard c) {
 		EnhanceCountField.enhanceReset.set(c,true);
-		logger.info("reset enhancement");
+		AdditionalCardDescriptions.modifyDescription(c);
+//		logger.info("reset enhancement");
 	}
 
 	@Override
