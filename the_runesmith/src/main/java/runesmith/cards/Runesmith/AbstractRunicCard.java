@@ -36,6 +36,7 @@ public abstract class AbstractRunicCard extends CustomCard {
 	public void upgradePotency(int amount) {
 		this.basePotency += amount; 
 		this.potency = this.basePotency + getPotentialBonus();
+		if (this.potency < 0) this.potency = 0;
 		this.potency = this.potency + MathUtils.floor(this.potency * (0.5F * EnhanceCountField.enhanceCount.get(this)));
 		if(this.potency > this.basePotency || amount>0 || this.potency < this.basePotency) isPotencyModified = true;
 	}

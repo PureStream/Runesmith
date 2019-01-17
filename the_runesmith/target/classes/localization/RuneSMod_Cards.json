@@ -213,7 +213,7 @@
 	},
 	"Runesmith:Demonforge": {
 		"NAME": "Demonforge",
-		"DESCRIPTION": "Gain !Pot! Potency. Lose 1 Potency at the end of each turn."
+		"DESCRIPTION": "Gain !M! Potency. Lose 1 Potency at the end of each turn."
 	},
 	"Runesmith:SpecialReserve": {
 		"NAME": "Special Reserve",
