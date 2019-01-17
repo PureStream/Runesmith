@@ -55,7 +55,7 @@ public class StasisCardInHandAction extends AbstractGameAction{
 			//stasis every card if amount is at least the number of stasis-able card
 			if (this.p.hand.size() - this.cannotStasis.size() <= this.amount) {
 				for(AbstractCard c : p.hand.group) {
-					if(canStasis(c)) CardStasisStatus.isStatis.set(c, true);
+					if(canStasis(c)) StasisCard.stasis(c);
 					c.superFlash(RunesmithMod.BEIGE);
 					this.isDone = true;
 					return;
@@ -73,7 +73,7 @@ public class StasisCardInHandAction extends AbstractGameAction{
 			
 		if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {
 			for (AbstractCard c : AbstractDungeon.handCardSelectScreen.selectedCards.group) {
-				CardStasisStatus.isStatis.set(c, true);
+				StasisCard.stasis(c);
 				c.superFlash(RunesmithMod.BEIGE);
 				this.p.hand.addToTop(c);
 			}

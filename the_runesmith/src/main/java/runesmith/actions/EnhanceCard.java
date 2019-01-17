@@ -2,6 +2,7 @@ package runesmith.actions;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
 
+import runesmith.helpers.AdditionalCardDescriptions;
 import runesmith.patches.EnhanceCountField;
 
 public abstract class EnhanceCard {
@@ -13,6 +14,7 @@ public abstract class EnhanceCard {
 		if(currentEnhance > 10) {
 			EnhanceCountField.enhanceCount.set(c,10);
 		}
+		AdditionalCardDescriptions.modifyDescription(c);
 //		if(currentEnhance == 1)	c.rawDescription += "NL (Enhanced "+currentEnhance+" time.)";
 //		else c.rawDescription +=  "NL (Enhanced "+currentEnhance+" times.)";
 //		c.initializeDescription();

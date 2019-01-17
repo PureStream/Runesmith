@@ -4,8 +4,8 @@
 			"NAMES": [
 			"enhance",
 			"Enhance",
-			"enchanced",
-			"Enchanced"
+			"enhanced",
+			"Enhanced"
 			],
 			"DESCRIPTION": "Increase damage and #yBlock of a card by #b50%. Can be stacked multiplicatively. #yEnhance is removed after the card is played."
 		},
@@ -21,7 +21,7 @@
 			"stasis",
 			"Stasis"
 			],
-			"DESCRIPTION": "Prevent a card from being Exhausted once. Cannot be stacked."
+			"DESCRIPTION": "Prevent a card from being Exhausted once and discard it instead. Cannot be stacked."
 		},
 		{
 			"NAMES": [

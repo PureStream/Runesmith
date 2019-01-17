@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 
 import runesmith.RunesmithMod;
 import runesmith.actions.EnhanceCard;
+import runesmith.helpers.AdditionalCardDescriptions;
 
 public class FortifyAction extends AbstractGameAction{
 	private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("Runesmith:FortifyAction");
