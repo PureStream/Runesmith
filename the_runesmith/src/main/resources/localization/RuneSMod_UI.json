@@ -8,5 +8,10 @@
       "TEXT": [
         "Downgrade"
       ]
+    },
+    "Runesmith:StasisAction": {
+      "TEXT": [
+        "Stasis"
+      ]
     }
 }

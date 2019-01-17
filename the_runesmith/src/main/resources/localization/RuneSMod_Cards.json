@@ -98,8 +98,7 @@
 	},
 	"Runesmith:StaticCage": {
 		"NAME": "Static Cage",
-		"DESCRIPTION": "Break rune. Stasis a random card.",
-		"UPGRADE_DESCRIPTION": "Break rune. Stasis a chosen card."
+		"DESCRIPTION": "Break your oldest Rune. NL Stasis a card in your hand. NL Gain !B! Block."
 	},
 	"Runesmith:ElementalShield": {
 		"NAME": "Elemental Shield",

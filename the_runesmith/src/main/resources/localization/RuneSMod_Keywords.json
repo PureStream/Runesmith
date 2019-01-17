@@ -14,7 +14,7 @@
 			"downgrade",
 			"Downgrade"
 			],
-			"DESCRIPTION": "Remove an upgrade from a card to play a powerful card."
+			"DESCRIPTION": "Remove an upgrade from a card until the end of combat to play a powerful card."
 		},
 		{
 			"NAMES": [

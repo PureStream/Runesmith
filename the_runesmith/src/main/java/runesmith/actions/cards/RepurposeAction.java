@@ -39,6 +39,7 @@ public class RepurposeAction extends AbstractGameAction{
 				gainElement(this.p.hand.getBottomCard());
 				this.p.hand.moveToExhaustPile(this.p.hand.getBottomCard());
 				tickDuration();
+				this.isDone = true;
 				return;
 			}
 			AbstractDungeon.handCardSelectScreen.open(TEXT[0], 1, false);
