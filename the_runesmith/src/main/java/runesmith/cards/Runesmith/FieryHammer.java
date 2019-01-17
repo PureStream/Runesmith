@@ -47,7 +47,7 @@ public class FieryHammer extends CustomCard{
 	}
 	
 	public AbstractCard makeCopy() {
-		return new FieryHammer();
+		return new FieryHammer(this.timesUpgraded);
 	}
 
 	@Override
