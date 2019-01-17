@@ -50,7 +50,7 @@ public class OneForEveryone extends CustomCard {
 		);
 		this.baseDamage = ATTACK_DMG;
 		this.baseBlock = BLOCK_AMT;
-		this.baseMagicNumber = ELEM_AMT;
+		this.baseMagicNumber = this.magicNumber = ELEM_AMT;
 		this.isMultiDamage = true;
 	}
 

@@ -52,13 +52,11 @@ public class FieryHammer extends CustomCard{
 
 	@Override
 	public void upgrade() {
-		if (!this.upgraded) {
-			upgradeDamage(3 + this.timesUpgraded);
-			this.timesUpgraded += 1;
-			this.upgraded = true;
-			this.name = (NAME + "+" + this.timesUpgraded);
-			initializeTitle();
-		}
+		upgradeDamage(3 + this.timesUpgraded);
+		this.timesUpgraded += 1;
+		this.upgraded = true;
+		this.name = (NAME + "+" + this.timesUpgraded);
+		initializeTitle();
 	}
 
 	@Override
