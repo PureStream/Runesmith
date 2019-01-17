@@ -51,21 +51,6 @@ public class PotentialPower extends AbstractPower {
 	}*/
 	
 	public void updatePotencialEffects() {
-		for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
-			if (c instanceof AbstractRunicCard){
-				((AbstractRunicCard) c).upgradePotency(0);
-			}
-		}
-		for (AbstractCard c : AbstractDungeon.player.exhaustPile.group) {
-			if (c instanceof AbstractRunicCard){
-				((AbstractRunicCard) c).upgradePotency(0);
-			}
-		}
-		for (AbstractCard c : AbstractDungeon.player.discardPile.group) {
-			if (c instanceof AbstractRunicCard){
-				((AbstractRunicCard) c).upgradePotency(0);
-			}
-		}
 		for (AbstractCard c : AbstractDungeon.player.hand.group) {
 			if (c instanceof AbstractRunicCard){
 				((AbstractRunicCard) c).upgradePotency(0);
