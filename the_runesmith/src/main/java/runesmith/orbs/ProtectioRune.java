@@ -17,7 +17,7 @@ public class ProtectioRune extends RuneOrb {
 	}
 	
 	@Override
-	public void onStartOfTurn() {
+	public void onEndOfTurn() {
 		this.activateEffect();
 		AbstractPlayer p = AbstractDungeon.player;
 		AbstractDungeon.actionManager.addToBottom(

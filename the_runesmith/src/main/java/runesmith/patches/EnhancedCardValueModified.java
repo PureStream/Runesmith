@@ -18,6 +18,8 @@ import runesmith.cards.Runesmith.AbstractRunicCard;
 public class EnhancedCardValueModified {
 	public static final Logger logger = LogManager.getLogger(EnhancedCardValueModified.class.getName());
 			
+	//Current calculation is Additive. Might switch to multiplicative in the future.
+	
 	@SpirePatch(cls = "com.megacrit.cardcrawl.cards.AbstractCard", method="applyPowers")
     public static class applyPowers {
         public static void Postfix(AbstractCard self)
@@ -35,7 +37,8 @@ public class EnhancedCardValueModified {
 	            if(self instanceof AbstractRunicCard) {
 	            	int tmp2 = ((AbstractRunicCard) self).potency;
 //	            	((AbstractRunicCard) self).potency = (int) Math.floor(tmp2 * (Math.pow(1.5,EnhanceCountField.enhanceCount.get(self))));
-	            	((AbstractRunicCard) self).potency = ((AbstractRunicCard) self).potency + MathUtils.floor(((AbstractRunicCard) self).potency * (0.5F * EnhanceCountField.enhanceCount.get(self)));
+	            	logger.info("adjusting potency");
+	            	((AbstractRunicCard) self).potency = ((AbstractRunicCard) self).potency + MathUtils.floor(((AbstractRunicCard) self).potency * (0.25F * EnhanceCountField.enhanceCount.get(self)));
 	            	if(tmp2 != ((AbstractRunicCard) self).potency) {
 	            		((AbstractRunicCard) self).isPotencyModified = true;
 	            	}
@@ -52,6 +55,7 @@ public class EnhancedCardValueModified {
         	
 	            int tmp = self.block;
 //	            self.block = (int) Math.floor((self.baseBlock * (Math.pow(1.5F,EnhanceCountField.enhanceCount.get(self)))));
+//	            logger.info("adding block by: "+MathUtils.floor(self.block * (0.5F * EnhanceCountField.enhanceCount.get(self))));
 	            self.block = self.block + MathUtils.floor(self.block * (0.5F * EnhanceCountField.enhanceCount.get(self)));
 	            if (self.block != tmp) {
 	                self.isBlockModified = true;

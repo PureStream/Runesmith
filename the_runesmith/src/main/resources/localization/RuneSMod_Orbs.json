@@ -8,7 +8,7 @@
   "Protectio": {
     "NAME": "Protectio",
     "DESCRIPTION": [
-      "Gain #b{Pot} #yBlock at the start of your turn."
+      "Gain #b{Pot} #yBlock at the end of your turn."
     ]
   },
   "Incendium": {
@@ -45,8 +45,8 @@
   "Prismatic": {
     "NAME": "Prismatic",
     "DESCRIPTION": [
-      "Give a random class card each turn.",
-      "give a random upgraded class card each turn."
+      "Gain a random class card each turn.",
+      "Gain a random upgraded class card each turn."
     ]
   },
   "Industria": {
@@ -70,7 +70,7 @@
   "Magma": {
     "NAME": "Magma",
     "DESCRIPTION": [
-      "Deal #b{Pot} damage to random enemy. Gain #b{Pot}/2 block"
+      "Deal #b{Pot} damage at the start of your turn. Gain #b{Pot2} block at the end of your turn."
     ]
   },
   "WWWWWWWWWWWWWW": {
