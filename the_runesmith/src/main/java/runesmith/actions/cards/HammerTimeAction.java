@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
+import runesmith.RunesmithMod;
 import runesmith.actions.EnhanceCard;
 
 public class HammerTimeAction extends AbstractGameAction {
@@ -32,8 +33,8 @@ public class HammerTimeAction extends AbstractGameAction {
 			for (AbstractCard c : p.hand.group) {
 				if (c.hasTag(HAMMER)) {
 					EnhanceCard.enhance(c);
-					c.flash();
-					c.applyPowers();
+					c.superFlash(RunesmithMod.BEIGE);
+					
 				}
 			}
 			for (AbstractCard c : p.discardPile.group) {
