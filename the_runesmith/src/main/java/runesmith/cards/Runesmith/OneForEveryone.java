@@ -34,7 +34,7 @@ public class OneForEveryone extends CustomCard {
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	public static final String IMG_PATH = "images/cards/OneForEveryone.png"; //<-------------- need some img
+	public static final String IMG_PATH = "images/cards/OneForEveryone.png";
 	private static final int COST = 1;
 	private static final int COST_UPGRADE = 0;
 	private static final int ATTACK_DMG = 1;
@@ -88,10 +88,12 @@ public class OneForEveryone extends CustomCard {
 			AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new IgnisPower(p, this.magicNumber), this.magicNumber));
 			AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new TerraPower(p, this.magicNumber), this.magicNumber));
 			AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new AquaPower(p, this.magicNumber), this.magicNumber));
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, 
-					new VulnerablePower(m, this.magicNumber, false), this.magicNumber));
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, 
-					new WeakPower(m, this.magicNumber, false), this.magicNumber));
+			for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
+				AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, 
+						new VulnerablePower(mo, this.magicNumber, false), this.magicNumber));
+				AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, 
+						new WeakPower(mo, this.magicNumber, false), this.magicNumber));
+			}
 		}
 	}
 
