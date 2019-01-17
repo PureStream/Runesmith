@@ -73,7 +73,8 @@
 	},
 	"Runesmith:Repurpose": {
 		"NAME": "Repurpose",
-		"DESCRIPTION": "Exhaust a card. Attack: Gain !M! Ignis, Skill: Gain !M! Terra, Power: Gain !M! Aqua. Status card: Gain 1 of each."
+		"DESCRIPTION": "Exhaust a card in your hand. NL Attack: Gain !M! Ignis, Skill: Gain !M! Terra NL Power: Gain !M! Aqua. Status card: Gain 1 of each.",
+		"UPGRADE_DESCRIPTION": "Exhaust a card in your hand. NL Attack: Gain !M! Ignis, Skill: Gain !M! Terra NL Power: Gain !M! Aqua. Status card: Gain 1 of each NL Curse: Gain 2 of each."
 	},
 	"Runesmith:EnchantedChisel": {
 		"NAME": "Enchanted Chisel",
