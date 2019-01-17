@@ -6,14 +6,8 @@ import org.apache.logging.log4j.Logger;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
-import com.megacrit.cardcrawl.cards.red.HeavyBlade;
-import com.megacrit.cardcrawl.cards.red.PerfectedStrike;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
-
 import basemod.abstracts.CustomCard;
 import runesmith.RunesmithMod;
 import runesmith.patches.EnhanceCountField;
@@ -36,6 +30,7 @@ public abstract class AbstractRunicCard extends CustomCard {
 	public void upgradePotency(int amount) {
 		this.basePotency += amount; 
 		this.potency = this.basePotency + getPotentialBonus();
+		if (this.potency < 0) this.potency = 0;
 		this.potency = this.potency + MathUtils.floor(this.potency * (0.5F * EnhanceCountField.enhanceCount.get(this)));
 		if(this.potency > this.basePotency || amount>0 || this.potency < this.basePotency) isPotencyModified = true;
 	}
@@ -55,7 +50,7 @@ public abstract class AbstractRunicCard extends CustomCard {
 		logger.info("Start checking elements.");
 		AbstractPlayer p = AbstractDungeon.player;
 		
-		if (freeToPlayOnce == true) return true;
+		if (freeToPlayOnce == true || p.hasPower("UnlimitedPowerPower")) return true;
 		
 		int pIgnis = 0, pTerra = 0, pAqua = 0;
 		if (p.hasPower("IgnisPower")) {

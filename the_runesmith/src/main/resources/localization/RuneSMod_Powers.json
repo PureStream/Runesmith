@@ -30,5 +30,9 @@
 	"DemonforgePower": {
 		"NAME": "Demonforge Backlash",
 		"DESCRIPTIONS": ["Lose #b"," #yPotency at the end of your turn."]
+	},
+	"UnlimitedPowerPower": {
+		"NAME": "Unlimited Power",
+		"DESCRIPTIONS": ["Elements are no longer consumed for Crafting."]
 	}
 }

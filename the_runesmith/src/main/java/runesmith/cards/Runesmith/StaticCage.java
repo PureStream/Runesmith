@@ -14,7 +14,6 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.vfx.combat.LightningEffect;
 
 import basemod.abstracts.CustomCard;
-import basemod.helpers.BaseModCardTags;
 import runesmith.actions.BreakRuneAction;
 import runesmith.actions.StasisCardInHandAction;
 import runesmith.orbs.RuneOrb;

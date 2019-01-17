@@ -2,19 +2,13 @@ package runesmith.actions;
 
 import java.util.ArrayList;
 
-import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.cardManip.ExhaustCardEffect;
-import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
-
 import runesmith.RunesmithMod;
 import runesmith.patches.CardStasisStatus;
 

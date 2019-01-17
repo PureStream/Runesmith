@@ -213,7 +213,7 @@
 	},
 	"Runesmith:Demonforge": {
 		"NAME": "Demonforge",
-		"DESCRIPTION": "Gain !Pot! Potency. Lose 1 Potency at the end of each turn."
+		"DESCRIPTION": "Gain !M! Potency. Lose 1 Potency at the end of each turn."
 	},
 	"Runesmith:SpecialReserve": {
 		"NAME": "Special Reserve",
@@ -264,6 +264,10 @@
 	"Runesmith:Rearm": {
 		"NAME": "Rearm",
 		"DESCRIPTION": "Shuffle all Upgraded cards in discard pile into draw pile.  NL Draw 1(2) cards. NL Exhaust."
+	},
+	"Runesmith:UnlimitedPower": {
+		"NAME": "Unlimited Power",
+		"DESCRIPTION": "Elements are no longer consumed for Crafting."
 	},
 	"Runesmith:WWWWWWWWWWWWWWWWWWWW": {
 		"NAME": "WWWWWWWWWWWWWWWWWWWW",

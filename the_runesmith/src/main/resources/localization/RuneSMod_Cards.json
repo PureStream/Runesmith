@@ -265,6 +265,10 @@
 		"NAME": "Rearm",
 		"DESCRIPTION": "Shuffle all Upgraded cards in discard pile into draw pile.  NL Draw 1(2) cards. NL Exhaust."
 	},
+	"Runesmith:UnlimitedPower": {
+		"NAME": "Unlimited Power",
+		"DESCRIPTION": "Elements are no longer consumed for Crafting."
+	},
 	"Runesmith:WWWWWWWWWWWWWWWWWWWW": {
 		"NAME": "WWWWWWWWWWWWWWWWWWWW",
 		"DESCRIPTION": "WWWWWWWWWWWWWWWWWWWW"
