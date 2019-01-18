@@ -10,7 +10,7 @@ public class IndustriaRune extends RuneOrb {
 		super( "Industria",
 				false,
 				0);
-		
+		this.passiveAmount = 1;
 	}
 	
 	@Override
