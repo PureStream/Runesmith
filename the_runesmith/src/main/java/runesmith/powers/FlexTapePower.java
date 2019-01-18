@@ -2,6 +2,7 @@ package runesmith.powers;
 
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -9,16 +10,16 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
-import runesmith.actions.ApplyElementsPowerAction;
+import runesmith.actions.StasisCardInHandAction;
 
-public class FirestormPower extends AbstractPower {
+public class FlexTapePower extends AbstractPower {
 
-	public static final String POWER_ID = "Runesmith:FirestormPower";
+	public static final String POWER_ID = "FlexTapePower";
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 	
-	public FirestormPower(AbstractCreature owner, int amount) {
+	public FlexTapePower(AbstractCreature owner, int amount) {
 		this.name = NAME;
 		this.ID = POWER_ID;
 		this.owner = owner;
@@ -31,19 +32,19 @@ public class FirestormPower extends AbstractPower {
 	public void stackPower(int stackAmount) {
 		this.fontScale = 8.0F;
 		this.amount += stackAmount;
-		if (this.amount == 0) AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, "FirestormPower"));
+		if (this.amount <= 0) AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, "FlexTapePower"));
 	}
 	
 	public void atStartOfTurn() {
 		flash();
+		AbstractPlayer p = AbstractDungeon.player;
 		AbstractDungeon.actionManager.addToBottom(
-				new ApplyElementsPowerAction(owner,owner,amount,amount,0));
-//		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(owner, owner, new IgnisPower(owner, amount), amount));
-//		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(owner, owner, new TerraPower(owner, amount), amount));
+				new StasisCardInHandAction(p, amount)
+			);
 	}
 	
 	public void updateDescription() {
-		this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2]);
+		this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
 	}
 	
 }

@@ -86,11 +86,16 @@
 		{
 			"NAMES": [
 			"reservo",
-			"Reservo",
+			"Reservo"
+			],
+			"DESCRIPTION": "Rune: #yRetain a card."
+		},
+		{
+			"NAMES": [
 			"reservo+",
 			"Reservo+"
 			],
-			"DESCRIPTION": "Rune: #yRetain card(s)."
+			"DESCRIPTION": "Rune: #yRetain two cards."
 		},
 		{
 			"NAMES": [

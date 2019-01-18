@@ -13,7 +13,7 @@
 	},
 	"Runesmith:GrindstonePower": {
 		"NAME": "Grindstone",
-		"DESCRIPTIONS": ["ALL cards played this turn become #yUpgraded."]
+		"DESCRIPTIONS": ["ALL cards played become #yUpgraded."]
 	},
 	"Runesmith:FirestormPower": {
 		"NAME": "Firestorm",
@@ -33,7 +33,7 @@
 	},
 	"Runesmith:UnlimitedPowerPower": {
 		"NAME": "Unlimited Power",
-		"DESCRIPTIONS": ["Elements are no longer consumed for Crafting."]
+		"DESCRIPTIONS": ["#yElements are no longer consumed for Crafting."]
 	},
 	"Runesmith:RunesonancePower": {
 		"NAME": "Runesonance",
@@ -46,5 +46,9 @@
 			" card.",
 			" cards."
 		  ]
+	},
+	"FlexTapePower": {
+		"NAME": "Flex Tape",
+		"DESCRIPTIONS": ["#yStasis #b"," cards at the start of your turn."]
 	}
 }

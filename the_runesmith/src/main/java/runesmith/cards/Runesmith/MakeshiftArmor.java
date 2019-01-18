@@ -1,6 +1,5 @@
 package runesmith.cards.Runesmith;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -14,7 +13,6 @@ import basemod.helpers.BaseModCardTags;
 import runesmith.actions.ApplyElementsPowerAction;
 import runesmith.actions.DowngradeRandomCardInDeckAction;
 import runesmith.patches.AbstractCardEnum;
-import runesmith.powers.TerraPower;
 
 public class MakeshiftArmor extends CustomCard {
 

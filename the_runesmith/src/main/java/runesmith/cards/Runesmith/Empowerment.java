@@ -15,7 +15,6 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import basemod.abstracts.CustomCard;
 import runesmith.patches.AbstractCardEnum;
-import runesmith.powers.AquaPower;
 import runesmith.powers.IgnisPower;
 import runesmith.powers.TerraPower;
 

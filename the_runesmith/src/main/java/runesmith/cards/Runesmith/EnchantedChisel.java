@@ -16,8 +16,6 @@ import com.megacrit.cardcrawl.powers.WeakPower;
 import basemod.abstracts.CustomCard;
 import runesmith.actions.ApplyElementsPowerAction;
 import runesmith.patches.AbstractCardEnum;
-import runesmith.powers.AquaPower;
-import runesmith.powers.IgnisPower;
 
 public class EnchantedChisel extends CustomCard {
 	public static final String ID = "Runesmith:EnchantedChisel";

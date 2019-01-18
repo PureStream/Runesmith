@@ -11,8 +11,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import basemod.abstracts.CustomCard;
 import runesmith.actions.ApplyElementsPowerAction;
 import runesmith.patches.AbstractCardEnum;
-import runesmith.powers.AquaPower;
-import runesmith.powers.IgnisPower;
 import runesmith.powers.TerraPower;
 
 public class ConvertTerra extends CustomCard {

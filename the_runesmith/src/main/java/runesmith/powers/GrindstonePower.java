@@ -1,6 +1,7 @@
 package runesmith.powers;
 
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -18,13 +19,22 @@ public class GrindstonePower extends AbstractPower {
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 	
-	public GrindstonePower(AbstractCreature owner) {
+	public GrindstonePower(AbstractCreature owner, int amount) {
 		this.name = NAME;
 		this.ID = POWER_ID;
 		this.owner = owner;
+		this.amount = amount;
 		updateDescription();
 		this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/Ignis.png"), 0, 0, 84, 84);  //<-------- NEED SOME IMG
 	    this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/IgnisSmall.png"), 0, 0, 32, 32); //<-------- NEED SOME IMG
+	}
+	
+	public void stackPower(int stackAmount) {
+		this.fontScale = 8.0F;
+		this.amount += stackAmount;
+		if (this.amount <= 0) {
+			AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, "GrindstonePower"));
+		}
 	}
 	
 	public void onAfterUseCard(AbstractCard card, UseCardAction action) {
@@ -36,7 +46,14 @@ public class GrindstonePower extends AbstractPower {
 	
 	public void atEndOfTurn(boolean isPlayer) {
 		if (isPlayer) {
-			AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, "GrindstonePower"));
+			AbstractDungeon.actionManager.addToTop(
+			          new ApplyPowerAction(
+			              owner,
+			              owner,
+			              new GrindstonePower(owner, -1),
+			              -1
+			          )
+			      );
 		}
 	}
 	

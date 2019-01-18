@@ -21,9 +21,6 @@ import runesmith.actions.ApplyElementsPowerAction;
 import runesmith.actions.BreakRuneAction;
 import runesmith.orbs.RuneOrb;
 import runesmith.patches.AbstractCardEnum;
-import runesmith.powers.AquaPower;
-import runesmith.powers.IgnisPower;
-import runesmith.powers.TerraPower;
 
 public class OneForEveryone extends CustomCard {
 	public static final String ID = "Runesmith:OneForEveryone";

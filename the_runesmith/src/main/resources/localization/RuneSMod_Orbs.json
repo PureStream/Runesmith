@@ -21,7 +21,7 @@
     "NAME": "Reservo",
     "DESCRIPTION": [
       "At the end of turn, #yRetain up to #b1 card. NL #yBreak: #yRetain up to #b2 cards. Effect is removed at the end of turn.",
-      "At the end of turn, #yRetain up to #b2 cards. NL #yBreak: #yRetain up to #b2=4 cards. Effect is removed at the end of turn."
+      "At the end of turn, #yRetain up to #b2 cards. NL #yBreak: #yRetain up to #b4 cards. Effect is removed at the end of turn."
     ]
   },
   "Spiculum": {

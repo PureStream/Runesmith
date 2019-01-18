@@ -2,7 +2,6 @@ package runesmith.cards.Runesmith;
 
 import static runesmith.patches.CardTagEnum.HAMMER;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -17,9 +16,6 @@ import runesmith.actions.ApplyElementsPowerAction;
 import runesmith.actions.RuneChannelAction;
 import runesmith.orbs.DudRune;
 import runesmith.patches.AbstractCardEnum;
-import runesmith.powers.AquaPower;
-import runesmith.powers.IgnisPower;
-import runesmith.powers.TerraPower;
 
 public class UnstableHammer extends CustomCard {
 	public static final String ID = "Runesmith:UnstableHammer";
