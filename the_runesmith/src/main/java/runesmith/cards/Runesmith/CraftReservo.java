@@ -37,7 +37,7 @@ public class CraftReservo extends AbstractRunicCard {
 			AbstractCard.CardTarget.SELF
 		);
 		this.tags.add(CRAFT);
-		this.exhaustOnUseOnce = true;
+		this.exhaust = true;
 		this.baseMagicNumber = this.magicNumber = AQUA_AMT;
 	}
 	

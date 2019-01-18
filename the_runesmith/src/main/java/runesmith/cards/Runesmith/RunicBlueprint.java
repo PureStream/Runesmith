@@ -44,6 +44,7 @@ public class RunicBlueprint extends CustomCard {
 			AbstractCard.CardRarity.UNCOMMON,
 			AbstractCard.CardTarget.SELF
 		);
+		this.exhaust = true;
 		
 	}
 	
