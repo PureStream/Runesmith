@@ -27,7 +27,7 @@ public class GrindstonePower extends AbstractPower {
 	    this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/IgnisSmall.png"), 0, 0, 32, 32); //<-------- NEED SOME IMG
 	}
 	
-	public void onUseCard(AbstractCard card, UseCardAction action) {
+	public void onAfterCardPlayed(AbstractCard card, UseCardAction action) {
 		if (card.canUpgrade()) {
 			flash();
 			card.upgrade();
