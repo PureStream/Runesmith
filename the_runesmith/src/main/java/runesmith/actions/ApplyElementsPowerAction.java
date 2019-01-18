@@ -30,6 +30,7 @@ public class ApplyElementsPowerAction extends AbstractGameAction{
 			this.ignis = this.ignis*2;
 			this.terra = this.terra*2;
 			this.aqua = this.aqua*2;
+			p.getPower("Runesmith:RunesonancePower").flash();
 		}
 		if(this.ignis!=0) {
 		AbstractDungeon.actionManager.addToTop(

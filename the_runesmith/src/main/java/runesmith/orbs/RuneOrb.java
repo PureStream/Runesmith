@@ -55,7 +55,7 @@ public abstract class RuneOrb extends AbstractOrb {
 				speedTime = 0.0F;
 		    }
 //		    AbstractDungeon.effectList.add(new OrbFlareEffect(this, OrbFlareEffect.OrbFlareColor.PLASMA));    
-		    AbstractDungeon.actionManager.addToTop(new VFXAction(new OrbFlareEffect(this, OrbFlareEffect.OrbFlareColor.PLASMA), speedTime));
+//		AbstractDungeon.actionManager.addToBottom(new VFXAction(new OrbFlareEffect(this, OrbFlareEffect.OrbFlareColor.PLASMA), speedTime));
 	}
 	
 	@Override
@@ -75,6 +75,7 @@ public abstract class RuneOrb extends AbstractOrb {
 		runes.add(new ProtectioRune(ProtectioRune.basePotency + playerPotency));
 		runes.add(new IndustriaRune());
 		runes.add(new MedicinaeRune(MedicinaeRune.basePotency + playerPotency));
+		runes.add(new ReservoRune());
 		
 		if (useCardRng) return runes.get(AbstractDungeon.cardRandomRng.random(runes.size() - 1));
 		return runes.get(MathUtils.random(runes.size() - 1));
@@ -116,7 +117,7 @@ public abstract class RuneOrb extends AbstractOrb {
 	@Override
 	protected void renderText(SpriteBatch sb)
 	{
-		if (!this.showEvokeValue && this.showPotentialValue) {
+		if (this.showPotentialValue) {
 			FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, 
 				Integer.toString(this.potential), this.cX + NUM_X_OFFSET, this.cY + this.bobEffect.y / 2.0F + NUM_Y_OFFSET, Color.WHITE.cpy(), this.fontScale);
 		}
