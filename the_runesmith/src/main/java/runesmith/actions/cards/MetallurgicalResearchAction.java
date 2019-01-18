@@ -3,6 +3,7 @@ package runesmith.actions.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.cards.AbstractCard.CardType;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -37,7 +38,12 @@ public class MetallurgicalResearchAction extends AbstractGameAction {
 				c.upgrade();
 				c.applyPowers();
 			}
-			EnhanceCard.enhance(c);
+			if (canEnhance(c))
+				EnhanceCard.enhance(c);
 		}
+	}
+	
+	private boolean canEnhance(AbstractCard c) {
+		return !(c.type == CardType.CURSE || c.type == CardType.STATUS);
 	}
 }
