@@ -18,7 +18,8 @@ public abstract class EnhanceCard {
 		if(c instanceof AbstractRunicCard) {
 			((AbstractRunicCard) c).upgradePotency(0);
 		}
-		AdditionalCardDescriptions.modifyDescription(c);
+//		AdditionalCardDescriptions.modifyDescription(c);
+		c.initializeDescription();
 //		if(currentEnhance == 1)	c.rawDescription += "NL (Enhanced "+currentEnhance+" time.)";
 //		else c.rawDescription +=  "NL (Enhanced "+currentEnhance+" times.)";
 //		c.initializeDescription();

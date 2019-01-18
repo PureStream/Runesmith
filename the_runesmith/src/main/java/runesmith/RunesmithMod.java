@@ -250,7 +250,8 @@ public class RunesmithMod implements PostExhaustSubscriber,
 	@Override
 	public void receiveCardUsed(AbstractCard c) {
 		EnhanceCountField.enhanceReset.set(c,true);
-		AdditionalCardDescriptions.modifyDescription(c);
+//		AdditionalCardDescriptions.modifyDescription(c);
+		c.initializeDescription();
 //		logger.info("reset enhancement");
 	}
 
@@ -312,6 +313,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
 		cardsToAdd.add(new ConvertAqua());
 		cardsToAdd.add(new Rearm());
 		cardsToAdd.add(new FieryHammer());
+		cardsToAdd.add(new Empowerment());
 	}
 
 	@Override

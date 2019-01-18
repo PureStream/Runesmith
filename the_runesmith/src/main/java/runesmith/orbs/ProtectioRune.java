@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 
 public class ProtectioRune extends RuneOrb {
 	
-	public static final int basePotency = 2;
+	public static final int basePotency = 4;
 	
 	public ProtectioRune(int potential) {
 		super( "Protectio",

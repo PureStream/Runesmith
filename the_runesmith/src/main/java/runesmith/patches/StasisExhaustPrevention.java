@@ -4,13 +4,18 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.vfx.cardManip.CardDarkFlashVfx;
 import com.megacrit.cardcrawl.vfx.cardManip.ExhaustCardEffect;
+import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
+
 import runesmith.helpers.AdditionalCardDescriptions;
+import runesmith.vfx.ShowStasisCardAndAddToDiscardEffect;
 
 public class StasisExhaustPrevention {
 	public static final Logger logger = LogManager.getLogger(StasisExhaustPrevention.class.getName());
@@ -46,8 +51,9 @@ public class StasisExhaustPrevention {
 				self.group.remove(c);
 				//update card description
 				AdditionalCardDescriptions.modifyDescription(c);
-				AbstractDungeon.player.discardPile.addToTop(c);
-				//AbstractDungeon.effectList.add(new ShowCardAndAddToDiscardEffect(c));
+//				AbstractDungeon.actionManager.addToBottom(new VFXAction(new CardDarkFlashVfx(c), 0.1F));
+//				AbstractDungeon.player.discardPile.addToTop(c);
+				AbstractDungeon.effectList.add(new ShowStasisCardAndAddToDiscardEffect(c));
 				return;
 			}
 			for (AbstractRelic r : AbstractDungeon.player.relics) {

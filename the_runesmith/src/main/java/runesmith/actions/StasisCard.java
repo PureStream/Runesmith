@@ -10,6 +10,7 @@ public abstract class StasisCard {
 	public static void stasis(AbstractCard c) {
 		CardStasisStatus.isStatis.set(c, true);
 		//update card desc
-		AdditionalCardDescriptions.modifyDescription(c);
+//		AdditionalCardDescriptions.modifyDescription(c);
+		c.initializeDescription();
 	}
 }

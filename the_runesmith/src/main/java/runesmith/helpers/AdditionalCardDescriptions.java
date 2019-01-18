@@ -3,6 +3,7 @@ package runesmith.helpers;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
@@ -51,14 +52,14 @@ public abstract class AdditionalCardDescriptions {
 			addString = addString+" "+STASIS_TEXT[0]+".";
 		}
 		c.rawDescription = c.rawDescription + addString;
-		c.initializeDescription();
+//		c.initializeDescription();
 	}
 	
-//	@SpirePatch(cls = "com.megacrit.cardcrawl.cards.AbstractCard", method="upgrade")
-//    public static class updateDescOnUpgrade {
-//	        public static void Postfix(AbstractCard self)
-//	        {
-//	        	AdditionalCardDescriptions.modifyDescription(self);
-//	        }
-//    }
+	@SpirePatch(cls = "com.megacrit.cardcrawl.cards.AbstractCard", method="initializeDescription")
+    public static class updateDesc {
+	        public static void Prefix(AbstractCard self)
+	        {
+	        	AdditionalCardDescriptions.modifyDescription(self);
+	        }
+    }
 }

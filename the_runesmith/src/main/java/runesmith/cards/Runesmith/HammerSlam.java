@@ -23,7 +23,7 @@ public class HammerSlam extends CustomCard{
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String IMG_PATH = "images/cards/HammerSlam.png"; //<-------------- need some img
 	private static final int COST = 2;
-	private static final int ATTACK_DMG = 11;
+	private static final int ATTACK_DMG = 12;
 	private static final int UPGRADE_PLUS_DMG = 4;
 	private static final int BASE_DRAW = 1;
 	private static final int UPGRADE_PLUS_DRAW = 1;

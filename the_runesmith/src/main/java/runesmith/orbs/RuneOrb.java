@@ -87,6 +87,8 @@ public abstract class RuneOrb extends AbstractOrb {
 	public void onCardDraw(AbstractCard c) {}
 
 	public void onBreak() {}
+	
+	public void onRemove() {}
 
 	public void atTurnStartPostDraw() {}
 	 
