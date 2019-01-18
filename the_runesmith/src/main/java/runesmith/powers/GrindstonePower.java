@@ -27,7 +27,7 @@ public class GrindstonePower extends AbstractPower {
 	    this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/IgnisSmall.png"), 0, 0, 32, 32); //<-------- NEED SOME IMG
 	}
 	
-	public void onAfterCardPlayed(AbstractCard card, UseCardAction action) {
+	public void onAfterUseCard(AbstractCard card, UseCardAction action) {
 		if (card.canUpgrade()) {
 			flash();
 			card.upgrade();
@@ -38,6 +38,10 @@ public class GrindstonePower extends AbstractPower {
 		if (isPlayer) {
 			AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, "GrindstonePower"));
 		}
+	}
+	
+	public void updateDescription() {
+		this.description = DESCRIPTIONS[0];
 	}
 	
 }

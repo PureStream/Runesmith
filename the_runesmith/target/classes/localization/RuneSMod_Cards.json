@@ -34,8 +34,8 @@
 	},
 	"Runesmith:Terraform": {
 		"NAME": "Terraform",
-		"DESCRIPTION": "Gain 1 Terra. NL Gain Block equals to the number of Terra twice.",
-		"UPGRADE_DESCRIPTION": "Gain 1 Terra. NL Gain Block equals to the number of Terra thrice.",
+		"DESCRIPTION": "Gain 1 Terra. NL Gain Block equals to double the amount of Terra.",
+		"UPGRADE_DESCRIPTION": "Gain 1 Terra. NL Gain Block equals to triple the number of Terra.",
 		"EXTENDED_DESCRIPTION":[
 			" NL (Gain ",
 			" Block.)"
@@ -90,7 +90,7 @@
 	},
 	"Runesmith:OneForEveryone": {
 		"NAME": "One for Everyone",
-		"DESCRIPTION": "Break your oldest rune to gain [E] , NL Deal 1 damage, apply 1 Weak and Vulnerable to all enemies, NL gain 1 Block, and gain 1 of each Element."
+		"DESCRIPTION": "Break your oldest rune to NL gain [E] , deal 1 damage, apply 1 Weak and Vulnerable to all enemies, NL gain 1 Block, and gain 1 of each Element."
 	},
 	"Runesmith:RunicBullets": {
 		"NAME": "Runic Bullets",
@@ -102,8 +102,8 @@
 	},
 	"Runesmith:ElementalShield": {
 		"NAME": "Elemental Shield",
-		"DESCRIPTION": "Remove all Elements. NL Gain Block equals to double the amount of ALL Elements removed.",
-		"UPGRADE_DESCRIPTION": "Remove all Elements. NL Gain Block equals to triple the amount of ALL Elements removed.",
+		"DESCRIPTION": "Remove all Elements. NL Gain Block equals to double the number of Elements removed.",
+		"UPGRADE_DESCRIPTION": "Remove all Elements. NL Gain Block equals to triple the number of Elements removed.",
 		"EXTENDED_DESCRIPTION":[
 			" NL (Gain ",
 			" Block.)"

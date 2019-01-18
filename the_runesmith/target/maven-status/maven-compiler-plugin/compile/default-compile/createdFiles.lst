@@ -16,12 +16,14 @@ runesmith\cards\Runesmith\UnstableHammer.class
 runesmith\orbs\IncendiumRune.class
 runesmith\patches\LibraryTypeEnum.class
 runesmith\cards\Runesmith\ElementalConversion.class
+runesmith\actions\cards\RearmAction.class
 runesmith\cards\Runesmith\ChiselStab.class
 runesmith\cards\Runesmith\Demonforge.class
 runesmith\cards\Runesmith\CraftProtectio.class
 runesmith\cards\Runesmith\CraftMedicinae.class
 runesmith\cards\Runesmith\CraftFirestone.class
 runesmith\cards\Runesmith\CraftIndustria.class
+runesmith\vfx\ShowStasisCardAndAddToDiscardEffect.class
 runesmith\cards\Runesmith\CraftMagma.class
 runesmith\actions\ShuffleUpgradedCardAction.class
 runesmith\cards\Runesmith\ChaoticBlast.class
@@ -45,6 +47,7 @@ runesmith\cards\Runesmith\Rearm.class
 runesmith\cards\Runesmith\MakeshiftArmor.class
 runesmith\RunesmithMod.class
 runesmith\powers\FirestormPower.class
+runesmith\actions\DiscardToDrawAction.class
 runesmith\actions\StasisCard.class
 runesmith\cards\Runesmith\Firestorm.class
 runesmith\actions\RuneChannelAction.class
@@ -55,6 +58,7 @@ runesmith\cards\Runesmith\Shatterune.class
 runesmith\cards\Runesmith\Duplicate.class
 runesmith\orbs\FirestoneRune.class
 runesmith\cards\Runesmith\Strike_RS.class
+runesmith\helpers\AdditionalCardDescriptions$updateDesc.class
 runesmith\cards\Runesmith\ConvertTerra.class
 runesmith\actions\DowngradeRandomCardInDeckAction.class
 runesmith\relics\Blueberries.class
@@ -75,6 +79,7 @@ runesmith\cards\Runesmith\RuneHurl.class
 runesmith\cards\Runesmith\HammerTime.class
 runesmith\actions\cards\HammerSlamAction.class
 runesmith\patches\AbstractCardEnum.class
+runesmith\cards\Runesmith\Empowerment.class
 runesmith\cards\Runesmith\StaticCage.class
 runesmith\helpers\AdditionalCardDescriptions.class
 runesmith\orbs\ProtectioRune.class

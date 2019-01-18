@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import basemod.abstracts.CustomCard;
-import runesmith.actions.ShuffleUpgradedCardAction;
+import runesmith.actions.cards.RearmAction;
 import runesmith.patches.AbstractCardEnum;
 
 public class Rearm extends CustomCard {
@@ -39,7 +39,7 @@ public class Rearm extends CustomCard {
 	}
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToTop(new ShuffleUpgradedCardAction());
+		AbstractDungeon.actionManager.addToTop(new RearmAction());
 		AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, this.magicNumber));
 	}
 	
