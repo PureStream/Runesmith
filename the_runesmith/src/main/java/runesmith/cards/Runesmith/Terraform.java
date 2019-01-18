@@ -42,17 +42,22 @@ public class Terraform extends CustomCard {
 	public void applyPowers() {
 		AbstractPlayer p = AbstractDungeon.player;
 		int multiplier;
-		this.baseBlock = 0;
-		if (this.upgraded) {
+
+		if (this.upgraded) 
 			multiplier = 3;
-		} else {
+		else 
 			multiplier = 2;
-		}
+		if (p.hasPower("Runesmith:RunesonancePower")) 
+			this.baseBlock = 2*multiplier;
+		else
+			this.baseBlock = 1*multiplier;
+		
 		if (p.hasPower("Runesmith:TerraPower")) {
 			this.baseBlock += (p.getPower("Runesmith:TerraPower").amount * multiplier);
 			super.applyPowers();
 		}
-		String extendString = EXTENDED_DESCRIPTION[0] + (this.block + ((this.upgraded) ? 3 : 2)) + EXTENDED_DESCRIPTION[1];
+		
+		String extendString = EXTENDED_DESCRIPTION[0] + (this.block) + EXTENDED_DESCRIPTION[1];
 		if (!this.upgraded) {
 			this.rawDescription = DESCRIPTION + extendString;
 		} else {
@@ -74,12 +79,10 @@ public class Terraform extends CustomCard {
 		AbstractDungeon.actionManager.addToBottom(
 				new ApplyElementsPowerAction(p,p,0,TERRA_AMT,0));
 //		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, 
-//				new TerraPower(p, TERRA_AMT),TERRA_AMT));
-		if (this.block > 0) {
-			AbstractDungeon.actionManager.addToBottom(
-			  new GainBlockAction(p, p, this.block)
-			);
-		}
+//				new TerraPower(p, TERRA_AMT),TERRA_AMT));\
+		AbstractDungeon.actionManager.addToBottom(
+		  new GainBlockAction(p, p, this.block)
+		);
 	}
 	
 	public AbstractCard makeCopy() {

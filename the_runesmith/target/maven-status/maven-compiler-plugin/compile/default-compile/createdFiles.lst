@@ -1,3 +1,4 @@
+runesmith\cards\Runesmith\CraftSpiculum.class
 runesmith\patches\CardStasisStatus.class
 runesmith\powers\DemonforgePower.class
 runesmith\powers\DuplicatePower.class
@@ -26,6 +27,7 @@ runesmith\patches\EnhancedCardValueModified$resetAttributes.class
 runesmith\cards\Runesmith\HammerPolish.class
 runesmith\cards\Runesmith\Rearm.class
 runesmith\cards\Runesmith\MakeshiftArmor.class
+runesmith\powers\SpiculumDownPower.class
 runesmith\RunesmithMod.class
 runesmith\powers\FirestormPower.class
 runesmith\actions\StasisCard.class
@@ -95,6 +97,7 @@ runesmith\patches\EnhancedCardValueModified$applyPowersToBlock.class
 runesmith\cards\Runesmith\EarthShield.class
 runesmith\actions\cards\RepurposeAction.class
 runesmith\orbs\FirestoneRune.class
+runesmith\orbs\SpiculumRune.class
 runesmith\actions\DowngradeRandomCardInDeckAction.class
 runesmith\orbs\ReservoRune.class
 runesmith\cards\Runesmith\Terraform.class

@@ -17,7 +17,7 @@ public class BrokenRuby extends CustomRelic {
 	public static final String ID = "Runesmith:BrokenRuby";
 	private static final String IMG = "images/relics/BrokenRuby.png"; //<--------- Need some img
 	private static final int IGNIS_AMT = 1;
-	private static final int NUM_CARDS = 2;
+	private static final int NUM_CARDS = 3;
 	
 	public BrokenRuby() {
 		super(ID, ImageMaster.loadImage(IMG), RelicTier.STARTER, LandingSound.MAGICAL); 
@@ -29,7 +29,7 @@ public class BrokenRuby extends CustomRelic {
 	}
 	
 	public void atBattleStart() {
-		this.counter = 0;
+		//this.counter = 0;
 		AbstractPlayer p = AbstractDungeon.player;
 		AbstractDungeon.actionManager.addToTop(
 				new ApplyElementsPowerAction(p,p,IGNIS_AMT,0,0));
@@ -50,9 +50,9 @@ public class BrokenRuby extends CustomRelic {
 		}
 	}
 
-	public void onVictory() {
+	/*public void onVictory() {
 		this.counter = -1;
-	}
+	}*/
 
 	public AbstractRelic makeCopy() {
 		return new BrokenRuby();

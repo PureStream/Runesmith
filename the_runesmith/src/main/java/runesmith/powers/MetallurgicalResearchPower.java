@@ -37,12 +37,11 @@ public class MetallurgicalResearchPower extends AbstractPower {
 		}
 	}
 	
-	public void atEndOfTurn(boolean isPlayer) {
-		if (isPlayer) {
-			AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, "Runesmith:MetallurgicalResearchPower", 1));
-			if (this.amount == 1) {
-				AbstractDungeon.actionManager.addToBottom(new MetallurgicalResearchAction());
-			}
+	public void atStartOfTurnPostDraw() {
+		flash();
+		AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, "Runesmith:MetallurgicalResearchPower", 1));
+		if (this.amount == 1) {
+			AbstractDungeon.actionManager.addToBottom(new MetallurgicalResearchAction());
 		}
 	}
 	
