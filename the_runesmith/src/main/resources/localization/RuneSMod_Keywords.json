@@ -21,7 +21,7 @@
 			"stasis",
 			"Stasis"
 			],
-			"DESCRIPTION": "Prevent a card from being Exhausted once and discard it instead. Cannot be stacked."
+			"DESCRIPTION": "Prevent a card from being #yExhausted once and discard it instead. Cannot be stacked."
 		},
 		{
 			"NAMES": [
