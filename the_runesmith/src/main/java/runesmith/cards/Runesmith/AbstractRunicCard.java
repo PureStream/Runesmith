@@ -28,6 +28,13 @@ public abstract class AbstractRunicCard extends CustomCard {
 		this.upgradePotency(0);
 	}
 	
+	@Override
+	public void applyPowers() {
+		this.upgradePotency(0);
+		super.applyPowers();
+		
+	}
+	
 	public void upgradePotency(int amount) {
 		this.basePotency += amount; 
 		this.potency = this.basePotency + getPotentialBonus();
