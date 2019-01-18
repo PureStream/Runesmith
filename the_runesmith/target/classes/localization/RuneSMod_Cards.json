@@ -105,8 +105,7 @@
 		"DESCRIPTION": "Remove all Elements. NL Gain Block equals to double the number of Elements removed.",
 		"UPGRADE_DESCRIPTION": "Remove all Elements. NL Gain Block equals to triple the number of Elements removed.",
 		"EXTENDED_DESCRIPTION":[
-			" NL (Gain ",
-			" Block.)"
+			" NL (Gain !B! Block)"
 		]
 	},
 	"Runesmith:Grindstone": {
@@ -164,14 +163,6 @@
 		"DESCRIPTION": "Deal !D! damage. !M! Ignis !M! Terra !M! Aqua: Craft a random rune.",
 		"UPGRADE_DESCRIPTION" : "Deal !D! damage. !M! Ignis !M! Terra !M! Aqua: Craft two random runes."
 	},
-	"Runesmith:ElementalBurst": {
-		"NAME": "Elemental Burst",
-		"DESCRIPTION": "Deal damage equals to the amount of Elements gained this combat to all enemies.",
-		"EXTENDED_DESCRIPTION":[
-			" NL (Deal ",
-			" damage.)"
-		]
-	},
 	"Runesmith:Shatterune": {
 		"NAME": "Shatterune",
 		"DESCRIPTION": "Break your oldest rune X times.",
@@ -212,8 +203,7 @@
 		"NAME": "Last Stand",
 		"DESCRIPTION": "Downgrade all cards in your deck. Remove all Elements. Deal !M! times the number of downgraded cards to all enemies. NL Exhaust.",
 		"EXTENDED_DESCRIPTION":[
-			" NL (Deal ",
-			" damage.)"
+			" NL (Deal !D! damage)"
 		]
 	},
 	"Runesmith:Demonforge": {
