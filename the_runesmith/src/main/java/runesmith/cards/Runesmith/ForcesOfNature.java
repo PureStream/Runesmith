@@ -40,7 +40,7 @@ public class ForcesOfNature extends CustomCard{
 			CardTarget.ALL_ENEMY
 		);
 		this.baseDamage = 0;
-		this.baseMagicNumber = BASE_MULTIPLY;
+		this.baseMagicNumber = this.magicNumber = BASE_MULTIPLY;
 		this.isMultiDamage = true;
 	}
 	
