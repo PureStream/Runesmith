@@ -38,5 +38,9 @@
 	"RunesonancePower": {
 		"NAME": "Runesonance",
 		"DESCRIPTIONS": ["Gain double the #yElements."]
+	},
+	"FlexTapePower": {
+		"NAME": "Flex Tape",
+		"DESCRIPTIONS": ["#yStasis #b"," cards at the start of your turn."]
 	}
 }
