@@ -49,12 +49,12 @@ public class DowngradeCardInHandAction extends AbstractGameAction{
 				}
 				
 				for(AbstractCard c : this.p.hand.group) {
-					if(!c.upgraded) cannotDowngrade.add(c);
+					if(!(c.upgraded||EnhanceCountField.enhanceCount.get(c) > 0||CardStasisStatus.isStasis.get(c))) cannotDowngrade.add(c);
 				}
 				
 				if(this.p.hand.group.size() - this.cannotDowngrade.size() == 1) {
 					for(AbstractCard c : this.p.hand.group) {
-						if(c.upgraded) {
+						if(c.upgraded||EnhanceCountField.enhanceCount.get(c) > 0||CardStasisStatus.isStasis.get(c)) {
 							AbstractDungeon.effectList.add(new ExhaustCardEffect(c));
 							replaceCard(this.p.hand.group, c);
 							this.isDone = true;
