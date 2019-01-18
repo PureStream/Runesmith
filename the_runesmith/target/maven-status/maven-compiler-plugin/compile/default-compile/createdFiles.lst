@@ -69,6 +69,7 @@ runesmith\cards\Runesmith\RunicBlueprint.class
 runesmith\actions\cards\GrandSlamAction.class
 runesmith\cards\Runesmith\ConvertIgnis.class
 runesmith\cards\Runesmith\CraftIncendium.class
+runesmith\actions\RemoveRuneAction.class
 runesmith\cards\Runesmith\LastStand.class
 runesmith\patches\PlayerClassEnum.class
 runesmith\actions\BreakWithoutRemovingRuneAction.class
