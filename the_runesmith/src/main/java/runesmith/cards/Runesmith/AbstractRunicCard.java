@@ -27,6 +27,10 @@ public abstract class AbstractRunicCard extends CustomCard {
 	public boolean potencyUpgraded;
 	public boolean isPotencyModified;
 	
+	public void triggerWhenDrawn() {
+		this.upgradePotency(0);
+	}
+	
 	public void upgradePotency(int amount) {
 		this.basePotency += amount; 
 		this.potency = this.basePotency + getPotentialBonus();
