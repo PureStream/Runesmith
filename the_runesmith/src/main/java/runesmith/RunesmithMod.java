@@ -8,7 +8,9 @@ import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.Keyword;
 import com.megacrit.cardcrawl.localization.OrbStrings;
@@ -22,6 +24,7 @@ import basemod.interfaces.EditCharactersSubscriber;
 import runesmith.cards.Runesmith.*;
 import runesmith.character.player.RunesmithCharacter;
 import runesmith.helpers.PotencyVariable;
+import runesmith.patches.ElementsGainedCountField;
 import runesmith.patches.EnhanceCountField;
 import runesmith.patches.PlayerClassEnum;
 import runesmith.relics.BrokenRuby;
@@ -353,7 +356,9 @@ public class RunesmithMod implements PostExhaustSubscriber,
 
 	@Override
 	public void receivePostBattle(AbstractRoom arg0) {
-		// TODO Auto-generated method stub
+		AbstractPlayer p = AbstractDungeon.player;
+		//Reset Elements gained count.
+		ElementsGainedCountField.elementsCount.set(p, 0);
 		
 	}
 

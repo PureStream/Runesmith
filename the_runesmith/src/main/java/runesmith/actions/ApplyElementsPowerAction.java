@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
+import runesmith.patches.ElementsGainedCountField;
 import runesmith.powers.AquaPower;
 import runesmith.powers.IgnisPower;
 import runesmith.powers.TerraPower;
@@ -62,7 +63,7 @@ public class ApplyElementsPowerAction extends AbstractGameAction{
 		          )
 		      );
 		}
-		
+		ElementsGainedCountField.elementsCount.set(p, ElementsGainedCountField.elementsCount.get(p)+this.ignis+this.terra+this.aqua);
 		this.isDone = true;
 	}
 }

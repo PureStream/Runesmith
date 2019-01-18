@@ -270,6 +270,15 @@
 		"NAME": "Unlimited Power",
 		"DESCRIPTION": "Elements are no longer consumed for Crafting."
 	},
+	"Runesmith:ForcesOfNature": {
+		"NAME": "Forces Of Nature",
+		"DESCRIPTION": "Deal damage equals to the amount of elements gained this combat to all enemies.",
+		"UPGRADE_DESCRIPTION": "Deal damage equals to double the amount of elements gained this combat to all enemies.",
+		"EXTENDED_DESCRIPTION":[
+			" NL (Deals !D! damage.)",
+     		""
+		]
+	},
 	"Runesmith:WWWWWWWWWWWWWWWWWWWW": {
 		"NAME": "WWWWWWWWWWWWWWWWWWWW",
 		"DESCRIPTION": "WWWWWWWWWWWWWWWWWWWW"
