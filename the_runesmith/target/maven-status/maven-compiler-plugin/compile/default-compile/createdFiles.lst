@@ -33,6 +33,7 @@ runesmith\cards\Runesmith\Strike_RS.class
 runesmith\helpers\AdditionalCardDescriptions$updateDesc.class
 runesmith\cards\Runesmith\ConvertTerra.class
 runesmith\cards\Runesmith\Runesonance.class
+runesmith\cards\Runesmith\CraftFerro.class
 runesmith\relics\Blueberries.class
 runesmith\actions\ApplyElementsPowerAction.class
 runesmith\orbs\MagmaRune.class
@@ -43,10 +44,12 @@ runesmith\cards\Runesmith\RunicBullets.class
 runesmith\cards\Runesmith\RuneHurl.class
 runesmith\cards\Runesmith\HammerTime.class
 runesmith\cards\Runesmith\StaticCage.class
+runesmith\cards\Runesmith\CraftReservo.class
 runesmith\powers\TerraPower.class
 runesmith\powers\PotentialPower.class
 runesmith\actions\StasisCardInHandAction.class
 runesmith\powers\GrindstonePower.class
+runesmith\powers\ReservoPower.class
 runesmith\RunesmithMod$Keywords.class
 runesmith\orbs\IndustriaRune.class
 runesmith\patches\EnhancedCardValueModified.class
@@ -69,6 +72,7 @@ runesmith\cards\Runesmith\CraftProtectio.class
 runesmith\cards\Runesmith\CraftIndustria.class
 runesmith\cards\Runesmith\CraftMagma.class
 runesmith\actions\cards\RunicBulletsAction.class
+runesmith\orbs\FerroRune.class
 runesmith\actions\cards\FortifyAction.class
 runesmith\cards\Runesmith\FlexTape.class
 runesmith\patches\EnhancedCardValueModified$calculateCardDamage.class
@@ -85,6 +89,7 @@ runesmith\cards\Runesmith\EarthShield.class
 runesmith\actions\cards\RepurposeAction.class
 runesmith\orbs\FirestoneRune.class
 runesmith\actions\DowngradeRandomCardInDeckAction.class
+runesmith\orbs\ReservoRune.class
 runesmith\cards\Runesmith\Terraform.class
 runesmith\patches\EnhancedCardValueModified$applyPowers.class
 runesmith\cards\Runesmith\ElementalShield.class

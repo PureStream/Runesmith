@@ -39,7 +39,7 @@
   "Ferro": {
     "NAME": "Ferro",
     "DESCRIPTION": [
-      "Gain #b{Pot} #yPlated #yArmor when crafted. NL #yBreak: No effect."
+      "No effect. NL #yBreak: Set #yPlated #yArmor to at least #b{Pot}."
     ]
   },
   "Prismatic": {

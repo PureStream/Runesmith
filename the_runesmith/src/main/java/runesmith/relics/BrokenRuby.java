@@ -17,7 +17,7 @@ public class BrokenRuby extends CustomRelic {
 	public static final String ID = "Runesmith:BrokenRuby";
 	private static final String IMG = "images/relics/BrokenRuby.png"; //<--------- Need some img
 	private static final int IGNIS_AMT = 1;
-	private static final int NUM_CARDS = 3;
+	private static final int NUM_CARDS = 2;
 	
 	public BrokenRuby() {
 		super(ID, ImageMaster.loadImage(IMG), RelicTier.STARTER, LandingSound.MAGICAL); 
@@ -42,7 +42,7 @@ public class BrokenRuby extends CustomRelic {
 			if (this.counter % NUM_CARDS == 0) {
 				this.counter = 0;
 				flash();
-				RunesmithMod.logger.info("BrokenRuby : Applying Ignis for using 3 attack cards");
+				RunesmithMod.logger.info("BrokenRuby : Applying Ignis for using "+ NUM_CARDS +" attack cards");
 				AbstractDungeon.actionManager.addToTop(
 						new ApplyElementsPowerAction(p,p,IGNIS_AMT,0,0));
 				AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, this));

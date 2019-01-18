@@ -2,63 +2,63 @@
   "Firestone": {
     "NAME": "Firestone",
     "DESCRIPTION": [
-      "Deal #b{Pot} damage at the start of your turn."
+      "At the end of turn, deals #b{Pot} damage to a random enemy."
     ]
   },
   "Protectio": {
     "NAME": "Protectio",
     "DESCRIPTION": [
-      "Gain #b{Pot} #yBlock at the end of your turn."
+      "At the end of turn, gain #b{Pot} #yBlock."
     ]
   },
   "Incendium": {
     "NAME": "Incendium",
     "DESCRIPTION": [
-      "Deal #b{Pot} damage to all enemies at the start of your turn."
+      "At the start of turn, deal #b{Pot} damage to all enemies."
     ]
   },
   "Reservo": {
     "NAME": "Reservo",
     "DESCRIPTION": [
-      "At the end of the turn #yRetain up to #b1 card.",
-      "At the end of the turn #yRetain up to #b2 card."
+      "At the end of turn, #yRetain up to #b1 card. NL #yBreak: #yRetain up to #b2 cards. Effect is removed at the end of turn.",
+      "At the end of turn, #yRetain up to #b2 cards. NL #yBreak: #yRetain up to #b4 cards. Effect is removed at the end of turn."
     ]
   },
   "Spiculum": {
     "NAME": "Spiculum",
     "DESCRIPTION": [
-      "Gain #b{Pot} #yThorns."
+      "Gain #b{Pot} #yThorns. NL #yBreak: Gain another #b{Pot} #yThorns then lose twice that at the end of turn."
     ]
   },
   "Potentia": {
     "NAME": "Potentia",
     "DESCRIPTION": [
-      "Gain #b{Pot} #yPotency."
+      "Gain #b{Pot} #yPotency. NL #yBreak: Gain another #b{Pot} #yPotency then lose twice that at the end of turn."
     ]
   },
   "Ferro": {
     "NAME": "Ferro",
     "DESCRIPTION": [
-      "Gain #b{Pot} #yPlated #yArmor."
+      "No effect. NL #yBreak: Set #yPlated #yArmor to at least #b{Pot}."
     ]
   },
   "Prismatic": {
     "NAME": "Prismatic",
     "DESCRIPTION": [
-      "Gain a random class card each turn.",
-      "Gain a random upgraded class card each turn."
+      "At the start of turn, gain a random card.",
+      "At the start of turn, gain a random upgraded card each turn."
     ]
   },
   "Industria": {
     "NAME": "Industria",
     "DESCRIPTION": [
-      "Gain [E] at the start of your turn."
+      "At the start of turn, gain [E] ."
     ]
   },
   "Medicinae": {
     "NAME": "Medicinae",
     "DESCRIPTION": [
-      "Heals {Pot} HP twice on #yBreak."
+      "#yBreak: Heals {Pot} HP twice."
     ]
   },
   "Dud": {
@@ -70,7 +70,7 @@
   "Magma": {
     "NAME": "Magma",
     "DESCRIPTION": [
-      "Deal #b{Pot} damage at the start of your turn. Gain #b{Pot2} block at the end of your turn."
+      "At the end of turn, Deal #b{Pot} damage and gain #b{Pot2} #yBlock."
     ]
   },
   "WWWWWWWWWWWWWW": {
