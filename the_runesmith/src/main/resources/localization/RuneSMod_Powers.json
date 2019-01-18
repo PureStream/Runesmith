@@ -13,7 +13,8 @@
 	},
 	"Runesmith:GrindstonePower": {
 		"NAME": "Grindstone",
-		"DESCRIPTIONS": ["ALL cards played become #yUpgraded."]
+		"DESCRIPTIONS": ["This turn, ALL cards played become #yUpgraded.",
+			"For the next #b", " turns, ALL cards played become #yUpgraded."]
 	},
 	"Runesmith:FirestormPower": {
 		"NAME": "Firestorm",
@@ -37,7 +38,7 @@
 	},
 	"Runesmith:RunesonancePower": {
 		"NAME": "Runesonance",
-		"DESCRIPTIONS": ["For this turn, double #yElement gain.",
+		"DESCRIPTIONS": ["This turn, double #yElement gain.",
 		"For the next #b", " turns, double #yElement gain."]
 	},
 	"Runesmith:ReservoPower": {
