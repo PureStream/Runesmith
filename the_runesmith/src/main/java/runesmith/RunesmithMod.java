@@ -315,6 +315,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
 		cardsToAdd.add(new Empowerment());
 		cardsToAdd.add(new Runesonance());
 		cardsToAdd.add(new FlexTape());
+		cardsToAdd.add(new CraftReservo());
 	}
 
 	@Override

@@ -35,7 +35,7 @@ public class StasisExhaustPrevention {
 	public static class preventExhaust {
 		public static void Replace(CardGroup self, AbstractCard c) {
 			if(CardStasisStatus.isStasis.get(c)) {
-				logger.info("Attempting exhaust prevention");
+				//logger.info("Attempting exhaust prevention");
 				CardStasisStatus.isStasis.set(c, false);				
 				if (AbstractDungeon.player.hoveredCard == c) {
 					AbstractDungeon.player.releaseCard();

@@ -26,7 +26,7 @@ public class ApplyElementsPowerAction extends AbstractGameAction{
 	
 	@Override
 	public void update() {
-		if(p.hasPower("RunesonancePower")) {
+		if(p.hasPower("Runesmith:RunesonancePower")) {
 			this.ignis = this.ignis*2;
 			this.terra = this.terra*2;
 			this.aqua = this.aqua*2;

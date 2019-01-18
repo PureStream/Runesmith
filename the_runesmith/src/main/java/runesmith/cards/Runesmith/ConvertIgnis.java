@@ -42,7 +42,7 @@ public class ConvertIgnis extends CustomCard {
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		
-		if (p.hasPower("IgnisPower")) {
+		if (p.hasPower("Runesmith:IgnisPower")) {
 			AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, 
 					new IgnisPower(p, -IGNIS_AMT),-IGNIS_AMT));
 		}

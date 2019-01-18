@@ -51,14 +51,14 @@ public class ElementalShield extends CustomCard {
 		} else {
 			multiplier = 2;
 		}
-		if (p.hasPower("IgnisPower")) {
-			totalElements += p.getPower("IgnisPower").amount;
+		if (p.hasPower("Runesmith:IgnisPower")) {
+			totalElements += p.getPower("Runesmith:IgnisPower").amount;
 		}
-		if (p.hasPower("TerraPower")) {
-			totalElements += p.getPower("TerraPower").amount;
+		if (p.hasPower("Runesmith:TerraPower")) {
+			totalElements += p.getPower("Runesmith:TerraPower").amount;
 		}
-		if (p.hasPower("AquaPower")) {
-			totalElements += p.getPower("AquaPower").amount;
+		if (p.hasPower("Runesmith:AquaPower")) {
+			totalElements += p.getPower("Runesmith:AquaPower").amount;
 		}
 		if (totalElements > 0) {
 			this.baseBlock += (totalElements * multiplier);

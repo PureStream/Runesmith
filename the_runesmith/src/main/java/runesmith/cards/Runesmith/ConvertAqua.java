@@ -42,7 +42,7 @@ public class ConvertAqua extends CustomCard {
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		
-		if (p.hasPower("AquaPower")) {
+		if (p.hasPower("Runesmith:AquaPower")) {
 			AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, 
 					new AquaPower(p, -AQUA_AMT),-AQUA_AMT));
 		}

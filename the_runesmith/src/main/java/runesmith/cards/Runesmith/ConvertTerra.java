@@ -42,7 +42,7 @@ public class ConvertTerra extends CustomCard {
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		
-		if (p.hasPower("TerraPower")) {
+		if (p.hasPower("Runesmith:TerraPower")) {
 			AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, 
 					new TerraPower(p, -TERRA_AMT),-TERRA_AMT));
 		}

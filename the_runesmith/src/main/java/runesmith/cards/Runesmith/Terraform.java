@@ -48,8 +48,8 @@ public class Terraform extends CustomCard {
 		} else {
 			multiplier = 2;
 		}
-		if (p.hasPower("TerraPower")) {
-			this.baseBlock += (p.getPower("TerraPower").amount * multiplier);
+		if (p.hasPower("Runesmith:TerraPower")) {
+			this.baseBlock += (p.getPower("Runesmith:TerraPower").amount * multiplier);
 			super.applyPowers();
 		}
 		String extendString = EXTENDED_DESCRIPTION[0] + (this.block + ((this.upgraded) ? 3 : 2)) + EXTENDED_DESCRIPTION[1];
