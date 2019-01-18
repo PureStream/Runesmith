@@ -22,7 +22,7 @@
 	},
 	"Runesmith:DuplicatePower": {
 		"NAME": "Duplicate",
-		"DESCRIPTIONS": ["your next #b"," #yCraft card is played twice."]
+		"DESCRIPTIONS": ["Your next #b","#yCraft card is played twice."," #yCraft cards is played twice."]
 	},
 	"Runesmith:PotentialPower": {
 		"NAME": "Potential",
@@ -38,13 +38,13 @@
 	},
 	"Runesmith:RunesonancePower": {
 		"NAME": "Runesonance",
-		"DESCRIPTIONS": ["This turn, double #yElement gain.",
-		"For the next #b", " turns, double #yElement gain."]
+		"DESCRIPTIONS": ["This turn, double #yElements gain.",
+		"For the next #b", " turns, double #yElements gain."]
 	},
 	"Runesmith:ReservoPower": {
 		"NAME": "Retain Cards",
 		"DESCRIPTIONS": [
-			"At the end of your turn, you may retain #b",
+			"At the end of your turn, you may #yRetain #b",
 			" card.",
 			" cards."
 		  ]

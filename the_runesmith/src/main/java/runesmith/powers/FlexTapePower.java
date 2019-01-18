@@ -35,7 +35,7 @@ public class FlexTapePower extends AbstractPower {
 		if (this.amount <= 0) AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, "Runesmith:FlexTapePower"));
 	}
 	
-	public void atStartOfTurn() {
+	public void atStartOfTurnPostDraw() {
 		flash();
 		AbstractPlayer p = AbstractDungeon.player;
 		AbstractDungeon.actionManager.addToBottom(

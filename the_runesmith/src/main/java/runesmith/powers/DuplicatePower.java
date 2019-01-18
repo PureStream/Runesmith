@@ -76,7 +76,10 @@ public class DuplicatePower extends AbstractPower {
 	}
 	
 	public void updateDescription() {
-		this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
+		if (this.amount == 1) 
+			this.description = (DESCRIPTIONS[0] + DESCRIPTIONS[1]);
+		else
+			this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[2]);
 	}
 	
 }
