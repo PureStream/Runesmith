@@ -43,7 +43,11 @@ public class RunesonancePower extends AbstractPower {
 	}
 	
 	public void updateDescription() {
-		this.description = DESCRIPTIONS[0];
+		if(this.amount == 1) {
+			this.description = DESCRIPTIONS[0];
+		}else {
+			this.description = DESCRIPTIONS[1]+this.amount+DESCRIPTIONS[2];
+		}
 	}
 	
 }
