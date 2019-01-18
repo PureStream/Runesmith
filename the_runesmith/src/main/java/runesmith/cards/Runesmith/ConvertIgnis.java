@@ -1,6 +1,7 @@
 package runesmith.cards.Runesmith;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -43,8 +44,9 @@ public class ConvertIgnis extends CustomCard {
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		
 		if (p.hasPower("Runesmith:IgnisPower")) {
-			AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, 
-					new IgnisPower(p, -IGNIS_AMT),-IGNIS_AMT));
+			AbstractDungeon.actionManager.addToTop(new ReducePowerAction(p, p, "Runesmith:IgnisPower", IGNIS_AMT));
+//			AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, 
+//					new IgnisPower(p, -IGNIS_AMT),-IGNIS_AMT));
 		}
 		AbstractDungeon.actionManager.addToBottom(
 				new ApplyElementsPowerAction(p,p,0,this.magicNumber,AQUA_AMT));

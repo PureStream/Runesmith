@@ -1,6 +1,7 @@
 package runesmith.cards.Runesmith;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -43,8 +44,9 @@ public class ConvertAqua extends CustomCard {
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		
 		if (p.hasPower("Runesmith:AquaPower")) {
-			AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, 
-					new AquaPower(p, -AQUA_AMT),-AQUA_AMT));
+			AbstractDungeon.actionManager.addToTop(new ReducePowerAction(p, p, "Runesmith:AquaPower", AQUA_AMT));
+//			AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, 
+//					new AquaPower(p, -AQUA_AMT),-AQUA_AMT));
 		}
 		AbstractDungeon.actionManager.addToBottom(
 				new ApplyElementsPowerAction(p,p,this.magicNumber,TERRA_AMT,0));
