@@ -14,6 +14,8 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.vfx.cardManip.ExhaustCardEffect;
 
 import runesmith.cards.Runesmith.FieryHammer;
+import runesmith.patches.CardStasisStatus;
+import runesmith.patches.EnhanceCountField;
 
 public class DowngradeCardInHandAction extends AbstractGameAction{
 	private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("Runesmith:DowngradeAction");
@@ -34,7 +36,7 @@ public class DowngradeCardInHandAction extends AbstractGameAction{
 	@Override
 	public void update() {
 		for(AbstractCard c : this.p.hand.group) {
-			if(c.upgraded) canDowngrade.addToBottom(c);
+			if(c.upgraded||EnhanceCountField.enhanceCount.get(c) > 0||CardStasisStatus.isStasis.get(c)) canDowngrade.addToBottom(c);
 		}
 		if(canDowngrade.size()>0) {
 			if(this.duration == Settings.ACTION_DUR_FAST) {

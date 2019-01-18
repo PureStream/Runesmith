@@ -11,6 +11,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.cardManip.ExhaustCardEffect;
 
 import runesmith.cards.Runesmith.FieryHammer;
+import runesmith.patches.CardStasisStatus;
+import runesmith.patches.EnhanceCountField;
 
 public class DowngradeEntireDeckAction extends AbstractGameAction{
 
@@ -25,19 +27,19 @@ public class DowngradeEntireDeckAction extends AbstractGameAction{
 	@Override
 	public void update() {
 		for(AbstractCard c : this.p.discardPile.group) {
-			if(c.upgraded) {
+			if(c.upgraded||EnhanceCountField.enhanceCount.get(c) > 0||CardStasisStatus.isStasis.get(c)) {
 				AbstractDungeon.effectList.add(new ExhaustCardEffect(c));
 				replaceCard(this.p.discardPile.group, c);
 			}
 		}
 		for(AbstractCard c : this.p.drawPile.group) {
-			if(c.upgraded) {
+			if(c.upgraded||EnhanceCountField.enhanceCount.get(c) > 0||CardStasisStatus.isStasis.get(c)) {
 				AbstractDungeon.effectList.add(new ExhaustCardEffect(c));
 				replaceCard(this.p.drawPile.group, c);
 			}
 		}
 		for(AbstractCard c : this.p.hand.group) {
-			if(c.upgraded) {
+			if(c.upgraded||EnhanceCountField.enhanceCount.get(c) > 0||CardStasisStatus.isStasis.get(c)) {
 				AbstractDungeon.effectList.add(new ExhaustCardEffect(c));
 				replaceCard(this.p.hand.group, c);
 			}
