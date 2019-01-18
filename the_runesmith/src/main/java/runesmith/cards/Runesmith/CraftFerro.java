@@ -62,6 +62,7 @@ public class CraftFerro extends AbstractRunicCard {
 		  upgradeName();
 		  this.rawDescription = DESCRIPTION_UPG;
 		  this.exhaust = false;
+		  initializeDescription();
 		}
 	}
 	
