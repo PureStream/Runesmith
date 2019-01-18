@@ -61,5 +61,7 @@ public class ApplyElementsPowerAction extends AbstractGameAction{
 		          )
 		      );
 		}
+		
+		this.isDone = true;
 	}
 }
