@@ -20,7 +20,7 @@ public class ReservoPower extends AbstractPower
   public ReservoPower(int amount)
   {
     this.name = NAME;
-    this.ID = ("ReservoPower");
+    this.ID = ("Runesmith:ReservoPower");
     this.owner = AbstractDungeon.player;
     this.amount = amount;
     loadRegion("retain");

@@ -40,6 +40,7 @@ public class FieryHammer extends CustomCard{
 			CardTarget.ALL_ENEMY
 		);
 		this.baseDamage = ATTACK_DMG;
+		this.isMultiDamage = true;
 		this.tags.add(HAMMER);
 	}
 	

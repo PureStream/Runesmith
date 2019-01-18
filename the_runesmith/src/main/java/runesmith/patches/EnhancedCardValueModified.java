@@ -72,10 +72,11 @@ public class EnhancedCardValueModified {
 	            if ((boolean)ReflectionHacks.getPrivate(self, AbstractCard.class, "isMultiDamage")) {
 	                for (int i = 0; i < self.multiDamage.length; i++) {
 	                    self.multiDamage[i] = self.multiDamage[i]+MathUtils.floor(self.multiDamage[i] * (0.5F * EnhanceCountField.enhanceCount.get(self)));
+	                    logger.info("multiDamage modified: "+self.multiDamage[i]);
 	                }
 	            }
 	            
-	            logger.info("Current block: "+self.block+" with "+EnhanceCountField.enhanceCount.get(self)+" enhancement");
+	            //logger.info("Current block: "+self.block+" with "+EnhanceCountField.enhanceCount.get(self)+" enhancement");
 	            
 	            if (self.damage != tmp) {
 	                self.isDamageModified = true;

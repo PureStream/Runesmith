@@ -14,7 +14,7 @@
   "Incendium": {
     "NAME": "Incendium",
     "DESCRIPTION": [
-      "At the start of turn, deal #b{Pot} damage to all enemies."
+      "At the end of turn, deal #b{Pot} damage to all enemies."
     ]
   },
   "Reservo": {

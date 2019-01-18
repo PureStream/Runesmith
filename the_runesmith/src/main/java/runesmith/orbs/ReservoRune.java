@@ -44,7 +44,7 @@ public class ReservoRune extends RuneOrb {
 			amount = 4;
 		}
 		if(this.upgraded) {
-			AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, new RetainCardPower(p, 1), 1));
+			AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, "Retain Cards", 1));
 		}
 		AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, "Retain Cards", 1));
 		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ReservoPower(amount), amount));
