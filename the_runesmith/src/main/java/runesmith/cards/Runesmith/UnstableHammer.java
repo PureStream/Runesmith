@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import basemod.abstracts.CustomCard;
+import runesmith.actions.ApplyElementsPowerAction;
 import runesmith.actions.RuneChannelAction;
 import runesmith.orbs.DudRune;
 import runesmith.patches.AbstractCardEnum;
@@ -58,13 +59,24 @@ public class UnstableHammer extends CustomCard {
 		AbstractDungeon.actionManager.addToBottom(
 				new RuneChannelAction(
 						new DudRune()));
-		int random = (int) (Math.random()*3);
-		if (random == 0) 
-			AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new IgnisPower(p, ELEMENT_AMT), ELEMENT_AMT));
-		else if (random == 1)
-			AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new TerraPower(p, ELEMENT_AMT), ELEMENT_AMT));
-		else
-			AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new AquaPower(p, ELEMENT_AMT), ELEMENT_AMT));
+		int selectedPower = AbstractDungeon.cardRandomRng.random(3);
+		switch(selectedPower) {
+			case 0: AbstractDungeon.actionManager.addToBottom(
+					new ApplyElementsPowerAction(p,p,ELEMENT_AMT,0,0));
+					return;
+			case 1: AbstractDungeon.actionManager.addToBottom(
+					new ApplyElementsPowerAction(p,p,0,ELEMENT_AMT,0));
+					return;
+			case 2: AbstractDungeon.actionManager.addToBottom(
+					new ApplyElementsPowerAction(p,p,0,0,ELEMENT_AMT));
+					return;
+		}
+//		if (random == 0) 
+//			AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new IgnisPower(p, ELEMENT_AMT), ELEMENT_AMT));
+//		else if (random == 1)
+//			AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new TerraPower(p, ELEMENT_AMT), ELEMENT_AMT));
+//		else
+//			AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new AquaPower(p, ELEMENT_AMT), ELEMENT_AMT));
 	}
 
 	public AbstractCard makeCopy() {

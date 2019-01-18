@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import basemod.abstracts.CustomCard;
 import runesmith.RunesmithMod;
+import runesmith.actions.ApplyElementsPowerAction;
 import runesmith.patches.EnhanceCountField;
 import runesmith.powers.AquaPower;
 import runesmith.powers.IgnisPower;
@@ -86,49 +87,42 @@ public abstract class AbstractRunicCard extends CustomCard {
 			return true;
 		}
 		logger.info("Not enough elements.");
-		if (ignis != 0) {
-			addPower("IgnisPower",ignis);
-		}
-		if (terra != 0) {
-			addPower("TerraPower",terra);
-		}
-		if (aqua != 0) {
-			addPower("AquaPower",aqua);
-		}
+		AbstractDungeon.actionManager.addToBottom(
+				new ApplyElementsPowerAction(p,p,ignis,terra,aqua));
 		return false;
 	}
 	
-	public void addPower(String element, int value) {
-		AbstractPlayer p = AbstractDungeon.player;
-		if (element.equals("IgnisPower")) {
-			AbstractDungeon.actionManager.addToTop(
-			          new ApplyPowerAction(
-			              p,
-			              p,
-			              new IgnisPower(p, value),
-			              value
-			          )
-			      );
-		}
-		else if (element.equals("TerraPower")) {
-			AbstractDungeon.actionManager.addToTop(
-			          new ApplyPowerAction(
-			              p,
-			              p,
-			              new TerraPower(p, value),
-			              value
-			          )
-			      );
-		}
-		else {
-			AbstractDungeon.actionManager.addToTop(
-			          new ApplyPowerAction(
-			              p,
-			              p,
-			              new AquaPower(p, value),
-			              value
-			          )
-			      );
-		}
-	}
+//	public void addPower(String element, int value) {
+//		AbstractPlayer p = AbstractDungeon.player;
+//		if (element.equals("IgnisPower")) {
+//			AbstractDungeon.actionManager.addToTop(
+//			          new ApplyPowerAction(
+//			              p,
+//			              p,
+//			              new IgnisPower(p, value),
+//			              value
+//			          )
+//			      );
+//		}
+//		else if (element.equals("TerraPower")) {
+//			AbstractDungeon.actionManager.addToTop(
+//			          new ApplyPowerAction(
+//			              p,
+//			              p,
+//			              new TerraPower(p, value),
+//			              value
+//			          )
+//			      );
+//		}
+//		else {
+//			AbstractDungeon.actionManager.addToTop(
+//			          new ApplyPowerAction(
+//			              p,
+//			              p,
+//			              new AquaPower(p, value),
+//			              value
+//			          )
+//			      );
+//		}
+//	}
 }

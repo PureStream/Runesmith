@@ -17,6 +17,7 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 import basemod.abstracts.CustomCard;
+import runesmith.actions.ApplyElementsPowerAction;
 import runesmith.actions.BreakRuneAction;
 import runesmith.orbs.RuneOrb;
 import runesmith.patches.AbstractCardEnum;
@@ -80,9 +81,11 @@ public class OneForEveryone extends CustomCard {
 			AbstractDungeon.actionManager.addToBottom(
 					new GainBlockAction(p, p, this.block)
 			);
-			AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new IgnisPower(p, this.magicNumber), this.magicNumber));
-			AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new TerraPower(p, this.magicNumber), this.magicNumber));
-			AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new AquaPower(p, this.magicNumber), this.magicNumber));
+			AbstractDungeon.actionManager.addToBottom(
+					new ApplyElementsPowerAction(p,p,this.magicNumber,this.magicNumber,this.magicNumber));
+//			AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new IgnisPower(p, this.magicNumber), this.magicNumber));
+//			AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new TerraPower(p, this.magicNumber), this.magicNumber));
+//			AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new AquaPower(p, this.magicNumber), this.magicNumber));
 			for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
 				AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p, 
 						new VulnerablePower(mo, this.magicNumber, false), this.magicNumber));

@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import basemod.abstracts.CustomCard;
+import runesmith.actions.ApplyElementsPowerAction;
 import runesmith.patches.AbstractCardEnum;
 import runesmith.powers.IgnisPower;
 
@@ -49,7 +50,9 @@ public class ChiselStab extends CustomCard {
 				AbstractGameAction.AttackEffect.SLASH_DIAGONAL
 			)
 		);
-		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new IgnisPower(p, IGNIS_AMT), IGNIS_AMT));
+		AbstractDungeon.actionManager.addToBottom(
+				new ApplyElementsPowerAction(p,p,IGNIS_AMT,0,0));
+//		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new IgnisPower(p, IGNIS_AMT), IGNIS_AMT));
 	}
 
 	public AbstractCard makeCopy() {

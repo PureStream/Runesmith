@@ -6,5 +6,5 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 
 @SpirePatch(clz=AbstractCard.class, method=SpirePatch.CLASS)
 public class CardStasisStatus {
-	public static SpireField<Boolean> isStatis = new SpireField<Boolean>(( )-> false);
+	public static SpireField<Boolean> isStasis = new SpireField<Boolean>(( )-> false);
 }

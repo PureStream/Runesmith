@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
+import runesmith.actions.ApplyElementsPowerAction;
 import runesmith.powers.AquaPower;
 import runesmith.powers.IgnisPower;
 import runesmith.powers.TerraPower;
@@ -58,32 +59,24 @@ public class RepurposeAction extends AbstractGameAction{
 			
 		tickDuration();
 	}
-	
+
 	private void gainElement(AbstractCard c) {
 		switch(c.type) {
-			case ATTACK :	AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, 
-								new IgnisPower(p, this.amount),this.amount));
+			case ATTACK :		AbstractDungeon.actionManager.addToBottom(
+					new ApplyElementsPowerAction(p,p,this.amount,0,0));
 							return;
-			case SKILL :	AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, 
-								new TerraPower(p, this.amount),this.amount));
+			case SKILL :		AbstractDungeon.actionManager.addToBottom(
+					new ApplyElementsPowerAction(p,p,0,this.amount,0));
 							return;
-			case POWER : 	AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, 
-								new AquaPower(p, this.amount),this.amount));
+			case POWER : 		AbstractDungeon.actionManager.addToBottom(
+					new ApplyElementsPowerAction(p,p,0,0,this.amount));
 							return;
-			case STATUS : 	AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, 
-								new IgnisPower(p, this.allAmt),this.allAmt));
-							AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, 
-									new TerraPower(p, this.allAmt),this.allAmt));
-							AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, 
-									new AquaPower(p, this.allAmt),this.allAmt));
+			case STATUS : 		AbstractDungeon.actionManager.addToBottom(
+					new ApplyElementsPowerAction(p,p,this.allAmt,this.allAmt,this.allAmt));
 							return;
 			case CURSE : 	if(this.upgraded) {
-								AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, 
-										new IgnisPower(p, this.allAmt+this.allAmtPlus),this.allAmt+this.allAmtPlus));
-								AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, 
-										new TerraPower(p, this.allAmt+this.allAmtPlus),this.allAmt+this.allAmtPlus));
-								AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, 
-										new AquaPower(p, this.allAmt+this.allAmtPlus),this.allAmt+this.allAmtPlus));
+				AbstractDungeon.actionManager.addToBottom(
+						new ApplyElementsPowerAction(p,p,this.allAmt+this.allAmtPlus,this.allAmt+this.allAmtPlus,this.allAmt+this.allAmtPlus));
 							}
 			default : return;
 		}

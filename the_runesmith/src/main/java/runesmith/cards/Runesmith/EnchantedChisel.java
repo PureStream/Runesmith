@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.WeakPower;
 
 import basemod.abstracts.CustomCard;
+import runesmith.actions.ApplyElementsPowerAction;
 import runesmith.patches.AbstractCardEnum;
 import runesmith.powers.AquaPower;
 import runesmith.powers.IgnisPower;
@@ -61,10 +62,12 @@ public class EnchantedChisel extends CustomCard {
 			);
 		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, 
 				new WeakPower(m, this.magicNumber, false), this.magicNumber));
-		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, 
-				new IgnisPower(p, ELEMENT_AMT),ELEMENT_AMT));
-		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, 
-				new AquaPower(p, ELEMENT_AMT),ELEMENT_AMT));
+		AbstractDungeon.actionManager.addToBottom(
+				new ApplyElementsPowerAction(p,p,ELEMENT_AMT,0,ELEMENT_AMT));
+//		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, 
+//				new IgnisPower(p, ELEMENT_AMT),ELEMENT_AMT));
+//		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, 
+//				new AquaPower(p, ELEMENT_AMT),ELEMENT_AMT));
 	}
 
 	public AbstractCard makeCopy() {

@@ -34,5 +34,9 @@
 	"UnlimitedPowerPower": {
 		"NAME": "Unlimited Power",
 		"DESCRIPTIONS": ["Elements are no longer consumed for Crafting."]
+	},
+	"RunesonancePower": {
+		"NAME": "Runesonance",
+		"DESCRIPTIONS": ["Gain double the elements."]
 	}
 }

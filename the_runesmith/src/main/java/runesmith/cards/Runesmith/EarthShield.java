@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import basemod.abstracts.CustomCard;
+import runesmith.actions.ApplyElementsPowerAction;
 import runesmith.patches.AbstractCardEnum;
 import runesmith.powers.TerraPower;
 
@@ -43,8 +44,10 @@ public class EarthShield extends CustomCard {
 		AbstractDungeon.actionManager.addToBottom(
 			new GainBlockAction(p, p, this.block)
 		);
-		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, 
-				new TerraPower(p, TERRA_AMT),TERRA_AMT));
+		AbstractDungeon.actionManager.addToBottom(
+				new ApplyElementsPowerAction(p,p,0,TERRA_AMT,0));
+//		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, 
+//				new TerraPower(p, TERRA_AMT),TERRA_AMT));
 	}
 	
 	public AbstractCard makeCopy() {

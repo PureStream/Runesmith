@@ -8,7 +8,7 @@ import runesmith.patches.CardStasisStatus;
 public abstract class StasisCard {
 	
 	public static void stasis(AbstractCard c) {
-		CardStasisStatus.isStatis.set(c, true);
+		CardStasisStatus.isStasis.set(c, true);
 		//update card desc
 //		AdditionalCardDescriptions.modifyDescription(c);
 		c.initializeDescription();

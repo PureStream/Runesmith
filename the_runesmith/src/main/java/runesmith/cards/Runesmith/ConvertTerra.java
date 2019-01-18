@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import basemod.abstracts.CustomCard;
+import runesmith.actions.ApplyElementsPowerAction;
 import runesmith.patches.AbstractCardEnum;
 import runesmith.powers.AquaPower;
 import runesmith.powers.IgnisPower;
@@ -47,10 +48,12 @@ public class ConvertTerra extends CustomCard {
 			AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, 
 					new TerraPower(p, -TERRA_AMT),-TERRA_AMT));
 		}
-		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, 
-				new IgnisPower(p, magicNumber), magicNumber));
-		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, 
-				new AquaPower(p, AQUA_AMT), AQUA_AMT));
+		AbstractDungeon.actionManager.addToBottom(
+				new ApplyElementsPowerAction(p,p,this.magicNumber,0,AQUA_AMT));
+//		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, 
+//				new IgnisPower(p, magicNumber), magicNumber));
+//		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, 
+//				new AquaPower(p, AQUA_AMT), AQUA_AMT));
 	}
 	
 	public AbstractCard makeCopy() {

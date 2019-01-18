@@ -38,9 +38,9 @@ public class StasisExhaustPrevention {
 	@SpirePatch(clz = CardGroup.class, method = "moveToExhaustPile")
 	public static class preventExhaust {
 		public static void Replace(CardGroup self, AbstractCard c) {
-			if(CardStasisStatus.isStatis.get(c)) {
+			if(CardStasisStatus.isStasis.get(c)) {
 				logger.info("Attempting exhaust prevention");
-				CardStasisStatus.isStatis.set(c, false);				
+				CardStasisStatus.isStasis.set(c, false);				
 				if (AbstractDungeon.player.hoveredCard == c) {
 					AbstractDungeon.player.releaseCard();
 				}

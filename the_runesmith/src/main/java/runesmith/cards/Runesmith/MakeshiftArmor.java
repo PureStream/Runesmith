@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import basemod.abstracts.CustomCard;
 import basemod.helpers.BaseModCardTags;
+import runesmith.actions.ApplyElementsPowerAction;
 import runesmith.actions.DowngradeRandomCardInDeckAction;
 import runesmith.patches.AbstractCardEnum;
 import runesmith.powers.TerraPower;
@@ -47,8 +48,10 @@ public class MakeshiftArmor extends CustomCard {
 		AbstractDungeon.actionManager.addToBottom(
 			new GainBlockAction(p, p, this.block)
 		);
-		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, 
-			new TerraPower(p, TERRA_AMT),TERRA_AMT));
+		AbstractDungeon.actionManager.addToBottom(
+				new ApplyElementsPowerAction(p,p,0,TERRA_AMT,0));
+//		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, 
+//			new TerraPower(p, TERRA_AMT),TERRA_AMT));
 		AbstractDungeon.actionManager.addToBottom(
 			new DowngradeRandomCardInDeckAction(p)
 		);

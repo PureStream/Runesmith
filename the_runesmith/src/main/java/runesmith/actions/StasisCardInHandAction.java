@@ -28,7 +28,7 @@ public class StasisCardInHandAction extends AbstractGameAction{
 	}
 
 	private boolean canStasis(AbstractCard c) {
-		return !CardStasisStatus.isStatis.get(c);
+		return !CardStasisStatus.isStasis.get(c);
 	}
 	
 	@Override

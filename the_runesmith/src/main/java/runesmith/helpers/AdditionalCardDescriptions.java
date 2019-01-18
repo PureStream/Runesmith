@@ -45,7 +45,7 @@ public abstract class AdditionalCardDescriptions {
 			c.rawDescription = c.rawDescription.replace(addString, "");
 		}
 		
-		if(!CardStasisStatus.isStatis.get(c)) {
+		if(!CardStasisStatus.isStasis.get(c)) {
 			//logger.info("deleting stasis text");
 			c.rawDescription = c.rawDescription.replace(" "+STASIS_TEXT[0]+".", "");
 		}else if(!c.rawDescription.contains(" "+STASIS_TEXT[0]+".")) {
