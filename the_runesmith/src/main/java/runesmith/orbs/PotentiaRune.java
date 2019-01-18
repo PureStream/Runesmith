@@ -20,7 +20,12 @@ public class PotentiaRune extends RuneOrb {
 				false,
 				potency);
 		this.useMultiBreak = true;
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PotentialPower(p, potency), potency));
+
+	}
+	
+	@Override
+	public void onCraft() {
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PotentialPower(p, this.potential), this.potential));
 	}
 	
 	@Override

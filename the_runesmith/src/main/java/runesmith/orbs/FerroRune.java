@@ -15,6 +15,11 @@ public class FerroRune extends RuneOrb {
 		super( "Ferro",
 				false,
 				potency);
+
+	}
+	
+	@Override
+	public void onCraft() {
 		if (p.hasPower("Plated Armor")) {
 			int powerDiff = this.potential - p.getPower("Plated Armor").amount;
 			if (powerDiff > 0) 

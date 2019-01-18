@@ -8,6 +8,8 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.orbs.EmptyOrbSlot;
 import com.megacrit.cardcrawl.vfx.ThoughtBubble;
 
+import runesmith.orbs.RuneOrb;
+
 public class RuneChannelAction extends AbstractGameAction{
 
 	private AbstractOrb orbType;
@@ -37,12 +39,19 @@ public class RuneChannelAction extends AbstractGameAction{
 		      CardCrawlGame.sound.playA("GUARDIAN_ROLL_UP", 1.0F);
 		    }
 		    if (this.autoEvoke) {
+
 		      AbstractDungeon.player.channelOrb(this.orbType);
+		      if(this.orbType instanceof RuneOrb) {
+		    	  ((RuneOrb) this.orbType).onCraft();	
+		      }
 		    } else {
 		      for (AbstractOrb o : AbstractDungeon.player.orbs) {
 		        if ((o instanceof EmptyOrbSlot))
 		        {
 		          AbstractDungeon.player.channelOrb(this.orbType);
+			      if(this.orbType instanceof RuneOrb) {
+				    	((RuneOrb) this.orbType).onCraft();	
+			    	}
 		          break;
 		        }
 		      }

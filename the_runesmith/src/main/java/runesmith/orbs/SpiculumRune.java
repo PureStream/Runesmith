@@ -22,9 +22,12 @@ public class SpiculumRune extends RuneOrb {
 				potential);
 		this.showPotentialValue = true;
 		this.useMultiBreak = true;
+	}
+	
+	@Override
+	public void onCraft() {
 		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ThornsPower(p, this.potential), this.potential));
 	}
-
 	
 	@Override
 	public void onBreak() {

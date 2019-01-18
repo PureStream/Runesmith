@@ -93,7 +93,7 @@ public abstract class RuneOrb extends AbstractOrb {
 
 	public void onCardDraw(AbstractCard c) {}
 	
-//	public void onCraft() {}
+	public void onCraft() {}
 
 	public void onBreak() {}
 	
