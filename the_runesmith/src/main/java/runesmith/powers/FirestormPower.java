@@ -31,7 +31,7 @@ public class FirestormPower extends AbstractPower {
 	public void stackPower(int stackAmount) {
 		this.fontScale = 8.0F;
 		this.amount += stackAmount;
-		if (this.amount == 0) AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, "FirestormPower"));
+		if (this.amount == 0) AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, "Runesmith:FirestormPower"));
 	}
 	
 	public void atStartOfTurn() {

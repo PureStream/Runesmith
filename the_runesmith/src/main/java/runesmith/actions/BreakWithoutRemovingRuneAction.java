@@ -25,7 +25,11 @@ public class BreakWithoutRemovingRuneAction extends com.megacrit.cardcrawl.actio
 	{
 		if (this.duration == this.startDuration) {
 			for (int i = 0; i < this.orbCount; i++) {
-				rune.onBreak();
+				if(rune.useMultiBreak) {
+					rune.onMultiBreak();
+				}else {
+					rune.onBreak();
+				}
 			}
 		}
 		tickDuration();

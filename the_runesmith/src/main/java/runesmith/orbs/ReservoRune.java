@@ -24,6 +24,7 @@ public class ReservoRune extends RuneOrb {
 			amount = 2;
 		}
 		this.showPotentialValue = false;
+		this.useMultiBreak = true;
 		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RetainCardPower(p, amount), amount));
 	}
 	
@@ -38,10 +39,19 @@ public class ReservoRune extends RuneOrb {
 		if(this.upgraded) {
 			AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, new RetainCardPower(p, 1), 1));
 		}
-		AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, new RetainCardPower(p, 1), 1));
+		AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, "Retain Cards", 1));
 		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ReservoPower(amount), amount));
 	}
 
+	@Override
+	public void onMultiBreak() {
+		int amount = 2;
+		if(this.upgraded) {
+			amount = 4;
+		}
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ReservoPower(amount), amount));
+	}
+	
 	@Override
 	public AbstractOrb makeCopy() { return new ReservoRune(this.upgraded); }
 
@@ -52,7 +62,7 @@ public class ReservoRune extends RuneOrb {
 			//render upgrade +
 			FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, 
 					"+", this.cX + NUM_X_OFFSET, this.cY + this.bobEffect.y / 2.0F + NUM_Y_OFFSET ,
-					Color.GREEN.cpy(), this.fontScale);
+					Color.GREEN.cpy(), this.fontScale*2);
 		}
 	}
 }

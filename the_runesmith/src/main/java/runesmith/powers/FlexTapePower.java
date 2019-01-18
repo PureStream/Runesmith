@@ -14,7 +14,7 @@ import runesmith.actions.StasisCardInHandAction;
 
 public class FlexTapePower extends AbstractPower {
 
-	public static final String POWER_ID = "FlexTapePower";
+	public static final String POWER_ID = "Runesmith:FlexTapePower";
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
@@ -32,7 +32,7 @@ public class FlexTapePower extends AbstractPower {
 	public void stackPower(int stackAmount) {
 		this.fontScale = 8.0F;
 		this.amount += stackAmount;
-		if (this.amount <= 0) AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, "FlexTapePower"));
+		if (this.amount <= 0) AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, "Runesmith:FlexTapePower"));
 	}
 	
 	public void atStartOfTurn() {

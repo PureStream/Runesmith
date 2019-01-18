@@ -6,6 +6,7 @@ import java.util.List;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -26,6 +27,7 @@ public abstract class RuneOrb extends AbstractOrb {
 	private static final float PI_4 = 12.566371F;
 	
 	public boolean upgraded = false;
+	public boolean useMultiBreak = false;
 	public boolean showPotentialValue = true;
 	public int potential = 0;
 	private String[] descriptions;
@@ -52,8 +54,8 @@ public abstract class RuneOrb extends AbstractOrb {
 			if (Settings.FAST_MODE) {
 				speedTime = 0.0F;
 		    }
-		    AbstractDungeon.effectList.add(new OrbFlareEffect(this, OrbFlareEffect.OrbFlareColor.PLASMA));    
-		    // AbstractDungeon.actionManager.addToBottom(new VFXAction(new OrbFlareEffect(this, OrbFlareEffect.OrbFlareColor.PLASMA), speedTime));
+//		    AbstractDungeon.effectList.add(new OrbFlareEffect(this, OrbFlareEffect.OrbFlareColor.PLASMA));    
+		    AbstractDungeon.actionManager.addToTop(new VFXAction(new OrbFlareEffect(this, OrbFlareEffect.OrbFlareColor.PLASMA), speedTime));
 	}
 	
 	@Override
@@ -87,6 +89,8 @@ public abstract class RuneOrb extends AbstractOrb {
 	public void onCardDraw(AbstractCard c) {}
 
 	public void onBreak() {}
+	
+	public void onMultiBreak() {}
 	
 	public void onRemove() {}
 

@@ -31,7 +31,7 @@ public class IgnisPower extends AbstractPower {
 		this.fontScale = 8.0F;
 		this.amount += stackAmount;
 		if (this.amount <= 0) {
-			AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, "IgnisPower"));
+			AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, "Runesmith:IgnisPower"));
 		}
 	}
 

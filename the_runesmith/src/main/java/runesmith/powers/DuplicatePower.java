@@ -37,7 +37,7 @@ public class DuplicatePower extends AbstractPower {
 		this.fontScale = 8.0F;
 		this.amount += stackAmount;
 		if (this.amount == 0) {
-			AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, "DuplicatePower"));
+			AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, "Runesmith:DuplicatePower"));
 		}
 	}
 	
@@ -63,7 +63,7 @@ public class DuplicatePower extends AbstractPower {
 			
 			this.amount -= 1;
 			if (this.amount == 0) {
-				AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, "DuplicatePower"));
+				AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, "Runesmith:DuplicatePower"));
 			}
 		}
 	}

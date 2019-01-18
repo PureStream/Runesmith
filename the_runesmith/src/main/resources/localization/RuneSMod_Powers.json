@@ -37,7 +37,7 @@
 	},
 	"Runesmith:RunesonancePower": {
 		"NAME": "Runesonance",
-		"DESCRIPTIONS": ["Gain double the elements."]
+		"DESCRIPTIONS": ["Double #yElement gain."]
 	},
 	"Runesmith:ReservoPower": {
 		"NAME": "Retain Cards",
@@ -47,7 +47,7 @@
 			" cards."
 		  ]
 	},
-	"FlexTapePower": {
+	"Runesmith:FlexTapePower": {
 		"NAME": "Flex Tape",
 		"DESCRIPTIONS": ["#yStasis #b"," cards at the start of your turn."]
 	}

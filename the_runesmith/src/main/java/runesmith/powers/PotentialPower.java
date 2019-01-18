@@ -35,7 +35,7 @@ public class PotentialPower extends AbstractPower {
 		this.fontScale = 8.0F;
 		this.amount += stackAmount;
 		if (this.amount == 0) {
-			AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, "PotentialPower"));
+			AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, "Runesmith:PotentialPower"));
 		}
 		updatePotencialEffects();
 	}
@@ -44,7 +44,7 @@ public class PotentialPower extends AbstractPower {
 		this.fontScale = 8.0F;
 		this.amount -= reduceAmount;
 		if (this.amount == 0) {
-			AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, "PotentialPower"));
+			AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, "Runesmith:PotentialPower"));
 		}
 		updatePotencialEffects();
 	}

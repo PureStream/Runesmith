@@ -2,6 +2,7 @@ package runesmith.powers;
 
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -33,7 +34,7 @@ public class GrindstonePower extends AbstractPower {
 		this.fontScale = 8.0F;
 		this.amount += stackAmount;
 		if (this.amount <= 0) {
-			AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, "GrindstonePower"));
+			AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, "Runesmith:GrindstonePower"));
 		}
 	}
 	
@@ -46,14 +47,7 @@ public class GrindstonePower extends AbstractPower {
 	
 	public void atEndOfTurn(boolean isPlayer) {
 		if (isPlayer) {
-			AbstractDungeon.actionManager.addToTop(
-			          new ApplyPowerAction(
-			              owner,
-			              owner,
-			              new GrindstonePower(owner, -1),
-			              -1
-			          )
-			      );
+			AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, "Runesmith:GrindstonePower", 1));
 		}
 	}
 	

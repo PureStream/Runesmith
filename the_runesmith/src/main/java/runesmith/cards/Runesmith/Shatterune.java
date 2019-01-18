@@ -34,7 +34,7 @@ public class Shatterune extends CustomCard {
 			CardType.SKILL,
 			AbstractCardEnum.RUNESMITH_BEIGE,
 			CardRarity.UNCOMMON,
-			CardTarget.ENEMY
+			CardTarget.NONE
 		);
 		this.showEvokeValue = true;
 	}
