@@ -53,6 +53,10 @@
 		"NAME": "Flex Tape",
 		"DESCRIPTIONS": ["#yStasis #b"," cards at the start of your turn."]
 	},
+	"Runesmith:SpiculumDown":{
+		"NAME": "Thorns Down",
+		"DESCRIPTIONS": ["At the start of your next turn, lose #b", " #yThorns."]
+	},
 	"Runesmith:PotentialDownPower": {
 		"NAME": "Potential Down",
 		"DESCRIPTIONS": ["Lose #b"," #yPotential at the end of your turn."]

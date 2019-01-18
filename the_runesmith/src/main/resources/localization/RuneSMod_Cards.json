@@ -136,7 +136,7 @@
 	},
 	"Runesmith:CraftSpiculum": {
 		"NAME": "Craft Spiculum",
-		"DESCRIPTION": "3 Ignis 2 Aqua: Craft a Spiculum rune with !Pot! Potency. NL Exhaust."
+		"DESCRIPTION": "3 Ignis 1 Aqua: Craft a Spiculum rune with !Pot! Potency. NL Exhaust."
 	},
 	"Runesmith:CraftPotentia": {
 		"NAME": "Craft Potentia",

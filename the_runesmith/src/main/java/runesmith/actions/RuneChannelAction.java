@@ -27,7 +27,7 @@ public class RuneChannelAction extends AbstractGameAction{
 	public void update() {
 		if (AbstractDungeon.player.maxOrbs == 10) {
 		      if (!AbstractDungeon.player.hasEmptyOrb()) {
-		        AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 3.0F, "You cannot fit any more #rreplicas for now.", true));
+		        AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 3.0F, "I'm out of #rrunes space.", true));
 
 		        this.isDone = true;
 		        return;

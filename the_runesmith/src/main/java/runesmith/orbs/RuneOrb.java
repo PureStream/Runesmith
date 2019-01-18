@@ -79,6 +79,7 @@ public abstract class RuneOrb extends AbstractOrb {
 		runes.add(new PotentiaRune(PotentiaRune.basePotency + playerPotency));
 		runes.add(new ProtectioRune(ProtectioRune.basePotency + playerPotency));
 		runes.add(new ReservoRune());
+		runes.add(new SpiculumRune(SpiculumRune.basePotency + playerPotency));
 		
 		if (useCardRng) return runes.get(AbstractDungeon.cardRandomRng.random(runes.size() - 1));
 		return runes.get(MathUtils.random(runes.size() - 1));
@@ -91,6 +92,8 @@ public abstract class RuneOrb extends AbstractOrb {
 	public void onCardUse(AbstractCard c) {}
 
 	public void onCardDraw(AbstractCard c) {}
+	
+//	public void onCraft() {}
 
 	public void onBreak() {}
 	
