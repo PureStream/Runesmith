@@ -21,7 +21,7 @@ public class BrokenRuby extends CustomRelic {
 	
 	public BrokenRuby() {
 		super(ID, ImageMaster.loadImage(IMG), RelicTier.STARTER, LandingSound.MAGICAL); 
-	
+		this.counter = 0;
 	}
 	
 	public String getUpdatedDescription() {
