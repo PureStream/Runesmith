@@ -19,7 +19,6 @@ public class FirestoneRune extends RuneOrb {
 	
 	@Override
 	public void onEndOfTurn() {
-		this.activateEffect();
 		//get random target
 		//AbstractCreature m = AbstractDungeon.getMonsters().getRandomMonster(true);
 		//damage enemy
@@ -31,6 +30,7 @@ public class FirestoneRune extends RuneOrb {
 					AbstractGameAction.AttackEffect.FIRE
 				)
 		);
+		this.activateEffect();
 	}
 	
 	@Override
