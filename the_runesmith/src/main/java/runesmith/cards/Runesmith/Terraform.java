@@ -55,7 +55,7 @@ public class Terraform extends CustomCard {
 		
 		super.applyPowers();
 		
-		String extendString = EXTENDED_DESCRIPTION[0] + (this.block) + EXTENDED_DESCRIPTION[1];
+		String extendString = EXTENDED_DESCRIPTION[0];
 		
 		this.rawDescription = (!this.upgraded) ? DESCRIPTION + extendString : DESCRIPTION_UPG + extendString;
 		initializeDescription();

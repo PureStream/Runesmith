@@ -37,8 +37,7 @@
 		"DESCRIPTION": "Gain 1 Terra. NL Gain Block equals to double the amount of Terra.",
 		"UPGRADE_DESCRIPTION": "Gain 1 Terra. NL Gain Block equals to triple the number of Terra.",
 		"EXTENDED_DESCRIPTION":[
-			" NL (Gain ",
-			" Block.)"
+			" NL (Gain !B! Block.)"
 		]
 	},
 	"Runesmith:RuneHurl": {
@@ -105,8 +104,7 @@
 		"DESCRIPTION": "Remove all Elements. NL Gain Block equals to double the number of Elements removed.",
 		"UPGRADE_DESCRIPTION": "Remove all Elements. NL Gain Block equals to triple the number of Elements removed.",
 		"EXTENDED_DESCRIPTION":[
-			" NL (Gain ",
-			" Block.)"
+			" NL (Gain !B! Block)"
 		]
 	},
 	"Runesmith:Grindstone": {
@@ -149,7 +147,7 @@
 	},
 	"Runesmith:HammerTime": {
 		"NAME": "Hammer Time",
-		"DESCRIPTION": "Enhance ALL of your cards containing Hammer. Deal !D! damage."
+		"DESCRIPTION": "Enhance ALL of your cards containing \"Hammer\". Deal !D! damage."
 	},
 	"Runesmith:MakeshiftArmor": {
 		"NAME": "Makeshift Armor",
@@ -163,14 +161,6 @@
 		"NAME": "Chaotic Blast",
 		"DESCRIPTION": "Deal !D! damage. !M! Ignis !M! Terra !M! Aqua: Craft a random rune.",
 		"UPGRADE_DESCRIPTION" : "Deal !D! damage. !M! Ignis !M! Terra !M! Aqua: Craft two random runes."
-	},
-	"Runesmith:ElementalBurst": {
-		"NAME": "Elemental Burst",
-		"DESCRIPTION": "Deal damage equals to the amount of Elements gained this combat to all enemies.",
-		"EXTENDED_DESCRIPTION":[
-			" NL (Deal ",
-			" damage.)"
-		]
 	},
 	"Runesmith:Shatterune": {
 		"NAME": "Shatterune",
@@ -212,8 +202,7 @@
 		"NAME": "Last Stand",
 		"DESCRIPTION": "Downgrade all cards in your deck. Remove all Elements. Deal !M! times the number of downgraded cards to all enemies. NL Exhaust.",
 		"EXTENDED_DESCRIPTION":[
-			" NL (Deal ",
-			" damage.)"
+			" NL (Deal !D! damage)"
 		]
 	},
 	"Runesmith:Demonforge": {
@@ -231,7 +220,7 @@
 	},
 	"Runesmith:ManaExplosion": {
 		"NAME": "Mana Explosion",
-		"DESCRIPTION": "Break ALL of your runes. Draw a card and gain [E] for each rune destroyed."
+		"DESCRIPTION": "Break all of your runes. Draw a card and gain [E] for each rune destroyed."
 	},
 	"Runesmith:CreatorForm": {
 		"NAME": "Creator Form",
@@ -255,7 +244,7 @@
 	},
 	"Runesmith:RuneMagnet": {
 		"NAME": "Rune Magnet",
-		"DESCRIPTION": "Draw until you get a Craft card and discard ALL other cards drawn. NL Exhaust."
+		"DESCRIPTION": "Draw until you get a Craft card and discard all other cards drawn. NL Exhaust."
 	},
 	"Runesmith:ThatsALotOfDAMAGE": {
 		"NAME": "That's a lot of DAMAGE",
@@ -285,8 +274,8 @@
 	},
 	"Runesmith:GrandSlam": {
 		"NAME": "Grand Slam",
-		"DESCRIPTION": "Deal 13 damage. Enhance ALL cards in your hand. NL Exhaust.",
-		"UPGRADE_DESCRIPTION": "Deal 13 damage. Enhance ALL cards in your hand twice. NL Exhaust."
+		"DESCRIPTION": "Deal 13 damage. Enhance all cards in your hand. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Deal 13 damage. Enhance all cards in your hand twice. NL Exhaust."
 	},
 	"Runesmith:WWWWWWWWWWWWWWWWWWWW": {
 		"NAME": "WWWWWWWWWWWWWWWWWWWW",

@@ -68,7 +68,7 @@ public class LastStand extends CustomCard {
 		
 		super.applyPowers();
 		
-		String extendString = EXTENDED_DESCRIPTION[0] + (this.damage) + EXTENDED_DESCRIPTION[1];
+		String extendString = EXTENDED_DESCRIPTION[0];
 		this.rawDescription = DESCRIPTION + extendString;
 		initializeDescription();
 	}

@@ -65,7 +65,7 @@ public class ElementalShield extends CustomCard {
 			super.applyPowers();
 		}
 		if (this.block > 0) {
-			String extendString = EXTENDED_DESCRIPTION[0] + this.block + EXTENDED_DESCRIPTION[1];
+			String extendString = EXTENDED_DESCRIPTION[0];
 			if (!this.upgraded) {
 				this.rawDescription = DESCRIPTION + extendString;
 			} else {
