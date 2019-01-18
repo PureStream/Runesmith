@@ -3,6 +3,8 @@ runesmith\powers\DemonforgePower.class
 runesmith\powers\DuplicatePower.class
 runesmith\cards\Runesmith\UnlimitedPower.class
 runesmith\actions\cards\ShatteruneAction.class
+runesmith\powers\PotentialDownPower.class
+runesmith\orbs\PotentiaRune.class
 runesmith\cards\Runesmith\EnchantedChisel.class
 runesmith\cards\Runesmith\Repurpose.class
 runesmith\orbs\DudRune.class
@@ -73,6 +75,7 @@ runesmith\cards\Runesmith\CraftIndustria.class
 runesmith\cards\Runesmith\CraftMagma.class
 runesmith\actions\cards\RunicBulletsAction.class
 runesmith\orbs\FerroRune.class
+runesmith\cards\Runesmith\CraftPotentia.class
 runesmith\actions\cards\FortifyAction.class
 runesmith\cards\Runesmith\FlexTape.class
 runesmith\patches\EnhancedCardValueModified$calculateCardDamage.class

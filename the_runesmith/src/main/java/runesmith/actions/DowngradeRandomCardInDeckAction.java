@@ -17,7 +17,6 @@ public class DowngradeRandomCardInDeckAction extends AbstractGameAction{
 
 	private AbstractPlayer p;
 	private CardGroup canDowngrade = new CardGroup(CardGroup.CardGroupType.CARD_POOL);
-	private boolean upgraded = false;
 	
 	public DowngradeRandomCardInDeckAction(AbstractPlayer p) {
 		this.actionType = AbstractGameAction.ActionType.CARD_MANIPULATION;

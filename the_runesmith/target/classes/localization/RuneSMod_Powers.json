@@ -52,5 +52,9 @@
 	"Runesmith:FlexTapePower": {
 		"NAME": "Flex Tape",
 		"DESCRIPTIONS": ["#yStasis #b"," cards at the start of your turn."]
+	},
+	"Runesmith:PotentialDownPower": {
+		"NAME": "Potential Down",
+		"DESCRIPTIONS": ["Lose #b"," #yPotential at the end of your turn."]
 	}
 }
