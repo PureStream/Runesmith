@@ -8,6 +8,8 @@ import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 
 public class FerroRune extends RuneOrb {
 	
+	public static final int basePotency = 5;
+	
 	private AbstractPlayer p = AbstractDungeon.player;
 	public FerroRune(int potency) {
 		super( "Ferro",
