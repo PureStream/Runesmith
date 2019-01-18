@@ -136,7 +136,7 @@
 	},
 	"Runesmith:CraftSpiculum": {
 		"NAME": "Craft Spiculum",
-		"DESCRIPTION": "3 Ignis 2 Aqua: Craft a Spiculum rune with !Pot! Potency. NL Exhaust."
+		"DESCRIPTION": "3 Ignis 1 Aqua: Craft a Spiculum rune with !Pot! Potency. NL Exhaust."
 	},
 	"Runesmith:CraftPotentia": {
 		"NAME": "Craft Potentia",
@@ -161,7 +161,8 @@
 	},
 	"Runesmith:ChaoticBlast": {
 		"NAME": "Chaotic Blast",
-		"DESCRIPTION": "Deal !D! damage. 1 Ignis 1 Terra 1 Aqua: Craft a random rune."
+		"DESCRIPTION": "Deal !D! damage. !M! Ignis !M! Terra !M! Aqua: Craft a random rune.",
+		"UPGRADE_DESCRIPTION" : "Deal !D! damage. !M! Ignis !M! Terra !M! Aqua: Craft two random runes."
 	},
 	"Runesmith:ElementalBurst": {
 		"NAME": "Elemental Burst",
