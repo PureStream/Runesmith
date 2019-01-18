@@ -318,6 +318,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
 		cardsToAdd.add(new CraftReservo());
 		cardsToAdd.add(new CraftFerro());
 		cardsToAdd.add(new CraftPotentia());
+		cardsToAdd.add(new ChaoticBlast());
 	}
 
 	@Override
