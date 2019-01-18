@@ -13,7 +13,7 @@
 	},
 	"GrindstonePower": {
 		"NAME": "Grindstone",
-		"DESCRIPTIONS": ["ALL cards played this turn become #yUpgraded."]
+		"DESCRIPTIONS": ["ALL cards played become #yUpgraded."]
 	},
 	"FirestormPower": {
 		"NAME": "Firestorm",
@@ -33,10 +33,10 @@
 	},
 	"UnlimitedPowerPower": {
 		"NAME": "Unlimited Power",
-		"DESCRIPTIONS": ["Elements are no longer consumed for Crafting."]
+		"DESCRIPTIONS": ["#yElements are no longer consumed for Crafting."]
 	},
 	"RunesonancePower": {
 		"NAME": "Runesonance",
-		"DESCRIPTIONS": ["Gain double the elements."]
+		"DESCRIPTIONS": ["Gain double the #yElements."]
 	}
 }
