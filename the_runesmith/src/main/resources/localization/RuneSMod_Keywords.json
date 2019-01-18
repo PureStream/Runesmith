@@ -90,14 +90,14 @@
 			"reservo+",
 			"Reservo+"
 			],
-			"DESCRIPTION": "#yRetain a card(s)."
+			"DESCRIPTION": "Rune: #yRetain card(s)."
 		},
 		{
 			"NAMES": [
 			"spiculum",
 			"Spiculum"
 			],
-			"DESCRIPTION": "Gain #yThorns."
+			"DESCRIPTION": "Rune: Gain #yThorns."
 		},
 		{
 			"NAMES": [
@@ -111,48 +111,48 @@
 			"ferro",
 			"Ferro"
 			],
-			"DESCRIPTION": "Gain #yPlated #yArmor."
+			"DESCRIPTION": "Rune: Gain #yPlated #yArmor."
 		},
 		{
 			"NAMES": [
 			"prismatic",
 			"Prismatic"
 			],
-			"DESCRIPTION": "Give a random class card each turn."
+			"DESCRIPTION": "Ruin: Give a random class card each turn."
 		},
 		{
 			"NAMES": [
 			"prismatic+",
 			"Prismatic+"
 			],
-			"DESCRIPTION": "give a random upgraded class card each turn."
+			"DESCRIPTION": "Rune: Give a random upgraded class card each turn."
 		},
 		{
 			"NAMES": [
 			"industria",
 			"Industria"
 			],
-			"DESCRIPTION": "Gain [E] at the start of your turn."
+			"DESCRIPTION": "Rune: Gain [E] at the start of your turn."
 		},
 		{
 			"NAMES": [
 			"medicinae",
 			"Medicinae"
 			],
-			"DESCRIPTION": "Heals on #yBreak."
+			"DESCRIPTION": "Rune: Heals on #yBreak."
 		},
 		{
 			"NAMES": [
 			"Dud",
 			"dud"
 			],
-			"DESCRIPTION": "No effect."
+			"DESCRIPTION": "Rune: No effect."
 		},
 		{
 			"NAMES": [
 			"magma"
 			],
-			"DESCRIPTION": "Deals damage to random enemy and gain Block."
+			"DESCRIPTION": "Rune: Deals damage to random enemy and gain Block."
 		},
 		{
 			"NAMES": [

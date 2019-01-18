@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 
 public class TerraPower extends AbstractPower {
 	
-	public static final String POWER_ID = "TerraPower";
+	public static final String POWER_ID = "Runesmith:TerraPower";
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;

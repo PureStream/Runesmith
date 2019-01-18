@@ -1,42 +1,50 @@
 {
-	"IgnisPower": {
+	"Runesmith:IgnisPower": {
 		"NAME": "Ignis",
 		"DESCRIPTIONS": ["You currently have #b", " #yIgnis."]
 	},
-	"TerraPower": {
+	"Runesmith:TerraPower": {
 		"NAME": "Terra",
 		"DESCRIPTIONS": ["You currently have #b", " #yTerra."]
 	},
-	"AquaPower": {
+	"Runesmith:AquaPower": {
 		"NAME": "Aqua",
 		"DESCRIPTIONS": ["You currently have #b", " #yAqua."]
 	},
-	"GrindstonePower": {
+	"Runesmith:GrindstonePower": {
 		"NAME": "Grindstone",
 		"DESCRIPTIONS": ["ALL cards played this turn become #yUpgraded."]
 	},
-	"FirestormPower": {
+	"Runesmith:FirestormPower": {
 		"NAME": "Firestorm",
 		"DESCRIPTIONS": ["Gain #b"," #yIgnis and #b"," #yTerra at the start of your turn."]
 	},
-	"DuplicatePower": {
+	"Runesmith:DuplicatePower": {
 		"NAME": "Duplicate",
 		"DESCRIPTIONS": ["your next #b"," #yCraft card is played twice."]
 	},
-	"PotentialPower": {
+	"Runesmith:PotentialPower": {
 		"NAME": "Potential",
 		"DESCRIPTIONS": ["Gain #b"," #yPotency."]
 	},
-	"DemonforgePower": {
+	"Runesmith:DemonforgePower": {
 		"NAME": "Demonforge Backlash",
 		"DESCRIPTIONS": ["Lose #b"," #yPotency at the end of your turn."]
 	},
-	"UnlimitedPowerPower": {
+	"Runesmith:UnlimitedPowerPower": {
 		"NAME": "Unlimited Power",
 		"DESCRIPTIONS": ["Elements are no longer consumed for Crafting."]
 	},
-	"RunesonancePower": {
+	"Runesmith:RunesonancePower": {
 		"NAME": "Runesonance",
 		"DESCRIPTIONS": ["Gain double the elements."]
+	},
+	"Runesmith:ReservoPower": {
+		"NAME": "Retain Cards",
+		"DESCRIPTIONS": [
+			"At the end of your turn, you may retain #b",
+			" card.",
+			" cards."
+		  ]
 	}
 }

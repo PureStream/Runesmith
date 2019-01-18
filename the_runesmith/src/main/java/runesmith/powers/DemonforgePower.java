@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 
 public class DemonforgePower extends AbstractPower {
 	
-	public static final String POWER_ID = "DemonforgePower";
+	public static final String POWER_ID = "Runesmith:DemonforgePower";
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;

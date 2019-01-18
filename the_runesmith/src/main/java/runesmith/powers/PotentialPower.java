@@ -14,7 +14,7 @@ import runesmith.cards.Runesmith.AbstractRunicCard;
 
 public class PotentialPower extends AbstractPower {
 	
-	public static final String POWER_ID = "PotentialPower";
+	public static final String POWER_ID = "Runesmith:PotentialPower";
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;

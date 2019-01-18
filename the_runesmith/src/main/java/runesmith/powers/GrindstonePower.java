@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 
 public class GrindstonePower extends AbstractPower {
 
-	public static final String POWER_ID = "GrindstonePower";
+	public static final String POWER_ID = "Runesmith:GrindstonePower";
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;

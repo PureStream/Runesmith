@@ -27,8 +27,8 @@ public class ProtectioRune extends RuneOrb {
 	
 	@Override
 	public void onBreak() {
-		onStartOfTurn();
-		onStartOfTurn();
+		onEndOfTurn();
+		onEndOfTurn();
 	}
 
 	@Override

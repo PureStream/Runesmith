@@ -18,7 +18,7 @@ import static runesmith.patches.CardTagEnum.CRAFT;
 
 public class DuplicatePower extends AbstractPower {
 
-	public static final String POWER_ID = "DuplicatePower";
+	public static final String POWER_ID = "Runesmith:DuplicatePower";
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;

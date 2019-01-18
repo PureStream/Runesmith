@@ -18,7 +18,7 @@ public class FirestoneRune extends RuneOrb {
 	}
 	
 	@Override
-	public void onStartOfTurn() {
+	public void onEndOfTurn() {
 		this.activateEffect();
 		//get random target
 		//AbstractCreature m = AbstractDungeon.getMonsters().getRandomMonster(true);
@@ -35,8 +35,8 @@ public class FirestoneRune extends RuneOrb {
 	
 	@Override
 	public void onBreak() {
-		onStartOfTurn();
-		onStartOfTurn();
+		onEndOfTurn();
+		onEndOfTurn();
 	}
 
 	@Override
