@@ -4,7 +4,6 @@ import org.apache.logging.log4j.Logger;
 
 import com.megacrit.cardcrawl.core.Settings;
 
-import runesmith.RunesmithMod;
 import runesmith.orbs.RuneOrb;
 
 public class BreakWithoutRemovingRuneAction extends com.megacrit.cardcrawl.actions.AbstractGameAction

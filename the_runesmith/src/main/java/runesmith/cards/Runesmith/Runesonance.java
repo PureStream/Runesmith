@@ -14,7 +14,7 @@ import runesmith.powers.RunesonancePower;
 
 public class Runesonance extends CustomCard {
 	public static final String ID = "Runesmith:Runesonance";
-	public static final String IMG_PATH = "images/cards/defend_RS.png"; //<-------- Image needed
+	public static final String IMG_PATH = "images/cards/Runesonance.png"; //<-------- Image needed
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;

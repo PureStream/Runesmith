@@ -1,14 +1,9 @@
 package runesmith.cards.Runesmith;
 
-import static runesmith.patches.CardTagEnum.HAMMER;
-
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.AbstractCard.CardRarity;
-import com.megacrit.cardcrawl.cards.AbstractCard.CardTarget;
-import com.megacrit.cardcrawl.cards.AbstractCard.CardType;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -22,7 +17,7 @@ import runesmith.patches.ElementsGainedCountField;
 public class ForcesOfNature extends CustomCard{
 
 	public static final String ID = "Runesmith:ForcesOfNature";
-	public static final String IMG_PATH = "images/cards/strike_RS.png";
+	public static final String IMG_PATH = "images/cards/ForcesOfNature.png";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
