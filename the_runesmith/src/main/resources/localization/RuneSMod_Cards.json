@@ -210,7 +210,11 @@
 	},
 	"Runesmith:LastStand": {
 		"NAME": "Last Stand",
-		"DESCRIPTION": "Downgrade all cards in your deck. Remove all Elements. Deal !M! times the number of downgraded cards to all enemies. NL Exhaust."
+		"DESCRIPTION": "Downgrade all cards in your deck. Remove all Elements. Deal !M! times the number of downgraded cards to all enemies. NL Exhaust.",
+		"EXTENDED_DESCRIPTION":[
+			" NL (Deal ",
+			" damage.)"
+		]
 	},
 	"Runesmith:Demonforge": {
 		"NAME": "Demonforge",

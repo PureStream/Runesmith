@@ -210,7 +210,11 @@
 	},
 	"Runesmith:LastStand": {
 		"NAME": "Last Stand",
-		"DESCRIPTION": "Downgrade all cards in your deck. Remove all Elements. Deal !M! times the number of downgraded cards to all enemies. NL Exhaust."
+		"DESCRIPTION": "Downgrade all cards in your deck. Remove all Elements. Deal !M! times the number of downgraded cards to all enemies. NL Exhaust.",
+		"EXTENDED_DESCRIPTION":[
+			" NL (Deal ",
+			" damage.)"
+		]
 	},
 	"Runesmith:Demonforge": {
 		"NAME": "Demonforge",
@@ -269,6 +273,20 @@
 	"Runesmith:UnlimitedPower": {
 		"NAME": "Unlimited Power",
 		"DESCRIPTION": "Elements are no longer consumed for Crafting."
+	},
+	"Runesmith:ForcesOfNature": {
+		"NAME": "Forces Of Nature",
+		"DESCRIPTION": "Deal damage equals to the amount of elements gained this combat to all enemies.",
+		"UPGRADE_DESCRIPTION": "Deal damage equals to double the amount of elements gained this combat to all enemies.",
+		"EXTENDED_DESCRIPTION":[
+			" NL (Deals !D! damage.)",
+     		""
+		]
+	},
+	"Runesmith:GrandSlam": {
+		"NAME": "Grand Slam",
+		"DESCRIPTION": "Deal 13 damage. Enhance ALL cards in your hand. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Deal 13 damage. Enhance ALL cards in your hand twice. NL Exhaust."
 	},
 	"Runesmith:WWWWWWWWWWWWWWWWWWWW": {
 		"NAME": "WWWWWWWWWWWWWWWWWWWW",
