@@ -38,12 +38,12 @@ public class MetallurgicalResearchAction extends AbstractGameAction {
 				c.upgrade();
 				c.applyPowers();
 			}
-			if (canEnhance(c))
+			if (EnhanceCard.canEnhance(c)) {
 				EnhanceCard.enhance(c);
+				c.applyPowers();
+			}
+				
 		}
 	}
 	
-	private boolean canEnhance(AbstractCard c) {
-		return !(c.type == CardType.CURSE || c.type == CardType.STATUS);
-	}
 }

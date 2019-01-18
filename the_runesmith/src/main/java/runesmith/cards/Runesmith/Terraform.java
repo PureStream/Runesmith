@@ -42,7 +42,6 @@ public class Terraform extends CustomCard {
 	public void applyPowers() {
 		AbstractPlayer p = AbstractDungeon.player;
 		int multiplier;
-
 		if (this.upgraded) 
 			multiplier = 3;
 		else 
@@ -51,18 +50,14 @@ public class Terraform extends CustomCard {
 			this.baseBlock = 2*multiplier;
 		else
 			this.baseBlock = 1*multiplier;
-		
-		if (p.hasPower("Runesmith:TerraPower")) {
+		if (p.hasPower("Runesmith:TerraPower")) 
 			this.baseBlock += (p.getPower("Runesmith:TerraPower").amount * multiplier);
-			super.applyPowers();
-		}
+		
+		super.applyPowers();
 		
 		String extendString = EXTENDED_DESCRIPTION[0] + (this.block) + EXTENDED_DESCRIPTION[1];
-		if (!this.upgraded) {
-			this.rawDescription = DESCRIPTION + extendString;
-		} else {
-			this.rawDescription = DESCRIPTION_UPG + extendString;
-		}
+		
+		this.rawDescription = (!this.upgraded) ? DESCRIPTION + extendString : DESCRIPTION_UPG + extendString;
 		initializeDescription();
 	}
 	
