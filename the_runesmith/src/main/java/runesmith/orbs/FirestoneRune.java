@@ -1,12 +1,18 @@
 package runesmith.orbs;
 
 import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 
 public class FirestoneRune extends RuneOrb {
+	
+	public static final Logger logger = LogManager.getLogger(FirestoneRune.class.getName());
 	
 	public static final int basePotency = 5;
 
@@ -22,6 +28,7 @@ public class FirestoneRune extends RuneOrb {
 		//get random target
 		//AbstractCreature m = AbstractDungeon.getMonsters().getRandomMonster(true);
 		//damage enemy
+		logger.info("damaging...");
 		AbstractDungeon.actionManager.addToBottom(
 		new DamageRandomEnemyAction(
 					new DamageInfo(AbstractDungeon.player, 
@@ -30,7 +37,7 @@ public class FirestoneRune extends RuneOrb {
 					AbstractGameAction.AttackEffect.FIRE
 				)
 		);
-		this.activateEffect();
+//		this.activateEffect();
 	}
 	
 	@Override
