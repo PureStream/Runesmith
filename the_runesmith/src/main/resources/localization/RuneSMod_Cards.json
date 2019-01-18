@@ -270,6 +270,11 @@
 		"NAME": "Unlimited Power",
 		"DESCRIPTION": "Elements are no longer consumed for Crafting."
 	},
+	"Runesmith:GrandSlam": {
+		"NAME": "Grand Slam",
+		"DESCRIPTION": "Deal 13 damage. Enhance ALL cards in your hand. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Deal 13 damage. Enhance ALL cards in your hand twice. NL Exhaust."
+	},
 	"Runesmith:WWWWWWWWWWWWWWWWWWWW": {
 		"NAME": "WWWWWWWWWWWWWWWWWWWW",
 		"DESCRIPTION": "WWWWWWWWWWWWWWWWWWWW"
