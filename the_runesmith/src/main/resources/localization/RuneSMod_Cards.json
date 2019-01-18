@@ -34,8 +34,8 @@
 	},
 	"Runesmith:Terraform": {
 		"NAME": "Terraform",
-		"DESCRIPTION": "Gain 1 Terra. NL Gain Block equals to the number of Terra twice.",
-		"UPGRADE_DESCRIPTION": "Gain 1 Terra. NL Gain Block equals to the number of Terra thrice.",
+		"DESCRIPTION": "Gain 1 Terra. NL Gain Block equals to double the amount of Terra.",
+		"UPGRADE_DESCRIPTION": "Gain 1 Terra. NL Gain Block equals to triple the number of Terra.",
 		"EXTENDED_DESCRIPTION":[
 			" NL (Gain ",
 			" Block.)"
