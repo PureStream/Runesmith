@@ -58,7 +58,8 @@
 		{
 			"NAMES": [
 			"break",
-			"Break"
+			"Break",
+			"broken"
 			],
 			"DESCRIPTION": "Destroy a rune and activate its effect twice. Passive effects will be removed at the start of your next turn."
 		},
@@ -116,7 +117,7 @@
 			"ferro",
 			"Ferro"
 			],
-			"DESCRIPTION": "Rune: Gain #yPlated #yArmor."
+			"DESCRIPTION": "Rune: Set #yPlated #yArmor to at least its #yPotency."
 		},
 		{
 			"NAMES": [
