@@ -21,6 +21,7 @@ runesmith\actions\DowngradeCardInHandAction.class
 runesmith\cards\Runesmith\AbstractRunicCard.class
 runesmith\cards\Runesmith\FieryHammer.class
 runesmith\patches\CardTagEnum.class
+runesmith\actions\cards\MetallurgicalResearchAction.class
 runesmith\patches\EnhancedCardValueModified$resetAttributes.class
 runesmith\cards\Runesmith\HammerPolish.class
 runesmith\cards\Runesmith\Rearm.class
@@ -38,6 +39,8 @@ runesmith\cards\Runesmith\Runesonance.class
 runesmith\cards\Runesmith\CraftFerro.class
 runesmith\relics\Blueberries.class
 runesmith\actions\ApplyElementsPowerAction.class
+runesmith\actions\DowngradeEntireDeckAction.class
+runesmith\powers\MetallurgicalResearchPower.class
 runesmith\orbs\MagmaRune.class
 runesmith\patches\StasisExhaustPrevention.class
 runesmith\cards\Runesmith\Fortify.class
@@ -74,6 +77,7 @@ runesmith\cards\Runesmith\CraftProtectio.class
 runesmith\cards\Runesmith\CraftIndustria.class
 runesmith\cards\Runesmith\CraftMagma.class
 runesmith\actions\cards\RunicBulletsAction.class
+runesmith\cards\Runesmith\MetallurgicalResearch.class
 runesmith\orbs\FerroRune.class
 runesmith\cards\Runesmith\CraftPotentia.class
 runesmith\actions\cards\FortifyAction.class

@@ -60,5 +60,9 @@
 	"Runesmith:PotentialDownPower": {
 		"NAME": "Potential Down",
 		"DESCRIPTIONS": ["Lose #b"," #yPotential at the end of your turn."]
+	},
+	"Runesmith:MetallurgicalResearchPower": {
+		"NAME": "Metallurgical Research",
+		"DESCRIPTIONS": ["#yUpgrade and #yEnhance ALL your cards in #b"," turns."," turn."]
 	}
 }
