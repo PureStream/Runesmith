@@ -22,7 +22,7 @@ import runesmith.patches.ElementsGainedCountField;
 public class ForcesOfNature extends CustomCard{
 
 	public static final String ID = "Runesmith:ForcesOfNature";
-	public static final String IMG_PATH = "images/cards/strike_RS.png";
+	public static final String IMG_PATH = "images/cards/ForcesOfNature.png";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
@@ -45,7 +45,7 @@ public class ForcesOfNature extends CustomCard{
 			CardTarget.ALL_ENEMY
 		);
 		this.baseDamage = 0;
-		this.baseMagicNumber = BASE_MULTIPLY;
+		this.baseMagicNumber = this.magicNumber = BASE_MULTIPLY;
 		this.isMultiDamage = true;
 	}
 	
