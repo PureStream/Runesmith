@@ -38,6 +38,14 @@ public class ReservoRune extends RuneOrb {
 	}
 	
 	@Override
+	public void onRemove() {
+		if(this.upgraded) {
+			AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, "Retain Cards", 1));
+		}
+		AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, "Retain Cards", 1));
+	}
+	
+	@Override
 	public void onBreak() {
 		int amount = 2;
 		if(this.upgraded) {

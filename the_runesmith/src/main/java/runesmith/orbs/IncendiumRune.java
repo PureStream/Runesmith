@@ -18,7 +18,7 @@ public class IncendiumRune extends RuneOrb {
 	}
 	
 	@Override
-	public void onStartOfTurn() {
+	public void onEndOfTurn() {
 		this.activateEffect();
 		//damage all enemies
 		AbstractDungeon.actionManager.addToBottom(
