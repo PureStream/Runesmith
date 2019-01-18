@@ -3,7 +3,6 @@ package runesmith.actions;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 
 import runesmith.cards.Runesmith.AbstractRunicCard;
-import runesmith.helpers.AdditionalCardDescriptions;
 import runesmith.patches.EnhanceCountField;
 
 public abstract class EnhanceCard {

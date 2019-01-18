@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Map;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.colorless.Madness;
@@ -18,7 +17,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import basemod.abstracts.CustomCard;
 import runesmith.actions.ApplyElementsPowerAction;
 import runesmith.patches.AbstractCardEnum;
-import runesmith.powers.AquaPower;
 import static runesmith.patches.CardTagEnum.CRAFT;
 
 public class RunicBlueprint extends CustomCard {

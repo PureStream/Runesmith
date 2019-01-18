@@ -12,8 +12,6 @@ import basemod.abstracts.CustomCard;
 import runesmith.actions.ApplyElementsPowerAction;
 import runesmith.patches.AbstractCardEnum;
 import runesmith.powers.AquaPower;
-import runesmith.powers.IgnisPower;
-import runesmith.powers.TerraPower;
 
 public class ConvertAqua extends CustomCard {
 	public static final String ID = "Runesmith:ConvertAqua";

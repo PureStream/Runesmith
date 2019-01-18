@@ -2,7 +2,6 @@ package runesmith.actions;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
 
-import runesmith.helpers.AdditionalCardDescriptions;
 import runesmith.patches.CardStasisStatus;
 
 public abstract class StasisCard {

@@ -21,7 +21,6 @@ import basemod.abstracts.CustomRelic;
 import basemod.interfaces.EditCharactersSubscriber;
 import runesmith.cards.Runesmith.*;
 import runesmith.character.player.RunesmithCharacter;
-import runesmith.helpers.AdditionalCardDescriptions;
 import runesmith.helpers.PotencyVariable;
 import runesmith.patches.EnhanceCountField;
 import runesmith.patches.PlayerClassEnum;

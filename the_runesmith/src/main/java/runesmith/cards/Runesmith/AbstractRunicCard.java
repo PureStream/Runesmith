@@ -4,7 +4,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.badlogic.gdx.math.MathUtils;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -12,9 +11,6 @@ import basemod.abstracts.CustomCard;
 import runesmith.RunesmithMod;
 import runesmith.actions.ApplyElementsPowerAction;
 import runesmith.patches.EnhanceCountField;
-import runesmith.powers.AquaPower;
-import runesmith.powers.IgnisPower;
-import runesmith.powers.TerraPower;
 
 public abstract class AbstractRunicCard extends CustomCard {
 	public AbstractRunicCard(String id, String name, String img, int cost, String rawDescription, CardType type, CardColor color,

@@ -1,15 +1,11 @@
 package runesmith.actions.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import runesmith.actions.ApplyElementsPowerAction;
-import runesmith.powers.AquaPower;
-import runesmith.powers.IgnisPower;
-import runesmith.powers.TerraPower;
 
 public class RepurposeAction extends AbstractGameAction{
 	private static final com.megacrit.cardcrawl.localization.UIStrings uiStrings = com.megacrit.cardcrawl.core.CardCrawlGame.languagePack.getUIString("RecycleAction");
