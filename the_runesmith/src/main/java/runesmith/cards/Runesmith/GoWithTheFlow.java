@@ -43,6 +43,7 @@ public class GoWithTheFlow extends CustomCard {
 		);
 		this.baseDamage = this.damage = ATTACK_DMG;
 		this.baseMagicNumber = this.magicNumber = AQUA_AMT;
+		this.exhaust = true;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {

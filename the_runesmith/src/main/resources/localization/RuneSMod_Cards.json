@@ -290,6 +290,14 @@
 		"DESCRIPTION": "Deal 13 damage. Enhance all cards in your hand. NL Exhaust.",
 		"UPGRADE_DESCRIPTION": "Deal 13 damage. Enhance all cards in your hand twice. NL Exhaust."
 	},
+	"Runesmith:GoWithTheFlow": {
+		"NAME": "Go With The Flow",
+		"DESCRIPTION": "Deal !D! damage. Gain !M! Aqua. Gain 1 Potency. NL Exhaust."
+	},
+	"Runesmith:PerfectChisel": {
+		"NAME": "Perfect Chisel",
+		"DESCRIPTION": "Deal !D! damage. Gain 1 of each Element. Gain !M! Potency for this turn."
+	},
 	"Runesmith:WWWWWWWWWWWWWWWWWWWW": {
 		"NAME": "WWWWWWWWWWWWWWWWWWWW",
 		"DESCRIPTION": "WWWWWWWWWWWWWWWWWWWW"

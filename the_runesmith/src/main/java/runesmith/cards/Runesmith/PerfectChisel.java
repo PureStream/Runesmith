@@ -14,14 +14,15 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import basemod.abstracts.CustomCard;
 import runesmith.actions.ApplyElementsPowerAction;
 import runesmith.patches.AbstractCardEnum;
+import runesmith.powers.PotentialDownPower;
 import runesmith.powers.PotentialPower;
 
-public class PerfectedChisel extends CustomCard {
-	public static final String ID = "Runesmith:PerfectedChisel";
+public class PerfectChisel extends CustomCard {
+	public static final String ID = "Runesmith:PerfectChisel";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	public static final String IMG_PATH = "images/cards/PerfectedChisel.png"; //<-------------- need some img
+	public static final String IMG_PATH = "images/cards/PerfectChisel.png"; //<-------------- need some img
 	private static final int COST = 1;
 	private static final int ATTACK_DMG = 4;
 	private static final int UPGRADE_PLUS_DMG = 2;
@@ -29,7 +30,7 @@ public class PerfectedChisel extends CustomCard {
 	private static final int POT_AMT = 1;
 	private static final int UPG_POT_AMT = 1;
 
-	public PerfectedChisel() {
+	public PerfectChisel() {
 		super(
 			ID,
 			NAME,
@@ -56,10 +57,11 @@ public class PerfectedChisel extends CustomCard {
 		AbstractDungeon.actionManager.addToBottom(
 				new ApplyElementsPowerAction(p,p,ELEMENT_AMT,ELEMENT_AMT,ELEMENT_AMT));
 		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new PotentialPower(p, this.magicNumber), this.magicNumber));
+		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new PotentialDownPower(p, this.magicNumber), this.magicNumber));
 	}
 
 	public AbstractCard makeCopy() {
-		return new PerfectedChisel();
+		return new PerfectChisel();
 	}
 
 	public void upgrade() {

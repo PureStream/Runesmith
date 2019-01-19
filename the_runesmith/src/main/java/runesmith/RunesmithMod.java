@@ -338,7 +338,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
 		cardsToAdd.add(new LastStand());
 		cardsToAdd.add(new ConstructBifrost());
 		cardsToAdd.add(new GoWithTheFlow());
-		cardsToAdd.add(new PerfectedChisel());
+		cardsToAdd.add(new PerfectChisel());
 	}
 
 	@Override
