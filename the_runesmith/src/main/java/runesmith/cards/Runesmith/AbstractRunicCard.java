@@ -54,11 +54,15 @@ public abstract class AbstractRunicCard extends CustomCard {
 	}
 	
 	public boolean checkElements(int ignis, int terra, int aqua) {
+		return checkElements(ignis, terra, aqua, false);
+	}
+	
+	public boolean checkElements(int ignis, int terra, int aqua, boolean checkOnly) {
 		Logger logger = LogManager.getLogger(RunesmithMod.class.getName());
 		logger.info("Start checking elements.");
 		AbstractPlayer p = AbstractDungeon.player;
 		
-		if (freeToPlayOnce == true || p.hasPower("Runesmith:UnlimitedPowerPower")) return true;
+		if (/*freeToPlayOnce == true || */p.hasPower("Runesmith:UnlimitedPowerPower")) return true;
 		
 		int pIgnis = 0, pTerra = 0, pAqua = 0;
 		if (p.hasPower("Runesmith:IgnisPower")) {
@@ -72,26 +76,30 @@ public abstract class AbstractRunicCard extends CustomCard {
 		}
 		if (pIgnis >= ignis && pTerra >= terra && pAqua >= aqua) {
 			logger.info("Have enough elements.");
-			if (pIgnis > 0 && ignis > 0) {
-				p.getPower("Runesmith:IgnisPower").reducePower(ignis);
-				if (p.getPower("Runesmith:IgnisPower").amount == 0)
-					AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, "Runesmith:IgnisPower"));
-			}
-			if (pTerra > 0 && terra > 0) {
-				p.getPower("Runesmith:TerraPower").reducePower(terra);
-				if (p.getPower("Runesmith:TerraPower").amount == 0)
-					AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, "Runesmith:TerraPower"));
-			}
-			if (pAqua > 0 && aqua > 0) {
-				p.getPower("Runesmith:AquaPower").reducePower(aqua);
-				if (p.getPower("Runesmith:AquaPower").amount == 0)
-					AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, "Runesmith:AquaPower"));
+			if(!checkOnly) {
+				if (pIgnis > 0 && ignis > 0) {
+					p.getPower("Runesmith:IgnisPower").reducePower(ignis);
+					if (p.getPower("Runesmith:IgnisPower").amount == 0)
+						AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, "Runesmith:IgnisPower"));
+				}
+				if (pTerra > 0 && terra > 0) {
+					p.getPower("Runesmith:TerraPower").reducePower(terra);
+					if (p.getPower("Runesmith:TerraPower").amount == 0)
+						AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, "Runesmith:TerraPower"));
+				}
+				if (pAqua > 0 && aqua > 0) {
+					p.getPower("Runesmith:AquaPower").reducePower(aqua);
+					if (p.getPower("Runesmith:AquaPower").amount == 0)
+						AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, "Runesmith:AquaPower"));
+				}
 			}
 			return true;
 		}
 		logger.info("Not enough elements.");
-		AbstractDungeon.actionManager.addToBottom(
-				new ApplyElementsPowerAction(p,p,ignis,terra,aqua));
+		if(!checkOnly) {
+			AbstractDungeon.actionManager.addToBottom(
+					new ApplyElementsPowerAction(p,p,ignis,terra,aqua));
+		}
 		return false;
 	}
 	

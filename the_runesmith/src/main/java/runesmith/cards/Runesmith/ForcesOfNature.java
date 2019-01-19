@@ -84,7 +84,7 @@ public class ForcesOfNature extends CustomCard{
 		AbstractPlayer p = AbstractDungeon.player;
 		int elem = ElementsGainedCountField.elementsCount.get(p);
 		
-		if(elem > 0) {
+//		if(elem > 0) {
 			this.baseDamage = elem * this.magicNumber;
 			super.applyPowers();
 			if(!this.upgraded) {
@@ -93,7 +93,7 @@ public class ForcesOfNature extends CustomCard{
 				this.rawDescription = (UPGRADE_DESCRIPTION + EXTENDED_DESCRIPTION[0]);
 			}
 			initializeDescription();
-		}
+//		}
 	}
 	
 	@Override
@@ -111,6 +111,12 @@ public class ForcesOfNature extends CustomCard{
 		if(!this.upgraded) {
 			upgradeName();
 			upgradeMagicNumber(UPGRADE_MULTIPLY);
+			if(!this.upgraded) {
+				this.rawDescription = DESCRIPTION;
+			}else {
+				this.rawDescription = UPGRADE_DESCRIPTION;
+			}
+			initializeDescription();
 		}
 		
 	}

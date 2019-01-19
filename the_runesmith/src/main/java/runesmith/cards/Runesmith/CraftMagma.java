@@ -19,6 +19,7 @@ public class CraftMagma extends AbstractRunicCard {
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+	public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
 	private static final int COST = 1;
 	private static final int COST_UPGRADE = 0;
 	private static final int POTENCY = 4;
@@ -42,6 +43,24 @@ public class CraftMagma extends AbstractRunicCard {
 		this.potency = this.basePotency = POTENCY;
 		this.tags.add(CRAFT);
 	}
+	
+	@Override
+	public void applyPowers() {
+		super.applyPowers();
+		if(checkElements(IGNIS_AMT,TERRA_AMT,0,true)) {
+			this.rawDescription = (DESCRIPTION + EXTENDED_DESCRIPTION[0]);
+		}else {
+			this.rawDescription = (DESCRIPTION);
+		}
+		initializeDescription();
+	}
+	
+	@Override
+	public void onMoveToDiscard(){
+		this.rawDescription = DESCRIPTION;
+		initializeDescription();
+	}
+	
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		if (checkElements(IGNIS_AMT,TERRA_AMT,0)) {

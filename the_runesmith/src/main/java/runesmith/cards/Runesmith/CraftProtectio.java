@@ -20,6 +20,7 @@ public class CraftProtectio extends AbstractRunicCard {
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+	public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
 	private static final int COST = 1;
 	private static final int POTENCY = 4;
 	private static final int UPGRADE_POTENCY = 2;
@@ -43,6 +44,24 @@ public class CraftProtectio extends AbstractRunicCard {
 		this.tags.add(CRAFT);
 
 	}
+	
+	@Override
+	public void applyPowers() {
+		super.applyPowers();
+		if(checkElements(0,TERRA_AMT,0,true)) {
+			this.rawDescription = (DESCRIPTION + EXTENDED_DESCRIPTION[0]);
+		}else {
+			this.rawDescription = (DESCRIPTION);
+		}
+		initializeDescription();
+	}
+	
+	@Override
+	public void onMoveToDiscard(){
+		this.rawDescription = DESCRIPTION;
+		initializeDescription();
+	}
+	
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		if (checkElements(0,TERRA_AMT,0)) {

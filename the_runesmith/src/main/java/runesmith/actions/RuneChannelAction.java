@@ -1,6 +1,8 @@
 package runesmith.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -27,33 +29,46 @@ public class RuneChannelAction extends AbstractGameAction{
 
 	@Override
 	public void update() {
-		if (AbstractDungeon.player.maxOrbs == 10) {
-		      if (!AbstractDungeon.player.hasEmptyOrb()) {
-		        AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 3.0F, "I'm out of #rrunes space.", true));
-
-		        this.isDone = true;
+		AbstractPlayer p = AbstractDungeon.player;
+		if (p.maxOrbs == 10) {
+			if (!p.hasEmptyOrb()) {
+				AbstractDungeon.effectList.add(new ThoughtBubble(p.dialogX, p.dialogY, 3.0F, "I'm out of #rrunes space.", true));
+				this.isDone = true;
 		        return;
 		      }
 		 } else {
-		      AbstractDungeon.player.increaseMaxOrbSlots(1, false);
+		      p.increaseMaxOrbSlots(1, false);
 		      CardCrawlGame.sound.playA("GUARDIAN_ROLL_UP", 1.0F);
 		    }
 		    if (this.autoEvoke) {
-
-		      AbstractDungeon.player.channelOrb(this.orbType);
-		      if(this.orbType instanceof RuneOrb) {
-		    	  ((RuneOrb) this.orbType).onCraft();	
-		      }
+		    	if(p.hasPower("Runesmith:DuplicatePower")) {
+		    		AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, "Runesmith:DuplicatePower", 1));
+		    		p.channelOrb(this.orbType);
+		    		if(this.orbType instanceof RuneOrb) {
+		    			((RuneOrb) this.orbType).onCraft();	
+		    		}
+		    	}
+	    		p.channelOrb(this.orbType);
+	    		if(this.orbType instanceof RuneOrb) {
+	    			((RuneOrb) this.orbType).onCraft();	
+	    		}
 		    } else {
-		      for (AbstractOrb o : AbstractDungeon.player.orbs) {
-		        if ((o instanceof EmptyOrbSlot))
-		        {
-		          AbstractDungeon.player.channelOrb(this.orbType);
-			      if(this.orbType instanceof RuneOrb) {
-				    	((RuneOrb) this.orbType).onCraft();	
-			    	}
-		          break;
-		        }
+		    	for (AbstractOrb o : p.orbs) {
+		    		if ((o instanceof EmptyOrbSlot))
+		    		{
+		    			if(p.hasPower("Runesmith:DuplicatePower")) {
+		    				AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, "Runesmith:DuplicatePower", 1));
+		    				p.channelOrb(this.orbType);
+		    				if(this.orbType instanceof RuneOrb) {
+		    					((RuneOrb) this.orbType).onCraft();	
+		    				}
+		    			}
+		    			p.channelOrb(this.orbType);
+		    			if(this.orbType instanceof RuneOrb) {
+		    				((RuneOrb) this.orbType).onCraft();	
+		    			}
+		    			break;
+		    		}
 		      }
 	    }
 	    tickDuration();

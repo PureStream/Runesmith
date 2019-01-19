@@ -29,8 +29,8 @@ public class DuplicatePower extends AbstractPower {
 		this.owner = owner;
 		this.amount = amount;
 		updateDescription();
-		this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/Ignis.png"), 0, 0, 84, 84);  //<-------- NEED SOME IMG
-	    this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/IgnisSmall.png"), 0, 0, 32, 32); //<-------- NEED SOME IMG
+		this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/DuplicatePower.png"), 0, 0, 84, 84);  //<-------- NEED SOME IMG
+	    this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/DuplicatePowerSmall.png"), 0, 0, 32, 32); //<-------- NEED SOME IMG
 	}
 	
 	public void stackPower(int stackAmount) {
@@ -41,32 +41,32 @@ public class DuplicatePower extends AbstractPower {
 		}
 	}
 	
-	public void onUseCard(AbstractCard card, UseCardAction action) {
-		if ((!card.purgeOnUse) && (card.hasTag(CRAFT)) && (this.amount > 0)) {
-			flash();
-			
-			AbstractMonster m = null;
-			if (action.target != null) {
-				m = (AbstractMonster)action.target;
-			}
-				
-			AbstractCard tmp = card.makeSameInstanceOf();
-			AbstractDungeon.player.limbo.addToBottom(tmp);
-			tmp.current_x = card.current_x;
-			tmp.current_y = card.current_y;
-			tmp.target_x = (Settings.WIDTH / 2.0F - 300.0F * Settings.scale);
-			tmp.target_y = (Settings.HEIGHT / 2.0F);
-			tmp.freeToPlayOnce = true;
-			
-			tmp.purgeOnUse = true;
-			AbstractDungeon.actionManager.cardQueue.add(new CardQueueItem(tmp, m, card.energyOnUse));
-			
-			this.amount -= 1;
-			if (this.amount == 0) {
-				AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, "Runesmith:DuplicatePower"));
-			}
-		}
-	}
+//	public void onUseCard(AbstractCard card, UseCardAction action) {
+//		if ((!card.purgeOnUse) && (card.hasTag(CRAFT)) && (this.amount > 0)) {
+//			flash();
+//			
+//			AbstractMonster m = null;
+//			if (action.target != null) {
+//				m = (AbstractMonster)action.target;
+//			}
+//				
+//			AbstractCard tmp = card.makeSameInstanceOf();
+//			AbstractDungeon.player.limbo.addToBottom(tmp);
+//			tmp.current_x = card.current_x;
+//			tmp.current_y = card.current_y;
+//			tmp.target_x = (Settings.WIDTH / 2.0F - 300.0F * Settings.scale);
+//			tmp.target_y = (Settings.HEIGHT / 2.0F);
+//			tmp.freeToPlayOnce = true;
+//			
+//			tmp.purgeOnUse = true;
+//			AbstractDungeon.actionManager.cardQueue.add(new CardQueueItem(tmp, m, card.energyOnUse));
+//			
+//			this.amount -= 1;
+//			if (this.amount == 0) {
+//				AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, "Runesmith:DuplicatePower"));
+//			}
+//		}
+//	}
 	
 	public void atEndOfTurn(boolean isPlayer) {
 		if (isPlayer) {

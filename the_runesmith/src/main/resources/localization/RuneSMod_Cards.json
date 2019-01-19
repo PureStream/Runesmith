@@ -9,11 +9,13 @@
 	},
 	"Runesmith:CraftFirestone": {
 		"NAME": "Craft Firestone",
-		"DESCRIPTION": "2 Ignis: Craft a Firestone rune with !Pot! Potency."
+		"DESCRIPTION": "2 Ignis: Craft a Firestone rune with !Pot! Potency.",
+		"EXTENDED_DESCRIPTION":[" NL (Can Craft.)"]
 	},
 	"Runesmith:CraftProtectio": {
 		"NAME": "Craft Protectio",
-		"DESCRIPTION": "2 Terra: Craft a Protectio rune with !Pot! Potency."
+		"DESCRIPTION": "2 Terra: Craft a Protectio rune with !Pot! Potency.",
+		"EXTENDED_DESCRIPTION":[" NL (Can Craft.)"]
 	},
 	"Runesmith:Fortify": {
 		"NAME": "Fortify",
@@ -46,7 +48,8 @@
 	},
 	"Runesmith:CraftIncendium": {
 		"NAME": "Craft Incendium",
-		"DESCRIPTION": "3 Ignis: Craft an Incendium rune with !Pot! Potency."
+		"DESCRIPTION": "3 Ignis: Craft an Incendium rune with !Pot! Potency.",
+		"EXTENDED_DESCRIPTION":[" NL (Can Craft.)"]
 	},
 	"Runesmith:HammerSlam": {
 		"NAME": "Hammer Slam",
@@ -118,7 +121,8 @@
 	"Runesmith:CraftReservo": {
 		"NAME": "Craft Reservo",
 		"DESCRIPTION": "2 Aqua: Craft a Reservo rune. NL Exhaust.",
-		"UPGRADE_DESCRIPTION": "2 Aqua: Craft a Reservo+ rune. NL Exhaust."
+		"UPGRADE_DESCRIPTION": "2 Aqua: Craft a Reservo+ rune. NL Exhaust.",
+		"EXTENDED_DESCRIPTION":[" NL (Can Craft.)"]
 	},
 	"Runesmith:HammerPolish": {
 		"NAME": "Hammer Polish",
@@ -134,16 +138,19 @@
 	},
 	"Runesmith:CraftSpiculum": {
 		"NAME": "Craft Spiculum",
-		"DESCRIPTION": "3 Ignis 1 Aqua: Craft a Spiculum rune with !Pot! Potency. NL Exhaust."
+		"DESCRIPTION": "3 Ignis 1 Aqua: Craft a Spiculum rune with !Pot! Potency. NL Exhaust.",
+		"EXTENDED_DESCRIPTION":[" NL (Can Craft.)"]
 	},
 	"Runesmith:CraftPotentia": {
 		"NAME": "Craft Potentia",
-		"DESCRIPTION": "2 Ignis 2 Terra 2 Aqua: Craft a Potentia rune with !Pot! Potency. Remove your oldest rune."
+		"DESCRIPTION": "2 Ignis 2 Terra 2 Aqua: Craft a Potentia rune with !Pot! Potency. Remove your oldest rune.",
+		"EXTENDED_DESCRIPTION":[" NL (Can Craft.)"]
 	},
 	"Runesmith:CraftFerro": {
 		"NAME": "Craft Ferro",
 		"DESCRIPTION": "2 Terra 1 Aqua: Craft an Ferro rune with !Pot! Potency. Exhaust.",
-		"UPGRADE_DESCRIPTION": "2 Terra 1 Aqua: Craft an Ferro rune with !Pot! Potency."
+		"UPGRADE_DESCRIPTION": "2 Terra 1 Aqua: Craft an Ferro rune with !Pot! Potency.",
+		"EXTENDED_DESCRIPTION":[" NL (Can Craft.)"]
 	},
 	"Runesmith:HammerTime": {
 		"NAME": "Hammer Time",
@@ -160,7 +167,8 @@
 	"Runesmith:ChaoticBlast": {
 		"NAME": "Chaotic Blast",
 		"DESCRIPTION": "Deal !D! damage. !M! Ignis !M! Terra !M! Aqua: Craft a random rune.",
-		"UPGRADE_DESCRIPTION" : "Deal !D! damage. !M! Ignis !M! Terra !M! Aqua: Craft two random runes."
+		"UPGRADE_DESCRIPTION" : "Deal !D! damage. !M! Ignis !M! Terra !M! Aqua: Craft two random runes.",
+		"EXTENDED_DESCRIPTION":[" NL (Can Craft.)"]
 	},
 	"Runesmith:Shatterune": {
 		"NAME": "Shatterune",
@@ -192,11 +200,13 @@
 	"Runesmith:CraftIndustria": {
 		"NAME": "Craft Industria",
 		"DESCRIPTION": "!M! Aqua: Craft an Industria rune.",
-		"UPGRADE_DESCRIPTION": "!M! Aqua: Craft two Industria rune."
+		"UPGRADE_DESCRIPTION": "!M! Aqua: Craft two Industria rune.",
+		"EXTENDED_DESCRIPTION":[" NL (Can Craft.)"]
 	},
 	"Runesmith:CraftMedicinae": {
 		"NAME": "Craft Medicinae",
-		"DESCRIPTION": "5 Terra: Craft a Medicinae rune with !Pot! Potency. NL Exhaust."
+		"DESCRIPTION": "5 Terra: Craft a Medicinae rune with !Pot! Potency. NL Exhaust.",
+		"EXTENDED_DESCRIPTION":[" NL (Can Craft.)"]
 	},
 	"Runesmith:LastStand": {
 		"NAME": "Last Stand",
@@ -253,7 +263,8 @@
 	},
 	"Runesmith:CraftMagma": {
 		"NAME": "Craft Magma",
-		"DESCRIPTION": "2 Ignis 1 Terra: Craft a Magma rune with !Pot! Potency."
+		"DESCRIPTION": "2 Ignis 1 Terra: Craft a Magma rune with !Pot! Potency.",
+		"EXTENDED_DESCRIPTION":[" NL (Can Craft.)"]
 	},
 	"Runesmith:Rearm": {
 		"NAME": "Rearm",

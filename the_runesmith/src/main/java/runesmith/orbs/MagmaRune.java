@@ -23,8 +23,10 @@ public class MagmaRune extends RuneOrb {
 	}
 	
 	@Override
-	public void onStartOfTurn() {
+	public void onEndOfTurn() {
 		this.activateEffect();
+		AbstractPlayer p = AbstractDungeon.player;
+
 		AbstractDungeon.actionManager.addToBottom(
 		new DamageRandomEnemyAction(
 					new DamageInfo(AbstractDungeon.player, 
@@ -33,12 +35,6 @@ public class MagmaRune extends RuneOrb {
 					AbstractGameAction.AttackEffect.FIRE
 				)
 		);
-	}
-	
-	@Override
-	public void onEndOfTurn() {
-		this.activateEffect();
-		AbstractPlayer p = AbstractDungeon.player;
 		AbstractDungeon.actionManager.addToBottom(
 				  new GainBlockAction(p, p, this.potential/2)
 				);
