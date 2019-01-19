@@ -30,22 +30,28 @@ public class PermafrostPower extends AbstractPower {
 	
 	public void atStartOfTurnPostDraw() {
 		int blockGainAmt = atTurnEndBlock/2;
-		if (blockGainAmt > 0 && !owner.hasPower("Barricade") && !owner.hasPower("Blur")) {
-			if (owner.isPlayer && AbstractDungeon.player.hasRelic("Calipers")) {
-				if (owner.currentBlock < blockGainAmt) {
-					flash();
-					AbstractDungeon.actionManager.addToBottom(
-							new GainBlockAction(owner, owner, blockGainAmt-owner.currentBlock)
-					);
-				}
-			}
-			else {
-				flash();
-				AbstractDungeon.actionManager.addToBottom(
-						new GainBlockAction(owner, owner, blockGainAmt)
-				);
-			}
+		if (owner.currentBlock < blockGainAmt) {
+			flash();
+			AbstractDungeon.actionManager.addToBottom(
+					new GainBlockAction(owner, owner, blockGainAmt-owner.currentBlock)
+			);
 		}
+//		if (blockGainAmt > 0 && !owner.hasPower("Barricade") && !owner.hasPower("Blur")) {
+//			if (owner.isPlayer && AbstractDungeon.player.hasRelic("Calipers")) {
+//				if (owner.currentBlock < blockGainAmt) {
+//					flash();
+//					AbstractDungeon.actionManager.addToBottom(
+//							new GainBlockAction(owner, owner, blockGainAmt-owner.currentBlock)
+//					);
+//				}
+//			}
+//			else {
+//				flash();
+//				AbstractDungeon.actionManager.addToBottom(
+//						new GainBlockAction(owner, owner, blockGainAmt)
+//				);
+//			}
+//		}
 	}
 	
 	public void atEndOfRound() {
@@ -53,7 +59,10 @@ public class PermafrostPower extends AbstractPower {
 	}
 
 	public void updateDescription() {
-		this.description = DESCRIPTIONS[0];
+		if (owner.isPlayer)
+			this.description = DESCRIPTIONS[0];
+		else
+			this.description = DESCRIPTIONS[1];
 	}
 	
 }

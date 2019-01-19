@@ -67,6 +67,9 @@
 	},
 	"Runesmith:PermafrostPower": {
 		"NAME": "Permafrost",
-		"DESCRIPTIONS": ["Keep half of your #yBlock at the start of your turn."]
+		"DESCRIPTIONS": [
+			"#yBlock won't go below half at the start of your turn.",
+			"#yBlock won't go below half at the start of its turn."
+		]
 	}
 }
