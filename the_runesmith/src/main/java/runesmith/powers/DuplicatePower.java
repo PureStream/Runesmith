@@ -70,8 +70,8 @@ public class DuplicatePower extends AbstractPower {
 	
 	public void atEndOfTurn(boolean isPlayer) {
 		if (isPlayer) {
-			if (this.owner.hasPower("DuplicatePower"))
-				AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, "DuplicatePower"));
+			if (this.owner.hasPower("Runesmith:DuplicatePower"))
+				AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, "Runesmith:DuplicatePower"));
 		}
 	}
 	
