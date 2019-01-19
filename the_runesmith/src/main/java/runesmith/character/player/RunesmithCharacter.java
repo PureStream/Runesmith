@@ -113,7 +113,7 @@ public class RunesmithCharacter extends CustomPlayer {
 
 	@Override
 	public String getCustomModeCharacterButtonSoundKey() {
-		return "CARD_UPGRADE";
+		return "RUNESMITH_HAMMER";
 	}
 
 	@Override
