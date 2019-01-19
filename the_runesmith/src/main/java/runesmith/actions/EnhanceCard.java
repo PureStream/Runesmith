@@ -12,8 +12,8 @@ public abstract class EnhanceCard {
 		//add 1 to enhance counter
 		EnhanceCountField.enhanceCount.set(c,EnhanceCountField.enhanceCount.get(c) + 1);
 		int currentEnhance = EnhanceCountField.enhanceCount.get(c);
-		if(currentEnhance > 10) {
-			EnhanceCountField.enhanceCount.set(c,10);
+		if(currentEnhance > 99) {
+			EnhanceCountField.enhanceCount.set(c,99);
 		}
 		if(c instanceof AbstractRunicCard) {
 			((AbstractRunicCard) c).upgradePotency(0);

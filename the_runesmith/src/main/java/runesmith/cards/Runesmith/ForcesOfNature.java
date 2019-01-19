@@ -47,9 +47,9 @@ public class ForcesOfNature extends CustomCard{
 	@Override
 	public void use(AbstractPlayer arg0, AbstractMonster arg1) {
 		AbstractPlayer p = AbstractDungeon.player;
-		int elem = ElementsGainedCountField.elementsCount.get(p);
+//		int elem = ElementsGainedCountField.elementsCount.get(p);
 		
-		this.baseDamage = (elem * this.magicNumber);
+//		this.baseDamage = (elem * this.magicNumber);
 		calculateCardDamage(null);
 		
 
