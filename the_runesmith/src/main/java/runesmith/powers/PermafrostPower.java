@@ -30,7 +30,7 @@ public class PermafrostPower extends AbstractPower {
 	
 	public void atStartOfTurnPostDraw() {
 		int blockGainAmt = atTurnEndBlock/2;
-		if (atTurnEndBlock > 0 || !owner.hasPower("Barricade") || owner.hasPower("Blur")) {
+		if (atTurnEndBlock > 0 && !owner.hasPower("Barricade") && !owner.hasPower("Blur")) {
 			if (owner.isPlayer && AbstractDungeon.player.hasRelic("Calipers")) {
 				if (owner.currentBlock < blockGainAmt) {
 					flash();
