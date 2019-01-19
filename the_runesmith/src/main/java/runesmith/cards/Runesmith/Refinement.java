@@ -1,5 +1,6 @@
 package runesmith.cards.Runesmith;
 
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -34,6 +35,15 @@ public class Refinement extends CustomCard {
 			CardTarget.NONE
 		);
 	}
+	
+	public void onMoveToDiscard() {
+		if (this.upgraded) {
+			this.rawDescription = UPGRADE_DESCRIPTION;
+		} else {
+			this.rawDescription = DESCRIPTION;
+		}
+		initializeDescription();
+	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		int cnt = EnergyPanel.totalCount;
@@ -47,6 +57,8 @@ public class Refinement extends CustomCard {
 			AbstractDungeon.actionManager.addToBottom(
 					new RefinementAction(cnt)
 			);
+			AbstractDungeon.actionManager.addToBottom(
+					new GainEnergyAction(1));
 		}
 	}
 

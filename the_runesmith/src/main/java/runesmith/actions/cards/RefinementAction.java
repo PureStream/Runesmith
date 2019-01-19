@@ -3,7 +3,6 @@ package runesmith.actions.cards;
 import java.util.ArrayList;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.AbstractCard.CardType;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -50,8 +49,6 @@ public class RefinementAction extends AbstractGameAction{
 						for (int i=0; i<enhanceNums; i++)
 							EnhanceCard.enhance(c);
 						c.superFlash(RunesmithMod.BEIGE);
-						AbstractDungeon.actionManager.addToBottom(
-								new GainEnergyAction(1));
 						this.isDone = true;
 						return;
 					}
@@ -69,8 +66,6 @@ public class RefinementAction extends AbstractGameAction{
 				for (int i=0; i<enhanceNums; i++)
 					EnhanceCard.enhance(this.p.hand.getTopCard());
 				this.p.hand.getTopCard().superFlash(RunesmithMod.BEIGE);
-				AbstractDungeon.actionManager.addToBottom(
-						new GainEnergyAction(1));
 				returnCards();
 				this.isDone = true;
 			}
@@ -83,8 +78,6 @@ public class RefinementAction extends AbstractGameAction{
 				for (int i=0; i<enhanceNums; i++)
 					EnhanceCard.enhance(c);
 				c.superFlash(RunesmithMod.BEIGE);
-				AbstractDungeon.actionManager.addToBottom(
-						new GainEnergyAction(1));
 				this.p.hand.addToTop(c);
 			}
 			

@@ -300,8 +300,13 @@
 	},
 	"Runesmith:DoubleUp": {
 		"NAME": "Double Up",
-		"DESCRIPTION": "Gain !B! Block. Upgrade a card in your hand and Enhance it.",
-		"UPGRADE_DESCRIPTION": "Gain !B! Block. Upgrade 2 cards in your hand and Enhance them."
+		"DESCRIPTION": "Gain !B! Block. Upgrade !M! card in your hand and Enhance it.",
+		"UPGRADE_DESCRIPTION": "Gain !B! Block. Upgrade !M! cards in your hand and Enhance them."
+	},
+	"Runesmith:Refinement": {
+		"NAME": "Refinement",
+		"DESCRIPTION": "Enhance a card X-1 times. Gain [E] if a card is Enhanced.",
+		"UPGRADE_DESCRIPTION": "Enhance a card X times. Gain [E] if a card is Enhanced."
 	},
 	"Runesmith:WWWWWWWWWWWWWWWWWWWW": {
 		"NAME": "WWWWWWWWWWWWWWWWWWWW",
