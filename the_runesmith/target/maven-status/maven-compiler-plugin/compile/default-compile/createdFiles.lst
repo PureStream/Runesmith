@@ -86,6 +86,7 @@ runesmith\patches\LibraryTypeEnum.class
 runesmith\cards\Runesmith\ElementalConversion.class
 runesmith\cards\Runesmith\Demonforge.class
 runesmith\cards\Runesmith\CraftProtectio.class
+runesmith\cards\Runesmith\Permafrost.class
 runesmith\cards\Runesmith\CraftIndustria.class
 runesmith\cards\Runesmith\CraftMagma.class
 runesmith\actions\cards\RunicBulletsAction.class
@@ -134,3 +135,4 @@ runesmith\helpers\PotencyVariable.class
 runesmith\powers\AquaPower.class
 runesmith\actions\cards\DoubleUpAction.class
 runesmith\character\player\RunesmithPlayer.class
+runesmith\powers\PermafrostPower.class

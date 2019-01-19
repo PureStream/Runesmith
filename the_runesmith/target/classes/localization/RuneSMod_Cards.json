@@ -305,8 +305,12 @@
 	},
 	"Runesmith:Refinement": {
 		"NAME": "Refinement",
-		"DESCRIPTION": "Enhance a card X-1 times. Gain [E] if a card is Enhanced.",
-		"UPGRADE_DESCRIPTION": "Enhance a card X times. Gain [E] if a card is Enhanced."
+		"DESCRIPTION": "Enhance a card X-1 times. Gain [E] if you spend at least [E] .",
+		"UPGRADE_DESCRIPTION": "Enhance a card X times. Gain [E] if you spend at least [E] ."
+	},
+	"Runesmith:Permafrost": {
+		"NAME": "Permafrost",
+		"DESCRIPTION": "Keep half of your Block at the start of your turn. NL Gain 1 Terra and 1 Aqua."
 	},
 	"Runesmith:WWWWWWWWWWWWWWWWWWWW": {
 		"NAME": "WWWWWWWWWWWWWWWWWWWW",

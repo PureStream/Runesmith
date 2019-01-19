@@ -64,5 +64,9 @@
 	"Runesmith:MetallurgicalResearchPower": {
 		"NAME": "Metallurgical Research",
 		"DESCRIPTIONS": ["#yUpgrade and #yEnhance ALL your cards in #b"," turns."," turn."]
+	},
+	"Runesmith:PermafrostPower": {
+		"NAME": "Permafrost",
+		"DESCRIPTIONS": ["Keep half of your #yBlock at the start of your turn."]
 	}
 }
