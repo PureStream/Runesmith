@@ -19,7 +19,7 @@ public class Demonforge extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String IMG_PATH = "images/cards/Demonforge.png"; //<-------------- need some img
-	private static final int COST = 2;
+	private static final int COST = 1;
 	private static final int POWER_AMT = 4;
 	private static final int UPGRADE_POWER_AMT = 1;
 	private static final int BACKLASH_AMT = 1;
