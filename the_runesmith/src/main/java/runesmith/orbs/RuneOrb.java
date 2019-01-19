@@ -77,6 +77,7 @@ public abstract class RuneOrb extends AbstractOrb {
 		runes.add(new MagmaRune(MagmaRune.basePotency + playerPotency));
 		runes.add(new MedicinaeRune(MedicinaeRune.basePotency + playerPotency));
 		runes.add(new PotentiaRune(PotentiaRune.basePotency + playerPotency));
+		runes.add(new PrismaticRune(false));
 		runes.add(new ProtectioRune(ProtectioRune.basePotency + playerPotency));
 		runes.add(new ReservoRune());
 		runes.add(new SpiculumRune(SpiculumRune.basePotency + playerPotency));

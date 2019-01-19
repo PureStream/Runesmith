@@ -46,7 +46,7 @@
     "NAME": "Prismatic",
     "DESCRIPTION": [
       "At the start of turn, gain a random card.",
-      "At the start of turn, gain a random upgraded card each turn."
+      "At the start of turn, gain a random #yUpgraded card."
     ]
   },
   "Industria": {

@@ -90,14 +90,14 @@ public class ElementalShield extends CustomCard {
 			  new GainBlockAction(p, p, this.block)
 			);
 		}
-		if (p.hasPower("IgnisPower")) {
-			AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, "IgnisPower"));
+		if (p.hasPower("Runesmith:IgnisPower")) {
+			AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, "Runesmith:IgnisPower"));
 		}
-		if (p.hasPower("TerraPower")) {
-			AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, "TerraPower"));
+		if (p.hasPower("Runesmith:TerraPower")) {
+			AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, "Runesmith:TerraPower"));
 		}
-		if (p.hasPower("AquaPower")) {
-			AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, "AquaPower"));
+		if (p.hasPower("Runesmith:AquaPower")) {
+			AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, "Runesmith:AquaPower"));
 		}
 	}
 	

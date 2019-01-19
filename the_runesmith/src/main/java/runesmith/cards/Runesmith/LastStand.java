@@ -12,6 +12,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import basemod.abstracts.CustomCard;
 import runesmith.actions.DowngradeEntireDeckAction;
 import runesmith.patches.AbstractCardEnum;
+import runesmith.patches.CardStasisStatus;
+import runesmith.patches.EnhanceCountField;
 
 public class LastStand extends CustomCard {
 	public static final String ID = "Runesmith:LastStand";
@@ -45,17 +47,17 @@ public class LastStand extends CustomCard {
 	public static int countCards() {
 		int count = 0;
 		for(AbstractCard c : AbstractDungeon.player.discardPile.group) {
-			if(c.upgraded) {
+			if(c.upgraded||EnhanceCountField.enhanceCount.get(c) > 0||CardStasisStatus.isStasis.get(c)) {
 				count++;
 			}
 		}
 		for(AbstractCard c : AbstractDungeon.player.drawPile.group) {
-			if(c.upgraded) {
+			if(c.upgraded||EnhanceCountField.enhanceCount.get(c) > 0||CardStasisStatus.isStasis.get(c)) {
 				count++;
 			}
 		}
 		for(AbstractCard c : AbstractDungeon.player.hand.group) {
-			if(c.upgraded) {
+			if(c.upgraded||EnhanceCountField.enhanceCount.get(c) > 0||CardStasisStatus.isStasis.get(c)) {
 				count++;
 			}
 		}
