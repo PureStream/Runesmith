@@ -22,7 +22,7 @@
 	},
 	"Runesmith:DuplicatePower": {
 		"NAME": "Duplicate",
-		"DESCRIPTIONS": ["Your next #b","#yCraft card is played twice."," #yCraft cards is played twice."]
+		"DESCRIPTIONS": ["Create a copy of the next #b"," rune you #yCraft this turn."," runes you #yCraft this turn."]
 	},
 	"Runesmith:PotentialPower": {
 		"NAME": "Potential",

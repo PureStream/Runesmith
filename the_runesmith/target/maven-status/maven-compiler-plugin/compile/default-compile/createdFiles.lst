@@ -31,6 +31,7 @@ runesmith\powers\SpiculumDownPower.class
 runesmith\RunesmithMod.class
 runesmith\powers\FirestormPower.class
 runesmith\actions\StasisCard.class
+runesmith\cards\Runesmith\ConstructBifrost.class
 runesmith\actions\RuneChannelAction.class
 runesmith\cards\Runesmith\Shatterune.class
 runesmith\cards\Runesmith\Duplicate.class
@@ -42,6 +43,7 @@ runesmith\cards\Runesmith\CraftFerro.class
 runesmith\relics\Blueberries.class
 runesmith\actions\ApplyElementsPowerAction.class
 runesmith\cards\Runesmith\ForcesOfNature.class
+runesmith\patches\LibraryEnum.class
 runesmith\actions\DowngradeEntireDeckAction.class
 runesmith\powers\MetallurgicalResearchPower.class
 runesmith\orbs\MagmaRune.class
@@ -95,6 +97,7 @@ runesmith\cards\Runesmith\OneForEveryone.class
 runesmith\powers\IgnisPower.class
 runesmith\patches\StasisExhaustPrevention$preventExhaust.class
 runesmith\cards\Runesmith\ShiftingStrike.class
+runesmith\orbs\PrismaticRune.class
 runesmith\powers\FlexTapePower.class
 runesmith\actions\DiscardToDrawAction.class
 runesmith\cards\Runesmith\Firestorm.class
