@@ -270,7 +270,7 @@
 	},
 	"Runesmith:Rearm": {
 		"NAME": "Rearm",
-		"DESCRIPTION": "Shuffle all Upgraded cards from your discard pile into your draw pile.  NL Draw !M! cards. NL Exhaust."
+		"DESCRIPTION": "Shuffle all Upgraded cards from your discard pile into your draw pile.  NL Draw !M! cards."
 	},
 	"Runesmith:UnlimitedPower": {
 		"NAME": "Unlimited Power",

@@ -20,7 +20,7 @@ public class Rearm extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
 	private static final int UPG_DRAW_AMT = 1;
-	private static final int DRAW_AMT = 1;
+	private static final int DRAW_AMT = 2;
 	
 	public Rearm() {
 		super(
@@ -35,7 +35,6 @@ public class Rearm extends CustomCard {
 			AbstractCard.CardTarget.SELF
 		);
 		this.baseMagicNumber = this.magicNumber = DRAW_AMT;
-		this.exhaust = true;
 	}
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {
