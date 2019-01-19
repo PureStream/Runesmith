@@ -337,6 +337,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
 		cardsToAdd.add(new ForcesOfNature());
 		cardsToAdd.add(new LastStand());
 		cardsToAdd.add(new ConstructBifrost());
+		cardsToAdd.add(new GoWithTheFlow());
 	}
 
 	@Override

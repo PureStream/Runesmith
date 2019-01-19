@@ -50,7 +50,7 @@ public class ForcesOfNature extends CustomCard{
 //		int elem = ElementsGainedCountField.elementsCount.get(p);
 		
 //		this.baseDamage = (elem * this.magicNumber);
-		calculateCardDamage(null);
+		//calculateCardDamage(null);
 		
 
 		AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new com.megacrit.cardcrawl.vfx.combat.MindblastEffect(p.dialogX, p.dialogY, p.flipHorizontal), 0.1F));
@@ -83,17 +83,14 @@ public class ForcesOfNature extends CustomCard{
 	public void applyPowers() {
 		AbstractPlayer p = AbstractDungeon.player;
 		int elem = ElementsGainedCountField.elementsCount.get(p);
-		
-//		if(elem > 0) {
-			this.baseDamage = elem * this.magicNumber;
-			super.applyPowers();
-			if(!this.upgraded) {
-				this.rawDescription = (DESCRIPTION + EXTENDED_DESCRIPTION[0]);
-			}else {
-				this.rawDescription = (UPGRADE_DESCRIPTION + EXTENDED_DESCRIPTION[0]);
-			}
-			initializeDescription();
-//		}
+		this.baseDamage = elem * this.magicNumber;
+		super.applyPowers();
+		if(!this.upgraded) {
+			this.rawDescription = (DESCRIPTION + EXTENDED_DESCRIPTION[0]);
+		}else {
+			this.rawDescription = (UPGRADE_DESCRIPTION + EXTENDED_DESCRIPTION[0]);
+		}
+		initializeDescription();
 	}
 	
 	@Override
