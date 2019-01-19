@@ -109,6 +109,7 @@ public class ElementalShield extends CustomCard {
 		if (!this.upgraded) {
 			upgradeName();
 			upgradeMagicNumber(UPGRADE_TIMES_AMT);
+			this.rawDescription = DESCRIPTION_UPG;
 			initializeDescription();
 		}
 	}
