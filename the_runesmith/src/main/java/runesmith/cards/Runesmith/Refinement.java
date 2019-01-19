@@ -51,14 +51,16 @@ public class Refinement extends CustomCard {
 		if (p.hasRelic("Chemical X")) 
 			cnt += 2;
 		if (!this.freeToPlayOnce) {
+			boolean ifEnergyUsed = (EnergyPanel.totalCount > 0) ? true : false;
 			p.energy.use(EnergyPanel.totalCount);
+			if (ifEnergyUsed)
+				AbstractDungeon.actionManager.addToBottom(
+						new GainEnergyAction(1));
 		}
 		if (cnt > 0) {
 			AbstractDungeon.actionManager.addToBottom(
 					new RefinementAction(cnt)
 			);
-			AbstractDungeon.actionManager.addToBottom(
-					new GainEnergyAction(1));
 		}
 	}
 
