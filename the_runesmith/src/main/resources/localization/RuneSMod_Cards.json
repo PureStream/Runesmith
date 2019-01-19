@@ -92,7 +92,7 @@
 	},
 	"Runesmith:OneForEveryone": {
 		"NAME": "One for Everyone",
-		"DESCRIPTION": "Break your oldest rune to NL gain [E] , deal 1 damage, apply 1 Weak and Vulnerable to all enemies, NL gain 1 Block, and gain 1 of each Element."
+		"DESCRIPTION": "Break your oldest rune to NL gain [E] , deal 1 damage, apply 1 Weak and Vulnerable to ALL enemies, NL gain 1 Block, and gain 1 of each Element."
 	},
 	"Runesmith:RunicBullets": {
 		"NAME": "Runic Bullets",
@@ -116,7 +116,7 @@
 	},
 	"Runesmith:FieryHammer": {
 		"NAME": "Fiery Hammer",
-		"DESCRIPTION": "Deal !D! damage to all enemies. NL Can be upgraded any number of times."
+		"DESCRIPTION": "Deal !D! damage to ALL enemies. NL Can be upgraded any number of times."
 	},
 	"Runesmith:CraftReservo": {
 		"NAME": "Craft Reservo",
@@ -148,8 +148,8 @@
 	},
 	"Runesmith:CraftFerro": {
 		"NAME": "Craft Ferro",
-		"DESCRIPTION": "2 Terra 1 Aqua: Craft an Ferro rune with !Pot! Potency. Exhaust.",
-		"UPGRADE_DESCRIPTION": "2 Terra 1 Aqua: Craft an Ferro rune with !Pot! Potency.",
+		"DESCRIPTION": "2 Terra 1 Aqua: Craft a Ferro rune with !Pot! Potency. Exhaust.",
+		"UPGRADE_DESCRIPTION": "2 Terra 1 Aqua: Craft a Ferro rune with !Pot! Potency.",
 		"EXTENDED_DESCRIPTION":[" NL (Can Craft.)"]
 	},
 	"Runesmith:HammerTime": {
@@ -211,7 +211,7 @@
 	},
 	"Runesmith:LastStand": {
 		"NAME": "Last Stand",
-		"DESCRIPTION": "Downgrade all cards in your deck. Remove all Elements. Deal !M! times the number of downgraded cards to all enemies. NL Exhaust.",
+		"DESCRIPTION": "Downgrade ALL cards in your deck. Remove all Elements. Deal !M! times the number of downgraded cards to ALL enemies. NL Exhaust.",
 		"EXTENDED_DESCRIPTION":[
 			" NL (Deal !D! damage)"
 		]
@@ -269,7 +269,7 @@
 	},
 	"Runesmith:Rearm": {
 		"NAME": "Rearm",
-		"DESCRIPTION": "Shuffle all Upgraded cards in discard pile into draw pile.  NL Draw !M! cards. NL Exhaust."
+		"DESCRIPTION": "Shuffle all Upgraded cards from your discard pile into your draw pile.  NL Draw !M! cards. NL Exhaust."
 	},
 	"Runesmith:UnlimitedPower": {
 		"NAME": "Unlimited Power",
@@ -277,8 +277,8 @@
 	},
 	"Runesmith:ForcesOfNature": {
 		"NAME": "Forces Of Nature",
-		"DESCRIPTION": "Deal damage equals to the amount of elements gained this combat to all enemies.",
-		"UPGRADE_DESCRIPTION": "Deal damage equals to double the amount of elements gained this combat to all enemies.",
+		"DESCRIPTION": "Deal damage equals to the amount of elements gained this combat to ALL enemies.",
+		"UPGRADE_DESCRIPTION": "Deal damage equals to double the amount of elements gained this combat to ALL enemies.",
 		"EXTENDED_DESCRIPTION":[
 			" NL (Deals !D! damage.)",
      		""

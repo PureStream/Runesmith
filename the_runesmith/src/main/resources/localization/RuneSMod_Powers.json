@@ -22,7 +22,7 @@
 	},
 	"Runesmith:DuplicatePower": {
 		"NAME": "Duplicate",
-		"DESCRIPTIONS": ["Create a copy of the next #b"," rune you #Craft this turn."," runes you #Craft this turn."]
+		"DESCRIPTIONS": ["Create a copy of the next #b"," rune you #yCraft this turn."," runes you #yCraft this turn."]
 	},
 	"Runesmith:PotentialPower": {
 		"NAME": "Potential",
