@@ -41,6 +41,7 @@ public class CraftMedicinae extends AbstractRunicCard {
 		this.tags.add(CRAFT);
 		this.potency = this.basePotency = POTENCY;
 		this.exhaust = true;
+		this.tags.add(AbstractCard.CardTags.HEALING);
 	}
 	
 	@Override
