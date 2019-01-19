@@ -166,8 +166,8 @@
 	},
 	"Runesmith:ChaoticBlast": {
 		"NAME": "Chaotic Blast",
-		"DESCRIPTION": "Deal !D! damage. !M! Ignis !M! Terra !M! Aqua: Craft a random rune.",
-		"UPGRADE_DESCRIPTION" : "Deal !D! damage. !M! Ignis !M! Terra !M! Aqua: Craft two random runes.",
+		"DESCRIPTION": "Deal !D! damage to ALL enemies. !M! Ignis !M! Terra !M! Aqua: Craft a random rune.",
+		"UPGRADE_DESCRIPTION" : "Deal !D! damage to ALL enemies. !M! Ignis !M! Terra !M! Aqua: Craft two random runes.",
 		"EXTENDED_DESCRIPTION":[" NL (Can Craft.)"]
 	},
 	"Runesmith:Shatterune": {
@@ -195,7 +195,7 @@
 	},
 	"Runesmith:ConstructBifrost": {
 		"NAME": "Construct Bifrost",
-		"DESCRIPTION": "Downgrade a random card in your deck. 3 Ignis 3 Terra 3 Aqua: Craft a Prismatic rune. NL Exhaust.",
+		"DESCRIPTION": "Downgrade a random card in your deck. NL 3 Ignis 3 Terra 3 Aqua: Craft a Prismatic rune. NL Exhaust.",
 		"UPGRADE_DESCRIPTION": "Downgrade a random card in your deck. 3 Ignis 3 Terra 3 Aqua: Craft a Prismatic+ rune. NL Exhaust.",
 		"EXTENDED_DESCRIPTION":[" NL (Can Craft.)"]
 	},
