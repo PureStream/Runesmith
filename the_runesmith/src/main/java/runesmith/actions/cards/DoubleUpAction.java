@@ -57,7 +57,7 @@ public class DoubleUpAction extends AbstractGameAction{
 			this.p.hand.group.removeAll(this.cannotUpgrade);
 			
 			if (this.p.hand.group.size() > cardNums) {	
-				AbstractDungeon.handCardSelectScreen.open(TEXT[0], 2, false, false, false, false);
+				AbstractDungeon.handCardSelectScreen.open(TEXT[0], cardNums, false, false, false, false);
 				tickDuration();
 				return;
 			}

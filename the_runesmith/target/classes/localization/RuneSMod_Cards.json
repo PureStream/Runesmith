@@ -270,7 +270,7 @@
 	},
 	"Runesmith:Rearm": {
 		"NAME": "Rearm",
-		"DESCRIPTION": "Shuffle all Upgraded cards from your discard pile into your draw pile.  NL Draw !M! cards. NL Exhaust."
+		"DESCRIPTION": "Shuffle all Upgraded cards from your discard pile into your draw pile.  NL Draw !M! cards."
 	},
 	"Runesmith:UnlimitedPower": {
 		"NAME": "Unlimited Power",
@@ -289,6 +289,19 @@
 		"NAME": "Grand Slam",
 		"DESCRIPTION": "Deal 13 damage. Enhance all cards in your hand. NL Exhaust.",
 		"UPGRADE_DESCRIPTION": "Deal 13 damage. Enhance all cards in your hand twice. NL Exhaust."
+	},
+	"Runesmith:GoWithTheFlow": {
+		"NAME": "Go With The Flow",
+		"DESCRIPTION": "Deal !D! damage. Gain !M! Aqua. Gain 1 Potency. NL Exhaust."
+	},
+	"Runesmith:PerfectChisel": {
+		"NAME": "Perfect Chisel",
+		"DESCRIPTION": "Deal !D! damage. Gain 1 of each Element. Gain !M! Potency for this turn."
+	},
+	"Runesmith:DoubleUp": {
+		"NAME": "Double Up",
+		"DESCRIPTION": "Gain !B! Block. Upgrade a card in your hand and Enhance it.",
+		"UPGRADE_DESCRIPTION": "Gain !B! Block. Upgrade 2 cards in your hand and Enhance them."
 	},
 	"Runesmith:WWWWWWWWWWWWWWWWWWWW": {
 		"NAME": "WWWWWWWWWWWWWWWWWWWW",

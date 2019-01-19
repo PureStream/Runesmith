@@ -51,6 +51,7 @@ runesmith\patches\StasisExhaustPrevention.class
 runesmith\cards\Runesmith\Fortify.class
 runesmith\relics\BrokenRuby.class
 runesmith\cards\Runesmith\RunicBullets.class
+runesmith\cards\Runesmith\PerfectChisel.class
 runesmith\cards\Runesmith\RuneHurl.class
 runesmith\cards\Runesmith\HammerTime.class
 runesmith\patches\ElementsGainedCountField.class
@@ -93,6 +94,7 @@ runesmith\actions\cards\FortifyAction.class
 runesmith\cards\Runesmith\FlexTape.class
 runesmith\patches\EnhancedCardValueModified$calculateCardDamage.class
 runesmith\powers\UnlimitedPowerPower.class
+runesmith\cards\Runesmith\DoubleUp.class
 runesmith\cards\Runesmith\OneForEveryone.class
 runesmith\powers\IgnisPower.class
 runesmith\patches\StasisExhaustPrevention$preventExhaust.class
@@ -114,6 +116,7 @@ runesmith\patches\EnhancedCardValueModified$applyPowers.class
 runesmith\cards\Runesmith\ElementalShield.class
 runesmith\cards\Runesmith\Grindstone.class
 runesmith\actions\cards\RepurposeAction$1.class
+runesmith\cards\Runesmith\GoWithTheFlow.class
 runesmith\cards\Runesmith\HammerThrow.class
 runesmith\cards\Runesmith\ConvertAqua.class
 runesmith\cards\Runesmith\Defend_RS.class
@@ -127,4 +130,5 @@ runesmith\powers\RunesonancePower.class
 runesmith\actions\EnhanceCard.class
 runesmith\helpers\PotencyVariable.class
 runesmith\powers\AquaPower.class
+runesmith\actions\cards\DoubleUpAction.class
 runesmith\character\player\RunesmithPlayer.class
