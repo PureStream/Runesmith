@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import basemod.abstracts.CustomCard;
+import runesmith.actions.cards.DoubleUpAction;
 import runesmith.patches.AbstractCardEnum;
 
 public class DoubleUp extends CustomCard {
