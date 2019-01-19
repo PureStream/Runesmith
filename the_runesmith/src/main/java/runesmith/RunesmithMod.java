@@ -67,7 +67,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
 	
 	private static final String RUNESMITH_BUTTON = "images/character/runesmithButton.png";
 	private static final String RUNESMITH_PORTRAIT = "images/character/runesmithPortrait.png";
-	public static Color BEIGE = new Color(245f/255f, 245f/255f, 220f/255f, 1f);
+	public static Color BEIGE = new Color(175f/255f, 145f/255f, 100f/255f, 1f);
 	
 	private static final String CARD_STRING = "localization/RuneSMod_Cards.json";
 	private static final String RELIC_STRING = "localization/RuneSMod_Relics.json";

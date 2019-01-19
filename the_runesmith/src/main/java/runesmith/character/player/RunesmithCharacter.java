@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.badlogic.gdx.math.MathUtils;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.AbstractCard.CardColor;
@@ -18,6 +20,7 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import basemod.abstracts.CustomPlayer;
 import runesmith.RunesmithMod;
+import runesmith.cards.Runesmith.Fortify;
 import runesmith.patches.AbstractCardEnum;
 import runesmith.patches.PlayerClassEnum;
 
@@ -84,13 +87,13 @@ public class RunesmithCharacter extends CustomPlayer {
 
 	@Override
 	public void doCharSelectScreenSelectEffect() {
+		CardCrawlGame.sound.playA("CARD_UPGRADE", MathUtils.random(-0.2f, 0.2f));
 		CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.LOW, ScreenShake.ShakeDur.SHORT, false);
 	}
 
 	@Override
 	public int getAscensionMaxHPLoss() {
-		// TODO Auto-generated method stub
-		return 0;
+		return 4;
 	}
 
 	@Override
@@ -100,20 +103,17 @@ public class RunesmithCharacter extends CustomPlayer {
 
 	@Override
 	public Color getCardRenderColor() {
-		// TODO Auto-generated method stub
 		return RunesmithMod.BEIGE;
 	}
 
 	@Override
 	public Color getCardTrailColor() {
-		// TODO Auto-generated method stub
 		return RunesmithMod.BEIGE;
 	}
 
 	@Override
 	public String getCustomModeCharacterButtonSoundKey() {
-		// TODO Auto-generated method stub
-		return null;
+		return "CARD_UPGRADE";
 	}
 
 	@Override
@@ -123,32 +123,32 @@ public class RunesmithCharacter extends CustomPlayer {
 
 	@Override
 	public String getLocalizedCharacterName() {
-		// TODO Auto-generated method stub
 		return "The Runesmith";
 	}
 
 	@Override
 	public Color getSlashAttackColor() {
-		// TODO Auto-generated method stub
 		return RunesmithMod.BEIGE;
 	}
 
 	@Override
 	public AttackEffect[] getSpireHeartSlashEffect() {
-		// TODO Auto-generated method stub
-		return null;
+		return new AbstractGameAction.AttackEffect[] { AbstractGameAction.AttackEffect.BLUNT_HEAVY , 
+				AbstractGameAction.AttackEffect.FIRE, 
+				AbstractGameAction.AttackEffect.BLUNT_LIGHT, 
+				AbstractGameAction.AttackEffect.BLUNT_HEAVY  , 
+				AbstractGameAction.AttackEffect.FIRE, 
+				AbstractGameAction.AttackEffect.BLUNT_LIGHT};	   
 	}
 
 	@Override
 	public String getSpireHeartText() {
-		// TODO Auto-generated method stub
-		return null;
+		return "You charge up your hammer...";
 	}
 
 	@Override
 	public AbstractCard getStartCardForEvent() {
-		// TODO Auto-generated method stub
-		return null;
+		return new Fortify();
 	}
 
 	@Override
