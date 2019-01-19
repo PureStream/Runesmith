@@ -15,26 +15,21 @@ import runesmith.powers.ReservoPower;
 public class ReservoRune extends RuneOrb {
 	
 	private AbstractPlayer p = AbstractDungeon.player;
-	public ReservoRune(boolean upgraded, boolean activate) {
+	public ReservoRune(boolean upgraded) {
 		super( "Reservo",
 				upgraded,
 				0);
+		this.showPotentialValue = false;
+		this.useMultiBreak = true;
+	}
+	
+	@Override
+	public void onCraft() {
 		int amount = 1;
 		if(this.upgraded) {
 			amount = 2;
 		}
-		this.showPotentialValue = false;
-		this.useMultiBreak = true;
-		if(activate)
 		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RetainCardPower(p, amount), amount));
-	}
-	
-	public ReservoRune(boolean upgraded) {
-		this(upgraded, false);
-	}
-	
-	public ReservoRune() {
-		this(false, false);
 	}
 	
 	@Override

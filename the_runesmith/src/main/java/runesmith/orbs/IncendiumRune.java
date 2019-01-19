@@ -31,8 +31,8 @@ public class IncendiumRune extends RuneOrb {
 	
 	@Override
 	public void onBreak() {
-		onStartOfTurn();
-		onStartOfTurn();
+		onEndOfTurn();
+		onEndOfTurn();
 	}
 
 	@Override
