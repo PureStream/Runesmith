@@ -17,6 +17,7 @@ public class ElementalConversion extends CustomCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     private static final int COST = 0;
 
     private ModalChoice modal;
@@ -46,7 +47,9 @@ public class ElementalConversion extends CustomCard {
             for (int i=0; i<3; ++i) {
                 modal.getCard(i).upgrade();
             }
+            this.rawDescription = UPGRADE_DESCRIPTION;
         }
+        initializeDescription();
     }
 
     @Override

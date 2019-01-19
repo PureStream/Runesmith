@@ -87,7 +87,7 @@ public class RunesmithCharacter extends CustomPlayer {
 
 	@Override
 	public void doCharSelectScreenSelectEffect() {
-		CardCrawlGame.sound.playA("RUNESMITH_HAMMER", MathUtils.random(-0.1f, 0.1f));
+		CardCrawlGame.sound.playA("BLUNT_HEAVY", MathUtils.random(-0.1f, 0.1f));
 		CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.LOW, ScreenShake.ShakeDur.SHORT, false);
 	}
 
