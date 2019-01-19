@@ -298,6 +298,11 @@
 		"NAME": "Perfect Chisel",
 		"DESCRIPTION": "Deal !D! damage. Gain 1 of each Element. Gain !M! Potency for this turn."
 	},
+	"Runesmith:DoubleUp": {
+		"NAME": "Double Up",
+		"DESCRIPTION": "Gain !B! Block. Upgrade a card in your hand and Enhance it.",
+		"UPGRADE_DESCRIPTION": "Gain !B! Block. Upgrade 2 cards in your hand and Enhance them."
+	},
 	"Runesmith:WWWWWWWWWWWWWWWWWWWW": {
 		"NAME": "WWWWWWWWWWWWWWWWWWWW",
 		"DESCRIPTION": "WWWWWWWWWWWWWWWWWWWW"
