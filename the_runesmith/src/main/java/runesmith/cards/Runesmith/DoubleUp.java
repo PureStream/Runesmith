@@ -24,6 +24,8 @@ public class DoubleUp extends CustomCard {
 	private static final int COST = 2;
 	private static final int BLOCK_AMT = 10;
 	private static final int UPGRADE_PLUS_BLOCK = 2;
+	private static final int CARD_AMT = 1;
+	private static final int UPG_CARD_AMT = 1;
 	
 	public DoubleUp() {
 		super(
@@ -38,6 +40,7 @@ public class DoubleUp extends CustomCard {
 			AbstractCard.CardTarget.SELF
 		);
 		this.baseBlock = this.block = BLOCK_AMT;
+		this.baseMagicNumber = this.magicNumber = CARD_AMT;
 	}
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {
@@ -45,7 +48,7 @@ public class DoubleUp extends CustomCard {
 			new GainBlockAction(p, p, this.block)
 		);
 		AbstractDungeon.actionManager.addToBottom(
-			new DoubleUpAction(this.upgraded)
+			new DoubleUpAction(magicNumber)
 		);
 	}
 	
@@ -57,8 +60,9 @@ public class DoubleUp extends CustomCard {
 		if (!this.upgraded) {
 		  upgradeName();
 		  upgradeBlock(UPGRADE_PLUS_BLOCK);
+		  upgradeMagicNumber(UPG_CARD_AMT);
 		  this.rawDescription = UPGRADE_DESCRIPTION;
- 		   	initializeDescription();
+ 		  initializeDescription();
 		}
 	}
 	
