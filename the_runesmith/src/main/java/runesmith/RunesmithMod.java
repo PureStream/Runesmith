@@ -7,6 +7,8 @@ import com.badlogic.gdx.graphics.Color;
 
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
+import com.megacrit.cardcrawl.audio.Sfx;
+import com.megacrit.cardcrawl.audio.SoundMaster;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -19,6 +21,7 @@ import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import basemod.BaseMod;
+import basemod.ReflectionHacks;
 import basemod.abstracts.CustomRelic;
 import basemod.interfaces.EditCharactersSubscriber;
 import runesmith.cards.Runesmith.*;
@@ -31,6 +34,7 @@ import runesmith.relics.BrokenRuby;
 
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
@@ -98,6 +102,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
 		
 	public static void initialize() {
 		RunesmithMod mod = new RunesmithMod();
+
 	}
 	
 	@Override
@@ -108,6 +113,11 @@ public class RunesmithMod implements PostExhaustSubscriber,
 				RUNESMITH_PORTRAIT,
 				PlayerClassEnum.RUNESMITH_CLASS);
 		logger.info("done editing characters");
+	}
+	
+	public void loadAudio() {
+		HashMap<String, Sfx> map = (HashMap<String, Sfx>)ReflectionHacks.getPrivate(CardCrawlGame.sound, SoundMaster.class, "map");
+        map.put("RUNESMITH_HAMMER", new Sfx("audio/HammerDoubleHit.ogg", false));
 	}
 	
 	@Override
@@ -348,8 +358,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
 
 	@Override
 	public void receivePostInitialize() {
-		// TODO Auto-generated method stub
-		
+			this.loadAudio();
 	}
 
 	@Override
