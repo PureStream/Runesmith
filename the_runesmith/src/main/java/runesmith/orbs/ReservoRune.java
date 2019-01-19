@@ -23,6 +23,10 @@ public class ReservoRune extends RuneOrb {
 		this.useMultiBreak = true;
 	}
 	
+	public ReservoRune() {
+		this(false);
+	}
+	
 	@Override
 	public void onCraft() {
 		int amount = 1;
