@@ -17,7 +17,8 @@ public class DiscardToDrawAction extends AbstractGameAction {
 	
 	public void update() {
 		if (AbstractDungeon.player.discardPile.contains(this.card)) {
-			AbstractDungeon.player.drawPile.addToRandomSpot(card);
+			AbstractDungeon.player.hand.moveToDeck(card, true);
+			//AbstractDungeon.player.drawPile.addToRandomSpot(card);
 			/*this.card.unhover();
 			this.card.setAngle(0.0F, true);
 			this.card.lighten(false);

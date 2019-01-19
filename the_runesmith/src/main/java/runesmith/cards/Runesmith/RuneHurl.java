@@ -72,11 +72,6 @@ public class RuneHurl extends CustomCard {
 		return new RuneHurl();
 	}
 
-	@Override
-	public boolean isStrike() {
-		return true;
-	}
-
 	public void upgrade() {
 		if (!this.upgraded) {
 		  upgradeName();

@@ -38,7 +38,6 @@ public class MakeshiftArmor extends CustomCard {
 			AbstractCard.CardRarity.UNCOMMON,
 			AbstractCard.CardTarget.SELF
 		);
-		this.tags.add(BaseModCardTags.BASIC_DEFEND);
 		this.baseBlock = BLOCK_AMT;
 	}
 	
@@ -57,11 +56,6 @@ public class MakeshiftArmor extends CustomCard {
 	
 	public AbstractCard makeCopy() {
 		return new MakeshiftArmor();
-	}
-	
-	@Override
-	public boolean isDefend() {
-		return true;
 	}
 	
 	public void upgrade() {
