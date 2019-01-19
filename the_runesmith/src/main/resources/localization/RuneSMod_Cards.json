@@ -190,7 +190,8 @@
 	},
 	"Runesmith:Duplicate": {
 		"NAME": "Duplicate",
-		"DESCRIPTION": "This turn, your next !M! Craft card is played twice."
+		"DESCRIPTION": "Create a copy of the next rune you craft this turn.",
+		"UPGRADE_DESCRIPTION": "Create a copy of the next !M! runes you craft this turn."
 	},
 	"Runesmith:ConstructBifrost": {
 		"NAME": "Construct Bifrost",
