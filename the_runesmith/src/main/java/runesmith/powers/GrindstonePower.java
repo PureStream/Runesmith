@@ -12,6 +12,8 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
+import runesmith.actions.EnhanceCard;
+
 public class GrindstonePower extends AbstractPower {
 
 	public static final String POWER_ID = "Runesmith:GrindstonePower";
@@ -42,6 +44,10 @@ public class GrindstonePower extends AbstractPower {
 			flash();
 			card.upgrade();
 		}
+		else if (EnhanceCard.canEnhance(card)) {
+			flash();
+			EnhanceCard.enhance(card);
+		}	
 	}
 	
 	public void atEndOfTurn(boolean isPlayer) {

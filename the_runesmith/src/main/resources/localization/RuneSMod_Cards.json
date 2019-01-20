@@ -112,7 +112,7 @@
 	},
 	"Runesmith:Grindstone": {
 		"NAME": "Grindstone",
-		"DESCRIPTION": "Gain !B! Block. All cards played this turn become upgraded."
+		"DESCRIPTION": "All cards played this turn become upgraded. NL Enhance the card if it is upgraded."
 	},
 	"Runesmith:FieryHammer": {
 		"NAME": "Fiery Hammer",
@@ -312,6 +312,11 @@
 	"Runesmith:Permafrost": {
 		"NAME": "Permafrost",
 		"DESCRIPTION": "Block won't go below half at the start of your turn. NL Gain 1 Terra and 1 Aqua."
+	},
+	"Runesmith:Enchant": {
+		"NAME": "Enchant",
+		"DESCRIPTION": "Upgrade all cards in your hand. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Upgrade then Enhance all cards in your hand. NL Exhaust."
 	},
 	"Runesmith:WWWWWWWWWWWWWWWWWWWW": {
 		"NAME": "WWWWWWWWWWWWWWWWWWWW",
