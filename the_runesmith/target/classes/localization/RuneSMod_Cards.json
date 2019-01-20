@@ -240,7 +240,8 @@
 	},
 	"Runesmith:FlexTape": {
 		"NAME": "Flex Tape",
-		"DESCRIPTION": "Stasis !M! card in your hand each turn."
+		"DESCRIPTION": "Stasis and Retain !M! card in your hand each turn.",
+		"UPGRADE_DESCRIPTION": "Stasis and Retain !M! cards in your hand each turn."
 	},
 	"Runesmith:MetallurgicalResearch": {
 		"NAME": "Metallurgical Research",
@@ -310,7 +311,7 @@
 	},
 	"Runesmith:Permafrost": {
 		"NAME": "Permafrost",
-		"DESCRIPTION": "Keep half of your Block at the start of your turn. NL Gain 1 Terra and 1 Aqua."
+		"DESCRIPTION": "Block won't go below half at the start of your turn. NL Gain 1 Terra and 1 Aqua."
 	},
 	"Runesmith:WWWWWWWWWWWWWWWWWWWW": {
 		"NAME": "WWWWWWWWWWWWWWWWWWWW",

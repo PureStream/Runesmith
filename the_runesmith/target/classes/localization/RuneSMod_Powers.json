@@ -51,7 +51,7 @@
 	},
 	"Runesmith:FlexTapePower": {
 		"NAME": "Flex Tape",
-		"DESCRIPTIONS": ["#yStasis #b"," cards at the start of your turn."]
+		"DESCRIPTIONS": ["#yStasis and #yRetain #b"," card at the start of your turn."," cards at the start of your turn."]
 	},
 	"Runesmith:SpiculumDown":{
 		"NAME": "Thorns Down",
@@ -67,6 +67,9 @@
 	},
 	"Runesmith:PermafrostPower": {
 		"NAME": "Permafrost",
-		"DESCRIPTIONS": ["Keep half of your #yBlock at the start of your turn."]
+		"DESCRIPTIONS": [
+			"#yBlock won't go below half at the start of your turn.",
+			"#yBlock won't go below half at the start of its turn."
+		]
 	}
 }

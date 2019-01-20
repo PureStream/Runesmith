@@ -95,6 +95,7 @@ runesmith\orbs\FerroRune.class
 runesmith\cards\Runesmith\CraftPotentia.class
 runesmith\actions\cards\FortifyAction.class
 runesmith\cards\Runesmith\FlexTape.class
+runesmith\actions\cards\FlexTapeAction.class
 runesmith\patches\EnhancedCardValueModified$calculateCardDamage.class
 runesmith\powers\UnlimitedPowerPower.class
 runesmith\cards\Runesmith\DoubleUp.class
