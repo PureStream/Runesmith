@@ -21,7 +21,7 @@ public class Grindstone extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
 	private static final int UPGRADE_COST = 0;
-	private static final int BLOCK_AMT = 5;
+	//private static final int BLOCK_AMT = 5;
 	private static final int POWER_AMT = 1;
 	
 	public Grindstone() {
@@ -36,13 +36,13 @@ public class Grindstone extends CustomCard {
 			AbstractCard.CardRarity.UNCOMMON,
 			AbstractCard.CardTarget.SELF
 		);
-		this.baseBlock = this.block = BLOCK_AMT;
+		//this.baseBlock = this.block = BLOCK_AMT;
 	}
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(
-			new GainBlockAction(p, p, this.block)
-		);
+//		AbstractDungeon.actionManager.addToBottom(
+//			new GainBlockAction(p, p, this.block)
+//		);
 		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, 
 				new GrindstonePower(p,POWER_AMT),POWER_AMT));
 	}
