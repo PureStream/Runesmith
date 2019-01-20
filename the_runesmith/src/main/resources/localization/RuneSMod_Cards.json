@@ -112,7 +112,7 @@
 	},
 	"Runesmith:Grindstone": {
 		"NAME": "Grindstone",
-		"DESCRIPTION": "Gain !B! Block. All cards played this turn become upgraded."
+		"DESCRIPTION": "All cards played this turn become Upgraded. NL Enhance the card if it is Upgraded."
 	},
 	"Runesmith:FieryHammer": {
 		"NAME": "Fiery Hammer",
