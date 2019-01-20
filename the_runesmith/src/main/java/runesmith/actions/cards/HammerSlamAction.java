@@ -18,7 +18,7 @@ public class HammerSlamAction extends AbstractGameAction{
 	
 	@Override
 	public void update() {
-		ArrayList<String> runeList = new ArrayList();
+		ArrayList<String> runeList = new ArrayList<>();
 		for(AbstractOrb o : AbstractDungeon.player.orbs) {
 			if ((o.ID != null) && (!o.ID.equals("Empty")) && (!runeList.contains(o.ID))) {
 				runeList.add(o.ID);
