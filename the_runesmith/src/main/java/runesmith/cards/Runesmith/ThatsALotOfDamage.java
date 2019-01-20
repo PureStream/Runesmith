@@ -24,7 +24,7 @@ public class ThatsALotOfDamage extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
 	public static final String IMG_PATH = "images/cards/TALD.png";
-	private static final int COST = 4;
+	private static final int COST = 3;
 
 	public ThatsALotOfDamage() {
 		super(
