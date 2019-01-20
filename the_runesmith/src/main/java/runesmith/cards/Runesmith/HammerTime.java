@@ -21,10 +21,10 @@ public class HammerTime extends CustomCard {
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+	public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
 	public static final String IMG_PATH = "images/cards/HammerTime.png"; //<-------------- need some img
 	private static final int COST = 2;
 	private static final int ATTACK_DMG = 11;
-	private static final int UPGRADE_PLUS_DMG = 3;
 
 	public HammerTime() {
 		super(
@@ -52,6 +52,9 @@ public class HammerTime extends CustomCard {
 		);
 		AbstractDungeon.actionManager.addToBottom(
 				new HammerTimeAction());
+		if (upgraded) 
+			AbstractDungeon.actionManager.addToBottom(
+					new HammerTimeAction());
 	}
 
 	public AbstractCard makeCopy() {
@@ -61,7 +64,8 @@ public class HammerTime extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 		  upgradeName();
-		  upgradeDamage(UPGRADE_PLUS_DMG);
+		  this.rawDescription = DESCRIPTION_UPG;
+		  initializeDescription();
 		}
 	}
 }

@@ -154,7 +154,8 @@
 	},
 	"Runesmith:HammerTime": {
 		"NAME": "Hammer Time",
-		"DESCRIPTION": "Enhance ALL of your cards containing \"Hammer\". Deal !D! damage."
+		"DESCRIPTION": "Enhance ALL of your cards containing \"Hammer\". Deal !D! damage.",
+		"UPGRADE_DESCRIPTION": "Enhance ALL of your cards containing \"Hammer\" twice. Deal !D! damage."
 	},
 	"Runesmith:MakeshiftArmor": {
 		"NAME": "Makeshift Armor",
