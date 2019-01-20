@@ -320,6 +320,11 @@
 		"DESCRIPTION": "Upgrade all cards in your hand. NL Exhaust.",
 		"UPGRADE_DESCRIPTION": "Upgrade and Enhance all cards in your hand. NL Exhaust."
 	},
+	"Runesmith:HeatExchange": {
+		"NAME": "Heat Exchange",
+		"DESCRIPTION": "Deal !D! damage to ALL enemies. This card gains additional damage equal to current Ignis. Lose 2 Ignis.",
+		"UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. This card gains additional damage twice the current Ignis. Lose 2 Ignis."
+	},
 	"Runesmith:WWWWWWWWWWWWWWWWWWWW": {
 		"NAME": "WWWWWWWWWWWWWWWWWWWW",
 		"DESCRIPTION": "WWWWWWWWWWWWWWWWWWWW"
