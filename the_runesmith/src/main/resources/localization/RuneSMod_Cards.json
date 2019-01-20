@@ -104,8 +104,8 @@
 	},
 	"Runesmith:ElementalShield": {
 		"NAME": "Elemental Shield",
-		"DESCRIPTION": "Remove all Elements. NL Gain Block equals to double the number of Elements removed.",
-		"UPGRADE_DESCRIPTION": "Remove all Elements. NL Gain Block equals to triple the number of Elements removed.",
+		"DESCRIPTION": "Gain Block equals to double the amount of all your Elements. NL Remove half of your Elements.",
+		"UPGRADE_DESCRIPTION": "Gain Block equals to triple the amount of all your Elements. NL Remove half of your Elements.",
 		"EXTENDED_DESCRIPTION":[
 			" NL (Gain !B! Block)"
 		]

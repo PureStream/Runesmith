@@ -22,7 +22,7 @@ public class ConvertAqua extends CustomCard {
 	private static final int IGNIS_AMT = 1;
 	private static final int TERRA_AMT = 1;
 	private static final int AQUA_AMT = 2;
-	private static final int UPG_ELEMENT_AMT = 1;
+	private static final int UPG_ELEMENT_AMT = -1;
 	
 	public ConvertAqua() {
 		super(
@@ -36,18 +36,18 @@ public class ConvertAqua extends CustomCard {
 			AbstractCard.CardRarity.SPECIAL,
 			AbstractCard.CardTarget.SELF
 		);
-		this.magicNumber = this.baseMagicNumber = IGNIS_AMT;
+		this.magicNumber = this.baseMagicNumber = AQUA_AMT;
 	}
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		
 		if (p.hasPower("Runesmith:AquaPower")) {
-			AbstractDungeon.actionManager.addToTop(new ReducePowerAction(p, p, "Runesmith:AquaPower", AQUA_AMT));
+			AbstractDungeon.actionManager.addToTop(new ReducePowerAction(p, p, "Runesmith:AquaPower", this.magicNumber));
 //			AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, 
 //					new AquaPower(p, -AQUA_AMT),-AQUA_AMT));
 		}
 		AbstractDungeon.actionManager.addToBottom(
-				new ApplyElementsPowerAction(p,p,this.magicNumber,TERRA_AMT,0));
+				new ApplyElementsPowerAction(p,p,IGNIS_AMT,TERRA_AMT,0));
 //		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, 
 //				new IgnisPower(p, magicNumber), magicNumber));
 //		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, 

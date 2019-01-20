@@ -1,7 +1,7 @@
 package runesmith.cards.Runesmith;
 
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -91,13 +91,13 @@ public class ElementalShield extends CustomCard {
 			);
 		}
 		if (p.hasPower("Runesmith:IgnisPower")) {
-			AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, "Runesmith:IgnisPower"));
+			AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, "Runesmith:IgnisPower", Math.round(p.getPower("Runesmith:IgnisPower").amount/2)));
 		}
 		if (p.hasPower("Runesmith:TerraPower")) {
-			AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, "Runesmith:TerraPower"));
+			AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, "Runesmith:TerraPower", Math.round(p.getPower("Runesmith:TerraPower").amount/2)));
 		}
 		if (p.hasPower("Runesmith:AquaPower")) {
-			AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, "Runesmith:AquaPower"));
+			AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, "Runesmith:AquaPower", Math.round(p.getPower("Runesmith:AquaPower").amount/2)));
 		}
 	}
 	
