@@ -10,19 +10,19 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import basemod.abstracts.CustomCard;
 import runesmith.patches.AbstractCardEnum;
-import runesmith.powers.FlexTapePower;
+import runesmith.powers.CreatorFormPower;
 
-public class FlexTape extends CustomCard {
-	public static final String ID = "Runesmith:FlexTape";
+public class CreatorForm extends CustomCard {
+	public static final String ID = "Runesmith:CreatorForm";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	public static final String IMG_PATH = "images/cards/FlexTape.png"; //<-------------- need some img
-	private static final int COST = 1;
-	private static final int POWER_AMT = 1;
+	public static final String IMG_PATH = "images/cards/CreatorForm.png"; //<-------------- need some img
+	private static final int COST = 3;
+	private static final int POWER_AMT = 2;
 	private static final int UPGRADE_POWER_AMT = 1;
 
-	public FlexTape() {
+	public CreatorForm() {
 		super(
 			ID,
 			NAME,
@@ -39,11 +39,11 @@ public class FlexTape extends CustomCard {
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, 
-				new FlexTapePower(p, this.magicNumber),this.magicNumber));
+				new CreatorFormPower(p, this.magicNumber),this.magicNumber));
 	}
 
 	public AbstractCard makeCopy() {
-		return new FlexTape();
+		return new CreatorForm();
 	}
 
 	public void upgrade() {

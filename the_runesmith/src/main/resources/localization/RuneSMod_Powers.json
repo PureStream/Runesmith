@@ -71,5 +71,9 @@
 			"#yBlock won't go below half at the start of your turn.",
 			"#yBlock won't go below half at the start of its turn."
 		]
+	},
+	"Runesmith:CreatorFormPower": {
+		"NAME": "Creator Form",
+		"DESCRIPTIONS": ["#yEnhance #b"," card at the start of your turn."," cards at the start of your turn."]
 	}
 }
