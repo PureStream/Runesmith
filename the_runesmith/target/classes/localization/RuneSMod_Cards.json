@@ -71,7 +71,7 @@
 	},
 	"Runesmith:ConvertAqua": {
 		"NAME": "Convert Aqua",
-		"DESCRIPTION": "Lose 2 Aqua. NL Gain !M! Ignis and 1 Terra."
+		"DESCRIPTION": "Lose !M! Aqua. NL Gain 1 Ignis and 1 Terra."
 	},
 	"Runesmith:Repurpose": {
 		"NAME": "Repurpose",
@@ -92,7 +92,7 @@
 	},
 	"Runesmith:OneForEveryone": {
 		"NAME": "One for Everyone",
-		"DESCRIPTION": "Break your oldest rune to NL gain [E] , deal 1 damage, apply 1 Weak and Vulnerable to ALL enemies, NL gain 1 Block, and gain 1 of each Element."
+		"DESCRIPTION": "Break your oldest rune to NL gain [E] , deal 1 damage, apply 1 Weak and Vulnerable to ALL enemies, NL gain 1 Block, gain 1 of each Element and draw 1 card."
 	},
 	"Runesmith:RunicBullets": {
 		"NAME": "Runic Bullets",
@@ -104,15 +104,15 @@
 	},
 	"Runesmith:ElementalShield": {
 		"NAME": "Elemental Shield",
-		"DESCRIPTION": "Remove all Elements. NL Gain Block equals to double the number of Elements removed.",
-		"UPGRADE_DESCRIPTION": "Remove all Elements. NL Gain Block equals to triple the number of Elements removed.",
+		"DESCRIPTION": "Gain Block equals to double the amount of all your Elements. NL Remove half of your Elements.",
+		"UPGRADE_DESCRIPTION": "Gain Block equals to triple the amount of all your Elements. NL Remove half of your Elements.",
 		"EXTENDED_DESCRIPTION":[
 			" NL (Gain !B! Block)"
 		]
 	},
 	"Runesmith:Grindstone": {
 		"NAME": "Grindstone",
-		"DESCRIPTION": "Gain !B! Block. All cards played this turn become upgraded."
+		"DESCRIPTION": "All cards played this turn become upgraded. NL Enhance the card if it is already upgraded."
 	},
 	"Runesmith:FieryHammer": {
 		"NAME": "Fiery Hammer",
@@ -154,7 +154,8 @@
 	},
 	"Runesmith:HammerTime": {
 		"NAME": "Hammer Time",
-		"DESCRIPTION": "Enhance ALL of your cards containing \"Hammer\". Deal !D! damage."
+		"DESCRIPTION": "Enhance ALL of your cards containing \"Hammer\". Deal !D! damage.",
+		"UPGRADE_DESCRIPTION": "Enhance ALL of your cards containing \"Hammer\" twice. Deal !D! damage."
 	},
 	"Runesmith:MakeshiftArmor": {
 		"NAME": "Makeshift Armor",
@@ -195,8 +196,8 @@
 	},
 	"Runesmith:ConstructBifrost": {
 		"NAME": "Construct Bifrost",
-		"DESCRIPTION": "Downgrade a random card in your deck. NL 3 Ignis 3 Terra 3 Aqua: Craft a Prismatic rune. NL Exhaust.",
-		"UPGRADE_DESCRIPTION": "Downgrade a random card in your deck. 3 Ignis 3 Terra 3 Aqua: Craft a Prismatic+ rune. NL Exhaust.",
+		"DESCRIPTION": "1 Ignis 1 Terra 1 Aqua: Craft a Prismatic rune.",
+		"UPGRADE_DESCRIPTION": "1 Ignis 1 Terra 1 Aqua: Craft a Prismatic+ rune.",
 		"EXTENDED_DESCRIPTION":[" NL (Can Craft.)"]
 	},
 	"Runesmith:CraftIndustria": {
@@ -240,8 +241,8 @@
 	},
 	"Runesmith:FlexTape": {
 		"NAME": "Flex Tape",
-		"DESCRIPTION": "Stasis and Retain !M! card in your hand each turn.",
-		"UPGRADE_DESCRIPTION": "Stasis and Retain !M! cards in your hand each turn."
+		"DESCRIPTION": "Stasis !M! card in your hand each turn.",
+		"UPGRADE_DESCRIPTION": "Stasis !M! cards in your hand each turn."
 	},
 	"Runesmith:MetallurgicalResearch": {
 		"NAME": "Metallurgical Research",
@@ -275,7 +276,8 @@
 	},
 	"Runesmith:UnlimitedPower": {
 		"NAME": "Unlimited Power",
-		"DESCRIPTION": "Elements are no longer consumed for Crafting."
+		"DESCRIPTION": "Elements are no longer consumed for Crafting.",
+		"UPGRADE_DESCRIPTION": "Elements are no longer consumed for Crafting. NL Innate."
 	},
 	"Runesmith:ForcesOfNature": {
 		"NAME": "Forces Of Nature",
@@ -312,6 +314,11 @@
 	"Runesmith:Permafrost": {
 		"NAME": "Permafrost",
 		"DESCRIPTION": "Block won't go below half at the start of your turn. NL Gain 1 Terra and 1 Aqua."
+	},
+	"Runesmith:Enchant": {
+		"NAME": "Enchant",
+		"DESCRIPTION": "Upgrade all cards in your hand. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Upgrade and Enhance all cards in your hand. NL Exhaust."
 	},
 	"Runesmith:WWWWWWWWWWWWWWWWWWWW": {
 		"NAME": "WWWWWWWWWWWWWWWWWWWW",

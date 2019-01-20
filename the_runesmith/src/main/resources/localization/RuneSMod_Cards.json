@@ -112,7 +112,7 @@
 	},
 	"Runesmith:Grindstone": {
 		"NAME": "Grindstone",
-		"DESCRIPTION": "All cards played this turn become upgraded. NL Enhance the card if it is upgraded."
+		"DESCRIPTION": "All cards played this turn become upgraded. NL Enhance the card if it is already upgraded."
 	},
 	"Runesmith:FieryHammer": {
 		"NAME": "Fiery Hammer",
@@ -276,7 +276,8 @@
 	},
 	"Runesmith:UnlimitedPower": {
 		"NAME": "Unlimited Power",
-		"DESCRIPTION": "Elements are no longer consumed for Crafting."
+		"DESCRIPTION": "Elements are no longer consumed for Crafting.",
+		"UPGRADE_DESCRIPTION": "Elements are no longer consumed for Crafting. NL Innate."
 	},
 	"Runesmith:ForcesOfNature": {
 		"NAME": "Forces Of Nature",

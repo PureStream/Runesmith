@@ -8,7 +8,7 @@
 	},
 	"Runesmith:BrokenRuby": {
 		"NAME": "Broken Ruby",
-		"FLAVOR": "Once was used by the greatest Runesmith",
+		"FLAVOR": "A crystal that resembles a red gem. Although itÅfs broken, faint energy still remains.",
 		"DESCRIPTIONS": [
 			"At the start of each combat, Gain #b1 #yIgnis. Gain #b1 #yIgnis for every three attacks played."
 		]

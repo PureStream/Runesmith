@@ -58,6 +58,7 @@ runesmith\cards\Runesmith\RuneHurl.class
 runesmith\cards\Runesmith\HammerTime.class
 runesmith\patches\ElementsGainedCountField.class
 runesmith\cards\Runesmith\StaticCage.class
+runesmith\cards\Runesmith\CreatorForm.class
 runesmith\cards\Runesmith\CraftReservo.class
 runesmith\powers\TerraPower.class
 runesmith\powers\PotentialPower.class
@@ -79,7 +80,9 @@ runesmith\actions\RemoveRuneAction.class
 runesmith\cards\Runesmith\LastStand.class
 runesmith\patches\PlayerClassEnum.class
 runesmith\actions\BreakWithoutRemovingRuneAction.class
+runesmith\actions\cards\CreatorFormAction.class
 runesmith\patches\EnhanceCountField.class
+runesmith\powers\CreatorFormPower.class
 runesmith\cards\Runesmith\HammerSlam.class
 runesmith\orbs\RuneOrb.class
 runesmith\cards\Runesmith\UnstableHammer.class
@@ -112,6 +115,7 @@ runesmith\patches\EnhancedCardValueModified$applyPowersToBlock.class
 runesmith\cards\Runesmith\EarthShield.class
 runesmith\actions\cards\RepurposeAction.class
 runesmith\orbs\FirestoneRune.class
+runesmith\cards\Runesmith\Enchant.class
 runesmith\orbs\SpiculumRune.class
 runesmith\actions\DowngradeRandomCardInDeckAction.class
 runesmith\orbs\ReservoRune.class
@@ -135,6 +139,7 @@ runesmith\powers\RunesonancePower.class
 runesmith\actions\EnhanceCard.class
 runesmith\helpers\PotencyVariable.class
 runesmith\powers\AquaPower.class
+runesmith\actions\cards\EnchantAction.class
 runesmith\actions\cards\DoubleUpAction.class
 runesmith\character\player\RunesmithPlayer.class
 runesmith\powers\PermafrostPower.class
