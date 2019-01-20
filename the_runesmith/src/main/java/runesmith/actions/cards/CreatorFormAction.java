@@ -47,10 +47,10 @@ public class CreatorFormAction extends AbstractGameAction{
 					if(EnhanceCard.canEnhance(c)) {
 						EnhanceCard.enhance(c);
 						c.superFlash(RunesmithMod.BEIGE);
-						this.isDone = true;
-						return;
 					}
 				}
+				this.isDone = true;
+				return;
 			}
 			
 			this.p.hand.group.removeAll(this.cannotEnhance);
@@ -66,8 +66,8 @@ public class CreatorFormAction extends AbstractGameAction{
 					EnhanceCard.enhance(c);
 					this.p.hand.getTopCard().superFlash(RunesmithMod.BEIGE);
 					returnCards();
-					this.isDone = true;
 				}			
+				this.isDone = true;
 			}
 			
 		}
