@@ -316,7 +316,7 @@
 	"Runesmith:Enchant": {
 		"NAME": "Enchant",
 		"DESCRIPTION": "Upgrade all cards in your hand. NL Exhaust.",
-		"UPGRADE_DESCRIPTION": "Upgrade then Enhance all cards in your hand. NL Exhaust."
+		"UPGRADE_DESCRIPTION": "Upgrade and Enhance all cards in your hand. NL Exhaust."
 	},
 	"Runesmith:WWWWWWWWWWWWWWWWWWWW": {
 		"NAME": "WWWWWWWWWWWWWWWWWWWW",

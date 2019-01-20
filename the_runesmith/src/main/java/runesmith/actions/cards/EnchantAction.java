@@ -31,15 +31,25 @@ public class EnchantAction extends AbstractGameAction {
 	
 	private void upgradeThenEnhanceAllCardsInGroup(CardGroup cardGroup) {
 		for (AbstractCard c : cardGroup.group) {
-			if (c.canUpgrade()) {
-				if (cardGroup.type == CardGroup.CardGroupType.HAND) {
-					c.superFlash();
+			
+			if (isUpgraded) {
+				if (c.canUpgrade()) {
+					c.upgrade();
 				}
-				c.upgrade();
-				if (isUpgraded)
+				if (EnhanceCard.canEnhance(c)) {
+					c.superFlash();
 					EnhanceCard.enhance(c);
-				c.applyPowers();
-			}	
+					c.applyPowers();
+				}
+			}
+			else {
+				if (c.canUpgrade()) {
+					c.superFlash();
+					c.upgrade();
+					c.applyPowers();
+				}
+			}
+			
 		}
 	}
 	
