@@ -76,7 +76,7 @@ public class ReservoRune extends RuneOrb {
 			//render upgrade +
 			FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, 
 					"+", this.cX + NUM_X_OFFSET, this.cY + this.bobEffect.y / 2.0F + NUM_Y_OFFSET ,
-					Color.GREEN.cpy(), this.fontScale*2);
+					Color.GREEN.cpy(), this.fontScale);
 		}
 	}
 }
