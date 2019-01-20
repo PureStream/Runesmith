@@ -112,7 +112,7 @@
 	},
 	"Runesmith:Grindstone": {
 		"NAME": "Grindstone",
-		"DESCRIPTION": "All cards played this turn become Upgraded. NL Enhance the card if it is Upgraded."
+		"DESCRIPTION": "All cards played this turn become upgraded. NL Enhance the card if it is upgraded."
 	},
 	"Runesmith:FieryHammer": {
 		"NAME": "Fiery Hammer",
