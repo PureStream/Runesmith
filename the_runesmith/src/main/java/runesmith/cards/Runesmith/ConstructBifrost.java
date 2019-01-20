@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import runesmith.actions.DowngradeRandomCardInDeckAction;
 import runesmith.actions.RuneChannelAction;
 import runesmith.orbs.PrismaticRune;
 import runesmith.patches.AbstractCardEnum;
@@ -24,7 +23,7 @@ public class ConstructBifrost extends AbstractRunicCard {
 	public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 	public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
 	private static final int COST = 1;
-	private static final int ELEMENT_AMT = 3;
+	private static final int ELEMENT_AMT = 1;
 	
 	public ConstructBifrost() {
 		super(
@@ -39,7 +38,6 @@ public class ConstructBifrost extends AbstractRunicCard {
 			AbstractCard.CardTarget.SELF
 		);
 		this.tags.add(CRAFT);
-		this.exhaust = true;
 	}
 	
 	@Override
@@ -72,8 +70,6 @@ public class ConstructBifrost extends AbstractRunicCard {
 	}
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(
-				new DowngradeRandomCardInDeckAction(p));
 		if (checkElements(ELEMENT_AMT,ELEMENT_AMT,ELEMENT_AMT)) {
 			AbstractDungeon.actionManager.addToBottom(
 					new RuneChannelAction(
