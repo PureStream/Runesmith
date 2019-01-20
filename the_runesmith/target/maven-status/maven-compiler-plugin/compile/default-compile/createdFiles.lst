@@ -25,6 +25,7 @@ runesmith\patches\CardTagEnum.class
 runesmith\actions\cards\MetallurgicalResearchAction.class
 runesmith\patches\EnhancedCardValueModified$resetAttributes.class
 runesmith\cards\Runesmith\HammerPolish.class
+runesmith\cards\Runesmith\ThatsALotOfDamage.class
 runesmith\cards\Runesmith\Refinement.class
 runesmith\cards\Runesmith\Rearm.class
 runesmith\cards\Runesmith\MakeshiftArmor.class

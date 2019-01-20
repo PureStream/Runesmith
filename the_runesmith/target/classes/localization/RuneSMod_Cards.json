@@ -212,7 +212,7 @@
 	},
 	"Runesmith:LastStand": {
 		"NAME": "Last Stand",
-		"DESCRIPTION": "Downgrade ALL cards in your deck. Remove all Elements. Deal !M! times the number of downgraded cards to ALL enemies. NL Exhaust.",
+		"DESCRIPTION": "Downgrade ALL cards in your deck. Remove all Elements. Deal !M! times the number of Downgraded cards to ALL enemies. NL Exhaust.",
 		"EXTENDED_DESCRIPTION":[
 			" NL (Deal !D! damage)"
 		]
@@ -260,7 +260,7 @@
 		"DESCRIPTION": "Draw until you get a Craft card and discard all other cards drawn. NL Exhaust."
 	},
 	"Runesmith:ThatsALotOfDAMAGE": {
-		"NAME": "That's a lot of DAMAGE",
+		"NAME": "That's A Lot Of DAMAGE!",
 		"DESCRIPTION": "Halves enemies current HP and Block. NL Exhaust.",
 		"UPGRADE_DESCRIPTION": "Halves enemies current HP and Block. NL Innate. NL Exhaust."
 	},

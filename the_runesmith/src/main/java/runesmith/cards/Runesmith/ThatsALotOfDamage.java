@@ -23,7 +23,7 @@ public class ThatsALotOfDamage extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String UPG_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
-	public static final String IMG_PATH = "images/cards/ThatsALotOfDamage.png";
+	public static final String IMG_PATH = "images/cards/TALD.png";
 	private static final int COST = 4;
 
 	public ThatsALotOfDamage() {
@@ -38,7 +38,6 @@ public class ThatsALotOfDamage extends CustomCard {
 			CardRarity.RARE,
 			CardTarget.ALL_ENEMY
 		);
-		this.isMultiDamage = true;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
