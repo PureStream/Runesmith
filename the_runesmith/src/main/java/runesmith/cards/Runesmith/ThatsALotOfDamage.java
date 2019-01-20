@@ -22,7 +22,7 @@ public class ThatsALotOfDamage extends CustomCard {
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	public static final String UPG_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+	public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
 	public static final String IMG_PATH = "images/cards/TALD.png";
 	private static final int COST = 4;
 
@@ -51,7 +51,7 @@ public class ThatsALotOfDamage extends CustomCard {
 			if (halfMonBlock > 0)
 				AbstractDungeon.actionManager.addToBottom(
 						new DamageAction(
-							m,
+							mo,
 							new DamageInfo(p, halfMonBlock, this.damageTypeForTurn),
 							AttackEffect.NONE
 						)
@@ -59,7 +59,7 @@ public class ThatsALotOfDamage extends CustomCard {
 			if (halfMonHealth > 0)
 				AbstractDungeon.actionManager.addToBottom(
 						new DamageAction(
-							m,
+							mo,
 							new DamageInfo(p, halfMonHealth, DamageType.HP_LOSS),
 							AttackEffect.NONE
 						)
@@ -75,8 +75,8 @@ public class ThatsALotOfDamage extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 		  upgradeName();
-		  this.rawDescription = UPG_DESCRIPTION;
 		  this.isInnate = true;
+		  this.rawDescription = DESCRIPTION_UPG;
 		  initializeDescription();
 		}
 	}
