@@ -20,6 +20,7 @@ public abstract class EnhanceCard {
 		}
 //		AdditionalCardDescriptions.modifyDescription(c);
 		c.initializeDescription();
+		c.calculateCardDamage(null);
 //		if(currentEnhance == 1)	c.rawDescription += "NL (Enhanced "+currentEnhance+" time.)";
 //		else c.rawDescription +=  "NL (Enhanced "+currentEnhance+" times.)";
 //		c.initializeDescription();

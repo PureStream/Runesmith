@@ -19,6 +19,7 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import basemod.abstracts.CustomPlayer;
+import basemod.animations.SpriterAnimation;
 import runesmith.RunesmithMod;
 import runesmith.cards.Runesmith.Fortify;
 import runesmith.patches.AbstractCardEnum;
@@ -32,9 +33,10 @@ public class RunesmithCharacter extends CustomPlayer {
     public static final String THE_RUNESMITH_CORPSE = "images/character/corpse.png"; // dead corpse
     public static final String THE_RUNESMITH_SKELETON_ATLAS = "images/character/idle/skeleton.atlas"; // spine animation atlas
     public static final String THE_RUNESMITH_SKELETON_JSON = "images/character/idle/skeleton.json"; // spine animation json
+    public static final String THE_RUNESMITH_SPRITER = "images/character/idle/animation.scml"; //Spriter File
 	
 	public RunesmithCharacter (String name) {
-		super(name, PlayerClassEnum.RUNESMITH_CLASS, null, "images/vfx.png",(String)null, (String)null);
+		super(name, PlayerClassEnum.RUNESMITH_CLASS, null, "images/vfx.png",new SpriterAnimation(THE_RUNESMITH_SPRITER));
 		
 		initializeClass(null, THE_RUNESMITH_SHOULDER_2, // required call to load textures and setup energy/loadout
 				THE_RUNESMITH_SHOULDER_1,
@@ -43,8 +45,8 @@ public class RunesmithCharacter extends CustomPlayer {
 		
 //		this.dialogX = (this.drawX + 0.0F * Settings.scale); // set location for text bubbles
 //		this.dialogY = (this.drawY + 220.0F * Settings.scale); // you can just copy these values
-		
-		loadAnimation(THE_RUNESMITH_SKELETON_ATLAS, THE_RUNESMITH_SKELETON_JSON, 1.0F);
+
+//		loadAnimation(THE_RUNESMITH_SKELETON_ATLAS, THE_RUNESMITH_SKELETON_JSON, 1.0F);
 		
 //		AnimationState.TrackEntry e = this.state.setAnimation(0, "animation", true);
 //		e.setTime(e.getEndTime() * MathUtils.random());
@@ -80,7 +82,7 @@ public class RunesmithCharacter extends CustomPlayer {
     public static final int ORB_SLOTS = 0;
     
 	public CharSelectInfo getLoadout() { // the rest of the character loadout so includes your character select screen info plus hp and starting gold
-		return new CharSelectInfo("The Runesmith", "TODO",
+		return new CharSelectInfo("The Runesmith", "A smith awoken from a deep cryosleep. NL Uses forgotten technology to craft runes.",
 				STARTING_HP, MAX_HP, ORB_SLOTS, STARTING_GOLD, HAND_SIZE,
 			this, getStartingRelics(), getStartingDeck(), false);
 	}
