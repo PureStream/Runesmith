@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<spriter_data scml_version="1.0" generator="BrashMonkey Spriter" generator_version="r11">
+<spriter_data scml_version="1.0" generator="BrashMonkey Spriter" generator_version="r11" pixel_mode="1">
     <folder id="0">
         <file id="0" name="RunesmithChar.png" width="380" height="624" pivot_x="0" pivot_y="1"/>
+        <file id="1" name="idle.png" width="120" height="320" pivot_x="0" pivot_y="1"/>
     </folder>
     <entity id="0" name="entity_000">
         <animation id="0" name="NewAnimation" length="1000" interval="100">
@@ -10,9 +11,9 @@
                     <object_ref id="0" timeline="0" key="0" z_index="0"/>
                 </key>
             </mainline>
-            <timeline id="0" name="RunesmithChar">
+            <timeline id="0" name="idle">
                 <key id="0" spin="0">
-                    <object folder="0" file="0" x="-177.5625" y="566.25"/>
+                    <object folder="0" file="1" x="-66" y="295" angle="0"/>
                 </key>
             </timeline>
         </animation>
