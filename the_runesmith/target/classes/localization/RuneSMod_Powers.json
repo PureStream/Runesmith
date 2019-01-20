@@ -13,8 +13,8 @@
 	},
 	"Runesmith:GrindstonePower": {
 		"NAME": "Grindstone",
-		"DESCRIPTIONS": ["This turn, ALL cards played become #yUpgraded.",
-			"For the next #b", " turns, ALL cards played become #yUpgraded."]
+		"DESCRIPTIONS": ["This turn, ALL cards played become #yUpgraded else #yEnhanced.",
+			"For the next #b", " turns, ALL cards played become #yUpgraded else #yEnhanced."]
 	},
 	"Runesmith:FirestormPower": {
 		"NAME": "Firestorm",
@@ -51,7 +51,7 @@
 	},
 	"Runesmith:FlexTapePower": {
 		"NAME": "Flex Tape",
-		"DESCRIPTIONS": ["#yStasis and #yRetain #b"," card at the start of your turn."," cards at the start of your turn."]
+		"DESCRIPTIONS": ["#yStasis #b"," card at the start of your turn."," cards at the start of your turn."]
 	},
 	"Runesmith:SpiculumDown":{
 		"NAME": "Thorns Down",
@@ -71,5 +71,9 @@
 			"#yBlock won't go below half at the start of your turn.",
 			"#yBlock won't go below half at the start of its turn."
 		]
+	},
+	"Runesmith:CreatorFormPower": {
+		"NAME": "Creator Form",
+		"DESCRIPTIONS": ["#yEnhance #b"," card at the start of your turn."," cards at the start of your turn."]
 	}
 }
