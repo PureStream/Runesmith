@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -32,7 +33,7 @@ public class OneForEveryone extends CustomCard {
 	private static final int COST_UPGRADE = 0;
 	private static final int ATTACK_DMG = 1;
 	private static final int BLOCK_AMT = 1;
-	private static final int ELEM_AMT = 1;
+	private static final int ONE_AMT = 1;
 
 	public OneForEveryone() {
 		super(
@@ -43,12 +44,12 @@ public class OneForEveryone extends CustomCard {
 			DESCRIPTION,
 			CardType.ATTACK,
 			AbstractCardEnum.RUNESMITH_BEIGE,
-			CardRarity.COMMON,
+			CardRarity.UNCOMMON,
 			CardTarget.ALL_ENEMY
 		);
 		this.baseDamage = ATTACK_DMG;
 		this.baseBlock = BLOCK_AMT;
-		this.baseMagicNumber = this.magicNumber = ELEM_AMT;
+		this.baseMagicNumber = this.magicNumber = ONE_AMT;
 		this.isMultiDamage = true;
 	}
 
@@ -89,6 +90,7 @@ public class OneForEveryone extends CustomCard {
 				AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p, 
 						new WeakPower(mo, this.magicNumber, false), this.magicNumber));
 			}
+			AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, this.magicNumber));
 		}
 	}
 
