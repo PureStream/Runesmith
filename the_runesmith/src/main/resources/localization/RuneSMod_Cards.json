@@ -276,7 +276,8 @@
 	},
 	"Runesmith:UnlimitedPower": {
 		"NAME": "Unlimited Power",
-		"DESCRIPTION": "Elements are no longer consumed for Crafting."
+		"DESCRIPTION": "Elements are no longer consumed for Crafting.",
+		"UPGRADE_DESCRIPTION": "Elements are no longer consumed for Crafting. NL Innate."
 	},
 	"Runesmith:ForcesOfNature": {
 		"NAME": "Forces Of Nature",
