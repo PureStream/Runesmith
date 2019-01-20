@@ -51,7 +51,7 @@
 	},
 	"Runesmith:FlexTapePower": {
 		"NAME": "Flex Tape",
-		"DESCRIPTIONS": ["#yStasis and #yRetain #b"," card at the start of your turn."," cards at the start of your turn."]
+		"DESCRIPTIONS": ["#yStasis #b"," card at the start of your turn."," cards at the start of your turn."]
 	},
 	"Runesmith:SpiculumDown":{
 		"NAME": "Thorns Down",
