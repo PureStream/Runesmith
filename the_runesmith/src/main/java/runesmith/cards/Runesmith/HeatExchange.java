@@ -20,7 +20,7 @@ public class HeatExchange extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
 	public static final String IMG_PATH = "images/cards/HeatExchange.png"; //<-------------- need some img
-	private static final int COST = 0;
+	private static final int COST = 1;
 	private static final int ATTACK_DMG = 6;
 	private static final int IGNIS_AMT = 2;
 
@@ -34,7 +34,7 @@ public class HeatExchange extends CustomCard {
 			CardType.ATTACK,
 			AbstractCardEnum.RUNESMITH_BEIGE,
 			CardRarity.COMMON,
-			CardTarget.ENEMY
+			CardTarget.ALL_ENEMY
 		);
 		this.baseDamage = this.damage = ATTACK_DMG;
 		this.isMultiDamage = true;
