@@ -26,7 +26,7 @@ public class HammerSlam extends CustomCard{
 	private static final int ATTACK_DMG = 12;
 	private static final int UPGRADE_PLUS_DMG = 4;
 	private static final int BASE_DRAW = 1;
-	private static final int UPGRADE_PLUS_DRAW = 1;
+//	private static final int UPGRADE_PLUS_DRAW = 1;
 	
 	public HammerSlam() {
 		super(

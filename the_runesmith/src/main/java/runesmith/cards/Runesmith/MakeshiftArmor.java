@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import basemod.abstracts.CustomCard;
-import basemod.helpers.BaseModCardTags;
 import runesmith.actions.ApplyElementsPowerAction;
 import runesmith.actions.DowngradeRandomCardInDeckAction;
 import runesmith.patches.AbstractCardEnum;
