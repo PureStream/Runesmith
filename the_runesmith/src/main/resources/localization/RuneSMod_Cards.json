@@ -71,7 +71,7 @@
 	},
 	"Runesmith:ConvertAqua": {
 		"NAME": "Convert Aqua",
-		"DESCRIPTION": "Lose 2 Aqua. NL Gain !M! Ignis and 1 Terra."
+		"DESCRIPTION": "Lose !M! Aqua. NL Gain 1 Ignis and 1 Terra."
 	},
 	"Runesmith:Repurpose": {
 		"NAME": "Repurpose",
