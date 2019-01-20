@@ -17,8 +17,9 @@ public class FlexTape extends CustomCard {
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+	public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
 	public static final String IMG_PATH = "images/cards/FlexTape.png"; //<-------------- need some img
-	private static final int COST = 1;
+	private static final int COST = 0;
 	private static final int POWER_AMT = 1;
 	private static final int UPGRADE_POWER_AMT = 1;
 
@@ -49,7 +50,9 @@ public class FlexTape extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 		  upgradeName();
-		  upgradeMagicNumber(UPGRADE_POWER_AMT);
+		  this.upgradeMagicNumber(UPGRADE_POWER_AMT);
+		  this.rawDescription = DESCRIPTION_UPG;
+		  initializeDescription();
 		}
 	}
 }

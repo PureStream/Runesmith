@@ -240,8 +240,8 @@
 	},
 	"Runesmith:FlexTape": {
 		"NAME": "Flex Tape",
-		"DESCRIPTION": "Stasis and Retain !M! card in your hand each turn.",
-		"UPGRADE_DESCRIPTION": "Stasis and Retain !M! cards in your hand each turn."
+		"DESCRIPTION": "Stasis !M! card in your hand each turn.",
+		"UPGRADE_DESCRIPTION": "Stasis !M! cards in your hand each turn."
 	},
 	"Runesmith:MetallurgicalResearch": {
 		"NAME": "Metallurgical Research",
