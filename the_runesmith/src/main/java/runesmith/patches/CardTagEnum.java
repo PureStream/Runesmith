@@ -7,4 +7,5 @@ public class CardTagEnum {
 	
 	@SpireEnum public static AbstractCard.CardTags HAMMER;
 	@SpireEnum public static AbstractCard.CardTags CRAFT;
+	@SpireEnum public static AbstractCard.CardTags CHISEL;
 }

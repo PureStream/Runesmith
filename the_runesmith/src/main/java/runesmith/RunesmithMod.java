@@ -350,6 +350,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
 		cardsToAdd.add(new GenerateForcefield());
 		cardsToAdd.add(new Preparation());
 		cardsToAdd.add(new Malloc());
+		cardsToAdd.add(new FrozenChisel());
 	}
 
 	@Override

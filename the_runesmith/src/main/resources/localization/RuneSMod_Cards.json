@@ -337,7 +337,11 @@
 	},
 	"Runesmith:Preparation": {
 		"NAME": "Preparation",
-		"DESCRIPTION": "Gain !M! of each Element. NL Can be upgraded 4 times. NL Draw a card. NL Exhaust. "
+		"DESCRIPTION": "Gain !M! of each Element. NL Can be upgraded 4 times. NL Draw a card. NL Exhaust."
+	},
+	"Runesmith:FrozenChisel": {
+		"NAME": "FrozenChisel",
+		"DESCRIPTION": "Deal !D! damage. Apply 1 Slow. Enemy loses Slow after !M! turns."
 	},
 	"Runesmith:WWWWWWWWWWWWWWWWWWWW": {
 		"NAME": "WWWWWWWWWWWWWWWWWWWW",

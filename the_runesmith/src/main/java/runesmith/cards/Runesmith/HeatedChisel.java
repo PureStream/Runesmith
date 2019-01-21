@@ -1,5 +1,7 @@
 package runesmith.cards.Runesmith;
 
+import static runesmith.patches.CardTagEnum.CHISEL;
+
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -43,6 +45,7 @@ public class HeatedChisel extends CustomCard {
 		);
 		this.baseDamage = ATTACK_DMG;
 		this.baseMagicNumber = this.magicNumber = VULNERABLE_AMT;
+		this.tags.add(CHISEL);
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {

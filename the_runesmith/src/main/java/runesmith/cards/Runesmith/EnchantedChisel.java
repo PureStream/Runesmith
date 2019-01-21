@@ -1,5 +1,7 @@
 package runesmith.cards.Runesmith;
 
+import static runesmith.patches.CardTagEnum.CHISEL;
+
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -45,6 +47,7 @@ public class EnchantedChisel extends CustomCard {
 		this.baseDamage = ATTACK_DMG;
 		this.baseBlock = BLOCK_AMT;
 		this.baseMagicNumber = this.magicNumber = WEAK_AMT;
+		this.tags.add(CHISEL);
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {

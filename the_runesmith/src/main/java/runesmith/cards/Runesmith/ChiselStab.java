@@ -1,5 +1,7 @@
 package runesmith.cards.Runesmith;
 
+import static runesmith.patches.CardTagEnum.CHISEL;
+
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -38,6 +40,7 @@ public class ChiselStab extends CustomCard {
 			CardTarget.ENEMY
 		);
 		this.baseDamage = ATTACK_DMG;
+		this.tags.add(CHISEL);
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {

@@ -12,27 +12,27 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.SlowPower;
 
 import basemod.abstracts.CustomCard;
 import runesmith.actions.ApplyElementsPowerAction;
 import runesmith.patches.AbstractCardEnum;
-import runesmith.powers.PotentialDownPower;
-import runesmith.powers.PotentialPower;
+import runesmith.powers.IceColdPower;
 
-public class PerfectChisel extends CustomCard {
-	public static final String ID = "Runesmith:PerfectChisel";
+public class FrozenChisel extends CustomCard {
+	public static final String ID = "Runesmith:FrozenChisel";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	public static final String IMG_PATH = "images/cards/PerfectChisel.png"; //<-------------- need some img
-	private static final int COST = 1;
-	private static final int ATTACK_DMG = 4;
-	private static final int UPGRADE_PLUS_DMG = 2;
-	private static final int ELEMENT_AMT = 1;
-	private static final int POT_AMT = 1;
-	private static final int UPG_POT_AMT = 1;
+	public static final String IMG_PATH = "images/cards/FrozenChisel.png"; //<-------------- need some img
+	private static final int COST = 2;
+	private static final int ATTACK_DMG = 11;
+	private static final int UPGRADE_PLUS_DMG = 4;
+	private static final int SLOW_RECOVER = 3;
+	private static final int UPGRADE_SLOW_RECOVER = 1;
+	private static final int AQUA_AMT = 2;
 
-	public PerfectChisel() {
+	public FrozenChisel() {
 		super(
 			ID,
 			NAME,
@@ -44,8 +44,8 @@ public class PerfectChisel extends CustomCard {
 			CardRarity.UNCOMMON,
 			CardTarget.ENEMY
 		);
-		this.baseDamage = this.damage = ATTACK_DMG;
-		this.baseMagicNumber = this.magicNumber = POT_AMT;
+		this.baseDamage = ATTACK_DMG;
+		this.baseMagicNumber = this.magicNumber = SLOW_RECOVER;
 		this.tags.add(CHISEL);
 	}
 
@@ -58,20 +58,23 @@ public class PerfectChisel extends CustomCard {
 			)
 		);
 		AbstractDungeon.actionManager.addToBottom(
-				new ApplyElementsPowerAction(p,p,ELEMENT_AMT,ELEMENT_AMT,ELEMENT_AMT));
-		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new PotentialPower(p, this.magicNumber), this.magicNumber));
-		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new PotentialDownPower(p, this.magicNumber), this.magicNumber));
+				new ApplyPowerAction(m,p,new SlowPower(m, 0),0));
+		AbstractDungeon.actionManager.addToBottom(
+				new ApplyPowerAction(m,p,new IceColdPower(m, this.magicNumber),this.magicNumber));
+		AbstractDungeon.actionManager.addToBottom(
+				new ApplyElementsPowerAction(p,p,0,0,AQUA_AMT));
+//		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new IgnisPower(p, IGNIS_AMT), IGNIS_AMT));
 	}
 
 	public AbstractCard makeCopy() {
-		return new PerfectChisel();
+		return new FrozenChisel();
 	}
 
 	public void upgrade() {
 		if (!this.upgraded) {
 		  upgradeName();
+		  upgradeMagicNumber(UPGRADE_SLOW_RECOVER);
 		  upgradeDamage(UPGRADE_PLUS_DMG);
-		  upgradeMagicNumber(UPG_POT_AMT);
 		}
 	}
 }
