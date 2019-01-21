@@ -335,6 +335,10 @@
 		"DESCRIPTION": "Downgrade all cards in your hand. Gain [E] [E].",
 		"UPGRADE_DESCRIPTION": "Downgrade all cards in your hand. Gain [E] [E] [E]."
 	},
+	"Runesmith:Preparation": {
+		"NAME": "Preparation",
+		"DESCRIPTION": "Gain !M! of each Element. NL Can be upgraded 4 times. NL Draw a card. NL Exhaust. "
+	},
 	"Runesmith:WWWWWWWWWWWWWWWWWWWW": {
 		"NAME": "WWWWWWWWWWWWWWWWWWWW",
 		"DESCRIPTION": "WWWWWWWWWWWWWWWWWWWW"
