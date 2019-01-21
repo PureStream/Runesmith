@@ -13,6 +13,10 @@ public class GrandSlamAction extends AbstractGameAction {
 	
 	private int enhanceNums;
 	
+	public GrandSlamAction() {
+		this(false);
+	}
+	
 	public GrandSlamAction(boolean upgraded) {
 		this.duration = Settings.ACTION_DUR_MED;
 		this.actionType = ActionType.WAIT;

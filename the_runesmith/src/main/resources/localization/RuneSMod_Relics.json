@@ -12,5 +12,19 @@
 		"DESCRIPTIONS": [
 			"At the start of each combat, Gain #b1 #yIgnis. Gain #b1 #yIgnis for every three attacks played."
 		]
+	},
+	"Runesmith:MiniCore": {
+		"NAME": "Minicore",
+		"FLAVOR": "A mysterious stone of long lost technology waiting for its time to be used once again.",
+		"DESCRIPTIONS": [
+			"Gain 1 #yPotency at the start of the combat."
+		]
+	},
+	"Runesmith:Nanobots": {
+		"NAME": "Nanobots",
+		"FLAVOR": "These tiny machines have wondrous properties. -Ranwid",
+		"DESCRIPTIONS": [
+			"At the start of combat. #yEnhance all cards in your hand."
+		]
 	}
 }
