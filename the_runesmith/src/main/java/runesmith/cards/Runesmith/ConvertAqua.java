@@ -31,7 +31,7 @@ public class ConvertAqua extends CustomCard {
 			IMG_PATH,
 			COST,
 			DESCRIPTION,
-			AbstractCard.CardType.POWER,
+			AbstractCard.CardType.SKILL,
 			AbstractCardEnum.RUNESMITH_BEIGE,
 			AbstractCard.CardRarity.SPECIAL,
 			AbstractCard.CardTarget.SELF
