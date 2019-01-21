@@ -49,10 +49,7 @@ public class GrandSlam extends CustomCard {
 			)
 		);
 		AbstractDungeon.actionManager.addToBottom(
-				new GrandSlamAction());
-		if (upgraded) 
-			AbstractDungeon.actionManager.addToBottom(
-					new GrandSlamAction());
+				new GrandSlamAction(upgraded));
 	}
 
 	public AbstractCard makeCopy() {
