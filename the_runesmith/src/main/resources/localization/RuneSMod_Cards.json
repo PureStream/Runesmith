@@ -347,6 +347,10 @@
 		"NAME": "Accelerate",
 		"DESCRIPTION": "Gain !B! Block. Break your oldest rune to draw !M! cards."
 	},
+	"Runesmith:NanitesCloud": {
+		"NAME": "Nanites Cloud",
+		"DESCRIPTION": "ALL characters loses !M! strength this turn. Exhaust."
+	},
 	"Runesmith:WWWWWWWWWWWWWWWWWWWW": {
 		"NAME": "WWWWWWWWWWWWWWWWWWWW",
 		"DESCRIPTION": "WWWWWWWWWWWWWWWWWWWW"
