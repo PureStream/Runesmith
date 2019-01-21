@@ -93,7 +93,7 @@ public class CraftIndustria extends AbstractRunicCard {
 		if (!this.upgraded) {
 		  upgradeName();
 		  upgradeMagicNumber(UPG_AQUA_AMT);
-		  this.rawDescription = UPGRADE_DESCRIPTION;
+//		  this.rawDescription = UPGRADE_DESCRIPTION;
 		  initializeDescription();
 		}
 	}
