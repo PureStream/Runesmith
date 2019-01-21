@@ -33,6 +33,8 @@ public class AquaPower extends AbstractPower {
 		if (this.amount <= 0) {
 			AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, "AquaPower"));
 		}
+		if (this.amount > 10)
+			this.amount = 10;
 	}
 
 	public void updateDescription() {

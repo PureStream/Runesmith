@@ -231,8 +231,8 @@
 		"DESCRIPTION": "Remove X rune and gain X buffer.",
 		"UPGRADE_DESCRIPTION": "Remove X+1 rune and gain X+1 buffer."
 	},
-	"Runesmith:ManaExplosion": {
-		"NAME": "Mana Explosion",
+	"Runesmith:EnergeticExplosion": {
+		"NAME": "Energetic Explosion",
 		"DESCRIPTION": "Break all of your runes. Draw a card and gain [E] for each rune destroyed."
 	},
 	"Runesmith:CreatorForm": {
