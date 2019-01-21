@@ -1,15 +1,15 @@
 {
 	"Runesmith:IgnisPower": {
 		"NAME": "Ignis",
-		"DESCRIPTIONS": ["You currently have #b", " #yIgnis."]
+		"DESCRIPTIONS": ["You currently have #b", " out of 10 #yIgnis."]
 	},
 	"Runesmith:TerraPower": {
 		"NAME": "Terra",
-		"DESCRIPTIONS": ["You currently have #b", " #yTerra."]
+		"DESCRIPTIONS": ["You currently have #b", " out of 10 #yTerra."]
 	},
 	"Runesmith:AquaPower": {
 		"NAME": "Aqua",
-		"DESCRIPTIONS": ["You currently have #b", " #yAqua."]
+		"DESCRIPTIONS": ["You currently have #b", " out of 10 #yAqua."]
 	},
 	"Runesmith:GrindstonePower": {
 		"NAME": "Grindstone",
@@ -77,5 +77,9 @@
 	"Runesmith:CreatorFormPower": {
 		"NAME": "Creator Form",
 		"DESCRIPTIONS": ["#yEnhance #b"," card at the start of your turn."," cards at the start of your turn."]
+	},
+	"Runesmith:PoweredAnvilPower": {
+		"NAME": "Powered Anvil",
+		"DESCRIPTIONS": ["After you #yEnhanced a card, #yEnhance it one additional time."]
 	}
 }

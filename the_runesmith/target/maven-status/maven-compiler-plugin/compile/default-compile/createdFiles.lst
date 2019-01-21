@@ -37,6 +37,7 @@ runesmith\cards\Runesmith\ConstructBifrost.class
 runesmith\actions\RuneChannelAction.class
 runesmith\cards\Runesmith\Shatterune.class
 runesmith\cards\Runesmith\Duplicate.class
+runesmith\cards\Runesmith\EnergeticExplosion.class
 runesmith\cards\Runesmith\Strike_RS.class
 runesmith\helpers\AdditionalCardDescriptions$updateDesc.class
 runesmith\cards\Runesmith\ConvertTerra.class
@@ -44,6 +45,7 @@ runesmith\cards\Runesmith\Runesonance.class
 runesmith\cards\Runesmith\CraftFerro.class
 runesmith\relics\Blueberries.class
 runesmith\actions\ApplyElementsPowerAction.class
+runesmith\actions\cards\MallocAction.class
 runesmith\cards\Runesmith\ForcesOfNature.class
 runesmith\patches\LibraryEnum.class
 runesmith\actions\DowngradeEntireDeckAction.class
@@ -76,14 +78,17 @@ runesmith\cards\Runesmith\RunicBlueprint.class
 runesmith\actions\cards\GrandSlamAction.class
 runesmith\cards\Runesmith\ConvertIgnis.class
 runesmith\cards\Runesmith\CraftIncendium.class
+runesmith\cards\Runesmith\Malloc.class
 runesmith\actions\RemoveRuneAction.class
 runesmith\cards\Runesmith\LastStand.class
+runesmith\powers\PoweredAnvilPower.class
 runesmith\patches\PlayerClassEnum.class
 runesmith\actions\BreakWithoutRemovingRuneAction.class
 runesmith\actions\cards\CreatorFormAction.class
 runesmith\patches\EnhanceCountField.class
 runesmith\powers\CreatorFormPower.class
 runesmith\cards\Runesmith\HammerSlam.class
+runesmith\cards\Runesmith\Preparation.class
 runesmith\orbs\RuneOrb.class
 runesmith\cards\Runesmith\UnstableHammer.class
 runesmith\patches\LibraryTypeEnum.class
@@ -119,6 +124,7 @@ runesmith\cards\Runesmith\Enchant.class
 runesmith\orbs\SpiculumRune.class
 runesmith\actions\DowngradeRandomCardInDeckAction.class
 runesmith\orbs\ReservoRune.class
+runesmith\cards\Runesmith\GenerateForcefield.class
 runesmith\cards\Runesmith\GrandSlam.class
 runesmith\cards\Runesmith\Terraform.class
 runesmith\patches\EnhancedCardValueModified$applyPowers.class
@@ -134,6 +140,7 @@ runesmith\patches\AbstractCardEnum.class
 runesmith\cards\Runesmith\Empowerment.class
 runesmith\helpers\AdditionalCardDescriptions.class
 runesmith\orbs\ProtectioRune.class
+runesmith\cards\Runesmith\PoweredAnvil.class
 runesmith\cards\Runesmith\HeatExchange.class
 runesmith\character\player\RunesmithCharacter.class
 runesmith\powers\RunesonancePower.class

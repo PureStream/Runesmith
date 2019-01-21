@@ -143,7 +143,7 @@
 	},
 	"Runesmith:CraftPotentia": {
 		"NAME": "Craft Potentia",
-		"DESCRIPTION": "2 Ignis 2 Terra 2 Aqua: Craft a Potentia rune with !Pot! Potency. Remove your oldest rune.",
+		"DESCRIPTION": "2 Ignis 2 Terra 2 Aqua: Craft a Potentia rune with !Pot! Potency and remove your oldest rune.",
 		"EXTENDED_DESCRIPTION":[" NL (Can Craft.)"]
 	},
 	"Runesmith:CraftFerro": {
@@ -226,13 +226,13 @@
 		"NAME": "Special Reserve",
 		"DESCRIPTION": "Deal !D! damage and stasis !M! card in your deck."
 	},
-	"Runesmith:RunicArmor": {
-		"NAME": "Runic Armor",
-		"DESCRIPTION": "Remove X rune and gain X buffer.",
-		"UPGRADE_DESCRIPTION": "Remove X+1 rune and gain X+1 buffer."
+	"Runesmith:GenerateForcefield": {
+		"NAME": "Generate Forcefield",
+		"DESCRIPTION": "Break X runes and prevent the next X times you would lose HP.",
+		"UPGRADE_DESCRIPTION": "Break X+1 runes and prevent the next X+1 times you would lose HP."
 	},
-	"Runesmith:ManaExplosion": {
-		"NAME": "Mana Explosion",
+	"Runesmith:EnergeticExplosion": {
+		"NAME": "Energetic Explosion",
 		"DESCRIPTION": "Break all of your runes. Draw a card and gain [E] for each rune destroyed."
 	},
 	"Runesmith:CreatorForm": {
@@ -324,6 +324,20 @@
 		"NAME": "Heat Exchange",
 		"DESCRIPTION": "Deal !D! damage to ALL enemies. This card gains additional damage equal to current Ignis. Lose 2 Ignis.",
 		"UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. This card gains additional damage twice the current Ignis. Lose 2 Ignis."
+	},
+	"Runesmith:PoweredAnvil": {
+		"NAME": "Powered Anvil",
+		"DESCRIPTION": "After you Enhanced a card, Enhance it one additional time.",
+		"UPGRADE_DESCRIPTION": "After you Enhanced a card, Enhance it one additional time. Innate."
+	},
+	"Runesmith:Malloc": {
+		"NAME": "Malloc",
+		"DESCRIPTION": "Downgrade all cards in your hand. Gain [E] [E].",
+		"UPGRADE_DESCRIPTION": "Downgrade all cards in your hand. Gain [E] [E] [E]."
+	},
+	"Runesmith:Preparation": {
+		"NAME": "Preparation",
+		"DESCRIPTION": "Gain !M! of each Element. NL Can be upgraded 4 times. NL Draw a card. NL Exhaust. "
 	},
 	"Runesmith:WWWWWWWWWWWWWWWWWWWW": {
 		"NAME": "WWWWWWWWWWWWWWWWWWWW",
