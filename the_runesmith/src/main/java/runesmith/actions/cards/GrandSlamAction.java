@@ -11,9 +11,12 @@ import runesmith.actions.EnhanceCard;
 
 public class GrandSlamAction extends AbstractGameAction {
 	
-	public GrandSlamAction() {
+	private int enhanceNums;
+	
+	public GrandSlamAction(boolean upgraded) {
 		this.duration = Settings.ACTION_DUR_MED;
 		this.actionType = ActionType.WAIT;
+		enhanceNums = (upgraded) ? 2 : 1;
 	}
 	
 	public void update() {
@@ -28,7 +31,7 @@ public class GrandSlamAction extends AbstractGameAction {
 		for (AbstractCard c : cardGroup.group) {
 			if (EnhanceCard.canEnhance(c)) {
 				c.superFlash();
-				EnhanceCard.enhance(c);
+				EnhanceCard.enhance(c,enhanceNums);
 				c.applyPowers();
 			}
 		}

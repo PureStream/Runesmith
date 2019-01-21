@@ -34,7 +34,7 @@ public class MakeshiftArmor extends CustomCard {
 			DESCRIPTION,
 			AbstractCard.CardType.SKILL,
 			AbstractCardEnum.RUNESMITH_BEIGE,
-			AbstractCard.CardRarity.UNCOMMON,
+			AbstractCard.CardRarity.COMMON,
 			AbstractCard.CardTarget.SELF
 		);
 		this.baseBlock = BLOCK_AMT;

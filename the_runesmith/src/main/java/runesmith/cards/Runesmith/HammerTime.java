@@ -51,10 +51,7 @@ public class HammerTime extends CustomCard {
 			)
 		);
 		AbstractDungeon.actionManager.addToBottom(
-				new HammerTimeAction());
-		if (upgraded) 
-			AbstractDungeon.actionManager.addToBottom(
-					new HammerTimeAction());
+				new HammerTimeAction(upgraded));
 	}
 
 	public AbstractCard makeCopy() {

@@ -32,7 +32,7 @@ public class Terraform extends CustomCard {
 			DESCRIPTION,
 			AbstractCard.CardType.SKILL,
 			AbstractCardEnum.RUNESMITH_BEIGE,
-			AbstractCard.CardRarity.COMMON,
+			AbstractCard.CardRarity.UNCOMMON,
 			AbstractCard.CardTarget.SELF
 		);
 		this.baseBlock = this.block = 0;
