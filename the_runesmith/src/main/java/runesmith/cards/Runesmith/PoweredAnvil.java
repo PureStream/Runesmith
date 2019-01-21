@@ -10,18 +10,18 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import basemod.abstracts.CustomCard;
 import runesmith.patches.AbstractCardEnum;
-import runesmith.powers.UnlimitedPowerPower;
+import runesmith.powers.PoweredAnvilPower;
 
-public class UnlimitedPower extends CustomCard {
-	public static final String ID = "Runesmith:UnlimitedPower";
+public class PoweredAnvil extends CustomCard {
+	public static final String ID = "Runesmith:PoweredAnvil";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
-	public static final String IMG_PATH = "images/cards/UnlimitedPower.png"; //<-------------- need some img
+	public static final String IMG_PATH = "images/cards/PoweredAnvil.png"; //<-------------- need some img
 	private static final int COST = 2;
 
-	public UnlimitedPower() {
+	public PoweredAnvil() {
 		super(
 			ID,
 			NAME,
@@ -30,19 +30,19 @@ public class UnlimitedPower extends CustomCard {
 			DESCRIPTION,
 			CardType.POWER,
 			AbstractCardEnum.RUNESMITH_BEIGE,
-			CardRarity.RARE,
+			CardRarity.UNCOMMON,
 			CardTarget.SELF
 		);
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		if (!p.hasPower("UnlimitedPowerPower"))
+		if (!p.hasPower("PoweredAnvilPower"))
 			AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, 
-					new UnlimitedPowerPower(p)));
+					new PoweredAnvilPower(p)));
 	}
 
 	public AbstractCard makeCopy() {
-		return new UnlimitedPower();
+		return new PoweredAnvil();
 	}
 
 	public void upgrade() {

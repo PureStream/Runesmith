@@ -325,6 +325,11 @@
 		"DESCRIPTION": "Deal !D! damage to ALL enemies. This card gains additional damage equal to current Ignis. Lose 2 Ignis.",
 		"UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. This card gains additional damage twice the current Ignis. Lose 2 Ignis."
 	},
+	"Runesmith:PoweredAnvil": {
+		"NAME": "Powered Anvil",
+		"DESCRIPTION": "After you Enhanced a card, Enhance it one additional time.",
+		"UPGRADE_DESCRIPTION": "After you Enhanced a card, Enhance it one additional time. Innate."
+	}
 	"Runesmith:WWWWWWWWWWWWWWWWWWWW": {
 		"NAME": "WWWWWWWWWWWWWWWWWWWW",
 		"DESCRIPTION": "WWWWWWWWWWWWWWWWWWWW"
