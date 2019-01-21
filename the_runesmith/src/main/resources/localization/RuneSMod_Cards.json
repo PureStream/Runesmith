@@ -329,7 +329,11 @@
 		"NAME": "Powered Anvil",
 		"DESCRIPTION": "After you Enhanced a card, Enhance it one additional time.",
 		"UPGRADE_DESCRIPTION": "After you Enhanced a card, Enhance it one additional time. Innate."
-	}
+	},
+	"Runesmith:Preparation": {
+		"NAME": "Preparation",
+		"DESCRIPTION": "Gain !M! of each Element. NL Can be upgraded 4 times. NL Draw a card. NL Exhaust. "
+	},
 	"Runesmith:WWWWWWWWWWWWWWWWWWWW": {
 		"NAME": "WWWWWWWWWWWWWWWWWWWW",
 		"DESCRIPTION": "WWWWWWWWWWWWWWWWWWWW"
