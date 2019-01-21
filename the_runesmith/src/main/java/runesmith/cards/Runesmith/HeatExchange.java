@@ -42,7 +42,7 @@ public class HeatExchange extends CustomCard {
 	
 	@Override
 	public void applyPowers() {
-		this.baseDamage = 6;
+		this.baseDamage = ATTACK_DMG;
 		AbstractPlayer p = AbstractDungeon.player;
 		if (p.hasRelic("Runesmith:BrokenRuby")) {
 			if (p.getRelic("Runesmith:BrokenRuby").counter == 2)
