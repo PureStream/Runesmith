@@ -355,6 +355,11 @@
 		"NAME": "Over Powered",
 		"DESCRIPTION": "Deal !D! damage. Downgrade 1 random card in your hand."
 	},
+	"Runesmith:HammerAndChisel": {
+		"NAME": "Hammer and Chisel",
+		"DESCRIPTION": "Add a random Hammer and a random Chisel cards to your hand. They cost 1 less this combat.",
+		"UPGRADED_DESCRIPTION": "Add a random upgraded Hammer and a random upgraded Chisel cards to your hand. They cost 1 less this combat."
+	},
 	"Runesmith:WWWWWWWWWWWWWWWWWWWW": {
 		"NAME": "WWWWWWWWWWWWWWWWWWWW",
 		"DESCRIPTION": "WWWWWWWWWWWWWWWWWWWW"
