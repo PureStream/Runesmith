@@ -329,7 +329,12 @@
 		"NAME": "Powered Anvil",
 		"DESCRIPTION": "After you Enhanced a card, Enhance it one additional time.",
 		"UPGRADE_DESCRIPTION": "After you Enhanced a card, Enhance it one additional time. Innate."
-	}
+	},
+	"Runesmith:Malloc": {
+		"NAME": "Malloc",
+		"DESCRIPTION": "Downgrade all cards in your hand. Gain [E] [E].",
+		"UPGRADE_DESCRIPTION": "Downgrade all cards in your hand. Gain [E] [E] [E]."
+	},
 	"Runesmith:WWWWWWWWWWWWWWWWWWWW": {
 		"NAME": "WWWWWWWWWWWWWWWWWWWW",
 		"DESCRIPTION": "WWWWWWWWWWWWWWWWWWWW"

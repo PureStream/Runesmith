@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
+import runesmith.RunesmithMod;
 import runesmith.actions.EnhanceCard;
 
 public class EnchantAction extends AbstractGameAction {
@@ -37,7 +38,7 @@ public class EnchantAction extends AbstractGameAction {
 					c.upgrade();
 				}
 				if (EnhanceCard.canEnhance(c)) {
-					c.superFlash();
+					c.superFlash(RunesmithMod.BEIGE);
 					EnhanceCard.enhance(c);
 					c.applyPowers();
 				}
