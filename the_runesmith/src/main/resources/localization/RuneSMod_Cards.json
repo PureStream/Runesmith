@@ -343,6 +343,10 @@
 		"NAME": "FrozenChisel",
 		"DESCRIPTION": "Deal !D! damage. Apply 1 Slow. Enemy loses Slow after !M! turns."
 	},
+	"Runesmith:Accelerate": {
+		"NAME": "Accelerate",
+		"DESCRIPTION": "Gain !B! Block. Break your oldest rune to draw !M! cards."
+	},
 	"Runesmith:WWWWWWWWWWWWWWWWWWWW": {
 		"NAME": "WWWWWWWWWWWWWWWWWWWW",
 		"DESCRIPTION": "WWWWWWWWWWWWWWWWWWWW"
