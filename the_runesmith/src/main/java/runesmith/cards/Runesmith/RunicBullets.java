@@ -20,7 +20,7 @@ public class RunicBullets extends CustomCard{
 	public static final String IMG_PATH = "images/cards/RunicBullets.png"; //need some img
 	private static final int COST = 1;
 	private static final int ATTACK_DMG = 5;
-	private static final int UPGRADE_PLUS_DMG = 3;
+	private static final int UPGRADE_PLUS_DMG = 2;
 	
 	public RunicBullets() {
 		super(
