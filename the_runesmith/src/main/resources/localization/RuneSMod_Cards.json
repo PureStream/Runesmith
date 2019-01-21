@@ -226,10 +226,10 @@
 		"NAME": "Special Reserve",
 		"DESCRIPTION": "Deal !D! damage and stasis !M! card in your deck."
 	},
-	"Runesmith:RunicArmor": {
-		"NAME": "Runic Armor",
-		"DESCRIPTION": "Remove X rune and gain X buffer.",
-		"UPGRADE_DESCRIPTION": "Remove X+1 rune and gain X+1 buffer."
+	"Runesmith:GenerateForcefield": {
+		"NAME": "Generate Forcefield",
+		"DESCRIPTION": "Break X runes and prevent the next X times you would lose HP.",
+		"UPGRADE_DESCRIPTION": "Break X+1 runes and prevent the next X+1 times you would lose HP."
 	},
 	"Runesmith:EnergeticExplosion": {
 		"NAME": "Energetic Explosion",
