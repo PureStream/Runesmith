@@ -15,15 +15,14 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import basemod.abstracts.CustomCard;
-import runesmith.actions.ApplyElementsPowerAction;
 import runesmith.patches.AbstractCardEnum;
 import static runesmith.patches.CardTagEnum.HAMMER;
 import static runesmith.patches.CardTagEnum.CHISEL;
 
 public class HammerAndChisel extends CustomCard {
 
-	public static final String ID = "Runesmith:RunicBlueprint";
-	public static final String IMG_PATH = "images/cards/RunicBlueprint.png";
+	public static final String ID = "Runesmith:HammerAndChisel";
+	public static final String IMG_PATH = "images/cards/HammerAndChisel.png";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
@@ -82,6 +81,7 @@ public class HammerAndChisel extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 		  upgradeName();
+		  this.rawDescription = UPGRADE_DESCRIPTION;
 		}
 	}
 	

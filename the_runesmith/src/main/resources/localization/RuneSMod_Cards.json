@@ -358,7 +358,7 @@
 	"Runesmith:HammerAndChisel": {
 		"NAME": "Hammer and Chisel",
 		"DESCRIPTION": "Add a random Hammer and a random Chisel cards to your hand. They cost 1 less this combat.",
-		"UPGRADED_DESCRIPTION": "Add a random upgraded Hammer and a random upgraded Chisel cards to your hand. They cost 1 less this combat."
+		"UPGRADE_DESCRIPTION": "Add a random upgraded Hammer and a random upgraded Chisel cards to your hand. They cost 1 less this combat."
 	},
 	"Runesmith:SpikedWall": {
 		"NAME": "Spiked Wall",
