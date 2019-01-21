@@ -340,7 +340,7 @@
 		"DESCRIPTION": "Gain !M! of each Element. NL Can be Upgraded 4 times. NL Draw a card. NL Exhaust."
 	},
 	"Runesmith:FrozenChisel": {
-		"NAME": "FrozenChisel",
+		"NAME": "Frozen Chisel",
 		"DESCRIPTION": "Deal !D! damage. Apply 1 Slow. Enemy loses Slow after !M! turns."
 	},
 	"Runesmith:Accelerate": {
