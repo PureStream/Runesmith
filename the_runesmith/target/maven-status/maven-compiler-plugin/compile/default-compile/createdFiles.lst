@@ -134,6 +134,7 @@ runesmith\patches\AbstractCardEnum.class
 runesmith\cards\Runesmith\Empowerment.class
 runesmith\helpers\AdditionalCardDescriptions.class
 runesmith\orbs\ProtectioRune.class
+runesmith\cards\Runesmith\HeatExchange.class
 runesmith\character\player\RunesmithCharacter.class
 runesmith\powers\RunesonancePower.class
 runesmith\actions\EnhanceCard.class

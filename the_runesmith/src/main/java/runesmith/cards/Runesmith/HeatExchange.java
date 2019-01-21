@@ -42,7 +42,7 @@ public class HeatExchange extends CustomCard {
 	
 	@Override
 	public void applyPowers() {
-		this.baseDamage = 6;
+		this.baseDamage = ATTACK_DMG;
 		AbstractPlayer p = AbstractDungeon.player;
 		if (p.hasPower("Runesmith:IgnisPower")) {
 			int additionDamage = (upgraded) ? p.getPower("Runesmith:IgnisPower").amount*2 : p.getPower("Runesmith:IgnisPower").amount;

@@ -26,11 +26,13 @@
 	},
 	"Runesmith:PotentialPower": {
 		"NAME": "Potential",
-		"DESCRIPTIONS": ["Gain #b"," #yPotency."]
+		"DESCRIPTIONS": ["Increases the #yPotency of #yCraft card by #b",
+			"Decreases the #yPotency of #yCraft card by #b",
+			"."]
 	},
 	"Runesmith:DemonforgePower": {
 		"NAME": "Demonforge Backlash",
-		"DESCRIPTIONS": ["Lose #b"," #yPotency at the end of your turn."]
+		"DESCRIPTIONS": ["At the end of your turn, lose #b"," #yPotency."]
 	},
 	"Runesmith:UnlimitedPowerPower": {
 		"NAME": "Unlimited Power",
