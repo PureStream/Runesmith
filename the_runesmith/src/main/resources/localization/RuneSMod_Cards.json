@@ -203,7 +203,6 @@
 	"Runesmith:CraftIndustria": {
 		"NAME": "Craft Industria",
 		"DESCRIPTION": "!M! Aqua: Craft an Industria rune.",
-		"UPGRADE_DESCRIPTION": "!M! Aqua: Craft two Industria rune.",
 		"EXTENDED_DESCRIPTION":[" NL (Can Craft.)"]
 	},
 	"Runesmith:CraftMedicinae": {

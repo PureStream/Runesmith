@@ -23,8 +23,8 @@ public class CraftIndustria extends AbstractRunicCard {
 	public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 	public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
 	private static final int COST = 1;
-	private static final int AQUA_AMT = 2;
-	private static final int UPG_AQUA_AMT = 2;
+	private static final int AQUA_AMT = 4;
+	private static final int UPG_AQUA_AMT = -2;
 	
 	public CraftIndustria() {
 		super(
@@ -46,42 +46,42 @@ public class CraftIndustria extends AbstractRunicCard {
 	public void applyPowers() {
 		super.applyPowers();
 		if(checkElements(0,0,this.magicNumber,true)) {
-			if(!this.upgraded) {
+//			if(!this.upgraded) {
 				this.rawDescription = (DESCRIPTION + EXTENDED_DESCRIPTION[0]);
-			}else {
-				this.rawDescription = (UPGRADE_DESCRIPTION + EXTENDED_DESCRIPTION[0]);
-			}
+//			}else {
+//				this.rawDescription = (UPGRADE_DESCRIPTION + EXTENDED_DESCRIPTION[0]);
+//			}
 		}else {
-			if(!this.upgraded) {
+//			if(!this.upgraded) {
 				this.rawDescription = (DESCRIPTION);
-			}else {
-				this.rawDescription = (UPGRADE_DESCRIPTION);
-			}
+//			}else {
+//				this.rawDescription = (UPGRADE_DESCRIPTION);
+//			}
 		}
 		initializeDescription();
 	}
 	
-	@Override
-	public void onMoveToDiscard(){
-		if(!this.upgraded) {
-			this.rawDescription = DESCRIPTION;
-		}else {
-			this.rawDescription = UPGRADE_DESCRIPTION;
-		}
-		initializeDescription();
-	}
-	
+//	@Override
+//	public void onMoveToDiscard(){
+//		if(!this.upgraded) {
+//			this.rawDescription = DESCRIPTION;
+//		}else {
+//			this.rawDescription = UPGRADE_DESCRIPTION;
+//		}
+//		initializeDescription();
+//	}
+//	
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		if (checkElements(0,0,this.magicNumber)) {
 			AbstractDungeon.actionManager.addToBottom(
 					new RuneChannelAction(
 							new IndustriaRune()));
-			if (this.upgraded) {
-				AbstractDungeon.actionManager.addToBottom(
-						new RuneChannelAction(
-								new IndustriaRune()));
-			}
+//			if (this.upgraded) {
+//				AbstractDungeon.actionManager.addToBottom(
+//						new RuneChannelAction(
+//								new IndustriaRune()));
+//			}
 		}
 	}
 	
