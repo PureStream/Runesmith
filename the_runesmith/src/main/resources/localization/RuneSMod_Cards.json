@@ -112,11 +112,11 @@
 	},
 	"Runesmith:Grindstone": {
 		"NAME": "Grindstone",
-		"DESCRIPTION": "All cards played this turn become upgraded. NL Enhance the card if it is already upgraded."
+		"DESCRIPTION": "All cards played this turn become Upgraded. NL Enhance the card if it is already Upgraded."
 	},
 	"Runesmith:FieryHammer": {
 		"NAME": "Fiery Hammer",
-		"DESCRIPTION": "Deal !D! damage to ALL enemies. NL Can be upgraded any number of times."
+		"DESCRIPTION": "Deal !D! damage to ALL enemies. NL Can be Upgraded any number of times."
 	},
 	"Runesmith:CraftReservo": {
 		"NAME": "Craft Reservo",
@@ -337,7 +337,7 @@
 	},
 	"Runesmith:Preparation": {
 		"NAME": "Preparation",
-		"DESCRIPTION": "Gain !M! of each Element. NL Can be upgraded 4 times. NL Draw a card. NL Exhaust."
+		"DESCRIPTION": "Gain !M! of each Element. NL Can be Upgraded 4 times. NL Draw a card. NL Exhaust."
 	},
 	"Runesmith:FrozenChisel": {
 		"NAME": "FrozenChisel",
@@ -359,6 +359,11 @@
 		"NAME": "Hammer and Chisel",
 		"DESCRIPTION": "Add a random Hammer and a random Chisel cards to your hand. They cost 1 less this combat.",
 		"UPGRADED_DESCRIPTION": "Add a random upgraded Hammer and a random upgraded Chisel cards to your hand. They cost 1 less this combat."
+	},
+	"Runesmith:SpikedWall": {
+		"NAME": "Spiked Wall",
+		"DESCRIPTION": "Gain !B! block. NL 2 Ignis 1 Aqua: Craft a Spiculum rune with !Pot! Potency.",
+		"EXTENDED_DESCRIPTION":[" NL (Can Craft.)"]
 	},
 	"Runesmith:WWWWWWWWWWWWWWWWWWWW": {
 		"NAME": "WWWWWWWWWWWWWWWWWWWW",

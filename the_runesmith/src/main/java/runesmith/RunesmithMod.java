@@ -351,8 +351,12 @@ public class RunesmithMod implements PostExhaustSubscriber,
 		cardsToAdd.add(new Preparation());
 		cardsToAdd.add(new Malloc());
 		cardsToAdd.add(new FrozenChisel());
+<<<<<<< HEAD
 		cardsToAdd.add(new NanitesCloud());
 		cardsToAdd.add(new OverPowered());
+=======
+		cardsToAdd.add(new SpikedWall());
+>>>>>>> branch 'development' of https://github.com/PureStream/Runesmith.git
 	}
 
 	@Override
