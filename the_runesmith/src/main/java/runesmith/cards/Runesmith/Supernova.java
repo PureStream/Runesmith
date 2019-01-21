@@ -15,17 +15,17 @@ import runesmith.actions.BreakRuneAction;
 import runesmith.orbs.RuneOrb;
 import runesmith.patches.AbstractCardEnum;
 
-public class EnergeticExplosion extends CustomCard {
-	public static final String ID = "Runesmith:EnergeticExplosion";
+public class Supernova extends CustomCard {
+	public static final String ID = "Runesmith:Supernova";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	public static final String IMG_PATH = "images/cards/EnergeticExplosion.png"; //need some img
+	public static final String IMG_PATH = "images/cards/Supernova.png"; //need some img
 	private static final int COST = 1;
 	private static final int UPG_COST = 0;
 	private static final int SKILL_AMT = 1;
 
-	public EnergeticExplosion() {
+	public Supernova() {
 		super(
 			ID,
 			NAME,
@@ -60,7 +60,7 @@ public class EnergeticExplosion extends CustomCard {
 	}
 
 	public AbstractCard makeCopy() {
-		return new EnergeticExplosion();
+		return new Supernova();
 	}
 
 	public void upgrade() {

@@ -20,10 +20,15 @@ public class DowngradeRandomCardInDeckAction extends AbstractGameAction{
 	private AbstractPlayer p;
 	private CardGroup canDowngrade = new CardGroup(CardGroup.CardGroupType.CARD_POOL);
 	
-	public DowngradeRandomCardInDeckAction(AbstractPlayer p) {
+	public DowngradeRandomCardInDeckAction(AbstractPlayer p, int amount) {
 		this.actionType = AbstractGameAction.ActionType.CARD_MANIPULATION;
 		this.p = p;
 		this.duration = Settings.ACTION_DUR_FAST;
+		this.amount = amount;
+	}
+	
+	public DowngradeRandomCardInDeckAction(AbstractPlayer p) {
+		this(p,1);
 	}
 	
 	@Override
@@ -38,17 +43,20 @@ public class DowngradeRandomCardInDeckAction extends AbstractGameAction{
 		for(AbstractCard c : this.p.hand.group) {
 			if(c.upgraded||EnhanceCountField.enhanceCount.get(c) > 0||CardStasisStatus.isStasis.get(c)) canDowngrade.addToBottom(c);
 		}
-		if(canDowngrade.size()>0) {
-			AbstractCard selectedCard = canDowngrade.getRandomCard(AbstractDungeon.cardRandomRng);
-			if(this.p.discardPile.group.indexOf(selectedCard)>=0) {
-				AbstractDungeon.effectList.add(new ExhaustCardEffect(selectedCard));
-				replaceCard(this.p.discardPile.group,selectedCard);
-			}else if(this.p.drawPile.group.indexOf(selectedCard)>=0) {
-				AbstractDungeon.effectList.add(new ExhaustCardEffect(selectedCard));
-				replaceCard(this.p.drawPile.group,selectedCard);
-			}else if(this.p.hand.group.indexOf(selectedCard)>=0) {
-				AbstractDungeon.effectList.add(new ExhaustCardEffect(selectedCard));
-				replaceCard(this.p.hand.group,selectedCard);
+		for(int i = 0; i<this.amount;i++) {
+			if(canDowngrade.size()>0) {
+				AbstractCard selectedCard = canDowngrade.getRandomCard(AbstractDungeon.cardRandomRng);
+				if(this.p.discardPile.group.indexOf(selectedCard)>=0) {
+					AbstractDungeon.effectList.add(new ExhaustCardEffect(selectedCard));
+					replaceCard(this.p.discardPile.group,selectedCard);
+				}else if(this.p.drawPile.group.indexOf(selectedCard)>=0) {
+					AbstractDungeon.effectList.add(new ExhaustCardEffect(selectedCard));
+					replaceCard(this.p.drawPile.group,selectedCard);
+				}else if(this.p.hand.group.indexOf(selectedCard)>=0) {
+					AbstractDungeon.effectList.add(new ExhaustCardEffect(selectedCard));
+					replaceCard(this.p.hand.group,selectedCard);
+				}
+				canDowngrade.removeCard(selectedCard);
 			}
 		}
 		this.isDone=true;
