@@ -219,7 +219,7 @@
 		]
 	},
 	"Runesmith:Demonforge": {
-		"NAME": "Demonforge",
+		"NAME": "Arc Reactor",
 		"DESCRIPTION": "Gain !M! Potency. Lose 1 Potency at the end of each turn."
 	},
 	"Runesmith:SpecialReserve": {
