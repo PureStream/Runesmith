@@ -346,6 +346,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
 		cardsToAdd.add(new CreatorForm());
 		cardsToAdd.add(new Enchant());
 		cardsToAdd.add(new HeatExchange());
+		cardsToAdd.add(new EnergeticExplosion());
 	}
 
 	@Override
