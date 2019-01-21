@@ -82,7 +82,7 @@ public class RunesmithCharacter extends CustomPlayer {
     public static final int ORB_SLOTS = 0;
     
 	public CharSelectInfo getLoadout() { // the rest of the character loadout so includes your character select screen info plus hp and starting gold
-		return new CharSelectInfo("The Runesmith", "A smith awoken from a deep cryosleep. NL Uses forgotten technology to craft runes.",
+		return new CharSelectInfo("The Runesmith", "A smith from a long lost civilization. NL Uses forgotten technology to craft runes.",
 				STARTING_HP, MAX_HP, ORB_SLOTS, STARTING_GOLD, HAND_SIZE,
 			this, getStartingRelics(), getStartingDeck(), false);
 	}

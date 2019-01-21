@@ -63,6 +63,7 @@ public abstract class RuneOrb extends AbstractOrb {
 		String tmpDesc;
 		if(!this.upgraded)		tmpDesc = this.descriptions[0];
 		else tmpDesc = this.descriptions[1];
+		tmpDesc = tmpDesc.replace("{2Pot}", this.potential*2+"");
 		tmpDesc = tmpDesc.replace("{Pot2}", this.potential/2+"");
 		this.description = tmpDesc.replace("{Pot}", this.potential+"");
 	}
