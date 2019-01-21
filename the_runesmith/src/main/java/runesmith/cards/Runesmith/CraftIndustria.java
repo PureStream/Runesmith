@@ -23,8 +23,8 @@ public class CraftIndustria extends AbstractRunicCard {
 	public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 	public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
 	private static final int COST = 1;
-	private static final int AQUA_AMT = 4;
-	private static final int UPG_AQUA_AMT = 1;
+	private static final int AQUA_AMT = 2;
+	private static final int UPG_AQUA_AMT = 2;
 	
 	public CraftIndustria() {
 		super(
