@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import basemod.abstracts.CustomCard;
+import runesmith.actions.DowngradeCardInHandAction;
 import runesmith.actions.DowngradeRandomCardInDeckAction;
 import runesmith.patches.AbstractCardEnum;
 
@@ -63,7 +64,7 @@ public class OverPowered extends CustomCard{
 			);
 		
 		AbstractDungeon.actionManager.addToBottom(
-				new DowngradeRandomCardInDeckAction(p,2)
+				new DowngradeCardInHandAction(p,true)
 		);
 	}
 }
