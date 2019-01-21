@@ -44,6 +44,10 @@ public class HeatExchange extends CustomCard {
 	public void applyPowers() {
 		this.baseDamage = 6;
 		AbstractPlayer p = AbstractDungeon.player;
+		if (p.hasRelic("Runesmith:BrokenRuby")) {
+			if (p.getRelic("Runesmith:BrokenRuby").counter == 2)
+				baseDamage += (upgraded) ? 2 : 1;
+		}
 		if (p.hasPower("Runesmith:IgnisPower")) {
 			int additionDamage = (upgraded) ? p.getPower("Runesmith:IgnisPower").amount*2 : p.getPower("Runesmith:IgnisPower").amount;
 			baseDamage += additionDamage;
