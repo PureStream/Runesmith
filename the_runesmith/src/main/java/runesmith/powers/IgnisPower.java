@@ -33,6 +33,8 @@ public class IgnisPower extends AbstractPower {
 		if (this.amount <= 0) {
 			AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, "Runesmith:IgnisPower"));
 		}
+		if (this.amount > 10)
+			this.amount = 10;
 	}
 
 	public void updateDescription() {
