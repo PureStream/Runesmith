@@ -30,13 +30,8 @@
 			"Decreases the #yPotency of #yCraft card by #b",
 			"."]
 	},
-<<<<<<< HEAD
-	"Runesmith:DemonforgePower": {
-		"NAME": "Arc Reactor Backlash",
-=======
 	"Runesmith:ArcReactorPower": {
 		"NAME": "Radiated",
->>>>>>> refs/remotes/origin/master
 		"DESCRIPTIONS": ["At the end of your turn, lose #b"," #yPotency."]
 	},
 	"Runesmith:UnlimitedPowerPower": {
