@@ -412,6 +412,9 @@ public class RunesmithMod implements PostExhaustSubscriber,
 		int blockLoss = arg0;
 		if(p.hasPower("Runesmith:PermafrostPower")) {
 			blockLoss = Math.min(blockLoss, p.currentBlock/2);
+			if(blockLoss == p.currentBlock/2) {
+				p.getPower("Runesmith:PermafrostPower").flash();
+			}
 		}
 		return blockLoss;
 	}
