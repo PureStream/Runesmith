@@ -23,9 +23,9 @@ public class AttractionAction extends AbstractGameAction{
 		}
 		this.actionType = AbstractGameAction.ActionType.DRAW;
 		if (Settings.FAST_MODE) {
-		this.duration = Settings.ACTION_DUR_XFAST;
+		this.duration = Settings.ACTION_DUR_XFAST/2;
 		} else {
-			this.duration = Settings.ACTION_DUR_FASTER;
+			this.duration = Settings.ACTION_DUR_FASTER/2;
 		}
 	}
 
