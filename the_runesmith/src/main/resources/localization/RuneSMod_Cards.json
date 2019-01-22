@@ -357,7 +357,8 @@
 	},
 	"Runesmith:Firewall": {
 		"NAME": "Firewall",
-		"DESCRIPTION": "Gain !B! block. NL 3 Ignis 1 Terra: Craft a Firestone and a Magma rune with !Pot! Potency."
+		"DESCRIPTION": "Gain !B! block. NL 3 Ignis 1 Terra: Craft a Firestone and a Magma rune with !Pot! Potency.",
+		"EXTENDED_DESCRIPTION":[" NL (Can Craft.)"]
 	},
 	"Runesmith:Discharge": {
 		"NAME": "Discharge",
