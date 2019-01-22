@@ -3,6 +3,7 @@ package runesmith.actions.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.EmptyDeckShuffleAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -11,7 +12,7 @@ import com.megacrit.cardcrawl.vfx.PlayerTurnEffect;
 import basemod.BaseMod;
 import static runesmith.patches.CardTagEnum.CRAFT;
 
-public class AttractionAction extends AbstractGameAction{
+public class AttractionAction extends AbstractGameAction{	
 	public AttractionAction(AbstractPlayer p) {
 		if (AbstractDungeon.player.hasPower("No Draw")) {
 			AbstractDungeon.player.getPower("No Draw").flash();
@@ -49,9 +50,10 @@ public class AttractionAction extends AbstractGameAction{
 			if(c.hasTag(CRAFT)) {
 				break;
 			}else {
-				c.moveToDiscardPile();
+				p.hand.moveToDiscardPile(c);
 				c.triggerOnManualDiscard();
 			}
+			tickDuration();
 		}
 		this.isDone = true;
 	}
