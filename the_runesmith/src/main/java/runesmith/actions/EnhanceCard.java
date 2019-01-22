@@ -18,7 +18,7 @@ public abstract class EnhanceCard {
 		for (int i=0; i<enhanceCounts; i++) 
 			doEnhance(c);
 		
-		if (AbstractDungeon.player.hasPower("PoweredAnvilPower")) 
+		if (AbstractDungeon.player.hasPower("Runesmith:PoweredAnvilPower")) 
 			doEnhance(c);
 		
 	}
