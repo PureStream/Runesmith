@@ -11,21 +11,21 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import runesmith.actions.cards.FlexTapeAction;
 
-public class FlexTapePower extends AbstractPower {
+public class DuctTapePower extends AbstractPower {
 
-	public static final String POWER_ID = "Runesmith:FlexTapePower";
+	public static final String POWER_ID = "Runesmith:DuctTapePower";
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 	
-	public FlexTapePower(AbstractCreature owner, int amount) {
+	public DuctTapePower(AbstractCreature owner, int amount) {
 		this.name = NAME;
 		this.ID = POWER_ID;
 		this.owner = owner;
 		this.amount = amount;
 		updateDescription();
-		this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/Ignis.png"), 0, 0, 84, 84);  //<-------- NEED SOME IMG
-	    this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/IgnisSmall.png"), 0, 0, 32, 32); //<-------- NEED SOME IMG
+		this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/DuctTape.png"), 0, 0, 84, 84);  //<-------- NEED SOME IMG
+	    this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/DuctTapeSmall.png"), 0, 0, 32, 32); //<-------- NEED SOME IMG
 	}
 	
 	public void stackPower(int stackAmount) {

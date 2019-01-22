@@ -46,7 +46,13 @@ public class NanitesCloud extends CustomCard {
 	public void use(AbstractPlayer p, AbstractMonster m) {
 
 		AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new ShockWaveEffect(p.hb.cX, p.hb.cY, Color.GRAY, ShockWaveEffect.ShockWaveType.NORMAL), 1.5F));
-
+		CardCrawlGame.sound.play("POWER_POISON", 0.1F);
+		
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, -this.magicNumber), -this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+		if(!p.hasPower("Artifact")) {
+			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new GainStrengthPower(p, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+		}
+		
 		for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p, new StrengthPower(mo, -this.magicNumber), -this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
 		}

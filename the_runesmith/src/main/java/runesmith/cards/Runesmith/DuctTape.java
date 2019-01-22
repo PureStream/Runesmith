@@ -10,20 +10,20 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import basemod.abstracts.CustomCard;
 import runesmith.patches.AbstractCardEnum;
-import runesmith.powers.FlexTapePower;
+import runesmith.powers.DuctTapePower;
 
-public class FlexTape extends CustomCard {
-	public static final String ID = "Runesmith:FlexTape";
+public class DuctTape extends CustomCard {
+	public static final String ID = "Runesmith:DuctTape";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
-	public static final String IMG_PATH = "images/cards/FlexTape.png"; //<-------------- need some img
+	public static final String IMG_PATH = "images/cards/DuctTape.png"; //<-------------- need some img
 	private static final int COST = 0;
 	private static final int POWER_AMT = 1;
 	private static final int UPGRADE_POWER_AMT = 1;
 
-	public FlexTape() {
+	public DuctTape() {
 		super(
 			ID,
 			NAME,
@@ -40,11 +40,11 @@ public class FlexTape extends CustomCard {
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, 
-				new FlexTapePower(p, this.magicNumber),this.magicNumber));
+				new DuctTapePower(p, this.magicNumber),this.magicNumber));
 	}
 
 	public AbstractCard makeCopy() {
-		return new FlexTape();
+		return new DuctTape();
 	}
 
 	public void upgrade() {
