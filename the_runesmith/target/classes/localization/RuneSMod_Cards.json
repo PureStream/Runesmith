@@ -357,7 +357,8 @@
 	},
 	"Runesmith:Firewall": {
 		"NAME": "Firewall",
-		"DESCRIPTION": "Gain !B! block. NL 3 Ignis 1 Terra: Craft a Firestone and a Magma rune with !Pot! Potency."
+		"DESCRIPTION": "Gain !B! block. NL 3 Ignis 1 Terra: Craft a Firestone and a Magma rune with !Pot! Potency.",
+		"EXTENDED_DESCRIPTION":[" NL (Can Craft.)"]
 	},
 	"Runesmith:Discharge": {
 		"NAME": "Discharge",
@@ -382,7 +383,7 @@
 	},
 	"Runesmith:TimeTravel": {
 		"NAME": "Time Travel",
-		"DESCRIPTION": "Set your current HP, Block, and Elements to the saved values. NL Exhaust."
+		"DESCRIPTION": "Set your current HP, Block, and Elements to the saved values. NL Purge."
 	},
 	"Runesmith:WWWWWWWWWWWWWWWWWWWW": {
 		"NAME": "WWWWWWWWWWWWWWWWWWWW",
