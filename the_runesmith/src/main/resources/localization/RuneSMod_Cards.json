@@ -217,7 +217,7 @@
 			" NL (Deal !D! damage)"
 		]
 	},
-	"Runesmith:Demonforge": {
+	"Runesmith:ArcReactor": {
 		"NAME": "Arc Reactor",
 		"DESCRIPTION": "Gain !M! Potency. Lose 1 Potency at the end of each turn."
 	},
@@ -362,6 +362,15 @@
 	"Runesmith:SpikedWall": {
 		"NAME": "Spiked Wall",
 		"DESCRIPTION": "Gain !B! block. NL 2 Ignis 1 Aqua: Craft a Spiculum rune with !Pot! Potency.",
+		"EXTENDED_DESCRIPTION":[" NL (Can Craft.)"]
+	},"Runesmith:Discharge": {
+		"NAME": "Discharge",
+		"DESCRIPTION": "Break your oldest rune that is not a Dud rune to deal !D! damage, gain !B! Block and Craft a Dud rune.",
+		"EXTENDED_DESCRIPTION":[" NL (Can Craft.)"]
+	},
+	"Runesmith:Attraction": {
+		"NAME": "Attraction",
+		"DESCRIPTION": "Draw and Discard until a Craft card is drawn or the draw pile is empty. Exhaust.",
 		"EXTENDED_DESCRIPTION":[" NL (Can Craft.)"]
 	},
 	"Runesmith:WWWWWWWWWWWWWWWWWWWW": {

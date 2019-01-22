@@ -9,6 +9,8 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.PlayerTurnEffect;
 
+import basemod.BaseMod;
+
 import java.util.ArrayList;
 
 import org.apache.logging.log4j.Logger;
@@ -62,7 +64,7 @@ public class UpgradeDrawAction extends AbstractGameAction {
 			return;
 		}
 
-		if (AbstractDungeon.player.hand.size() == 10) {
+		if (AbstractDungeon.player.hand.size() == BaseMod.MAX_HAND_SIZE) {
 			AbstractDungeon.player.createHandIsFullDialog();
 			this.isDone = true;
 			return;

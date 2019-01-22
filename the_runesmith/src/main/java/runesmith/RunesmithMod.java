@@ -315,7 +315,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
 		cardsToAdd.add(new RunicBullets());
 		cardsToAdd.add(new RunicBlueprint());
 		cardsToAdd.add(new CraftMagma());
-		cardsToAdd.add(new Demonforge());
+		cardsToAdd.add(new ArcReactor());
 		cardsToAdd.add(new UnlimitedPower());
 		cardsToAdd.add(new CraftMedicinae());
 		cardsToAdd.add(new OneForEveryone());
@@ -355,6 +355,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
 		cardsToAdd.add(new OverPowered());
 		cardsToAdd.add(new SpikedWall());
 		cardsToAdd.add(new HammerAndChisel());
+		cardsToAdd.add(new Discharge());
 	}
 
 	@Override
