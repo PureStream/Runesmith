@@ -81,5 +81,9 @@
 	"Runesmith:PoweredAnvilPower": {
 		"NAME": "Powered Anvil",
 		"DESCRIPTIONS": ["After you #yEnhanced a card, #yEnhance it one additional time."]
+	},
+	"Runesmith:IceColdPower": {
+		"NAME": "Ice-Cold",
+		"DESCRIPTIONS": ["Thaws and loses #ySlow in #b", " turns.", "turn."]
 	}
 }

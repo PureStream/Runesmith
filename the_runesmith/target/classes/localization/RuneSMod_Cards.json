@@ -112,11 +112,11 @@
 	},
 	"Runesmith:Grindstone": {
 		"NAME": "Grindstone",
-		"DESCRIPTION": "All cards played this turn become upgraded. NL Enhance the card if it is already upgraded."
+		"DESCRIPTION": "All cards played this turn become Upgraded. NL Enhance the card if it is already Upgraded."
 	},
 	"Runesmith:FieryHammer": {
 		"NAME": "Fiery Hammer",
-		"DESCRIPTION": "Deal !D! damage to ALL enemies. NL Can be upgraded any number of times."
+		"DESCRIPTION": "Deal !D! damage to ALL enemies. NL Can be Upgraded any number of times."
 	},
 	"Runesmith:CraftReservo": {
 		"NAME": "Craft Reservo",
@@ -203,7 +203,6 @@
 	"Runesmith:CraftIndustria": {
 		"NAME": "Craft Industria",
 		"DESCRIPTION": "!M! Aqua: Craft an Industria rune.",
-		"UPGRADE_DESCRIPTION": "!M! Aqua: Craft two Industria rune.",
 		"EXTENDED_DESCRIPTION":[" NL (Can Craft.)"]
 	},
 	"Runesmith:CraftMedicinae": {
@@ -218,10 +217,6 @@
 			" NL (Deal !D! damage)"
 		]
 	},
-	"Runesmith:Demonforge": {
-		"NAME": "Arc Reactor",
-		"DESCRIPTION": "Gain !M! Potency. Lose 1 Potency at the end of each turn."
-	},
 	"Runesmith:SpecialReserve": {
 		"NAME": "Special Reserve",
 		"DESCRIPTION": "Deal !D! damage and stasis !M! card in your deck."
@@ -231,8 +226,8 @@
 		"DESCRIPTION": "Break X runes and prevent the next X times you would lose HP.",
 		"UPGRADE_DESCRIPTION": "Break X+1 runes and prevent the next X+1 times you would lose HP."
 	},
-	"Runesmith:EnergeticExplosion": {
-		"NAME": "Energetic Explosion",
+	"Runesmith:Supernova": {
+		"NAME": "Supernova",
 		"DESCRIPTION": "Break all of your runes. Draw a card and gain [E] for each rune destroyed."
 	},
 	"Runesmith:CreatorForm": {
@@ -337,7 +332,44 @@
 	},
 	"Runesmith:Preparation": {
 		"NAME": "Preparation",
-		"DESCRIPTION": "Gain !M! of each Element. NL Can be upgraded 4 times. NL Draw a card. NL Exhaust. "
+		"DESCRIPTION": "Gain !M! of each Element. NL Can be Upgraded 4 times. NL Draw a card. NL Exhaust."
+	},
+	"Runesmith:FrozenChisel": {
+		"NAME": "Frozen Chisel",
+		"DESCRIPTION": "Deal !D! damage. Apply 1 Slow. Enemy loses Slow after !M! turns."
+	},
+	"Runesmith:Accelerate": {
+		"NAME": "Accelerate",
+		"DESCRIPTION": "Gain !B! Block. Break your oldest rune to draw !M! cards."
+	},
+	"Runesmith:NanitesCloud": {
+		"NAME": "Nanites Cloud",
+		"DESCRIPTION": "ALL characters loses !M! strength this turn. Exhaust."
+	},
+	"Runesmith:OverPowered": {
+		"NAME": "Over Powered",
+		"DESCRIPTION": "Deal !D! damage. Downgrade 1 random card in your hand."
+	},
+	"Runesmith:HammerAndChisel": {
+		"NAME": "Hammer and Chisel",
+		"DESCRIPTION": "Add a random Hammer and a random Chisel cards to your hand. They cost 1 less this combat.",
+		"UPGRADE_DESCRIPTION": "Add a random upgraded Hammer and a random upgraded Chisel cards to your hand. They cost 1 less this combat."
+	},
+	"Runesmith:Firewall": {
+		"NAME": "Firewall",
+		"DESCRIPTION": "Gain !B! block. NL 3 Ignis 1 Terra: Craft a Firestone and a Magma rune with !Pot! Potency."
+	},
+	"Runesmith:Discharge": {
+		"NAME": "Discharge",
+		"DESCRIPTION": "Break your oldest rune that is not a Dud rune to deal !D! damage, gain !B! Block and Craft a Dud rune."
+	},
+	"Runesmith:Attraction": {
+		"NAME": "Attraction",
+		"DESCRIPTION": "Draw and Discard non-Craft cards until a Craft card is drawn or the draw pile is empty. NL Exhaust."
+	},
+	"Runesmith:ArcReactor": {
+		"NAME": "Arc Reactor",
+		"DESCRIPTION": "Gain !M! Potency. Lose 1 Potency at the end of each turn."
 	},
 	"Runesmith:WWWWWWWWWWWWWWWWWWWW": {
 		"NAME": "WWWWWWWWWWWWWWWWWWWW",
