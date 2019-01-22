@@ -131,7 +131,7 @@
 	"Runesmith:Firestorm": {
 		"NAME": "Firestorm",
 		"DESCRIPTION": "Gain !M! Ignis and !M! Terra at the start of your turn.",
-		"UPGRADE_DESCRIPTION": "Innate. Gain !M! Ignis and !M! Terra at the start of your turn."
+		"UPGRADE_DESCRIPTION": "Innate. NL Gain !M! Ignis and !M! Terra at the start of your turn."
 	},
 	"Runesmith:RunicBlueprint": {
 		"NAME": "Runic Blueprint",
@@ -309,7 +309,7 @@
 	},
 	"Runesmith:Permafrost": {
 		"NAME": "Permafrost",
-		"DESCRIPTION": "Block won't go below half at the start of your turn. NL Gain 1 Terra and 1 Aqua."
+		"DESCRIPTION": "Lose at most half of your Block at the start of your turn. NL Gain 1 Terra and 1 Aqua."
 	},
 	"Runesmith:Enchant": {
 		"NAME": "Enchant",

@@ -70,8 +70,8 @@
 	"Runesmith:PermafrostPower": {
 		"NAME": "Permafrost",
 		"DESCRIPTIONS": [
-			"#yBlock won't go below half at the start of your turn.",
-			"#yBlock won't go below half at the start of its turn."
+			"Lose at most half of your #yBlock at the start of your turn.",
+			"Lose at most half of its #yBlock at the start of its turn."
 		]
 	},
 	"Runesmith:CreatorFormPower": {
