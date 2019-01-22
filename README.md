@@ -27,8 +27,5 @@ Most of the arts are temporary and will be updated as more refined drawings are 
   * Completed card arts (0/75)
 * Relics (1/?)
 * Energy Orb (wip)
-## Download
+## Installation
 Head over to this steam workshop page and subscribe. You also need ModTheSpire and BaseMod installed.
-## Authors
-* PureStream
-* Blizzarre
