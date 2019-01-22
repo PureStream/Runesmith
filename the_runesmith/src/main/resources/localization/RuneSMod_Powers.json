@@ -31,7 +31,7 @@
 			"."]
 	},
 	"Runesmith:DemonforgePower": {
-		"NAME": "Demonforge Backlash",
+		"NAME": "Arc Reactor Backlash",
 		"DESCRIPTIONS": ["At the end of your turn, lose #b"," #yPotency."]
 	},
 	"Runesmith:UnlimitedPowerPower": {
