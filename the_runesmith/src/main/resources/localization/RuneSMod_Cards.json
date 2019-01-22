@@ -371,6 +371,15 @@
 		"NAME": "Arc Reactor",
 		"DESCRIPTION": "Gain !M! Potency. Lose 1 Potency at the end of each turn."
 	},
+	"Runesmith:TimeMachine": {
+		"NAME": "Time Machine",
+		"DESCRIPTION": "Save your current HP, Block, and Elements. NL Add a \"Time Travel\" card to your hand. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Save your current HP, Block, and Elements. NL Add a upgraded \"Time Travel\" card to your hand. NL Innate. NL Exhaust."
+	},
+	"Runesmith:TimeTravel": {
+		"NAME": "Time Travel",
+		"DESCRIPTION": "Set your current HP, Block, and Elements to the saved values. NL Exhaust."
+	},
 	"Runesmith:WWWWWWWWWWWWWWWWWWWW": {
 		"NAME": "WWWWWWWWWWWWWWWWWWWW",
 		"DESCRIPTION": "WWWWWWWWWWWWWWWWWWWW"

@@ -358,7 +358,9 @@ public class RunesmithMod implements PostExhaustSubscriber,
 		cardsToAdd.add(new Discharge());
 		cardsToAdd.add(new Attraction());
 		cardsToAdd.add(new PoweredAnvil());
-		//cardsToAdd.add(new ReplicatingBarrier());
+		cardsToAdd.add(new ReplicatingBarrier());
+		cardsToAdd.add(new TimeMachine());
+		cardsToAdd.add(new TimeTravel());
 	}
 
 	@Override
