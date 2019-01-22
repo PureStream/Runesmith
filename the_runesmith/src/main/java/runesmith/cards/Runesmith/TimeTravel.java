@@ -51,7 +51,7 @@ public class TimeTravel extends CustomCard {
 		savedIgnis = ignis;
 		savedTerra = terra;
 		savedAqua = aqua;
-		this.exhaust = true;
+		this.purgeOnUse = true;
 	}
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {

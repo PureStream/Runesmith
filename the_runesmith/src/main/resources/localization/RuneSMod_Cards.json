@@ -382,7 +382,7 @@
 	},
 	"Runesmith:TimeTravel": {
 		"NAME": "Time Travel",
-		"DESCRIPTION": "Set your current HP, Block, and Elements to the saved values. NL Exhaust."
+		"DESCRIPTION": "Set your current HP, Block, and Elements to the saved values. NL Purge."
 	},
 	"Runesmith:WWWWWWWWWWWWWWWWWWWW": {
 		"NAME": "WWWWWWWWWWWWWWWWWWWW",

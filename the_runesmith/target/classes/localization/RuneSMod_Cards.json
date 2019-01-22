@@ -371,6 +371,10 @@
 		"NAME": "Arc Reactor",
 		"DESCRIPTION": "Gain !M! Potency. Lose 1 Potency at the end of each turn."
 	},
+	"Runesmith:ReplicatingBarrier": {
+		"NAME": "Replicating Barrier",
+		"DESCRIPTION": "Every 2 turns, 2 Terra: Craft Protectio with 4 Potency."
+	},
 	"Runesmith:TimeMachine": {
 		"NAME": "Time Machine",
 		"DESCRIPTION": "Save your current HP, Block, and Elements. NL Add a \"Time Travel\" card to your hand. NL Exhaust.",
