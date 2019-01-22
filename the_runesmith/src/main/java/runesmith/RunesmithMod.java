@@ -408,15 +408,9 @@ public class RunesmithMod implements PostExhaustSubscriber,
 	@Override
 	public int receiveOnPlayerLoseBlock(int arg0) {
 		AbstractPlayer p = AbstractDungeon.player;
-//		logger.info("current block is: "+p.currentBlock);
+		logger.info("current block is: "+p.currentBlock);
 		int blockLoss = arg0;
-		if(p.hasPower("Barricade")) {
-			return 0;
-		}
-		if(p.hasRelic("Calipers")) {
-			blockLoss = Math.min(blockLoss, 15);
-		}
-		if(p.hasPower("Runesmith:Permafrost")) {
+		if(p.hasPower("Runesmith:PermafrostPower")) {
 			blockLoss = Math.min(blockLoss, p.currentBlock/2);
 		}
 		return blockLoss;
