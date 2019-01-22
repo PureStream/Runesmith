@@ -22,7 +22,7 @@
 	},
 	"Runesmith:Nanobots": {
 		"NAME": "Nanobots",
-		"FLAVOR": "\"These tiny machines have wondrous properties."\ -Ranwid",
+		"FLAVOR": "\"These tiny machines have wondrous properties.\" -Ranwid",
 		"DESCRIPTIONS": [
 			"At the start of combat. #yEnhance all cards in your hand."
 		]
