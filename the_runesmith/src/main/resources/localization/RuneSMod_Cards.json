@@ -359,9 +359,9 @@
 		"DESCRIPTION": "Add a random Hammer and a random Chisel cards to your hand. They cost 1 less this combat.",
 		"UPGRADE_DESCRIPTION": "Add a random upgraded Hammer and a random upgraded Chisel cards to your hand. They cost 1 less this combat."
 	},
-	"Runesmith:SpikedWall": {
-		"NAME": "Spiked Wall",
-		"DESCRIPTION": "Gain !B! block. NL 2 Ignis 1 Aqua: Craft a Spiculum rune with !Pot! Potency."
+	"Runesmith:Firewall": {
+		"NAME": "Firewall",
+		"DESCRIPTION": "Gain !B! block. NL 3 Ignis 1 Terra: Craft a Firestone and a Magma rune with !Pot! Potency."
 	},
 	"Runesmith:Discharge": {
 		"NAME": "Discharge",
