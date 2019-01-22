@@ -41,7 +41,7 @@ public class RunesmithCharacter extends CustomPlayer {
 		initializeClass(null, THE_RUNESMITH_SHOULDER_2, // required call to load textures and setup energy/loadout
 				THE_RUNESMITH_SHOULDER_1,
 				THE_RUNESMITH_CORPSE, 
-				getLoadout(), 20.0F, -10.0F, 220.0F, 290.0F, new EnergyManager(ENERGY_PER_TURN));
+				getLoadout(), 20.0F, -10.0F, 220.0F, 350.0F, new EnergyManager(ENERGY_PER_TURN));
 		
 //		this.dialogX = (this.drawX + 0.0F * Settings.scale); // set location for text bubbles
 //		this.dialogY = (this.drawY + 220.0F * Settings.scale); // you can just copy these values

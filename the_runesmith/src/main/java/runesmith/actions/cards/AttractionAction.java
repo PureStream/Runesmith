@@ -23,9 +23,9 @@ public class AttractionAction extends AbstractGameAction{
 		}
 		this.actionType = AbstractGameAction.ActionType.DRAW;
 		if (Settings.FAST_MODE) {
-		this.duration = Settings.ACTION_DUR_XFAST;
+		this.duration = Settings.ACTION_DUR_XFAST/2;
 		} else {
-			this.duration = Settings.ACTION_DUR_FASTER;
+			this.duration = Settings.ACTION_DUR_FASTER/2;
 		}
 	}
 
@@ -37,7 +37,16 @@ public class AttractionAction extends AbstractGameAction{
 			return;
 		}
 		if(p.drawPile.size()==0) {
-			AbstractDungeon.actionManager.addToTop(new EmptyDeckShuffleAction());
+			AbstractDungeon.actionManager.addToBottom(new EmptyDeckShuffleAction());
+			p.draw();
+			AbstractCard c = p.hand.getTopCard();
+			if(c.hasTag(CRAFT)) {
+				this.isDone = true;
+				return;
+			}else {
+				p.hand.moveToDiscardPile(c);
+				c.triggerOnManualDiscard();
+			}
 		}
 		while(p.drawPile.size()>0) {
 			if (p.hand.size() == BaseMod.MAX_HAND_SIZE) {
