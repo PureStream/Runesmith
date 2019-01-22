@@ -124,7 +124,7 @@
 		"UPGRADE_DESCRIPTION": "2 Aqua: Craft a Reservo+ rune. NL Exhaust.",
 		"EXTENDED_DESCRIPTION":[" NL (Can Craft.)"]
 	},
-	"Runesmith:Lithium Ion": {
+	"Runesmith:LithiumIon": {
 		"NAME": "Lithium Ion",
 		"DESCRIPTION": "Gain !M! Potency."
 	},
