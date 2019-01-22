@@ -1,51 +1,25 @@
 runesmith\patches\CardStasisStatus.class
-runesmith\powers\DemonforgePower.class
-<<<<<<< HEAD
-=======
-runesmith\powers\DuplicatePower.class
-runesmith\cards\Runesmith\UnlimitedPower.class
 runesmith\cards\Runesmith\HammerAndChisel.class
->>>>>>> refs/heads/development
 runesmith\actions\cards\ShatteruneAction.class
 runesmith\cards\Runesmith\EnchantedChisel.class
 runesmith\orbs\DudRune.class
 runesmith\cards\Runesmith\ChaoticBlast.class
 runesmith\cards\Runesmith\HeatedChisel.class
 runesmith\patches\CardTagEnum.class
+runesmith\cards\Runesmith\LithiumIon.class
 runesmith\actions\cards\MetallurgicalResearchAction.class
 runesmith\patches\EnhancedCardValueModified$resetAttributes.class
 runesmith\cards\Runesmith\Refinement.class
 runesmith\cards\Runesmith\MakeshiftArmor.class
 runesmith\RunesmithMod.class
 runesmith\powers\FirestormPower.class
-<<<<<<< HEAD
-=======
 runesmith\actions\cards\AttractionAction.class
-runesmith\actions\StasisCard.class
-runesmith\cards\Runesmith\ConstructBifrost.class
->>>>>>> refs/heads/development
 runesmith\actions\RuneChannelAction.class
 runesmith\cards\Runesmith\Duplicate.class
-<<<<<<< HEAD
-=======
-runesmith\cards\Runesmith\Strike_RS.class
->>>>>>> refs/heads/development
 runesmith\helpers\AdditionalCardDescriptions$updateDesc.class
-runesmith\actions\cards\AttractionDrawThenDiscardAction.class
 runesmith\cards\Runesmith\ConvertTerra.class
-<<<<<<< HEAD
-=======
-runesmith\powers\IceColdPower.class
-runesmith\cards\Runesmith\Runesonance.class
->>>>>>> refs/heads/development
 runesmith\cards\Runesmith\CraftFerro.class
-<<<<<<< HEAD
-=======
-runesmith\relics\Blueberries.class
-runesmith\actions\ApplyElementsPowerAction.class
 runesmith\cards\Runesmith\ArcReactor.class
-runesmith\actions\cards\MallocAction.class
->>>>>>> refs/heads/development
 runesmith\cards\Runesmith\ForcesOfNature.class
 runesmith\powers\MetallurgicalResearchPower.class
 runesmith\orbs\MagmaRune.class
@@ -67,12 +41,6 @@ runesmith\orbs\IndustriaRune.class
 runesmith\patches\EnhancedCardValueModified.class
 runesmith\cards\Runesmith\NanitesCloud.class
 runesmith\orbs\MedicinaeRune.class
-<<<<<<< HEAD
-=======
-runesmith\actions\DiscardTopCardAction.class
-runesmith\actions\UpgradeDrawAction.class
-runesmith\actions\cards\HammerTimeAction.class
->>>>>>> refs/heads/development
 runesmith\cards\Runesmith\RunicBlueprint.class
 runesmith\actions\cards\GrandSlamAction.class
 runesmith\cards\Runesmith\ConvertIgnis.class
@@ -80,43 +48,16 @@ runesmith\cards\Runesmith\CraftIncendium.class
 runesmith\powers\PoweredAnvilPower.class
 runesmith\actions\cards\CreatorFormAction.class
 runesmith\powers\CreatorFormPower.class
-<<<<<<< HEAD
-=======
-runesmith\cards\Runesmith\HammerSlam.class
-runesmith\cards\Runesmith\Preparation.class
-runesmith\cards\Runesmith\FrozenChisel.class
->>>>>>> refs/heads/development
 runesmith\orbs\RuneOrb.class
-<<<<<<< HEAD
-=======
-runesmith\cards\Runesmith\UnstableHammer.class
-runesmith\patches\LibraryTypeEnum.class
-runesmith\cards\Runesmith\ElementalConversion.class
-runesmith\relics\MiniCore.class
->>>>>>> refs/heads/development
 runesmith\relics\UraniumAnvil.class
 runesmith\cards\Runesmith\CraftProtectio.class
-<<<<<<< HEAD
-=======
-runesmith\cards\Runesmith\Permafrost.class
-runesmith\relics\Nanobots.class
-runesmith\cards\Runesmith\Firewall.class
-runesmith\cards\Runesmith\CraftIndustria.class
-runesmith\cards\Runesmith\OverPowered.class
->>>>>>> refs/heads/development
 runesmith\cards\Runesmith\CraftMagma.class
 runesmith\actions\cards\RunicBulletsAction.class
-runesmith\cards\Runesmith\FlexTape.class
 runesmith\powers\UnlimitedPowerPower.class
 runesmith\powers\IgnisPower.class
 runesmith\patches\StasisExhaustPrevention$preventExhaust.class
 runesmith\orbs\PrismaticRune.class
-runesmith\powers\FlexTapePower.class
-<<<<<<< HEAD
-=======
-runesmith\actions\DiscardToDrawAction.class
 runesmith\cards\Runesmith\Discharge.class
->>>>>>> refs/heads/development
 runesmith\cards\Runesmith\Firestorm.class
 runesmith\patches\EnhancedCardValueModified$applyPowersToBlock.class
 runesmith\cards\Runesmith\EarthShield.class
@@ -140,17 +81,13 @@ runesmith\helpers\PotencyVariable.class
 runesmith\powers\AquaPower.class
 runesmith\actions\cards\EnchantAction.class
 runesmith\actions\cards\DoubleUpAction.class
-<<<<<<< HEAD
-=======
-runesmith\cards\Runesmith\Supernova.class
-runesmith\character\player\RunesmithPlayer.class
->>>>>>> refs/heads/development
 runesmith\powers\PermafrostPower.class
 runesmith\cards\Runesmith\CraftSpiculum.class
 runesmith\powers\DuplicatePower.class
 runesmith\cards\Runesmith\UnlimitedPower.class
 runesmith\powers\PotentialDownPower.class
 runesmith\orbs\PotentiaRune.class
+runesmith\powers\ArcReactorPower.class
 runesmith\cards\Runesmith\Repurpose.class
 runesmith\orbs\IncendiumRune.class
 runesmith\actions\cards\RearmAction.class
@@ -162,7 +99,6 @@ runesmith\actions\BreakRuneAction.class
 runesmith\actions\DowngradeCardInHandAction.class
 runesmith\cards\Runesmith\AbstractRunicCard.class
 runesmith\cards\Runesmith\FieryHammer.class
-runesmith\cards\Runesmith\HammerPolish.class
 runesmith\cards\Runesmith\ThatsALotOfDamage.class
 runesmith\cards\Runesmith\Rearm.class
 runesmith\powers\SpiculumDownPower.class
@@ -170,6 +106,8 @@ runesmith\actions\StasisCard.class
 runesmith\cards\Runesmith\ConstructBifrost.class
 runesmith\cards\Runesmith\Shatterune.class
 runesmith\cards\Runesmith\Strike_RS.class
+runesmith\actions\cards\AttractionDrawThenDiscardAction.class
+runesmith\powers\IceColdPower.class
 runesmith\cards\Runesmith\Runesonance.class
 runesmith\relics\Blueberries.class
 runesmith\actions\ApplyElementsPowerAction.class
@@ -182,6 +120,7 @@ runesmith\actions\StasisCardInHandAction.class
 runesmith\powers\GrindstonePower.class
 runesmith\powers\ReservoPower.class
 runesmith\RunesmithMod$Keywords.class
+runesmith\actions\DiscardTopCardAction.class
 runesmith\actions\UpgradeDrawAction.class
 runesmith\actions\cards\HammerTimeAction.class
 runesmith\cards\Runesmith\Malloc.class
@@ -192,11 +131,17 @@ runesmith\actions\BreakWithoutRemovingRuneAction.class
 runesmith\patches\EnhanceCountField.class
 runesmith\cards\Runesmith\HammerSlam.class
 runesmith\cards\Runesmith\Preparation.class
+runesmith\cards\Runesmith\FrozenChisel.class
 runesmith\cards\Runesmith\UnstableHammer.class
 runesmith\patches\LibraryTypeEnum.class
 runesmith\cards\Runesmith\ElementalConversion.class
+runesmith\powers\DuctTapePower.class
+runesmith\relics\MiniCore.class
 runesmith\cards\Runesmith\Permafrost.class
+runesmith\relics\Nanobots.class
+runesmith\cards\Runesmith\Firewall.class
 runesmith\cards\Runesmith\CraftIndustria.class
+runesmith\cards\Runesmith\OverPowered.class
 runesmith\cards\Runesmith\MetallurgicalResearch.class
 runesmith\orbs\FerroRune.class
 runesmith\cards\Runesmith\CraftPotentia.class
@@ -214,8 +159,9 @@ runesmith\cards\Runesmith\ElementalShield.class
 runesmith\cards\Runesmith\Grindstone.class
 runesmith\cards\Runesmith\HammerThrow.class
 runesmith\patches\AbstractCardEnum.class
+runesmith\cards\Runesmith\DuctTape.class
 runesmith\orbs\ProtectioRune.class
 runesmith\cards\Runesmith\HeatExchange.class
 runesmith\character\player\RunesmithCharacter.class
 runesmith\powers\RunesonancePower.class
-runesmith\character\player\RunesmithPlayer.class
+runesmith\cards\Runesmith\Supernova.class

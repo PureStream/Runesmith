@@ -6,19 +6,16 @@ C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmit
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\actions\cards\AttractionAction.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\actions\cards\RearmAction.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\PoweredAnvil.java
-C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\powers\FlexTapePower.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\actions\cards\AttractionDrawThenDiscardAction.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\powers\ReservoPower.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\HammerSlam.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\Rearm.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\powers\IceColdPower.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\ArcReactor.java
-C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\character\player\RunesmithPlayer.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\Shatterune.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\ConvertTerra.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\CraftFirestone.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\CraftPotentia.java
-C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\powers\DemonforgePower.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\OneForEveryone.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\PerfectChisel.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\Strike_RS.java
@@ -46,6 +43,7 @@ C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmit
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\patches\CardTagEnum.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\orbs\DudRune.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\actions\StasisCard.java
+C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\powers\DuctTapePower.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\actions\EnhanceCard.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\powers\UnlimitedPowerPower.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\Supernova.java
@@ -66,7 +64,6 @@ C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmit
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\powers\AquaPower.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\EnchantedChisel.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\orbs\PotentiaRune.java
-C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\FlexTape.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\Refinement.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\orbs\MagmaRune.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\actions\cards\GrandSlamAction.java
@@ -80,6 +77,7 @@ C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\powers\IgnisPo
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\Runesonance.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\actions\cards\RefinementAction.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\UnlimitedPower.java
+C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\powers\ArcReactorPower.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\powers\GrindstonePower.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\actions\DiscardToDrawAction.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\actions\DowngradeRandomCardInDeckAction.java
@@ -151,6 +149,7 @@ C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmit
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\powers\MetallurgicalResearchPower.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\relics\MiniCore.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\orbs\SpiculumRune.java
+C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\DuctTape.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\RunesmithMod.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\CraftMagma.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\patches\EnhanceCountField.java
