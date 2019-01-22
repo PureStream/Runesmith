@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>therunesmith</groupId>
     <artifactId>therunesmith</artifactId>
-    <version>v.0.0.1</version>
+    <version>v.0.1</version>
     <packaging>jar</packaging>
     <name>TheRunesmith</name>
     <description>runesmith</description>

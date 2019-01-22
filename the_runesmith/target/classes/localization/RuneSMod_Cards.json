@@ -124,13 +124,14 @@
 		"UPGRADE_DESCRIPTION": "2 Aqua: Craft a Reservo+ rune. NL Exhaust.",
 		"EXTENDED_DESCRIPTION":[" NL (Can Craft.)"]
 	},
-	"Runesmith:HammerPolish": {
-		"NAME": "Hammer Polish",
+	"Runesmith:LithiumIon": {
+		"NAME": "Lithium Ion",
 		"DESCRIPTION": "Gain !M! Potency."
 	},
 	"Runesmith:Firestorm": {
 		"NAME": "Firestorm",
-		"DESCRIPTION": "Gain !M! Ignis and !M! Terra at the start of your turn."
+		"DESCRIPTION": "Gain !M! Ignis and !M! Terra at the start of your turn.",
+		"UPGRADE_DESCRIPTION": "Innate. Gain !M! Ignis and !M! Terra at the start of your turn."
 	},
 	"Runesmith:RunicBlueprint": {
 		"NAME": "Runic Blueprint",
@@ -183,7 +184,7 @@
 	"Runesmith:RunicSmithing": {
 		"NAME": "Runic Smithing",
 		"DESCRIPTION": "For each card you enhance, you gain 1 of each Elements.",
-		"UPGRADE_DESCRIPTION": "For each card you enhance, you gain 1 of each Elements. NL Innate."
+		"UPGRADE_DESCRIPTION": "Innate. NL For each card you enhance, you gain 1 of each Elements."
 	},
 	"Runesmith:Runesonance": {
 		"NAME": "Runesonance",
@@ -234,8 +235,8 @@
 		"NAME": "Creator Form",
 		"DESCRIPTION": "Enhance !M! cards at the start of your turn."
 	},
-	"Runesmith:FlexTape": {
-		"NAME": "Flex Tape",
+	"Runesmith:DuctTape": {
+		"NAME": "Duct Tape",
 		"DESCRIPTION": "Stasis !M! card in your hand each turn.",
 		"UPGRADE_DESCRIPTION": "Stasis !M! cards in your hand each turn."
 	},

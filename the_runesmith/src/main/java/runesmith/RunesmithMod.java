@@ -45,6 +45,7 @@ import basemod.interfaces.EditKeywordsSubscriber;
 import basemod.interfaces.EditRelicsSubscriber;
 import basemod.interfaces.EditStringsSubscriber;
 import basemod.interfaces.OnCardUseSubscriber;
+import basemod.interfaces.OnPlayerLoseBlockSubscriber;
 import basemod.interfaces.OnPowersModifiedSubscriber;
 import basemod.interfaces.PostBattleSubscriber;
 import basemod.interfaces.PostDrawSubscriber;
@@ -65,7 +66,8 @@ public class RunesmithMod implements PostExhaustSubscriber,
 	OnCardUseSubscriber,
 	EditKeywordsSubscriber,
 	OnPowersModifiedSubscriber,
-	PostDrawSubscriber {
+	OnPlayerLoseBlockSubscriber,
+	PostDrawSubscriber{
 	
 	public static final Logger logger = LogManager.getLogger(RunesmithMod.class.getName());
 	
@@ -311,7 +313,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
 		cardsToAdd.add(new Duplicate());
 		cardsToAdd.add(new CraftIndustria());
 		cardsToAdd.add(new Shatterune());
-		cardsToAdd.add(new HammerPolish());
+		cardsToAdd.add(new LithiumIon());
 		cardsToAdd.add(new RunicBullets());
 		cardsToAdd.add(new RunicBlueprint());
 		cardsToAdd.add(new CraftMagma());
@@ -327,9 +329,10 @@ public class RunesmithMod implements PostExhaustSubscriber,
 		cardsToAdd.add(new FieryHammer());
 		cardsToAdd.add(new Empowerment());
 		cardsToAdd.add(new Runesonance());
-		cardsToAdd.add(new FlexTape());
+		cardsToAdd.add(new DuctTape());
 		cardsToAdd.add(new CraftReservo());
 		cardsToAdd.add(new CraftFerro());
+		cardsToAdd.add(new CraftSpiculum());
 		cardsToAdd.add(new CraftPotentia());
 		cardsToAdd.add(new ChaoticBlast());
 		cardsToAdd.add(new MetallurgicalResearch());
@@ -404,4 +407,23 @@ public class RunesmithMod implements PostExhaustSubscriber,
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	public int receiveOnPlayerLoseBlock(int arg0) {
+		AbstractPlayer p = AbstractDungeon.player;
+//		logger.info("current block is: "+p.currentBlock);
+		int blockLoss = arg0;
+		if(p.hasPower("Barricade")) {
+			return 0;
+		}
+		if(p.hasRelic("Calipers")) {
+			blockLoss = Math.min(blockLoss, 15);
+		}
+		if(p.hasPower("Runesmith:Permafrost")) {
+			blockLoss = Math.min(blockLoss, p.currentBlock/2);
+		}
+		return blockLoss;
+	}
+	
+
 }

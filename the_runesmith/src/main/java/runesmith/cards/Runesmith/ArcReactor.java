@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import basemod.abstracts.CustomCard;
 import runesmith.patches.AbstractCardEnum;
-import runesmith.powers.DemonforgePower;
+import runesmith.powers.ArcReactorPower;
 import runesmith.powers.PotentialPower;
 
 public class ArcReactor extends CustomCard {
@@ -43,7 +43,7 @@ public class ArcReactor extends CustomCard {
 		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, 
 				new PotentialPower(p, this.magicNumber),this.magicNumber));
 		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, 
-				new DemonforgePower(p, BACKLASH_AMT),BACKLASH_AMT));
+				new ArcReactorPower(p, BACKLASH_AMT),BACKLASH_AMT));
 	}
 
 	public AbstractCard makeCopy() {
