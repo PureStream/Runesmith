@@ -217,10 +217,6 @@
 			" NL (Deal !D! damage)"
 		]
 	},
-	"Runesmith:ArcReactor": {
-		"NAME": "Arc Reactor",
-		"DESCRIPTION": "Gain !M! Potency. Lose 1 Potency at the end of each turn."
-	},
 	"Runesmith:SpecialReserve": {
 		"NAME": "Special Reserve",
 		"DESCRIPTION": "Deal !D! damage and stasis !M! card in your deck."
@@ -370,6 +366,10 @@
 	"Runesmith:Attraction": {
 		"NAME": "Attraction",
 		"DESCRIPTION": "Draw and Discard non-Craft cards until a Craft card is drawn or the draw pile is empty. NL Exhaust."
+	},
+	"Runesmith:ArcReactor": {
+		"NAME": "Arc Reactor",
+		"DESCRIPTION": "Gain !M! Potency. Lose 1 Potency at the end of each turn."
 	},
 	"Runesmith:WWWWWWWWWWWWWWWWWWWW": {
 		"NAME": "WWWWWWWWWWWWWWWWWWWW",
