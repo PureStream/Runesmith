@@ -19,13 +19,14 @@ Most of the arts are temporary and will be updated as more refined drawings are 
 
 **Break**: Destroys a rune and activate its effect twice.
 
-## Milestones
+## Progress
 * Character Sprites (1/4)
-  * Animation (none)
-  * Portrait (none)
+  * Animation (wip)
+  * Portrait (wip)
 * Cards (72/75 including Basics)
   * Completed card arts (0/75)
 * Relics (1/?)
+* Energy Orb (wip)
 ## Download
 Head over to this steam workshop page and subscribe. You also need ModTheSpire and BaseMod installed.
 ## Authors
