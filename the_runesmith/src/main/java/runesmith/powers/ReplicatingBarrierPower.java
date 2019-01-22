@@ -58,7 +58,11 @@ public class ReplicatingBarrierPower extends AbstractPower {
 	}
 
 	public void updateDescription() {
-		this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
+		int inTurn = (amount==0) ? 2 : 1;
+		if (inTurn == 2)
+			this.description = (DESCRIPTIONS[0] + inTurn + DESCRIPTIONS[1] + DESCRIPTIONS[3]);
+		else
+			this.description = (DESCRIPTIONS[0] + inTurn + DESCRIPTIONS[2] + DESCRIPTIONS[3]);
 	}
 	
 }
