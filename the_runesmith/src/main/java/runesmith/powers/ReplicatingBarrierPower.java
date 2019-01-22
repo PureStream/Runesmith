@@ -24,7 +24,7 @@ public class ReplicatingBarrierPower extends AbstractPower {
 		this.name = NAME;
 		this.ID = POWER_ID;
 		this.owner = owner;
-		this.amount = 0;
+		this.amount = 2;
 		updateDescription();
 		this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/Ignis.png"), 0, 0, 84, 84);
 	    this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/IgnisSmall.png"), 0, 0, 32, 32);
@@ -36,10 +36,10 @@ public class ReplicatingBarrierPower extends AbstractPower {
 	}
 	
 	public void atStartOfTurnPostDraw() {
-		this.amount += 1;
-		if (this.amount == 2) {
+		this.amount -= 1;
+		if (this.amount == 0) {
 			flash();
-			this.amount = 0;
+			this.amount = 2;
 			AbstractRunicCard tmp = new CraftProtectio();
 //			if (tmp.checkElements(0,TERRA_AMT,0)) {
 //				AbstractPlayer p = AbstractDungeon.player;
@@ -55,14 +55,14 @@ public class ReplicatingBarrierPower extends AbstractPower {
 			tmp.purgeOnUse = true;
 			AbstractDungeon.actionManager.cardQueue.add(new com.megacrit.cardcrawl.cards.CardQueueItem(tmp, null, tmp.energyOnUse));
 		}
+		updateDescription();
 	}
 
 	public void updateDescription() {
-		int inTurn = (amount==0) ? 2 : 1;
-		if (inTurn == 2)
-			this.description = (DESCRIPTIONS[0] + inTurn + DESCRIPTIONS[1] + DESCRIPTIONS[3]);
+		if (amount == 2)
+			this.description = (DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + DESCRIPTIONS[3]);
 		else
-			this.description = (DESCRIPTIONS[0] + inTurn + DESCRIPTIONS[2] + DESCRIPTIONS[3]);
+			this.description = (DESCRIPTIONS[0] + amount + DESCRIPTIONS[2] + DESCRIPTIONS[3]);
 	}
 	
 }
