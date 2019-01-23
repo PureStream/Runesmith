@@ -355,7 +355,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
 		cardsToAdd.add(new Permafrost());
 		cardsToAdd.add(new ThatsALotOfDamage());
 		cardsToAdd.add(new CreatorForm());
-		cardsToAdd.add(new Enchant());
+		cardsToAdd.add(new Reinforce());
 		cardsToAdd.add(new HeatExchange());
 		cardsToAdd.add(new Supernova());
 		cardsToAdd.add(new GenerateForcefield());
@@ -363,7 +363,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
 		cardsToAdd.add(new Malloc());
 		cardsToAdd.add(new FrozenChisel());
 		cardsToAdd.add(new NanitesCloud());
-		cardsToAdd.add(new OverPowered());
+		cardsToAdd.add(new Overpower());
 		cardsToAdd.add(new Firewall());
 		cardsToAdd.add(new HammerAndChisel());
 		cardsToAdd.add(new Discharge());

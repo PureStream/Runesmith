@@ -11,16 +11,16 @@ import basemod.abstracts.CustomCard;
 import runesmith.actions.cards.EnchantAction;
 import runesmith.patches.AbstractCardEnum;
 
-public class Enchant extends CustomCard {
-	public static final String ID = "Runesmith:Enchant";
-	public static final String IMG_PATH = "images/cards/Enchant.png"; //<-------- Image needed
+public class Reinforce extends CustomCard {
+	public static final String ID = "Runesmith:Reinforce";
+	public static final String IMG_PATH = "images/cards/Reinforce.png"; //<-------- Image needed
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
 	private static final int COST = 1;
 	
-	public Enchant() {
+	public Reinforce() {
 		super(
 			ID,
 			NAME,
@@ -40,7 +40,7 @@ public class Enchant extends CustomCard {
 	}
 	
 	public AbstractCard makeCopy() {
-		return new Enchant();
+		return new Reinforce();
 	}
 	
 	public void upgrade() {

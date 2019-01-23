@@ -14,8 +14,8 @@ import basemod.abstracts.CustomCard;
 import runesmith.actions.DowngradeCardInHandAction;
 import runesmith.patches.AbstractCardEnum;
 
-public class OverPowered extends CustomCard{
-	public static final String ID = "Runesmith:OverPowered";
+public class Overpower extends CustomCard{
+	public static final String ID = "Runesmith:Overpower";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
@@ -24,7 +24,7 @@ public class OverPowered extends CustomCard{
 	private static final int ATTACK_DMG = 12;
 	private static final int UPGRADE_PLUS_DMG = 5;
 	
-	public OverPowered() {
+	public Overpower() {
 		super(
 			ID,
 			NAME,
@@ -40,7 +40,7 @@ public class OverPowered extends CustomCard{
 	}
 	
 	public AbstractCard makeCopy() {
-		return new OverPowered();
+		return new Overpower();
 	}
 
 	@Override
