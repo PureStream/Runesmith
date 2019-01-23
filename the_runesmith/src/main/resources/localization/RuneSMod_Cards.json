@@ -396,6 +396,10 @@
 		"NAME": "Time Travel",
 		"DESCRIPTION": "Set your current HP, Block, and Elements to the saved values. NL Exhaust."
 	},
+	"Runesmith:Electrocute": {
+		"NAME": "Electrocute",
+		"DESCRIPTION": "Deal !D! damage. Take !M! damage. Stasis a card in your deck."
+	}
 	"Runesmith:WWWWWWWWWWWWWWWWWWWW": {
 		"NAME": "WWWWWWWWWWWWWWWWWWWW",
 		"DESCRIPTION": "WWWWWWWWWWWWWWWWWWWW"
