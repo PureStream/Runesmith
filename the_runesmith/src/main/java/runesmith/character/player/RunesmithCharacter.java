@@ -18,12 +18,18 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
+import com.megacrit.cardcrawl.localization.EventStrings;
+
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpriterAnimation;
 import runesmith.RunesmithMod;
+import runesmith.cards.Runesmith.CraftFirestone;
+import runesmith.cards.Runesmith.Defend_RS;
 import runesmith.cards.Runesmith.Fortify;
+import runesmith.cards.Runesmith.Strike_RS;
 import runesmith.patches.AbstractCardEnum;
 import runesmith.patches.PlayerClassEnum;
+import runesmith.relics.BrokenRuby;
 
 public class RunesmithCharacter extends CustomPlayer {
 	public static final int ENERGY_PER_TURN = 3;
@@ -34,6 +40,9 @@ public class RunesmithCharacter extends CustomPlayer {
     public static final String THE_RUNESMITH_SKELETON_ATLAS = "images/character/idle/skeleton.atlas"; // spine animation atlas
     public static final String THE_RUNESMITH_SKELETON_JSON = "images/character/idle/skeleton.json"; // spine animation json
     public static final String THE_RUNESMITH_SPRITER = "images/character/idle/animation.scml"; //Spriter File
+    
+    private static final EventStrings eventStrings = CardCrawlGame.languagePack.getEventString("Runesmith:Spire Heart");
+    private static final String heartString = eventStrings.DESCRIPTIONS[0];
 	
 	public RunesmithCharacter (String name) {
 		super(name, PlayerClassEnum.RUNESMITH_CLASS, null, "images/vfx.png",new SpriterAnimation(THE_RUNESMITH_SPRITER));
@@ -54,24 +63,24 @@ public class RunesmithCharacter extends CustomPlayer {
 	
 	public ArrayList<String> getStartingDeck() { // starting deck 'nuff said
 		ArrayList<String> retVal = new ArrayList<>();
-		retVal.add("Runesmith:Strike_RS");
-		retVal.add("Runesmith:Strike_RS");
-		retVal.add("Runesmith:Strike_RS");
-		retVal.add("Runesmith:Strike_RS");
-		retVal.add("Runesmith:Defend_RS");
-		retVal.add("Runesmith:Defend_RS");
-		retVal.add("Runesmith:Defend_RS");
-		retVal.add("Runesmith:Defend_RS");
-		retVal.add("Runesmith:CraftFirestone");
-		retVal.add("Runesmith:Fortify");
+		retVal.add(Strike_RS.ID);
+		retVal.add(Strike_RS.ID);
+		retVal.add(Strike_RS.ID);
+		retVal.add(Strike_RS.ID);
+		retVal.add(Defend_RS.ID);
+		retVal.add(Defend_RS.ID);
+		retVal.add(Defend_RS.ID);
+		retVal.add(Defend_RS.ID);
+		retVal.add(CraftFirestone.ID);
+		retVal.add(Fortify.ID);
 		//retVal.add("MyCard2");
 		return retVal;
 	}
 	
 	public ArrayList<String> getStartingRelics() { // starting relics - also simple
 		ArrayList<String> retVal = new ArrayList<>();
-		retVal.add("Runesmith:BrokenRuby");
-		UnlockTracker.markRelicAsSeen("Runesmith:BrokenRuby");
+		retVal.add(BrokenRuby.ID);
+		UnlockTracker.markRelicAsSeen(BrokenRuby.ID);
 		return retVal;
 	}
 	
@@ -82,6 +91,7 @@ public class RunesmithCharacter extends CustomPlayer {
     public static final int ORB_SLOTS = 0;
     
 	public CharSelectInfo getLoadout() { // the rest of the character loadout so includes your character select screen info plus hp and starting gold
+		// TODO use Character.json instead
 		return new CharSelectInfo("The Runesmith", "A smith from a long lost civilization. NL Uses forgotten technology to craft runes.",
 				STARTING_HP, MAX_HP, ORB_SLOTS, STARTING_GOLD, HAND_SIZE,
 			this, getStartingRelics(), getStartingDeck(), false);
@@ -145,7 +155,7 @@ public class RunesmithCharacter extends CustomPlayer {
 
 	@Override
 	public String getSpireHeartText() {
-		return "You charge up your hammer...";
+		return heartString;
 	}
 
 	@Override
@@ -160,7 +170,7 @@ public class RunesmithCharacter extends CustomPlayer {
 
 	@Override
 	public String getVampireText() {
-		return com.megacrit.cardcrawl.events.city.Vampires.DESCRIPTIONS[0];
+		return com.megacrit.cardcrawl.events.city.Vampires.DESCRIPTIONS[1];
 	}
 
 	@Override

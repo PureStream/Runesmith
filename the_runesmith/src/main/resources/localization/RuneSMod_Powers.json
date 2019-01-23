@@ -85,5 +85,9 @@
 	"Runesmith:IceColdPower": {
 		"NAME": "Ice-Cold",
 		"DESCRIPTIONS": ["Thaws and loses #ySlow in #b", " turns.", "turn."]
+	},
+	"Runesmith:ReplicatingBarrierPower": {
+		"NAME": "Replicating Barrier",
+		"DESCRIPTIONS": ["In #b", " turns,", "turn,", " 2 #yTerra: #yCraft a #yProtectio rune."]
 	}
 }

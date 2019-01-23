@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import basemod.abstracts.CustomCard;
 import runesmith.actions.ApplyElementsPowerAction;
-import runesmith.patches.AbstractCardEnum;
 
 public class ConvertAqua extends CustomCard {
 	public static final String ID = "Runesmith:ConvertAqua";
@@ -32,7 +31,7 @@ public class ConvertAqua extends CustomCard {
 			COST,
 			DESCRIPTION,
 			AbstractCard.CardType.SKILL,
-			AbstractCardEnum.RUNESMITH_BEIGE,
+			AbstractCard.CardColor.COLORLESS,
 			AbstractCard.CardRarity.SPECIAL,
 			AbstractCard.CardTarget.SELF
 		);
