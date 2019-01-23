@@ -189,7 +189,8 @@
 	},
 	"Runesmith:Runesonance": {
 		"NAME": "Runesonance",
-		"DESCRIPTION": "This turn, gain double Elements."
+		"DESCRIPTION": "Until next turn, your runes trigger twice. Exhaust.",
+		"UPGRADE_DESCRIPTION": "Until next turn, your runes trigger twice."
 	},
 	"Runesmith:Duplicate": {
 		"NAME": "Duplicate",
