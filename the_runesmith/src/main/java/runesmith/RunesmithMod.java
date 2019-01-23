@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
+import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.localization.Keyword;
 import com.megacrit.cardcrawl.localization.OrbStrings;
 import com.megacrit.cardcrawl.localization.PowerStrings;
@@ -81,6 +82,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
 	private static final String POTION_STRING = "localization/RuneSMod_Potions.json";
 	private static final String UI_STRING = "localization/RuneSMod_UI.json";
 	private static final String KEYWORD_STRING = "localization/RuneSMod_Keywords.json";
+	private static final String EVENT_STRING = "localization/RuneSMod_Events.json";
 	
 	private List<AbstractCard> cardsToAdd = new ArrayList<>();
 	private List<CustomRelic> relicsToAdd = new ArrayList<>();
@@ -126,7 +128,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
 	public void receiveEditStrings() {
 	    logger.info("start editing strings");
 	
-		String relicStrings, cardStrings, powerStrings, potionStrings, relic, card, power, potion, ui, uiStrings;
+		String relicStrings, cardStrings, powerStrings, potionStrings, relic, card, power, potion, ui, uiStrings, event, eventStrings;
 		
 		logger.info("lang == eng");
 		card = CARD_STRING;
@@ -134,6 +136,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
 		power = POWER_STRING;
 		potion = POTION_STRING;
 		ui = UI_STRING;
+		event = EVENT_STRING;
 		
 		/*if (Settings.language == Settings.GameLanguage.ZHS) {
 		  logger.info("lang == zhs");
@@ -196,6 +199,11 @@ public class RunesmithMod implements PostExhaustSubscriber,
 			String.valueOf(StandardCharsets.UTF_8)
 		);
 		BaseMod.loadCustomStrings(UIStrings.class, uiStrings);
+		
+		eventStrings = Gdx.files.internal(event).readString(
+				String.valueOf(StandardCharsets.UTF_8)
+			);
+		BaseMod.loadCustomStrings(EventStrings.class, eventStrings);
 		
 		String orbStrings = Gdx.files.internal("localization/RuneSMod_Orbs.json").readString(String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(OrbStrings.class, orbStrings);
