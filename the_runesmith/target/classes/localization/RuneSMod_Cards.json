@@ -312,8 +312,8 @@
 		"NAME": "Permafrost",
 		"DESCRIPTION": "Lose at most half of your Block at the start of your turn. NL Gain 1 Terra and 1 Aqua."
 	},
-	"Runesmith:Enchant": {
-		"NAME": "Enchant",
+	"Runesmith:Reinforce": {
+		"NAME": "Reinforce",
 		"DESCRIPTION": "Upgrade all cards in your hand. NL Exhaust.",
 		"UPGRADE_DESCRIPTION": "Upgrade and Enhance all cards in your hand. NL Exhaust."
 	},
@@ -348,8 +348,8 @@
 		"NAME": "Nanites Cloud",
 		"DESCRIPTION": "ALL characters loses !M! strength this turn. Exhaust."
 	},
-	"Runesmith:OverPowered": {
-		"NAME": "Over Powered",
+	"Runesmith:Overpower": {
+		"NAME": "Overpower",
 		"DESCRIPTION": "Deal !D! damage. Downgrade 1 random card in your hand."
 	},
 	"Runesmith:HammerAndChisel": {
@@ -378,21 +378,21 @@
 		"NAME": "Replicating Barrier",
 		"DESCRIPTION": "Every 2 turns, 2 Terra: Craft Protectio with 4 Potency."
 	},
-	"Runesmith:TimeMachine": {
+	"Runesmith:TimeMachine_old": {
 		"NAME": "Time Machine",
 		"DESCRIPTION": "Save your current HP, Block, and Elements. NL Add a Time Travel card to your hand. NL Exhaust.",
 		"UPGRADE_DESCRIPTION": "Save your current HP, Block, and Elements. NL Add an upgraded Time Travel card to your hand. NL Innate. NL Exhaust."
 	},
-	"Runesmith:TimeMachineAlt": {
+	"Runesmith:TimeMachine": {
 		"NAME": "Time Machine",
 		"DESCRIPTION": "Save your current HP, Block, and Elements. NL Add a Time Travel card to your hand. NL Exhaust.",
 		"UPGRADE_DESCRIPTION": "Innate. NL Save your current HP, Block, and Elements. NL Add a Time Travel card to your hand. NL Exhaust."
 	},
-	"Runesmith:TimeTravel": {
+	"Runesmith:TimeTravel_old": {
 		"NAME": "Time Travel",
 		"DESCRIPTION": "Set your current HP, Block, and Elements to the saved values. NL Purge."
 	},
-	"Runesmith:TimeTravelAlt": {
+	"Runesmith:TimeTravel": {
 		"NAME": "Time Travel",
 		"DESCRIPTION": "Set your current HP, Block, and Elements to the saved values. NL Exhaust."
 	},

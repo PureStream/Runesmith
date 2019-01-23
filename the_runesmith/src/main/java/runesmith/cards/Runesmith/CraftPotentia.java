@@ -67,9 +67,6 @@ public class CraftPotentia extends AbstractRunicCard {
 	public void use(AbstractPlayer p, AbstractMonster m) {
 
 		if (checkElements(ELEMENT_AMT,ELEMENT_AMT,ELEMENT_AMT)) {
-			AbstractDungeon.actionManager.addToBottom(
-					new RuneChannelAction(
-							new PotentiaRune(this.potency)));
 			RuneOrb r = null;
 			for(AbstractOrb o : p.orbs) {
 				if(o instanceof RuneOrb) {
@@ -80,6 +77,9 @@ public class CraftPotentia extends AbstractRunicCard {
 			if(r != null) {
 				AbstractDungeon.actionManager.addToBottom(new RemoveRuneAction(r));
 			}
+			AbstractDungeon.actionManager.addToBottom(
+					new RuneChannelAction(
+							new PotentiaRune(this.potency)));
 		}
 	}
 	
