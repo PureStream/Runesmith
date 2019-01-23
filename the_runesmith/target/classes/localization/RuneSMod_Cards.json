@@ -44,7 +44,7 @@
 	},
 	"Runesmith:RuneHurl": {
 		"NAME": "Rune Hurl",
-		"DESCRIPTION": "Break oldest rune to deal !D! damage."
+		"DESCRIPTION": "Break your oldest rune to deal !D! damage."
 	},
 	"Runesmith:CraftIncendium": {
 		"NAME": "Craft Incendium",
@@ -287,8 +287,8 @@
 	},
 	"Runesmith:GrandSlam": {
 		"NAME": "Grand Slam",
-		"DESCRIPTION": "Deal 13 damage. Enhance all cards in your hand. NL Exhaust.",
-		"UPGRADE_DESCRIPTION": "Deal 13 damage. Enhance all cards in your hand twice. NL Exhaust."
+		"DESCRIPTION": "Deal 13 damage. Enhance all cards in your hand.",
+		"UPGRADE_DESCRIPTION": "Deal 13 damage. Enhance all cards in your hand twice."
 	},
 	"Runesmith:GoWithTheFlow": {
 		"NAME": "Go With The Flow",
@@ -329,8 +329,8 @@
 	},
 	"Runesmith:Malloc": {
 		"NAME": "Malloc",
-		"DESCRIPTION": "Downgrade all cards in your hand. Gain [E] [E].",
-		"UPGRADE_DESCRIPTION": "Downgrade all cards in your hand. Gain [E] [E] [E]."
+		"DESCRIPTION": "Downgrade all cards in your hand. NL Gain [E] [E].",
+		"UPGRADE_DESCRIPTION": "Downgrade all cards in your hand. NL Gain [E] [E] [E]."
 	},
 	"Runesmith:Preparation": {
 		"NAME": "Preparation",
@@ -380,12 +380,21 @@
 	},
 	"Runesmith:TimeMachine": {
 		"NAME": "Time Machine",
-		"DESCRIPTION": "Save your current HP, Block, and Elements. NL Add a \"Time Travel\" card to your hand. NL Exhaust.",
-		"UPGRADE_DESCRIPTION": "Save your current HP, Block, and Elements. NL Add a upgraded \"Time Travel\" card to your hand. NL Innate. NL Exhaust."
+		"DESCRIPTION": "Save your current HP, Block, and Elements. NL Add a Time Travel card to your hand. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Save your current HP, Block, and Elements. NL Add an upgraded Time Travel card to your hand. NL Innate. NL Exhaust."
+	},
+	"Runesmith:TimeMachineAlt": {
+		"NAME": "Time Machine",
+		"DESCRIPTION": "Save your current HP, Block, and Elements. NL Add a Time Travel card to your hand. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Innate. NL Save your current HP, Block, and Elements. NL Add a Time Travel card to your hand. NL Exhaust."
 	},
 	"Runesmith:TimeTravel": {
 		"NAME": "Time Travel",
 		"DESCRIPTION": "Set your current HP, Block, and Elements to the saved values. NL Purge."
+	},
+	"Runesmith:TimeTravelAlt": {
+		"NAME": "Time Travel",
+		"DESCRIPTION": "Set your current HP, Block, and Elements to the saved values. NL Exhaust."
 	},
 	"Runesmith:WWWWWWWWWWWWWWWWWWWW": {
 		"NAME": "WWWWWWWWWWWWWWWWWWWW",

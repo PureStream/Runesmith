@@ -131,6 +131,7 @@ runesmith\actions\RemoveRuneAction.class
 runesmith\cards\Runesmith\LastStand.class
 runesmith\patches\PlayerClassEnum.class
 runesmith\actions\BreakWithoutRemovingRuneAction.class
+runesmith\cards\Runesmith\TimeTravelAlt.class
 runesmith\patches\EnhanceCountField.class
 runesmith\cards\Runesmith\HammerSlam.class
 runesmith\cards\Runesmith\Preparation.class
@@ -168,4 +169,6 @@ runesmith\orbs\ProtectioRune.class
 runesmith\cards\Runesmith\HeatExchange.class
 runesmith\character\player\RunesmithCharacter.class
 runesmith\powers\RunesonancePower.class
+runesmith\cards\Runesmith\TimeMachineAlt.class
 runesmith\cards\Runesmith\Supernova.class
+runesmith\powers\TimeMachinePower.class
