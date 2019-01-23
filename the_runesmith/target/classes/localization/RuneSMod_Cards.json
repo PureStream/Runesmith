@@ -312,8 +312,8 @@
 		"NAME": "Permafrost",
 		"DESCRIPTION": "Lose at most half of your Block at the start of your turn. NL Gain 1 Terra and 1 Aqua."
 	},
-	"Runesmith:Enchant": {
-		"NAME": "Enchant",
+	"Runesmith:Reinforce": {
+		"NAME": "Reinforce",
 		"DESCRIPTION": "Upgrade all cards in your hand. NL Exhaust.",
 		"UPGRADE_DESCRIPTION": "Upgrade and Enhance all cards in your hand. NL Exhaust."
 	},
@@ -348,8 +348,8 @@
 		"NAME": "Nanites Cloud",
 		"DESCRIPTION": "ALL characters loses !M! strength this turn. Exhaust."
 	},
-	"Runesmith:OverPowered": {
-		"NAME": "Over Powered",
+	"Runesmith:Overpower": {
+		"NAME": "Overpower",
 		"DESCRIPTION": "Deal !D! damage. Downgrade 1 random card in your hand."
 	},
 	"Runesmith:HammerAndChisel": {

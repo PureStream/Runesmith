@@ -65,7 +65,6 @@ runesmith\cards\Runesmith\Firestorm.class
 runesmith\patches\EnhancedCardValueModified$applyPowersToBlock.class
 runesmith\cards\Runesmith\EarthShield.class
 runesmith\orbs\FirestoneRune.class
-runesmith\cards\Runesmith\Enchant.class
 runesmith\orbs\ReservoRune.class
 runesmith\cards\Runesmith\GenerateForcefield.class
 runesmith\cards\Runesmith\GrandSlam.class
@@ -146,7 +145,6 @@ runesmith\cards\Runesmith\Permafrost.class
 runesmith\relics\Nanobots.class
 runesmith\cards\Runesmith\Firewall.class
 runesmith\cards\Runesmith\CraftIndustria.class
-runesmith\cards\Runesmith\OverPowered.class
 runesmith\cards\Runesmith\MetallurgicalResearch.class
 runesmith\orbs\FerroRune.class
 runesmith\cards\Runesmith\CraftPotentia.class
@@ -158,6 +156,7 @@ runesmith\cards\Runesmith\DoubleUp.class
 runesmith\cards\Runesmith\OneForEveryone.class
 runesmith\cards\Runesmith\ShiftingStrike.class
 runesmith\actions\DiscardToDrawAction.class
+runesmith\cards\Runesmith\Reinforce.class
 runesmith\actions\cards\RepurposeAction.class
 runesmith\orbs\SpiculumRune.class
 runesmith\actions\DowngradeRandomCardInDeckAction.class
@@ -170,5 +169,6 @@ runesmith\orbs\ProtectioRune.class
 runesmith\cards\Runesmith\HeatExchange.class
 runesmith\character\player\RunesmithCharacter.class
 runesmith\powers\RunesonancePower.class
+runesmith\cards\Runesmith\Overpower.class
 runesmith\cards\Runesmith\Supernova.class
 runesmith\powers\TimeMachinePower.class
