@@ -1,16 +1,8 @@
 runesmith\patches\CardStasisStatus.class
-<<<<<<< HEAD
-runesmith\powers\DemonforgePower.class
-=======
->>>>>>> refs/remotes/origin/master
 runesmith\cards\Runesmith\HammerAndChisel.class
 runesmith\actions\cards\ShatteruneAction.class
-runesmith\cards\Runesmith\EnchantedChisel.class
 runesmith\orbs\DudRune.class
-<<<<<<< HEAD
 runesmith\powers\ReplicatingBarrierPower.class
-=======
->>>>>>> refs/remotes/origin/master
 runesmith\cards\Runesmith\ChaoticBlast.class
 runesmith\cards\Runesmith\HeatedChisel.class
 runesmith\patches\CardTagEnum.class
@@ -29,10 +21,7 @@ runesmith\cards\Runesmith\ConvertTerra.class
 runesmith\cards\Runesmith\CraftFerro.class
 runesmith\cards\Runesmith\ArcReactor.class
 runesmith\cards\Runesmith\ForcesOfNature.class
-<<<<<<< HEAD
 runesmith\cards\Runesmith\TimeMachine.class
-=======
->>>>>>> refs/remotes/origin/master
 runesmith\powers\MetallurgicalResearchPower.class
 runesmith\orbs\MagmaRune.class
 runesmith\patches\StasisExhaustPrevention.class
@@ -65,19 +54,11 @@ runesmith\relics\UraniumAnvil.class
 runesmith\cards\Runesmith\CraftProtectio.class
 runesmith\cards\Runesmith\CraftMagma.class
 runesmith\actions\cards\RunicBulletsAction.class
-<<<<<<< HEAD
 runesmith\cards\Runesmith\ReplicatingBarrier.class
-runesmith\cards\Runesmith\FlexTape.class
-=======
->>>>>>> refs/remotes/origin/master
 runesmith\powers\UnlimitedPowerPower.class
 runesmith\powers\IgnisPower.class
 runesmith\patches\StasisExhaustPrevention$preventExhaust.class
 runesmith\orbs\PrismaticRune.class
-<<<<<<< HEAD
-runesmith\powers\FlexTapePower.class
-=======
->>>>>>> refs/remotes/origin/master
 runesmith\cards\Runesmith\Discharge.class
 runesmith\cards\Runesmith\Firestorm.class
 runesmith\patches\EnhancedCardValueModified$applyPowersToBlock.class
@@ -106,88 +87,7 @@ runesmith\powers\PermafrostPower.class
 runesmith\cards\Runesmith\CraftSpiculum.class
 runesmith\powers\DuplicatePower.class
 runesmith\cards\Runesmith\UnlimitedPower.class
-<<<<<<< HEAD
 runesmith\cards\Runesmith\TimeTravel.class
-runesmith\powers\PotentialDownPower.class
-runesmith\orbs\PotentiaRune.class
-runesmith\cards\Runesmith\Repurpose.class
-runesmith\orbs\IncendiumRune.class
-runesmith\actions\cards\RearmAction.class
-runesmith\cards\Runesmith\ChiselStab.class
-runesmith\cards\Runesmith\CraftMedicinae.class
-runesmith\cards\Runesmith\CraftFirestone.class
-runesmith\vfx\ShowStasisCardAndAddToDiscardEffect.class
-runesmith\actions\BreakRuneAction.class
-runesmith\actions\DowngradeCardInHandAction.class
-runesmith\cards\Runesmith\AbstractRunicCard.class
-runesmith\cards\Runesmith\FieryHammer.class
-runesmith\cards\Runesmith\HammerPolish.class
-runesmith\cards\Runesmith\ThatsALotOfDamage.class
-runesmith\cards\Runesmith\Rearm.class
-runesmith\powers\SpiculumDownPower.class
-runesmith\actions\StasisCard.class
-runesmith\cards\Runesmith\ConstructBifrost.class
-runesmith\cards\Runesmith\Shatterune.class
-runesmith\cards\Runesmith\Strike_RS.class
-runesmith\actions\cards\AttractionDrawThenDiscardAction.class
-runesmith\powers\IceColdPower.class
-runesmith\cards\Runesmith\Runesonance.class
-runesmith\relics\Blueberries.class
-runesmith\actions\ApplyElementsPowerAction.class
-runesmith\actions\cards\MallocAction.class
-runesmith\patches\LibraryEnum.class
-runesmith\actions\DowngradeEntireDeckAction.class
-runesmith\patches\ElementsGainedCountField.class
-runesmith\powers\PotentialPower.class
-runesmith\actions\StasisCardInHandAction.class
-runesmith\powers\GrindstonePower.class
-runesmith\powers\ReservoPower.class
-runesmith\RunesmithMod$Keywords.class
-runesmith\actions\DiscardTopCardAction.class
-runesmith\actions\UpgradeDrawAction.class
-runesmith\actions\cards\HammerTimeAction.class
-runesmith\cards\Runesmith\Malloc.class
-runesmith\actions\RemoveRuneAction.class
-runesmith\cards\Runesmith\LastStand.class
-runesmith\patches\PlayerClassEnum.class
-runesmith\actions\BreakWithoutRemovingRuneAction.class
-runesmith\patches\EnhanceCountField.class
-runesmith\cards\Runesmith\HammerSlam.class
-runesmith\cards\Runesmith\Preparation.class
-runesmith\cards\Runesmith\FrozenChisel.class
-runesmith\cards\Runesmith\UnstableHammer.class
-runesmith\patches\LibraryTypeEnum.class
-runesmith\cards\Runesmith\ElementalConversion.class
-runesmith\relics\MiniCore.class
-runesmith\cards\Runesmith\Permafrost.class
-runesmith\relics\Nanobots.class
-runesmith\cards\Runesmith\Firewall.class
-runesmith\cards\Runesmith\CraftIndustria.class
-runesmith\cards\Runesmith\OverPowered.class
-runesmith\cards\Runesmith\MetallurgicalResearch.class
-runesmith\orbs\FerroRune.class
-runesmith\cards\Runesmith\CraftPotentia.class
-runesmith\actions\cards\FortifyAction.class
-runesmith\actions\cards\FlexTapeAction.class
-runesmith\patches\EnhancedCardValueModified$calculateCardDamage.class
-runesmith\cards\Runesmith\DoubleUp.class
-runesmith\cards\Runesmith\OneForEveryone.class
-runesmith\cards\Runesmith\ShiftingStrike.class
-runesmith\actions\DiscardToDrawAction.class
-runesmith\actions\cards\RepurposeAction.class
-runesmith\orbs\SpiculumRune.class
-runesmith\actions\DowngradeRandomCardInDeckAction.class
-runesmith\cards\Runesmith\ElementalShield.class
-runesmith\cards\Runesmith\Grindstone.class
-runesmith\cards\Runesmith\HammerThrow.class
-runesmith\patches\AbstractCardEnum.class
-runesmith\orbs\ProtectioRune.class
-runesmith\cards\Runesmith\HeatExchange.class
-runesmith\character\player\RunesmithCharacter.class
-runesmith\powers\RunesonancePower.class
-runesmith\cards\Runesmith\Supernova.class
-runesmith\character\player\RunesmithPlayer.class
-=======
 runesmith\powers\PotentialDownPower.class
 runesmith\orbs\PotentiaRune.class
 runesmith\powers\ArcReactorPower.class
@@ -248,6 +148,7 @@ runesmith\cards\Runesmith\OverPowered.class
 runesmith\cards\Runesmith\MetallurgicalResearch.class
 runesmith\orbs\FerroRune.class
 runesmith\cards\Runesmith\CraftPotentia.class
+runesmith\cards\Runesmith\EnergizedChisel.class
 runesmith\actions\cards\FortifyAction.class
 runesmith\actions\cards\FlexTapeAction.class
 runesmith\patches\EnhancedCardValueModified$calculateCardDamage.class
@@ -268,4 +169,3 @@ runesmith\cards\Runesmith\HeatExchange.class
 runesmith\character\player\RunesmithCharacter.class
 runesmith\powers\RunesonancePower.class
 runesmith\cards\Runesmith\Supernova.class
->>>>>>> refs/remotes/origin/master
