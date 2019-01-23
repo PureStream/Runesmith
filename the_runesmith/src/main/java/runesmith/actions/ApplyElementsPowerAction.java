@@ -29,9 +29,9 @@ public class ApplyElementsPowerAction extends AbstractGameAction{
 	@Override
 	public void update() {
 		if(p.hasPower("Runesmith:RunesonancePower")) {
-			this.ignis = this.ignis*2;
-			this.terra = this.terra*2;
-			this.aqua = this.aqua*2;
+			this.ignis = this.ignis*2>MAX_ELEMENTS?MAX_ELEMENTS:ignis*2;
+			this.terra = this.terra*2>MAX_ELEMENTS?MAX_ELEMENTS:terra*2;
+			this.aqua = this.aqua*2>MAX_ELEMENTS?MAX_ELEMENTS:aqua*2;
 			p.getPower("Runesmith:RunesonancePower").flash();
 		}
 		if(this.ignis!=0) {
