@@ -3,12 +3,16 @@ package runesmith.powers;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.PowerStrings;
+import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+
+import runesmith.orbs.RuneOrb;
 
 public class RunesonancePower extends AbstractPower {
 
@@ -16,6 +20,7 @@ public class RunesonancePower extends AbstractPower {
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings("Runesmith:RunesonancePower");
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
+	private AbstractPlayer p = AbstractDungeon.player;
 	
 	public RunesonancePower(AbstractCreature owner, int amount) {
 		this.name = NAME;
@@ -35,10 +40,30 @@ public class RunesonancePower extends AbstractPower {
 		}
 	}
 	
+	@Override
+	public void atStartOfTurn() {
+		if (!p.orbs.isEmpty()) {
+			flash();
+			for(AbstractOrb o: p.orbs) {
+				if(o instanceof RuneOrb) {
+					o.onStartOfTurn();
+				}
+			}
+		}
+		AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, "Runesmith:RunesonancePower", 1));
+	}
 	
+	@Override
 	public void atEndOfTurn(boolean isPlayer) {
-		if (isPlayer) {
-			AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, "Runesmith:RunesonancePower", 1));
+		if(isPlayer) {
+			if (!p.orbs.isEmpty()) {
+				flash();
+				for(AbstractOrb o: p.orbs) {
+					if(o instanceof RuneOrb) {
+						o.onEndOfTurn();
+					}
+				}
+			}
 		}
 	}
 	

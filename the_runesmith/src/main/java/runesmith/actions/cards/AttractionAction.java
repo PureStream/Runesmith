@@ -1,13 +1,20 @@
 package runesmith.actions.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.EmptyDeckShuffleAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import basemod.BaseMod;
+import runesmith.actions.DiscardTopCardAction;
+
 import static runesmith.patches.CardTagEnum.CRAFT;
+
+import java.util.ArrayList;
 
 public class AttractionAction extends AbstractGameAction{	
 	public AttractionAction(AbstractPlayer p) {
@@ -35,31 +42,21 @@ public class AttractionAction extends AbstractGameAction{
 		}
 		if(p.drawPile.size()==0) {
 			AbstractDungeon.actionManager.addToBottom(new EmptyDeckShuffleAction());
-			p.draw();
-			AbstractCard c = p.hand.getTopCard();
-			if(c.hasTag(CRAFT)) {
-				this.isDone = true;
-				return;
-			}else {
-				p.hand.moveToDiscardPile(c);
-				c.triggerOnManualDiscard();
-			}
+			AbstractDungeon.actionManager.addToBottom(new AttractionAction(p));
+			this.isDone = true;
+			return;
 		}
-		while(p.drawPile.size()>0) {
-			if (p.hand.size() == BaseMod.MAX_HAND_SIZE) {
-				p.createHandIsFullDialog();
-				this.isDone = true;
-				return;
-			}
-			p.draw();
-			AbstractCard c = p.hand.getTopCard();
-			if(c.hasTag(CRAFT)) {
+		
+//		ArrayList<AbstractCard> toDiscard = new ArrayList<AbstractCard>();
+		for(int i = p.drawPile.size()-1; i >= 0; i--) {
+			if(p.drawPile.group.get(i).hasTag(CRAFT)) {
+				AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p,1));
 				break;
 			}else {
-				p.hand.moveToDiscardPile(c);
-				c.triggerOnManualDiscard();
+				AbstractDungeon.actionManager.addToBottom(new DiscardSpecificCardAction(p.drawPile.group.get(i), p.drawPile));
 			}
-			tickDuration();
+//				toDiscard.get(i).triggerOnManualDiscard();
+//				p.drawPile.moveToDiscardPile(toDiscard.get(i));
 		}
 		this.isDone = true;
 	}
