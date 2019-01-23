@@ -145,7 +145,7 @@
 	},
 	"Runesmith:CraftPotentia": {
 		"NAME": "Craft Potentia",
-		"DESCRIPTION": "2 Ignis 2 Terra 2 Aqua: Craft a Potentia rune with !Pot! Potency and remove your oldest rune.",
+		"DESCRIPTION": "2 Ignis 2 Terra 2 Aqua: Remove your oldest rune and Craft a Potentia rune with !Pot! Potency.",
 		"EXTENDED_DESCRIPTION":[" NL (Can Craft.)"]
 	},
 	"Runesmith:CraftFerro": {
