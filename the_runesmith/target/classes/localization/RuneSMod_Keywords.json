@@ -163,6 +163,12 @@
 		},
 		{
 			"NAMES": [
+			"purge"
+			],
+			"DESCRIPTION": "Removed until end of combat. Does NOT go to your exhaust pile."
+		},
+		{
+			"NAMES": [
 			"WWWWWWWWWWWWWWWWW"
 			],
 			"DESCRIPTION": "WWWWWWWWWWWWWWWWW"

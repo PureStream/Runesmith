@@ -30,8 +30,8 @@
 			"Decreases the #yPotency of #yCraft card by #b",
 			"."]
 	},
-	"Runesmith:DemonforgePower": {
-		"NAME": "Demonforge Backlash",
+	"Runesmith:ArcReactorPower": {
+		"NAME": "Radiated",
 		"DESCRIPTIONS": ["At the end of your turn, lose #b"," #yPotency."]
 	},
 	"Runesmith:UnlimitedPowerPower": {
@@ -51,8 +51,8 @@
 			" cards."
 		  ]
 	},
-	"Runesmith:FlexTapePower": {
-		"NAME": "Flex Tape",
+	"Runesmith:DuctTapePower": {
+		"NAME": "Duct Tape",
 		"DESCRIPTIONS": ["#yStasis #b"," card at the start of your turn."," cards at the start of your turn."]
 	},
 	"Runesmith:SpiculumDown":{
@@ -70,8 +70,8 @@
 	"Runesmith:PermafrostPower": {
 		"NAME": "Permafrost",
 		"DESCRIPTIONS": [
-			"#yBlock won't go below half at the start of your turn.",
-			"#yBlock won't go below half at the start of its turn."
+			"Lose at most half of your #yBlock at the start of your turn.",
+			"Lose at most half of its #yBlock at the start of its turn."
 		]
 	},
 	"Runesmith:CreatorFormPower": {
