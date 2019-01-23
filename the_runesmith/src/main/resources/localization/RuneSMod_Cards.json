@@ -78,8 +78,8 @@
 		"DESCRIPTION": "Exhaust a card in your hand. Attack: Gain !M! Ignis NL Skill: Gain !M! Terra NL Power: Gain !M! Aqua. NL Status card: Gain 1 of each.",
 		"UPGRADE_DESCRIPTION": "Exhaust a card in your hand. Attack: Gain !M! Ignis NL Skill: Gain !M! Terra NL Power: Gain !M! Aqua. NL Status card: Gain 1 of each NL Curse: Gain 2 of each."
 	},
-	"Runesmith:EnchantedChisel": {
-		"NAME": "Enchanted Chisel",
+	"Runesmith:EnergizedChisel": {
+		"NAME": "Energized Chisel",
 		"DESCRIPTION": "Deal !D! damage. Gain !B! Block. Apply !M! Weak. NL Gain 1 Ignis and 1 Aqua."
 	},
 	"Runesmith:UnstableHammer": {
@@ -88,7 +88,8 @@
 	},
 	"Runesmith:HammerThrow": {
 		"NAME": "Hammer Throw",
-		"DESCRIPTION": "Deal !D! damage then draw !M! card and Upgrade them."
+		"DESCRIPTION": "Deal !D! damage. NL Draw !M! card and Upgrade it.",
+		"UPGRADE_DESCRIPTION":"Deal !D! damage. NL Draw !M! cards and Upgrade them."
 	},
 	"Runesmith:OneForEveryone": {
 		"NAME": "One for Everyone",
@@ -139,7 +140,7 @@
 	},
 	"Runesmith:CraftSpiculum": {
 		"NAME": "Craft Spiculum",
-		"DESCRIPTION": "3 Ignis 1 Aqua: Craft a Spiculum rune with !Pot! Potency. NL Exhaust.",
+		"DESCRIPTION": "1 Ignis 1 Aqua: Craft a Spiculum rune with !Pot! Potency. NL Exhaust.",
 		"EXTENDED_DESCRIPTION":[" NL (Can Craft.)"]
 	},
 	"Runesmith:CraftPotentia": {
@@ -318,8 +319,8 @@
 	},
 	"Runesmith:HeatExchange": {
 		"NAME": "Heat Exchange",
-		"DESCRIPTION": "Deal !D! damage to ALL enemies. This card gains additional damage equal to current Ignis. Lose 2 Ignis.",
-		"UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. This card gains additional damage twice the current Ignis. Lose 2 Ignis."
+		"DESCRIPTION": "Deal !D! damage to ALL enemies. This card gains additional damage equals to current Ignis. Lose 2 Ignis.",
+		"UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. This card gains additional damage equals to 2 times the current Ignis. Lose 2 Ignis."
 	},
 	"Runesmith:PoweredAnvil": {
 		"NAME": "Powered Anvil",

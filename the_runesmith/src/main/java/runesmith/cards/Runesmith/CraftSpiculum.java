@@ -23,7 +23,7 @@ public class CraftSpiculum extends AbstractRunicCard {
 	private static final int COST = 1;
 	private static final int POTENCY = 3;
 	private static final int UPGRADE_POTENCY = 2;
-	private static final int IGNIS_AMT = 3;
+	private static final int IGNIS_AMT = 1;
 	private static final int AQUA_AMT = 1;
 	
 	public CraftSpiculum() {

@@ -19,8 +19,8 @@ import basemod.abstracts.CustomCard;
 import runesmith.actions.ApplyElementsPowerAction;
 import runesmith.patches.AbstractCardEnum;
 
-public class EnchantedChisel extends CustomCard {
-	public static final String ID = "Runesmith:EnchantedChisel";
+public class EnergizedChisel extends CustomCard {
+	public static final String ID = "Runesmith:EnergizedChisel";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
@@ -32,7 +32,7 @@ public class EnchantedChisel extends CustomCard {
 	private static final int UPGRADE_PLUS_ALL = 1;
 	private static final int ELEMENT_AMT = 1;
 
-	public EnchantedChisel() {
+	public EnergizedChisel() {
 		super(
 			ID,
 			NAME,
@@ -72,7 +72,7 @@ public class EnchantedChisel extends CustomCard {
 	}
 
 	public AbstractCard makeCopy() {
-		return new EnchantedChisel();
+		return new EnergizedChisel();
 	}
 
 	public void upgrade() {
