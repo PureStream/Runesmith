@@ -12,16 +12,13 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import basemod.abstracts.CustomCard;
-import runesmith.patches.AbstractCardEnum;
 import runesmith.actions.ApplyElementsPowerAction;
-import runesmith.powers.TimeMachinePower;
 
-public class TimeTravelAlt extends CustomCard {
+public class TimeTravel_old extends CustomCard {
 
-	public static final String ID = "Runesmith:TimeTravelAlt";
+	public static final String ID = "Runesmith:TimeTravel_old";
 	public static final String IMG_PATH = "images/cards/TimeTravel.png";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
@@ -31,7 +28,13 @@ public class TimeTravelAlt extends CustomCard {
 	private static final int COST = 2;
 	private static final int UPG_COST = 1;
 	
-	public TimeTravelAlt() {
+	private int savedHealth, savedBlock, savedIgnis, savedTerra, savedAqua;
+	
+	public TimeTravel_old() {
+		this(0,0,0,0,0);
+	}
+	
+	public TimeTravel_old(int health, int block, int ignis, int terra, int aqua) {
 		super(
 			ID,
 			NAME,
@@ -39,12 +42,16 @@ public class TimeTravelAlt extends CustomCard {
 			COST,
 			DESCRIPTION,
 			AbstractCard.CardType.SKILL,
-			AbstractCardEnum.RUNESMITH_BEIGE,
+			AbstractCard.CardColor.COLORLESS,
 			AbstractCard.CardRarity.SPECIAL,
 			AbstractCard.CardTarget.SELF
 		);
-
-		this.exhaust = true;
+		savedHealth = health;
+		savedBlock = block;
+		savedIgnis = ignis;
+		savedTerra = terra;
+		savedAqua = aqua;
+		this.purgeOnUse = true;
 	}
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {
@@ -53,24 +60,6 @@ public class TimeTravelAlt extends CustomCard {
 		int curIgnis = (p.hasPower("Runesmith:IgnisPower") ? p.getPower("Runesmith:IgnisPower").amount : 0);
 		int curTerra = (p.hasPower("Runesmith:TerraPower") ? p.getPower("Runesmith:TerraPower").amount : 0);
 		int curAqua = (p.hasPower("Runesmith:AquaPower") ? p.getPower("Runesmith:AquaPower").amount : 0);
-	
-		
-		int values[] = null;
-		if(p.hasPower("Runesmith:TimeMachinePower")) {
-			AbstractPower pow = p.getPower("Runesmith:TimeMachinePower");
-			if(pow instanceof TimeMachinePower) {
-				values = ((TimeMachinePower) pow).getValues();
-				pow.flash();
-			}
-		}else {
-			return;
-		}
-		
-		int savedHealth = values[0];
-		int savedBlock = values[1];
-		int savedIgnis = values[2];
-		int savedTerra = values[3];
-		int savedAqua = values[4];
 		
 		if (curHealth < savedHealth) 
 			p.heal(savedHealth-curHealth);
@@ -114,7 +103,7 @@ public class TimeTravelAlt extends CustomCard {
 	}
 	
 	public AbstractCard makeCopy() {
-		return new TimeTravelAlt();
+		return new TimeTravel_old(savedHealth, savedBlock, savedIgnis, savedTerra, savedAqua);
 	}
 	
 	public void upgrade() {
