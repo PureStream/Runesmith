@@ -17,11 +17,12 @@ public class ApplyElementsPowerAction extends AbstractGameAction{
 	private int terra;
 	private int aqua;
 	private AbstractPlayer p;
+	private static final int MAX_ELEMENTS = 10;
 	
 	public ApplyElementsPowerAction(AbstractCreature target, AbstractCreature source, int ignis, int terra, int aqua){
-		this.ignis = ignis;
-		this.terra = terra;
-		this.aqua = aqua;
+		this.ignis = ignis>MAX_ELEMENTS?MAX_ELEMENTS:ignis;
+		this.terra = terra>MAX_ELEMENTS?MAX_ELEMENTS:terra;
+		this.aqua = aqua>MAX_ELEMENTS?MAX_ELEMENTS:aqua;
 		this.p = (AbstractPlayer) target;
 	}
 	

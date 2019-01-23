@@ -309,7 +309,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
 		cardsToAdd.add(new ElementalShield());
 		cardsToAdd.add(new UnstableHammer());
 		cardsToAdd.add(new HammerSlam());
-		cardsToAdd.add(new EnchantedChisel());
+		cardsToAdd.add(new EnergizedChisel());
 		cardsToAdd.add(new MakeshiftArmor());
 		cardsToAdd.add(new HammerThrow());
 		cardsToAdd.add(new ShiftingStrike());
@@ -372,6 +372,8 @@ public class RunesmithMod implements PostExhaustSubscriber,
 		cardsToAdd.add(new ReplicatingBarrier());
 		cardsToAdd.add(new TimeMachine());
 		cardsToAdd.add(new TimeTravel());
+		cardsToAdd.add(new TimeMachineAlt());
+		cardsToAdd.add(new TimeTravelAlt());
 	}
 
 	@Override
@@ -419,16 +421,13 @@ public class RunesmithMod implements PostExhaustSubscriber,
 	@Override
 	public int receiveOnPlayerLoseBlock(int arg0) {
 		AbstractPlayer p = AbstractDungeon.player;
-//		logger.info("current block is: "+p.currentBlock);
+		logger.info("current block is: "+p.currentBlock);
 		int blockLoss = arg0;
-		if(p.hasPower("Barricade")) {
-			return 0;
-		}
-		if(p.hasRelic("Calipers")) {
-			blockLoss = Math.min(blockLoss, 15);
-		}
-		if(p.hasPower("Runesmith:Permafrost")) {
+		if(p.hasPower("Runesmith:PermafrostPower")) {
 			blockLoss = Math.min(blockLoss, p.currentBlock/2);
+			if(blockLoss == p.currentBlock/2) {
+				p.getPower("Runesmith:PermafrostPower").flash();
+			}
 		}
 		return blockLoss;
 	}

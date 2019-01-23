@@ -9,6 +9,7 @@ import runesmith.patches.AbstractCardEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -75,6 +76,9 @@ public class Discharge extends CustomCard {
 				AbstractGameAction.AttackEffect.NONE
 			)
 		);
+		AbstractDungeon.actionManager.addToBottom(
+				new GainBlockAction(p, p, this.block)
+			);
 		float speedTime = 0.1F;
 		if (Settings.FAST_MODE) {
 			speedTime = 0.0F;

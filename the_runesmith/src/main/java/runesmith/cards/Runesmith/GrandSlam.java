@@ -37,7 +37,6 @@ public class GrandSlam extends CustomCard {
 			CardTarget.ENEMY
 		);
 		this.baseDamage = this.damage = ATTACK_DMG;
-		this.exhaust = true;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {

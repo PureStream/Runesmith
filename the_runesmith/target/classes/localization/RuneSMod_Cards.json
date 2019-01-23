@@ -44,7 +44,7 @@
 	},
 	"Runesmith:RuneHurl": {
 		"NAME": "Rune Hurl",
-		"DESCRIPTION": "Break oldest rune to deal !D! damage."
+		"DESCRIPTION": "Break your oldest rune to deal !D! damage."
 	},
 	"Runesmith:CraftIncendium": {
 		"NAME": "Craft Incendium",
@@ -78,8 +78,8 @@
 		"DESCRIPTION": "Exhaust a card in your hand. Attack: Gain !M! Ignis NL Skill: Gain !M! Terra NL Power: Gain !M! Aqua. NL Status card: Gain 1 of each.",
 		"UPGRADE_DESCRIPTION": "Exhaust a card in your hand. Attack: Gain !M! Ignis NL Skill: Gain !M! Terra NL Power: Gain !M! Aqua. NL Status card: Gain 1 of each NL Curse: Gain 2 of each."
 	},
-	"Runesmith:EnchantedChisel": {
-		"NAME": "Enchanted Chisel",
+	"Runesmith:EnergizedChisel": {
+		"NAME": "Energized Chisel",
 		"DESCRIPTION": "Deal !D! damage. Gain !B! Block. Apply !M! Weak. NL Gain 1 Ignis and 1 Aqua."
 	},
 	"Runesmith:UnstableHammer": {
@@ -88,7 +88,8 @@
 	},
 	"Runesmith:HammerThrow": {
 		"NAME": "Hammer Throw",
-		"DESCRIPTION": "Deal !D! damage then draw !M! card and Upgrade them."
+		"DESCRIPTION": "Deal !D! damage. NL Draw !M! card and Upgrade it.",
+		"UPGRADE_DESCRIPTION":"Deal !D! damage. NL Draw !M! cards and Upgrade them."
 	},
 	"Runesmith:OneForEveryone": {
 		"NAME": "One for Everyone",
@@ -131,7 +132,7 @@
 	"Runesmith:Firestorm": {
 		"NAME": "Firestorm",
 		"DESCRIPTION": "Gain !M! Ignis and !M! Terra at the start of your turn.",
-		"UPGRADE_DESCRIPTION": "Innate. Gain !M! Ignis and !M! Terra at the start of your turn."
+		"UPGRADE_DESCRIPTION": "Innate. NL Gain !M! Ignis and !M! Terra at the start of your turn."
 	},
 	"Runesmith:RunicBlueprint": {
 		"NAME": "Runic Blueprint",
@@ -139,7 +140,7 @@
 	},
 	"Runesmith:CraftSpiculum": {
 		"NAME": "Craft Spiculum",
-		"DESCRIPTION": "3 Ignis 1 Aqua: Craft a Spiculum rune with !Pot! Potency. NL Exhaust.",
+		"DESCRIPTION": "1 Ignis 1 Aqua: Craft a Spiculum rune with !Pot! Potency. NL Exhaust.",
 		"EXTENDED_DESCRIPTION":[" NL (Can Craft.)"]
 	},
 	"Runesmith:CraftPotentia": {
@@ -286,8 +287,8 @@
 	},
 	"Runesmith:GrandSlam": {
 		"NAME": "Grand Slam",
-		"DESCRIPTION": "Deal 13 damage. Enhance all cards in your hand. NL Exhaust.",
-		"UPGRADE_DESCRIPTION": "Deal 13 damage. Enhance all cards in your hand twice. NL Exhaust."
+		"DESCRIPTION": "Deal 13 damage. Enhance all cards in your hand.",
+		"UPGRADE_DESCRIPTION": "Deal 13 damage. Enhance all cards in your hand twice."
 	},
 	"Runesmith:GoWithTheFlow": {
 		"NAME": "Go With The Flow",
@@ -309,7 +310,7 @@
 	},
 	"Runesmith:Permafrost": {
 		"NAME": "Permafrost",
-		"DESCRIPTION": "Block won't go below half at the start of your turn. NL Gain 1 Terra and 1 Aqua."
+		"DESCRIPTION": "Lose at most half of your Block at the start of your turn. NL Gain 1 Terra and 1 Aqua."
 	},
 	"Runesmith:Enchant": {
 		"NAME": "Enchant",
@@ -318,8 +319,8 @@
 	},
 	"Runesmith:HeatExchange": {
 		"NAME": "Heat Exchange",
-		"DESCRIPTION": "Deal !D! damage to ALL enemies. This card gains additional damage equal to current Ignis. Lose 2 Ignis.",
-		"UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. This card gains additional damage twice the current Ignis. Lose 2 Ignis."
+		"DESCRIPTION": "Deal !D! damage to ALL enemies. This card gains additional damage equals to current Ignis. Lose 2 Ignis.",
+		"UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. This card gains additional damage equals to 2 times the current Ignis. Lose 2 Ignis."
 	},
 	"Runesmith:PoweredAnvil": {
 		"NAME": "Powered Anvil",
@@ -328,8 +329,8 @@
 	},
 	"Runesmith:Malloc": {
 		"NAME": "Malloc",
-		"DESCRIPTION": "Downgrade all cards in your hand. Gain [E] [E].",
-		"UPGRADE_DESCRIPTION": "Downgrade all cards in your hand. Gain [E] [E] [E]."
+		"DESCRIPTION": "Downgrade all cards in your hand. NL Gain [E] [E].",
+		"UPGRADE_DESCRIPTION": "Downgrade all cards in your hand. NL Gain [E] [E] [E]."
 	},
 	"Runesmith:Preparation": {
 		"NAME": "Preparation",
@@ -359,7 +360,7 @@
 	"Runesmith:Firewall": {
 		"NAME": "Firewall",
 		"DESCRIPTION": "Gain !B! block. NL 3 Ignis 1 Terra: Craft a Firestone and a Magma rune with !Pot! Potency.",
-		"EXTENDED_DESCRIPTION":[" NL (Can Craft.)"]
+		"EXTENDED_DESCRIPTION":[" NL (Can Craft.)"]	
 	},
 	"Runesmith:Discharge": {
 		"NAME": "Discharge",
@@ -379,12 +380,21 @@
 	},
 	"Runesmith:TimeMachine": {
 		"NAME": "Time Machine",
-		"DESCRIPTION": "Save your current HP, Block, and Elements. NL Add a \"Time Travel\" card to your hand. NL Exhaust.",
-		"UPGRADE_DESCRIPTION": "Save your current HP, Block, and Elements. NL Add a upgraded \"Time Travel\" card to your hand. NL Innate. NL Exhaust."
+		"DESCRIPTION": "Save your current HP, Block, and Elements. NL Add a Time Travel card to your hand. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Save your current HP, Block, and Elements. NL Add an upgraded Time Travel card to your hand. NL Innate. NL Exhaust."
+	},
+	"Runesmith:TimeMachineAlt": {
+		"NAME": "Time Machine",
+		"DESCRIPTION": "Save your current HP, Block, and Elements. NL Add a Time Travel card to your hand. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Innate. NL Save your current HP, Block, and Elements. NL Add a Time Travel card to your hand. NL Exhaust."
 	},
 	"Runesmith:TimeTravel": {
 		"NAME": "Time Travel",
 		"DESCRIPTION": "Set your current HP, Block, and Elements to the saved values. NL Purge."
+	},
+	"Runesmith:TimeTravelAlt": {
+		"NAME": "Time Travel",
+		"DESCRIPTION": "Set your current HP, Block, and Elements to the saved values. NL Exhaust."
 	},
 	"Runesmith:WWWWWWWWWWWWWWWWWWWW": {
 		"NAME": "WWWWWWWWWWWWWWWWWWWW",

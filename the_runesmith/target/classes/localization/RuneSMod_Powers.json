@@ -30,13 +30,8 @@
 			"Decreases the #yPotency of #yCraft card by #b",
 			"."]
 	},
-<<<<<<< HEAD
-	"Runesmith:DemonforgePower": {
-		"NAME": "Arc Reactor Backlash",
-=======
 	"Runesmith:ArcReactorPower": {
 		"NAME": "Radiated",
->>>>>>> refs/remotes/origin/master
 		"DESCRIPTIONS": ["At the end of your turn, lose #b"," #yPotency."]
 	},
 	"Runesmith:UnlimitedPowerPower": {
@@ -75,8 +70,8 @@
 	"Runesmith:PermafrostPower": {
 		"NAME": "Permafrost",
 		"DESCRIPTIONS": [
-			"#yBlock won't go below half at the start of your turn.",
-			"#yBlock won't go below half at the start of its turn."
+			"Lose at most half of your #yBlock at the start of your turn.",
+			"Lose at most half of its #yBlock at the start of its turn."
 		]
 	},
 	"Runesmith:CreatorFormPower": {
@@ -94,5 +89,9 @@
 	"Runesmith:ReplicatingBarrierPower": {
 		"NAME": "Replicating Barrier",
 		"DESCRIPTIONS": ["In #b", " turns,", "turn,", " 2 #yTerra: #yCraft a #yProtectio rune."]
+	},
+	"Runesmith:TimeMachinePower": {
+		"NAME": "Wormhole",
+		"DESCRIPTIONS": ["Saved #b", " HP, #b"," #yBlock, #b"," #yIgnis, #b", " #yTerra, #b"," #yAqua."]
 	}
 }

@@ -89,5 +89,9 @@
 	"Runesmith:ReplicatingBarrierPower": {
 		"NAME": "Replicating Barrier",
 		"DESCRIPTIONS": ["In #b", " turns,", "turn,", " 2 #yTerra: #yCraft a #yProtectio rune."]
+	},
+	"Runesmith:TimeMachinePower": {
+		"NAME": "Wormhole",
+		"DESCRIPTIONS": ["Saved #b", " HP, #b"," #yBlock, #b"," #yIgnis, #b", " #yTerra, #b"," #yAqua."]
 	}
 }
