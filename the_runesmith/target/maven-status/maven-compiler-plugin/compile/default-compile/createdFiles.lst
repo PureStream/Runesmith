@@ -2,6 +2,7 @@ runesmith\patches\CardStasisStatus.class
 runesmith\cards\Runesmith\HammerAndChisel.class
 runesmith\actions\cards\ShatteruneAction.class
 runesmith\cards\Runesmith\TimeTravel_old.class
+runesmith\cards\Runesmith\Electrocute.class
 runesmith\orbs\DudRune.class
 runesmith\powers\ReplicatingBarrierPower.class
 runesmith\cards\Runesmith\ChaoticBlast.class
@@ -106,6 +107,7 @@ runesmith\cards\Runesmith\FieryHammer.class
 runesmith\cards\Runesmith\ThatsALotOfDamage.class
 runesmith\cards\Runesmith\Rearm.class
 runesmith\powers\SpiculumDownPower.class
+runesmith\actions\StasisCardInDeckAction.class
 runesmith\actions\StasisCard.class
 runesmith\cards\Runesmith\ConstructBifrost.class
 runesmith\cards\Runesmith\Shatterune.class

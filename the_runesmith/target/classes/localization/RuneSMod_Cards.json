@@ -145,7 +145,7 @@
 	},
 	"Runesmith:CraftPotentia": {
 		"NAME": "Craft Potentia",
-		"DESCRIPTION": "2 Ignis 2 Terra 2 Aqua: Craft a Potentia rune with !Pot! Potency and remove your oldest rune.",
+		"DESCRIPTION": "2 Ignis 2 Terra 2 Aqua: Remove your oldest rune and Craft a Potentia rune with !Pot! Potency.",
 		"EXTENDED_DESCRIPTION":[" NL (Can Craft.)"]
 	},
 	"Runesmith:CraftFerro": {
@@ -395,6 +395,10 @@
 	"Runesmith:TimeTravel": {
 		"NAME": "Time Travel",
 		"DESCRIPTION": "Set your current HP, Block, and Elements to the saved values. NL Exhaust."
+	},
+	"Runesmith:Electrocute": {
+		"NAME": "Electrocute",
+		"DESCRIPTION": "Deal !D! damage. Take !M! damage. Stasis a card in your deck."
 	},
 	"Runesmith:WWWWWWWWWWWWWWWWWWWW": {
 		"NAME": "WWWWWWWWWWWWWWWWWWWW",
