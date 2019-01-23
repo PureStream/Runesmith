@@ -16,11 +16,12 @@ public class BrokenRuby extends CustomRelic {
 	
 	public static final String ID = "Runesmith:BrokenRuby";
 	private static final String IMG = "images/relics/BrokenRuby.png"; //<--------- Need some img
+	private static final String IMG_O = "images/relics/BrokenRuby_o.png";
 	private static final int IGNIS_AMT = 1;
 	private static final int NUM_CARDS = 3;
 	
 	public BrokenRuby() {
-		super(ID, ImageMaster.loadImage(IMG), RelicTier.STARTER, LandingSound.MAGICAL); 
+		super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_O), RelicTier.STARTER, LandingSound.MAGICAL); 
 		this.counter = 0;
 	}
 	
