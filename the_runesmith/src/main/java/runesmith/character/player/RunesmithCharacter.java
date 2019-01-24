@@ -41,7 +41,7 @@ public class RunesmithCharacter extends CustomPlayer {
     public static final String THE_RUNESMITH_SKELETON_JSON = "images/character/idle/skeleton.json"; // spine animation json
     public static final String THE_RUNESMITH_SPRITER = "images/character/idle/animation.scml"; //Spriter File
     
-    private static final EventStrings heartString = CardCrawlGame.languagePack.getEventString("Runesmith:Spire Heart");
+    private static final EventStrings heartString = CardCrawlGame.languagePack.getEventString("Runesmith:SpireHeart");
 	
 	public RunesmithCharacter (String name) {
 		super(name, PlayerClassEnum.RUNESMITH_CLASS, null, "images/vfx.png",new SpriterAnimation(THE_RUNESMITH_SPRITER));
