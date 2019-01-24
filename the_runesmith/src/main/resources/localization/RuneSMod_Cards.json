@@ -377,7 +377,7 @@
 	},
 	"Runesmith:ReplicatingBarrier": {
 		"NAME": "Replicating Barrier",
-		"DESCRIPTION": "Every 2 turns, 2 Terra: Craft Protectio with 4 Potency."
+		"DESCRIPTION": "Every 2 turns, 2 Terra: Craft Protectio with {Pot} Potency."
 	},
 	"Runesmith:TimeMachine_old": {
 		"NAME": "Time Machine",

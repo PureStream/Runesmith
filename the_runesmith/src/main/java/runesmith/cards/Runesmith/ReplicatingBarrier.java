@@ -12,7 +12,7 @@ import basemod.abstracts.CustomCard;
 import runesmith.patches.AbstractCardEnum;
 import runesmith.powers.ReplicatingBarrierPower;
 
-public class ReplicatingBarrier extends CustomCard {
+public class ReplicatingBarrier extends AbstractRunicCard {
 	public static final String ID = "Runesmith:ReplicatingBarrier";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
@@ -21,6 +21,7 @@ public class ReplicatingBarrier extends CustomCard {
 	public static final String IMG_PATH = "images/cards/ReplicatingBarrier.png"; //<-------------- need some img
 	private static final int COST = 1;
 	private static final int UPG_COST = 0;
+	private static final int POTENCY_AMT = 4;
 
 	public ReplicatingBarrier() {
 		super(
@@ -34,6 +35,7 @@ public class ReplicatingBarrier extends CustomCard {
 			CardRarity.RARE,
 			CardTarget.SELF
 		);
+		this.basePotency = this.potency = POTENCY_AMT;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
