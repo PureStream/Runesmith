@@ -13,9 +13,6 @@ import runesmith.powers.TerraPower;
 
 public class ApplyElementsPowerAction extends AbstractGameAction{
 	
-	private int originalIgnis;
-	private int originalTerra;
-	private int originalAqua;
 	private int ignis;
 	private int terra;
 	private int aqua;
@@ -23,9 +20,7 @@ public class ApplyElementsPowerAction extends AbstractGameAction{
 	private static final int MAX_ELEMENTS = 10;
 	
 	public ApplyElementsPowerAction(AbstractCreature target, AbstractCreature source, int ignis, int terra, int aqua){
-		originalIgnis = ignis;
-		originalTerra = terra;
-		originalAqua = aqua;
+		ElementsGainedCountField.elementsCount.set(p, ElementsGainedCountField.elementsCount.get(p)+ignis+terra+aqua);
 		this.ignis = ignis>MAX_ELEMENTS?MAX_ELEMENTS:ignis;
 		this.terra = terra>MAX_ELEMENTS?MAX_ELEMENTS:terra;
 		this.aqua = aqua>MAX_ELEMENTS?MAX_ELEMENTS:aqua;
@@ -34,9 +29,6 @@ public class ApplyElementsPowerAction extends AbstractGameAction{
 	
 	@Override
 	public void update() {
-		
-		
-		
 		
 //		if(p.hasPower("Runesmith:RunesonancePower")) {
 //			this.ignis = this.ignis*2>MAX_ELEMENTS?MAX_ELEMENTS:ignis*2;
@@ -74,7 +66,6 @@ public class ApplyElementsPowerAction extends AbstractGameAction{
 		          )
 		      );
 		}
-		ElementsGainedCountField.elementsCount.set(p, ElementsGainedCountField.elementsCount.get(p)+originalIgnis+originalTerra+originalAqua);
 		this.isDone = true;
 	}
 }
