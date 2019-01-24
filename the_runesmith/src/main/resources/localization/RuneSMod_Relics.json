@@ -29,7 +29,7 @@
 	},
 	"Runesmith:UraniumAnvil": {
 		"NAME": "Uranium Anvil",
-		"FLAVOR": "This strange block of metal is warm to the touch but seem to tire the wielder.",
+		"FLAVOR": "This block of metal holds massive amount of energy but weakens anyone who come near it.",
 		"DESCRIPTIONS": [
 			" at the start of your turn. #yDowngrade a random card in your deck each turn.",
       		"Gain [E]"
