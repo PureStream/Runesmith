@@ -53,7 +53,7 @@
 	},
 	"Runesmith:DuctTapePower": {
 		"NAME": "Duct Tape",
-		"DESCRIPTIONS": ["#yStasis #b"," card at the start of your turn."," cards at the start of your turn."]
+		"DESCRIPTIONS": ["#yStasis up to #b"," card at the start of your turn."," cards at the start of your turn."]
 	},
 	"Runesmith:SpiculumDown":{
 		"NAME": "Thorns Down",

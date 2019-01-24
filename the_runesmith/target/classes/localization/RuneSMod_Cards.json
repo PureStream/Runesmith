@@ -239,8 +239,8 @@
 	},
 	"Runesmith:DuctTape": {
 		"NAME": "Duct Tape",
-		"DESCRIPTION": "Stasis !M! card in your hand each turn.",
-		"UPGRADE_DESCRIPTION": "Stasis !M! cards in your hand each turn."
+		"DESCRIPTION": "Stasis up to !M! card in your hand each turn.",
+		"UPGRADE_DESCRIPTION": "Stasis up to !M! cards in your hand each turn."
 	},
 	"Runesmith:MetallurgicalResearch": {
 		"NAME": "Metallurgical Research",
@@ -377,7 +377,7 @@
 	},
 	"Runesmith:ReplicatingBarrier": {
 		"NAME": "Replicating Barrier",
-		"DESCRIPTION": "Every 2 turns, 2 Terra: Craft Protectio with {Pot} Potency."
+		"DESCRIPTION": "Every 2 turns, 2 Terra: Craft Protectio with !Pot! Potency."
 	},
 	"Runesmith:TimeMachine_old": {
 		"NAME": "Time Machine",
@@ -400,6 +400,10 @@
 	"Runesmith:Electrocute": {
 		"NAME": "Electrocute",
 		"DESCRIPTION": "Deal !D! damage. Take !M! damage. Stasis a card in your deck."
+	},
+	"Runesmith:FissionHammer": {
+		"NAME": "Fission Hammer",
+		"DESCRIPTION": "Deal !D! damage. Deal !D! damage to ALL enemies. NL Break your oldest rune twice."
 	},
 	"Runesmith:WWWWWWWWWWWWWWWWWWWW": {
 		"NAME": "WWWWWWWWWWWWWWWWWWWW",

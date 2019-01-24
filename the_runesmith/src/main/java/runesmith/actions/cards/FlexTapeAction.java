@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.AbstractCard.CardType;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -33,7 +32,7 @@ public class FlexTapeAction extends AbstractGameAction{
 		if(this.duration == Settings.ACTION_DUR_FAST) {
 
 			for (AbstractCard c : this.p.hand.group) {
-				if (!canStasis(c)) {
+				if (!StasisCard.canStasis(c)) {
 					this.cannotStasis.add(c);
 				}
 			}
@@ -43,13 +42,33 @@ public class FlexTapeAction extends AbstractGameAction{
 				return;
 			}
 			
+//			if(this.p.hand.group.size() - this.cannotStasis.size() <= amount) {
+//				for(AbstractCard c : this.p.hand.group) {
+//					if(StasisCard.canStasis(c)) {
+//						StasisCard.stasis(c);
+//						c.superFlash(RunesmithMod.BEIGE);
+//					}
+//				}
+//				this.isDone = true;
+//				return;
+//			}
+			
 			this.p.hand.group.removeAll(this.cannotStasis);
 			
-			if (this.p.hand.group.size() >= 1) {	
-				AbstractDungeon.handCardSelectScreen.open(TEXT[0], amount, false, false, false, false);
+			if (this.p.hand.group.size() > 0) {	
+				AbstractDungeon.handCardSelectScreen.open(TEXT[0], amount, false, true, false, false, true);
 				tickDuration();
 				return;
 			}
+			
+//			if (this.p.hand.group.size() <= amount) {
+//				for (AbstractCard c : this.p.hand.group) {
+//					StasisCard.stasis(c);
+//					this.p.hand.getTopCard().superFlash(RunesmithMod.BEIGE);
+//					returnCards();
+//				}
+//				this.isDone = true;
+//			}
 		}
 		
 		
@@ -69,11 +88,6 @@ public class FlexTapeAction extends AbstractGameAction{
 		}
 		
 		tickDuration();
-	}
-	
-	private boolean canStasis(AbstractCard c) {
-		if(c.type == CardType.CURSE || c.type == CardType.STATUS) return false;
-		else return true;
 	}
 	
 	private void returnCards() {
