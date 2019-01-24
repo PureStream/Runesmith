@@ -35,7 +35,7 @@ public class CraftMagma extends AbstractRunicCard {
 			DESCRIPTION,
 			AbstractCard.CardType.SKILL,
 			AbstractCardEnum.RUNESMITH_BEIGE,
-			AbstractCard.CardRarity.BASIC,
+			AbstractCard.CardRarity.COMMON,
 			AbstractCard.CardTarget.SELF
 		);
 		
