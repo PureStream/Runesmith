@@ -37,7 +37,7 @@ public class ReplicatingBarrier extends CustomCard {
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		if (!p.hasPower("ReplicatingBarrierPower"))
+		if (!p.hasPower("Runesmith:ReplicatingBarrierPower"))
 			AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, 
 					new ReplicatingBarrierPower(p)));
 	}
