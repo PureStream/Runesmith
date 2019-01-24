@@ -41,6 +41,7 @@ runesmith\cards\Runesmith\CraftReservo.class
 runesmith\powers\TerraPower.class
 runesmith\actions\cards\RefinementAction.class
 runesmith\orbs\IndustriaRune.class
+runesmith\cards\deprecated\ThatsALotOfDamage.class
 runesmith\patches\EnhancedCardValueModified.class
 runesmith\cards\Runesmith\NanitesCloud.class
 runesmith\orbs\MedicinaeRune.class
@@ -90,6 +91,7 @@ runesmith\powers\DuplicatePower.class
 runesmith\cards\Runesmith\UnlimitedPower.class
 runesmith\cards\Runesmith\TimeTravel.class
 runesmith\powers\PotentialDownPower.class
+runesmith\cards\Runesmith\FissionHammer.class
 runesmith\orbs\PotentiaRune.class
 runesmith\powers\ArcReactorPower.class
 runesmith\cards\Runesmith\Repurpose.class
@@ -104,7 +106,6 @@ runesmith\actions\BreakRuneAction.class
 runesmith\actions\DowngradeCardInHandAction.class
 runesmith\cards\Runesmith\AbstractRunicCard.class
 runesmith\cards\Runesmith\FieryHammer.class
-runesmith\cards\Runesmith\ThatsALotOfDamage.class
 runesmith\cards\Runesmith\Rearm.class
 runesmith\powers\SpiculumDownPower.class
 runesmith\actions\StasisCardInDeckAction.class
