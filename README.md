@@ -23,8 +23,8 @@ Most of the arts are temporary and will be updated as more refined drawings are 
 * Character Sprites (1/4)
   * Animation (wip)
   * Portrait (wip)
-* Cards (72/75 including Basics)
-  * Completed card arts (0/75)
+* Cards (75(+4)/75(+4) including Basics)
+  * Completed card arts (1/75(+4))
 * Relics (1/?)
 * Energy Orb (wip)
 ## Installation
