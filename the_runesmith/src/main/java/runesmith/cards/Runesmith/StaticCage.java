@@ -76,11 +76,6 @@ public class StaticCage extends CustomCard {
 		return new StaticCage();
 	}
 	
-	@Override
-	public boolean isDefend() {
-		return true;
-	}
-	
 	public void upgrade() {
 		if (!this.upgraded) {
 		  upgradeName();

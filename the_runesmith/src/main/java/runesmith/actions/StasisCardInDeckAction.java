@@ -10,8 +10,6 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
 
-import runesmith.patches.CardStasisStatus;
-
 public class StasisCardInDeckAction extends AbstractGameAction{
 	private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("Runesmith:StasisAction");
 	public static final String[] TEXT = uiStrings.TEXT;
@@ -24,10 +22,6 @@ public class StasisCardInDeckAction extends AbstractGameAction{
 		this.duration = Settings.ACTION_DUR_FAST;
 		this.amount = amount;
 	}
-
-	private boolean canStasis(AbstractCard c) {
-		return !CardStasisStatus.isStasis.get(c);
-	}
 	
 	@Override
 	public void update() {
@@ -35,7 +29,7 @@ public class StasisCardInDeckAction extends AbstractGameAction{
 		if (this.duration == Settings.ACTION_DUR_FAST) {
 			tmp = new CardGroup(CardGroupType.UNSPECIFIED);
 			for (AbstractCard c : this.p.drawPile.group) {
-				if (canStasis(c))
+				if (StasisCard.canStasis(c))
 					tmp.addToRandomSpot(c);
 			}
 			

@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import runesmith.RunesmithMod;
-import runesmith.patches.CardStasisStatus;
 
 
 public class StasisCardInHandAction extends AbstractGameAction{
@@ -26,10 +25,6 @@ public class StasisCardInHandAction extends AbstractGameAction{
 		this.duration = Settings.ACTION_DUR_FAST;
 		this.amount = amount;
 	}
-
-	private boolean canStasis(AbstractCard c) {
-		return !CardStasisStatus.isStasis.get(c);
-	}
 	
 	@Override
 	public void update() {
@@ -41,7 +36,7 @@ public class StasisCardInHandAction extends AbstractGameAction{
 			
 			//get list of card that can't be stasis
 			for(AbstractCard c : p.hand.group) {
-				if(!canStasis(c)) {
+				if(!StasisCard.canStasis(c)) {
 					this.cannotStasis.add(c);
 				}
 			}
@@ -49,7 +44,7 @@ public class StasisCardInHandAction extends AbstractGameAction{
 			//stasis every card if amount is at least the number of stasis-able card
 			if (this.p.hand.size() - this.cannotStasis.size() <= this.amount) {
 				for(AbstractCard c : p.hand.group) {
-					if(canStasis(c)) StasisCard.stasis(c);
+					if(StasisCard.canStasis(c)) StasisCard.stasis(c);
 					c.superFlash(RunesmithMod.BEIGE);
 					this.isDone = true;
 					return;
