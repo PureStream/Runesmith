@@ -353,7 +353,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
 		cardsToAdd.add(new DoubleUp());
 		cardsToAdd.add(new Refinement());
 		cardsToAdd.add(new Permafrost());
-		cardsToAdd.add(new ThatsALotOfDamage());
+//		cardsToAdd.add(new ThatsALotOfDamage());
 		cardsToAdd.add(new CreatorForm());
 		cardsToAdd.add(new Reinforce());
 		cardsToAdd.add(new HeatExchange());
@@ -375,6 +375,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
 		cardsToAdd.add(new TimeMachine());
 		cardsToAdd.add(new TimeTravel());
 		cardsToAdd.add(new Electrocute());
+		cardsToAdd.add(new FissionHammer());
 	}
 
 	@Override
