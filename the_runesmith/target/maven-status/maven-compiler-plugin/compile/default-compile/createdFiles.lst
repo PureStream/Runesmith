@@ -1,7 +1,6 @@
 runesmith\patches\CardStasisStatus.class
 runesmith\cards\Runesmith\HammerAndChisel.class
 runesmith\actions\cards\ShatteruneAction.class
-runesmith\cards\Runesmith\TimeTravel_old.class
 runesmith\cards\Runesmith\Electrocute.class
 runesmith\orbs\DudRune.class
 runesmith\powers\ReplicatingBarrierPower.class
@@ -11,6 +10,7 @@ runesmith\patches\CardTagEnum.class
 runesmith\cards\Runesmith\LithiumIon.class
 runesmith\actions\cards\MetallurgicalResearchAction.class
 runesmith\patches\EnhancedCardValueModified$resetAttributes.class
+runesmith\cards\deprecated\TimeMachine_old.class
 runesmith\cards\Runesmith\Refinement.class
 runesmith\cards\Runesmith\MakeshiftArmor.class
 runesmith\RunesmithMod.class
@@ -73,7 +73,6 @@ runesmith\cards\Runesmith\Terraform.class
 runesmith\patches\EnhancedCardValueModified$applyPowers.class
 runesmith\actions\cards\RepurposeAction$1.class
 runesmith\cards\Runesmith\GoWithTheFlow.class
-runesmith\cards\Runesmith\TimeMachine_old.class
 runesmith\cards\Runesmith\ConvertAqua.class
 runesmith\cards\Runesmith\Defend_RS.class
 runesmith\actions\cards\HammerSlamAction.class
@@ -100,6 +99,7 @@ runesmith\cards\Runesmith\ChiselStab.class
 runesmith\cards\Runesmith\CraftMedicinae.class
 runesmith\cards\Runesmith\CraftFirestone.class
 runesmith\vfx\ShowStasisCardAndAddToDiscardEffect.class
+runesmith\cards\deprecated\TimeTravel_old.class
 runesmith\actions\BreakRuneAction.class
 runesmith\actions\DowngradeCardInHandAction.class
 runesmith\cards\Runesmith\AbstractRunicCard.class

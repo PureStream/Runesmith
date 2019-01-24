@@ -39,7 +39,7 @@ public class TimeTravel extends CustomCard {
 			COST,
 			DESCRIPTION,
 			AbstractCard.CardType.SKILL,
-			AbstractCardEnum.RUNESMITH_BEIGE,
+			AbstractCard.CardColor.COLORLESS,
 			AbstractCard.CardRarity.SPECIAL,
 			AbstractCard.CardTarget.SELF
 		);

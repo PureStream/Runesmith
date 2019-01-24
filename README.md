@@ -23,9 +23,11 @@ Most of the arts are temporary and will be updated as more refined drawings are 
 * Character Sprites (1/4)
   * Animation (wip)
   * Portrait (wip)
-* Cards (72/75 including Basics)
-  * Completed card arts (0/75)
+* Cards (75(+4)/75(+4) including Basics)
+  * Completed card arts (1/75(+4))
 * Relics (1/?)
 * Energy Orb (wip)
 ## Installation
-Head over to this steam workshop page and subscribe. You also need ModTheSpire and BaseMod installed.
+Head over to this steam workshop page and subscribe. You need ModTheSpire and BaseMod installed.
+
+You can also download the .jar file directly from (<https://github.com/PureStream/Runesmith/releases/tag/v0.1.0>) and put it in your mods folder.
