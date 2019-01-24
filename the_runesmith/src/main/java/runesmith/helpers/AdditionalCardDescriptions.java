@@ -63,9 +63,11 @@ public abstract class AdditionalCardDescriptions {
 		raw = raw.replace(" "+ENHANCE_TEXT[0]+" +"+(EnhanceCountField.enhanceCount.get(c)-1)+".", "");
 		raw = raw.replace(" "+ENHANCE_TEXT[0]+" +"+EnhanceCountField.enhanceCount.get(c)+".", "");
 		
+		raw = raw.replace(" "+STASIS_TEXT[0]+".","");
+		
 		if(!EnhanceCountField.enhanceReset.get(c)) {
 			if(EnhanceCountField.enhanceCount.get(c)==1) {
-				raw = raw+" "+ENHANCE_TEXT[0]+". ";
+				raw = raw+" "+ENHANCE_TEXT[0]+".";
 			}else if(EnhanceCountField.enhanceCount.get(c)>1){
 				raw = raw+" "+ENHANCE_TEXT[0]+" +"+EnhanceCountField.enhanceCount.get(c)+".";
 			}

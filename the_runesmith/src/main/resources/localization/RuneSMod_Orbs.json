@@ -33,7 +33,7 @@
   "Potentia": {
     "NAME": "Potentia",
     "DESCRIPTION": [
-      "Gain #b{Pot} #yPotency. NL #yBreak: Lose# b{Pot} #yPotency then gain #b{2Pot} #yPotency for this turn."
+      "Gain #b{Pot} #yPotency. NL #yBreak: Lose #b{Pot} #yPotency then gain #b{2Pot} #yPotency for this turn."
     ]
   },
   "Ferro": {

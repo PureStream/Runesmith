@@ -1,6 +1,6 @@
 {
-    "Runesmith:Spire Heart":{
+    "Runesmith:SpireHeart":{
         "NAME": "Spire Heart",
-        "DESCRIPTION": ["You charge up your hammer..."]
+        "DESCRIPTIONS": ["You charge up your hammer..."]
     }
 }

@@ -20,7 +20,7 @@ public abstract class EnhanceCard {
 		
 		if (AbstractDungeon.player.hasPower("Runesmith:PoweredAnvilPower")) {
 			doEnhance(c);
-			AbstractDungeon.player.getPower("Runesmith:PoweredAnvilPower").flash();
+			AbstractDungeon.player.getPower("Runesmith:PoweredAnvilPower").flashWithoutSound();
 		}
 		
 	}
