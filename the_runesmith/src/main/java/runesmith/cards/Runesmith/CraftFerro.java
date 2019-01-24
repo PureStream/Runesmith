@@ -68,6 +68,7 @@ public class CraftFerro extends AbstractRunicCard {
 	
 	@Override
 	public void onMoveToDiscard(){
+		super.onMoveToDiscard();
 		if(!this.upgraded) {
 			this.rawDescription = DESCRIPTION;
 		}else {

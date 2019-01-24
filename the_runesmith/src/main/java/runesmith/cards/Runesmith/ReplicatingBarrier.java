@@ -34,6 +34,7 @@ public class ReplicatingBarrier extends AbstractRunicCard {
 			CardRarity.RARE,
 			CardTarget.SELF
 		);
+		this.renderCraftable = false;
 		this.basePotency = this.potency = POTENCY_AMT;
 	}
 

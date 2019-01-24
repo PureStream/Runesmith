@@ -30,4 +30,4 @@ Most of the arts are temporary and will be updated as more refined drawings are 
 ## Installation
 Head over to this steam workshop page and subscribe. You need ModTheSpire and BaseMod installed.
 
-You can also download the .jar file directly from (<https://github.com/PureStream/Runesmith/releases/tag/v0.1.0>) and put it in your mods folder.
+You can also download the .jar file directly from (<https://github.com/PureStream/Runesmith/releases/tag/v0.1.2>) and put it in your mods folder.
