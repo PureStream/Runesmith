@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import basemod.abstracts.CustomCard;
 import runesmith.actions.cards.AttractionAction;
-import runesmith.actions.cards.AttractionDrawThenDiscardAction;
 import runesmith.patches.AbstractCardEnum;
 
 public class Attraction extends CustomCard {
