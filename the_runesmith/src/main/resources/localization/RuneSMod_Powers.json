@@ -88,7 +88,7 @@
 	},
 	"Runesmith:ReplicatingBarrierPower": {
 		"NAME": "Replicating Barrier",
-		"DESCRIPTIONS": ["In #b", " turns,", " turn,", " 2 #yTerra: #yCraft a #yProtectio rune."]
+		"DESCRIPTIONS": ["In #b", " turns,", " turn,", " 2 #yTerra: #yCraft a #yProtectio rune with #b"," Potency."]
 	},
 	"Runesmith:TimeMachinePower": {
 		"NAME": "Wormhole",

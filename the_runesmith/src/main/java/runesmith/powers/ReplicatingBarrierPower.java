@@ -1,7 +1,6 @@
 package runesmith.powers;
 
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -47,9 +46,8 @@ public class ReplicatingBarrierPower extends AbstractPower {
 			this.amount = 2;
 			AbstractRunicCard tmp = new CraftProtectio();
 			if (tmp.checkElements(0,TERRA_AMT,0)) {
-				AbstractPlayer p = AbstractDungeon.player;
-				if (p.hasPower("Runesmith:PotentialPower"))
-					POT_AMT += p.getPower("Runesmith:PotentialPower").amount;
+				if (owner.hasPower("Runesmith:PotentialPower"))
+					POT_AMT += owner.getPower("Runesmith:PotentialPower").amount;
 				AbstractDungeon.actionManager.addToBottom(
 						new RuneChannelAction(
 								new ProtectioRune(POT_AMT)));
@@ -64,10 +62,13 @@ public class ReplicatingBarrierPower extends AbstractPower {
 	}
 
 	public void updateDescription() {
+		int shownPot = POT_AMT;
+		if (owner.hasPower("Runesmith:PotentialPower"))
+			shownPot += owner.getPower("Runesmith:PotentialPower").amount;
 		if (amount == 2)
-			this.description = (DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + DESCRIPTIONS[3]);
+			this.description = (DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + DESCRIPTIONS[3] + shownPot + DESCRIPTIONS[4]);
 		else
-			this.description = (DESCRIPTIONS[0] + amount + DESCRIPTIONS[2] + DESCRIPTIONS[3]);
+			this.description = (DESCRIPTIONS[0] + amount + DESCRIPTIONS[2] + DESCRIPTIONS[3] + shownPot + DESCRIPTIONS[4]);
 	}
 	
 }
