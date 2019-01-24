@@ -43,6 +43,11 @@ public abstract class EnhanceCard {
 	}
 	
 	public static boolean canEnhance(AbstractCard c) {
-		return !(c.type == CardType.CURSE || c.type == CardType.STATUS);
+		boolean isNotPotency = true;
+		if (c instanceof AbstractRunicCard)
+			if (((AbstractRunicCard)c).basePotency > 0)
+				isNotPotency = false;
+		boolean isNotEnhanceableType = c.baseDamage == -1 && c.baseBlock == -1 && isNotPotency;
+		return !(c.type == CardType.CURSE || c.type == CardType.STATUS || isNotEnhanceableType);
 	}
 }
