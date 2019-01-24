@@ -48,6 +48,7 @@ public class Malloc extends CustomCard{
 			  upgradeName();
 			  this.rawDescription = UPGRADE_DESCRIPTION;
 			  upgradeMagicNumber(UPGRADE_ENERGY_GAIN);
+			  initializeDescription();
 			}
 	}
 
