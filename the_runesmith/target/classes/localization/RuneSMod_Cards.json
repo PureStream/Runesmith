@@ -404,9 +404,12 @@
 	"Runesmith:FissionHammer": {
 		"NAME": "Fission Hammer",
 		"DESCRIPTION": "Deal !D! damage. Deal !D! damage to ALL enemies. NL Break your oldest rune twice."
+<<<<<<< HEAD
 	},
 	"Runesmith:WWWWWWWWWWWWWWWWWWWW": {
 		"NAME": "WWWWWWWWWWWWWWWWWWWW",
 		"DESCRIPTION": "WWWWWWWWWWWWWWWWWWWW"
+=======
+>>>>>>> refs/remotes/origin/master
 	}
 }
