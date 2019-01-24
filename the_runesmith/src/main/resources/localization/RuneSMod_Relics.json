@@ -15,7 +15,7 @@
 	},
 	"Runesmith:MiniCore": {
 		"NAME": "Minicore",
-		"FLAVOR": "A mysterious stone of long lost technology waiting for its time to be used once again.",
+		"FLAVOR": "This peculiar orb was once used as an energy storage.",
 		"DESCRIPTIONS": [
 			"Gain 1 #yPotency at the start of the combat."
 		]
