@@ -18,6 +18,7 @@ public class ChaoticBlast extends AbstractRunicCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;	
+	public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
 	public static final String IMG_PATH = "images/cards/ChaoticBlast.png"; //<-------------- need some img
 	private static final int COST = 2;
 	private static final int ATTACK_DMG = 9;
@@ -75,6 +76,36 @@ public class ChaoticBlast extends AbstractRunicCard {
 		return new ChaoticBlast();
 	}
 
+	@Override
+	public void applyPowers() {
+		super.applyPowers();
+		if(checkElements(this.magicNumber,this.magicNumber,this.magicNumber,true)) {
+			if(!this.upgraded) {
+				this.rawDescription = (DESCRIPTION + EXTENDED_DESCRIPTION[0]);
+			}else {
+				this.rawDescription = (UPGRADE_DESCRIPTION + EXTENDED_DESCRIPTION[0]);
+			}
+		}else {
+			if(!this.upgraded) {
+				this.rawDescription = (DESCRIPTION);
+			}else {
+				this.rawDescription = (UPGRADE_DESCRIPTION);
+			}
+		}
+		initializeDescription();
+	}
+	
+	@Override
+	public void onMoveToDiscard(){
+		super.onMoveToDiscard();
+		if(!this.upgraded) {
+			this.rawDescription = DESCRIPTION;
+		}else {
+			this.rawDescription = UPGRADE_DESCRIPTION;
+		}
+		initializeDescription();
+	}
+	
 	public void upgrade() {
 		if (!this.upgraded) {
 		  upgradeName();

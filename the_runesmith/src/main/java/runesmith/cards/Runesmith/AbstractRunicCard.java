@@ -3,10 +3,17 @@ package runesmith.cards.Runesmith;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.ExceptionHandler;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
+
 import basemod.abstracts.CustomCard;
 import runesmith.RunesmithMod;
 import runesmith.actions.ApplyElementsPowerAction;
@@ -23,6 +30,14 @@ public abstract class AbstractRunicCard extends CustomCard {
 	public int basePotency;
 	public boolean potencyUpgraded;
 	public boolean isPotencyModified;
+	
+	public boolean isCraftable = false;
+	public boolean renderCraftable = true;
+	
+	Logger logger = LogManager.getLogger(RunesmithMod.class.getName());
+	
+	private Color renderColor = Color.WHITE.cpy();
+	private Texture craftableTab = ImageMaster.loadImage("images/cardui/512/craftable_tag.png");
 	
 	public void triggerWhenDrawn() {
 		this.upgradePotency(0);
@@ -58,8 +73,8 @@ public abstract class AbstractRunicCard extends CustomCard {
 	}
 	
 	public boolean checkElements(int ignis, int terra, int aqua, boolean checkOnly) {
-		Logger logger = LogManager.getLogger(RunesmithMod.class.getName());
-		logger.info("Start checking elements.");
+		
+		//logger.info("Start checking elements.");
 		AbstractPlayer p = AbstractDungeon.player;
 		
 		if (/*freeToPlayOnce == true || */p.hasPower("Runesmith:UnlimitedPowerPower")) return true;
@@ -75,7 +90,7 @@ public abstract class AbstractRunicCard extends CustomCard {
 			pAqua = p.getPower("Runesmith:AquaPower").amount;
 		}
 		if (pIgnis >= ignis && pTerra >= terra && pAqua >= aqua) {
-			logger.info("Have enough elements.");
+			//logger.info("Have enough elements.");
 			if(!checkOnly) {
 				if (pIgnis > 0 && ignis > 0) {
 					p.getPower("Runesmith:IgnisPower").reducePower(ignis);
@@ -93,14 +108,56 @@ public abstract class AbstractRunicCard extends CustomCard {
 						AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, "Runesmith:AquaPower"));
 				}
 			}
+			if(checkOnly) this.isCraftable = true;
 			return true;
 		}
-		logger.info("Not enough elements.");
+		//logger.info("Not enough elements.");
 		if(!checkOnly) {
 			AbstractDungeon.actionManager.addToBottom(
 					new ApplyElementsPowerAction(p,p,ignis,terra,aqua));
 		}
+		if(checkOnly) {
+			this.isCraftable = false;
+		}
 		return false;
+	}
+	
+	@Override
+	public void render(SpriteBatch sb, boolean selected) {
+		super.render(sb, selected);
+		if(!Settings.hideCards) {
+			renderCraftable(sb, selected);
+		}
+	}
+	
+	private void renderCraftable(SpriteBatch sb, boolean selected) {
+		float drawX = this.current_x - 256.0F;
+		float drawY = this.current_y - 256.0F;
+		
+		if (AbstractDungeon.player != null) {
+			if(this.isCraftable && this.renderCraftable) {
+				this.renderHelper(sb, this.renderColor, craftableTab, drawX, drawY);
+			}
+		}
+	}
+	
+	@Override
+	public void onMoveToDiscard() {
+		this.isCraftable = false;
+	}
+	
+	private void renderHelper(SpriteBatch sb, Color color, Texture img, float drawX, float drawY) {
+		sb.setColor(color);
+		try {
+		sb.draw(img, drawX, drawY, 
+				256.0F, 256.0F, 512.0F, 512.0F, 
+				this.drawScale * Settings.scale, this.drawScale * Settings.scale, 
+				this.angle, 0, 0, 512, 512, false, false);
+
+		}
+			catch (Exception e)
+		{
+		ExceptionHandler.handleException(e, logger);}
 	}
 	
 //	public void addPower(String element, int value) {

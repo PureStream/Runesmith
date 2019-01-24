@@ -61,16 +61,13 @@ public class CraftIndustria extends AbstractRunicCard {
 		initializeDescription();
 	}
 	
-//	@Override
-//	public void onMoveToDiscard(){
-//		if(!this.upgraded) {
-//			this.rawDescription = DESCRIPTION;
-//		}else {
-//			this.rawDescription = UPGRADE_DESCRIPTION;
-//		}
-//		initializeDescription();
-//	}
-//	
+	@Override
+	public void onMoveToDiscard(){
+		super.onMoveToDiscard();
+		this.rawDescription = DESCRIPTION;
+		initializeDescription();
+	}
+	
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		if (checkElements(0,0,this.magicNumber)) {

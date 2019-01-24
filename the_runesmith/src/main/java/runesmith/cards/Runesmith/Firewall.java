@@ -59,6 +59,7 @@ public class Firewall extends AbstractRunicCard {
 	
 	@Override
 	public void onMoveToDiscard(){
+		super.onMoveToDiscard();
 		this.rawDescription = DESCRIPTION;
 		initializeDescription();
 	}

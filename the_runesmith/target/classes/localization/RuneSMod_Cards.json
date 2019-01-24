@@ -275,7 +275,7 @@
 	"Runesmith:UnlimitedPower": {
 		"NAME": "Unlimited Power",
 		"DESCRIPTION": "Elements are no longer consumed for Crafting.",
-		"UPGRADE_DESCRIPTION": "Elements are no longer consumed for Crafting. NL Innate."
+		"UPGRADE_DESCRIPTION": "Innate. NL Elements are no longer consumed for Crafting."
 	},
 	"Runesmith:ForcesOfNature": {
 		"NAME": "Forces Of Nature",
@@ -321,12 +321,12 @@
 	"Runesmith:HeatExchange": {
 		"NAME": "Heat Exchange",
 		"DESCRIPTION": "Deal !D! damage to ALL enemies. This card gains additional damage equals to current Ignis. Lose 2 Ignis.",
-		"UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. This card gains additional damage equals to 2 times the current Ignis. Lose 2 Ignis."
+		"UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. This card gains additional damage equals to !M! times the current Ignis. Lose 2 Ignis."
 	},
 	"Runesmith:PoweredAnvil": {
 		"NAME": "Powered Anvil",
 		"DESCRIPTION": "After you Enhanced a card, Enhance it one additional time.",
-		"UPGRADE_DESCRIPTION": "After you Enhanced a card, Enhance it one additional time. Innate."
+		"UPGRADE_DESCRIPTION": "Innate. NL After you Enhanced a card, Enhance it one additional time."
 	},
 	"Runesmith:Malloc": {
 		"NAME": "Malloc",

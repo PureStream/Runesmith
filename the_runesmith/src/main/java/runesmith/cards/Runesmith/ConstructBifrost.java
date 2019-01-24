@@ -61,6 +61,7 @@ public class ConstructBifrost extends AbstractRunicCard {
 	
 	@Override
 	public void onMoveToDiscard(){
+		super.onMoveToDiscard();
 		if(!this.upgraded) {
 			this.rawDescription = DESCRIPTION;
 		}else {

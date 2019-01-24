@@ -57,6 +57,7 @@ public class CraftIncendium extends AbstractRunicCard {
 	
 	@Override
 	public void onMoveToDiscard(){
+		super.onMoveToDiscard();
 		this.rawDescription = DESCRIPTION;
 		initializeDescription();
 	}
