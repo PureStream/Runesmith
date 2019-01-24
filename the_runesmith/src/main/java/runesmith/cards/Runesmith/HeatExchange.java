@@ -23,6 +23,8 @@ public class HeatExchange extends CustomCard {
 	private static final int COST = 1;
 	private static final int ATTACK_DMG = 6;
 	private static final int IGNIS_AMT = 2;
+	private static final int MULTIPLIER_AMT = 1;
+	private static final int UPG_MULTIPLIER_AMT = 1;
 
 	public HeatExchange() {
 		super(
@@ -37,6 +39,7 @@ public class HeatExchange extends CustomCard {
 			CardTarget.ALL_ENEMY
 		);
 		this.baseDamage = this.damage = ATTACK_DMG;
+		this.baseMagicNumber = this.magicNumber = MULTIPLIER_AMT;
 		this.isMultiDamage = true;
 	}
 	
@@ -46,10 +49,10 @@ public class HeatExchange extends CustomCard {
 		AbstractPlayer p = AbstractDungeon.player;
 		if (p.hasRelic("Runesmith:BrokenRuby")) {
 			if (p.getRelic("Runesmith:BrokenRuby").counter == 2)
-				baseDamage += (upgraded) ? 2 : 1;
+				baseDamage += this.magicNumber;
 		}
 		if (p.hasPower("Runesmith:IgnisPower")) {
-			int additionDamage = (upgraded) ? p.getPower("Runesmith:IgnisPower").amount*2 : p.getPower("Runesmith:IgnisPower").amount;
+			int additionDamage = p.getPower("Runesmith:IgnisPower").amount*this.magicNumber;
 			baseDamage += additionDamage;
 		}
 		super.applyPowers();
@@ -85,6 +88,7 @@ public class HeatExchange extends CustomCard {
 		if (!this.upgraded) {
 		  upgradeName();
 		  this.rawDescription = DESCRIPTION_UPG;
+		  this.upgradeMagicNumber(UPG_MULTIPLIER_AMT);
 		  initializeDescription();
 		}
 	}

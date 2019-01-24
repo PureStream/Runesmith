@@ -1,0 +1,97 @@
+{
+	"Runesmith:IgnisPower": {
+		"NAME": "Ignis",
+		"DESCRIPTIONS": ["You currently have #b", " out of 10 #yIgnis."]
+	},
+	"Runesmith:TerraPower": {
+		"NAME": "Terra",
+		"DESCRIPTIONS": ["You currently have #b", " out of 10 #yTerra."]
+	},
+	"Runesmith:AquaPower": {
+		"NAME": "Aqua",
+		"DESCRIPTIONS": ["You currently have #b", " out of 10 #yAqua."]
+	},
+	"Runesmith:GrindstonePower": {
+		"NAME": "Grindstone",
+		"DESCRIPTIONS": ["This turn, ALL cards played become #yUpgraded else #yEnhanced.",
+			"For the next #b", " turns, ALL cards played become #yUpgraded else #yEnhanced."]
+	},
+	"Runesmith:FirestormPower": {
+		"NAME": "Firestorm",
+		"DESCRIPTIONS": ["Gain #b"," #yIgnis and #b"," #yTerra at the start of your turn."]
+	},
+	"Runesmith:DuplicatePower": {
+		"NAME": "Duplicate",
+		"DESCRIPTIONS": ["Create a copy of the next #b"," rune you #yCraft this turn."," runes you #yCraft this turn."]
+	},
+	"Runesmith:PotentialPower": {
+		"NAME": "Potential",
+		"DESCRIPTIONS": ["Increases the #yPotency of #yCraft card by #b",
+			"Decreases the #yPotency of #yCraft card by #b",
+			"."]
+	},
+	"Runesmith:ArcReactorPower": {
+		"NAME": "Radiated",
+		"DESCRIPTIONS": ["At the end of your turn, lose #b"," #yPotency."]
+	},
+	"Runesmith:UnlimitedPowerPower": {
+		"NAME": "Unlimited Power",
+		"DESCRIPTIONS": ["#yElements are no longer consumed for Crafting."]
+	},
+	"Runesmith:RunesonancePower": {
+		"NAME": "Runesonance",
+		"DESCRIPTIONS": ["For #b1 turn, activate your runes twice.",
+		"For #b", " turns, activate your runes twice."]
+	},
+	"Runesmith:ReservoPower": {
+		"NAME": "Retain Cards",
+		"DESCRIPTIONS": [
+			"At the end of your turn, you may #yRetain #b",
+			" card.",
+			" cards."
+		  ]
+	},
+	"Runesmith:DuctTapePower": {
+		"NAME": "Duct Tape",
+		"DESCRIPTIONS": ["#yStasis up to #b"," card at the start of your turn."," cards at the start of your turn."]
+	},
+	"Runesmith:SpiculumDown":{
+		"NAME": "Thorns Down",
+		"DESCRIPTIONS": ["At the start of your next turn, lose #b", " #yThorns."]
+	},
+	"Runesmith:PotentialDownPower": {
+		"NAME": "Potential Down",
+		"DESCRIPTIONS": ["Lose #b"," #yPotential at the end of your turn."]
+	},
+	"Runesmith:MetallurgicalResearchPower": {
+		"NAME": "Metallurgical Research",
+		"DESCRIPTIONS": ["#yUpgrade and #yEnhance ALL your cards in #b"," turns."," turn."]
+	},
+	"Runesmith:PermafrostPower": {
+		"NAME": "Permafrost",
+		"DESCRIPTIONS": [
+			"Lose at most half of your #yBlock at the start of your turn.",
+			"Lose at most half of its #yBlock at the start of its turn."
+		]
+	},
+	"Runesmith:CreatorFormPower": {
+		"NAME": "Creator Form",
+		"DESCRIPTIONS": ["#yEnhance #b"," card at the start of your turn."," cards at the start of your turn."]
+	},
+	"Runesmith:PoweredAnvilPower": {
+		"NAME": "Powered Anvil",
+		"DESCRIPTIONS": ["After you #yEnhanced a card, #yEnhance it one additional time."]
+	},
+	"Runesmith:IceColdPower": {
+		"NAME": "Ice-Cold",
+		"DESCRIPTIONS": ["Thaws and loses #ySlow in #b", " turns.", "turn."]
+	},
+	"Runesmith:ReplicatingBarrierPower": {
+		"NAME": "Replicating Barrier",
+		"DESCRIPTIONS": ["In #b", " turns,", " turn,", " 2 #yTerra: #yCraft a #yProtectio rune with #b"," Potency."]
+	},
+	"Runesmith:TimeMachinePower": {
+		"NAME": "Wormhole",
+		"DESCRIPTIONS": ["Saved #b", " HP, #b"," #yBlock, #b"," #yIgnis, #b", " #yTerra, #b"," #yAqua."]
+	}
+}

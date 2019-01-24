@@ -15,7 +15,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import basemod.abstracts.CustomCard;
-import runesmith.patches.AbstractCardEnum;
 import runesmith.actions.ApplyElementsPowerAction;
 import runesmith.powers.TimeMachinePower;
 
