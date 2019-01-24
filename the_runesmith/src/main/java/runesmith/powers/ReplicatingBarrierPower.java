@@ -22,10 +22,12 @@ public class ReplicatingBarrierPower extends AbstractPower {
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 	private static final int TERRA_AMT = 2;
 	private int POT_AMT = 4;
+	private static int RepBarrierIdOffset;
 
 	public ReplicatingBarrierPower(AbstractCreature owner) {
 		this.name = NAME;
-		this.ID = POWER_ID;
+		this.ID = (POWER_ID+RepBarrierIdOffset);
+		RepBarrierIdOffset += 1;
 		this.owner = owner;
 		this.amount = 2;
 		updateDescription();
