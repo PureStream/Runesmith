@@ -326,7 +326,7 @@
 	"Runesmith:PoweredAnvil": {
 		"NAME": "Powered Anvil",
 		"DESCRIPTION": "After you Enhanced a card, Enhance it one additional time.",
-		"UPGRADE_DESCRIPTION": "After you Enhanced a card, Enhance it one additional time. Innate."
+		"UPGRADE_DESCRIPTION": "After you Enhanced a card, Enhance it one additional time. NL Innate."
 	},
 	"Runesmith:Malloc": {
 		"NAME": "Malloc",
