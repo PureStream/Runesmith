@@ -1,4 +1,4 @@
-package runesmith.cards.Runesmith;
+package runesmith.cards.deprecated;
 
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
