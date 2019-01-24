@@ -13,6 +13,7 @@ import runesmith.powers.TerraPower;
 
 public class ApplyElementsPowerAction extends AbstractGameAction{
 	
+	private int oriIgnis, oriTerra, oriAqua;
 	private int ignis;
 	private int terra;
 	private int aqua;
@@ -20,7 +21,9 @@ public class ApplyElementsPowerAction extends AbstractGameAction{
 	private static final int MAX_ELEMENTS = 10;
 	
 	public ApplyElementsPowerAction(AbstractCreature target, AbstractCreature source, int ignis, int terra, int aqua){
-		ElementsGainedCountField.elementsCount.set(p, ElementsGainedCountField.elementsCount.get(p)+ignis+terra+aqua);
+		oriIgnis = ignis;
+		oriTerra = terra;
+		oriAqua = aqua;
 		this.ignis = ignis>MAX_ELEMENTS?MAX_ELEMENTS:ignis;
 		this.terra = terra>MAX_ELEMENTS?MAX_ELEMENTS:terra;
 		this.aqua = aqua>MAX_ELEMENTS?MAX_ELEMENTS:aqua;
@@ -66,6 +69,7 @@ public class ApplyElementsPowerAction extends AbstractGameAction{
 		          )
 		      );
 		}
+		ElementsGainedCountField.elementsCount.set(p, ElementsGainedCountField.elementsCount.get(p)+oriIgnis+oriTerra+oriAqua);
 		this.isDone = true;
 	}
 }
