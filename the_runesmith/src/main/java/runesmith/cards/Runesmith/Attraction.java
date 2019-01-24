@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import basemod.abstracts.CustomCard;
+import runesmith.actions.cards.AttractionAction;
 import runesmith.actions.cards.AttractionDrawThenDiscardAction;
 import runesmith.patches.AbstractCardEnum;
 
@@ -39,7 +40,8 @@ public class Attraction extends CustomCard {
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		AbstractDungeon.actionManager.addToBottom(
-			new AttractionDrawThenDiscardAction(false)
+//			new AttractionDrawThenDiscardAction(false)
+			new AttractionAction(p)
 		);
 	}
 	

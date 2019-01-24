@@ -18,6 +18,7 @@ public class Runesonance extends CustomCard {
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+	public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 	private static final int COST = 1;
 	private static final int UPGRADE_COST = 0;
 	private static final int POWER_AMT = 1;
@@ -34,6 +35,7 @@ public class Runesonance extends CustomCard {
 			AbstractCard.CardRarity.UNCOMMON,
 			AbstractCard.CardTarget.SELF
 		);
+		this.exhaust = true;
 	}
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {
@@ -49,6 +51,8 @@ public class Runesonance extends CustomCard {
 		if (!this.upgraded) {
 		  upgradeName();
 		  upgradeBaseCost(UPGRADE_COST);
+		  this.exhaust = false;
+		  this.rawDescription = UPGRADE_DESCRIPTION;
 		}
 	}
 }

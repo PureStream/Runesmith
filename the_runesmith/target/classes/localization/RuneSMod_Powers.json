@@ -40,8 +40,8 @@
 	},
 	"Runesmith:RunesonancePower": {
 		"NAME": "Runesonance",
-		"DESCRIPTIONS": ["This turn, double #yElements gain.",
-		"For the next #b", " turns, double #yElements gain."]
+		"DESCRIPTIONS": ["For #b1 turn, activate your runes twice.",
+		"For #b", " turns, activate your runes twice."]
 	},
 	"Runesmith:ReservoPower": {
 		"NAME": "Retain Cards",
