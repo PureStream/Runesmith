@@ -275,7 +275,7 @@
 	"Runesmith:UnlimitedPower": {
 		"NAME": "Unlimited Power",
 		"DESCRIPTION": "Elements are no longer consumed for Crafting.",
-		"UPGRADE_DESCRIPTION": "Elements are no longer consumed for Crafting. NL Innate."
+		"UPGRADE_DESCRIPTION": "Innate. NL Elements are no longer consumed for Crafting."
 	},
 	"Runesmith:ForcesOfNature": {
 		"NAME": "Forces Of Nature",
@@ -326,7 +326,7 @@
 	"Runesmith:PoweredAnvil": {
 		"NAME": "Powered Anvil",
 		"DESCRIPTION": "After you Enhanced a card, Enhance it one additional time.",
-		"UPGRADE_DESCRIPTION": "After you Enhanced a card, Enhance it one additional time. Innate."
+		"UPGRADE_DESCRIPTION": "Innate. NL After you Enhanced a card, Enhance it one additional time."
 	},
 	"Runesmith:Malloc": {
 		"NAME": "Malloc",
