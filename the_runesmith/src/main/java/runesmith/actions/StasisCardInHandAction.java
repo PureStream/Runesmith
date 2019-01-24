@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import runesmith.RunesmithMod;
-import runesmith.patches.CardStasisStatus;
 
 
 public class StasisCardInHandAction extends AbstractGameAction{
