@@ -3,7 +3,7 @@
     "name": "The Runesmith",
     "author_list": ["Blizzarre","PureStream"],
     "description": "Add a new class called The Runesmith",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "sts_version": "",
     "mts_version": "3.7.5",
     "dependencies": ["basemod"],
