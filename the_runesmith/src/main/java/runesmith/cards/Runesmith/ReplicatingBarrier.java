@@ -41,7 +41,7 @@ public class ReplicatingBarrier extends AbstractRunicCard {
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		if (!p.hasPower("Runesmith:ReplicatingBarrierPower"))
 			AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, 
-					new ReplicatingBarrierPower(p)));
+					new ReplicatingBarrierPower(p,this.potency)));
 	}
 
 	public AbstractCard makeCopy() {

@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.AbstractCard.CardType;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -33,7 +34,7 @@ public class FortifyAction extends AbstractGameAction{
 		if(this.duration == Settings.ACTION_DUR_FAST) {
 
 			for (AbstractCard c : this.p.hand.group) {
-				if (!canEnhance(c)) {
+				if (!EnhanceCard.canEnhance(c)) {
 					this.cannotEnhance.add(c);
 				}
 			}
@@ -44,16 +45,22 @@ public class FortifyAction extends AbstractGameAction{
 			}
 			
 			if(!this.upgraded) {
-				AbstractCard selectedCard = this.p.hand.getRandomCard(AbstractDungeon.cardRandomRng);
-				EnhanceCard.enhance(selectedCard);
-				selectedCard.superFlash(RunesmithMod.BEIGE);
+				CardGroup canEnhance = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+				for(AbstractCard c: this.p.hand.group) {
+					if(EnhanceCard.canEnhance(c)) canEnhance.addToBottom(c);
+				}
+				if(!canEnhance.isEmpty()) {
+					AbstractCard selectedCard = canEnhance.getRandomCard(AbstractDungeon.cardRandomRng);
+					EnhanceCard.enhance(selectedCard);
+					selectedCard.superFlash(RunesmithMod.BEIGE);
+				}
 				this.isDone = true;
 				return;
 			}
 			
 			if(this.p.hand.group.size() - this.cannotEnhance.size() == 1) {
 				for(AbstractCard c : this.p.hand.group) {
-					if(canEnhance(c)) {
+					if(EnhanceCard.canEnhance(c)) {
 						EnhanceCard.enhance(c);
 //						c.upgrade();
 						c.superFlash(RunesmithMod.BEIGE);
