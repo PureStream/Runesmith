@@ -29,10 +29,9 @@ public class SpiculumDownPower extends AbstractPower {
 	    this.type = AbstractPower.PowerType.DEBUFF;
 	}
 	
-	public void atStartOfTurn(boolean isPlayer) {
+	public void atEndOfRound() {
 //		this.flash();
 		AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, "Thorns", this.amount));
-	
 		AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
 	}
 	

@@ -55,7 +55,7 @@
 		"NAME": "Duct Tape",
 		"DESCRIPTIONS": ["#yStasis up to #b"," card at the start of your turn."," cards at the start of your turn."]
 	},
-	"Runesmith:SpiculumDown":{
+	"Runesmith:SpiculumDownPower":{
 		"NAME": "Thorns Down",
 		"DESCRIPTIONS": ["At the start of your next turn, lose #b", " #yThorns."]
 	},
