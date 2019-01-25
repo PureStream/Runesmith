@@ -46,7 +46,7 @@ public abstract class EnhanceCard {
 		if (c instanceof AbstractRunicCard)
 			if (((AbstractRunicCard)c).basePotency > 0)
 				isPotency = true;
-		return (c.baseDamage > 0 || c.baseBlock > 0 || isPotency);
+		return (c.baseDamage >= 0 || c.baseBlock >= 0 || isPotency);
 //		boolean isNotPotency = true;
 //		if (c instanceof AbstractRunicCard)
 //			if (((AbstractRunicCard)c).basePotency > 0)
