@@ -49,7 +49,14 @@ public class Preparation extends CustomCard{
 
 	@Override
 	public void upgrade() {
-		upgradeMagicNumber(UPG_BASE_AMT);
+		int increaseCount = 0;
+		switch(this.timesUpgraded){
+			case 3: increaseCount = 3; break;
+			case 2: increaseCount = 2; break;
+			case 1: increaseCount = 2; break;
+			case 0: increaseCount = 1; break;
+		}
+		upgradeMagicNumber(increaseCount);
 		this.timesUpgraded += 1;
 		this.upgraded = true;
 		this.name = (NAME + "+" + this.timesUpgraded);
@@ -65,9 +72,7 @@ public class Preparation extends CustomCard{
 	
 	@Override
 	public boolean canUpgrade() {
-		if (this.timesUpgraded >= 4)
-			return false;
-		return true;
+		return this.timesUpgraded < 4;
 	}
 	
 }

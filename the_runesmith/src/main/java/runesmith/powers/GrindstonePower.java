@@ -30,7 +30,7 @@ public class GrindstonePower extends AbstractPower {
 		this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/Grindstone.png"), 0, 0, 84, 84);  //<-------- NEED SOME IMG
 	    this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/GrindstoneSmall.png"), 0, 0, 32, 32); //<-------- NEED SOME IMG
 	}
-	
+
 	public void stackPower(int stackAmount) {
 		this.fontScale = 8.0F;
 		this.amount += stackAmount;

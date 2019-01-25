@@ -35,7 +35,7 @@ public class IceColdPower extends AbstractPower {
 		}
 	}
 	
-	public void atEndOfTurn() {
+	public void atEndOfTurn(boolean isPlayer) {
 		flash();
 		AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, "Runesmith:IceColdPower", 1));
 		if (this.amount == 0) {

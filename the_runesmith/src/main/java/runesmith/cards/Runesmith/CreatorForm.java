@@ -1,5 +1,6 @@
 package runesmith.cards.Runesmith;
 
+import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -34,6 +35,7 @@ public class CreatorForm extends CustomCard {
 			CardRarity.RARE,
 			CardTarget.NONE
 		);
+		this.tags.add(BaseModCardTags.FORM);
 		this.baseMagicNumber = this.magicNumber = POWER_AMT;
 	}
 

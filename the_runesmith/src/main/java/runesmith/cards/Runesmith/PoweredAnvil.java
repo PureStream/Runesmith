@@ -38,7 +38,7 @@ public class PoweredAnvil extends CustomCard {
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		if (!p.hasPower("PoweredAnvilPower"))
 			AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, 
-					new PoweredAnvilPower(p)));
+					new PoweredAnvilPower(p,1),1));
 	}
 
 	public AbstractCard makeCopy() {

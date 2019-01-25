@@ -13,8 +13,8 @@
 	},
 	"Runesmith:GrindstonePower": {
 		"NAME": "Grindstone",
-		"DESCRIPTIONS": ["This turn, ALL cards played become #yUpgraded else #yEnhanced.",
-			"For the next #b", " turns, ALL cards played become #yUpgraded else #yEnhanced."]
+		"DESCRIPTIONS": ["This turn, all cards played become #yUpgraded. #yEnhance the card if it's already #yUpgraded.",
+			"For the next #b", " turns, all cards played become #yUpgraded. #yEnhance the card if it's already #yUpgraded."]
 	},
 	"Runesmith:FirestormPower": {
 		"NAME": "Firestorm",
@@ -80,7 +80,7 @@
 	},
 	"Runesmith:PoweredAnvilPower": {
 		"NAME": "Powered Anvil",
-		"DESCRIPTIONS": ["After you #yEnhanced a card, #yEnhance it one additional time."]
+		"DESCRIPTIONS": ["After you #yEnhanced a card, #yEnhance it #b"," additional time.", " additional times."]
 	},
 	"Runesmith:IceColdPower": {
 		"NAME": "Ice-Cold",

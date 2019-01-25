@@ -37,7 +37,7 @@
 	"Runesmith:Terraform": {
 		"NAME": "Terraform",
 		"DESCRIPTION": "Gain 1 Terra. NL Gain Block equals to double the amount of Terra.",
-		"UPGRADE_DESCRIPTION": "Gain 1 Terra. NL Gain Block equals to triple the number of Terra.",
+		"UPGRADE_DESCRIPTION": "Gain 1 Terra. NL Gain Block equals to triple the amount of Terra.",
 		"EXTENDED_DESCRIPTION":[
 			" NL (Gain !B! Block.)"
 		]
@@ -113,7 +113,8 @@
 	},
 	"Runesmith:Grindstone": {
 		"NAME": "Grindstone",
-		"DESCRIPTION": "All cards played this turn become Upgraded. NL Enhance the card if it is already Upgraded."
+		"DESCRIPTION": "Gain !B! block. NL All cards played this turn become Upgraded. NL Enhance the card if it is already Upgraded.",
+		"UPGRADE_DESCRIPTION": "Gain !B! block. NL For !M! turns, all cards played become Upgraded. NL Enhance the card if it is already Upgraded."
 	},
 	"Runesmith:FieryHammer": {
 		"NAME": "Fiery Hammer",
@@ -351,7 +352,7 @@
 	},
 	"Runesmith:Overpower": {
 		"NAME": "Overpower",
-		"DESCRIPTION": "Deal !D! damage. Downgrade 1 random card in your hand."
+		"DESCRIPTION": "Deal !D! damage. Downgrade 2 random cards in your hand."
 	},
 	"Runesmith:HammerAndChisel": {
 		"NAME": "Hammer and Chisel",

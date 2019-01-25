@@ -22,7 +22,7 @@ public class Overpower extends CustomCard{
 	public static final String IMG_PATH = "images/cards/OverPowered.png"; //<-------------- need some img
 	private static final int COST = 1;
 	private static final int ATTACK_DMG = 12;
-	private static final int UPGRADE_PLUS_DMG = 5;
+	private static final int UPGRADE_PLUS_DMG = 4;
 	
 	public Overpower() {
 		super(
@@ -61,6 +61,9 @@ public class Overpower extends CustomCard{
 				)
 			);
 		
+		AbstractDungeon.actionManager.addToBottom(
+				new DowngradeCardInHandAction(p,true)
+		);
 		AbstractDungeon.actionManager.addToBottom(
 				new DowngradeCardInHandAction(p,true)
 		);

@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import runesmith.cards.Runesmith.AbstractRunicCard;
 import runesmith.patches.EnhanceCountField;
+import runesmith.powers.PoweredAnvilPower;
 
 public abstract class EnhanceCard {
 	
@@ -17,9 +18,11 @@ public abstract class EnhanceCard {
 		for (int i=0; i<enhanceCounts; i++) 
 			doEnhance(c);
 		
-		if (AbstractDungeon.player.hasPower("Runesmith:PoweredAnvilPower")) {
-			doEnhance(c);
-			AbstractDungeon.player.getPower("Runesmith:PoweredAnvilPower").flashWithoutSound();
+		if (AbstractDungeon.player.hasPower(PoweredAnvilPower.POWER_ID)) {
+			int count = AbstractDungeon.player.getPower(PoweredAnvilPower.POWER_ID).amount;
+			for(int i=0;i<count;i++)
+				doEnhance(c);
+			AbstractDungeon.player.getPower(PoweredAnvilPower.POWER_ID).flashWithoutSound();
 		}
 		
 	}
