@@ -81,6 +81,7 @@ public class HammerAndChisel extends CustomCard {
 		if (!this.upgraded) {
 		  upgradeName();
 		  this.rawDescription = UPGRADE_DESCRIPTION;
+		  initializeDescription();
 		}
 	}
 	
