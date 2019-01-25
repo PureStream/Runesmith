@@ -28,6 +28,6 @@ Most of the arts are temporary and will be updated as more refined drawings are 
 * Relics (1/?)
 * Energy Orb (wip)
 ## Installation
-Head over to this steam workshop page and subscribe. You need ModTheSpire and BaseMod installed.
+Head over to this steam workshop page and subscribe (<https://steamcommunity.com/sharedfiles/filedetails/?id=1633549612>). You need ModTheSpire and BaseMod installed.
 
-You can also download the .jar file directly from (<https://github.com/PureStream/Runesmith/releases/tag/v0.1.2>) and put it in your mods folder.
+You can also download the .jar file directly from (<https://github.com/PureStream/Runesmith/releases>) and put it in your mods folder.
