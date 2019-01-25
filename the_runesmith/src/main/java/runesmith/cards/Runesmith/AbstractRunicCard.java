@@ -77,7 +77,10 @@ public abstract class AbstractRunicCard extends CustomCard {
 		//logger.info("Start checking elements.");
 		AbstractPlayer p = AbstractDungeon.player;
 		
-		if (/*freeToPlayOnce == true || */p.hasPower("Runesmith:UnlimitedPowerPower")) return true;
+		if (/*freeToPlayOnce == true || */p.hasPower("Runesmith:UnlimitedPowerPower")) {
+			this.isCraftable = true;
+			return true;
+		}
 		
 		int pIgnis = 0, pTerra = 0, pAqua = 0;
 		if (p.hasPower("Runesmith:IgnisPower")) {
