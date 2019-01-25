@@ -44,7 +44,7 @@ public abstract class EnhanceCard {
 	public static boolean canEnhance(AbstractCard c) {
 		boolean isPotency = false;
 		if (c instanceof AbstractRunicCard)
-			if (((AbstractRunicCard)c).basePotency > 0)
+			if (((AbstractRunicCard)c).basePotency >= 0)
 				isPotency = true;
 		return (c.baseDamage >= 0 || c.baseBlock >= 0 || isPotency);
 //		boolean isNotPotency = true;

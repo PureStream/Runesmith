@@ -27,7 +27,7 @@ public abstract class AbstractRunicCard extends CustomCard {
 	}
 	
 	public int potency;
-	public int basePotency;
+	public int basePotency = -1;
 	public boolean potencyUpgraded;
 	public boolean isPotencyModified;
 	
