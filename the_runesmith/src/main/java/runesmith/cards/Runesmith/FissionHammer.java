@@ -55,7 +55,7 @@ public class FissionHammer extends CustomCard {
 				AbstractGameAction.AttackEffect.BLUNT_HEAVY
 			)
 		);
-		AbstractDungeon.actionManager.addToTop(
+		AbstractDungeon.actionManager.addToBottom(
 				new DamageAllEnemiesAction(
 					p,
 					this.multiDamage, this.damageTypeForTurn,
@@ -74,8 +74,8 @@ public class FissionHammer extends CustomCard {
 		}
 		if(r == null) return;
 		
-		AbstractDungeon.actionManager.addToTop(new BreakWithoutRemovingRuneAction(1, r));					
-		AbstractDungeon.actionManager.addToTop(new BreakRuneAction(r));
+		AbstractDungeon.actionManager.addToBottom(new BreakWithoutRemovingRuneAction(1, r));					
+		AbstractDungeon.actionManager.addToBottom(new BreakRuneAction(r));
 	}
 
 	public AbstractCard makeCopy() {
