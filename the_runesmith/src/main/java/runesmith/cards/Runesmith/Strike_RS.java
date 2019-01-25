@@ -48,7 +48,7 @@ public class Strike_RS extends CustomCard {
 			new DamageAction(
 				m,
 				new DamageInfo(p, this.damage, this.damageTypeForTurn),
-				AbstractGameAction.AttackEffect.SLASH_DIAGONAL
+				AbstractGameAction.AttackEffect.BLUNT_HEAVY
 			)
 		);
 	}
