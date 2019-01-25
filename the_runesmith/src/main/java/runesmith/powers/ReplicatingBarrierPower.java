@@ -20,15 +20,16 @@ public class ReplicatingBarrierPower extends AbstractPower {
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 	private static final int TERRA_AMT = 2;
-	private int POT_AMT = 4;
+	private int POT_AMT;
 	private static int RepBarrierIdOffset;
 
-	public ReplicatingBarrierPower(AbstractCreature owner) {
+	public ReplicatingBarrierPower(AbstractCreature owner, int potency) {
 		this.name = NAME;
 		this.ID = (POWER_ID+RepBarrierIdOffset);
 		RepBarrierIdOffset += 1;
 		this.owner = owner;
 		this.amount = 2;
+		this.POT_AMT = potency;
 		updateDescription();
 		this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/ReplicatingBarrier.png"), 0, 0, 84, 84);
 	    this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/ReplicatingBarrierSmall.png"), 0, 0, 32, 32);
@@ -46,12 +47,9 @@ public class ReplicatingBarrierPower extends AbstractPower {
 			this.amount = 2;
 			AbstractRunicCard tmp = new CraftProtectio();
 			if (tmp.checkElements(0,TERRA_AMT,0)) {
-				if (owner.hasPower("Runesmith:PotentialPower"))
-					POT_AMT += owner.getPower("Runesmith:PotentialPower").amount;
 				AbstractDungeon.actionManager.addToBottom(
 						new RuneChannelAction(
 								new ProtectioRune(POT_AMT)));
-				POT_AMT = 4;
 			}
 //			AbstractDungeon.player.limbo.addToBottom(tmp);
 //			tmp.freeToPlayOnce = true;
@@ -62,13 +60,10 @@ public class ReplicatingBarrierPower extends AbstractPower {
 	}
 
 	public void updateDescription() {
-		int shownPot = POT_AMT;
-		if (owner.hasPower("Runesmith:PotentialPower"))
-			shownPot += owner.getPower("Runesmith:PotentialPower").amount;
 		if (amount == 2)
-			this.description = (DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + DESCRIPTIONS[3] + shownPot + DESCRIPTIONS[4]);
+			this.description = (DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + DESCRIPTIONS[3] + POT_AMT + DESCRIPTIONS[4]);
 		else
-			this.description = (DESCRIPTIONS[0] + amount + DESCRIPTIONS[2] + DESCRIPTIONS[3] + shownPot + DESCRIPTIONS[4]);
+			this.description = (DESCRIPTIONS[0] + amount + DESCRIPTIONS[2] + DESCRIPTIONS[3] + POT_AMT + DESCRIPTIONS[4]);
 	}
 	
 }
