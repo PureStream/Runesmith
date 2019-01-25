@@ -325,13 +325,8 @@
 	},
 	"Runesmith:PoweredAnvil": {
 		"NAME": "Powered Anvil",
-<<<<<<< HEAD
 		"DESCRIPTION": "After you Enhanced a card, Enhance it one additional time.",
 		"UPGRADE_DESCRIPTION": "Innate. NL After you Enhanced a card, Enhance it one additional time."
-=======
-		"DESCRIPTION": "After you Enhanced a card, Enhance it one additional time.",
-		"UPGRADE_DESCRIPTION": "Innate. NL After you Enhanced a card, Enhance it one additional time."
->>>>>>> refs/remotes/origin/master
 	},
 	"Runesmith:Malloc": {
 		"NAME": "Malloc",
