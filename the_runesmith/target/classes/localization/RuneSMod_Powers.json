@@ -13,8 +13,8 @@
 	},
 	"Runesmith:GrindstonePower": {
 		"NAME": "Grindstone",
-		"DESCRIPTIONS": ["This turn, ALL cards played become #yUpgraded else #yEnhanced.",
-			"For the next #b", " turns, ALL cards played become #yUpgraded else #yEnhanced."]
+		"DESCRIPTIONS": ["This turn, all cards played become #yUpgraded. #yEnhance the card if it's already #yUpgraded.",
+			"For the next #b", " turns, all cards played become #yUpgraded. #yEnhance the card if it's already #yUpgraded."]
 	},
 	"Runesmith:FirestormPower": {
 		"NAME": "Firestorm",
@@ -55,7 +55,7 @@
 		"NAME": "Duct Tape",
 		"DESCRIPTIONS": ["#yStasis up to #b"," card at the start of your turn."," cards at the start of your turn."]
 	},
-	"Runesmith:SpiculumDown":{
+	"Runesmith:SpiculumDownPower":{
 		"NAME": "Thorns Down",
 		"DESCRIPTIONS": ["At the start of your next turn, lose #b", " #yThorns."]
 	},
@@ -80,7 +80,7 @@
 	},
 	"Runesmith:PoweredAnvilPower": {
 		"NAME": "Powered Anvil",
-		"DESCRIPTIONS": ["After you #yEnhanced a card, #yEnhance it one additional time."]
+		"DESCRIPTIONS": ["After you #yEnhanced a card, #yEnhance it #b"," additional time.", " additional times."]
 	},
 	"Runesmith:IceColdPower": {
 		"NAME": "Ice-Cold",

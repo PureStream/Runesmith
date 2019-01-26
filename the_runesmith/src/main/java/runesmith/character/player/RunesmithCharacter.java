@@ -3,7 +3,9 @@ package runesmith.character.player;
 import java.util.ArrayList;
 
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -14,6 +16,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
+import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbInterface;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
@@ -30,6 +33,7 @@ import runesmith.cards.Runesmith.Strike_RS;
 import runesmith.patches.AbstractCardEnum;
 import runesmith.patches.PlayerClassEnum;
 import runesmith.relics.BrokenRuby;
+import runesmith.ui.EnergyOrbBeige;
 
 public class RunesmithCharacter extends CustomPlayer {
 	public static final int ENERGY_PER_TURN = 3;
@@ -40,7 +44,10 @@ public class RunesmithCharacter extends CustomPlayer {
     public static final String THE_RUNESMITH_SKELETON_ATLAS = "images/character/idle/skeleton.atlas"; // spine animation atlas
     public static final String THE_RUNESMITH_SKELETON_JSON = "images/character/idle/skeleton.json"; // spine animation json
     public static final String THE_RUNESMITH_SPRITER = "images/character/idle/animation.scml"; //Spriter File
-    
+
+	Texture BEIGE_ORB_FLASH_VFX = ImageMaster.loadImage("images/ui/beige/energyBeigeVFX.png");
+	private EnergyOrbInterface energyOrb = new EnergyOrbBeige();
+
     private static final EventStrings heartString = CardCrawlGame.languagePack.getEventString("Runesmith:SpireHeart");
 	
 	public RunesmithCharacter (String name) {
@@ -182,4 +189,16 @@ public class RunesmithCharacter extends CustomPlayer {
     {
         return new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/cardui/description_beige_orb.png"), 0, 0, 24, 24);
     }
+
+	public void updateOrb(int energy) {
+		this.energyOrb.updateOrb(energy);
+	}
+
+	public void renderOrb(SpriteBatch sb, boolean enabled, float current_x, float current_y) {
+		this.energyOrb.renderOrb(sb, enabled, current_x, current_y);
+	}
+
+	public Texture getEnergyImage() {
+		return this.BEIGE_ORB_FLASH_VFX;
+	}
 }
