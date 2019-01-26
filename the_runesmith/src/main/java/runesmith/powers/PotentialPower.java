@@ -35,7 +35,7 @@ public class PotentialPower extends AbstractPower {
 		this.fontScale = 8.0F;
 		this.amount += stackAmount;
 		if (this.amount == 0) {
-			AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, "Runesmith:PotentialPower"));
+			AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this));
 		}
 		updatePotentialEffects();
 	}
@@ -44,7 +44,7 @@ public class PotentialPower extends AbstractPower {
 		this.fontScale = 8.0F;
 		this.amount -= reduceAmount;
 		if (this.amount == 0) {
-			AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, "Runesmith:PotentialPower"));
+			AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this));
 		}
 		updatePotentialEffects();
 	}
@@ -60,8 +60,8 @@ public class PotentialPower extends AbstractPower {
 	/*public void onAfterUseCard(AbstractCard card, UseCardAction action) {
 		updatePotencialEffects();
 	}*/
-	
-	public void updatePotentialEffects() {
+
+	private void updatePotentialEffects() {
 		for (AbstractCard c : AbstractDungeon.player.hand.group) {
 			if (c instanceof AbstractRunicCard){
 				((AbstractRunicCard) c).upgradePotency(0);
@@ -76,5 +76,9 @@ public class PotentialPower extends AbstractPower {
 			this.description = (DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2]);
 		}
 	}
+
+//	public void onVictory() {
+//		AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+//	}
 	
 }

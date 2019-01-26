@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import runesmith.actions.DiscardToDrawAction;
+import runesmith.patches.EnhanceCountField;
 
 public class RearmAction extends com.megacrit.cardcrawl.actions.AbstractGameAction {
 	private AbstractPlayer p;
@@ -18,14 +19,14 @@ public class RearmAction extends com.megacrit.cardcrawl.actions.AbstractGameActi
 	
 	public void update() {
 		if (this.p.discardPile.size() > 0) {
-			int count = 0;
+			boolean isFound = false;
 			for (AbstractCard card : this.p.discardPile.group) {
-				if (card.upgraded) {
-					count++;
+				if (card.upgraded || EnhanceCountField.enhanceCount.get(card) > 0) {
+					isFound = true;
 					AbstractDungeon.actionManager.addToBottom(new DiscardToDrawAction(card));
 				}
 			}
-			if (count > 0) {
+			if (isFound) {
 				AbstractDungeon.actionManager.addToBottom(new ShuffleAction(p.drawPile, false));
 			}			
 		}
