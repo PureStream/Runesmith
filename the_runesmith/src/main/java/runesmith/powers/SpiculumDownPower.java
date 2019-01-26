@@ -43,9 +43,8 @@ public class SpiculumDownPower extends AbstractPower {
 		AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
 	}
 	
-  	@Override
- 	 public void updateDescription()
-	  {
-	      this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
-	  }
+    @Override
+    public void updateDescription() {
+      this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
+    }
 }
