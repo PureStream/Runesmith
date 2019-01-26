@@ -37,7 +37,7 @@ public class PotentialPower extends AbstractPower {
 		if (this.amount == 0) {
 			AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, "Runesmith:PotentialPower"));
 		}
-		updatePotencialEffects();
+		updatePotentialEffects();
 	}
 	
 	public void reducePower(int reduceAmount) {
@@ -46,22 +46,22 @@ public class PotentialPower extends AbstractPower {
 		if (this.amount == 0) {
 			AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, "Runesmith:PotentialPower"));
 		}
-		updatePotencialEffects();
+		updatePotentialEffects();
 	}
 	
 	public void onInitialApplication() {
-		updatePotencialEffects();
+		updatePotentialEffects();
 	}
 
 	public void onDrawOrDiscard() {
-		updatePotencialEffects();
+		updatePotentialEffects();
 	}
 	
 	/*public void onAfterUseCard(AbstractCard card, UseCardAction action) {
 		updatePotencialEffects();
 	}*/
 	
-	public void updatePotencialEffects() {
+	public void updatePotentialEffects() {
 		for (AbstractCard c : AbstractDungeon.player.hand.group) {
 			if (c instanceof AbstractRunicCard){
 				((AbstractRunicCard) c).upgradePotency(0);
