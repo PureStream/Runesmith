@@ -28,16 +28,23 @@ public class SpiculumDownPower extends AbstractPower {
 	    this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/SpiculumDownSmall.png"), 0, 0, 32, 32);
 	    this.type = AbstractPower.PowerType.DEBUFF;
 	}
-	
-	public void atEndOfRound() {
-//		this.flash();
+
+	@Override
+	public void stackPower(int stackAmount){
+		this.fontScale = 8.0F;
+		this.amount += stackAmount;
+	}
+
+	@Override
+	public void atStartOfTurn() {
+		this.flash();
 		AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, "Thorns", this.amount));
+	
 		AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
 	}
 	
-	  @Override
-	  public void updateDescription()
-	  {
-	      this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
-	  }
+    @Override
+    public void updateDescription() {
+      this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
+    }
 }
