@@ -400,7 +400,7 @@
 	},
 	"Runesmith:Electrocute": {
 		"NAME": "Electrocute",
-		"DESCRIPTION": "Deal !D! damage. Take !M! damage. Stasis a card in your deck."
+		"DESCRIPTION": "Deal !D! damage. Take !M! damage. Stasis a card in your draw pile."
 	},
 	"Runesmith:FissionHammer": {
 		"NAME": "Fission Hammer",
