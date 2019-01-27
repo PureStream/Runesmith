@@ -20,7 +20,7 @@ public class Runesonance extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 	private static final int COST = 1;
-	private static final int UPGRADE_COST = 0;
+//	private static final int UPGRADE_COST = 0;
 	private static final int POWER_AMT = 1;
 	
 	public Runesonance() {
@@ -50,9 +50,10 @@ public class Runesonance extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 		  upgradeName();
-		  upgradeBaseCost(UPGRADE_COST);
+//		  upgradeBaseCost(UPGRADE_COST);
 		  this.exhaust = false;
 		  this.rawDescription = UPGRADE_DESCRIPTION;
+		  initializeDescription();
 		}
 	}
 }
