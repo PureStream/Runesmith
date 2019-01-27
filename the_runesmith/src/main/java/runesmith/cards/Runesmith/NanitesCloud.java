@@ -34,7 +34,7 @@ public class NanitesCloud extends CustomCard {
 			IMG_PATH,
 			COST,
 			DESCRIPTION,
-			CardType.ATTACK,
+			CardType.SKILL,
 			AbstractCardEnum.RUNESMITH_BEIGE,
 			CardRarity.UNCOMMON,
 			CardTarget.ALL_ENEMY

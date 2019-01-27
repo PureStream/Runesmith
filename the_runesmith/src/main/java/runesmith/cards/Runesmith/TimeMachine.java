@@ -21,9 +21,11 @@ public class TimeMachine extends CustomCard {
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("Runesmith:TimeMachine");
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;	
+//	public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 	
 	private static final int COST = 3;
+	private static final int TURNS = 5;
+	private static final int UPGRADE_TURNS = 1;
 	
 	public TimeMachine() {
 		super(
@@ -38,6 +40,7 @@ public class TimeMachine extends CustomCard {
 			AbstractCard.CardTarget.SELF
 		);
 		this.exhaust = true;
+		this.baseMagicNumber = this.magicNumber = TURNS;
 	}
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {
@@ -51,10 +54,10 @@ public class TimeMachine extends CustomCard {
 		if(p.hasPower("Runesmith:TimeMachinePower")) {
 			AbstractPower pow = p.getPower("Runesmith:TimeMachinePower");
 			if(pow instanceof TimeMachinePower) {
-				((TimeMachinePower) pow).setValues(health, block, ignis, terra, aqua);
+				((TimeMachinePower) pow).setValues(health, block, ignis, terra, aqua, this.magicNumber);
 			}
 		}else {
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new TimeMachinePower(p, health, block, ignis, terra, aqua)));
+			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new TimeMachinePower(p, health, block, ignis, terra, aqua, this.magicNumber)));
 		}
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new TimeTravel()));
 	}
@@ -66,9 +69,7 @@ public class TimeMachine extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 		  upgradeName();
-		  this.isInnate = true;
-		  this.rawDescription = UPGRADE_DESCRIPTION;
-		  initializeDescription();
+		  upgradeMagicNumber(UPGRADE_TURNS);
 		}
 	}
 	

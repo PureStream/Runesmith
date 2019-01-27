@@ -26,8 +26,8 @@ public class Firewall extends AbstractRunicCard {
 	private static final int BLOCK_AMT = 11;
 	private static final int UPGRADE_PLUS_BLOCK = 3;
 	private static final int IGNIS_AMT = 3;
-	private static final int TERRA_AMT = 1;
-	private static final int POTENCY = 4;
+	private static final int TERRA_AMT = 0;
+	private static final int POTENCY = 3;
 	private static final int UPG_POTENCY = 1;
 	
 	public Firewall() {
@@ -75,7 +75,10 @@ public class Firewall extends AbstractRunicCard {
 							new FirestoneRune(this.potency)));
 			AbstractDungeon.actionManager.addToBottom(
 					new RuneChannelAction(
-							new MagmaRune(this.potency)));
+							new FirestoneRune(this.potency)));
+//			AbstractDungeon.actionManager.addToBottom(
+//					new RuneChannelAction(
+//							new MagmaRune(this.potency)));
 		}
 	}
 	

@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import basemod.abstracts.CustomCard;
+import com.megacrit.cardcrawl.vfx.ThoughtBubble;
 import runesmith.actions.ApplyElementsPowerAction;
 import runesmith.powers.TimeMachinePower;
 
@@ -62,6 +63,7 @@ public class TimeTravel extends CustomCard {
 				pow.flash();
 			}
 		}else {
+			AbstractDungeon.effectList.add(new ThoughtBubble(p.dialogX, p.dialogY, 3.0F, "There is no ~#rWormhole~ to travel through.", true));
 			return;
 		}
 		
