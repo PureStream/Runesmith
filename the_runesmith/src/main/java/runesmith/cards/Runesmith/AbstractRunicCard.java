@@ -18,6 +18,7 @@ import basemod.abstracts.CustomCard;
 import runesmith.RunesmithMod;
 import runesmith.actions.ApplyElementsPowerAction;
 import runesmith.patches.EnhanceCountField;
+import runesmith.powers.PotentialPower;
 
 public abstract class AbstractRunicCard extends CustomCard {
 	public AbstractRunicCard(String id, String name, String img, int cost, String rawDescription, CardType type, CardColor color,
@@ -31,10 +32,10 @@ public abstract class AbstractRunicCard extends CustomCard {
 	public boolean potencyUpgraded;
 	public boolean isPotencyModified;
 	
-	public boolean isCraftable = false;
-	public boolean renderCraftable = true;
+	private boolean isCraftable = false;
+	private boolean renderCraftable = true;
 	
-	Logger logger = LogManager.getLogger(RunesmithMod.class.getName());
+	private Logger logger = LogManager.getLogger(RunesmithMod.class.getName());
 	
 	private Color renderColor = Color.WHITE.cpy();
 	private Texture craftableTab = ImageMaster.loadImage("images/cardui/512/craftable_tag.png");
@@ -52,17 +53,18 @@ public abstract class AbstractRunicCard extends CustomCard {
 	
 	public void upgradePotency(int amount) {
 		this.basePotency += amount; 
-		this.potency = this.basePotency + getPotentialBonus();
+		this.potency = this.basePotency + getPotentialPowerValue();
 		if (this.potency < 0) this.potency = 0;
 		this.potency = this.potency + MathUtils.floor(this.potency * (0.5F * EnhanceCountField.enhanceCount.get(this)));
 		if(this.potency > this.basePotency || amount>0 || this.potency < this.basePotency) isPotencyModified = true;
 	}
 	
-	private int getPotentialBonus() {
+	private int getPotentialPowerValue() {
 		AbstractPlayer p = AbstractDungeon.player;
 		if (p != null) {
 			if (p.hasPower("Runesmith:PotentialPower")) {
-				return p.getPower("Runesmith:PotentialPower").amount;
+				PotentialPower pPower = (PotentialPower) p.getPower("Runesmith:PotentialPower");
+				return (pPower.onVictory) ? 0 : pPower.amount;
 			}
 		}
 		return 0;
