@@ -18,6 +18,7 @@ public class PotentialPower extends AbstractPower {
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
+	public boolean onVictory = false;
 
 	public PotentialPower(AbstractCreature owner, int amount) {
 		this.name = NAME;
@@ -77,8 +78,9 @@ public class PotentialPower extends AbstractPower {
 		}
 	}
 
-//	public void onVictory() {
+	public void onVictory() {
+		onVictory = true;
 //		AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this));
-//	}
+	}
 	
 }
