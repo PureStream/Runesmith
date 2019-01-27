@@ -289,8 +289,8 @@
 	},
 	"Runesmith:GrandSlam": {
 		"NAME": "Grand Slam",
-		"DESCRIPTION": "Deal 13 damage. Enhance all cards in your hand.",
-		"UPGRADE_DESCRIPTION": "Deal 13 damage. Enhance all cards in your hand twice."
+		"DESCRIPTION": "Deal !D! damage. Enhance all cards in your hand.",
+		"UPGRADE_DESCRIPTION": "Deal !D! damage. Enhance all cards in your hand twice."
 	},
 	"Runesmith:GoWithTheFlow": {
 		"NAME": "Go With The Flow",

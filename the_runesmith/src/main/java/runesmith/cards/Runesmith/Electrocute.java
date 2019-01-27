@@ -54,8 +54,16 @@ public class Electrocute extends CustomCard {
 				AbstractGameAction.AttackEffect.NONE
 			)
 		);
-		AbstractDungeon.actionManager.addToTop(new VFXAction(new com.megacrit.cardcrawl.vfx.combat.LightningEffect(m.drawX, m.drawY), speedTime));
-		AbstractDungeon.actionManager.addToTop(new com.megacrit.cardcrawl.actions.utility.SFXAction("ORB_LIGHTNING_EVOKE"));
+		AbstractDungeon.actionManager.addToBottom(new VFXAction(new com.megacrit.cardcrawl.vfx.combat.LightningEffect(m.drawX, m.drawY), speedTime));
+		AbstractDungeon.actionManager.addToBottom(
+				new DamageAction(
+						p,
+						new DamageInfo(p, this.magicNumber, this.damageTypeForTurn),
+						AbstractGameAction.AttackEffect.NONE
+				)
+		);
+		AbstractDungeon.actionManager.addToBottom(new VFXAction(new com.megacrit.cardcrawl.vfx.combat.LightningEffect(p.drawX, p.drawY), speedTime));
+		AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.utility.SFXAction("ORB_LIGHTNING_EVOKE"));
 		
 		AbstractDungeon.actionManager.addToBottom(
 				new StasisCardInDeckAction(STASIS_AMT));
