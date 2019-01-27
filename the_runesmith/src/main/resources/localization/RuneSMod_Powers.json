@@ -26,8 +26,8 @@
 	},
 	"Runesmith:PotentialPower": {
 		"NAME": "Potential",
-		"DESCRIPTIONS": ["Increases the #yPotency of #yCraft card by #b",
-			"Decreases the #yPotency of #yCraft card by #b",
+		"DESCRIPTIONS": ["Increases the #yPotency of #yCraft cards by #b",
+			"Decreases the #yPotency of #yCraft cards by #b",
 			"."]
 	},
 	"Runesmith:ArcReactorPower": {

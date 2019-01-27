@@ -31,8 +31,19 @@ public class IncendiumRune extends RuneOrb {
 	
 	@Override
 	public void onBreak() {
-		onEndOfTurn();
-		onEndOfTurn();
+		this.activateEffect();
+		AbstractDungeon.actionManager.addToTop(
+				new DamageAllEnemiesAction(
+						null,
+						DamageInfo.createDamageMatrix(this.potential, true),
+						DamageInfo.DamageType.THORNS,
+						AbstractGameAction.AttackEffect.FIRE));
+		AbstractDungeon.actionManager.addToTop(
+				new DamageAllEnemiesAction(
+						null,
+						DamageInfo.createDamageMatrix(this.potential, true),
+						DamageInfo.DamageType.THORNS,
+						AbstractGameAction.AttackEffect.FIRE));
 	}
 
 	@Override

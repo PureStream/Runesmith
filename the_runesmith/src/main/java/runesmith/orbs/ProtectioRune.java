@@ -27,8 +27,14 @@ public class ProtectioRune extends RuneOrb {
 	
 	@Override
 	public void onBreak() {
-		onEndOfTurn();
-		onEndOfTurn();
+		this.activateEffect();
+		AbstractPlayer p = AbstractDungeon.player;
+		AbstractDungeon.actionManager.addToTop(
+				new GainBlockAction(p, p, this.potential)
+		);
+		AbstractDungeon.actionManager.addToTop(
+				new GainBlockAction(p, p, this.potential)
+		);
 	}
 
 	@Override

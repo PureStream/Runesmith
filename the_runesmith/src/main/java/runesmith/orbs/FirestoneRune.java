@@ -62,8 +62,23 @@ public class FirestoneRune extends RuneOrb {
 	
 	@Override
 	public void onBreak() {
-		onEndOfTurn();
-		onEndOfTurn();
+		this.activateEffect();
+		AbstractDungeon.actionManager.addToTop(
+				new DamageRandomEnemyAction(
+						new DamageInfo(AbstractDungeon.player,
+								this.potential,
+								DamageInfo.DamageType.THORNS),
+						AbstractGameAction.AttackEffect.FIRE
+				)
+		);
+		AbstractDungeon.actionManager.addToTop(
+				new DamageRandomEnemyAction(
+						new DamageInfo(AbstractDungeon.player,
+								this.potential,
+								DamageInfo.DamageType.THORNS),
+						AbstractGameAction.AttackEffect.FIRE
+				)
+		);
 	}
 
 	@Override

@@ -34,15 +34,17 @@ public class SpiculumRune extends RuneOrb {
 	
 	@Override
 	public void onBreak() {
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ThornsPower(p, this.potential), this.potential));
+		this.activateEffect();
+		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new ThornsPower(p, this.potential), this.potential));
 		//logger.info("Applying Spiculum Down");
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new SpiculumDownPower(p, this.potential*2),this.potential*2));
+		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new SpiculumDownPower(p, this.potential*2),this.potential*2));
 	}
 
 	@Override
 	public void onMultiBreak() {
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ThornsPower(p, this.potential*2), this.potential*2));
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new SpiculumDownPower(p, this.potential*2),this.potential*2));
+		this.activateEffect();
+		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new ThornsPower(p, this.potential*2), this.potential*2));
+		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new SpiculumDownPower(p, this.potential*2),this.potential*2));
 	}
 	
 	@Override

@@ -37,7 +37,7 @@ public class BreakWithoutRemovingRuneAction extends com.megacrit.cardcrawl.actio
 				}
 			}
 		}
-		this.isDone = true;
+//		this.isDone = true;
 		tickDuration();
 	}
 }

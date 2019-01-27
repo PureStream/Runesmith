@@ -21,8 +21,9 @@ public class IndustriaRune extends RuneOrb {
 	
 	@Override
 	public void onBreak() {
-		onStartOfTurn();
-		onStartOfTurn();
+		this.activateEffect();
+		AbstractDungeon.actionManager.addToTop(new GainEnergyAction(this.passiveAmount));
+		AbstractDungeon.actionManager.addToTop(new GainEnergyAction(this.passiveAmount));
 	}
 
 	@Override

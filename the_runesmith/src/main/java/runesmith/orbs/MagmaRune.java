@@ -42,10 +42,30 @@ public class MagmaRune extends RuneOrb {
 	
 	@Override
 	public void onBreak() {
-		onStartOfTurn();
-		onEndOfTurn();
-		onStartOfTurn();
-		onEndOfTurn();
+		this.activateEffect();
+		AbstractPlayer p = AbstractDungeon.player;
+		AbstractDungeon.actionManager.addToTop(
+				new DamageRandomEnemyAction(
+						new DamageInfo(AbstractDungeon.player,
+								this.potential,
+								DamageInfo.DamageType.THORNS),
+						AbstractGameAction.AttackEffect.FIRE
+				)
+		);
+		AbstractDungeon.actionManager.addToTop(
+				new GainBlockAction(p, p, this.potential/2)
+		);
+		AbstractDungeon.actionManager.addToTop(
+				new DamageRandomEnemyAction(
+						new DamageInfo(AbstractDungeon.player,
+								this.potential,
+								DamageInfo.DamageType.THORNS),
+						AbstractGameAction.AttackEffect.FIRE
+				)
+		);
+		AbstractDungeon.actionManager.addToTop(
+				new GainBlockAction(p, p, this.potential/2)
+		);
 	}
 
 	@Override
