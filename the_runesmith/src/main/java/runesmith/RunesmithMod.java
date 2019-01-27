@@ -2,6 +2,7 @@ package runesmith;
 
 import static runesmith.patches.AbstractCardEnum.RUNESMITH_BEIGE;
 
+import basemod.helpers.RelicType;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 
@@ -53,6 +54,9 @@ import basemod.interfaces.PostDrawSubscriber;
 import basemod.interfaces.PostDungeonInitializeSubscriber;
 import basemod.interfaces.PostExhaustSubscriber;
 import basemod.interfaces.PostInitializeSubscriber;
+import runesmith.relics.MiniCore;
+import runesmith.relics.Nanobots;
+import runesmith.relics.UraniumAnvil;
 
 
 @SpireInitializer
@@ -85,7 +89,8 @@ public class RunesmithMod implements PostExhaustSubscriber,
 	private static final String EVENT_STRING = "localization/RuneSMod_Events.json";
 	
 	private List<AbstractCard> cardsToAdd = new ArrayList<>();
-	private List<CustomRelic> relicsToAdd = new ArrayList<>();
+	private List<CustomRelic> relicsToAddOnlyThisClass = new ArrayList<>();
+	private List<CustomRelic> relicsToAddAllClass = new ArrayList<>();
 
 	public RunesmithMod() {
 		BaseMod.subscribe(this);
@@ -385,15 +390,23 @@ public class RunesmithMod implements PostExhaustSubscriber,
 		
 		loadRelicsToAdd();
 		
-		for (CustomRelic relic : relicsToAdd) {
+		for (CustomRelic relic : relicsToAddOnlyThisClass)
 			BaseMod.addRelicToCustomPool(relic, RUNESMITH_BEIGE);
-		}
+		for (CustomRelic relic : relicsToAddAllClass)
+			BaseMod.addRelic(relic, RelicType.SHARED);
+
 	}
 	
 	private void loadRelicsToAdd() {
-		relicsToAdd.clear();
+		relicsToAddOnlyThisClass.clear();
+		relicsToAddAllClass.clear();
 //		relicsToAdd.add(new Blueberries());
-		relicsToAdd.add(new BrokenRuby());
+
+		relicsToAddOnlyThisClass.add(new BrokenRuby());
+		relicsToAddOnlyThisClass.add(new MiniCore());
+
+		relicsToAddAllClass.add(new Nanobots());
+		relicsToAddAllClass.add(new UraniumAnvil());
 	}
 
 	@Override

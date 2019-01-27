@@ -24,7 +24,7 @@
 		"NAME": "Nanobots",
 		"FLAVOR": "\"These tiny machines have wondrous properties.\" -Ranwid",
 		"DESCRIPTIONS": [
-			"At the start of combat. #yEnhance all cards in your hand."
+			"At the start of combat, #yEnhance all cards in your hand."
 		]
 	},
 	"Runesmith:UraniumAnvil": {
