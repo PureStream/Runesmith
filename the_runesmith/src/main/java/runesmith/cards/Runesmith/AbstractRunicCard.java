@@ -33,7 +33,7 @@ public abstract class AbstractRunicCard extends CustomCard {
 	public boolean isPotencyModified;
 	
 	private boolean isCraftable = false;
-	private boolean renderCraftable = true;
+	public boolean renderCraftable = true;
 	
 	private Logger logger = LogManager.getLogger(RunesmithMod.class.getName());
 	

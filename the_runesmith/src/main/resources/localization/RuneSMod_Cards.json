@@ -9,7 +9,7 @@
 	},
 	"Runesmith:CraftFirestone": {
 		"NAME": "Craft Firestone",
-		"DESCRIPTION": "2 Ignis: Craft a Firestone rune with !Pot! Potency.",
+		"DESCRIPTION": "1 Ignis: Craft a Firestone rune with !Pot! Potency.",
 		"EXTENDED_DESCRIPTION":[" NL (Can Craft.)"]
 	},
 	"Runesmith:CraftProtectio": {

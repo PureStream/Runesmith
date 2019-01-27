@@ -19,6 +19,7 @@ public class PotentialPower extends AbstractPower {
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 	public boolean onVictory = false;
+	public static final int AMOUNT_CAP = 999;
 
 	public PotentialPower(AbstractCreature owner, int amount) {
 		this.name = NAME;
@@ -37,6 +38,10 @@ public class PotentialPower extends AbstractPower {
 		this.amount += stackAmount;
 		if (this.amount == 0) {
 			AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+		}else if (this.amount > this.AMOUNT_CAP){
+			this.amount = this.AMOUNT_CAP;
+		}else if (this.amount < -this.AMOUNT_CAP){
+			this.amount = -this.AMOUNT_CAP;
 		}
 		updatePotentialEffects();
 	}

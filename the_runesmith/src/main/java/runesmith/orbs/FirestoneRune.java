@@ -19,7 +19,7 @@ public class FirestoneRune extends RuneOrb {
 	
 	public static final Logger logger = LogManager.getLogger(FirestoneRune.class.getName());
 	
-	public static final int basePotency = 5;
+	public static final int basePotency = 4;
 	
 	public static Texture img1;
 	public static Texture img2;

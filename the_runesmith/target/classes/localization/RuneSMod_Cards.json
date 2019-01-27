@@ -289,8 +289,8 @@
 	},
 	"Runesmith:GrandSlam": {
 		"NAME": "Grand Slam",
-		"DESCRIPTION": "Deal 13 damage. Enhance all cards in your hand.",
-		"UPGRADE_DESCRIPTION": "Deal 13 damage. Enhance all cards in your hand twice."
+		"DESCRIPTION": "Deal !D! damage. Enhance all cards in your hand.",
+		"UPGRADE_DESCRIPTION": "Deal !D! damage. Enhance all cards in your hand twice."
 	},
 	"Runesmith:GoWithTheFlow": {
 		"NAME": "Go With The Flow",
@@ -361,7 +361,7 @@
 	},
 	"Runesmith:Firewall": {
 		"NAME": "Firewall",
-		"DESCRIPTION": "Gain !B! block. NL 3 Ignis 1 Terra: Craft a Firestone and a Magma rune with !Pot! Potency.",
+		"DESCRIPTION": "Gain !B! block. NL 3 Ignis : Craft 2 Firestone runes with !Pot! Potency.",
 		"EXTENDED_DESCRIPTION":[" NL (Can Craft.)"]	
 	},
 	"Runesmith:Discharge": {
@@ -387,8 +387,8 @@
 	},
 	"Runesmith:TimeMachine": {
 		"NAME": "Time Machine",
-		"DESCRIPTION": "Save your current HP, Block, and Elements. NL Add a Time Travel card to your hand. NL Exhaust.",
-		"UPGRADE_DESCRIPTION": "Innate. NL Save your current HP, Block, and Elements. NL Add a Time Travel card to your hand. NL Exhaust."
+		"DESCRIPTION": "Save your current HP, Block, and Elements for !M! turns. NL Add a Time Travel card to your hand. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Innate. NL Save your current HP, Block, and Elements for !M! turns. NL Add a Time Travel card to your hand. NL Exhaust."
 	},
 	"Runesmith:TimeTravel_old": {
 		"NAME": "Time Travel",

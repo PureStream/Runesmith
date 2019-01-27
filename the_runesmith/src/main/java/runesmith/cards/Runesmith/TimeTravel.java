@@ -63,7 +63,7 @@ public class TimeTravel extends CustomCard {
 				pow.flash();
 			}
 		}else {
-			AbstractDungeon.effectList.add(new ThoughtBubble(p.dialogX, p.dialogY, 3.0F, "There is no ~#rWormhole~ to travel through.", true));
+			AbstractDungeon.effectList.add(new ThoughtBubble(p.dialogX, p.dialogY, 3.0F, "There is no #p~Wormhole~ to travel through.", true));
 			return;
 		}
 		
