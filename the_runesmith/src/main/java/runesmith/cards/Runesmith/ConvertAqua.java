@@ -1,14 +1,13 @@
 package runesmith.cards.Runesmith;
 
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
+import basemod.abstracts.CustomCard;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-
-import basemod.abstracts.CustomCard;
 import runesmith.actions.ApplyElementsPowerAction;
 
 public class ConvertAqua extends CustomCard {
@@ -18,49 +17,39 @@ public class ConvertAqua extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = -2;
-	private static final int IGNIS_AMT = 1;
-	private static final int TERRA_AMT = 1;
-	private static final int AQUA_AMT = 2;
-	private static final int UPG_ELEMENT_AMT = -1;
-	
+
 	public ConvertAqua() {
 		super(
-			ID,
-			NAME,
-			IMG_PATH,
-			COST,
-			DESCRIPTION,
-			AbstractCard.CardType.SKILL,
-			AbstractCard.CardColor.COLORLESS,
-			AbstractCard.CardRarity.SPECIAL,
-			AbstractCard.CardTarget.SELF
+				ID,
+				NAME,
+				IMG_PATH,
+				COST,
+				DESCRIPTION,
+				AbstractCard.CardType.SKILL,
+				AbstractCard.CardColor.COLORLESS,
+				AbstractCard.CardRarity.SPECIAL,
+				AbstractCard.CardTarget.SELF
 		);
-		this.magicNumber = this.baseMagicNumber = AQUA_AMT;
 	}
-	
+
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		
+
 		if (p.hasPower("Runesmith:AquaPower")) {
-			AbstractDungeon.actionManager.addToTop(new ReducePowerAction(p, p, "Runesmith:AquaPower", this.magicNumber));
-//			AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, 
-//					new AquaPower(p, -AQUA_AMT),-AQUA_AMT));
+			int convertAmount;
+			convertAmount = p.getPower("Runesmith:AquaPower").amount;
+			AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p,p,"Runesmith:AquaPower"));
+			AbstractDungeon.actionManager.addToBottom(new ApplyElementsPowerAction(p,p,convertAmount,convertAmount,0));
 		}
-		AbstractDungeon.actionManager.addToBottom(
-				new ApplyElementsPowerAction(p,p,IGNIS_AMT,TERRA_AMT,0));
-//		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, 
-//				new IgnisPower(p, magicNumber), magicNumber));
-//		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, 
-//				new TerraPower(p, TERRA_AMT), TERRA_AMT));
+
 	}
-	
+
 	public AbstractCard makeCopy() {
 		return new ConvertAqua();
 	}
-	
+
 	public void upgrade() {
 		if (!this.upgraded) {
-		  upgradeName();
-		  upgradeMagicNumber(UPG_ELEMENT_AMT);
+			upgradeName();
 		}
 	}
 }
