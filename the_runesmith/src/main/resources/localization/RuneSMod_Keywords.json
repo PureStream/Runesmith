@@ -36,7 +36,7 @@
 			"craft",
 			"Craft"
 			],
-			"DESCRIPTION": "Create a rune using #yElements. If #yElements are insufficient, gain that much #yElements instead."
+			"DESCRIPTION": "Create a rune using #yElements. If you don't have enough, gain that many instead."
 		},
 		{
 			"NAMES": [

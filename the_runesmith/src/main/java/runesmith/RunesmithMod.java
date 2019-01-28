@@ -6,6 +6,7 @@ import basemod.helpers.RelicType;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 
+import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.audio.Sfx;
@@ -14,6 +15,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.localization.Keyword;
@@ -79,7 +81,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
 	private static final String RUNESMITH_BUTTON = "images/character/runesmithButton.png";
 	private static final String RUNESMITH_PORTRAIT = "images/character/runesmithPortrait.png";
 	public static Color BEIGE = new Color(175f/255f, 145f/255f, 100f/255f, 1f);
-	
+
 	private static final String CARD_STRING = "localization/RuneSMod_Cards.json";
 	private static final String RELIC_STRING = "localization/RuneSMod_Relics.json";
 	private static final String POWER_STRING = "localization/RuneSMod_Powers.json";

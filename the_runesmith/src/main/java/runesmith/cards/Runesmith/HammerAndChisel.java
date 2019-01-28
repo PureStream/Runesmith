@@ -60,8 +60,8 @@ public class HammerAndChisel extends CustomCard {
         }
         AbstractCard c1;
         AbstractCard c2;
-        c1 = CardLibrary.cards.get(hammer.get(AbstractDungeon.cardRng.random(0, hammer.size() - 1)));
-        c2 = CardLibrary.cards.get(chisel.get(AbstractDungeon.cardRng.random(0, chisel.size() - 1)));
+        c1 = CardLibrary.cards.get(hammer.get(AbstractDungeon.cardRng.random(0, hammer.size() - 1))).makeCopy();
+        c2 = CardLibrary.cards.get(chisel.get(AbstractDungeon.cardRng.random(0, chisel.size() - 1))).makeCopy();
         
         if(this.upgraded) {
         	c1.upgrade();
