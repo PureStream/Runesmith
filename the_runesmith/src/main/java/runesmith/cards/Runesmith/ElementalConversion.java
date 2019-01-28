@@ -29,6 +29,7 @@ public class ElementalConversion extends CustomCard {
     public ElementalConversion() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.RUNESMITH_BEIGE, CardRarity.UNCOMMON, CardTarget.SELF);
         makeModal();
+        this.baseMagicNumber = this.magicNumber = 0;
     }
 
     private void makeModal() {
@@ -50,6 +51,7 @@ public class ElementalConversion extends CustomCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            upgradeMagicNumber(DRAW_AMT);
 //            for (int i=0; i<3; ++i) {
 //                modal.getCard(i).upgrade();
 //            }

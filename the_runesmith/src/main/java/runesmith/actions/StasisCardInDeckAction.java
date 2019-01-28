@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
 
 public class StasisCardInDeckAction extends AbstractGameAction{
-	private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("Runesmith:StasisAction");
+	private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("Runesmith:StasisCardInDeckAction");
 	public static final String[] TEXT = uiStrings.TEXT;
 
 	private AbstractPlayer p;

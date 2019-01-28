@@ -28,5 +28,10 @@
       "TEXT": [
         "Stasis"
       ]
-    }
+    },
+    "Runesmith:StasisCardInDeckAction": {
+      "TEXT": [
+      "Stasis a Card"
+    ]
+  }
 }
