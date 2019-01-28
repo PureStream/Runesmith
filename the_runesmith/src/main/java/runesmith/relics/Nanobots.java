@@ -10,9 +10,10 @@ public class Nanobots extends CustomRelic {
 	
 	public static final String ID = "Runesmith:Nanobots";
 	private static final String IMG = "images/relics/Nanobots.png"; //<--------- Need some img
+	private static final String IMG_O = "images/relics/Nanobots_o.png";
 	
 	public Nanobots() {
-		super(ID, ImageMaster.loadImage(IMG), RelicTier.COMMON, LandingSound.MAGICAL);
+		super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_O), RelicTier.COMMON, LandingSound.MAGICAL);
 	}
 	
 	public String getUpdatedDescription() {

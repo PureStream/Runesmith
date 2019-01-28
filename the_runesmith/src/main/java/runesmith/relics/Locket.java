@@ -14,11 +14,12 @@ public class Locket extends CustomRelic {
 
     public static final String ID = "Runesmith:Locket";
     private static final String IMG = "images/relics/Locket.png"; //<--------- Need some img
+    private static final String IMG_O = "images/relics/Locket_o.png";
     private boolean isAvailable = false;
     private boolean isUsedThisCombat = false;
 
     public Locket() {
-        super(ID, ImageMaster.loadImage(IMG), RelicTier.RARE, LandingSound.HEAVY);
+        super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_O), RelicTier.RARE, LandingSound.HEAVY);
     }
 
     public String getUpdatedDescription() {
