@@ -92,6 +92,6 @@
 	},
 	"Runesmith:TimeMachinePower": {
 		"NAME": "Wormhole",
-		"DESCRIPTIONS": ["Saved #b", " HP, #b"," #yBlock, #b"," #yIgnis, #b", " #yTerra, #b"," #yAqua. Expires in #b"," turn."," turns."]
+		"DESCRIPTIONS": ["Saved #b", " HP, #b"," #yBlock, #b"," #yIgnis, #b", " #yTerra, #b"," #yAqua. NL Expires in #b"," turn."," turns."]
 	}
 }
