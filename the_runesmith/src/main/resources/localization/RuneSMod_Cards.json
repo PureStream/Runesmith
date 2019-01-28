@@ -36,8 +36,8 @@
 	},
 	"Runesmith:Terraform": {
 		"NAME": "Terraform",
-		"DESCRIPTION": "Gain 1 Terra. NL Gain Block equals to double the amount of Terra.",
-		"UPGRADE_DESCRIPTION": "Gain 1 Terra. NL Gain Block equals to triple the amount of Terra.",
+		"DESCRIPTION": "Gain 1 Terra. NL Gain Block equals to double the number of Terra.",
+		"UPGRADE_DESCRIPTION": "Gain 1 Terra. NL Gain Block equals to triple the number of Terra.",
 		"EXTENDED_DESCRIPTION":[
 			" NL (Gain !B! Block.)"
 		]
@@ -105,8 +105,8 @@
 	},
 	"Runesmith:ElementalShield": {
 		"NAME": "Elemental Shield",
-		"DESCRIPTION": "Gain Block equals to double the amount of all your Elements. NL Remove half of your Elements.",
-		"UPGRADE_DESCRIPTION": "Gain Block equals to triple the amount of all your Elements. NL Remove half of your Elements.",
+		"DESCRIPTION": "Gain Block equals to double the number of all your Elements. NL Remove half of your Elements.",
+		"UPGRADE_DESCRIPTION": "Gain Block equals to triple the number of all your Elements. NL Remove half of your Elements.",
 		"EXTENDED_DESCRIPTION":[
 			" NL (Gain !B! Block)"
 		]
@@ -151,7 +151,7 @@
 	},
 	"Runesmith:CraftFerro": {
 		"NAME": "Craft Ferro",
-		"DESCRIPTION": "2 Terra 1 Aqua: Craft a Ferro rune with !Pot! Potency. Exhaust.",
+		"DESCRIPTION": "2 Terra 1 Aqua: Craft a Ferro rune with !Pot! Potency. NL Exhaust.",
 		"UPGRADE_DESCRIPTION": "2 Terra 1 Aqua: Craft a Ferro rune with !Pot! Potency.",
 		"EXTENDED_DESCRIPTION":[" NL (Can Craft.)"]
 	},
@@ -271,7 +271,7 @@
 	},
 	"Runesmith:Rearm": {
 		"NAME": "Rearm",
-		"DESCRIPTION": "Shuffle all Upgraded cards from your discard pile into your draw pile.  NL Draw !M! cards."
+		"DESCRIPTION": "Shuffle all Upgraded or Enhanced cards from your discard pile into your draw pile.  NL Draw !M! cards."
 	},
 	"Runesmith:UnlimitedPower": {
 		"NAME": "Unlimited Power",
@@ -280,8 +280,8 @@
 	},
 	"Runesmith:ForcesOfNature": {
 		"NAME": "Forces Of Nature",
-		"DESCRIPTION": "Deal damage equals to the amount of elements gained this combat to ALL enemies.",
-		"UPGRADE_DESCRIPTION": "Deal damage equals to double the amount of elements gained this combat to ALL enemies.",
+		"DESCRIPTION": "Deal damage equals to the number of Elements gained this combat to ALL enemies.",
+		"UPGRADE_DESCRIPTION": "Deal damage equals to double the number of Elements gained this combat to ALL enemies.",
 		"EXTENDED_DESCRIPTION":[
 			" NL (Deals !D! damage.)",
      		""
@@ -302,13 +302,13 @@
 	},
 	"Runesmith:DoubleUp": {
 		"NAME": "Double Up",
-		"DESCRIPTION": "Gain !B! Block. Upgrade !M! card in your hand and Enhance it.",
-		"UPGRADE_DESCRIPTION": "Gain !B! Block. Upgrade !M! cards in your hand and Enhance them."
+		"DESCRIPTION": "Gain !B! Block. NL Upgrade !M! card in your hand and Enhance it.",
+		"UPGRADE_DESCRIPTION": "Gain !B! Block. NL Upgrade !M! cards in your hand and Enhance them."
 	},
 	"Runesmith:Refinement": {
 		"NAME": "Refinement",
-		"DESCRIPTION": "Enhance a card X-1 times. Gain [E] if you spend at least [E] .",
-		"UPGRADE_DESCRIPTION": "Enhance a card X times. Gain [E] if you spend at least [E] ."
+		"DESCRIPTION": "Enhance a card X times. Gain [E] if you spend at least [E] .",
+		"UPGRADE_DESCRIPTION": "Enhance a card X+1 times. Gain [E] if you spend at least [E] ."
 	},
 	"Runesmith:Permafrost": {
 		"NAME": "Permafrost",
@@ -321,8 +321,8 @@
 	},
 	"Runesmith:HeatExchange": {
 		"NAME": "Heat Exchange",
-		"DESCRIPTION": "Deal !D! damage to ALL enemies. This card gains additional damage equals to current Ignis. Lose 2 Ignis.",
-		"UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. This card gains additional damage equals to !M! times the current Ignis. Lose 2 Ignis."
+		"DESCRIPTION": "Deal !D! damage to ALL enemies. This card gains additional damage equals to current Ignis. NL Lose 1 Ignis.",
+		"UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. This card gains additional damage equals to !M! times the current Ignis. NL Lose 1 Ignis."
 	},
 	"Runesmith:PoweredAnvil": {
 		"NAME": "Powered Anvil",
@@ -361,7 +361,7 @@
 	},
 	"Runesmith:Firewall": {
 		"NAME": "Firewall",
-		"DESCRIPTION": "Gain !B! block. NL 3 Ignis : Craft 2 Firestone runes with !Pot! Potency.",
+		"DESCRIPTION": "Gain !B! Block. NL 3 Ignis : Craft 2 Firestone runes with !Pot! Potency.",
 		"EXTENDED_DESCRIPTION":[" NL (Can Craft.)"]	
 	},
 	"Runesmith:Discharge": {
@@ -404,6 +404,6 @@
 	},
 	"Runesmith:FissionHammer": {
 		"NAME": "Fission Hammer",
-		"DESCRIPTION": "Deal !D! damage. Deal !D! damage to ALL enemies. NL Break your oldest rune twice."
+		"DESCRIPTION": "Deal !D! damage. NL Deal !D! damage to ALL enemies. NL Break your oldest rune twice."
 	}
 }

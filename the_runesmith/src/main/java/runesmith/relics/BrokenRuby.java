@@ -21,7 +21,7 @@ public class BrokenRuby extends CustomRelic {
 	private static final int NUM_CARDS = 3;
 	
 	public BrokenRuby() {
-		super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_O), RelicTier.STARTER, LandingSound.MAGICAL); 
+		super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_O), RelicTier.STARTER, LandingSound.CLINK);
 		this.counter = 0;
 	}
 	

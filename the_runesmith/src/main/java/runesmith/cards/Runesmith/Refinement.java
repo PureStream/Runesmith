@@ -47,7 +47,7 @@ public class Refinement extends CustomCard {
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		int cnt = EnergyPanel.totalCount;
-		if (!upgraded) cnt--;
+		if (upgraded) cnt++;
 		if (p.hasRelic("Chemical X")) 
 			cnt += 2;
 		if (!this.freeToPlayOnce) {

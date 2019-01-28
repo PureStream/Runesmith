@@ -22,7 +22,7 @@ public class HeatExchange extends CustomCard {
 	public static final String IMG_PATH = "images/cards/HeatExchange.png"; //<-------------- need some img
 	private static final int COST = 1;
 	private static final int ATTACK_DMG = 6;
-	private static final int IGNIS_AMT = 2;
+	private static final int IGNIS_AMT = 1;
 	private static final int MULTIPLIER_AMT = 1;
 	private static final int UPG_MULTIPLIER_AMT = 1;
 

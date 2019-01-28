@@ -22,7 +22,7 @@ public class DoubleUp extends CustomCard {
 	public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;	
 	
 	private static final int COST = 2;
-	private static final int BLOCK_AMT = 10;
+	private static final int BLOCK_AMT = 12;
 	private static final int UPGRADE_PLUS_BLOCK = 2;
 	private static final int CARD_AMT = 1;
 	private static final int UPG_CARD_AMT = 1;
