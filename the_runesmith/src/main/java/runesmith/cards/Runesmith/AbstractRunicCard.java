@@ -38,7 +38,7 @@ public abstract class AbstractRunicCard extends CustomCard {
 	private Logger logger = LogManager.getLogger(RunesmithMod.class.getName());
 	
 	private Color renderColor = Color.WHITE.cpy();
-	private Texture craftableTab = ImageMaster.loadImage("images/cardui/512/craftable_tag.png");
+	private static Texture craftableTab = ImageMaster.loadImage("images/cardui/512/craftable_tag.png");
 	
 	public void triggerWhenDrawn() {
 		this.upgradePotency(0);

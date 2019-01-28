@@ -25,7 +25,7 @@ public class Accelerate extends CustomCard {
 	public static final String IMG_PATH = "images/cards/Accelerate.png"; //<-------------- need some img
 	private static final int COST = 1;
 	private static final int BLOCK_AMT = 7;
-	private static final int UPGRADE_PLUS_BLOCK = 1;
+	private static final int UPGRADE_PLUS_BLOCK = 2;
 	private static final int DRAW_AMT = 2;
 	private static final int UPGRADE_DRAW_AMT = 1;
 
@@ -81,7 +81,7 @@ public class Accelerate extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 		  upgradeName();
-		  upgradeDamage(UPGRADE_PLUS_BLOCK);
+		  upgradeBlock(UPGRADE_PLUS_BLOCK);
 		  upgradeMagicNumber(UPGRADE_DRAW_AMT);
 		}
 	}

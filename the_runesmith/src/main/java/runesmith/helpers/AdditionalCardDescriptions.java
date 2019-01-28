@@ -1,13 +1,11 @@
 package runesmith.helpers;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
-
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import runesmith.patches.CardStasisStatus;
 import runesmith.patches.EnhanceCountField;
 
@@ -57,6 +55,7 @@ public abstract class AdditionalCardDescriptions {
 	
 	//has less compatibility with other mods that modify card desc
 	public static void modifyDescription(AbstractCard c) {
+//		logger.info("updating string");
 		String raw = c.rawDescription;
 		
 		raw = raw.replace(" "+ENHANCE_TEXT[0]+".", "");
@@ -83,7 +82,8 @@ public abstract class AdditionalCardDescriptions {
     public static class updateDesc {
 	        public static void Prefix(AbstractCard self)
 	        {
-	        	AdditionalCardDescriptions.modifyDescription(self);
+				if(EnhanceCountField.enhanceCount.get(self) > 0 || CardStasisStatus.isStasis.get(self))
+	        		AdditionalCardDescriptions.modifyDescription(self);
 	        }
     }
 }

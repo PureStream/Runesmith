@@ -57,21 +57,21 @@
 		"UPGRADE_DESCRIPTION": "Deal !D! damage. NL Draw !M! card for each unique Rune you have plus one."
 	},
 	"Runesmith:ElementalConversion": {
-		"NAME": "Convert Elements",
-		"DESCRIPTION": "Choose: Convert Ignis, Convert Terra or Convert Aqua.",
-		"UPGRADE_DESCRIPTION": "Choose: Convert Ignis+, Convert Terra+ or Convert Aqua+."
+		"NAME": "Superposition",
+		"DESCRIPTION": "Choose: Ignis, Terra or Aqua.",
+		"UPGRADE_DESCRIPTION": "Choose: Ignis, Terra or Aqua. NL Draw 1 card."
 	},
 	"Runesmith:ConvertIgnis": {
-		"NAME": "Convert Ignis",
-		"DESCRIPTION": "Lose 2 Ignis. NL Gain !M! Terra and 1 Aqua."
+		"NAME": "Ignis",
+		"DESCRIPTION": "Lose all Ignis. Gain Terra and Aqua equals to Ignis lost."
 	},
 	"Runesmith:ConvertTerra": {
-		"NAME": "Convert Terra",
-		"DESCRIPTION": "Lose 2 Terra. NL Gain !M! Ignis and 1 Aqua."
+		"NAME": "Terra",
+		"DESCRIPTION": "Lose all Terra. Gain Ignis and Aqua equals to Terra lost."
 	},
 	"Runesmith:ConvertAqua": {
-		"NAME": "Convert Aqua",
-		"DESCRIPTION": "Lose !M! Aqua. NL Gain 1 Ignis and 1 Terra."
+		"NAME": "Aqua",
+		"DESCRIPTION": "Lose all Aqua. Gain Ignis and Terra equals to Aqua lost."
 	},
 	"Runesmith:Repurpose": {
 		"NAME": "Repurpose",
@@ -344,7 +344,7 @@
 	},
 	"Runesmith:Accelerate": {
 		"NAME": "Accelerate",
-		"DESCRIPTION": "Gain !B! Block. Break your oldest rune to draw !M! cards."
+		"DESCRIPTION": "Gain !B! Block. NL Break your oldest rune to draw !M! cards."
 	},
 	"Runesmith:NanitesCloud": {
 		"NAME": "Nanites Cloud",
@@ -357,7 +357,7 @@
 	"Runesmith:HammerAndChisel": {
 		"NAME": "Hammer and Chisel",
 		"DESCRIPTION": "Add a random Hammer card and a random Chisel card to your hand. They cost 1 less this combat.",
-		"UPGRADE_DESCRIPTION": "Add a random upgraded Hammer card and a random upgraded Chisel card to your hand. They cost 1 less this combat."
+		"UPGRADE_DESCRIPTION": "Add a random Upgraded Hammer card and a random Upgraded Chisel card to your hand. They cost 1 less this combat."
 	},
 	"Runesmith:Firewall": {
 		"NAME": "Firewall",
