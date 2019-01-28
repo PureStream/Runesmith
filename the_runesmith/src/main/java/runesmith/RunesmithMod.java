@@ -34,7 +34,7 @@ import runesmith.helpers.PotencyVariable;
 import runesmith.patches.ElementsGainedCountField;
 import runesmith.patches.EnhanceCountField;
 import runesmith.patches.PlayerClassEnum;
-import runesmith.relics.BrokenRuby;
+import runesmith.relics.*;
 
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
@@ -56,9 +56,6 @@ import basemod.interfaces.PostDrawSubscriber;
 import basemod.interfaces.PostDungeonInitializeSubscriber;
 import basemod.interfaces.PostExhaustSubscriber;
 import basemod.interfaces.PostInitializeSubscriber;
-import runesmith.relics.MiniCore;
-import runesmith.relics.Nanobots;
-import runesmith.relics.UraniumAnvil;
 
 
 @SpireInitializer
@@ -406,6 +403,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
 
 		relicsToAddOnlyThisClass.add(new BrokenRuby());
 		relicsToAddOnlyThisClass.add(new MiniCore());
+		relicsToAddOnlyThisClass.add(new Locket());
 
 		relicsToAddAllClass.add(new Nanobots());
 		relicsToAddAllClass.add(new UraniumAnvil());

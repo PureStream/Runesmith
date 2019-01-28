@@ -1,11 +1,10 @@
 package runesmith.relics;
 
+import basemod.abstracts.CustomRelic;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import basemod.abstracts.CustomRelic;
-import runesmith.actions.EnhanceEntireHandAction;
-import runesmith.actions.cards.GrandSlamAction;
+import runesmith.actions.relics.NanobotsAction;
 
 public class Nanobots extends CustomRelic {
 	
@@ -21,8 +20,8 @@ public class Nanobots extends CustomRelic {
 	}
 
 	public void atBattleStart() {
-		AbstractDungeon.actionManager.addToBottom(
-					new EnhanceEntireHandAction());
+		flash();
+		AbstractDungeon.actionManager.addToBottom(new NanobotsAction());
 	}
 
 	public AbstractRelic makeCopy() {
