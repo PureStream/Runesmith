@@ -1,6 +1,7 @@
 package runesmith.relics;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
@@ -24,10 +25,12 @@ public class MiniCore extends CustomRelic {
 	}
 	
 	public void atBattleStart() {
+		flash();
 		AbstractPlayer p = AbstractDungeon.player;
 		AbstractDungeon.actionManager.addToTop(
 				new ApplyPowerAction(p, p, 
 						new PotentialPower(p,POWER_AMT),POWER_AMT));
+		AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(p, this));
 	}
 
 	public AbstractRelic makeCopy() {
