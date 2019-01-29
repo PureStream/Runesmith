@@ -67,8 +67,8 @@ public class DoubleUpAction extends AbstractGameAction{
 					c.upgrade();
 					EnhanceCard.enhance(c);
 					this.p.hand.getTopCard().superFlash(RunesmithMod.BEIGE);
-					returnCards();
-				}		
+				}
+				returnCards();
 				this.isDone = true;
 			}
 			

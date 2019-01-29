@@ -32,20 +32,20 @@ public class PotentiaRune extends RuneOrb {
 	
 	@Override
 	public void onBreak() {
-		this.activateEffect();
 		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new PotentialPower(p, potential), potential));
 
 		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new PotentialDownPower(p, 2*potential), 2*potential));
 //		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PotentialDownPower(p, potential), potential));
+		this.activateEffect();
 	}
 
 	@Override
 	public void onMultiBreak() {
-		this.activateEffect();
 		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new PotentialPower(p, 2*potential), 2*potential));
 //		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PotentialPower(p, potential), potential));
 		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new PotentialDownPower(p, 2*potential), 2*potential));
 //		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PotentialDownPower(p, potential), potential));
+		this.activateEffect();
 	}
 	
 	@Override

@@ -18,7 +18,7 @@ public class PrismaticRune extends RuneOrb {
 	
 	@Override
 	public void onStartOfTurn() {
-		this.activateEffect();
+		this.activateEndOfTurnEffect();
 		AbstractCard tmp = AbstractDungeon.returnTrulyRandomCardInCombat().makeCopy();
 		if (upgraded) tmp.upgrade();
 		AbstractDungeon.actionManager.addToBottom(
@@ -27,7 +27,6 @@ public class PrismaticRune extends RuneOrb {
 	
 	@Override
 	public void onBreak() {
-		this.activateEffect();
 		AbstractCard tmp = AbstractDungeon.returnTrulyRandomCardInCombat().makeCopy();
 		if (upgraded) tmp.upgrade();
 		AbstractDungeon.actionManager.addToTop(
@@ -36,6 +35,7 @@ public class PrismaticRune extends RuneOrb {
 		if (upgraded) tmp.upgrade();
 		AbstractDungeon.actionManager.addToTop(
 				new MakeTempCardInHandAction(tmp, false));
+		this.activateEffect();
 	}
 
 	@Override

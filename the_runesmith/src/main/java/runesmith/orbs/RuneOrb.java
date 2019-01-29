@@ -57,6 +57,15 @@ public abstract class RuneOrb extends AbstractOrb {
 //		    AbstractDungeon.effectList.add(new OrbFlareEffect(this, OrbFlareEffect.OrbFlareColor.PLASMA));    
 		AbstractDungeon.actionManager.addToTop(new VFXAction(new OrbFlareEffect(this, OrbFlareEffect.OrbFlareColor.PLASMA), speedTime));
 	}
+
+	public void activateEndOfTurnEffect(){
+		float speedTime = 0.6F / AbstractDungeon.player.orbs.size();
+		if (Settings.FAST_MODE) {
+			speedTime = 0.0F;
+		}
+//		    AbstractDungeon.effectList.add(new OrbFlareEffect(this, OrbFlareEffect.OrbFlareColor.PLASMA));
+		AbstractDungeon.actionManager.addToBottom(new VFXAction(new OrbFlareEffect(this, OrbFlareEffect.OrbFlareColor.PLASMA), speedTime));
+	}
 	
 	@Override
 	public void updateDescription() {

@@ -18,7 +18,7 @@ public class ProtectioRune extends RuneOrb {
 	
 	@Override
 	public void onEndOfTurn() {
-		this.activateEffect();
+		this.activateEndOfTurnEffect();
 		AbstractPlayer p = AbstractDungeon.player;
 		AbstractDungeon.actionManager.addToBottom(
 				  new GainBlockAction(p, p, this.potential)
@@ -27,7 +27,6 @@ public class ProtectioRune extends RuneOrb {
 	
 	@Override
 	public void onBreak() {
-		this.activateEffect();
 		AbstractPlayer p = AbstractDungeon.player;
 		AbstractDungeon.actionManager.addToTop(
 				new GainBlockAction(p, p, this.potential)
@@ -35,6 +34,7 @@ public class ProtectioRune extends RuneOrb {
 		AbstractDungeon.actionManager.addToTop(
 				new GainBlockAction(p, p, this.potential)
 		);
+		this.activateEffect();
 	}
 
 	@Override

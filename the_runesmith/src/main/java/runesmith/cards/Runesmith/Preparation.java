@@ -41,6 +41,7 @@ public class Preparation extends CustomCard{
 		);
 		this.baseMagicNumber = this.magicNumber = BASE_AMT;
 		this.exhaust = true;
+		this.timesUpgraded = upgrades;
 	}
 	
 	public AbstractCard makeCopy() {
@@ -49,24 +50,32 @@ public class Preparation extends CustomCard{
 
 	@Override
 	public void upgrade() {
-		int increaseCount = 0;
-		switch(this.timesUpgraded){
-			case 3: increaseCount = 3; break;
-			case 2: increaseCount = 2; break;
-			case 1: increaseCount = 2; break;
-			case 0: increaseCount = 1; break;
+		if(this.canUpgrade()) {
+			int increaseCount = 0;
+			switch (this.timesUpgraded) {
+				case 3:
+					increaseCount = 3;
+					break;
+				case 2:
+				case 1:
+					increaseCount = 2;
+					break;
+				case 0:
+					increaseCount = 1;
+					break;
+			}
+			upgradeMagicNumber(increaseCount);
+			this.timesUpgraded += 1;
+			this.upgraded = true;
+			this.name = (NAME + "+" + this.timesUpgraded);
+			initializeTitle();
 		}
-		upgradeMagicNumber(increaseCount);
-		this.timesUpgraded += 1;
-		this.upgraded = true;
-		this.name = (NAME + "+" + this.timesUpgraded);
-		initializeTitle();
 	}
 
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		AbstractDungeon.actionManager.addToBottom(
-				new ApplyElementsPowerAction(p,p,magicNumber,magicNumber,magicNumber));
+				new ApplyElementsPowerAction(p,p,this.baseMagicNumber,this.baseMagicNumber,this.baseMagicNumber));
 		AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, DRAW_AMT));
 	}
 	

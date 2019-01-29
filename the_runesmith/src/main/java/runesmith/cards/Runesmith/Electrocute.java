@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import basemod.abstracts.CustomCard;
-import runesmith.actions.StasisCardInDeckAction;
+import runesmith.actions.StasisCardInDrawAction;
 import runesmith.patches.AbstractCardEnum;
 
 public class Electrocute extends CustomCard {
@@ -66,7 +66,7 @@ public class Electrocute extends CustomCard {
 		AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.utility.SFXAction("ORB_LIGHTNING_EVOKE"));
 		
 		AbstractDungeon.actionManager.addToBottom(
-				new StasisCardInDeckAction(STASIS_AMT));
+				new StasisCardInDrawAction(STASIS_AMT));
 	}
 
 	public AbstractCard makeCopy() {

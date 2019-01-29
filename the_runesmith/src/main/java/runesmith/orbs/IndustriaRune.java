@@ -15,15 +15,15 @@ public class IndustriaRune extends RuneOrb {
 	
 	@Override
 	public void onStartOfTurn() {
-		this.activateEffect();
+		this.activateEndOfTurnEffect();
 		AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(this.passiveAmount));
 	}
 	
 	@Override
 	public void onBreak() {
+		AbstractDungeon.actionManager.addToTop(new GainEnergyAction(this.passiveAmount));
+		AbstractDungeon.actionManager.addToTop(new GainEnergyAction(this.passiveAmount));
 		this.activateEffect();
-		AbstractDungeon.actionManager.addToTop(new GainEnergyAction(this.passiveAmount));
-		AbstractDungeon.actionManager.addToTop(new GainEnergyAction(this.passiveAmount));
 	}
 
 	@Override

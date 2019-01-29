@@ -19,7 +19,7 @@ public class IncendiumRune extends RuneOrb {
 	
 	@Override
 	public void onEndOfTurn() {
-		this.activateEffect();
+		this.activateEndOfTurnEffect();
 		//damage all enemies
 		AbstractDungeon.actionManager.addToBottom(
 				new DamageAllEnemiesAction(
@@ -31,19 +31,19 @@ public class IncendiumRune extends RuneOrb {
 	
 	@Override
 	public void onBreak() {
+		AbstractDungeon.actionManager.addToTop(
+				new DamageAllEnemiesAction(
+						null,
+						DamageInfo.createDamageMatrix(this.potential, true),
+						DamageInfo.DamageType.THORNS,
+						AbstractGameAction.AttackEffect.FIRE));
+		AbstractDungeon.actionManager.addToTop(
+				new DamageAllEnemiesAction(
+						null,
+						DamageInfo.createDamageMatrix(this.potential, true),
+						DamageInfo.DamageType.THORNS,
+						AbstractGameAction.AttackEffect.FIRE));
 		this.activateEffect();
-		AbstractDungeon.actionManager.addToTop(
-				new DamageAllEnemiesAction(
-						null,
-						DamageInfo.createDamageMatrix(this.potential, true),
-						DamageInfo.DamageType.THORNS,
-						AbstractGameAction.AttackEffect.FIRE));
-		AbstractDungeon.actionManager.addToTop(
-				new DamageAllEnemiesAction(
-						null,
-						DamageInfo.createDamageMatrix(this.potential, true),
-						DamageInfo.DamageType.THORNS,
-						AbstractGameAction.AttackEffect.FIRE));
 	}
 
 	@Override

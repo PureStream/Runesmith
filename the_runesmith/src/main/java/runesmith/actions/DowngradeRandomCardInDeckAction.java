@@ -48,13 +48,13 @@ public class DowngradeRandomCardInDeckAction extends AbstractGameAction{
 				AbstractCard selectedCard = canDowngrade.getRandomCard(AbstractDungeon.cardRandomRng);
 				if(this.p.discardPile.group.indexOf(selectedCard)>=0) {
 					AbstractDungeon.effectList.add(new ExhaustCardEffect(selectedCard));
-					replaceCard(this.p.discardPile.group,selectedCard);
+					DowngradeCard.downgrade(this.p.discardPile.group,selectedCard);
 				}else if(this.p.drawPile.group.indexOf(selectedCard)>=0) {
 					AbstractDungeon.effectList.add(new ExhaustCardEffect(selectedCard));
-					replaceCard(this.p.drawPile.group,selectedCard);
+					DowngradeCard.downgrade(this.p.drawPile.group,selectedCard);
 				}else if(this.p.hand.group.indexOf(selectedCard)>=0) {
 					AbstractDungeon.effectList.add(new ExhaustCardEffect(selectedCard));
-					replaceCard(this.p.hand.group,selectedCard);
+					DowngradeCard.downgrade(this.p.hand.group,selectedCard);
 				}
 				canDowngrade.removeCard(selectedCard);
 			}
@@ -62,7 +62,7 @@ public class DowngradeRandomCardInDeckAction extends AbstractGameAction{
 		this.isDone=true;
 	}
 	
-	private void replaceCard(ArrayList<AbstractCard> group, AbstractCard select) {
+/*	private void replaceCard(ArrayList<AbstractCard> group, AbstractCard select) {
 		if(!((select instanceof SearingBlow)||(select instanceof FieryHammer))) {
 			int index = group.indexOf(select);
 			group.set(index, select.makeCopy());
@@ -81,6 +81,6 @@ public class DowngradeRandomCardInDeckAction extends AbstractGameAction{
 			}
 			group.set(index, tmp);
 		}
-	}
+	}*/
 	
 }

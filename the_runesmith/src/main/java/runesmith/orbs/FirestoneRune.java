@@ -48,7 +48,7 @@ public class FirestoneRune extends RuneOrb {
 		//get random target
 		//AbstractCreature m = AbstractDungeon.getMonsters().getRandomMonster(true);
 		//damage enemy
-		this.activateEffect();
+		this.activateEndOfTurnEffect();
 //		logger.info("damaging...");
 		AbstractDungeon.actionManager.addToBottom(
 		new DamageRandomEnemyAction(
@@ -62,23 +62,23 @@ public class FirestoneRune extends RuneOrb {
 	
 	@Override
 	public void onBreak() {
+		AbstractDungeon.actionManager.addToTop(
+				new DamageRandomEnemyAction(
+						new DamageInfo(AbstractDungeon.player,
+								this.potential,
+								DamageInfo.DamageType.THORNS),
+						AbstractGameAction.AttackEffect.FIRE
+				)
+		);
+		AbstractDungeon.actionManager.addToTop(
+				new DamageRandomEnemyAction(
+						new DamageInfo(AbstractDungeon.player,
+								this.potential,
+								DamageInfo.DamageType.THORNS),
+						AbstractGameAction.AttackEffect.FIRE
+				)
+		);
 		this.activateEffect();
-		AbstractDungeon.actionManager.addToTop(
-				new DamageRandomEnemyAction(
-						new DamageInfo(AbstractDungeon.player,
-								this.potential,
-								DamageInfo.DamageType.THORNS),
-						AbstractGameAction.AttackEffect.FIRE
-				)
-		);
-		AbstractDungeon.actionManager.addToTop(
-				new DamageRandomEnemyAction(
-						new DamageInfo(AbstractDungeon.player,
-								this.potential,
-								DamageInfo.DamageType.THORNS),
-						AbstractGameAction.AttackEffect.FIRE
-				)
-		);
 	}
 
 	@Override

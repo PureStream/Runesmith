@@ -56,6 +56,7 @@ public abstract class AdditionalCardDescriptions {
 	//has less compatibility with other mods that modify card desc
 	public static void modifyDescription(AbstractCard c) {
 //		logger.info("updating string");
+
 		String raw = c.rawDescription;
 		
 		raw = raw.replace(" "+ENHANCE_TEXT[0]+".", "");
@@ -82,6 +83,9 @@ public abstract class AdditionalCardDescriptions {
     public static class updateDesc {
 	        public static void Prefix(AbstractCard self)
 	        {
+/*	        	if(!EnhanceCountField.enhanceCount.get(self).equals(EnhanceCountField.lastEnhanceCount.get(self))){
+					EnhanceCountField.lastEnhanceCount.set(self,EnhanceCountField.enhanceCount.get(self));
+				}*/
 				if(EnhanceCountField.enhanceCount.get(self) > 0 || CardStasisStatus.isStasis.get(self))
 	        		AdditionalCardDescriptions.modifyDescription(self);
 	        }

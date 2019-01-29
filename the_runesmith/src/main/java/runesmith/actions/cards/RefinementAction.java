@@ -33,7 +33,7 @@ public class RefinementAction extends AbstractGameAction{
 		if(this.duration == Settings.ACTION_DUR_FAST) {
 
 			for (AbstractCard c : this.p.hand.group) {
-				if (!canEnhance(c)) {
+				if (!EnhanceCard.canEnhance(c)) {
 					this.cannotEnhance.add(c);
 				}
 			}
@@ -45,7 +45,7 @@ public class RefinementAction extends AbstractGameAction{
 			
 			if(this.p.hand.group.size() - this.cannotEnhance.size() == 1) {
 				for(AbstractCard c : this.p.hand.group) {
-					if(canEnhance(c)) {
+					if(EnhanceCard.canEnhance(c)) {
 						EnhanceCard.enhance(c,enhanceNums);
 						c.superFlash(RunesmithMod.BEIGE);
 						this.isDone = true;
@@ -87,10 +87,10 @@ public class RefinementAction extends AbstractGameAction{
 		tickDuration();
 	}
 	
-	private boolean canEnhance(AbstractCard c) {
+/*	private boolean canEnhance(AbstractCard c) {
 		if(c.type == CardType.CURSE || c.type == CardType.STATUS) return false;
 		else return true;
-	}
+	}*/
 	
 	private void returnCards() {
 		for (AbstractCard c : this.cannotEnhance) {

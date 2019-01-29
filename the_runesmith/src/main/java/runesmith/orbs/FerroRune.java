@@ -31,7 +31,6 @@ public class FerroRune extends RuneOrb {
 	
 	@Override
 	public void onBreak() {
-		this.activateEffect();
 		if (p.hasPower("Plated Armor")) {
 			int powerDiff = this.potential*2 - p.getPower("Plated Armor").amount;
 			if (powerDiff > 0) 
@@ -39,6 +38,7 @@ public class FerroRune extends RuneOrb {
 		}
 		else 
 			AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new PlatedArmorPower(p, potential*2),potential*2));
+		this.activateEffect();
 	}
 	
 	@Override

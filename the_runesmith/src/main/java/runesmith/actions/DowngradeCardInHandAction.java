@@ -26,11 +26,16 @@ public class DowngradeCardInHandAction extends AbstractGameAction{
 	private ArrayList<AbstractCard> cannotDowngrade = new ArrayList<>();
 	private boolean random = false;
 	
-	public DowngradeCardInHandAction(AbstractPlayer p, boolean random) {
+	public DowngradeCardInHandAction(AbstractPlayer p, boolean random, int amount) {
 		this.actionType = AbstractGameAction.ActionType.CARD_MANIPULATION;
 		this.p = p;
 		this.duration = Settings.ACTION_DUR_FAST;
 		this.random = random;
+		this.amount = amount;
+	}
+
+	public DowngradeCardInHandAction(AbstractPlayer p, boolean random) {
+		this(p,random,1);
 	}
 	
 	@Override
@@ -41,9 +46,14 @@ public class DowngradeCardInHandAction extends AbstractGameAction{
 		if(canDowngrade.size()>0) {
 			if(this.duration == Settings.ACTION_DUR_FAST) {
 				if(random) {
-					AbstractCard selectedCard = canDowngrade.getRandomCard(AbstractDungeon.cardRandomRng);
-					AbstractDungeon.effectList.add(new ExhaustCardEffect(selectedCard));
-					replaceCard(this.p.hand.group, selectedCard);
+					for(int i = 0; i < this.amount ; i++) {
+						if(canDowngrade.size()>0) {
+							AbstractCard selectedCard = canDowngrade.getRandomCard(AbstractDungeon.cardRandomRng);
+							canDowngrade.removeCard(selectedCard);
+							AbstractDungeon.effectList.add(new ExhaustCardEffect(selectedCard));
+							DowngradeCard.downgrade(this.p.hand.group, selectedCard);
+						}
+					}
 					this.isDone = true;
 					return;
 				}
@@ -52,27 +62,29 @@ public class DowngradeCardInHandAction extends AbstractGameAction{
 					if(!(c.upgraded||EnhanceCountField.enhanceCount.get(c) > 0||CardStasisStatus.isStasis.get(c))) cannotDowngrade.add(c);
 				}
 				
-				if(this.p.hand.group.size() - this.cannotDowngrade.size() == 1) {
+				if(this.p.hand.group.size() - this.cannotDowngrade.size() <= this.amount) {
 					for(AbstractCard c : this.p.hand.group) {
 						if(c.upgraded||EnhanceCountField.enhanceCount.get(c) > 0||CardStasisStatus.isStasis.get(c)) {
 							AbstractDungeon.effectList.add(new ExhaustCardEffect(c));
-							replaceCard(this.p.hand.group, c);
-							this.isDone = true;
-							return;
+							DowngradeCard.downgrade(this.p.hand.group, c);
 						}
 					}
+					this.isDone = true;
+					return;
 				}
 				
 				this.p.hand.group.removeAll(this.cannotDowngrade);
 	
-				if (this.p.hand.group.size() > 1) {	
-					AbstractDungeon.handCardSelectScreen.open(TEXT[0], 1, false, false, false, false);
+				if (this.p.hand.group.size() > this.amount) {
+					AbstractDungeon.handCardSelectScreen.open(TEXT[0], this.amount, false, false, false, false);
 					tickDuration();
 					return;
 				}
-				if(this.p.hand.group.size() == 1) {
-					AbstractDungeon.effectList.add(new ExhaustCardEffect(this.p.hand.getTopCard()));
-					replaceCard(this.p.hand.group, this.p.hand.getTopCard());
+				if(this.p.hand.group.size() <= this.amount) {
+					for(AbstractCard c : this.p.hand.group) {
+						AbstractDungeon.effectList.add(new ExhaustCardEffect(this.p.hand.getTopCard()));
+						DowngradeCard.downgrade(this.p.hand.group, this.p.hand.getTopCard());
+					}
 					returnCards();
 					this.isDone = true;
 				}
@@ -81,7 +93,7 @@ public class DowngradeCardInHandAction extends AbstractGameAction{
 			if(!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {
 				for(AbstractCard c : AbstractDungeon.handCardSelectScreen.selectedCards.group) {
 					AbstractDungeon.effectList.add(new ExhaustCardEffect(c));
-					//replaceCard(this.p.hand.group, c);
+					//DowngradeCard.downgrade(this.p.hand.group, c);
 					this.p.hand.addToTop(c.makeCopy());
 				}
 				
@@ -95,7 +107,8 @@ public class DowngradeCardInHandAction extends AbstractGameAction{
 		}
 		this.isDone=true;
 	}
-	
+
+	/*
 	private void replaceCard(ArrayList<AbstractCard> group, AbstractCard select) {
 		if(!((select instanceof SearingBlow)||(select instanceof FieryHammer))) {
 			int index = group.indexOf(select);
@@ -116,7 +129,7 @@ public class DowngradeCardInHandAction extends AbstractGameAction{
 			group.set(index, tmp);
 		}
 	}
-	
+	*/
 	
 	private void returnCards() {
 		for (AbstractCard c : this.cannotDowngrade) {

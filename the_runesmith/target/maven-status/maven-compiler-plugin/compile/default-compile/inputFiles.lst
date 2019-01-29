@@ -23,6 +23,7 @@ C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmit
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\OneForEveryone.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\ReplicatingBarrier.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\actions\EnhanceEntireHandAction.java
+C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\actions\RemoveRuneAndSlotAction.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\PerfectChisel.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\Strike_RS.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\actions\cards\MetallurgicalResearchAction.java
@@ -76,6 +77,7 @@ C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\orbs\Prismatic
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\LithiumIon.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\CraftReservo.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\Accelerate.java
+C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\patches\EquivalentCopyPatch.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\powers\PoweredAnvilPower.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\actions\cards\ShatteruneAction.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\powers\RunesonancePower.java
@@ -92,7 +94,6 @@ C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\relics\Nanobot
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\Repurpose.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\UnstableHammer.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\Duplicate.java
-C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\actions\StasisCardInDeckAction.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\actions\cards\FortifyAction.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\actions\DowngradeEntireDeckAction.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\ConvertIgnis.java
@@ -127,11 +128,13 @@ C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\powers\Permafr
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\MetallurgicalResearch.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\relics\UraniumAnvil.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\powers\TerraPower.java
+C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\actions\StasisCardInDrawAction.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\actions\cards\FlexTapeAction.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\actions\RuneChannelAction.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\patches\ElementsGainedCountField.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\powers\CreatorFormPower.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\powers\ReplicatingBarrierPower.java
+C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\actions\DowngradeCard.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\helpers\PotencyVariable.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\Electrocute.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\powers\SpiculumDownPower.java

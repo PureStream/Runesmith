@@ -46,7 +46,6 @@ public class ReservoRune extends RuneOrb {
 	
 	@Override
 	public void onBreak() {
-		this.activateEffect();
 		int amount = 2;
 		if(this.upgraded) {
 			amount = 4;
@@ -56,16 +55,17 @@ public class ReservoRune extends RuneOrb {
 		}
 		AbstractDungeon.actionManager.addToTop(new ReducePowerAction(p, p, "Retain Cards", 1));
 		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new ReservoPower(amount), amount));
+		this.activateEffect();
 	}
 
 	@Override
 	public void onMultiBreak() {
-		this.activateEffect();
 		int amount = 2;
 		if(this.upgraded) {
 			amount = 4;
 		}
 		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new ReservoPower(amount), amount));
+		this.activateEffect();
 	}
 	
 	@Override

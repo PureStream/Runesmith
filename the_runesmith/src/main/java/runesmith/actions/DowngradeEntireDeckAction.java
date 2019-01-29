@@ -29,24 +29,24 @@ public class DowngradeEntireDeckAction extends AbstractGameAction{
 		for(AbstractCard c : this.p.discardPile.group) {
 			if(c.upgraded||EnhanceCountField.enhanceCount.get(c) > 0||CardStasisStatus.isStasis.get(c)) {
 				AbstractDungeon.effectList.add(new ExhaustCardEffect(c));
-				replaceCard(this.p.discardPile.group, c);
+				DowngradeCard.downgrade(this.p.discardPile.group, c);
 			}
 		}
 		for(AbstractCard c : this.p.drawPile.group) {
 			if(c.upgraded||EnhanceCountField.enhanceCount.get(c) > 0||CardStasisStatus.isStasis.get(c)) {
 				AbstractDungeon.effectList.add(new ExhaustCardEffect(c));
-				replaceCard(this.p.drawPile.group, c);
+				DowngradeCard.downgrade(this.p.drawPile.group, c);
 			}
 		}
 		for(AbstractCard c : this.p.hand.group) {
 			if(c.upgraded||EnhanceCountField.enhanceCount.get(c) > 0||CardStasisStatus.isStasis.get(c)) {
 				AbstractDungeon.effectList.add(new ExhaustCardEffect(c));
-				replaceCard(this.p.hand.group, c);
+				DowngradeCard.downgrade(this.p.hand.group, c);
 			}
 		}
 		this.isDone=true;
 	}
-	
+/*
 	private void replaceCard(ArrayList<AbstractCard> group, AbstractCard select) {
 		if(!((select instanceof SearingBlow)||(select instanceof FieryHammer))) {
 			int index = group.indexOf(select);
@@ -66,6 +66,6 @@ public class DowngradeEntireDeckAction extends AbstractGameAction{
 			}
 			group.set(index, tmp);
 		}
-	}
+	}*/
 	
 }

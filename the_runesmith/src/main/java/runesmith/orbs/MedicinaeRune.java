@@ -18,10 +18,10 @@ public class MedicinaeRune extends RuneOrb {
 	
 	@Override
 	public void onBreak() {
-		this.activateEffect();
 		AbstractPlayer p = AbstractDungeon.player;
 		com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToTop(new HealAction(p, p, this.potential));
 		com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToTop(new HealAction(p, p, this.potential));
+		this.activateEffect();
 	}
 
 	@Override

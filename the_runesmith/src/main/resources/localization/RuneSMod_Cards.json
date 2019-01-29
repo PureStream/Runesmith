@@ -10,12 +10,12 @@
 	"Runesmith:CraftFirestone": {
 		"NAME": "Craft Firestone",
 		"DESCRIPTION": "1 Ignis: Craft a Firestone rune with !Pot! Potency.",
-		"EXTENDED_DESCRIPTION":[" NL (Can Craft.)"]
+		"EXTENDED_DESCRIPTION":[""]
 	},
 	"Runesmith:CraftProtectio": {
 		"NAME": "Craft Protectio",
 		"DESCRIPTION": "2 Terra: Craft a Protectio rune with !Pot! Potency.",
-		"EXTENDED_DESCRIPTION":[" NL (Can Craft.)"]
+		"EXTENDED_DESCRIPTION":[""]
 	},
 	"Runesmith:Fortify": {
 		"NAME": "Fortify",
@@ -49,12 +49,12 @@
 	"Runesmith:CraftIncendium": {
 		"NAME": "Craft Incendium",
 		"DESCRIPTION": "3 Ignis: Craft an Incendium rune with !Pot! Potency.",
-		"EXTENDED_DESCRIPTION":[" NL (Can Craft.)"]
+		"EXTENDED_DESCRIPTION":[""]
 	},
 	"Runesmith:HammerSlam": {
 		"NAME": "Hammer Slam",
 		"DESCRIPTION": "Deal !D! damage. NL Draw !M! card for each unique Rune you have.",
-		"UPGRADE_DESCRIPTION": "Deal !D! damage. NL Draw !M! card for each unique Rune you have plus one."
+		"UPGRADE_DESCRIPTION": "Deal !D! damage. NL Draw !M! card. NL Draw !M! card for each unique Rune you have."
 	},
 	"Runesmith:ElementalConversion": {
 		"NAME": "Elementary Particles",
@@ -124,7 +124,7 @@
 		"NAME": "Craft Reservo",
 		"DESCRIPTION": "2 Aqua: Craft a Reservo rune. NL Exhaust.",
 		"UPGRADE_DESCRIPTION": "2 Aqua: Craft a Reservo+ rune. NL Exhaust.",
-		"EXTENDED_DESCRIPTION":[" NL (Can Craft.)"]
+		"EXTENDED_DESCRIPTION":[""]
 	},
 	"Runesmith:LithiumIon": {
 		"NAME": "Lithium Ion",
@@ -142,18 +142,18 @@
 	"Runesmith:CraftSpiculum": {
 		"NAME": "Craft Spiculum",
 		"DESCRIPTION": "1 Ignis 1 Aqua: Craft a Spiculum rune with !Pot! Potency. NL Exhaust.",
-		"EXTENDED_DESCRIPTION":[" NL (Can Craft.)"]
+		"EXTENDED_DESCRIPTION":[""]
 	},
 	"Runesmith:CraftPotentia": {
 		"NAME": "Craft Potentia",
 		"DESCRIPTION": "2 Ignis 2 Terra 2 Aqua: Remove your oldest rune and Craft a Potentia rune with !Pot! Potency.",
-		"EXTENDED_DESCRIPTION":[" NL (Can Craft.)"]
+		"EXTENDED_DESCRIPTION":[""]
 	},
 	"Runesmith:CraftFerro": {
 		"NAME": "Craft Ferro",
 		"DESCRIPTION": "2 Terra 1 Aqua: Craft a Ferro rune with !Pot! Potency. NL Exhaust.",
 		"UPGRADE_DESCRIPTION": "2 Terra 1 Aqua: Craft a Ferro rune with !Pot! Potency.",
-		"EXTENDED_DESCRIPTION":[" NL (Can Craft.)"]
+		"EXTENDED_DESCRIPTION":[""]
 	},
 	"Runesmith:HammerTime": {
 		"NAME": "Hammer Time",
@@ -172,7 +172,7 @@
 		"NAME": "Chaotic Blast",
 		"DESCRIPTION": "Deal !D! damage to ALL enemies. !M! Ignis !M! Terra !M! Aqua: Craft a random rune.",
 		"UPGRADE_DESCRIPTION" : "Deal !D! damage to ALL enemies. !M! Ignis !M! Terra !M! Aqua: Craft two random runes.",
-		"EXTENDED_DESCRIPTION":[" NL (Can Craft.)"]
+		"EXTENDED_DESCRIPTION":[""]
 	},
 	"Runesmith:Shatterune": {
 		"NAME": "Shatterune",
@@ -202,17 +202,17 @@
 		"NAME": "Construct Bifrost",
 		"DESCRIPTION": "1 Ignis 1 Terra 1 Aqua: Craft a Prismatic rune.",
 		"UPGRADE_DESCRIPTION": "1 Ignis 1 Terra 1 Aqua: Craft a Prismatic+ rune.",
-		"EXTENDED_DESCRIPTION":[" NL (Can Craft.)"]
+		"EXTENDED_DESCRIPTION":[""]
 	},
 	"Runesmith:CraftIndustria": {
 		"NAME": "Craft Industria",
 		"DESCRIPTION": "!M! Aqua: Craft an Industria rune.",
-		"EXTENDED_DESCRIPTION":[" NL (Can Craft.)"]
+		"EXTENDED_DESCRIPTION":[""]
 	},
 	"Runesmith:CraftMedicinae": {
 		"NAME": "Craft Medicinae",
 		"DESCRIPTION": "5 Terra: Craft a Medicinae rune with !Pot! Potency. NL Exhaust.",
-		"EXTENDED_DESCRIPTION":[" NL (Can Craft.)"]
+		"EXTENDED_DESCRIPTION":[""]
 	},
 	"Runesmith:LastStand": {
 		"NAME": "Last Stand",
@@ -267,7 +267,7 @@
 	"Runesmith:CraftMagma": {
 		"NAME": "Craft Magma",
 		"DESCRIPTION": "2 Ignis 1 Terra: Craft a Magma rune with !Pot! Potency.",
-		"EXTENDED_DESCRIPTION":[" NL (Can Craft.)"]
+		"EXTENDED_DESCRIPTION":[""]
 	},
 	"Runesmith:Rearm": {
 		"NAME": "Rearm",
@@ -362,7 +362,7 @@
 	"Runesmith:Firewall": {
 		"NAME": "Firewall",
 		"DESCRIPTION": "Gain !B! Block. NL 3 Ignis : Craft 2 Firestone runes with !Pot! Potency.",
-		"EXTENDED_DESCRIPTION":[" NL (Can Craft.)"]	
+		"EXTENDED_DESCRIPTION":[""]	
 	},
 	"Runesmith:Discharge": {
 		"NAME": "Discharge",

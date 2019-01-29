@@ -62,10 +62,10 @@ public class Overpower extends CustomCard{
 			);
 		
 		AbstractDungeon.actionManager.addToBottom(
-				new DowngradeCardInHandAction(p,true)
+				new DowngradeCardInHandAction(p,true, 2)
 		);
-		AbstractDungeon.actionManager.addToBottom(
-				new DowngradeCardInHandAction(p,true)
-		);
+//		AbstractDungeon.actionManager.addToBottom(
+//				new DowngradeCardInHandAction(p,true)
+//		);
 	}
 }
