@@ -41,5 +41,19 @@
 		"DESCRIPTIONS": [
 			"One time each combat, if your health drops below 15%, add Last Stand to the top of your draw pile."
 		]
+	},
+	"Runesmith:AutoHammer": {
+		"NAME": "AutoHammer",
+		"FLAVOR": "An automatic hammer which never stops hammering.",
+		"DESCRIPTIONS": [
+			"Every time you play #b3 skills in #b1 turn, #yEnhance a random card in your hand."
+		]
+	},
+	"Runesmith:EmergencyProvisions": {
+		"NAME": "Emergency Provisions",
+		"FLAVOR": "A self-contained, individual field ration in lightweight packaging.",
+		"DESCRIPTIONS": [
+			"Every time you play a Craft card, gain #b1 of each Element."
+		]
 	}
 }
