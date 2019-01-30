@@ -21,8 +21,8 @@ public class ChaoticBlast extends AbstractRunicCard {
 	public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
 	public static final String IMG_PATH = "images/cards/ChaoticBlast.png"; //<-------------- need some img
 	private static final int COST = 2;
-	private static final int ATTACK_DMG = 10;
-	private static final int UPGRADE_PLUS_DMG = 2;
+	private static final int ATTACK_DMG = 12;
+	private static final int UPGRADE_PLUS_DMG = 3;
 	private static final int ELEMENT_AMT = 1;
 	private static final int ELEMENT_UPG_AMT = 1;
 
@@ -47,65 +47,28 @@ public class ChaoticBlast extends AbstractRunicCard {
 		AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.utility.SFXAction("ATTACK_HEAVY"));
 		AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new com.megacrit.cardcrawl.vfx.combat.MindblastEffect(p.dialogX, p.dialogY, p.flipHorizontal), 0.1F));
 		AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect.NONE));
-//		AbstractDungeon.actionManager.addToBottom(
-//			new DamageAction(
-//				m,
-//				new DamageInfo(p, this.damage, this.damageTypeForTurn),
-//				AbstractGameAction.AttackEffect.BLUNT_HEAVY
-//			)
-//		);
+
+		int playerPot = 0;
+		if (p.hasPower("Runesmith:PotentialPower"))
+			playerPot = p.getPower("Runesmith:PotentialPower").amount;
+
 		if(!this.upgraded) {
+			if (checkElements(this.magicNumber,this.magicNumber,this.magicNumber))
+				AbstractDungeon.actionManager.addToBottom(new RuneChannelAction(RuneOrb.getRandomRune(true,playerPot)));
+		}
+		else {
 			if (checkElements(this.magicNumber,this.magicNumber,this.magicNumber)) {
-				AbstractDungeon.actionManager.addToBottom(
-						new RuneChannelAction(
-								RuneOrb.getRandomRune(true,(p.hasPower("Runesmith:PotentialPower")) ? p.getPower("Runesmith:PotentialPower").amount : 0)));
-			}
-		}else {
-			if (checkElements(this.magicNumber,this.magicNumber,this.magicNumber)) {
-				AbstractDungeon.actionManager.addToBottom(
-						new RuneChannelAction(
-								RuneOrb.getRandomRune(true,(p.hasPower("Runesmith:PotentialPower")) ? p.getPower("Runesmith:PotentialPower").amount : 0)));
-				AbstractDungeon.actionManager.addToBottom(
-						new RuneChannelAction(
-								RuneOrb.getRandomRune(true,(p.hasPower("Runesmith:PotentialPower")) ? p.getPower("Runesmith:PotentialPower").amount : 0)));
+				AbstractDungeon.actionManager.addToBottom(new RuneChannelAction(RuneOrb.getRandomRune(true,playerPot)));
+				AbstractDungeon.actionManager.addToBottom(new RuneChannelAction(RuneOrb.getRandomRune(true,playerPot)));
 			}
 		}
+
 	}
 
 	public AbstractCard makeCopy() {
 		return new ChaoticBlast();
 	}
 
-	@Override
-	public void applyPowers() {
-		super.applyPowers();
-		if(checkElements(this.magicNumber,this.magicNumber,this.magicNumber,true)) {
-			if(!this.upgraded) {
-				this.rawDescription = (DESCRIPTION + EXTENDED_DESCRIPTION[0]);
-			}else {
-				this.rawDescription = (UPGRADE_DESCRIPTION + EXTENDED_DESCRIPTION[0]);
-			}
-		}else {
-			if(!this.upgraded) {
-				this.rawDescription = (DESCRIPTION);
-			}else {
-				this.rawDescription = (UPGRADE_DESCRIPTION);
-			}
-		}
-		initializeDescription();
-	}
-	
-	@Override
-	public void onMoveToDiscard(){
-		super.onMoveToDiscard();
-		if(!this.upgraded) {
-			this.rawDescription = DESCRIPTION;
-		}else {
-			this.rawDescription = UPGRADE_DESCRIPTION;
-		}
-		initializeDescription();
-	}
-	
 	public void upgrade() {
 		if (!this.upgraded) {
 		  upgradeName();
