@@ -34,7 +34,7 @@ public class Attraction extends CustomCard {
 			AbstractCard.CardRarity.UNCOMMON,
 			AbstractCard.CardTarget.SELF
 		);
-		this.exhaust = true;
+//		this.exhaust = true;
 	}
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {

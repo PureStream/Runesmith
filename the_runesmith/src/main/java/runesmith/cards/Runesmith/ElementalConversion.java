@@ -52,10 +52,12 @@ public class ElementalConversion extends CustomCard {
         if (!upgraded) {
             upgradeName();
             upgradeMagicNumber(DRAW_AMT);
+            this.rawDescription = UPGRADE_DESCRIPTION;
 //            for (int i=0; i<3; ++i) {
 //                modal.getCard(i).upgrade();
 //            }
 //            this.rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
         //initializeDescription();
     }

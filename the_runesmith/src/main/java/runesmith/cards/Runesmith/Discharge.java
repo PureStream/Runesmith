@@ -30,9 +30,9 @@ public class Discharge extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String IMG_PATH = "images/cards/Discharge.png"; //need some img
-	private static final int COST = 2;
-	private static final int ATTACK_DMG = 15;
-	private static final int UPGRADE_PLUS_DMG = 5;
+	private static final int COST = 1;
+	private static final int ATTACK_DMG = 12;
+	private static final int UPGRADE_PLUS_DMG = 4;
 	private static final int BLOCK_AMT = 12;
 	private static final int UPGRADE_BLOCK_AMT = 4;
 

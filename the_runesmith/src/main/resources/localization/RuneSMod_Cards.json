@@ -157,8 +157,8 @@
 	},
 	"Runesmith:HammerTime": {
 		"NAME": "Hammer Time",
-		"DESCRIPTION": "Enhance ALL of your cards containing \"Hammer\". Deal !D! damage.",
-		"UPGRADE_DESCRIPTION": "Enhance ALL of your cards containing \"Hammer\" twice. Deal !D! damage."
+		"DESCRIPTION": " Deal !D! damage. NL Enhance ALL of your cards containing \"Hammer\".",
+		"UPGRADE_DESCRIPTION": "Deal !D! damage. NL Enhance ALL of your cards containing \"Hammer\" twice."
 	},
 	"Runesmith:MakeshiftArmor": {
 		"NAME": "Makeshift Armor",
@@ -370,7 +370,7 @@
 	},
 	"Runesmith:Attraction": {
 		"NAME": "Attraction",
-		"DESCRIPTION": "Draw and Discard non-Craft cards until a Craft card is drawn or the draw pile is empty. NL Exhaust."
+		"DESCRIPTION": "Draw and Discard non-Craft cards until a Craft card is drawn or the draw pile is empty."
 	},
 	"Runesmith:ArcReactor": {
 		"NAME": "Arc Reactor",
