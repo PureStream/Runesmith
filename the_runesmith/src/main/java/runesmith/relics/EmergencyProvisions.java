@@ -31,8 +31,13 @@ public class EmergencyProvisions extends CustomRelic {
         if (card.hasTag(CRAFT)) {
             AbstractPlayer p = AbstractDungeon.player;
             flash();
-            AbstractDungeon.actionManager.addToBottom(
-                    new ApplyElementsPowerAction(p,p,ELEMENT_AMT,ELEMENT_AMT,ELEMENT_AMT));
+            int rng = AbstractDungeon.cardRng.random(0, 2);
+            if (rng == 0)
+                AbstractDungeon.actionManager.addToBottom(new ApplyElementsPowerAction(p,p,ELEMENT_AMT,0,0));
+            else if (rng == 1)
+                AbstractDungeon.actionManager.addToBottom(new ApplyElementsPowerAction(p,p,0,ELEMENT_AMT,0));
+            else
+                AbstractDungeon.actionManager.addToBottom(new ApplyElementsPowerAction(p,p,0,0,ELEMENT_AMT));
             AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(p, this));
         }
     }
