@@ -46,24 +46,6 @@ public class Firewall extends AbstractRunicCard {
 		this.basePotency = this.potency = POTENCY;
 	}
 	
-	@Override
-	public void applyPowers() {
-		super.applyPowers();
-		if(checkElements(IGNIS_AMT,TERRA_AMT,0,true)) {
-			this.rawDescription = (DESCRIPTION + EXTENDED_DESCRIPTION[0]);
-		}else {
-			this.rawDescription = (DESCRIPTION);
-		}
-		initializeDescription();
-	}
-	
-	@Override
-	public void onMoveToDiscard(){
-		super.onMoveToDiscard();
-		this.rawDescription = DESCRIPTION;
-		initializeDescription();
-	}
-	
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new FlameBarrierEffect(p.hb.cX, p.hb.cY), 0.5F));
 		AbstractDungeon.actionManager.addToBottom(
