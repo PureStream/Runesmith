@@ -24,8 +24,8 @@ public class NanitesCloud extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String IMG_PATH = "images/cards/NanitesCloud.png"; //<-------------- need some img
 	private static final int COST = 2;
-	private static final int STRENGTH_DOWN = 12;
-	private static final int UPGRADE_STRENGTH_DOWN = 4;
+	private static final int STRENGTH_DOWN = 13;
+	private static final int UPGRADE_STRENGTH_DOWN = 5;
 
 	public NanitesCloud() {
 		super(

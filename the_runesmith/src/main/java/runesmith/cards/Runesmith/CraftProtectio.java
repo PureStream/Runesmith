@@ -21,7 +21,7 @@ public class CraftProtectio extends AbstractRunicCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
-	private static final int COST = 1;
+	private static final int COST = 0;
 	private static final int POTENCY = 4;
 	private static final int UPGRADE_POTENCY = 2;
 	private static final int TERRA_AMT = 2;

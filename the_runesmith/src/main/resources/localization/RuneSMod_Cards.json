@@ -195,8 +195,8 @@
 	},
 	"Runesmith:Duplicate": {
 		"NAME": "Duplicate",
-		"DESCRIPTION": "Create a copy of the next rune you craft this turn.",
-		"UPGRADE_DESCRIPTION": "Create a copy of the next !M! runes you craft this turn."
+		"DESCRIPTION": "Create a copy of the next rune you Craft this turn.",
+		"UPGRADE_DESCRIPTION": "Create a copy of the next !M! runes you Craft this turn."
 	},
 	"Runesmith:ConstructBifrost": {
 		"NAME": "Construct Bifrost",
@@ -348,7 +348,7 @@
 	},
 	"Runesmith:NanitesCloud": {
 		"NAME": "Nanites Cloud",
-		"DESCRIPTION": "ALL characters loses !M! strength this turn. Exhaust."
+		"DESCRIPTION": "ALL characters lose !M! Strength this turn. NL Exhaust."
 	},
 	"Runesmith:Overpower": {
 		"NAME": "Overpower",
