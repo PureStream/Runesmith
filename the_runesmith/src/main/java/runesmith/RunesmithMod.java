@@ -410,8 +410,10 @@ public class RunesmithMod implements PostExhaustSubscriber,
 		relicsToAddOnlyThisClass.add(new BrokenRuby());
 		relicsToAddOnlyThisClass.add(new MiniCore());
 		relicsToAddOnlyThisClass.add(new Locket());
+		relicsToAddOnlyThisClass.add(new EmergencyProvisions());
 
 		relicsToAddAllClass.add(new Nanobots());
+		relicsToAddAllClass.add(new AutoHammer());
 		relicsToAddAllClass.add(new UraniumAnvil());
 	}
 

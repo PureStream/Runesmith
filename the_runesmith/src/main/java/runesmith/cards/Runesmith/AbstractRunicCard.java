@@ -100,17 +100,17 @@ public abstract class AbstractRunicCard extends CustomCard {
 				if (pIgnis > 0 && ignis > 0) {
 					p.getPower("Runesmith:IgnisPower").reducePower(ignis);
 					if (p.getPower("Runesmith:IgnisPower").amount == 0)
-						AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, "Runesmith:IgnisPower"));
+						AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(p, p, "Runesmith:IgnisPower"));
 				}
 				if (pTerra > 0 && terra > 0) {
 					p.getPower("Runesmith:TerraPower").reducePower(terra);
 					if (p.getPower("Runesmith:TerraPower").amount == 0)
-						AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, "Runesmith:TerraPower"));
+						AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(p, p, "Runesmith:TerraPower"));
 				}
 				if (pAqua > 0 && aqua > 0) {
 					p.getPower("Runesmith:AquaPower").reducePower(aqua);
 					if (p.getPower("Runesmith:AquaPower").amount == 0)
-						AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, "Runesmith:AquaPower"));
+						AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(p, p, "Runesmith:AquaPower"));
 				}
 			}
 			if(checkOnly) this.isCraftable = true;

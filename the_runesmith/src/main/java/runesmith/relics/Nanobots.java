@@ -1,6 +1,7 @@
 package runesmith.relics;
 
 import basemod.abstracts.CustomRelic;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
@@ -23,6 +24,7 @@ public class Nanobots extends CustomRelic {
 	public void atBattleStart() {
 		flash();
 		AbstractDungeon.actionManager.addToBottom(new NanobotsAction());
+		AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, this));
 	}
 
 	public AbstractRelic makeCopy() {

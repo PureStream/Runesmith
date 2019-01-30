@@ -32,8 +32,10 @@ public class BrokenRuby extends CustomRelic {
 	public void atBattleStart() {
 		//this.counter = 0;
 		AbstractPlayer p = AbstractDungeon.player;
+		flash();
 		AbstractDungeon.actionManager.addToTop(
 				new ApplyElementsPowerAction(p,p,IGNIS_AMT,0,0));
+		AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(p, this));
 	}
    
 	public void onUseCard(AbstractCard card, UseCardAction action){
@@ -58,5 +60,5 @@ public class BrokenRuby extends CustomRelic {
 	public AbstractRelic makeCopy() {
 		return new BrokenRuby();
 	}
-	
+
 }
