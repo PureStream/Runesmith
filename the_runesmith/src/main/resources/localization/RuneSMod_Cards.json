@@ -151,7 +151,7 @@
 	},
 	"Runesmith:CraftFerro": {
 		"NAME": "Craft Ferro",
-		"DESCRIPTION": "2 Terra 1 Aqua: Craft a Ferro rune with !Pot! Potency. NL Exhaust.",
+		"DESCRIPTION": "2 Terra 1 Aqua: Craft a Ferro rune with !Pot! Potency.",
 		"UPGRADE_DESCRIPTION": "2 Terra 1 Aqua: Craft a Ferro rune with !Pot! Potency.",
 		"EXTENDED_DESCRIPTION":[""]
 	},

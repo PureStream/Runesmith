@@ -157,8 +157,8 @@
 	},
 	"Runesmith:HammerTime": {
 		"NAME": "Hammer Time",
-		"DESCRIPTION": "Enhance ALL of your cards containing \"Hammer\". Deal !D! damage.",
-		"UPGRADE_DESCRIPTION": "Enhance ALL of your cards containing \"Hammer\" twice. Deal !D! damage."
+		"DESCRIPTION": " Deal !D! damage. NL Enhance ALL of your cards containing \"Hammer\".",
+		"UPGRADE_DESCRIPTION": "Deal !D! damage. NL Enhance ALL of your cards containing \"Hammer\" twice."
 	},
 	"Runesmith:MakeshiftArmor": {
 		"NAME": "Makeshift Armor",
@@ -278,13 +278,11 @@
 		"DESCRIPTION": "Elements are no longer consumed for Crafting.",
 		"UPGRADE_DESCRIPTION": "Innate. NL Elements are no longer consumed for Crafting."
 	},
-	"Runesmith:ForcesOfNature": {
-		"NAME": "Forces Of Nature",
-		"DESCRIPTION": "Deal damage equals to the number of Elements gained this combat to ALL enemies.",
-		"UPGRADE_DESCRIPTION": "Deal damage equals to double the number of Elements gained this combat to ALL enemies.",
+	"Runesmith:WhiteBalance": {
+		"NAME": "WhiteBalance",
+		"DESCRIPTION": "Deal damage equals to !M! times the number of Elements gained this turn to ALL enemies.",
 		"EXTENDED_DESCRIPTION":[
-			" NL (Deals !D! damage.)",
-     		""
+			" NL (Deals !D! damage.)"
 		]
 	},
 	"Runesmith:GrandSlam": {
@@ -370,7 +368,7 @@
 	},
 	"Runesmith:Attraction": {
 		"NAME": "Attraction",
-		"DESCRIPTION": "Draw and Discard non-Craft cards until a Craft card is drawn or the draw pile is empty. NL Exhaust."
+		"DESCRIPTION": "Draw and Discard non-Craft cards until a Craft card is drawn or the draw pile is empty."
 	},
 	"Runesmith:ArcReactor": {
 		"NAME": "Arc Reactor",

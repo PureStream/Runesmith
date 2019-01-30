@@ -24,7 +24,7 @@ public class CraftFerro extends AbstractRunicCard {
 	public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
 	private static final int COST = 0;
 	private static final int POTENCY = 5;
-	private static final int UPGRADE_PLUS_POT = 1;
+	private static final int UPGRADE_PLUS_POT = 2;
 	private static final int TERRA_AMT = 2;
 	private static final int AQUA_AMT = 1;
 	
@@ -43,7 +43,7 @@ public class CraftFerro extends AbstractRunicCard {
 		
 		this.potency = this.basePotency = POTENCY;
 		this.tags.add(CRAFT);
-		this.exhaust = true;
+//		this.exhaust = true;
 
 	}
 	
@@ -94,7 +94,6 @@ public class CraftFerro extends AbstractRunicCard {
 		  upgradeName();
 		  this.rawDescription = UPGRADE_DESCRIPTION;
 		  upgradePotency(UPGRADE_PLUS_POT);
-		  this.exhaust = false;
 		  initializeDescription();
 		}
 	}

@@ -23,8 +23,8 @@ public class Firewall extends AbstractRunicCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
 	private static final int COST = 2;
-	private static final int BLOCK_AMT = 11;
-	private static final int UPGRADE_PLUS_BLOCK = 3;
+	private static final int BLOCK_AMT = 12;
+	private static final int UPGRADE_PLUS_BLOCK = 4;
 	private static final int IGNIS_AMT = 3;
 	private static final int TERRA_AMT = 0;
 	private static final int POTENCY = 3;
@@ -45,7 +45,13 @@ public class Firewall extends AbstractRunicCard {
 		this.baseBlock = this.block = BLOCK_AMT;
 		this.basePotency = this.potency = POTENCY;
 	}
-	
+
+	@Override
+	public void applyPowers() {
+		super.applyPowers();
+		checkElements(IGNIS_AMT,TERRA_AMT,0, true);
+	}
+
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new FlameBarrierEffect(p.hb.cX, p.hb.cY), 0.5F));
 		AbstractDungeon.actionManager.addToBottom(
