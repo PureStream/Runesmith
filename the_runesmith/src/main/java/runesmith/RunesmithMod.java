@@ -240,7 +240,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
 	@Override
 	public boolean receivePreMonsterTurn(AbstractMonster abstractMonster) {
 		ElementsGainedCountField.elementsCount.set(AbstractDungeon.player, 0);
-		return false;
+		return true;
 	}
 
 	class Keywords {
