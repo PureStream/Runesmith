@@ -47,24 +47,6 @@ public class CraftPotentia extends AbstractRunicCard {
 
 	}
 	
-	@Override
-	public void applyPowers() {
-		super.applyPowers();
-		if(checkElements(ELEMENT_AMT,ELEMENT_AMT,ELEMENT_AMT,true)) {
-			this.rawDescription = (DESCRIPTION + EXTENDED_DESCRIPTION[0]);
-		}else {
-			this.rawDescription = (DESCRIPTION);
-		}
-		initializeDescription();
-	}
-	
-	@Override
-	public void onMoveToDiscard(){
-		super.onMoveToDiscard();
-		this.rawDescription = DESCRIPTION;
-		initializeDescription();
-	}
-	
 	public void use(AbstractPlayer p, AbstractMonster m) {
 
 		if (checkElements(ELEMENT_AMT,ELEMENT_AMT,ELEMENT_AMT)) {

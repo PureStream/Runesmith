@@ -43,24 +43,6 @@ public class CraftFirestone extends AbstractRunicCard {
 
 	}
 	
-	@Override
-	public void applyPowers() {
-		super.applyPowers();
-		if(checkElements(IGNIS_AMT,0,0,true)) {
-			this.rawDescription = (DESCRIPTION + EXTENDED_DESCRIPTION[0]);
-		}else {
-			this.rawDescription = (DESCRIPTION);
-		}
-		initializeDescription();
-	}
-	
-	@Override
-	public void onMoveToDiscard(){
-		super.onMoveToDiscard();
-		this.rawDescription = DESCRIPTION;
-		initializeDescription();
-	}
-	
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		if (checkElements(IGNIS_AMT,0,0)) {
 			AbstractDungeon.actionManager.addToBottom(
