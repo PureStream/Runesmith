@@ -26,8 +26,8 @@ public class PerfectChisel extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String IMG_PATH = "images/cards/PerfectChisel.png"; //<-------------- need some img
 	private static final int COST = 1;
-	private static final int ATTACK_DMG = 4;
-	private static final int UPGRADE_PLUS_DMG = 2;
+	private static final int ATTACK_DMG = 7;
+	private static final int UPGRADE_PLUS_DMG = 3;
 	private static final int ELEMENT_AMT = 1;
 	private static final int POT_AMT = 1;
 	private static final int UPG_POT_AMT = 1;

@@ -23,9 +23,9 @@ public class Electrocute extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String IMG_PATH = "images/cards/Electrocute.png"; //<-------------- need some img
 	private static final int COST = 1;
-	private static final int ATTACK_DMG = 10;
+	private static final int ATTACK_DMG = 11;
 	private static final int UPGRADE_PLUS_DMG = 3;
-	private static final int SELF_DMG_AMT = 4;
+	private static final int SELF_DMG_AMT = 3;
 	private static final int UPG_SELF_DMG_AMT = -1;
 	private static final int STASIS_AMT = 1;
 

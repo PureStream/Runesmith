@@ -19,7 +19,7 @@ public class DuctTape extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
 	public static final String IMG_PATH = "images/cards/DuctTape.png"; //<-------------- need some img
-	private static final int COST = 0;
+	private static final int COST = 1;
 	private static final int POWER_AMT = 1;
 	private static final int UPGRADE_POWER_AMT = 1;
 
