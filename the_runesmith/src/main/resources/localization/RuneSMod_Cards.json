@@ -278,13 +278,11 @@
 		"DESCRIPTION": "Elements are no longer consumed for Crafting.",
 		"UPGRADE_DESCRIPTION": "Innate. NL Elements are no longer consumed for Crafting."
 	},
-	"Runesmith:ForcesOfNature": {
-		"NAME": "Forces Of Nature",
-		"DESCRIPTION": "Deal damage equals to the number of Elements gained this combat to ALL enemies.",
-		"UPGRADE_DESCRIPTION": "Deal damage equals to double the number of Elements gained this combat to ALL enemies.",
+	"Runesmith:WhiteBalance": {
+		"NAME": "WhiteBalance",
+		"DESCRIPTION": "Deal damage equals to !M! times the number of Elements gained this turn to ALL enemies.",
 		"EXTENDED_DESCRIPTION":[
-			" NL (Deals !D! damage.)",
-     		""
+			" NL (Deals !D! damage.)"
 		]
 	},
 	"Runesmith:GrandSlam": {

@@ -1,12 +1,12 @@
 package runesmith;
 
-import static runesmith.patches.AbstractCardEnum.RUNESMITH_BEIGE;
-
+import basemod.BaseMod;
+import basemod.ReflectionHacks;
+import basemod.abstracts.CustomRelic;
 import basemod.helpers.RelicType;
+import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
-
-import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.audio.Sfx;
@@ -15,22 +15,13 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
-import com.megacrit.cardcrawl.localization.CardStrings;
-import com.megacrit.cardcrawl.localization.EventStrings;
-import com.megacrit.cardcrawl.localization.Keyword;
-import com.megacrit.cardcrawl.localization.OrbStrings;
-import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.megacrit.cardcrawl.localization.RelicStrings;
-import com.megacrit.cardcrawl.localization.UIStrings;
+import com.megacrit.cardcrawl.localization.*;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import basemod.BaseMod;
-import basemod.ReflectionHacks;
-import basemod.abstracts.CustomRelic;
-import basemod.interfaces.EditCharactersSubscriber;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import runesmith.cards.Runesmith.*;
 import runesmith.character.player.RunesmithCharacter;
-import runesmith.helpers.AdditionalCardDescriptions;
 import runesmith.helpers.PotencyVariable;
 import runesmith.patches.CardStasisStatus;
 import runesmith.patches.ElementsGainedCountField;
@@ -43,37 +34,24 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
-import basemod.interfaces.EditCardsSubscriber;
-import basemod.interfaces.EditKeywordsSubscriber;
-import basemod.interfaces.EditRelicsSubscriber;
-import basemod.interfaces.EditStringsSubscriber;
-import basemod.interfaces.OnCardUseSubscriber;
-import basemod.interfaces.OnPlayerLoseBlockSubscriber;
-import basemod.interfaces.OnPowersModifiedSubscriber;
-import basemod.interfaces.PostBattleSubscriber;
-import basemod.interfaces.PostDrawSubscriber;
-import basemod.interfaces.PostDungeonInitializeSubscriber;
-import basemod.interfaces.PostExhaustSubscriber;
-import basemod.interfaces.PostInitializeSubscriber;
+import static runesmith.patches.AbstractCardEnum.RUNESMITH_BEIGE;
 
 
 @SpireInitializer
 public class RunesmithMod implements PostExhaustSubscriber,
-	PostBattleSubscriber,
-	PostDungeonInitializeSubscriber,
-	EditCharactersSubscriber,
-	PostInitializeSubscriber,
-	EditRelicsSubscriber,
-	EditCardsSubscriber,
-	EditStringsSubscriber,
-	OnCardUseSubscriber,
-	EditKeywordsSubscriber,
-	OnPowersModifiedSubscriber,
-	OnPlayerLoseBlockSubscriber,
-	PostDrawSubscriber{
+		PostBattleSubscriber,
+		PostDungeonInitializeSubscriber,
+		EditCharactersSubscriber,
+		PostInitializeSubscriber,
+		EditRelicsSubscriber,
+		EditCardsSubscriber,
+		EditStringsSubscriber,
+		OnCardUseSubscriber,
+		EditKeywordsSubscriber,
+		OnPowersModifiedSubscriber,
+		OnPlayerLoseBlockSubscriber,
+		PostDrawSubscriber,
+		PreMonsterTurnSubscriber{
 	
 	public static final Logger logger = LogManager.getLogger(RunesmithMod.class.getName());
 	
@@ -258,7 +236,13 @@ public class RunesmithMod implements PostExhaustSubscriber,
 	private static String loadJson(String jsonPath) {
 		return Gdx.files.internal(jsonPath).readString(String.valueOf(StandardCharsets.UTF_8));
 	}
-	
+
+	@Override
+	public boolean receivePreMonsterTurn(AbstractMonster abstractMonster) {
+		ElementsGainedCountField.elementsCount.set(AbstractDungeon.player, 0);
+		return false;
+	}
+
 	class Keywords {
 	    Keyword[] keywords;
 	}
@@ -355,7 +339,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
 		cardsToAdd.add(new ChaoticBlast());
 		cardsToAdd.add(new MetallurgicalResearch());
 		cardsToAdd.add(new GrandSlam());
-		cardsToAdd.add(new ForcesOfNature());
+		cardsToAdd.add(new WhiteBalance());
 		cardsToAdd.add(new LastStand());
 		cardsToAdd.add(new ConstructBifrost());
 		cardsToAdd.add(new GoWithTheFlow());
@@ -430,10 +414,8 @@ public class RunesmithMod implements PostExhaustSubscriber,
 
 	@Override
 	public void receivePostBattle(AbstractRoom arg0) {
-		AbstractPlayer p = AbstractDungeon.player;
 		//Reset Elements gained count.
-		ElementsGainedCountField.elementsCount.set(p, 0);
-		
+		ElementsGainedCountField.elementsCount.set(AbstractDungeon.player, 0);
 	}
 
 	@Override
