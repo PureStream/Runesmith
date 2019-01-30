@@ -43,6 +43,12 @@ public class ChaoticBlast extends AbstractRunicCard {
 		this.baseMagicNumber = this.magicNumber = ELEMENT_AMT;
 	}
 
+	@Override
+	public void applyPowers() {
+		super.applyPowers();
+		checkElements(this.magicNumber, this.magicNumber, this.magicNumber, true);
+	}
+
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.utility.SFXAction("ATTACK_HEAVY"));
 		AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new com.megacrit.cardcrawl.vfx.combat.MindblastEffect(p.dialogX, p.dialogY, p.flipHorizontal), 0.1F));

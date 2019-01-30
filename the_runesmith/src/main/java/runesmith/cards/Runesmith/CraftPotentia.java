@@ -46,6 +46,11 @@ public class CraftPotentia extends AbstractRunicCard {
 		this.tags.add(CRAFT);
 
 	}
+
+	public void applyPowers() {
+		super.applyPowers();
+		checkElements(ELEMENT_AMT, ELEMENT_AMT, ELEMENT_AMT, true);
+	}
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {
 

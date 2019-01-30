@@ -44,6 +44,11 @@ public class CraftProtectio extends AbstractRunicCard {
 		this.tags.add(CRAFT);
 
 	}
+
+	public void applyPowers() {
+		super.applyPowers();
+		checkElements(0, TERRA_AMT, 0, true);
+	}
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		if (checkElements(0,TERRA_AMT,0)) {

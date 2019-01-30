@@ -50,32 +50,32 @@ public class CraftFerro extends AbstractRunicCard {
 	@Override
 	public void applyPowers() {
 		super.applyPowers();
-		if(checkElements(0,TERRA_AMT,AQUA_AMT,true)) {
-			if(!this.upgraded) {
-				this.rawDescription = (DESCRIPTION + EXTENDED_DESCRIPTION[0]);
-			}else {
-				this.rawDescription = (UPGRADE_DESCRIPTION + EXTENDED_DESCRIPTION[0]);
-			}
-		}else {
-			if(!this.upgraded) {
-				this.rawDescription = (DESCRIPTION);
-			}else {
-				this.rawDescription = (UPGRADE_DESCRIPTION);
-			}
-		}
-		initializeDescription();
+		checkElements(0, TERRA_AMT, AQUA_AMT, true);
+		//			if(!this.upgraded) {
+//				this.rawDescription = (DESCRIPTION + EXTENDED_DESCRIPTION[0]);
+//			}else {
+//				this.rawDescription = (UPGRADE_DESCRIPTION + EXTENDED_DESCRIPTION[0]);
+//			}
+//		else {
+//			if(!this.upgraded) {
+//				this.rawDescription = (DESCRIPTION);
+//			}else {
+//				this.rawDescription = (UPGRADE_DESCRIPTION);
+//			}
+//		}
+//		initializeDescription();
 	}
 	
-	@Override
-	public void onMoveToDiscard(){
-		super.onMoveToDiscard();
-		if(!this.upgraded) {
-			this.rawDescription = DESCRIPTION;
-		}else {
-			this.rawDescription = UPGRADE_DESCRIPTION;
-		}
-		initializeDescription();
-	}
+//	@Override
+//	public void onMoveToDiscard(){
+//		super.onMoveToDiscard();
+//		if(!this.upgraded) {
+//			this.rawDescription = DESCRIPTION;
+//		}else {
+//			this.rawDescription = UPGRADE_DESCRIPTION;
+//		}
+//		initializeDescription();
+//	}
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		if (checkElements(0,TERRA_AMT,AQUA_AMT)) {

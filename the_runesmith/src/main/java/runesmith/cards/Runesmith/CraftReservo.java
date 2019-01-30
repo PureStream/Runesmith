@@ -41,6 +41,11 @@ public class CraftReservo extends AbstractRunicCard {
 		this.exhaust = true;
 		this.baseMagicNumber = this.magicNumber = AQUA_AMT;
 	}
+
+	public void applyPowers() {
+		super.applyPowers();
+		checkElements(0,0,this.magicNumber,true);
+	}
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		if (checkElements(0,0,this.magicNumber)) {

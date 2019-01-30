@@ -44,6 +44,11 @@ public class CraftIncendium extends AbstractRunicCard {
 		
 	}
 
+	public void applyPowers() {
+		super.applyPowers();
+		checkElements(IGNIS_AMT,0,0,true);
+	}
+
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		if (checkElements(IGNIS_AMT,0,0)) {
 			AbstractDungeon.actionManager.addToBottom(

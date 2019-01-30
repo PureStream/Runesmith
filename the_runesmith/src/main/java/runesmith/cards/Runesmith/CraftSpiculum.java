@@ -43,6 +43,11 @@ public class CraftSpiculum extends AbstractRunicCard {
 		this.tags.add(CRAFT);
 		this.exhaust = true;
 	}
+
+	public void applyPowers() {
+		super.applyPowers();
+		checkElements(IGNIS_AMT, 0, AQUA_AMT, true);
+	}
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		if (checkElements(IGNIS_AMT,0,AQUA_AMT)) {

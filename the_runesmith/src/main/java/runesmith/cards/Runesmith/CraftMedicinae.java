@@ -43,6 +43,11 @@ public class CraftMedicinae extends AbstractRunicCard {
 		this.exhaust = true;
 		this.tags.add(AbstractCard.CardTags.HEALING);
 	}
+
+	public void applyPowers() {
+		super.applyPowers();
+		checkElements(0, TERRA_AMT, 0, true);
+	}
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		if (checkElements(0,TERRA_AMT,0)) {

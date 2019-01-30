@@ -39,6 +39,12 @@ public class ConstructBifrost extends AbstractRunicCard {
 		);
 		this.tags.add(CRAFT);
 	}
+
+	@Override
+	public void applyPowers() {
+		super.applyPowers();
+		checkElements(ELEMENT_AMT,ELEMENT_AMT,ELEMENT_AMT,true);
+	}
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		if (checkElements(ELEMENT_AMT,ELEMENT_AMT,ELEMENT_AMT)) {

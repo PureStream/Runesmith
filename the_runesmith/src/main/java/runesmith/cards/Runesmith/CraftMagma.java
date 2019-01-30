@@ -42,6 +42,11 @@ public class CraftMagma extends AbstractRunicCard {
 		this.potency = this.basePotency = POTENCY;
 		this.tags.add(CRAFT);
 	}
+
+	public void applyPowers() {
+		super.applyPowers();
+		checkElements(IGNIS_AMT,TERRA_AMT,0,true);
+	}
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		if (checkElements(IGNIS_AMT,TERRA_AMT,0)) {
