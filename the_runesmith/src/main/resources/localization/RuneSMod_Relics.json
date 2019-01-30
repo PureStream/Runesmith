@@ -53,7 +53,7 @@
 		"NAME": "Emergency Provisions",
 		"FLAVOR": "A self-contained, individual field ration in lightweight packaging.",
 		"DESCRIPTIONS": [
-			"Every time you play a Craft card, gain #b1 of each Element."
+			"Every time you play a Craft card, gain #b1 random Element."
 		]
 	}
 }
