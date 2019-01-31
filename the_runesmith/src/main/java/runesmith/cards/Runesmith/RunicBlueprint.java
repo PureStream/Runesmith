@@ -67,6 +67,7 @@ public class RunicBlueprint extends CustomCard {
             cZero = new Madness();
         }
         cZero.setCostForTurn(0);
+        cZero.freeToPlayOnce = true;
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(cZero));
         AbstractDungeon.actionManager.addToBottom(
 				new ApplyElementsPowerAction(p,p,0,0,AQUA_AMT));

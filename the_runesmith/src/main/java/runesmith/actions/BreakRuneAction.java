@@ -25,9 +25,9 @@ public class BreakRuneAction extends AbstractGameAction{
 	public void update() {
 		if (this.duration == Settings.ACTION_DUR_FAST) {
 
-		      orb.onBreak();
+			AbstractDungeon.actionManager.addToTop(new RemoveRuneAndSlotAction(orb));
 
-		      AbstractDungeon.actionManager.addToBottom(new RemoveRuneAndSlotAction(orb));
+			orb.onBreak();
 //		      AbstractPlayer p = AbstractDungeon.player;
 
 		      // Rotate up the remaining orbs

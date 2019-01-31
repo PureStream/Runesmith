@@ -1,5 +1,6 @@
 package runesmith.cards.Runesmith;
 
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -34,29 +35,45 @@ public abstract class AbstractRunicCard extends CustomCard {
 	
 	public boolean isCraftable = false;
 	public boolean renderCraftable = true;
+
+//	public boolean freeElementOnce = false;
 	
 	private Logger logger = LogManager.getLogger(RunesmithMod.class.getName());
 	
 	private Color renderColor = Color.WHITE.cpy();
 	private static Texture craftableTab = ImageMaster.loadImage("images/cardui/512/craftable_tag.png");
 	
-	public void triggerWhenDrawn() {
-		this.upgradePotency(0);
-	}
+//	public void triggerWhenDrawn() {
+//		this.upgradePotency(0);
+//	}
 	
 	@Override
 	public void applyPowers() {
-		this.upgradePotency(0);
+		this.applyPowersToPotency();
 		super.applyPowers();
 		
+	}
+
+	private void applyPowersToPotency(){
+		this.isPotencyModified = false;
+		this.potency = this.basePotency + getPotentialPowerValue();
+		if (this.potency < 0) this.potency = 0;
+		this.potency = this.potency + MathUtils.floor(this.potency * (0.5F * EnhanceCountField.enhanceCount.get(this)));
+		if(this.potency != this.basePotency) this.isPotencyModified = true;
 	}
 	
 	public void upgradePotency(int amount) {
 		this.basePotency += amount; 
-		this.potency = this.basePotency + getPotentialPowerValue();
-		if (this.potency < 0) this.potency = 0;
-		this.potency = this.potency + MathUtils.floor(this.potency * (0.5F * EnhanceCountField.enhanceCount.get(this)));
-		if(this.potency > this.basePotency || amount>0 || this.potency < this.basePotency) isPotencyModified = true;
+		this.potencyUpgraded = true;
+	}
+
+	@Override
+	public void displayUpgrades(){
+		super.displayUpgrades();
+		if (this.potencyUpgraded) {
+			this.potency = this.basePotency;
+			this.isPotencyModified = true;
+		}
 	}
 	
 	private int getPotentialPowerValue() {
@@ -69,7 +86,14 @@ public abstract class AbstractRunicCard extends CustomCard {
 		}
 		return 0;
 	}
-	
+
+	@Override
+	public void resetAttributes(){
+		super.resetAttributes();
+		this.potency = this.basePotency;
+		this.isPotencyModified = false;
+	}
+
 	public boolean checkElements(int ignis, int terra, int aqua) {
 		return checkElements(ignis, terra, aqua, false);
 	}
@@ -79,7 +103,7 @@ public abstract class AbstractRunicCard extends CustomCard {
 		//logger.info("Start checking elements.");
 		AbstractPlayer p = AbstractDungeon.player;
 		
-		if (/*freeToPlayOnce == true || */p.hasPower("Runesmith:UnlimitedPowerPower")) {
+		if (this.freeToPlayOnce || p.hasPower("Runesmith:UnlimitedPowerPower")) {
 			this.isCraftable = true;
 			return true;
 		}

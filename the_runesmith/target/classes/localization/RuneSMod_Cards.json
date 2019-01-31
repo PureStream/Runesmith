@@ -137,7 +137,7 @@
 	},
 	"Runesmith:RunicBlueprint": {
 		"NAME": "Runic Blueprint",
-		"DESCRIPTION": "Add a random Craft card to your hand. NL It costs 0 this turn. NL Gain 2 Aqua. NL Exhaust."
+		"DESCRIPTION": "Add a random Craft card to your hand. NL It costs 0 and does not consume Elements this turn. NL Gain 2 Aqua. NL Exhaust."
 	},
 	"Runesmith:CraftSpiculum": {
 		"NAME": "Craft Spiculum",
@@ -151,7 +151,7 @@
 	},
 	"Runesmith:CraftFerro": {
 		"NAME": "Craft Ferro",
-		"DESCRIPTION": "2 Terra 1 Aqua: Craft a Ferro rune with !Pot! Potency. NL Exhaust.",
+		"DESCRIPTION": "2 Terra 1 Aqua: Craft a Ferro rune with !Pot! Potency.",
 		"UPGRADE_DESCRIPTION": "2 Terra 1 Aqua: Craft a Ferro rune with !Pot! Potency.",
 		"EXTENDED_DESCRIPTION":[""]
 	},
@@ -279,7 +279,7 @@
 		"UPGRADE_DESCRIPTION": "Innate. NL Elements are no longer consumed for Crafting."
 	},
 	"Runesmith:WhiteBalance": {
-		"NAME": "WhiteBalance",
+		"NAME": "White Balance",
 		"DESCRIPTION": "Deal damage equals to !M! times the number of Elements gained this turn to ALL enemies.",
 		"EXTENDED_DESCRIPTION":[
 			" NL (Deals !D! damage.)"
