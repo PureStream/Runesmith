@@ -38,10 +38,9 @@ public abstract class EnhanceCard {
 //		AdditionalCardDescriptions.modifyDescription(c);
 //		EnhanceCountField.lastEnhanceCount.set(c, EnhanceCountField.enhanceCount.get(c));
 		c.initializeDescription();
-		c.calculateCardDamage(null);
+//		c.calculateCardDamage(null);
 //		if(currentEnhance == 1)	c.rawDescription += "NL (Enhanced "+currentEnhance+" time.)";
 //		else c.rawDescription +=  "NL (Enhanced "+currentEnhance+" times.)";
-//		c.initializeDescription();
 	}
 	
 	public static boolean canEnhance(AbstractCard c) {
