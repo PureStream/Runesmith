@@ -63,15 +63,15 @@
 	},
 	"Runesmith:ConvertIgnis": {
 		"NAME": "Ignis Decay",
-		"DESCRIPTION": "Lose all Ignis. Gain Terra and Aqua equals to Ignis lost."
+		"DESCRIPTION": "Deal !D! damage. NL Lose all Ignis. NL Gain Terra and Aqua equals to Ignis lost."
 	},
 	"Runesmith:ConvertTerra": {
 		"NAME": "Terra Decay",
-		"DESCRIPTION": "Lose all Terra. Gain Ignis and Aqua equals to Terra lost."
+		"DESCRIPTION": "Gain !B! Block. NL Lose all Terra. NL Gain Ignis and Aqua equals to Terra lost."
 	},
 	"Runesmith:ConvertAqua": {
 		"NAME": "Aqua Decay",
-		"DESCRIPTION": "Lose all Aqua. Gain Ignis and Terra equals to Aqua lost."
+		"DESCRIPTION": "Gain !M! Potency for this turn. NL Lose all Aqua. Gain Ignis and Terra equals to Aqua lost."
 	},
 	"Runesmith:Repurpose": {
 		"NAME": "Repurpose",

@@ -17,6 +17,7 @@ C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\powers\IceCold
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\ArcReactor.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\Shatterune.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\FissionHammer.java
+C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\relics\EmergencyProvisions.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\ConvertTerra.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\CraftFirestone.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\CraftPotentia.java
@@ -26,6 +27,7 @@ C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\actions\Enhanc
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\actions\RemoveRuneAndSlotAction.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\PerfectChisel.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\Strike_RS.java
+C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\relics\AutoHammer.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\actions\cards\MetallurgicalResearchAction.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\actions\cards\HammerSlamAction.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\orbs\IndustriaRune.java
@@ -116,6 +118,7 @@ C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmit
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\RunicBlueprint.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\actions\relics\NanobotsAction.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\GoWithTheFlow.java
+C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\WhiteBalance.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\HammerTime.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\powers\FirestormPower.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\FieryHammer.java
@@ -141,7 +144,6 @@ C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\powers\Spiculu
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\GenerateForcefield.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\DoubleUp.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\relics\BrokenRuby.java
-C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\ForcesOfNature.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\FrozenChisel.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\CreatorForm.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\orbs\FirestoneRune.java
