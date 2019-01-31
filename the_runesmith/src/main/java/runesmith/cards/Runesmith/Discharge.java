@@ -68,7 +68,14 @@ public class Discharge extends CustomCard {
 		AbstractDungeon.actionManager.addToBottom(
 				new BreakRuneAction(r)
 		);
-		
+
+		float speedTime = 0.1F;
+		if (Settings.FAST_MODE) {
+			speedTime = 0.0F;
+		}
+		AbstractDungeon.actionManager.addToBottom(new VFXAction(new LightningEffect(m.drawX, m.drawY), speedTime));
+		AbstractDungeon.actionManager.addToBottom(new SFXAction("ORB_LIGHTNING_EVOKE"));
+
 		AbstractDungeon.actionManager.addToBottom(
 			new DamageAction(
 				m,
@@ -79,14 +86,6 @@ public class Discharge extends CustomCard {
 		AbstractDungeon.actionManager.addToBottom(
 				new GainBlockAction(p, p, this.block)
 			);
-		float speedTime = 0.1F;
-		if (Settings.FAST_MODE) {
-			speedTime = 0.0F;
-		}
-		AbstractDungeon.actionManager.addToTop(new VFXAction(new LightningEffect(m.drawX, m.drawY), speedTime));
-		AbstractDungeon.actionManager.addToTop(new SFXAction("ORB_LIGHTNING_EVOKE"));
-		
-
 		
 		AbstractDungeon.actionManager.addToBottom(
 				new RuneChannelAction(
