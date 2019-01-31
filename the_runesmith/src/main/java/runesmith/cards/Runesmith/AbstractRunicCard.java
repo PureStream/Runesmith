@@ -36,7 +36,7 @@ public abstract class AbstractRunicCard extends CustomCard {
 	public boolean isCraftable = false;
 	public boolean renderCraftable = true;
 
-//	public boolean freeElementOnce = false;
+	public boolean freeElementOnce = false;
 	
 	private Logger logger = LogManager.getLogger(RunesmithMod.class.getName());
 	
@@ -92,6 +92,7 @@ public abstract class AbstractRunicCard extends CustomCard {
 		super.resetAttributes();
 		this.potency = this.basePotency;
 		this.isPotencyModified = false;
+		this.freeElementOnce = false;
 	}
 
 	public boolean checkElements(int ignis, int terra, int aqua) {
@@ -103,7 +104,10 @@ public abstract class AbstractRunicCard extends CustomCard {
 		//logger.info("Start checking elements.");
 		AbstractPlayer p = AbstractDungeon.player;
 		
-		if (this.freeToPlayOnce || p.hasPower("Runesmith:UnlimitedPowerPower")) {
+		if (this.freeElementOnce || p.hasPower("Runesmith:UnlimitedPowerPower")) {
+			if(this.freeElementOnce && !checkOnly){
+				freeElementOnce = false;
+			}
 			this.isCraftable = true;
 			return true;
 		}

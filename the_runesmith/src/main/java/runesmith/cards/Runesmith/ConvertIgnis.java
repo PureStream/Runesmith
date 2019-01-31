@@ -32,7 +32,7 @@ public class ConvertIgnis extends CustomCard {
 			AbstractCard.CardType.SKILL,
 			AbstractCard.CardColor.COLORLESS,
 			AbstractCard.CardRarity.SPECIAL,
-			AbstractCard.CardTarget.SELF
+			CardTarget.ENEMY
 		);
 		this.baseDamage = ATTACK_DMG;
 	}

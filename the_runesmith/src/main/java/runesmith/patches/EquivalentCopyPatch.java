@@ -19,6 +19,7 @@ public class EquivalentCopyPatch {
             CardStasisStatus.isStasis.set(card[0], CardStasisStatus.isStasis.get(__instance));
             if(__instance instanceof AbstractRunicCard){
                 ((AbstractRunicCard) card[0]).basePotency = ((AbstractRunicCard) __instance).basePotency;
+                ((AbstractRunicCard) card[0]).freeElementOnce = ((AbstractRunicCard) __instance).freeElementOnce;
             }
             logger.info(""+card[0].name);
             card[0].rawDescription = __instance.rawDescription;
