@@ -36,7 +36,7 @@ public abstract class EnhanceCard {
 			((AbstractRunicCard) c).upgradePotency(0);
 		}
 //		AdditionalCardDescriptions.modifyDescription(c);
-//		EnhanceCountField.lastEnhanceCount.set(c, EnhanceCountField.enhanceCount.get(c));
+		EnhanceCountField.lastEnhance.set(c, EnhanceCountField.enhanceCount.get(c));
 		c.initializeDescription();
 //		c.calculateCardDamage(null);
 //		if(currentEnhance == 1)	c.rawDescription += "NL (Enhanced "+currentEnhance+" time.)";
