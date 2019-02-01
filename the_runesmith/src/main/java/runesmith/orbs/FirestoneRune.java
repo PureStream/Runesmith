@@ -1,7 +1,10 @@
 package runesmith.orbs;
 
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
 
+import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -14,6 +17,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.vfx.BobEffect;
+import runesmith.actions.runes.BreakFirestoneAction;
 
 public class FirestoneRune extends RuneOrb {
 	
@@ -48,36 +52,30 @@ public class FirestoneRune extends RuneOrb {
 		//get random target
 		//AbstractCreature m = AbstractDungeon.getMonsters().getRandomMonster(true);
 		//damage enemy
+		AbstractCreature m = AbstractDungeon.getRandomMonster();
 		this.activateEndOfTurnEffect();
 //		logger.info("damaging...");
+//		AbstractDungeon.actionManager.addToBottom(
+//		new DamageRandomEnemyAction(
+//					new DamageInfo(AbstractDungeon.player,
+//							this.potential,
+//							DamageInfo.DamageType.THORNS),
+//					AbstractGameAction.AttackEffect.FIRE
+//				)
+//		);
 		AbstractDungeon.actionManager.addToBottom(
-		new DamageRandomEnemyAction(
-					new DamageInfo(AbstractDungeon.player, 
-							this.potential, 
-							DamageInfo.DamageType.THORNS),
-					AbstractGameAction.AttackEffect.FIRE
-				)
-		);
+				new DamageAction(m, new DamageInfo(AbstractDungeon.player,
+						this.potential, DamageInfo.DamageType.THORNS),
+						AbstractGameAction.AttackEffect.NONE, true));
+
 	}
 	
 	@Override
 	public void onBreak() {
-		AbstractDungeon.actionManager.addToTop(
-				new DamageRandomEnemyAction(
-						new DamageInfo(AbstractDungeon.player,
-								this.potential,
-								DamageInfo.DamageType.THORNS),
-						AbstractGameAction.AttackEffect.FIRE
-				)
-		);
-		AbstractDungeon.actionManager.addToTop(
-				new DamageRandomEnemyAction(
-						new DamageInfo(AbstractDungeon.player,
-								this.potential,
-								DamageInfo.DamageType.THORNS),
-						AbstractGameAction.AttackEffect.FIRE
-				)
-		);
+		AbstractDungeon.actionManager.addToTop(new BreakFirestoneAction(
+				new DamageInfo(AbstractDungeon.player, this.potential, DamageInfo.DamageType.THORNS)));
+		AbstractDungeon.actionManager.addToTop(new BreakFirestoneAction(
+				new DamageInfo(AbstractDungeon.player, this.potential, DamageInfo.DamageType.THORNS)));
 		this.activateEffect();
 	}
 

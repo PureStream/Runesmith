@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
+import runesmith.actions.runes.BreakFirestoneAction;
 
 public class MagmaRune extends RuneOrb {
 	
@@ -43,25 +44,13 @@ public class MagmaRune extends RuneOrb {
 	@Override
 	public void onBreak() {
 		AbstractPlayer p = AbstractDungeon.player;
-		AbstractDungeon.actionManager.addToTop(
-				new DamageRandomEnemyAction(
-						new DamageInfo(AbstractDungeon.player,
-								this.potential,
-								DamageInfo.DamageType.THORNS),
-						AbstractGameAction.AttackEffect.FIRE
-				)
-		);
+		AbstractDungeon.actionManager.addToTop(new BreakFirestoneAction(
+				new DamageInfo(p, this.potential, DamageInfo.DamageType.THORNS)));
 		AbstractDungeon.actionManager.addToTop(
 				new GainBlockAction(p, p, this.potential/2)
 		);
-		AbstractDungeon.actionManager.addToTop(
-				new DamageRandomEnemyAction(
-						new DamageInfo(AbstractDungeon.player,
-								this.potential,
-								DamageInfo.DamageType.THORNS),
-						AbstractGameAction.AttackEffect.FIRE
-				)
-		);
+		AbstractDungeon.actionManager.addToTop(new BreakFirestoneAction(
+				new DamageInfo(p, this.potential, DamageInfo.DamageType.THORNS)));
 		AbstractDungeon.actionManager.addToTop(
 				new GainBlockAction(p, p, this.potential/2)
 		);
