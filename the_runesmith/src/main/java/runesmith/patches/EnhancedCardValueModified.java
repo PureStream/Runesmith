@@ -128,6 +128,7 @@ public class EnhancedCardValueModified {
 				self.isMagicNumberModified = false;
 				self.damageTypeForTurn = (DamageInfo.DamageType)ReflectionHacks.getPrivate(self, AbstractCard.class, "damageType");
 				EnhanceCountField.enhanceReset.set(self,false);
+				EnhanceCountField.lastEnhance.set(self, 0);
 				
 				
 				logger.info("reset attributes");
