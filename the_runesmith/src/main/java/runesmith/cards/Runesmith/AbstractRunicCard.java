@@ -1,6 +1,7 @@
 package runesmith.cards.Runesmith;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.vfx.ThoughtBubble;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -37,6 +38,8 @@ public abstract class AbstractRunicCard extends CustomCard {
 	public boolean renderCraftable = true;
 
 	public boolean freeElementOnce = false;
+
+	private static final int MAX_ORBS = 7;
 	
 	private Logger logger = LogManager.getLogger(RunesmithMod.class.getName());
 	
@@ -105,10 +108,14 @@ public abstract class AbstractRunicCard extends CustomCard {
 		AbstractPlayer p = AbstractDungeon.player;
 		
 		if (this.freeElementOnce || p.hasPower("Runesmith:UnlimitedPowerPower")) {
-			if(this.freeElementOnce && !checkOnly){
+			if(this.freeElementOnce && !checkOnly)
 				freeElementOnce = false;
-			}
+
+			if (p.maxOrbs == MAX_ORBS && !checkOnly)
+				AbstractDungeon.actionManager.addToBottom(new ApplyElementsPowerAction(p,p,ignis,terra,aqua));
+
 			this.isCraftable = true;
+
 			return true;
 		}
 		
@@ -125,21 +132,26 @@ public abstract class AbstractRunicCard extends CustomCard {
 		if (pIgnis >= ignis && pTerra >= terra && pAqua >= aqua) {
 			//logger.info("Have enough elements.");
 			if(!checkOnly) {
-				if (pIgnis > 0 && ignis > 0) {
-					p.getPower("Runesmith:IgnisPower").reducePower(ignis);
-					if (p.getPower("Runesmith:IgnisPower").amount == 0)
-						AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(p, p, "Runesmith:IgnisPower"));
+				if (p.maxOrbs == MAX_ORBS)
+					AbstractDungeon.actionManager.addToBottom(new ApplyElementsPowerAction(p,p,ignis,terra,aqua));
+				else {
+					if (pIgnis > 0 && ignis > 0) {
+						p.getPower("Runesmith:IgnisPower").reducePower(ignis);
+						if (p.getPower("Runesmith:IgnisPower").amount == 0)
+							AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(p, p, "Runesmith:IgnisPower"));
+					}
+					if (pTerra > 0 && terra > 0) {
+						p.getPower("Runesmith:TerraPower").reducePower(terra);
+						if (p.getPower("Runesmith:TerraPower").amount == 0)
+							AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(p, p, "Runesmith:TerraPower"));
+					}
+					if (pAqua > 0 && aqua > 0) {
+						p.getPower("Runesmith:AquaPower").reducePower(aqua);
+						if (p.getPower("Runesmith:AquaPower").amount == 0)
+							AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(p, p, "Runesmith:AquaPower"));
+					}
 				}
-				if (pTerra > 0 && terra > 0) {
-					p.getPower("Runesmith:TerraPower").reducePower(terra);
-					if (p.getPower("Runesmith:TerraPower").amount == 0)
-						AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(p, p, "Runesmith:TerraPower"));
-				}
-				if (pAqua > 0 && aqua > 0) {
-					p.getPower("Runesmith:AquaPower").reducePower(aqua);
-					if (p.getPower("Runesmith:AquaPower").amount == 0)
-						AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(p, p, "Runesmith:AquaPower"));
-				}
+
 			}
 			if(checkOnly) this.isCraftable = true;
 			return true;

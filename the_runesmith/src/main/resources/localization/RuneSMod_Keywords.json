@@ -3,53 +3,42 @@
 		{
 			"NAMES": [
 			"enhance",
-			"Enhance",
-			"enhanced",
-			"Enhanced"
+			"enhanced"
 			],
 			"DESCRIPTION": "Increase damage, #yBlock and #yPotency of a card by #b50%. Can be stacked additively. #yEnhance is removed after the card is played."
 		},
 		{
 			"NAMES": [
 			"downgrade",
-			"Downgrade",
 			"downgraded"
 			],
 			"DESCRIPTION": "Remove one level of #yUpgrade and any #yEnhance or #yStasis from a card."
 		},
 		{
 			"NAMES": [
-			"stasis",
-			"Stasis"
+			"stasis"
 			],
 			"DESCRIPTION": "Prevent a card from being #yExhausted once and discard it instead. Cannot be stacked."
 		},
 		{
 			"NAMES": [
-			"potency",
-			"Potency"
+			"potency"
 			],
 			"DESCRIPTION": "Potency is the power of a rune when it is #yCrafted."
 		},
 		{
 			"NAMES": [
-			"craft",
-			"Craft"
+			"craft"
 			],
-			"DESCRIPTION": "Create a rune using #yElements. If you don't have enough, gain that many instead."
+			"DESCRIPTION": "Create a rune using #yElements. If you don't have enough, gain that many instead. (max runes:7)"
 		},
 		{
 			"NAMES": [
 			"elements",
-			"Elements",
 			"element",
-			"Element",
 			"ignis",
-			"Ignis",
 			"terra",
-			"Terra",
 			"aqua",
-			"Aqua",
 			"ignis+",
 			"aqua+",
 			"terra+"
@@ -59,99 +48,85 @@
 		{
 			"NAMES": [
 			"break",
-			"Break",
 			"broken"
 			],
 			"DESCRIPTION": "Destroy a rune and activate its effect twice. Passive effects will be removed at the start of your next turn."
 		},
 		{
 			"NAMES": [
-			"incendium",
-			"Incendium"
+			"incendium"
 			],
 			"DESCRIPTION": "Rune: Deals damage to ALL enemies."
 		},
 		{
 			"NAMES": [
-			"firestone",
-			"Firestone"
+			"firestone"
 			],
 			"DESCRIPTION": "Rune: Deals damage to random enemies."
 		},
 		{
 			"NAMES": [
-			"protectio",
-			"Protectio"
+			"protectio"
 			],
 			"DESCRIPTION": "Rune: Gain #yBlock."
 		},
 		{
 			"NAMES": [
-			"reservo",
-			"Reservo"
+			"reservo"
 			],
 			"DESCRIPTION": "Rune: #yRetain a card."
 		},
 		{
 			"NAMES": [
-			"reservo+",
-			"Reservo+"
+			"reservo+"
 			],
 			"DESCRIPTION": "Rune: #yRetain two cards."
 		},
 		{
 			"NAMES": [
-			"spiculum",
-			"Spiculum"
+			"spiculum"
 			],
 			"DESCRIPTION": "Rune: Gain #yThorns."
 		},
 		{
 			"NAMES": [
-			"potentia",
-			"Potentia"
+			"potentia"
 			],
 			"DESCRIPTION": "Rune: Gain #yPotency"
 		},
 		{
 			"NAMES": [
-			"ferro",
-			"Ferro"
+			"ferro"
 			],
 			"DESCRIPTION": "Rune: Set #yPlated #yArmor to at least its #yPotency."
 		},
 		{
 			"NAMES": [
-			"prismatic",
-			"Prismatic"
+			"prismatic"
 			],
 			"DESCRIPTION": "Ruin: Give a random class card each turn."
 		},
 		{
 			"NAMES": [
-			"prismatic+",
-			"Prismatic+"
+			"prismatic+"
 			],
 			"DESCRIPTION": "Rune: Give a random upgraded class card each turn."
 		},
 		{
 			"NAMES": [
-			"industria",
-			"Industria"
+			"industria"
 			],
 			"DESCRIPTION": "Rune: Gain [E] at the start of your turn."
 		},
 		{
 			"NAMES": [
-			"medicinae",
-			"Medicinae"
+			"medicinae"
 			],
 			"DESCRIPTION": "Rune: Heals on #yBreak."
 		},
 		{
 			"NAMES": [
-			"Dud",
-			"dud"
+			"Dud"
 			],
 			"DESCRIPTION": "Rune: No effect."
 		},
