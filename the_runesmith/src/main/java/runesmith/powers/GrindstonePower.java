@@ -20,6 +20,8 @@ public class GrindstonePower extends AbstractPower {
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
+
+	private boolean isAfterFirstUsed = false;
 	
 	public GrindstonePower(AbstractCreature owner, int amount) {
 		this.name = NAME;
@@ -40,14 +42,18 @@ public class GrindstonePower extends AbstractPower {
 	}
 	
 	public void onAfterUseCard(AbstractCard card, UseCardAction action) {
-		if (card.canUpgrade()) {
-			flash();
-			card.upgrade();
+		if (isAfterFirstUsed) {
+			if (card.canUpgrade()) {
+				flash();
+				card.upgrade();
+			}
+			else if (EnhanceCard.canEnhance(card)) {
+				flash();
+				EnhanceCard.enhance(card);
+			}
 		}
-		else if (EnhanceCard.canEnhance(card)) {
-			flash();
-			EnhanceCard.enhance(card);
-		}	
+		else
+			isAfterFirstUsed = true;
 	}
 	
 	public void atEndOfTurn(boolean isPlayer) {

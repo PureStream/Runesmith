@@ -19,7 +19,7 @@ public class BreakFirestoneAction extends AbstractGameAction {
     @Override
     public void update() {
         AbstractCreature m = AbstractDungeon.getRandomMonster();
-        AbstractDungeon.actionManager.addToTop(new DamageAction(m, this.info, this.attackEffect));
+        AbstractDungeon.actionManager.addToTop(new DamageAction(m, this.info, this.attackEffect, true));
 //        AbstractDungeon.actionManager.addToTop(new DamageAction(m, this.info, this.attackEffect, true));
         this.isDone = true;
     }

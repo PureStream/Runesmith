@@ -1,22 +1,18 @@
 package runesmith.orbs;
 
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
-
-import com.megacrit.cardcrawl.core.AbstractCreature;
-import com.megacrit.cardcrawl.monsters.MonsterGroup;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.vfx.BobEffect;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import runesmith.actions.runes.BreakFirestoneAction;
 
 public class FirestoneRune extends RuneOrb {
@@ -25,9 +21,9 @@ public class FirestoneRune extends RuneOrb {
 	
 	public static final int basePotency = 4;
 	
-	public static Texture img1;
-	public static Texture img2;
-	public static Texture img3;
+	private static Texture img1;
+	private static Texture img2;
+	private static Texture img3;
 	
 	private BobEffect extraBobEffect1 = new BobEffect(6.0F * Settings.scale, 3.0F);
 	private BobEffect extraBobEffect2 = new BobEffect(5.0F * Settings.scale, 2.2F);
@@ -66,8 +62,7 @@ public class FirestoneRune extends RuneOrb {
 		AbstractDungeon.actionManager.addToBottom(
 				new DamageAction(m, new DamageInfo(AbstractDungeon.player,
 						this.potential, DamageInfo.DamageType.THORNS),
-						AbstractGameAction.AttackEffect.NONE, true));
-
+						AbstractGameAction.AttackEffect.FIRE));
 	}
 	
 	@Override
