@@ -35,7 +35,7 @@ public abstract class AbstractRunicCard extends CustomCard {
 	public boolean isPotencyModified;
 	
 	public boolean isCraftable = false;
-	private boolean renderCraftable = true;
+	public boolean renderCraftable = true;
 
 	public boolean freeElementOnce = false;
 
