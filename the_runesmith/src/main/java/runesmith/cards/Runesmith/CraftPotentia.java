@@ -54,7 +54,7 @@ public class CraftPotentia extends AbstractRunicCard {
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {
 
-		if (checkElements(ELEMENT_AMT,ELEMENT_AMT,ELEMENT_AMT)) {
+		if (checkElements(ELEMENT_AMT,ELEMENT_AMT,ELEMENT_AMT, false, true)) {
 			RuneOrb r = null;
 			for(AbstractOrb o : p.orbs) {
 				if(o instanceof RuneOrb) {

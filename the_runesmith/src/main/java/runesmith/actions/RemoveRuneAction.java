@@ -1,14 +1,8 @@
 package runesmith.actions;
 
-import java.util.Collections;
-
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.orbs.AbstractOrb;
-import com.megacrit.cardcrawl.orbs.EmptyOrbSlot;
-
 import runesmith.orbs.RuneOrb;
 
 public class RemoveRuneAction extends AbstractGameAction{
@@ -17,7 +11,7 @@ public class RemoveRuneAction extends AbstractGameAction{
 	
 	public RemoveRuneAction(RuneOrb runeToRemove) {
 		this.duration = Settings.ACTION_DUR_FAST;
-	    this.actionType = AbstractGameAction.ActionType.BLOCK;
+	    this.actionType = ActionType.BLOCK;
 	    this.orb = runeToRemove;
 	}
 	
@@ -26,7 +20,7 @@ public class RemoveRuneAction extends AbstractGameAction{
 		if (this.duration == Settings.ACTION_DUR_FAST) {
 
 		  	orb.onRemove();
-			AbstractDungeon.actionManager.addToBottom(new RemoveRuneAndSlotAction(orb));
+			AbstractDungeon.actionManager.addToTop(new RemoveRuneAndSlotAction(orb));
 //		      AbstractPlayer p = AbstractDungeon.player;
 
 		      // Rotate up the remaining orbs

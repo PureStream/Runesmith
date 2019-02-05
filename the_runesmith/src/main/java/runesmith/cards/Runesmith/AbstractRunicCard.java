@@ -35,7 +35,7 @@ public abstract class AbstractRunicCard extends CustomCard {
 	public boolean isPotencyModified;
 	
 	public boolean isCraftable = false;
-	public boolean renderCraftable = true;
+	private boolean renderCraftable = true;
 
 	public boolean freeElementOnce = false;
 
@@ -99,10 +99,14 @@ public abstract class AbstractRunicCard extends CustomCard {
 	}
 
 	public boolean checkElements(int ignis, int terra, int aqua) {
-		return checkElements(ignis, terra, aqua, false);
+		return checkElements(ignis, terra, aqua, false, false);
+	}
+
+	public boolean checkElements(int ignis, int terra, int aqua, boolean checkOnly) {
+		return checkElements(ignis, terra, aqua, checkOnly, false);
 	}
 	
-	public boolean checkElements(int ignis, int terra, int aqua, boolean checkOnly) {
+	public boolean checkElements(int ignis, int terra, int aqua, boolean checkOnly, boolean isPotentia) {
 		
 		//logger.info("Start checking elements.");
 		AbstractPlayer p = AbstractDungeon.player;
@@ -111,7 +115,7 @@ public abstract class AbstractRunicCard extends CustomCard {
 			if(this.freeElementOnce && !checkOnly)
 				freeElementOnce = false;
 
-			if (p.maxOrbs == MAX_ORBS && !checkOnly)
+			if (p.maxOrbs == MAX_ORBS && !checkOnly && !isPotentia)
 				AbstractDungeon.actionManager.addToBottom(new ApplyElementsPowerAction(p,p,ignis,terra,aqua));
 
 			this.isCraftable = true;
@@ -132,7 +136,7 @@ public abstract class AbstractRunicCard extends CustomCard {
 		if (pIgnis >= ignis && pTerra >= terra && pAqua >= aqua) {
 			//logger.info("Have enough elements.");
 			if(!checkOnly) {
-				if (p.maxOrbs == MAX_ORBS)
+				if (p.maxOrbs == MAX_ORBS && !isPotentia)
 					AbstractDungeon.actionManager.addToBottom(new ApplyElementsPowerAction(p,p,ignis,terra,aqua));
 				else {
 					if (pIgnis > 0 && ignis > 0) {

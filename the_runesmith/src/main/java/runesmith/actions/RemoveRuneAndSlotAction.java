@@ -13,9 +13,9 @@ import java.util.Collections;
 public class RemoveRuneAndSlotAction extends AbstractGameAction{
 
     private RuneOrb rune;
-    public RemoveRuneAndSlotAction(RuneOrb runeToRemove){
+    private RemoveRuneAndSlotAction(RuneOrb runeToRemove){
         this.duration = Settings.ACTION_DUR_FAST;
-        this.actionType = AbstractGameAction.ActionType.BLOCK;
+        this.actionType = ActionType.BLOCK;
         this.rune = runeToRemove;
     }
 
@@ -32,7 +32,7 @@ public class RemoveRuneAndSlotAction extends AbstractGameAction{
             }
             p.orbs.set(p.orbs.size() - 1, orbSlot);
             for (int i = index; i < p.orbs.size(); i++) {
-                ((AbstractOrb) p.orbs.get(i)).setSlot(i, p.maxOrbs);
+                p.orbs.get(i).setSlot(i, p.maxOrbs);
             }
             AbstractDungeon.player.decreaseMaxOrbSlots(1);
         }
