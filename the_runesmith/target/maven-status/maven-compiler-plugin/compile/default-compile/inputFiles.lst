@@ -137,6 +137,7 @@ C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\actions\cards\
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\actions\RuneChannelAction.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\patches\ElementsGainedCountField.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\powers\CreatorFormPower.java
+C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\Prism.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\powers\ReplicatingBarrierPower.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\actions\DowngradeCard.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\helpers\PotencyVariable.java
@@ -174,7 +175,6 @@ C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmit
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\RunesmithMod.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\CraftMagma.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\patches\EnhanceCountField.java
-C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\ElementalShield.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\helpers\AdditionalCardDescriptions.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\actions\RemoveRuneAction.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\ChaoticBlast.java

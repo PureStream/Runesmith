@@ -390,7 +390,7 @@
   },
   "Runesmith:Discharge": {
     "NAME": "Discharge",
-    "DESCRIPTION": "Break your oldest rune that is not a Dud rune to deal !D! damage, gain !B! Block and Craft a Dud rune."
+    "DESCRIPTION": "Break your oldest non Dud rune to deal !D! damage, gain !B! Block and Craft a Dud rune."
   },
   "Runesmith:Attraction": {
     "NAME": "Attraction",
