@@ -1,11 +1,11 @@
 package runesmith.relics;
 
+import basemod.abstracts.CustomRelic;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import basemod.abstracts.CustomRelic;
 import runesmith.actions.DowngradeRandomCardInDeckAction;
 
 public class UraniumAnvil extends CustomRelic {
@@ -37,7 +37,7 @@ public class UraniumAnvil extends CustomRelic {
 		initializeTips();
 	}
 	
-	public void atTurnStart() {
+	public void atTurnStartPostDraw() {
 		AbstractDungeon.actionManager.addToBottom(
 				new DowngradeRandomCardInDeckAction(AbstractDungeon.player,DOWN_AMT));
 	}
