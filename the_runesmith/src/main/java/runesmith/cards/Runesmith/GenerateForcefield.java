@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.BufferPower;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import runesmith.actions.BreakRuneAction;
+import runesmith.orbs.DudRune;
 import runesmith.orbs.RuneOrb;
 import runesmith.patches.AbstractCardEnum;
 
@@ -36,6 +37,7 @@ public class GenerateForcefield extends CustomCard {
                 CardRarity.RARE,
                 CardTarget.SELF
         );
+        this.exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -48,11 +50,10 @@ public class GenerateForcefield extends CustomCard {
 
         if (p.orbs.size() == 0 || cnt == 0) return;
 
-        RuneOrb r = null;
         int count = 0;
         for (AbstractOrb o : p.orbs) {
-            if (o instanceof RuneOrb) {
-                r = (RuneOrb) o;
+            if (o instanceof RuneOrb && !(o instanceof DudRune)) {
+                RuneOrb r = (RuneOrb) o;
                 count++;
                 AbstractDungeon.actionManager.addToBottom(
                         new BreakRuneAction(r)

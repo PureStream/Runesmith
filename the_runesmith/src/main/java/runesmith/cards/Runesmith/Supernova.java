@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import runesmith.actions.BreakRuneAction;
+import runesmith.orbs.DudRune;
 import runesmith.orbs.RuneOrb;
 import runesmith.patches.AbstractCardEnum;
 
@@ -41,12 +42,12 @@ public class Supernova extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (p.orbs.size() == 0) return;
 
-        RuneOrb r = null;
         int count = 0;
         for (AbstractOrb o : p.orbs) {
             if (o instanceof RuneOrb) {
-                r = (RuneOrb) o;
-                count++;
+                RuneOrb r = (RuneOrb) o;
+                if (!(r instanceof DudRune))
+                    count++;
                 AbstractDungeon.actionManager.addToBottom(
                         new BreakRuneAction(r)
                 );
