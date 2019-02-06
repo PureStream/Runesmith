@@ -16,6 +16,7 @@ public class RuneChannelAction extends AbstractGameAction {
     private AbstractOrb orbType;
     private boolean autoEvoke = false;
     private int MAX_ORBS = 7;
+    private int channelCount = 0;
 
     public RuneChannelAction(AbstractOrb newOrbType) {
         this(newOrbType, true);
@@ -80,4 +81,5 @@ public class RuneChannelAction extends AbstractGameAction {
             this.isDone = true;
         }
     }
+
 }
