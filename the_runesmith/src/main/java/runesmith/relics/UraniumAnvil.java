@@ -37,7 +37,7 @@ public class UraniumAnvil extends CustomRelic {
         initializeTips();
     }
 
-    public void atTurnStartPostDraw() {
+    public void atTurnStart() {
         AbstractDungeon.actionManager.addToBottom(
                 new DowngradeRandomCardInDeckAction(AbstractDungeon.player, DOWN_AMT));
     }
