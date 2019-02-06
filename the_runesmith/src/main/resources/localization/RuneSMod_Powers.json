@@ -55,7 +55,7 @@
   "Runesmith:ArcReactorPower": {
     "NAME": "Radiated",
     "DESCRIPTIONS": [
-      "At the end of your turn, lose #b",
+      "For each rune #yCrafted, lose #b",
       " #yPotency."
     ]
   },

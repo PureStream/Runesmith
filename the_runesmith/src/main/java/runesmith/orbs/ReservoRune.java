@@ -29,6 +29,7 @@ public class ReservoRune extends RuneOrb {
 
     @Override
     public void onCraft() {
+        super.onCraft();
         int amount = 1;
         if (this.upgraded) {
             amount = 2;

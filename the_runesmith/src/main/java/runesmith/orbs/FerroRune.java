@@ -21,6 +21,7 @@ public class FerroRune extends RuneOrb {
 
     @Override
     public void onCraft() {
+        super.onCraft();
         if (p.hasPower("Plated Armor")) {
             int powerDiff = this.potential - p.getPower("Plated Armor").amount;
             if (powerDiff > 0)

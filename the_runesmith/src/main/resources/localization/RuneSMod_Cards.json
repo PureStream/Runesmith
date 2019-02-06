@@ -249,12 +249,12 @@
   },
   "Runesmith:GenerateForcefield": {
     "NAME": "Generate Forcefield",
-    "DESCRIPTION": "Break X runes and prevent the next X times you would lose HP.",
-    "UPGRADE_DESCRIPTION": "Break X+1 runes and prevent the next X+1 times you would lose HP."
+    "DESCRIPTION": "Break X non Dud runes and prevent the next X times you would lose HP. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Break X+1 non Dud runes and prevent the next X+1 times you would lose HP. NL Exhaust."
   },
   "Runesmith:Supernova": {
     "NAME": "Supernova",
-    "DESCRIPTION": "Break all of your runes. Draw a card and gain [E] for each rune destroyed."
+    "DESCRIPTION": "Break all of your runes. Draw a card and gain [E] for each non Dud rune destroyed."
   },
   "Runesmith:CreatorForm": {
     "NAME": "Creator Form",
@@ -378,12 +378,12 @@
   },
   "Runesmith:HammerAndChisel": {
     "NAME": "Hammer and Chisel",
-    "DESCRIPTION": "Add a random Hammer card and a random Chisel card to your hand. They cost 1 less this combat.",
-    "UPGRADE_DESCRIPTION": "Add a random Upgraded Hammer card and a random Upgraded Chisel card to your hand. They cost 1 less this combat."
+    "DESCRIPTION": "Add a random Hammer card and a random Chisel card to your hand. They cost 1 less this combat. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add a random Upgraded Hammer card and a random Upgraded Chisel card to your hand. They cost 1 less this combat. NL Exhaust."
   },
   "Runesmith:Firewall": {
     "NAME": "Firewall",
-    "DESCRIPTION": "Gain !B! Block. NL 3 Ignis : Craft 2 Firestone runes with !Pot! Potency.",
+    "DESCRIPTION": "Gain !B! Block. NL 3 Ignis: Craft 2 Firestone runes with !Pot! Potency.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
@@ -398,7 +398,7 @@
   },
   "Runesmith:ArcReactor": {
     "NAME": "Arc Reactor",
-    "DESCRIPTION": "Gain !M! Potency. Lose 1 Potency at the end of each turn."
+    "DESCRIPTION": "Gain !M! Potency. Lose 1 Potency for each rune Crafted."
   },
   "Runesmith:ReplicatingBarrier": {
     "NAME": "Replicating Barrier",

@@ -4,7 +4,9 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -13,9 +15,7 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.vfx.combat.OrbFlareEffect;
 import com.megacrit.cardcrawl.vfx.combat.PlasmaOrbActivateEffect;
-
-import java.util.ArrayList;
-import java.util.List;
+import runesmith.powers.PotentialPower;
 
 
 public abstract class RuneOrb extends AbstractOrb {
@@ -79,26 +79,39 @@ public abstract class RuneOrb extends AbstractOrb {
     }
 
     public static RuneOrb getRandomRune(boolean useCardRng, int playerPotency) {
-        List<RuneOrb> runes = new ArrayList<>();
-        runes.add(new DudRune());
-        runes.add(new FerroRune(FerroRune.basePotency + playerPotency));
-        runes.add(new FirestoneRune(FirestoneRune.basePotency + playerPotency));
-        runes.add(new IncendiumRune(IncendiumRune.basePotency + playerPotency));
-        runes.add(new IndustriaRune());
-        runes.add(new MagmaRune(MagmaRune.basePotency + playerPotency));
-        runes.add(new MedicinaeRune(MedicinaeRune.basePotency + playerPotency));
-        runes.add(new PotentiaRune(PotentiaRune.basePotency + playerPotency));
-        runes.add(new PrismaticRune(false));
-        runes.add(new ProtectioRune(ProtectioRune.basePotency + playerPotency));
-        runes.add(new ReservoRune());
-        runes.add(new SpiculumRune(SpiculumRune.basePotency + playerPotency));
-
-        if (useCardRng) return runes.get(AbstractDungeon.cardRandomRng.random(runes.size() - 1));
-        return runes.get(MathUtils.random(runes.size() - 1));
+        int selectedRune;
+        if (useCardRng)
+            selectedRune = AbstractDungeon.cardRandomRng.random(11);
+        else
+            selectedRune = MathUtils.random(11);
+        switch (selectedRune) {
+            case 0:
+                return new SpiculumRune(SpiculumRune.basePotency + playerPotency);
+            case 1:
+                return new FerroRune(FerroRune.basePotency + playerPotency);
+            case 2:
+                return new FirestoneRune(FirestoneRune.basePotency + playerPotency);
+            case 3:
+                return new IncendiumRune(IncendiumRune.basePotency + playerPotency);
+            case 4:
+                return new IndustriaRune();
+            case 5:
+                return new MagmaRune(MagmaRune.basePotency + playerPotency);
+            case 6:
+                return new MedicinaeRune(MedicinaeRune.basePotency + playerPotency);
+            case 7:
+                return new PotentiaRune(PotentiaRune.basePotency + playerPotency);
+            case 8:
+                return new PrismaticRune(false);
+            case 9:
+                return new ProtectioRune(ProtectioRune.basePotency + playerPotency);
+            case 10:
+                return new ReservoRune();
+        }
+        return new DudRune();
     }
 
     public void onStartOfTurn() {
-
     }
 
     public void onCardUse(AbstractCard c) {
@@ -108,6 +121,11 @@ public abstract class RuneOrb extends AbstractOrb {
     }
 
     public void onCraft() {
+        AbstractPlayer p = AbstractDungeon.player;
+        if (p.hasPower("Runesmith:ArcReactorPower")) {
+            int decAmount = p.getPower("Runesmith:ArcReactorPower").amount;
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PotentialPower(p, -decAmount), -decAmount));
+        }
     }
 
     public void onBreak() {
@@ -124,7 +142,6 @@ public abstract class RuneOrb extends AbstractOrb {
 
     @Override
     public void onEvoke() {
-
     }
 
     @Override

@@ -27,6 +27,7 @@ public class SpiculumRune extends RuneOrb {
 
     @Override
     public void onCraft() {
+        super.onCraft();
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ThornsPower(p, this.potential), this.potential));
     }
 

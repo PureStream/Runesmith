@@ -39,9 +39,9 @@ public class ArcReactor extends CustomCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p,
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
                 new PotentialPower(p, this.magicNumber), this.magicNumber));
-        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p,
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
                 new ArcReactorPower(p, BACKLASH_AMT), BACKLASH_AMT));
     }
 
