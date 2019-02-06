@@ -3,7 +3,6 @@ package runesmith.cards.Runesmith;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.colorless.Madness;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -53,16 +52,10 @@ public class RunicBlueprint extends CustomCard {
         for (Map.Entry<String, AbstractCard> stringAbstractCardEntry : CardLibrary.cards.entrySet()) {
             @SuppressWarnings({"rawtypes"})
             Map.Entry<String, AbstractCard> c = stringAbstractCardEntry;
-            if (c.getValue().hasTag(CRAFT)) {
+            if (c.getValue().hasTag(CRAFT))
                 tmp.add(c.getKey());
-            }
         }
-        AbstractCard cZero;
-        if (tmp.size() > 0) {
-            cZero = CardLibrary.cards.get(tmp.get(AbstractDungeon.cardRng.random(0, tmp.size() - 1)));
-        } else {
-            cZero = new Madness();
-        }
+        AbstractCard cZero = CardLibrary.cards.get(tmp.get(AbstractDungeon.cardRng.random(0, tmp.size() - 1))).makeCopy();
         cZero.setCostForTurn(0);
         if (cZero instanceof AbstractRunicCard)
             ((AbstractRunicCard) cZero).freeElementOnce = true;

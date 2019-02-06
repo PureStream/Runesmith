@@ -49,12 +49,10 @@ public class HammerAndChisel extends CustomCard {
         for (Map.Entry<String, AbstractCard> stringAbstractCardEntry : CardLibrary.cards.entrySet()) {
             @SuppressWarnings({"rawtypes"})
             Map.Entry<String, AbstractCard> c = stringAbstractCardEntry;
-            if (c.getValue().hasTag(HAMMER)) {
+            if (c.getValue().hasTag(HAMMER))
                 hammer.add(c.getKey());
-            }
-            if (c.getValue().hasTag(CHISEL)) {
+            if (c.getValue().hasTag(CHISEL))
                 chisel.add(c.getKey());
-            }
         }
         AbstractCard c1;
         AbstractCard c2;
