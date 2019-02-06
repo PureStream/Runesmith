@@ -14,7 +14,6 @@ import runesmith.actions.ApplyElementsPowerAction;
 import runesmith.patches.AbstractCardEnum;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.Map;
 
 import static runesmith.patches.CardTagEnum.CRAFT;
@@ -51,11 +50,9 @@ public class RunicBlueprint extends CustomCard {
         //AbstractCard c = AbstractDungeon.returnTrulyRandomCardInCombat(AbstractCard.CardType.).makeCopy();
 
         ArrayList<String> tmp = new ArrayList<>();
-        @SuppressWarnings("rawtypes")
-        Iterator var3 = CardLibrary.cards.entrySet().iterator();
-        while (var3.hasNext()) {
-            @SuppressWarnings({"unchecked", "rawtypes"})
-            Map.Entry<String, AbstractCard> c = (Map.Entry) var3.next();
+        for (Map.Entry<String, AbstractCard> stringAbstractCardEntry : CardLibrary.cards.entrySet()) {
+            @SuppressWarnings({"rawtypes"})
+            Map.Entry<String, AbstractCard> c = stringAbstractCardEntry;
             if (c.getValue().hasTag(CRAFT)) {
                 tmp.add(c.getKey());
             }
