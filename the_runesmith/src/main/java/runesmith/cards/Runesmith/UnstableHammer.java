@@ -55,20 +55,19 @@ public class UnstableHammer extends CustomCard {
         AbstractDungeon.actionManager.addToBottom(
                 new RuneChannelAction(
                         new DudRune()));
-        int selectedPower = AbstractDungeon.cardRandomRng.random(3);
+        int selectedPower = AbstractDungeon.cardRandomRng.random(2);
         switch (selectedPower) {
             case 0:
                 AbstractDungeon.actionManager.addToBottom(
                         new ApplyElementsPowerAction(p, p, ELEMENT_AMT, 0, 0));
-                return;
+                break;
             case 1:
                 AbstractDungeon.actionManager.addToBottom(
                         new ApplyElementsPowerAction(p, p, 0, ELEMENT_AMT, 0));
-                return;
+                break;
             case 2:
                 AbstractDungeon.actionManager.addToBottom(
                         new ApplyElementsPowerAction(p, p, 0, 0, ELEMENT_AMT));
-                return;
         }
 //		if (random == 0) 
 //			AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new IgnisPower(p, ELEMENT_AMT), ELEMENT_AMT));
