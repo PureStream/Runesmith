@@ -13,53 +13,53 @@ import runesmith.patches.AbstractCardEnum;
 
 public class Fortify extends CustomCard {
 
-	public static final String ID = "Runesmith:Fortify";
-	public static final String IMG_PATH = "images/cards/Fortify.png";
-	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-	public static final String NAME = cardStrings.NAME;
-	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;	
-	
-	private static final int COST = 1;
-	private static final int BLOCK_AMT = 6;
-	private static final int UPGRADE_PLUS_BLOCK = 2;
-	
-	public Fortify() {
-		super(
-			ID,
-			NAME,
-			IMG_PATH,
-			COST,
-			DESCRIPTION,
-			AbstractCard.CardType.SKILL,
-			AbstractCardEnum.RUNESMITH_BEIGE,
-			AbstractCard.CardRarity.BASIC,
-			AbstractCard.CardTarget.SELF
-		);
-		//this.tags.add(BaseModCardTags.BASIC_DEFEND);
-		this.baseBlock = BLOCK_AMT;
-	}
-	
-	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(
-			new GainBlockAction(p, p, this.block)
-		);
-		AbstractDungeon.actionManager.addToBottom(
-			new FortifyAction(this.upgraded)
-		);
-	}
-	
-	public AbstractCard makeCopy() {
-		return new Fortify();
-	}
-	
-	public void upgrade() {
-		if (!this.upgraded) {
-		  upgradeName();
-		  upgradeBlock(UPGRADE_PLUS_BLOCK);
-		  this.rawDescription = UPGRADE_DESCRIPTION;
- 		   	initializeDescription();
-		}
-	}
-	
+    public static final String ID = "Runesmith:Fortify";
+    public static final String IMG_PATH = "images/cards/Fortify.png";
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+    public static final String NAME = cardStrings.NAME;
+    public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+
+    private static final int COST = 1;
+    private static final int BLOCK_AMT = 6;
+    private static final int UPGRADE_PLUS_BLOCK = 2;
+
+    public Fortify() {
+        super(
+                ID,
+                NAME,
+                IMG_PATH,
+                COST,
+                DESCRIPTION,
+                AbstractCard.CardType.SKILL,
+                AbstractCardEnum.RUNESMITH_BEIGE,
+                AbstractCard.CardRarity.BASIC,
+                AbstractCard.CardTarget.SELF
+        );
+        //this.tags.add(BaseModCardTags.BASIC_DEFEND);
+        this.baseBlock = BLOCK_AMT;
+    }
+
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        AbstractDungeon.actionManager.addToBottom(
+                new GainBlockAction(p, p, this.block)
+        );
+        AbstractDungeon.actionManager.addToBottom(
+                new FortifyAction(this.upgraded)
+        );
+    }
+
+    public AbstractCard makeCopy() {
+        return new Fortify();
+    }
+
+    public void upgrade() {
+        if (!this.upgraded) {
+            upgradeName();
+            upgradeBlock(UPGRADE_PLUS_BLOCK);
+            this.rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
+        }
+    }
+
 }

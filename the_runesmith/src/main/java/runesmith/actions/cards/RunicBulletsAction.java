@@ -9,24 +9,24 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.orbs.EmptyOrbSlot;
 
-public class RunicBulletsAction extends AbstractGameAction{
-	private DamageInfo info = null;
-	private AbstractCreature target;
-	
-	public RunicBulletsAction(AbstractCreature m, DamageInfo info) {
-		this.duration = Settings.ACTION_DUR_FAST;
-		this.info = info;
-		this.target = m;
-	}
+public class RunicBulletsAction extends AbstractGameAction {
+    private DamageInfo info = null;
+    private AbstractCreature target;
 
-	public void update() {
-		if(this.duration == Settings.ACTION_DUR_FAST) {
-			for(AbstractOrb r : AbstractDungeon.player.orbs) {
-				if(!(r instanceof EmptyOrbSlot)) {
-					AbstractDungeon.actionManager.addToTop(new DamageAction(this.target, this.info, AttackEffect.BLUNT_LIGHT, true));
-				}
-			}
-		}
-		tickDuration();
-	}
+    public RunicBulletsAction(AbstractCreature m, DamageInfo info) {
+        this.duration = Settings.ACTION_DUR_FAST;
+        this.info = info;
+        this.target = m;
+    }
+
+    public void update() {
+        if (this.duration == Settings.ACTION_DUR_FAST) {
+            for (AbstractOrb r : AbstractDungeon.player.orbs) {
+                if (!(r instanceof EmptyOrbSlot)) {
+                    AbstractDungeon.actionManager.addToTop(new DamageAction(this.target, this.info, AttackEffect.BLUNT_LIGHT, true));
+                }
+            }
+        }
+        tickDuration();
+    }
 }

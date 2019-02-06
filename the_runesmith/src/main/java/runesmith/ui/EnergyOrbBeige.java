@@ -34,7 +34,7 @@ public class EnergyOrbBeige extends CustomEnergyOrb {
 //    private SpriteBatch sbTmp;
 
     public EnergyOrbBeige() {
-        super((String[])null, (String)null, (float[])null);
+        super((String[]) null, (String) null, (float[]) null);
         this.fbo = new FrameBuffer(Format.RGBA8888, Settings.WIDTH, Settings.HEIGHT, false, false);
         //        this.sbTmp = new SpriteBatch();
     }
@@ -68,8 +68,8 @@ public class EnergyOrbBeige extends CustomEnergyOrb {
                 sb.begin();
                 {
                     sb.setColor(Color.WHITE);
-                    sb.setBlendFunction(-1,-1);//disable spritebatch blending override
-                    Gdx.gl.glBlendFuncSeparate(GL20.GL_SRC_ALPHA,GL20.GL_ONE_MINUS_SRC_ALPHA, GL20.GL_ONE, GL20.GL_ONE_MINUS_SRC_ALPHA);
+                    sb.setBlendFunction(-1, -1);//disable spritebatch blending override
+                    Gdx.gl.glBlendFuncSeparate(GL20.GL_SRC_ALPHA, GL20.GL_ONE_MINUS_SRC_ALPHA, GL20.GL_ONE, GL20.GL_ONE_MINUS_SRC_ALPHA);
                     sb.draw(this.ENERGY_BEIGE_LAYER1, current_x - 128.0F, current_y - 128.0F, 128.0F, 128.0F, 256.0F, 256.0F, ORB_IMG_SCALE, ORB_IMG_SCALE, this.angle1, 0, 0, 256, 256, false, false);
                     sb.draw(this.ENERGY_BEIGE_LAYER2, current_x - 128.0F, current_y - 128.0F, 128.0F, 128.0F, 256.0F, 256.0F, ORB_IMG_SCALE, ORB_IMG_SCALE, this.angle2, 0, 0, 256, 256, false, false);
                     sb.draw(this.ENERGY_BEIGE_LAYER3, current_x - 128.0F, current_y - 128.0F, 128.0F, 128.0F, 256.0F, 256.0F, ORB_IMG_SCALE, ORB_IMG_SCALE, this.angle3, 0, 0, 256, 256, false, false);
@@ -86,7 +86,7 @@ public class EnergyOrbBeige extends CustomEnergyOrb {
             this.fbo.end();
 
             sb.begin();
-            sb.draw(this.fbo.getColorBufferTexture(), 0.0F, (float)(-Settings.HEIGHT) + 2.0F * current_y);
+            sb.draw(this.fbo.getColorBufferTexture(), 0.0F, (float) (-Settings.HEIGHT) + 2.0F * current_y);
             sb.draw(this.ENERGY_BEIGE_LAYER5, current_x - 128.0F, current_y - 128.0F, 128.0F, 128.0F, 256.0F, 256.0F, ORB_IMG_SCALE, ORB_IMG_SCALE, 0.0F, 0, 0, 256, 256, false, false);
             sb.draw(this.ENERGY_BEIGE_LAYER6, current_x - 128.0F, current_y - 128.0F, 128.0F, 128.0F, 256.0F, 256.0F, ORB_IMG_SCALE, ORB_IMG_SCALE, 0.0F, 0, 0, 256, 256, false, false);
         } else {
@@ -101,8 +101,8 @@ public class EnergyOrbBeige extends CustomEnergyOrb {
                 sb.begin();
                 {
                     sb.setColor(Color.WHITE);
-                    sb.setBlendFunction(-1,-1);//disable spritebatch blending overrride
-                    Gdx.gl.glBlendFuncSeparate(GL20.GL_SRC_ALPHA,GL20.GL_ONE_MINUS_SRC_ALPHA, GL20.GL_ONE, GL20.GL_ONE_MINUS_SRC_ALPHA);
+                    sb.setBlendFunction(-1, -1);//disable spritebatch blending overrride
+                    Gdx.gl.glBlendFuncSeparate(GL20.GL_SRC_ALPHA, GL20.GL_ONE_MINUS_SRC_ALPHA, GL20.GL_ONE, GL20.GL_ONE_MINUS_SRC_ALPHA);
                     sb.draw(this.ENERGY_BEIGE_LAYER1D, current_x - 128.0F, current_y - 128.0F, 128.0F, 128.0F, 256.0F, 256.0F, ORB_IMG_SCALE, ORB_IMG_SCALE, this.angle1, 0, 0, 256, 256, false, false);
                     sb.draw(this.ENERGY_BEIGE_LAYER2D, current_x - 128.0F, current_y - 128.0F, 128.0F, 128.0F, 256.0F, 256.0F, ORB_IMG_SCALE, ORB_IMG_SCALE, this.angle2, 0, 0, 256, 256, false, false);
                     sb.draw(this.ENERGY_BEIGE_LAYER3D, current_x - 128.0F, current_y - 128.0F, 128.0F, 128.0F, 256.0F, 256.0F, ORB_IMG_SCALE, ORB_IMG_SCALE, this.angle3, 0, 0, 256, 256, false, false);
@@ -117,7 +117,7 @@ public class EnergyOrbBeige extends CustomEnergyOrb {
             this.fbo.end();
 
             sb.begin();
-            sb.draw((Texture)this.fbo.getColorBufferTexture(), 0.0F, (float)(-Settings.HEIGHT) + 2.0F * current_y);
+            sb.draw((Texture) this.fbo.getColorBufferTexture(), 0.0F, (float) (-Settings.HEIGHT) + 2.0F * current_y);
             sb.draw(this.ENERGY_BEIGE_LAYER5D, current_x - 128.0F, current_y - 128.0F, 128.0F, 128.0F, 256.0F, 256.0F, ORB_IMG_SCALE, ORB_IMG_SCALE, 0.0F, 0, 0, 256, 256, false, false);
             sb.draw(this.ENERGY_BEIGE_LAYER6, current_x - 128.0F, current_y - 128.0F, 128.0F, 128.0F, 256.0F, 256.0F, ORB_IMG_SCALE, ORB_IMG_SCALE, 0.0F, 0, 0, 256, 256, false, false);
         }

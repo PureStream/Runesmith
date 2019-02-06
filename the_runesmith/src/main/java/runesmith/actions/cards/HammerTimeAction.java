@@ -11,37 +11,37 @@ import runesmith.actions.EnhanceCard;
 import static runesmith.patches.CardTagEnum.HAMMER;
 
 public class HammerTimeAction extends AbstractGameAction {
-	
-	private AbstractPlayer p;
-	private int enhanceNums;
-	
-	public HammerTimeAction(boolean upgraded) {
-		this.actionType = AbstractGameAction.ActionType.CARD_MANIPULATION;
-		this.p = AbstractDungeon.player;
-		this.duration = Settings.ACTION_DUR_FAST;
-		enhanceNums = (upgraded) ? 2 : 1;
-	}
-	
-	@Override
-	public void update() {
-		if(this.duration == Settings.ACTION_DUR_FAST) {
-			for (AbstractCard c : p.drawPile.group) {
-				if (c.hasTag(HAMMER)) {
-					EnhanceCard.enhance(c,enhanceNums);
-				}
-			}
-			for (AbstractCard c : p.hand.group) {
-				if (c.hasTag(HAMMER)) {
-					EnhanceCard.enhance(c,enhanceNums);
-					c.superFlash(RunesmithMod.BEIGE);
-					
-				}
-			}
-			for (AbstractCard c : p.discardPile.group) {
-				if (c.hasTag(HAMMER)) EnhanceCard.enhance(c,enhanceNums);
-			}
-		}
-		tickDuration();
-	}
+
+    private AbstractPlayer p;
+    private int enhanceNums;
+
+    public HammerTimeAction(boolean upgraded) {
+        this.actionType = AbstractGameAction.ActionType.CARD_MANIPULATION;
+        this.p = AbstractDungeon.player;
+        this.duration = Settings.ACTION_DUR_FAST;
+        enhanceNums = (upgraded) ? 2 : 1;
+    }
+
+    @Override
+    public void update() {
+        if (this.duration == Settings.ACTION_DUR_FAST) {
+            for (AbstractCard c : p.drawPile.group) {
+                if (c.hasTag(HAMMER)) {
+                    EnhanceCard.enhance(c, enhanceNums);
+                }
+            }
+            for (AbstractCard c : p.hand.group) {
+                if (c.hasTag(HAMMER)) {
+                    EnhanceCard.enhance(c, enhanceNums);
+                    c.superFlash(RunesmithMod.BEIGE);
+
+                }
+            }
+            for (AbstractCard c : p.discardPile.group) {
+                if (c.hasTag(HAMMER)) EnhanceCard.enhance(c, enhanceNums);
+            }
+        }
+        tickDuration();
+    }
 
 }

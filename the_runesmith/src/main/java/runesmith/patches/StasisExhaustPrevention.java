@@ -11,8 +11,8 @@ import runesmith.helpers.AdditionalCardDescriptions;
 import runesmith.vfx.ShowStasisCardAndAddToDiscardEffect;
 
 public class StasisExhaustPrevention {
-	public static final Logger logger = LogManager.getLogger(StasisExhaustPrevention.class.getName());
-	
+    public static final Logger logger = LogManager.getLogger(StasisExhaustPrevention.class.getName());
+
 //	@SpirePatch(clz = CardGroup.class, method = "moveToExhaustPile")
 //	public static class preventExhaust {
 //		public static void Postfix(CardGroup self, AbstractCard c) {
@@ -28,30 +28,30 @@ public class StasisExhaustPrevention {
 //		}
 //	}
 
-	@SpirePatch(clz = CardGroup.class, method = "moveToExhaustPile")
-	public static class preventExhaust{
-		public static SpireReturn Prefix(CardGroup self, AbstractCard c){
-			if(CardStasisStatus.isStasis.get(c)) {
-				//logger.info("Attempting exhaust prevention");
-				CardStasisStatus.isStasis.set(c, false);
-				if (AbstractDungeon.player.hoveredCard == c) {
-					AbstractDungeon.player.releaseCard();
-				}
-				AbstractDungeon.actionManager.removeFromQueue(c);
-				c.unhover();
-				c.untip();
-				c.stopGlowing();
-				self.group.remove(c);
-				//update card description
-				AdditionalCardDescriptions.modifyDescription(c);
-				c.initializeDescription();
-				AbstractDungeon.effectList.add(new ShowStasisCardAndAddToDiscardEffect(c));
-				return SpireReturn.Return(null);
-			}
-			return SpireReturn.Continue();
-		}
+    @SpirePatch(clz = CardGroup.class, method = "moveToExhaustPile")
+    public static class preventExhaust {
+        public static SpireReturn Prefix(CardGroup self, AbstractCard c) {
+            if (CardStasisStatus.isStasis.get(c)) {
+                //logger.info("Attempting exhaust prevention");
+                CardStasisStatus.isStasis.set(c, false);
+                if (AbstractDungeon.player.hoveredCard == c) {
+                    AbstractDungeon.player.releaseCard();
+                }
+                AbstractDungeon.actionManager.removeFromQueue(c);
+                c.unhover();
+                c.untip();
+                c.stopGlowing();
+                self.group.remove(c);
+                //update card description
+                AdditionalCardDescriptions.modifyDescription(c);
+                c.initializeDescription();
+                AbstractDungeon.effectList.add(new ShowStasisCardAndAddToDiscardEffect(c));
+                return SpireReturn.Return(null);
+            }
+            return SpireReturn.Continue();
+        }
 
-	}
+    }
 
 	/*
 	@SpirePatch(clz = CardGroup.class, method = "moveToExhaustPile")

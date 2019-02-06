@@ -1,11 +1,16 @@
 {
-    "modid": "therunesmith",
-    "name": "The Runesmith",
-    "author_list": ["Blizzarre","PureStream"],
-    "description": "Add a new class called The Runesmith",
-    "version": "0.2.0",
-    "sts_version": "",
-    "mts_version": "3.7.5",
-    "dependencies": ["basemod"],
-    "update_json": ""
-  }
+  "modid": "therunesmith",
+  "name": "The Runesmith",
+  "author_list": [
+    "Blizzarre",
+    "PureStream"
+  ],
+  "description": "Add a new class called The Runesmith",
+  "version": "0.2.0",
+  "sts_version": "",
+  "mts_version": "3.7.5",
+  "dependencies": [
+    "basemod"
+  ],
+  "update_json": ""
+}

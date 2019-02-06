@@ -10,15 +10,15 @@ import runesmith.patches.CardStasisStatus;
 import runesmith.patches.EnhanceCountField;
 
 public abstract class AdditionalCardDescriptions {
-	public static final Logger logger = LogManager.getLogger(AdditionalCardDescriptions.class.getName());
-	
-	private static final UIStrings uiStrings1 = CardCrawlGame.languagePack.getUIString("Runesmith:StasisAction");
-	public static final String[] STASIS_TEXT = uiStrings1.TEXT;
-	
-	private static final UIStrings uiStrings2 = CardCrawlGame.languagePack.getUIString("Runesmith:CardEnhanced");
-	public static final String[] ENHANCE_TEXT = uiStrings2.TEXT;
-	
-	
+    public static final Logger logger = LogManager.getLogger(AdditionalCardDescriptions.class.getName());
+
+    private static final UIStrings uiStrings1 = CardCrawlGame.languagePack.getUIString("Runesmith:StasisAction");
+    public static final String[] STASIS_TEXT = uiStrings1.TEXT;
+
+    private static final UIStrings uiStrings2 = CardCrawlGame.languagePack.getUIString("Runesmith:CardEnhanced");
+    public static final String[] ENHANCE_TEXT = uiStrings2.TEXT;
+
+
 //	public static void modifyDescription(AbstractCard c) {
 //		String addString = "";
 //		
@@ -52,42 +52,41 @@ public abstract class AdditionalCardDescriptions {
 //		c.rawDescription = c.rawDescription + addString;
 ////		c.initializeDescription();
 //	}
-	
-	//has less compatibility with other mods that modify card desc
-	public static void modifyDescription(AbstractCard c) {
+
+    //has less compatibility with other mods that modify card desc
+    public static void modifyDescription(AbstractCard c) {
 //		logger.info("updating string");
 
-		String raw = c.rawDescription;
-		
-		raw = raw.replace(" "+ENHANCE_TEXT[0]+".", "");
-		raw = raw.replace(" "+ENHANCE_TEXT[0]+" +"+(EnhanceCountField.enhanceCount.get(c)-1)+".", "");
-		raw = raw.replace(" "+ENHANCE_TEXT[0]+" +"+EnhanceCountField.enhanceCount.get(c)+".", "");
-		
-		raw = raw.replace(" "+STASIS_TEXT[0]+".","");
-		
-		if(!EnhanceCountField.enhanceReset.get(c)) {
-			if(EnhanceCountField.enhanceCount.get(c)==1) {
-				raw = raw+" "+ENHANCE_TEXT[0]+".";
-			}else if(EnhanceCountField.enhanceCount.get(c)>1){
-				raw = raw+" "+ENHANCE_TEXT[0]+" +"+EnhanceCountField.enhanceCount.get(c)+".";
-			}
-		}
-		
-		if(CardStasisStatus.isStasis.get(c)) {
-			raw = raw+" "+STASIS_TEXT[0]+".";
-		}
-		c.rawDescription = raw;
-	}
-	
-	@SpirePatch(cls = "com.megacrit.cardcrawl.cards.AbstractCard", method="initializeDescription")
+        String raw = c.rawDescription;
+
+        raw = raw.replace(" " + ENHANCE_TEXT[0] + ".", "");
+        raw = raw.replace(" " + ENHANCE_TEXT[0] + " +" + (EnhanceCountField.enhanceCount.get(c) - 1) + ".", "");
+        raw = raw.replace(" " + ENHANCE_TEXT[0] + " +" + EnhanceCountField.enhanceCount.get(c) + ".", "");
+
+        raw = raw.replace(" " + STASIS_TEXT[0] + ".", "");
+
+        if (!EnhanceCountField.enhanceReset.get(c)) {
+            if (EnhanceCountField.enhanceCount.get(c) == 1) {
+                raw = raw + " " + ENHANCE_TEXT[0] + ".";
+            } else if (EnhanceCountField.enhanceCount.get(c) > 1) {
+                raw = raw + " " + ENHANCE_TEXT[0] + " +" + EnhanceCountField.enhanceCount.get(c) + ".";
+            }
+        }
+
+        if (CardStasisStatus.isStasis.get(c)) {
+            raw = raw + " " + STASIS_TEXT[0] + ".";
+        }
+        c.rawDescription = raw;
+    }
+
+    @SpirePatch(cls = "com.megacrit.cardcrawl.cards.AbstractCard", method = "initializeDescription")
     public static class updateDesc {
-	        public static void Prefix(AbstractCard self)
-	        {
+        public static void Prefix(AbstractCard self) {
 /*	        	if(!EnhanceCountField.enhanceCount.get(self).equals(EnhanceCountField.lastEnhanceCount.get(self))){
 					EnhanceCountField.lastEnhanceCount.set(self,EnhanceCountField.enhanceCount.get(self));
 				}*/
-				if(EnhanceCountField.enhanceCount.get(self) > 0 || CardStasisStatus.isStasis.get(self))
-	        		AdditionalCardDescriptions.modifyDescription(self);
-	        }
+            if (EnhanceCountField.enhanceCount.get(self) > 0 || CardStasisStatus.isStasis.get(self))
+                AdditionalCardDescriptions.modifyDescription(self);
+        }
     }
 }

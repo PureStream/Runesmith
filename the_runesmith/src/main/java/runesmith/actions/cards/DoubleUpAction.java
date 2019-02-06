@@ -12,87 +12,87 @@ import runesmith.actions.EnhanceCard;
 
 import java.util.ArrayList;
 
-public class DoubleUpAction extends AbstractGameAction{
-	private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("Runesmith:DoubleUpAction");
-	public static final String[] TEXT = uiStrings.TEXT;
-	
-	private AbstractPlayer p;
-	private ArrayList<AbstractCard> cannotUpgrade = new ArrayList<>();
-	private int cardNums;
-	
-	public DoubleUpAction(int cardNums) {
-		this.actionType = AbstractGameAction.ActionType.CARD_MANIPULATION;
-		this.p = AbstractDungeon.player;
-		this.duration = Settings.ACTION_DUR_FAST;
-		this.cardNums = cardNums;
-	}
-	
-	public void update() {
-		if(this.duration == Settings.ACTION_DUR_FAST) {
+public class DoubleUpAction extends AbstractGameAction {
+    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("Runesmith:DoubleUpAction");
+    public static final String[] TEXT = uiStrings.TEXT;
 
-			for (AbstractCard c : this.p.hand.group) {
-				if (!c.canUpgrade()) {
-					this.cannotUpgrade.add(c);
-				}
-			}
-	
-			if(this.cannotUpgrade.size() == this.p.hand.group.size()) {
-				this.isDone = true;
-				return;
-			}
-			
-			if(this.p.hand.group.size() - this.cannotUpgrade.size() <= cardNums) {
-				for(AbstractCard c : this.p.hand.group) {
-					if(c.canUpgrade()) {
-						c.upgrade();
-						EnhanceCard.enhance(c);
-						c.superFlash(RunesmithMod.BEIGE);
-					}
-				}
-				this.isDone = true;
-				return;
-			}
-			
-			this.p.hand.group.removeAll(this.cannotUpgrade);
-			
-			if (this.p.hand.group.size() > cardNums) {	
-				AbstractDungeon.handCardSelectScreen.open(TEXT[0], cardNums, false, false, false, false);
-				tickDuration();
-				return;
-			}
-			
-			if(this.p.hand.group.size() <= cardNums) {
-				for (AbstractCard c : this.p.hand.group) {
-					c.upgrade();
-					EnhanceCard.enhance(c);
-					this.p.hand.getTopCard().superFlash(RunesmithMod.BEIGE);
-				}
-				returnCards();
-				this.isDone = true;
-			}
-			
-		}
-		
-		if(!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {
-			for(AbstractCard c : AbstractDungeon.handCardSelectScreen.selectedCards.group) {
-				c.upgrade();
-				EnhanceCard.enhance(c);
-				c.superFlash(RunesmithMod.BEIGE);
-				this.p.hand.addToTop(c);
-			}
-			returnCards();
-			AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;
-			AbstractDungeon.handCardSelectScreen.selectedCards.group.clear();
-			this.isDone = true;
-		}
-		
-		tickDuration();
-	}
-	
-	private void returnCards() {
-		for (AbstractCard c : this.cannotUpgrade) {
-			this.p.hand.addToTop(c);
-		}
-		this.p.hand.refreshHandLayout();
-	}
+    private AbstractPlayer p;
+    private ArrayList<AbstractCard> cannotUpgrade = new ArrayList<>();
+    private int cardNums;
+
+    public DoubleUpAction(int cardNums) {
+        this.actionType = AbstractGameAction.ActionType.CARD_MANIPULATION;
+        this.p = AbstractDungeon.player;
+        this.duration = Settings.ACTION_DUR_FAST;
+        this.cardNums = cardNums;
+    }
+
+    public void update() {
+        if (this.duration == Settings.ACTION_DUR_FAST) {
+
+            for (AbstractCard c : this.p.hand.group) {
+                if (!c.canUpgrade()) {
+                    this.cannotUpgrade.add(c);
+                }
+            }
+
+            if (this.cannotUpgrade.size() == this.p.hand.group.size()) {
+                this.isDone = true;
+                return;
+            }
+
+            if (this.p.hand.group.size() - this.cannotUpgrade.size() <= cardNums) {
+                for (AbstractCard c : this.p.hand.group) {
+                    if (c.canUpgrade()) {
+                        c.upgrade();
+                        EnhanceCard.enhance(c);
+                        c.superFlash(RunesmithMod.BEIGE);
+                    }
+                }
+                this.isDone = true;
+                return;
+            }
+
+            this.p.hand.group.removeAll(this.cannotUpgrade);
+
+            if (this.p.hand.group.size() > cardNums) {
+                AbstractDungeon.handCardSelectScreen.open(TEXT[0], cardNums, false, false, false, false);
+                tickDuration();
+                return;
+            }
+
+            if (this.p.hand.group.size() <= cardNums) {
+                for (AbstractCard c : this.p.hand.group) {
+                    c.upgrade();
+                    EnhanceCard.enhance(c);
+                    this.p.hand.getTopCard().superFlash(RunesmithMod.BEIGE);
+                }
+                returnCards();
+                this.isDone = true;
+            }
+
+        }
+
+        if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {
+            for (AbstractCard c : AbstractDungeon.handCardSelectScreen.selectedCards.group) {
+                c.upgrade();
+                EnhanceCard.enhance(c);
+                c.superFlash(RunesmithMod.BEIGE);
+                this.p.hand.addToTop(c);
+            }
+            returnCards();
+            AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;
+            AbstractDungeon.handCardSelectScreen.selectedCards.group.clear();
+            this.isDone = true;
+        }
+
+        tickDuration();
+    }
+
+    private void returnCards() {
+        for (AbstractCard c : this.cannotUpgrade) {
+            this.p.hand.addToTop(c);
+        }
+        this.p.hand.refreshHandLayout();
+    }
 }

@@ -15,58 +15,56 @@ import runesmith.actions.EnhanceCard;
 
 public class GrindstonePower extends AbstractPower {
 
-	public static final String POWER_ID = "Runesmith:GrindstonePower";
-	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
-	public static final String NAME = powerStrings.NAME;
-	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
+    public static final String POWER_ID = "Runesmith:GrindstonePower";
+    private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
+    public static final String NAME = powerStrings.NAME;
+    public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-	private boolean isAfterFirstUsed = false;
-	
-	public GrindstonePower(AbstractCreature owner, int amount) {
-		this.name = NAME;
-		this.ID = POWER_ID;
-		this.owner = owner;
-		this.amount = amount;
-		updateDescription();
-		this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/Grindstone.png"), 0, 0, 84, 84);  //<-------- NEED SOME IMG
-	    this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/GrindstoneSmall.png"), 0, 0, 32, 32); //<-------- NEED SOME IMG
-	}
+    private boolean isAfterFirstUsed = false;
 
-	public void stackPower(int stackAmount) {
-		this.fontScale = 8.0F;
-		this.amount += stackAmount;
-		if (this.amount <= 0) {
-			AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, "Runesmith:GrindstonePower"));
-		}
-	}
-	
-	public void onAfterUseCard(AbstractCard card, UseCardAction action) {
-		if (isAfterFirstUsed) {
-			if (card.canUpgrade()) {
-				flash();
-				card.upgrade();
-			}
-			else if (EnhanceCard.canEnhance(card)) {
-				flash();
-				EnhanceCard.enhance(card);
-			}
-		}
-		else
-			isAfterFirstUsed = true;
-	}
-	
-	public void atEndOfTurn(boolean isPlayer) {
-		if (isPlayer) {
-			AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, "Runesmith:GrindstonePower", 1));
-		}
-	}
-	
-	public void updateDescription() {
-		if(this.amount == 1) {
-			this.description = DESCRIPTIONS[0];
-		}else {
-			this.description = DESCRIPTIONS[1]+this.amount+DESCRIPTIONS[2];
-		}
-	}
-	
+    public GrindstonePower(AbstractCreature owner, int amount) {
+        this.name = NAME;
+        this.ID = POWER_ID;
+        this.owner = owner;
+        this.amount = amount;
+        updateDescription();
+        this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/Grindstone.png"), 0, 0, 84, 84);  //<-------- NEED SOME IMG
+        this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/GrindstoneSmall.png"), 0, 0, 32, 32); //<-------- NEED SOME IMG
+    }
+
+    public void stackPower(int stackAmount) {
+        this.fontScale = 8.0F;
+        this.amount += stackAmount;
+        if (this.amount <= 0) {
+            AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, "Runesmith:GrindstonePower"));
+        }
+    }
+
+    public void onAfterUseCard(AbstractCard card, UseCardAction action) {
+        if (isAfterFirstUsed) {
+            if (card.canUpgrade()) {
+                flash();
+                card.upgrade();
+            } else if (EnhanceCard.canEnhance(card)) {
+                flash();
+                EnhanceCard.enhance(card);
+            }
+        } else
+            isAfterFirstUsed = true;
+    }
+
+    public void atEndOfTurn(boolean isPlayer) {
+        if (isPlayer) {
+            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, "Runesmith:GrindstonePower", 1));
+        }
+    }
+
+    public void updateDescription() {
+        if (this.amount == 1) {
+            this.description = DESCRIPTIONS[0];
+        } else {
+            this.description = DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];
+        }
+    }
+
 }

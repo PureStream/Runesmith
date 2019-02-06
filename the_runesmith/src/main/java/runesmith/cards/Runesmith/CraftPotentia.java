@@ -17,68 +17,68 @@ import static runesmith.patches.CardTagEnum.CRAFT;
 
 public class CraftPotentia extends AbstractRunicCard {
 
-	public static final String ID = "Runesmith:CraftPotentia";
-	public static final String IMG_PATH = "images/cards/CraftPotentia.png";
-	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-	public static final String NAME = cardStrings.NAME;
-	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
-	private static final int COST = 1;
-	private static final int POTENCY = 2;
-	private static final int UPG_POTENCY = 1;
-	private static final int ELEMENT_AMT = 2;
-	
-	public CraftPotentia() {
-		super(
-			ID,
-			NAME,
-			IMG_PATH,
-			COST,
-			DESCRIPTION,
-			AbstractCard.CardType.SKILL,
-			AbstractCardEnum.RUNESMITH_BEIGE,
-			AbstractCard.CardRarity.UNCOMMON,
-			AbstractCard.CardTarget.SELF
-		);
-		
-		this.potency = this.basePotency = POTENCY;
-		this.tags.add(CRAFT);
+    public static final String ID = "Runesmith:CraftPotentia";
+    public static final String IMG_PATH = "images/cards/CraftPotentia.png";
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+    public static final String NAME = cardStrings.NAME;
+    public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+    public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
+    private static final int COST = 1;
+    private static final int POTENCY = 2;
+    private static final int UPG_POTENCY = 1;
+    private static final int ELEMENT_AMT = 2;
 
-	}
+    public CraftPotentia() {
+        super(
+                ID,
+                NAME,
+                IMG_PATH,
+                COST,
+                DESCRIPTION,
+                AbstractCard.CardType.SKILL,
+                AbstractCardEnum.RUNESMITH_BEIGE,
+                AbstractCard.CardRarity.UNCOMMON,
+                AbstractCard.CardTarget.SELF
+        );
 
-	public void applyPowers() {
-		super.applyPowers();
-		checkElements(ELEMENT_AMT, ELEMENT_AMT, ELEMENT_AMT, true);
-	}
-	
-	public void use(AbstractPlayer p, AbstractMonster m) {
+        this.potency = this.basePotency = POTENCY;
+        this.tags.add(CRAFT);
 
-		if (checkElements(ELEMENT_AMT,ELEMENT_AMT,ELEMENT_AMT, false, true)) {
-			RuneOrb r = null;
-			for(AbstractOrb o : p.orbs) {
-				if(o instanceof RuneOrb) {
-					r = (RuneOrb)o;
-					break;
-				}
-			}
-			if(r != null) {
-				AbstractDungeon.actionManager.addToBottom(new RemoveRuneAction(r));
-			}
-			AbstractDungeon.actionManager.addToBottom(
-					new RuneChannelAction(
-							new PotentiaRune(this.potency)));
-		}
-	}
-	
-	public AbstractCard makeCopy() {
-		return new CraftPotentia();
-	}
-	
-	public void upgrade() {
-		if (!this.upgraded) {
-		  upgradeName();
-		  upgradePotency(UPG_POTENCY);
-		}
-	}
-	
+    }
+
+    public void applyPowers() {
+        super.applyPowers();
+        checkElements(ELEMENT_AMT, ELEMENT_AMT, ELEMENT_AMT, true);
+    }
+
+    public void use(AbstractPlayer p, AbstractMonster m) {
+
+        if (checkElements(ELEMENT_AMT, ELEMENT_AMT, ELEMENT_AMT, false, true)) {
+            RuneOrb r = null;
+            for (AbstractOrb o : p.orbs) {
+                if (o instanceof RuneOrb) {
+                    r = (RuneOrb) o;
+                    break;
+                }
+            }
+            if (r != null) {
+                AbstractDungeon.actionManager.addToBottom(new RemoveRuneAction(r));
+            }
+            AbstractDungeon.actionManager.addToBottom(
+                    new RuneChannelAction(
+                            new PotentiaRune(this.potency)));
+        }
+    }
+
+    public AbstractCard makeCopy() {
+        return new CraftPotentia();
+    }
+
+    public void upgrade() {
+        if (!this.upgraded) {
+            upgradeName();
+            upgradePotency(UPG_POTENCY);
+        }
+    }
+
 }

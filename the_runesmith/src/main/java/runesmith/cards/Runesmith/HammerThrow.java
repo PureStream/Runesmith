@@ -16,59 +16,59 @@ import runesmith.patches.AbstractCardEnum;
 import static runesmith.patches.CardTagEnum.HAMMER;
 
 public class HammerThrow extends CustomCard {
-	public static final String ID = "Runesmith:HammerThrow";
-	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-	public static final String NAME = cardStrings.NAME;
-	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
-	public static final String IMG_PATH = "images/cards/HammerThrow.png"; //<-------------- need some img
-	private static final int COST = 1;
-	private static final int ATTACK_DMG = 6;
-	private static final int UPGRADE_PLUS_DMG = 1;
-	private static final int DRAW_AMT = 1;
-	private static final int UPGRADE_DRAW_AMT = 1;
+    public static final String ID = "Runesmith:HammerThrow";
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+    public static final String NAME = cardStrings.NAME;
+    public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+    public static final String IMG_PATH = "images/cards/HammerThrow.png"; //<-------------- need some img
+    private static final int COST = 1;
+    private static final int ATTACK_DMG = 6;
+    private static final int UPGRADE_PLUS_DMG = 1;
+    private static final int DRAW_AMT = 1;
+    private static final int UPGRADE_DRAW_AMT = 1;
 
-	public HammerThrow() {
-		super(
-			ID,
-			NAME,
-			IMG_PATH,
-			COST,
-			DESCRIPTION,
-			CardType.ATTACK,
-			AbstractCardEnum.RUNESMITH_BEIGE,
-			CardRarity.COMMON,
-			CardTarget.ENEMY
-		);
-		this.baseDamage = ATTACK_DMG;
-		this.baseMagicNumber = this.magicNumber = DRAW_AMT;
-		this.tags.add(HAMMER);
-	}
+    public HammerThrow() {
+        super(
+                ID,
+                NAME,
+                IMG_PATH,
+                COST,
+                DESCRIPTION,
+                CardType.ATTACK,
+                AbstractCardEnum.RUNESMITH_BEIGE,
+                CardRarity.COMMON,
+                CardTarget.ENEMY
+        );
+        this.baseDamage = ATTACK_DMG;
+        this.baseMagicNumber = this.magicNumber = DRAW_AMT;
+        this.tags.add(HAMMER);
+    }
 
-	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(
-			new DamageAction(
-				m,
-				new DamageInfo(p, this.damage, this.damageTypeForTurn),
-				AbstractGameAction.AttackEffect.BLUNT_HEAVY
-			)
-		);
-		AbstractDungeon.actionManager.addToTop(
-				new UpgradeDrawAction(p, this.magicNumber)
-				);
-	}
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        AbstractDungeon.actionManager.addToBottom(
+                new DamageAction(
+                        m,
+                        new DamageInfo(p, this.damage, this.damageTypeForTurn),
+                        AbstractGameAction.AttackEffect.BLUNT_HEAVY
+                )
+        );
+        AbstractDungeon.actionManager.addToTop(
+                new UpgradeDrawAction(p, this.magicNumber)
+        );
+    }
 
-	public AbstractCard makeCopy() {
-		return new HammerThrow();
-	}
+    public AbstractCard makeCopy() {
+        return new HammerThrow();
+    }
 
-	public void upgrade() {
-		if (!this.upgraded) {
-		  upgradeName();
-		  upgradeDamage(UPGRADE_PLUS_DMG);
-		  upgradeMagicNumber(UPGRADE_DRAW_AMT);
-		  this.rawDescription = UPGRADE_DESCRIPTION;
-	   	initializeDescription();
-		}
-	}
+    public void upgrade() {
+        if (!this.upgraded) {
+            upgradeName();
+            upgradeDamage(UPGRADE_PLUS_DMG);
+            upgradeMagicNumber(UPGRADE_DRAW_AMT);
+            this.rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
+        }
+    }
 }

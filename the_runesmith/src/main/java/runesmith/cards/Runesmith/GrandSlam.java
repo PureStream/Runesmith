@@ -14,51 +14,51 @@ import runesmith.actions.cards.GrandSlamAction;
 import runesmith.patches.AbstractCardEnum;
 
 public class GrandSlam extends CustomCard {
-	public static final String ID = "Runesmith:GrandSlam";
-	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-	public static final String NAME = cardStrings.NAME;
-	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
-	public static final String IMG_PATH = "images/cards/GrandSlam.png"; //<-------------- need some img
-	private static final int COST = 2;
-	private static final int ATTACK_DMG = 13;
+    public static final String ID = "Runesmith:GrandSlam";
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+    public static final String NAME = cardStrings.NAME;
+    public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+    public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
+    public static final String IMG_PATH = "images/cards/GrandSlam.png"; //<-------------- need some img
+    private static final int COST = 2;
+    private static final int ATTACK_DMG = 13;
 
-	public GrandSlam() {
-		super(
-			ID,
-			NAME,
-			IMG_PATH,
-			COST,
-			DESCRIPTION,
-			CardType.ATTACK,
-			AbstractCardEnum.RUNESMITH_BEIGE,
-			CardRarity.RARE,
-			CardTarget.ENEMY
-		);
-		this.baseDamage = this.damage = ATTACK_DMG;
-	}
+    public GrandSlam() {
+        super(
+                ID,
+                NAME,
+                IMG_PATH,
+                COST,
+                DESCRIPTION,
+                CardType.ATTACK,
+                AbstractCardEnum.RUNESMITH_BEIGE,
+                CardRarity.RARE,
+                CardTarget.ENEMY
+        );
+        this.baseDamage = this.damage = ATTACK_DMG;
+    }
 
-	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(
-			new DamageAction(
-				m,
-				new DamageInfo(p, this.damage, this.damageTypeForTurn),
-				AbstractGameAction.AttackEffect.BLUNT_HEAVY
-			)
-		);
-		AbstractDungeon.actionManager.addToBottom(
-				new GrandSlamAction(upgraded));
-	}
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        AbstractDungeon.actionManager.addToBottom(
+                new DamageAction(
+                        m,
+                        new DamageInfo(p, this.damage, this.damageTypeForTurn),
+                        AbstractGameAction.AttackEffect.BLUNT_HEAVY
+                )
+        );
+        AbstractDungeon.actionManager.addToBottom(
+                new GrandSlamAction(upgraded));
+    }
 
-	public AbstractCard makeCopy() {
-		return new GrandSlam();
-	}
+    public AbstractCard makeCopy() {
+        return new GrandSlam();
+    }
 
-	public void upgrade() {
-		if (!this.upgraded) {
-		  upgradeName();
-		  this.rawDescription = DESCRIPTION_UPG;
-		  initializeDescription();
-		}
-	}
+    public void upgrade() {
+        if (!this.upgraded) {
+            upgradeName();
+            this.rawDescription = DESCRIPTION_UPG;
+            initializeDescription();
+        }
+    }
 }

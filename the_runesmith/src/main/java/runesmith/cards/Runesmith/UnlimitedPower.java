@@ -12,44 +12,44 @@ import runesmith.patches.AbstractCardEnum;
 import runesmith.powers.UnlimitedPowerPower;
 
 public class UnlimitedPower extends CustomCard {
-	public static final String ID = "Runesmith:UnlimitedPower";
-	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-	public static final String NAME = cardStrings.NAME;
-	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
-	public static final String IMG_PATH = "images/cards/UnlimitedPower.png"; //<-------------- need some img
-	private static final int COST = 2;
+    public static final String ID = "Runesmith:UnlimitedPower";
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+    public static final String NAME = cardStrings.NAME;
+    public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+    public static final String IMG_PATH = "images/cards/UnlimitedPower.png"; //<-------------- need some img
+    private static final int COST = 2;
 
-	public UnlimitedPower() {
-		super(
-			ID,
-			NAME,
-			IMG_PATH,
-			COST,
-			DESCRIPTION,
-			CardType.POWER,
-			AbstractCardEnum.RUNESMITH_BEIGE,
-			CardRarity.RARE,
-			CardTarget.SELF
-		);
-	}
+    public UnlimitedPower() {
+        super(
+                ID,
+                NAME,
+                IMG_PATH,
+                COST,
+                DESCRIPTION,
+                CardType.POWER,
+                AbstractCardEnum.RUNESMITH_BEIGE,
+                CardRarity.RARE,
+                CardTarget.SELF
+        );
+    }
 
-	public void use(AbstractPlayer p, AbstractMonster m) {
-		if (!p.hasPower("UnlimitedPowerPower"))
-			AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, 
-					new UnlimitedPowerPower(p)));
-	}
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        if (!p.hasPower("UnlimitedPowerPower"))
+            AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p,
+                    new UnlimitedPowerPower(p)));
+    }
 
-	public AbstractCard makeCopy() {
-		return new UnlimitedPower();
-	}
+    public AbstractCard makeCopy() {
+        return new UnlimitedPower();
+    }
 
-	public void upgrade() {
-		if (!this.upgraded) {
-			upgradeName();
-			this.isInnate = true;
-			this.rawDescription = UPGRADE_DESCRIPTION;
-			initializeDescription();
-		}
-	}
+    public void upgrade() {
+        if (!this.upgraded) {
+            upgradeName();
+            this.isInnate = true;
+            this.rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
+        }
+    }
 }

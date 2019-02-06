@@ -28,7 +28,7 @@ public class Locket extends CustomRelic {
 
     public void atPreBattle() {
         AbstractPlayer p = AbstractDungeon.player;
-        if (p.currentHealth > p.maxHealth*0.15) {
+        if (p.currentHealth > p.maxHealth * 0.15) {
             isAvailable = true;
             this.pulse = true;
             beginPulse();
@@ -37,7 +37,7 @@ public class Locket extends CustomRelic {
 
     public int onPlayerHeal(int healAmount) {
         AbstractPlayer p = AbstractDungeon.player;
-        if (p.currentHealth+healAmount > p.maxHealth*0.15 && !isAvailable && !isUsedThisCombat && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
+        if (p.currentHealth + healAmount > p.maxHealth * 0.15 && !isAvailable && !isUsedThisCombat && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
             isAvailable = true;
             this.pulse = true;
             beginPulse();
@@ -47,7 +47,7 @@ public class Locket extends CustomRelic {
 
     public void onLoseHp(int damageAmount) {
         AbstractPlayer p = AbstractDungeon.player;
-        if ((AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) && isAvailable && !isUsedThisCombat && p.currentHealth-damageAmount < p.maxHealth*0.15) {
+        if ((AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) && isAvailable && !isUsedThisCombat && p.currentHealth - damageAmount < p.maxHealth * 0.15) {
             flash();
             this.pulse = false;
             AbstractCard lastStand = new LastStand();

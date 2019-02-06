@@ -9,46 +9,47 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 
 public class PrismaticRune extends RuneOrb {
-	
-	public PrismaticRune(boolean upgraded) {
-		super( "Prismatic",
-				upgraded,
-				0);
-	}
-	
-	@Override
-	public void onStartOfTurn() {
-		this.activateEndOfTurnEffect();
-		AbstractCard tmp = AbstractDungeon.returnTrulyRandomCardInCombat().makeCopy();
-		if (upgraded) tmp.upgrade();
-		AbstractDungeon.actionManager.addToBottom(
-				new MakeTempCardInHandAction(tmp, false));
-	}
-	
-	@Override
-	public void onBreak() {
-		AbstractCard tmp = AbstractDungeon.returnTrulyRandomCardInCombat().makeCopy();
-		if (upgraded) tmp.upgrade();
-		AbstractDungeon.actionManager.addToTop(
-				new MakeTempCardInHandAction(tmp, false));
-		tmp = AbstractDungeon.returnTrulyRandomCardInCombat().makeCopy();
-		if (upgraded) tmp.upgrade();
-		AbstractDungeon.actionManager.addToTop(
-				new MakeTempCardInHandAction(tmp, false));
-		this.activateEffect();
-	}
 
-	@Override
-	public AbstractOrb makeCopy() { return new PrismaticRune(upgraded); }
-	
-	@Override
-	protected void renderText(SpriteBatch sb)
-	{
-		if (this.upgraded) {
-			//render upgrade +
-			FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, 
-					"+", this.cX + NUM_X_OFFSET, this.cY + this.bobEffect.y / 2.0F + NUM_Y_OFFSET ,
-					Color.GREEN.cpy(), this.fontScale);
-		}
-	}
+    public PrismaticRune(boolean upgraded) {
+        super("Prismatic",
+                upgraded,
+                0);
+    }
+
+    @Override
+    public void onStartOfTurn() {
+        this.activateEndOfTurnEffect();
+        AbstractCard tmp = AbstractDungeon.returnTrulyRandomCardInCombat().makeCopy();
+        if (upgraded) tmp.upgrade();
+        AbstractDungeon.actionManager.addToBottom(
+                new MakeTempCardInHandAction(tmp, false));
+    }
+
+    @Override
+    public void onBreak() {
+        AbstractCard tmp = AbstractDungeon.returnTrulyRandomCardInCombat().makeCopy();
+        if (upgraded) tmp.upgrade();
+        AbstractDungeon.actionManager.addToTop(
+                new MakeTempCardInHandAction(tmp, false));
+        tmp = AbstractDungeon.returnTrulyRandomCardInCombat().makeCopy();
+        if (upgraded) tmp.upgrade();
+        AbstractDungeon.actionManager.addToTop(
+                new MakeTempCardInHandAction(tmp, false));
+        this.activateEffect();
+    }
+
+    @Override
+    public AbstractOrb makeCopy() {
+        return new PrismaticRune(upgraded);
+    }
+
+    @Override
+    protected void renderText(SpriteBatch sb) {
+        if (this.upgraded) {
+            //render upgrade +
+            FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L,
+                    "+", this.cX + NUM_X_OFFSET, this.cY + this.bobEffect.y / 2.0F + NUM_Y_OFFSET,
+                    Color.GREEN.cpy(), this.fontScale);
+        }
+    }
 }

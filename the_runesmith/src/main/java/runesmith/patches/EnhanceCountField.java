@@ -4,9 +4,9 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireField;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 
-@SpirePatch(clz=AbstractCard.class, method=SpirePatch.CLASS)
+@SpirePatch(clz = AbstractCard.class, method = SpirePatch.CLASS)
 public class EnhanceCountField {
-	public static SpireField<Integer> enhanceCount = new SpireField<Integer>(() -> 0);
-	public static SpireField<Boolean> enhanceReset = new SpireField<Boolean>(() -> false);
-	public static SpireField<Integer> lastEnhance = new SpireField<>(() -> 0);
+    public static SpireField<Integer> enhanceCount = new SpireField<Integer>(() -> 0);
+    public static SpireField<Boolean> enhanceReset = new SpireField<Boolean>(() -> false);
+    public static SpireField<Integer> lastEnhance = new SpireField<>(() -> 0);
 }

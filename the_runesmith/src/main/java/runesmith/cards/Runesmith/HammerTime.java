@@ -16,54 +16,54 @@ import runesmith.patches.AbstractCardEnum;
 import static runesmith.patches.CardTagEnum.HAMMER;
 
 public class HammerTime extends CustomCard {
-	public static final String ID = "Runesmith:HammerTime";
-	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-	public static final String NAME = cardStrings.NAME;
-	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
-	public static final String IMG_PATH = "images/cards/HammerTime.png"; //<-------------- need some img
-	private static final int COST = 2;
-	private static final int ATTACK_DMG = 14;
-	private static final int UPGRADE_ATTACK_DMG = 1;
+    public static final String ID = "Runesmith:HammerTime";
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+    public static final String NAME = cardStrings.NAME;
+    public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+    public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
+    public static final String IMG_PATH = "images/cards/HammerTime.png"; //<-------------- need some img
+    private static final int COST = 2;
+    private static final int ATTACK_DMG = 14;
+    private static final int UPGRADE_ATTACK_DMG = 1;
 
-	public HammerTime() {
-		super(
-			ID,
-			NAME,
-			IMG_PATH,
-			COST,
-			DESCRIPTION,
-			CardType.ATTACK,
-			AbstractCardEnum.RUNESMITH_BEIGE,
-			CardRarity.UNCOMMON,
-			CardTarget.ENEMY
-		);
-		this.baseDamage = ATTACK_DMG;
-		this.tags.add(HAMMER);
-	}
+    public HammerTime() {
+        super(
+                ID,
+                NAME,
+                IMG_PATH,
+                COST,
+                DESCRIPTION,
+                CardType.ATTACK,
+                AbstractCardEnum.RUNESMITH_BEIGE,
+                CardRarity.UNCOMMON,
+                CardTarget.ENEMY
+        );
+        this.baseDamage = ATTACK_DMG;
+        this.tags.add(HAMMER);
+    }
 
-	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(
-			new DamageAction(
-				m,
-				new DamageInfo(p, this.damage, this.damageTypeForTurn),
-				AbstractGameAction.AttackEffect.BLUNT_HEAVY
-			)
-		);
-		AbstractDungeon.actionManager.addToBottom(
-				new HammerTimeAction(upgraded));
-	}
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        AbstractDungeon.actionManager.addToBottom(
+                new DamageAction(
+                        m,
+                        new DamageInfo(p, this.damage, this.damageTypeForTurn),
+                        AbstractGameAction.AttackEffect.BLUNT_HEAVY
+                )
+        );
+        AbstractDungeon.actionManager.addToBottom(
+                new HammerTimeAction(upgraded));
+    }
 
-	public AbstractCard makeCopy() {
-		return new HammerTime();
-	}
+    public AbstractCard makeCopy() {
+        return new HammerTime();
+    }
 
-	public void upgrade() {
-		if (!this.upgraded) {
-		  upgradeName();
-		  upgradeDamage(UPGRADE_ATTACK_DMG);
-		  this.rawDescription = DESCRIPTION_UPG;
-		  initializeDescription();
-		}
-	}
+    public void upgrade() {
+        if (!this.upgraded) {
+            upgradeName();
+            upgradeDamage(UPGRADE_ATTACK_DMG);
+            this.rawDescription = DESCRIPTION_UPG;
+            initializeDescription();
+        }
+    }
 }

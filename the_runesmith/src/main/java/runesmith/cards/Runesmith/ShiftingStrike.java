@@ -14,60 +14,60 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import runesmith.actions.DowngradeCardInHandAction;
 import runesmith.patches.AbstractCardEnum;
 
-public class ShiftingStrike extends CustomCard{
-	public static final String ID = "Runesmith:ShiftingStrike";
-	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-	public static final String NAME = cardStrings.NAME;
-	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	public static final String IMG_PATH = "images/cards/ShiftingStrike.png"; //<-------------- need some img
-	private static final int COST = 1;
-	private static final int ATTACK_DMG = 9;
-	private static final int UPGRADE_PLUS_DMG = 4;
-	
-	public ShiftingStrike() {
-		super(
-			ID,
-			NAME,
-			IMG_PATH,
-			COST,
-			DESCRIPTION,
-			CardType.ATTACK,
-			AbstractCardEnum.RUNESMITH_BEIGE,
-			CardRarity.UNCOMMON,
-			CardTarget.ENEMY
-		);
-		this.baseDamage = ATTACK_DMG;
-	}
-	
-	public AbstractCard makeCopy() {
-		return new ShiftingStrike();
-	}
+public class ShiftingStrike extends CustomCard {
+    public static final String ID = "Runesmith:ShiftingStrike";
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+    public static final String NAME = cardStrings.NAME;
+    public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+    public static final String IMG_PATH = "images/cards/ShiftingStrike.png"; //<-------------- need some img
+    private static final int COST = 1;
+    private static final int ATTACK_DMG = 9;
+    private static final int UPGRADE_PLUS_DMG = 4;
 
-	@Override
-	public void upgrade() {
-		if (!this.upgraded) {
-			  upgradeName();
-			  upgradeDamage(UPGRADE_PLUS_DMG);
-			}
-	}
+    public ShiftingStrike() {
+        super(
+                ID,
+                NAME,
+                IMG_PATH,
+                COST,
+                DESCRIPTION,
+                CardType.ATTACK,
+                AbstractCardEnum.RUNESMITH_BEIGE,
+                CardRarity.UNCOMMON,
+                CardTarget.ENEMY
+        );
+        this.baseDamage = ATTACK_DMG;
+    }
 
-	@Override
-	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(
-				new DamageAction(
-					m,
-					new DamageInfo(p, this.damage, this.damageTypeForTurn),
-					AbstractGameAction.AttackEffect.BLUNT_LIGHT
-				)
-			);
-		
-		AbstractDungeon.actionManager.addToBottom(
-				new DowngradeCardInHandAction(p, false)
-		);
-		AbstractDungeon.actionManager.addToBottom(
-				new ArmamentsAction(false)
-		);
-	}
-	
-	
+    public AbstractCard makeCopy() {
+        return new ShiftingStrike();
+    }
+
+    @Override
+    public void upgrade() {
+        if (!this.upgraded) {
+            upgradeName();
+            upgradeDamage(UPGRADE_PLUS_DMG);
+        }
+    }
+
+    @Override
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        AbstractDungeon.actionManager.addToBottom(
+                new DamageAction(
+                        m,
+                        new DamageInfo(p, this.damage, this.damageTypeForTurn),
+                        AbstractGameAction.AttackEffect.BLUNT_LIGHT
+                )
+        );
+
+        AbstractDungeon.actionManager.addToBottom(
+                new DowngradeCardInHandAction(p, false)
+        );
+        AbstractDungeon.actionManager.addToBottom(
+                new ArmamentsAction(false)
+        );
+    }
+
+
 }

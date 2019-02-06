@@ -16,65 +16,65 @@ import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 import runesmith.patches.AbstractCardEnum;
 
 public class ThatsALotOfDamage extends CustomCard {
-	public static final String ID = "Runesmith:ThatsALotOfDamage";
-	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-	public static final String NAME = cardStrings.NAME;
-	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
-	public static final String IMG_PATH = "images/cards/TALD.png";
-	private static final int COST = 3;
+    public static final String ID = "Runesmith:ThatsALotOfDamage";
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+    public static final String NAME = cardStrings.NAME;
+    public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+    public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
+    public static final String IMG_PATH = "images/cards/TALD.png";
+    private static final int COST = 3;
 
-	public ThatsALotOfDamage() {
-		super(
-			ID,
-			NAME,
-			IMG_PATH,
-			COST,
-			DESCRIPTION,
-			CardType.ATTACK,
-			AbstractCardEnum.RUNESMITH_BEIGE,
-			CardRarity.RARE,
-			CardTarget.ALL_ENEMY
-		);
-		this.exhaust = true;
-	}
+    public ThatsALotOfDamage() {
+        super(
+                ID,
+                NAME,
+                IMG_PATH,
+                COST,
+                DESCRIPTION,
+                CardType.ATTACK,
+                AbstractCardEnum.RUNESMITH_BEIGE,
+                CardRarity.RARE,
+                CardTarget.ALL_ENEMY
+        );
+        this.exhaust = true;
+    }
 
-	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.utility.SFXAction("ATTACK_HEAVY"));
-		AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new CleaveEffect(), 0.1F));
-		for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-			int halfMonHealth = mo.currentHealth/2;
-			int halfMonBlock = mo.currentBlock/2;
-			if (halfMonBlock > 0)
-				AbstractDungeon.actionManager.addToBottom(
-						new DamageAction(
-							mo,
-							new DamageInfo(p, halfMonBlock, this.damageTypeForTurn),
-							AttackEffect.NONE
-						)
-					);
-			if (halfMonHealth > 0)
-				AbstractDungeon.actionManager.addToBottom(
-						new DamageAction(
-							mo,
-							new DamageInfo(p, halfMonHealth, DamageType.HP_LOSS),
-							AttackEffect.NONE
-						)
-					);
-		}
-		
-	}
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.utility.SFXAction("ATTACK_HEAVY"));
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new CleaveEffect(), 0.1F));
+        for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
+            int halfMonHealth = mo.currentHealth / 2;
+            int halfMonBlock = mo.currentBlock / 2;
+            if (halfMonBlock > 0)
+                AbstractDungeon.actionManager.addToBottom(
+                        new DamageAction(
+                                mo,
+                                new DamageInfo(p, halfMonBlock, this.damageTypeForTurn),
+                                AttackEffect.NONE
+                        )
+                );
+            if (halfMonHealth > 0)
+                AbstractDungeon.actionManager.addToBottom(
+                        new DamageAction(
+                                mo,
+                                new DamageInfo(p, halfMonHealth, DamageType.HP_LOSS),
+                                AttackEffect.NONE
+                        )
+                );
+        }
 
-	public AbstractCard makeCopy() {
-		return new ThatsALotOfDamage();
-	}
+    }
 
-	public void upgrade() {
-		if (!this.upgraded) {
-		  upgradeName();
-		  this.isInnate = true;
-		  this.rawDescription = DESCRIPTION_UPG;
-		  initializeDescription();
-		}
-	}
+    public AbstractCard makeCopy() {
+        return new ThatsALotOfDamage();
+    }
+
+    public void upgrade() {
+        if (!this.upgraded) {
+            upgradeName();
+            this.isInnate = true;
+            this.rawDescription = DESCRIPTION_UPG;
+            initializeDescription();
+        }
+    }
 }

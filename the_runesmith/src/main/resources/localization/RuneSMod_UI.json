@@ -1,36 +1,36 @@
 {
-    "Runesmith:FortifyAction": {
-      "TEXT": [
-        "Enhance"
-      ]
-    },
-    "Runesmith:DowngradeAction": {
-      "TEXT": [
-        "Downgrade"
-      ]
-    },
-    "Runesmith:StasisAction": {
-      "TEXT": [
-        "Stasis"
-      ]
-    },
-    "Runesmith:CardEnhanced": {
-      "TEXT": [
-        "Enhanced"
-      ]
-    },
-    "Runesmith:DoubleUpAction": {
-      "TEXT": [
-        "Upgrade and Enhance"
-      ]
-    },
-    "Runesmith:FlexTapeAction": {
-      "TEXT": [
-        "Stasis"
-      ]
-    },
-    "Runesmith:StasisCardInDeckAction": {
-      "TEXT": [
+  "Runesmith:FortifyAction": {
+    "TEXT": [
+      "Enhance"
+    ]
+  },
+  "Runesmith:DowngradeAction": {
+    "TEXT": [
+      "Downgrade"
+    ]
+  },
+  "Runesmith:StasisAction": {
+    "TEXT": [
+      "Stasis"
+    ]
+  },
+  "Runesmith:CardEnhanced": {
+    "TEXT": [
+      "Enhanced"
+    ]
+  },
+  "Runesmith:DoubleUpAction": {
+    "TEXT": [
+      "Upgrade and Enhance"
+    ]
+  },
+  "Runesmith:FlexTapeAction": {
+    "TEXT": [
+      "Stasis"
+    ]
+  },
+  "Runesmith:StasisCardInDeckAction": {
+    "TEXT": [
       "Stasis a Card"
     ]
   }

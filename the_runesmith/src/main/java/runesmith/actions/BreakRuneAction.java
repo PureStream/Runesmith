@@ -5,26 +5,26 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import runesmith.orbs.RuneOrb;
 
-public class BreakRuneAction extends AbstractGameAction{
-	
-	private RuneOrb orb;
-	
-	public BreakRuneAction(RuneOrb runeToBreak) {
-		this.duration = Settings.ACTION_DUR_FAST;
-	    this.actionType = AbstractGameAction.ActionType.BLOCK;
-	    this.orb = runeToBreak;
-	}
-	
-	@Override
-	public void update() {
-		if (this.duration == Settings.ACTION_DUR_FAST) {
+public class BreakRuneAction extends AbstractGameAction {
 
-			AbstractDungeon.actionManager.addToTop(new RemoveRuneAndSlotAction(orb));
+    private RuneOrb orb;
 
-			orb.onBreak();
+    public BreakRuneAction(RuneOrb runeToBreak) {
+        this.duration = Settings.ACTION_DUR_FAST;
+        this.actionType = AbstractGameAction.ActionType.BLOCK;
+        this.orb = runeToBreak;
+    }
+
+    @Override
+    public void update() {
+        if (this.duration == Settings.ACTION_DUR_FAST) {
+
+            AbstractDungeon.actionManager.addToTop(new RemoveRuneAndSlotAction(orb));
+
+            orb.onBreak();
 //		      AbstractPlayer p = AbstractDungeon.player;
 
-		      // Rotate up the remaining orbs
+            // Rotate up the remaining orbs
 //		      int index = p.orbs.indexOf(this.orb);
 //
 //		      AbstractOrb orbSlot = new EmptyOrbSlot();
@@ -41,10 +41,10 @@ public class BreakRuneAction extends AbstractGameAction{
 //		      CardCrawlGame.sound.play("RELIC_DROP_CLINK");
 //		      CardCrawlGame.sound.play("RELIC_DROP_MAGICAL");
 
-		      // Decrease the slots
+            // Decrease the slots
 //		      AbstractDungeon.player.decreaseMaxOrbSlots(1);
 
-		}
-		this.isDone = true;
-	}
+        }
+        this.isDone = true;
+    }
 }

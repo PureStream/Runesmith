@@ -1,152 +1,152 @@
 {
-	"keywords": [
-		{
-			"NAMES": [
-			"enhance",
-			"enhanced"
-			],
-			"DESCRIPTION": "Increase damage, #yBlock and #yPotency of a card by #b50%. Can be stacked additively. #yEnhance is removed after the card is played."
-		},
-		{
-			"NAMES": [
-			"downgrade",
-			"downgraded"
-			],
-			"DESCRIPTION": "Remove one level of #yUpgrade and any #yEnhance or #yStasis from a card."
-		},
-		{
-			"NAMES": [
-			"stasis"
-			],
-			"DESCRIPTION": "Prevent a card from being #yExhausted once and discard it instead. Cannot be stacked."
-		},
-		{
-			"NAMES": [
-			"potency"
-			],
-			"DESCRIPTION": "Potency is the power of a rune when it is #yCrafted."
-		},
-		{
-			"NAMES": [
-			"craft"
-			],
-			"DESCRIPTION": "Create a rune using #yElements. If you don't have enough, gain that many instead. (max runes:7)"
-		},
-		{
-			"NAMES": [
-			"elements",
-			"element",
-			"ignis",
-			"terra",
-			"aqua",
-			"ignis+",
-			"aqua+",
-			"terra+"
-			],
-			"DESCRIPTION": "Elements (Ignis, Terra and Aqua) are spent to #yCraft runes and are used for other utilities."
-		},
-		{
-			"NAMES": [
-			"break",
-			"broken"
-			],
-			"DESCRIPTION": "Destroy a rune and activate its effect twice. Passive effects will be removed at the start of your next turn."
-		},
-		{
-			"NAMES": [
-			"incendium"
-			],
-			"DESCRIPTION": "Rune: Deals damage to ALL enemies."
-		},
-		{
-			"NAMES": [
-			"firestone"
-			],
-			"DESCRIPTION": "Rune: Deals damage to random enemies."
-		},
-		{
-			"NAMES": [
-			"protectio"
-			],
-			"DESCRIPTION": "Rune: Gain #yBlock."
-		},
-		{
-			"NAMES": [
-			"reservo"
-			],
-			"DESCRIPTION": "Rune: #yRetain a card."
-		},
-		{
-			"NAMES": [
-			"reservo+"
-			],
-			"DESCRIPTION": "Rune: #yRetain two cards."
-		},
-		{
-			"NAMES": [
-			"spiculum"
-			],
-			"DESCRIPTION": "Rune: Gain #yThorns."
-		},
-		{
-			"NAMES": [
-			"potentia"
-			],
-			"DESCRIPTION": "Rune: Gain #yPotency"
-		},
-		{
-			"NAMES": [
-			"ferro"
-			],
-			"DESCRIPTION": "Rune: Set #yPlated #yArmor to at least its #yPotency."
-		},
-		{
-			"NAMES": [
-			"prismatic"
-			],
-			"DESCRIPTION": "Ruin: Give a random class card each turn."
-		},
-		{
-			"NAMES": [
-			"prismatic+"
-			],
-			"DESCRIPTION": "Rune: Give a random upgraded class card each turn."
-		},
-		{
-			"NAMES": [
-			"industria"
-			],
-			"DESCRIPTION": "Rune: Gain [E] at the start of your turn."
-		},
-		{
-			"NAMES": [
-			"medicinae"
-			],
-			"DESCRIPTION": "Rune: Heals on #yBreak."
-		},
-		{
-			"NAMES": [
-			"Dud"
-			],
-			"DESCRIPTION": "Rune: No effect."
-		},
-		{
-			"NAMES": [
-			"magma"
-			],
-			"DESCRIPTION": "Rune: Deals damage to random enemy and gain Block."
-		},
-		{
-			"NAMES": [
-			"purge"
-			],
-			"DESCRIPTION": "Removed until end of combat. Does NOT go to your exhaust pile."
-		},
-		{
-			"NAMES": [
-			"WWWWWWWWWWWWWWWWW"
-			],
-			"DESCRIPTION": "WWWWWWWWWWWWWWWWW"
-		}
-	]
+  "keywords": [
+    {
+      "NAMES": [
+        "enhance",
+        "enhanced"
+      ],
+      "DESCRIPTION": "Increase damage, #yBlock and #yPotency of a card by #b50%. Can be stacked additively. #yEnhance is removed after the card is played."
+    },
+    {
+      "NAMES": [
+        "downgrade",
+        "downgraded"
+      ],
+      "DESCRIPTION": "Remove one level of #yUpgrade and any #yEnhance or #yStasis from a card."
+    },
+    {
+      "NAMES": [
+        "stasis"
+      ],
+      "DESCRIPTION": "Prevent a card from being #yExhausted once and discard it instead. Cannot be stacked."
+    },
+    {
+      "NAMES": [
+        "potency"
+      ],
+      "DESCRIPTION": "Potency is the power of a rune when it is #yCrafted."
+    },
+    {
+      "NAMES": [
+        "craft"
+      ],
+      "DESCRIPTION": "Create a rune using #yElements. If you don't have enough, gain that many instead. (max runes:7)"
+    },
+    {
+      "NAMES": [
+        "elements",
+        "element",
+        "ignis",
+        "terra",
+        "aqua",
+        "ignis+",
+        "aqua+",
+        "terra+"
+      ],
+      "DESCRIPTION": "Elements (Ignis, Terra and Aqua) are spent to #yCraft runes and are used for other utilities."
+    },
+    {
+      "NAMES": [
+        "break",
+        "broken"
+      ],
+      "DESCRIPTION": "Destroy a rune and activate its effect twice. Passive effects will be removed at the start of your next turn."
+    },
+    {
+      "NAMES": [
+        "incendium"
+      ],
+      "DESCRIPTION": "Rune: Deals damage to ALL enemies."
+    },
+    {
+      "NAMES": [
+        "firestone"
+      ],
+      "DESCRIPTION": "Rune: Deals damage to random enemies."
+    },
+    {
+      "NAMES": [
+        "protectio"
+      ],
+      "DESCRIPTION": "Rune: Gain #yBlock."
+    },
+    {
+      "NAMES": [
+        "reservo"
+      ],
+      "DESCRIPTION": "Rune: #yRetain a card."
+    },
+    {
+      "NAMES": [
+        "reservo+"
+      ],
+      "DESCRIPTION": "Rune: #yRetain two cards."
+    },
+    {
+      "NAMES": [
+        "spiculum"
+      ],
+      "DESCRIPTION": "Rune: Gain #yThorns."
+    },
+    {
+      "NAMES": [
+        "potentia"
+      ],
+      "DESCRIPTION": "Rune: Gain #yPotency"
+    },
+    {
+      "NAMES": [
+        "ferro"
+      ],
+      "DESCRIPTION": "Rune: Set #yPlated #yArmor to at least its #yPotency."
+    },
+    {
+      "NAMES": [
+        "prismatic"
+      ],
+      "DESCRIPTION": "Ruin: Give a random class card each turn."
+    },
+    {
+      "NAMES": [
+        "prismatic+"
+      ],
+      "DESCRIPTION": "Rune: Give a random upgraded class card each turn."
+    },
+    {
+      "NAMES": [
+        "industria"
+      ],
+      "DESCRIPTION": "Rune: Gain [E] at the start of your turn."
+    },
+    {
+      "NAMES": [
+        "medicinae"
+      ],
+      "DESCRIPTION": "Rune: Heals on #yBreak."
+    },
+    {
+      "NAMES": [
+        "Dud"
+      ],
+      "DESCRIPTION": "Rune: No effect."
+    },
+    {
+      "NAMES": [
+        "magma"
+      ],
+      "DESCRIPTION": "Rune: Deals damage to random enemy and gain Block."
+    },
+    {
+      "NAMES": [
+        "purge"
+      ],
+      "DESCRIPTION": "Removed until end of combat. Does NOT go to your exhaust pile."
+    },
+    {
+      "NAMES": [
+        "WWWWWWWWWWWWWWWWW"
+      ],
+      "DESCRIPTION": "WWWWWWWWWWWWWWWWW"
+    }
+  ]
 }

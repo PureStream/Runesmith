@@ -25,9 +25,9 @@ public class RunicCardGlow {
     @SpirePatch(clz = CardGlowBorder.class, method = SpirePatch.CONSTRUCTOR)
     public static class CardGlowPatch {
         @SpirePostfixPatch
-        public static void runicCardGlowColor(CardGlowBorder __instance, AbstractCard inputCard){
-            if(inputCard instanceof AbstractRunicCard){
-                if(((AbstractRunicCard) inputCard).isCraftable){
+        public static void runicCardGlowColor(CardGlowBorder __instance, AbstractCard inputCard) {
+            if (inputCard instanceof AbstractRunicCard) {
+                if (((AbstractRunicCard) inputCard).isCraftable) {
                     Color color;
                     if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
                         color = Color.valueOf("54F04Fff");
@@ -35,9 +35,13 @@ public class RunicCardGlow {
                         color = Color.GREEN.cpy();
                     }
                     ReflectionHacks.setPrivate(__instance, AbstractGameEffect.class, "color", color);
-                    switch (inputCard.type){
-                        case SKILL: ReflectionHacks.setPrivate(__instance, CardGlowBorder.class, "img", CARD_RUNIC_SKILL_BG_SILHOUETTE); break;
-                        case ATTACK: ReflectionHacks.setPrivate(__instance, CardGlowBorder.class, "img", CARD_RUNIC_ATTACK_BG_SILHOUETTE); break;
+                    switch (inputCard.type) {
+                        case SKILL:
+                            ReflectionHacks.setPrivate(__instance, CardGlowBorder.class, "img", CARD_RUNIC_SKILL_BG_SILHOUETTE);
+                            break;
+                        case ATTACK:
+                            ReflectionHacks.setPrivate(__instance, CardGlowBorder.class, "img", CARD_RUNIC_ATTACK_BG_SILHOUETTE);
+                            break;
                     }
                 }
             }

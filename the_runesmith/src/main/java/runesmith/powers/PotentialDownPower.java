@@ -11,48 +11,48 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 public class PotentialDownPower extends AbstractPower {
-	
-	public static final String POWER_ID = "Runesmith:PotentialDownPower";
-	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
-	public static final String NAME = powerStrings.NAME;
-	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-	public static final int AMOUNT_CAP = 999;
 
-	public PotentialDownPower(AbstractCreature owner, int amount) {
-		this.name = NAME;
-		this.ID = POWER_ID;
-		this.owner = owner;
-		this.amount = amount;
-		this.type = PowerType.DEBUFF;
-		updateDescription();
-		this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/PotentialDown.png"), 0, 0, 84, 84);
-	    this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/PotentialDownSmall.png"), 0, 0, 32, 32);
-	}
-	
-	public void stackPower(int stackAmount) {
-		this.fontScale = 8.0F;
-		this.amount += stackAmount;
-		if(this.amount > this.AMOUNT_CAP){
-			this.amount = this.AMOUNT_CAP;
-		}
-	}
-	
-	public void atEndOfTurn(boolean isPlayer) {
-		if (isPlayer) {
-			AbstractDungeon.actionManager.addToTop(
-			          new ApplyPowerAction(
-			              owner,
-			              owner,
-			              new PotentialPower(owner, -amount),
-			              -amount
-			          )
-			      );
-			AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this.POWER_ID));
-		}
-	}
+    public static final String POWER_ID = "Runesmith:PotentialDownPower";
+    private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
+    public static final String NAME = powerStrings.NAME;
+    public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
+    public static final int AMOUNT_CAP = 999;
 
-	public void updateDescription() {
-		this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
-	}
-	
+    public PotentialDownPower(AbstractCreature owner, int amount) {
+        this.name = NAME;
+        this.ID = POWER_ID;
+        this.owner = owner;
+        this.amount = amount;
+        this.type = PowerType.DEBUFF;
+        updateDescription();
+        this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/PotentialDown.png"), 0, 0, 84, 84);
+        this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/PotentialDownSmall.png"), 0, 0, 32, 32);
+    }
+
+    public void stackPower(int stackAmount) {
+        this.fontScale = 8.0F;
+        this.amount += stackAmount;
+        if (this.amount > this.AMOUNT_CAP) {
+            this.amount = this.AMOUNT_CAP;
+        }
+    }
+
+    public void atEndOfTurn(boolean isPlayer) {
+        if (isPlayer) {
+            AbstractDungeon.actionManager.addToTop(
+                    new ApplyPowerAction(
+                            owner,
+                            owner,
+                            new PotentialPower(owner, -amount),
+                            -amount
+                    )
+            );
+            AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this.POWER_ID));
+        }
+    }
+
+    public void updateDescription() {
+        this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
+    }
+
 }

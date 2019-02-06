@@ -14,43 +14,43 @@ import static runesmith.patches.CardTagEnum.CRAFT;
 
 public class CraftFerro extends AbstractRunicCard {
 
-	public static final String ID = "Runesmith:CraftFerro";
-	public static final String IMG_PATH = "images/cards/CraftFerro.png";
-	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-	public static final String NAME = cardStrings.NAME;
-	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
-	public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
-	private static final int COST = 0;
-	private static final int POTENCY = 5;
-	private static final int UPGRADE_PLUS_POT = 2;
-	private static final int TERRA_AMT = 2;
-	private static final int AQUA_AMT = 1;
-	
-	public CraftFerro() {
-		super(
-			ID,
-			NAME,
-			IMG_PATH,
-			COST,
-			DESCRIPTION,
-			AbstractCard.CardType.SKILL,
-			AbstractCardEnum.RUNESMITH_BEIGE,
-			AbstractCard.CardRarity.UNCOMMON,
-			AbstractCard.CardTarget.SELF
-		);
-		
-		this.potency = this.basePotency = POTENCY;
-		this.tags.add(CRAFT);
+    public static final String ID = "Runesmith:CraftFerro";
+    public static final String IMG_PATH = "images/cards/CraftFerro.png";
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+    public static final String NAME = cardStrings.NAME;
+    public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+    public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
+    private static final int COST = 0;
+    private static final int POTENCY = 5;
+    private static final int UPGRADE_PLUS_POT = 2;
+    private static final int TERRA_AMT = 2;
+    private static final int AQUA_AMT = 1;
+
+    public CraftFerro() {
+        super(
+                ID,
+                NAME,
+                IMG_PATH,
+                COST,
+                DESCRIPTION,
+                AbstractCard.CardType.SKILL,
+                AbstractCardEnum.RUNESMITH_BEIGE,
+                AbstractCard.CardRarity.UNCOMMON,
+                AbstractCard.CardTarget.SELF
+        );
+
+        this.potency = this.basePotency = POTENCY;
+        this.tags.add(CRAFT);
 //		this.exhaust = true;
 
-	}
-	
-	@Override
-	public void applyPowers() {
-		super.applyPowers();
-		checkElements(0, TERRA_AMT, AQUA_AMT, true);
-		//			if(!this.upgraded) {
+    }
+
+    @Override
+    public void applyPowers() {
+        super.applyPowers();
+        checkElements(0, TERRA_AMT, AQUA_AMT, true);
+        //			if(!this.upgraded) {
 //				this.rawDescription = (DESCRIPTION + EXTENDED_DESCRIPTION[0]);
 //			}else {
 //				this.rawDescription = (UPGRADE_DESCRIPTION + EXTENDED_DESCRIPTION[0]);
@@ -63,8 +63,8 @@ public class CraftFerro extends AbstractRunicCard {
 //			}
 //		}
 //		initializeDescription();
-	}
-	
+    }
+
 //	@Override
 //	public void onMoveToDiscard(){
 //		super.onMoveToDiscard();
@@ -75,26 +75,26 @@ public class CraftFerro extends AbstractRunicCard {
 //		}
 //		initializeDescription();
 //	}
-	
-	public void use(AbstractPlayer p, AbstractMonster m) {
-		if (checkElements(0,TERRA_AMT,AQUA_AMT)) {
-			AbstractDungeon.actionManager.addToBottom(
-					new RuneChannelAction(
-							new FerroRune(this.potency)));
-		}
-	}
-	
-	public AbstractCard makeCopy() {
-		return new CraftFerro();
-	}
-	
-	public void upgrade() {
-		if (!this.upgraded) {
-		  upgradeName();
-		  this.rawDescription = UPGRADE_DESCRIPTION;
-		  upgradePotency(UPGRADE_PLUS_POT);
-		  initializeDescription();
-		}
-	}
-	
+
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        if (checkElements(0, TERRA_AMT, AQUA_AMT)) {
+            AbstractDungeon.actionManager.addToBottom(
+                    new RuneChannelAction(
+                            new FerroRune(this.potency)));
+        }
+    }
+
+    public AbstractCard makeCopy() {
+        return new CraftFerro();
+    }
+
+    public void upgrade() {
+        if (!this.upgraded) {
+            upgradeName();
+            this.rawDescription = UPGRADE_DESCRIPTION;
+            upgradePotency(UPGRADE_PLUS_POT);
+            initializeDescription();
+        }
+    }
+
 }

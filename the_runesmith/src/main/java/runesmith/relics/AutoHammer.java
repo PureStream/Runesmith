@@ -28,7 +28,7 @@ public class AutoHammer extends CustomRelic {
         this.counter = 0;
     }
 
-    public void onUseCard(AbstractCard card, UseCardAction action){
+    public void onUseCard(AbstractCard card, UseCardAction action) {
         if (card.type == AbstractCard.CardType.SKILL) {
             this.counter += 1;
             if (this.counter % NUM_CARDS == 0) {
@@ -40,9 +40,9 @@ public class AutoHammer extends CustomRelic {
         }
     }
 
-	public void onVictory() {
-		this.counter = -1;
-	}
+    public void onVictory() {
+        this.counter = -1;
+    }
 
     public AbstractRelic makeCopy() {
         return new AutoHammer();

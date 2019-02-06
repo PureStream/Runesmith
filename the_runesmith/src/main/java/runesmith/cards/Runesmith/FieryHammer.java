@@ -13,63 +13,63 @@ import runesmith.patches.AbstractCardEnum;
 
 import static runesmith.patches.CardTagEnum.HAMMER;
 
-public class FieryHammer extends CustomCard{
-	public static final String ID = "Runesmith:FieryHammer";
-	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-	public static final String NAME = cardStrings.NAME;
-	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	public static final String IMG_PATH = "images/cards/FieryHammer.png"; //<-------------- need some img
-	private static final int COST = 2;
-	private static final int ATTACK_DMG = 10;
-	
-	public FieryHammer() {
-		this(0);
-	}
-	
-	public FieryHammer(int upgrades) {
-		super(
-			ID,
-			NAME,
-			IMG_PATH,
-			COST,
-			DESCRIPTION,
-			CardType.ATTACK,
-			AbstractCardEnum.RUNESMITH_BEIGE,
-			CardRarity.UNCOMMON,
-			CardTarget.ALL_ENEMY
-		);
-		this.baseDamage = ATTACK_DMG;
-		this.isMultiDamage = true;
-		this.tags.add(HAMMER);
-	}
-	
-	public AbstractCard makeCopy() {
-		return new FieryHammer(this.timesUpgraded);
-	}
+public class FieryHammer extends CustomCard {
+    public static final String ID = "Runesmith:FieryHammer";
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+    public static final String NAME = cardStrings.NAME;
+    public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+    public static final String IMG_PATH = "images/cards/FieryHammer.png"; //<-------------- need some img
+    private static final int COST = 2;
+    private static final int ATTACK_DMG = 10;
 
-	@Override
-	public void upgrade() {
-		upgradeDamage(3 + this.timesUpgraded);
-		this.timesUpgraded += 1;
-		this.upgraded = true;
-		this.name = (NAME + "+" + this.timesUpgraded);
-		initializeTitle();
-	}
+    public FieryHammer() {
+        this(0);
+    }
 
-	@Override
-	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(
-				new DamageAllEnemiesAction(
-					p,
-					this.multiDamage, this.damageTypeForTurn,
-					AbstractGameAction.AttackEffect.FIRE
-				)
-			);
-	}
-	
-	@Override
-	public boolean canUpgrade() {
-		return true;
-	}
-	
+    public FieryHammer(int upgrades) {
+        super(
+                ID,
+                NAME,
+                IMG_PATH,
+                COST,
+                DESCRIPTION,
+                CardType.ATTACK,
+                AbstractCardEnum.RUNESMITH_BEIGE,
+                CardRarity.UNCOMMON,
+                CardTarget.ALL_ENEMY
+        );
+        this.baseDamage = ATTACK_DMG;
+        this.isMultiDamage = true;
+        this.tags.add(HAMMER);
+    }
+
+    public AbstractCard makeCopy() {
+        return new FieryHammer(this.timesUpgraded);
+    }
+
+    @Override
+    public void upgrade() {
+        upgradeDamage(3 + this.timesUpgraded);
+        this.timesUpgraded += 1;
+        this.upgraded = true;
+        this.name = (NAME + "+" + this.timesUpgraded);
+        initializeTitle();
+    }
+
+    @Override
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        AbstractDungeon.actionManager.addToBottom(
+                new DamageAllEnemiesAction(
+                        p,
+                        this.multiDamage, this.damageTypeForTurn,
+                        AbstractGameAction.AttackEffect.FIRE
+                )
+        );
+    }
+
+    @Override
+    public boolean canUpgrade() {
+        return true;
+    }
+
 }

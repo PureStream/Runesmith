@@ -10,17 +10,18 @@ import runesmith.orbs.RuneOrb;
 
 import java.util.Collections;
 
-public class RemoveRuneAndSlotAction extends AbstractGameAction{
+public class RemoveRuneAndSlotAction extends AbstractGameAction {
 
     private RuneOrb rune;
-    public RemoveRuneAndSlotAction(RuneOrb runeToRemove){
+
+    public RemoveRuneAndSlotAction(RuneOrb runeToRemove) {
         this.duration = Settings.ACTION_DUR_FAST;
         this.actionType = ActionType.BLOCK;
         this.rune = runeToRemove;
     }
 
-    public void update(){
-        if(this.duration == Settings.ACTION_DUR_FAST) {
+    public void update() {
+        if (this.duration == Settings.ACTION_DUR_FAST) {
             AbstractPlayer p = AbstractDungeon.player;
 
             // Rotate up the remaining orbs
