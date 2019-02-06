@@ -18,15 +18,15 @@ public class PotentialPower extends AbstractPower {
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
     public boolean onVictory = false;
-    public static final int AMOUNT_CAP = 999;
+    private static final int AMOUNT_CAP = 999;
 
     public PotentialPower(AbstractCreature owner, int amount) {
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = owner;
         this.amount = amount;
-        this.type = PowerType.BUFF;
         this.canGoNegative = true;
+        this.priority = 3;
         updateDescription();
         this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/Potential.png"), 0, 0, 84, 84);
         this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/PotentialSmall.png"), 0, 0, 32, 32);
@@ -37,10 +37,10 @@ public class PotentialPower extends AbstractPower {
         this.amount += stackAmount;
         if (this.amount == 0) {
             AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this));
-        } else if (this.amount > this.AMOUNT_CAP) {
-            this.amount = this.AMOUNT_CAP;
-        } else if (this.amount < -this.AMOUNT_CAP) {
-            this.amount = -this.AMOUNT_CAP;
+        } else if (this.amount > AMOUNT_CAP) {
+            this.amount = AMOUNT_CAP;
+        } else if (this.amount < -AMOUNT_CAP) {
+            this.amount = -AMOUNT_CAP;
         }
         updatePotentialEffects();
     }
