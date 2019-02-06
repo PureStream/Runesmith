@@ -11,9 +11,9 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import runesmith.patches.AbstractCardEnum;
 
-public class ElementalShield extends CustomCard {
-    public static final String ID = "Runesmith:ElementalShield";
-    public static final String IMG_PATH = "images/cards/ElementalShield.png"; //<-------- Image needed
+public class Prism extends CustomCard {
+    public static final String ID = "Runesmith:Prism";
+    public static final String IMG_PATH = "images/cards/Prism.png"; //<-------- Image needed
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
@@ -23,7 +23,7 @@ public class ElementalShield extends CustomCard {
     private static final int TIMES_AMT = 2;
     private static final int UPGRADE_TIMES_AMT = 1;
 
-    public ElementalShield() {
+    public Prism() {
         super(
                 ID,
                 NAME,
@@ -101,7 +101,7 @@ public class ElementalShield extends CustomCard {
     }
 
     public AbstractCard makeCopy() {
-        return new ElementalShield();
+        return new Prism();
     }
 
     public void upgrade() {

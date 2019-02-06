@@ -109,8 +109,8 @@
     "NAME": "Static Cage",
     "DESCRIPTION": "Break your oldest Rune. NL Stasis a card in your hand. NL Gain !B! Block."
   },
-  "Runesmith:ElementalShield": {
-    "NAME": "Elemental Shield",
+  "Runesmith:Prism": {
+    "NAME": "Prism",
     "DESCRIPTION": "Gain Block equals to !M! times the number of all your Elements. NL Remove half of your Elements.",
     "UPGRADE_DESCRIPTION": "Gain Block equals to !M! times the number of all your Elements. NL Remove half of your Elements.",
     "EXTENDED_DESCRIPTION": [
