@@ -6,11 +6,11 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
-public class BreakFirestoneAction extends AbstractGameAction {
+public class RandomFireDamageAction extends AbstractGameAction {
 
     private DamageInfo info;
 
-    public BreakFirestoneAction(DamageInfo info) {
+    public RandomFireDamageAction(DamageInfo info) {
         this.info = info;
         this.actionType = com.megacrit.cardcrawl.actions.AbstractGameAction.ActionType.DAMAGE;
         this.attackEffect = AttackEffect.FIRE;
