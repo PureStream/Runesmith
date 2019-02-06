@@ -1,7 +1,6 @@
 package runesmith.cards.Runesmith;
 
-import static runesmith.patches.CardTagEnum.CHISEL;
-
+import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -14,10 +13,10 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.WeakPower;
-
-import basemod.abstracts.CustomCard;
 import runesmith.actions.ApplyElementsPowerAction;
 import runesmith.patches.AbstractCardEnum;
+
+import static runesmith.patches.CardTagEnum.CHISEL;
 
 public class EnergizedChisel extends CustomCard {
 	public static final String ID = "Runesmith:EnergizedChisel";

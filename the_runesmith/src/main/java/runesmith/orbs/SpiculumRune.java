@@ -1,16 +1,13 @@
 package runesmith.orbs;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.ThornsPower;
-
-import runesmith.RunesmithMod;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import runesmith.powers.SpiculumDownPower;
 
 public class SpiculumRune extends RuneOrb {

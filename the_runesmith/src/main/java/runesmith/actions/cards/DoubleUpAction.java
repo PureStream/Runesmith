@@ -1,7 +1,5 @@
 package runesmith.actions.cards;
 
-import java.util.ArrayList;
-
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -9,9 +7,10 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
-
 import runesmith.RunesmithMod;
 import runesmith.actions.EnhanceCard;
+
+import java.util.ArrayList;
 
 public class DoubleUpAction extends AbstractGameAction{
 	private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("Runesmith:DoubleUpAction");

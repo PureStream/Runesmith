@@ -1,15 +1,14 @@
 package runesmith.actions.cards;
 
-import static runesmith.patches.CardTagEnum.HAMMER;
-
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-
 import runesmith.RunesmithMod;
 import runesmith.actions.EnhanceCard;
+
+import static runesmith.patches.CardTagEnum.HAMMER;
 
 public class HammerTimeAction extends AbstractGameAction {
 	

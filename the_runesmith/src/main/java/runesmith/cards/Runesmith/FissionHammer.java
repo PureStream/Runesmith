@@ -1,7 +1,6 @@
 package runesmith.cards.Runesmith;
 
-import static runesmith.patches.CardTagEnum.HAMMER;
-
+import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
@@ -13,12 +12,12 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
-
-import basemod.abstracts.CustomCard;
 import runesmith.actions.BreakRuneAction;
 import runesmith.actions.BreakWithoutRemovingRuneAction;
 import runesmith.orbs.RuneOrb;
 import runesmith.patches.AbstractCardEnum;
+
+import static runesmith.patches.CardTagEnum.HAMMER;
 
 public class FissionHammer extends CustomCard {
 	public static final String ID = "Runesmith:FissionHammer";

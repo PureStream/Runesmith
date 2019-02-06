@@ -1,6 +1,8 @@
 package runesmith.cards.Runesmith;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import basemod.abstracts.CustomCard;
+import basemod.helpers.ModalChoice;
+import basemod.helpers.ModalChoiceBuilder;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -8,10 +10,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-
-import basemod.abstracts.CustomCard;
-import basemod.helpers.ModalChoice;
-import basemod.helpers.ModalChoiceBuilder;
 import runesmith.patches.AbstractCardEnum;
 
 public class ElementalConversion extends CustomCard {

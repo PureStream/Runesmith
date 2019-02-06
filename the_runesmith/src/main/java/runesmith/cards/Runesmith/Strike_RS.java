@@ -1,7 +1,6 @@
 package runesmith.cards.Runesmith;
 
-import runesmith.patches.AbstractCardEnum;
-
+import basemod.abstracts.CustomCard;
 import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -12,9 +11,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-
-
-import basemod.abstracts.CustomCard;
+import runesmith.patches.AbstractCardEnum;
 
 public class Strike_RS extends CustomCard {
 	public static final String ID = "Runesmith:Strike_RS";

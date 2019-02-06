@@ -1,17 +1,16 @@
 package runesmith.cards.Runesmith;
 
-import static runesmith.patches.CardTagEnum.CRAFT;
-
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-
 import runesmith.actions.RuneChannelAction;
 import runesmith.orbs.ReservoRune;
 import runesmith.patches.AbstractCardEnum;
+
+import static runesmith.patches.CardTagEnum.CRAFT;
 
 public class CraftReservo extends AbstractRunicCard {
 

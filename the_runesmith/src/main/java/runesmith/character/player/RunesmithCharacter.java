@@ -1,7 +1,7 @@
 package runesmith.character.player;
 
-import java.util.ArrayList;
-
+import basemod.abstracts.CustomPlayer;
+import basemod.animations.SpriterAnimation;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -15,16 +15,13 @@ import com.megacrit.cardcrawl.cards.AbstractCard.CardColor;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
-import com.megacrit.cardcrawl.screens.CharSelectInfo;
-import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbInterface;
-import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.EventStrings;
-
-import basemod.abstracts.CustomPlayer;
-import basemod.animations.SpriterAnimation;
+import com.megacrit.cardcrawl.screens.CharSelectInfo;
+import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbInterface;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import runesmith.RunesmithMod;
 import runesmith.cards.Runesmith.CraftFirestone;
 import runesmith.cards.Runesmith.Defend_RS;
@@ -34,6 +31,8 @@ import runesmith.patches.AbstractCardEnum;
 import runesmith.patches.PlayerClassEnum;
 import runesmith.relics.BrokenRuby;
 import runesmith.ui.EnergyOrbBeige;
+
+import java.util.ArrayList;
 
 public class RunesmithCharacter extends CustomPlayer {
 	public static final int ENERGY_PER_TURN = 3;

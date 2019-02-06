@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-
 import runesmith.cards.Runesmith.AbstractRunicCard;
 
 public class PotentialPower extends AbstractPower {

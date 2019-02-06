@@ -9,10 +9,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.FlameBarrierEffect;
-
 import runesmith.actions.RuneChannelAction;
 import runesmith.orbs.FirestoneRune;
-import runesmith.orbs.MagmaRune;
 import runesmith.patches.AbstractCardEnum;
 
 public class Firewall extends AbstractRunicCard {

@@ -1,21 +1,18 @@
 package runesmith.actions;
 
-import java.util.ArrayList;
-
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
-import com.megacrit.cardcrawl.cards.red.SearingBlow;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.vfx.cardManip.ExhaustCardEffect;
-
-import runesmith.cards.Runesmith.FieryHammer;
 import runesmith.patches.CardStasisStatus;
 import runesmith.patches.EnhanceCountField;
+
+import java.util.ArrayList;
 
 public class DowngradeCardInHandAction extends AbstractGameAction{
 	private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("Runesmith:DowngradeAction");

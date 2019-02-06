@@ -1,8 +1,5 @@
 package runesmith.orbs;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
@@ -16,6 +13,9 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.vfx.combat.OrbFlareEffect;
 import com.megacrit.cardcrawl.vfx.combat.PlasmaOrbActivateEffect;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 

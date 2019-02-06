@@ -1,12 +1,20 @@
 /*    */ package runesmith.vfx;
 /*    */ 
-/*    */ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-/*    */ import com.badlogic.gdx.math.MathUtils;
-/*    */ import com.megacrit.cardcrawl.cards.AbstractCard;
-/*    */ import com.megacrit.cardcrawl.core.Settings;
-/*    */ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+/*    */
+
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.math.MathUtils;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
-/*    */ import com.megacrit.cardcrawl.vfx.combat.CardPoofEffect;
+import com.megacrit.cardcrawl.vfx.combat.CardPoofEffect;
+
+/*    */
+/*    */
+/*    */
+/*    */
+/*    */
 /*    */ 
 /*    */ public class ShowStasisCardAndAddToDiscardEffect extends AbstractGameEffect{
 /*    */   private static final float EFFECT_DUR = 0.5F;

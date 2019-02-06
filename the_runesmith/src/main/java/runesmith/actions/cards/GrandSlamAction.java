@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-
 import runesmith.actions.EnhanceCard;
 
 public class GrandSlamAction extends AbstractGameAction {

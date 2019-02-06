@@ -1,7 +1,6 @@
 package runesmith.cards.Runesmith;
 
-import static runesmith.patches.CardTagEnum.HAMMER;
-
+import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -10,9 +9,9 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-
-import basemod.abstracts.CustomCard;
 import runesmith.patches.AbstractCardEnum;
+
+import static runesmith.patches.CardTagEnum.HAMMER;
 
 public class FieryHammer extends CustomCard{
 	public static final String ID = "Runesmith:FieryHammer";

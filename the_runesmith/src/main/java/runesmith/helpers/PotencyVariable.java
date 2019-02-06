@@ -1,8 +1,7 @@
 package runesmith.helpers;
 
-import com.megacrit.cardcrawl.cards.AbstractCard;
-
 import basemod.abstracts.DynamicVariable;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import runesmith.cards.Runesmith.AbstractRunicCard;
 
 public class PotencyVariable extends DynamicVariable{

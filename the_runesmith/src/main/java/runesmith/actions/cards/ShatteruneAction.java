@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
-
 import runesmith.actions.BreakRuneAction;
 import runesmith.actions.BreakWithoutRemovingRuneAction;
 import runesmith.orbs.RuneOrb;

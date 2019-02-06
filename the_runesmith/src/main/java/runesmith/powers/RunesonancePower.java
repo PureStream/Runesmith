@@ -11,7 +11,6 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-
 import runesmith.orbs.RuneOrb;
 
 public class RunesonancePower extends AbstractPower {

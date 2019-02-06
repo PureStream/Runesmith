@@ -1,5 +1,6 @@
 package runesmith.cards.Runesmith;
 
+import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
@@ -12,8 +13,6 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.vfx.combat.LightningEffect;
-
-import basemod.abstracts.CustomCard;
 import runesmith.actions.BreakRuneAction;
 import runesmith.actions.StasisCardInHandAction;
 import runesmith.orbs.RuneOrb;

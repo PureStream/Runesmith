@@ -4,14 +4,12 @@ import basemod.abstracts.CustomEnergyOrb;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.Pixmap.Format;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.glutils.FrameBuffer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
-
-import static org.lwjgl.opengl.GL11.glBlendFunc;
 
 public class EnergyOrbBeige extends CustomEnergyOrb {
     Texture ENERGY_BEIGE_LAYER1 = ImageMaster.loadImage("images/ui/beige/1.png");

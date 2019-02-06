@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-
 import runesmith.actions.cards.CreatorFormAction;
 
 public class CreatorFormPower extends AbstractPower {

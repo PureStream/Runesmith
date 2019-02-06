@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.actions.common.EmptyDeckShuffleAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+
 import static runesmith.patches.CardTagEnum.CRAFT;
 
 public class AttractionAction extends AbstractGameAction{	

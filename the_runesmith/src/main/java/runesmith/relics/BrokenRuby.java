@@ -1,5 +1,6 @@
 package runesmith.relics;
 
+import basemod.abstracts.CustomRelic;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -7,8 +8,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-
-import basemod.abstracts.CustomRelic;
 import runesmith.RunesmithMod;
 import runesmith.actions.ApplyElementsPowerAction;
 

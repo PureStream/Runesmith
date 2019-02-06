@@ -1,5 +1,6 @@
 package runesmith.cards.Runesmith;
 
+import basemod.abstracts.CustomCard;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -13,8 +14,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.GainStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.combat.ShockWaveEffect;
-
-import basemod.abstracts.CustomCard;
 import runesmith.patches.AbstractCardEnum;
 
 public class NanitesCloud extends CustomCard {

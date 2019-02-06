@@ -1,9 +1,8 @@
 package runesmith.relics;
 
+import basemod.abstracts.CustomRelic;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-
-import basemod.abstracts.CustomRelic;
 
 public class Blueberries extends CustomRelic {
 	public static final String ID = "Blueberries";

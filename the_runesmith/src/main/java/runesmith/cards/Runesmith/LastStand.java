@@ -1,5 +1,6 @@
 package runesmith.cards.Runesmith;
 
+import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
@@ -9,7 +10,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import basemod.abstracts.CustomCard;
 import runesmith.actions.DowngradeEntireDeckAction;
 import runesmith.patches.AbstractCardEnum;
 import runesmith.patches.CardStasisStatus;

@@ -1,5 +1,6 @@
 package runesmith.cards.Runesmith;
 
+import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.unique.ArmamentsAction;
@@ -10,8 +11,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-
-import basemod.abstracts.CustomCard;
 import runesmith.actions.DowngradeCardInHandAction;
 import runesmith.patches.AbstractCardEnum;
 
