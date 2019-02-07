@@ -95,14 +95,18 @@ public abstract class AbstractRunicCard extends CustomCard {
     }
 
     public boolean checkElements(int ignis, int terra, int aqua) {
-        return checkElements(ignis, terra, aqua, false, false);
+        return checkElements(ignis, terra, aqua, false, false, false);
     }
 
     public boolean checkElements(int ignis, int terra, int aqua, boolean checkOnly) {
-        return checkElements(ignis, terra, aqua, checkOnly, false);
+        return checkElements(ignis, terra, aqua, checkOnly, false, false);
     }
 
     public boolean checkElements(int ignis, int terra, int aqua, boolean checkOnly, boolean isPotentia) {
+        return checkElements(ignis, terra, aqua, checkOnly, isPotentia, false);
+    }
+
+    public boolean checkElements(int ignis, int terra, int aqua, boolean checkOnly, boolean isPotentia, boolean isAnAttackCard) {
 
         //logger.info("Start checking elements.");
         AbstractPlayer p = AbstractDungeon.player;
@@ -120,14 +124,21 @@ public abstract class AbstractRunicCard extends CustomCard {
         }
 
         int pIgnis = 0, pTerra = 0, pAqua = 0;
+
+        if (isAnAttackCard) {
+            if (p.hasRelic("Runesmith:BrokenRuby"))
+                if (p.getRelic("Runesmith:BrokenRuby").counter == 2)
+                    pIgnis++;
+        }
+
         if (p.hasPower("Runesmith:IgnisPower")) {
-            pIgnis = p.getPower("Runesmith:IgnisPower").amount;
+            pIgnis += p.getPower("Runesmith:IgnisPower").amount;
         }
         if (p.hasPower("Runesmith:TerraPower")) {
-            pTerra = p.getPower("Runesmith:TerraPower").amount;
+            pTerra += p.getPower("Runesmith:TerraPower").amount;
         }
         if (p.hasPower("Runesmith:AquaPower")) {
-            pAqua = p.getPower("Runesmith:AquaPower").amount;
+            pAqua += p.getPower("Runesmith:AquaPower").amount;
         }
         if (pIgnis >= ignis && pTerra >= terra && pAqua >= aqua) {
             //logger.info("Have enough elements.");

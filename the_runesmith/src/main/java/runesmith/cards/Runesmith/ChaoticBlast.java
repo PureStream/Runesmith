@@ -45,7 +45,7 @@ public class ChaoticBlast extends AbstractRunicCard {
     @Override
     public void applyPowers() {
         super.applyPowers();
-        checkElements(this.magicNumber, this.magicNumber, this.magicNumber, true);
+        checkElements(this.magicNumber, this.magicNumber, this.magicNumber, true, false, true);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -58,10 +58,10 @@ public class ChaoticBlast extends AbstractRunicCard {
             playerPot = p.getPower("Runesmith:PotentialPower").amount;
 
         if (!this.upgraded) {
-            if (checkElements(this.magicNumber, this.magicNumber, this.magicNumber))
+            if (checkElements(this.magicNumber, this.magicNumber, this.magicNumber, false, false, true))
                 AbstractDungeon.actionManager.addToBottom(new RuneChannelAction(RuneOrb.getRandomRune(true, playerPot)));
         } else {
-            if (checkElements(this.magicNumber, this.magicNumber, this.magicNumber)) {
+            if (checkElements(this.magicNumber, this.magicNumber, this.magicNumber, false, false, true)) {
                 AbstractDungeon.actionManager.addToBottom(new RuneChannelAction(RuneOrb.getRandomRune(true, playerPot)));
                 AbstractDungeon.actionManager.addToBottom(new RuneChannelAction(RuneOrb.getRandomRune(true, playerPot)));
             }
