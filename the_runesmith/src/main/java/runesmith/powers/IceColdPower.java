@@ -40,15 +40,12 @@ public class IceColdPower extends AbstractPower {
         flash();
         AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, "Runesmith:IceColdPower", 1));
         if (this.amount == 1) {
-            SlowPower slow = null;
             for (AbstractPower power : owner.powers) {
                 if (power instanceof SlowPower){
-                    slow = (SlowPower) power;
+                    AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, power));
                     break;
                 }
             }
-            if (slow != null)
-                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, slow));
         }
     }
 
