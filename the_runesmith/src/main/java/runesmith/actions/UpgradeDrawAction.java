@@ -1,41 +1,23 @@
 package runesmith.actions;
 
 import basemod.BaseMod;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.EmptyDeckShuffleAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.SoulGroup;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.vfx.PlayerTurnEffect;
 import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
 
-public class UpgradeDrawAction extends AbstractGameAction {
+public class UpgradeDrawAction extends DrawCardAction {
     private boolean shuffleCheck = false;
     private static final Logger logger = org.apache.logging.log4j.LogManager.getLogger(UpgradeDrawAction.class.getName());
 
     public UpgradeDrawAction(AbstractCreature source, int amount, boolean endTurnDraw) {
-        if (endTurnDraw) {
-            AbstractDungeon.topLevelEffects.add(new PlayerTurnEffect());
-        } else if (AbstractDungeon.player.hasPower("No Draw")) {
-            AbstractDungeon.player.getPower("No Draw").flash();
-            setValues(AbstractDungeon.player, source, amount);
-            this.isDone = true;
-            this.duration = 0.0F;
-            this.actionType = AbstractGameAction.ActionType.WAIT;
-            return;
-        }
-
-        setValues(AbstractDungeon.player, source, amount);
-        this.actionType = AbstractGameAction.ActionType.DRAW;
-        if (Settings.FAST_MODE) {
-            this.duration = Settings.ACTION_DUR_XFAST;
-        } else {
-            this.duration = Settings.ACTION_DUR_FASTER;
-        }
+        super(source, amount, endTurnDraw);
     }
 
     public UpgradeDrawAction(AbstractCreature source, int amount) {
@@ -55,7 +37,6 @@ public class UpgradeDrawAction extends AbstractGameAction {
         if (SoulGroup.isActive()) {
             return;
         }
-
 
         if (deckSize + discardSize == 0) {
             this.isDone = true;
