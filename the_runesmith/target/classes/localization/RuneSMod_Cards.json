@@ -249,12 +249,12 @@
   },
   "Runesmith:GenerateForcefield": {
     "NAME": "Generate Forcefield",
-    "DESCRIPTION": "Break X non Dud runes and prevent the next X times you would lose HP. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Break X+1 non Dud runes and prevent the next X+1 times you would lose HP. NL Exhaust."
+    "DESCRIPTION": "Break X non-Dud runes and prevent the next X times you would lose HP. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Break X+1 non-Dud runes and prevent the next X+1 times you would lose HP. NL Exhaust."
   },
   "Runesmith:Supernova": {
     "NAME": "Supernova",
-    "DESCRIPTION": "Break all of your runes. Draw a card and gain [E] for each non Dud rune destroyed."
+    "DESCRIPTION": "Break all of your runes. Draw a card and gain [E] for each non-Dud rune destroyed."
   },
   "Runesmith:CreatorForm": {
     "NAME": "Creator Form",
@@ -390,7 +390,7 @@
   },
   "Runesmith:Discharge": {
     "NAME": "Discharge",
-    "DESCRIPTION": "Break your oldest non Dud rune to deal !D! damage, gain !B! Block and Craft a Dud rune."
+    "DESCRIPTION": "Break your oldest non-Dud rune to deal !D! damage, gain !B! Block and Craft a Dud rune."
   },
   "Runesmith:Attraction": {
     "NAME": "Attraction",
