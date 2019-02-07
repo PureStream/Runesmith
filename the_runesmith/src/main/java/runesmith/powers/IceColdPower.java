@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.SlowPower;
 
 public class IceColdPower extends AbstractPower {
 
@@ -38,8 +39,16 @@ public class IceColdPower extends AbstractPower {
     public void atEndOfTurn(boolean isPlayer) {
         flash();
         AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, "Runesmith:IceColdPower", 1));
-        if (this.amount == 0) {
-            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, "SlowPower"));
+        if (this.amount == 1) {
+            SlowPower slow = null;
+            for (AbstractPower power : owner.powers) {
+                if (power instanceof SlowPower){
+                    slow = (SlowPower) power;
+                    break;
+                }
+            }
+            if (slow != null)
+                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, slow));
         }
     }
 
