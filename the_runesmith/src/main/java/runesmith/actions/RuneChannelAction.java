@@ -69,7 +69,7 @@ public class RuneChannelAction extends AbstractGameAction {
     private void channelDuplicate(AbstractOrb newOrbType, boolean autoEvoke) {
         AbstractPlayer p = AbstractDungeon.player;
         if (this.runeCount < MAX_ORBS - 1) {
-            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, "Runesmith:DuplicatePower", 1));
+            AbstractDungeon.actionManager.addToTop(new ReducePowerAction(p, p, "Runesmith:DuplicatePower", 1));
             p.increaseMaxOrbSlots(1, false);
             p.channelOrb(this.orbType.makeCopy());
             if (this.orbType instanceof RuneOrb) {
