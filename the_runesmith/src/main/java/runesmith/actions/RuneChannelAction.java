@@ -14,7 +14,7 @@ import runesmith.orbs.RuneOrb;
 public class RuneChannelAction extends AbstractGameAction {
 
     private AbstractOrb orbType;
-    private boolean autoEvoke = false;
+    private boolean autoEvoke;
     private int maxRunes;
     private int runeCount = 0;
 
