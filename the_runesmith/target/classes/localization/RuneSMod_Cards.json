@@ -119,8 +119,8 @@
   },
   "Runesmith:Grindstone": {
     "NAME": "Grindstone",
-    "DESCRIPTION": "Gain !B! block. NL All cards played this turn become Upgraded. NL Enhance the card if it is already Upgraded.",
-    "UPGRADE_DESCRIPTION": "Gain !B! block. NL For !M! turns, all cards played become Upgraded. NL Enhance the card if it is already Upgraded."
+    "DESCRIPTION": "Gain !B! block. NL All cards played this turn become Upgraded. NL Enhance the card if it cannot be Upgraded.",
+    "UPGRADE_DESCRIPTION": "Gain !B! block. NL For !M! turns, all cards played become Upgraded. NL Enhance the card if it cannot be Upgraded."
   },
   "Runesmith:FieryHammer": {
     "NAME": "Fiery Hammer",
@@ -249,8 +249,8 @@
   },
   "Runesmith:GenerateForcefield": {
     "NAME": "Generate Forcefield",
-    "DESCRIPTION": "Break X non-Dud runes and prevent the next X times you would lose HP. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Break X+1 non-Dud runes and prevent the next X+1 times you would lose HP. NL Exhaust."
+    "DESCRIPTION": "Break X non-Dud runes. For each rune broken, prevent the next time you would lose HP. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Break X+1 non-Dud runes, For each rune broken, prevent the next time you would lose HP. NL Exhaust."
   },
   "Runesmith:Supernova": {
     "NAME": "Supernova",
@@ -402,7 +402,7 @@
   },
   "Runesmith:ReplicatingBarrier": {
     "NAME": "Replicating Barrier",
-    "DESCRIPTION": "Every 2 turns, 2 Terra: Craft Protectio with !Pot! Potency."
+    "DESCRIPTION": "Every 2 turns, 2 Terra: Craft a Protectio rune with !Pot! Potency."
   },
   "Runesmith:TimeMachine_old": {
     "NAME": "Time Machine",

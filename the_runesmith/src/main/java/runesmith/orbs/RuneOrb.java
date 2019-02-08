@@ -175,4 +175,14 @@ public abstract class RuneOrb extends AbstractOrb {
         renderText(sb);
         this.hb.render(sb);
     }
+
+    public static int getRuneCount(AbstractPlayer p){
+        int runeCount = 0;
+        for(AbstractOrb o : p.orbs){
+            if(o instanceof RuneOrb){
+                runeCount++;
+            }
+        }
+        return runeCount;
+    }
 }

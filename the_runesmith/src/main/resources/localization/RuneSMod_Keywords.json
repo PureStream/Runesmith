@@ -31,7 +31,7 @@
         "craft",
         "crafted"
       ],
-      "DESCRIPTION": "Create a rune using #yElements. If you don't have enough, gain that many instead. You can have no more than 7 active runes."
+      "DESCRIPTION": "Create a rune using #yElements. If rune cannot be crafted, gain that many #yElements instead. You can have no more than 7 active runes."
     },
     {
       "NAMES": [
