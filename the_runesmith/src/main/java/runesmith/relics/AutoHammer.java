@@ -17,7 +17,7 @@ public class AutoHammer extends CustomRelic {
     private static final int NUM_CARDS = 3;
 
     public AutoHammer() {
-        super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_O), RelicTier.UNCOMMON, LandingSound.SOLID);
+        super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_O), RelicTier.COMMON, LandingSound.SOLID);
     }
 
     public String getUpdatedDescription() {
