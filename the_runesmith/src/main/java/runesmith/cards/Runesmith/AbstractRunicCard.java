@@ -15,6 +15,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import runesmith.RunesmithMod;
 import runesmith.actions.ApplyElementsPowerAction;
+import runesmith.orbs.RuneOrb;
 import runesmith.patches.EnhanceCountField;
 import runesmith.powers.PotentialPower;
 
@@ -110,12 +111,13 @@ public abstract class AbstractRunicCard extends CustomCard {
 
         //logger.info("Start checking elements.");
         AbstractPlayer p = AbstractDungeon.player;
+        int runeCount = RuneOrb.getRuneCount(p);
 
         if (this.freeElementOnce || p.hasPower("Runesmith:UnlimitedPowerPower")) {
             if (this.freeElementOnce && !checkOnly)
                 freeElementOnce = false;
 
-            if (p.maxOrbs == MAX_ORBS && !checkOnly && !isPotentia)
+            if (runeCount >= MAX_ORBS && !checkOnly && !isPotentia)
                 AbstractDungeon.actionManager.addToBottom(new ApplyElementsPowerAction(p, p, ignis, terra, aqua));
 
             this.isCraftable = true;
@@ -143,7 +145,7 @@ public abstract class AbstractRunicCard extends CustomCard {
         if (pIgnis >= ignis && pTerra >= terra && pAqua >= aqua) {
             //logger.info("Have enough elements.");
             if (!checkOnly) {
-                if (p.maxOrbs == MAX_ORBS && !isPotentia)
+                if (runeCount >= MAX_ORBS && !isPotentia)
                     AbstractDungeon.actionManager.addToBottom(new ApplyElementsPowerAction(p, p, ignis, terra, aqua));
                 else {
                     if (pIgnis > 0 && ignis > 0) {
