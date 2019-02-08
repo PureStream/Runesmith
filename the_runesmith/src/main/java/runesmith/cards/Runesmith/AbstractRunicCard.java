@@ -36,8 +36,6 @@ public abstract class AbstractRunicCard extends CustomCard {
 
     public boolean freeElementOnce = false;
 
-    private static final int MAX_ORBS = 7;
-
     private Logger logger = LogManager.getLogger(RunesmithMod.class.getName());
 
     private Color renderColor = Color.WHITE.cpy();
@@ -112,12 +110,13 @@ public abstract class AbstractRunicCard extends CustomCard {
         //logger.info("Start checking elements.");
         AbstractPlayer p = AbstractDungeon.player;
         int runeCount = RuneOrb.getRuneCount(p);
+        int maxRunes = RuneOrb.getMaxRune(p);
 
         if (this.freeElementOnce || p.hasPower("Runesmith:UnlimitedPowerPower")) {
             if (this.freeElementOnce && !checkOnly)
                 freeElementOnce = false;
 
-            if (runeCount >= MAX_ORBS && !checkOnly && !isPotentia)
+            if (runeCount >= maxRunes && !checkOnly && !isPotentia)
                 AbstractDungeon.actionManager.addToBottom(new ApplyElementsPowerAction(p, p, ignis, terra, aqua));
 
             this.isCraftable = true;
@@ -145,7 +144,7 @@ public abstract class AbstractRunicCard extends CustomCard {
         if (pIgnis >= ignis && pTerra >= terra && pAqua >= aqua) {
             //logger.info("Have enough elements.");
             if (!checkOnly) {
-                if (runeCount >= MAX_ORBS && !isPotentia)
+                if (runeCount >= maxRunes && !isPotentia)
                     AbstractDungeon.actionManager.addToBottom(new ApplyElementsPowerAction(p, p, ignis, terra, aqua));
                 else {
                     if (pIgnis > 0 && ignis > 0) {

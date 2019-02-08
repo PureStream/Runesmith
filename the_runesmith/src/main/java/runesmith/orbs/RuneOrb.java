@@ -185,4 +185,9 @@ public abstract class RuneOrb extends AbstractOrb {
         }
         return runeCount;
     }
+
+    public static int getMaxRune(AbstractPlayer p) {
+        return 7;
+    }
+
 }

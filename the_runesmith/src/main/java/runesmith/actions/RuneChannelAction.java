@@ -15,7 +15,7 @@ public class RuneChannelAction extends AbstractGameAction {
 
     private AbstractOrb orbType;
     private boolean autoEvoke = false;
-    private int MAX_ORBS = 7;
+    private int maxRunes;
     private int runeCount = 0;
 
     public RuneChannelAction(AbstractOrb newOrbType) {
@@ -31,8 +31,9 @@ public class RuneChannelAction extends AbstractGameAction {
     @Override
     public void update() {
         AbstractPlayer p = AbstractDungeon.player;
+        maxRunes = RuneOrb.getMaxRune(p);
         this.runeCount = RuneOrb.getRuneCount(p);
-        if (this.runeCount >= MAX_ORBS) {
+        if (this.runeCount >= maxRunes) {
             AbstractDungeon.effectList.add(new ThoughtBubble(p.dialogX, p.dialogY, 3.0F, "I'm out of #rrunes space.", true));
             this.isDone = true;
             return;
@@ -68,7 +69,7 @@ public class RuneChannelAction extends AbstractGameAction {
 
     private void channelDuplicate(AbstractOrb newOrbType, boolean autoEvoke) {
         AbstractPlayer p = AbstractDungeon.player;
-        if (this.runeCount < MAX_ORBS - 1) {
+        if (this.runeCount < maxRunes - 1) {
             AbstractDungeon.actionManager.addToTop(new ReducePowerAction(p, p, "Runesmith:DuplicatePower", 1));
             p.increaseMaxOrbSlots(1, false);
             p.channelOrb(this.orbType.makeCopy());
