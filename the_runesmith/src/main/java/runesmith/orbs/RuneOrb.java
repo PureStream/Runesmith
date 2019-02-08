@@ -16,6 +16,7 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.vfx.combat.OrbFlareEffect;
 import com.megacrit.cardcrawl.vfx.combat.PlasmaOrbActivateEffect;
 import runesmith.powers.PotentialPower;
+import runesmith.relics.PocketReactor;
 
 
 public abstract class RuneOrb extends AbstractOrb {
@@ -25,10 +26,10 @@ public abstract class RuneOrb extends AbstractOrb {
     private static final float ORB_WAVY_DIST = 0.04F;
     private static final float PI_4 = 12.566371F;
 
-    public boolean upgraded = false;
+    public boolean upgraded;
     public boolean useMultiBreak = false;
     public boolean showPotentialValue = true;
-    public int potential = 0;
+    public int potential;
     private String[] descriptions;
 
     public RuneOrb(String ID, boolean upgraded, int potential) {
@@ -80,35 +81,51 @@ public abstract class RuneOrb extends AbstractOrb {
 
     public static RuneOrb getRandomRune(boolean useCardRng, int playerPotency) {
         int selectedRune;
+        int potency;
         if (useCardRng)
             selectedRune = AbstractDungeon.cardRandomRng.random(11);
         else
             selectedRune = MathUtils.random(11);
         switch (selectedRune) {
             case 0:
-                return new SpiculumRune(SpiculumRune.basePotency + playerPotency);
+                potency = potencyCal(SpiculumRune.basePotency, playerPotency);
+                return new SpiculumRune(potency);
             case 1:
-                return new FerroRune(FerroRune.basePotency + playerPotency);
+                potency = potencyCal(FerroRune.basePotency, playerPotency);
+                return new FerroRune(potency);
             case 2:
-                return new FirestoneRune(FirestoneRune.basePotency + playerPotency);
+                potency = potencyCal(FirestoneRune.basePotency, playerPotency);
+                return new FirestoneRune(potency);
             case 3:
-                return new IncendiumRune(IncendiumRune.basePotency + playerPotency);
+                potency = potencyCal(IncendiumRune.basePotency, playerPotency);
+                return new IncendiumRune(potency);
             case 4:
                 return new IndustriaRune();
             case 5:
-                return new MagmaRune(MagmaRune.basePotency + playerPotency);
+                potency = potencyCal(MagmaRune.basePotency, playerPotency);
+                return new MagmaRune(potency);
             case 6:
-                return new MedicinaeRune(MedicinaeRune.basePotency + playerPotency);
+                potency = potencyCal(MedicinaeRune.basePotency, playerPotency);
+                return new MedicinaeRune(potency);
             case 7:
-                return new PotentiaRune(PotentiaRune.basePotency + playerPotency);
+                potency = potencyCal(PotentiaRune.basePotency, playerPotency);
+                return new PotentiaRune(potency);
             case 8:
                 return new PrismaticRune(false);
             case 9:
-                return new ProtectioRune(ProtectioRune.basePotency + playerPotency);
+                potency = potencyCal(ProtectioRune.basePotency, playerPotency);
+                return new ProtectioRune(potency);
             case 10:
                 return new ReservoRune();
         }
         return new DudRune();
+    }
+
+    private static int potencyCal(int basePotency, int playerPotency) {
+        int potency = basePotency + playerPotency;
+        if (AbstractDungeon.player.hasRelic(PocketReactor.ID))
+            potency -= 2;
+        return (potency>=0) ? potency : 0;
     }
 
     public void onStartOfTurn() {
@@ -185,4 +202,9 @@ public abstract class RuneOrb extends AbstractOrb {
         }
         return runeCount;
     }
+
+    public static int getMaxRune(AbstractPlayer p) {
+        return 7;
+    }
+
 }

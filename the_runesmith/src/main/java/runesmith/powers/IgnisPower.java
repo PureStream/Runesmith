@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import runesmith.relics.CoreCrystal;
 
 public class IgnisPower extends AbstractPower {
 
@@ -30,15 +31,15 @@ public class IgnisPower extends AbstractPower {
     public void stackPower(int stackAmount) {
         this.fontScale = 8.0F;
         this.amount += stackAmount;
-        if (this.amount <= 0) {
+        if (this.amount <= 0)
             AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, "Runesmith:IgnisPower"));
-        }
-        if (this.amount > 10)
-            this.amount = 10;
+        int maxStacks = (AbstractDungeon.player.hasRelic(CoreCrystal.ID)) ? 20 : 10;
+        if (this.amount > maxStacks)
+            this.amount = maxStacks;
     }
 
     public void updateDescription() {
-        this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
+        this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + ((AbstractDungeon.player.hasRelic(CoreCrystal.ID)) ? 20 : 10) +DESCRIPTIONS[2]);
     }
 
 }

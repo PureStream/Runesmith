@@ -14,7 +14,7 @@ public class Nanobots extends CustomRelic {
     private static final String IMG_O = "images/relics/Nanobots_o.png";
 
     public Nanobots() {
-        super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_O), RelicTier.COMMON, LandingSound.MAGICAL);
+        super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_O), RelicTier.UNCOMMON, LandingSound.MAGICAL);
     }
 
     public String getUpdatedDescription() {

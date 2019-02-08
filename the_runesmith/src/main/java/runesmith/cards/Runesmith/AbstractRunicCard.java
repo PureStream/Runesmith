@@ -18,6 +18,8 @@ import runesmith.actions.ApplyElementsPowerAction;
 import runesmith.orbs.RuneOrb;
 import runesmith.patches.EnhanceCountField;
 import runesmith.powers.PotentialPower;
+import runesmith.relics.BrokenRuby;
+import runesmith.relics.PocketReactor;
 
 public abstract class AbstractRunicCard extends CustomCard {
     public AbstractRunicCard(String id, String name, String img, int cost, String rawDescription, CardType type, CardColor color,
@@ -35,8 +37,6 @@ public abstract class AbstractRunicCard extends CustomCard {
     public boolean renderCraftable = true;
 
     public boolean freeElementOnce = false;
-
-    private static final int MAX_ORBS = 7;
 
     private Logger logger = LogManager.getLogger(RunesmithMod.class.getName());
 
@@ -57,7 +57,10 @@ public abstract class AbstractRunicCard extends CustomCard {
     private void applyPowersToPotency() {
         this.isPotencyModified = false;
         this.potency = this.basePotency + getPotentialPowerValue();
-        if (this.potency < 0) this.potency = 0;
+        if (AbstractDungeon.player.hasRelic(PocketReactor.ID))
+            this.potency -= 2;
+        if (this.potency < 0)
+            this.potency = 0;
         this.potency = this.potency + MathUtils.floor(this.potency * (0.5F * EnhanceCountField.enhanceCount.get(this)));
         if (this.potency != this.basePotency) this.isPotencyModified = true;
     }
@@ -112,12 +115,13 @@ public abstract class AbstractRunicCard extends CustomCard {
         //logger.info("Start checking elements.");
         AbstractPlayer p = AbstractDungeon.player;
         int runeCount = RuneOrb.getRuneCount(p);
+        int maxRunes = RuneOrb.getMaxRune(p);
 
-        if (this.freeElementOnce || p.hasPower("Runesmith:UnlimitedPowerPower")) {
+        if (this.freeElementOnce || p.hasPower("Runesmith:UnlimitedPowerPower") || p.hasRelic(PocketReactor.ID)) {
             if (this.freeElementOnce && !checkOnly)
                 freeElementOnce = false;
 
-            if (runeCount >= MAX_ORBS && !checkOnly && !isPotentia)
+            if (runeCount >= maxRunes && !checkOnly && !isPotentia)
                 AbstractDungeon.actionManager.addToBottom(new ApplyElementsPowerAction(p, p, ignis, terra, aqua));
 
             this.isCraftable = true;
@@ -128,8 +132,8 @@ public abstract class AbstractRunicCard extends CustomCard {
         int pIgnis = 0, pTerra = 0, pAqua = 0;
 
         if (isAnAttackCard) {
-            if (p.hasRelic("Runesmith:BrokenRuby"))
-                if (p.getRelic("Runesmith:BrokenRuby").counter == 2)
+            if (p.hasRelic(BrokenRuby.ID))
+                if (p.getRelic(BrokenRuby.ID).counter == 2)
                     pIgnis++;
         }
 
@@ -145,7 +149,7 @@ public abstract class AbstractRunicCard extends CustomCard {
         if (pIgnis >= ignis && pTerra >= terra && pAqua >= aqua) {
             //logger.info("Have enough elements.");
             if (!checkOnly) {
-                if (runeCount >= MAX_ORBS && !isPotentia)
+                if (runeCount >= maxRunes && !isPotentia)
                     AbstractDungeon.actionManager.addToBottom(new ApplyElementsPowerAction(p, p, ignis, terra, aqua));
                 else {
                     if (pIgnis > 0 && ignis > 0) {
