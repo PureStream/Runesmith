@@ -55,5 +55,19 @@
     "DESCRIPTIONS": [
       "Every time you play a Craft card, gain #b1 random Element."
     ]
+  },
+  "Runesmith:PocketReactor": {
+    "NAME": "Pocket Reactor",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "#yElements are no longer used for crafting. All cards lose #b2 Potency. "
+    ]
+  },
+  "Runesmith:CoreCrystal": {
+    "NAME": "Core Crystal",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "Replaces #rBroken #rRuby. All #yElement gains are doubled. Raises maximum #yElements to #b20."
+    ]
   }
 }

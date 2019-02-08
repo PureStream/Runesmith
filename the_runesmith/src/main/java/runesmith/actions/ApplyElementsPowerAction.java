@@ -9,6 +9,7 @@ import runesmith.patches.ElementsGainedCountField;
 import runesmith.powers.AquaPower;
 import runesmith.powers.IgnisPower;
 import runesmith.powers.TerraPower;
+import runesmith.relics.CoreCrystal;
 
 public class ApplyElementsPowerAction extends AbstractGameAction {
 
@@ -17,25 +18,31 @@ public class ApplyElementsPowerAction extends AbstractGameAction {
     private int terra;
     private int aqua;
     private AbstractPlayer p;
-    private static final int MAX_ELEMENTS = 10;
 
     public ApplyElementsPowerAction(AbstractCreature target, AbstractCreature source, int ignis, int terra, int aqua) {
-        oriIgnis = ignis;
-        oriTerra = terra;
-        oriAqua = aqua;
-        this.ignis = ignis > MAX_ELEMENTS ? MAX_ELEMENTS : ignis;
-        this.terra = terra > MAX_ELEMENTS ? MAX_ELEMENTS : terra;
-        this.aqua = aqua > MAX_ELEMENTS ? MAX_ELEMENTS : aqua;
         this.p = (AbstractPlayer) target;
+        int maxStacks = 10;
+        int multipler = 1;
+        if (p.hasRelic(CoreCrystal.ID)) {
+            maxStacks = 20;
+            multipler = 2;
+        }
+        oriIgnis = ignis*multipler;
+        oriTerra = terra*multipler;
+        oriAqua = aqua*multipler;
+        this.ignis = ignis*multipler > maxStacks ? maxStacks : ignis*multipler;
+        this.terra = terra*multipler > maxStacks ? maxStacks : terra*multipler;
+        this.aqua = aqua*multipler > maxStacks ? maxStacks : aqua*multipler;
+        
     }
 
     @Override
     public void update() {
 
 //		if(p.hasPower("Runesmith:RunesonancePower")) {
-//			this.ignis = this.ignis*2>MAX_ELEMENTS?MAX_ELEMENTS:ignis*2;
-//			this.terra = this.terra*2>MAX_ELEMENTS?MAX_ELEMENTS:terra*2;
-//			this.aqua = this.aqua*2>MAX_ELEMENTS?MAX_ELEMENTS:aqua*2;
+//			this.ignis = this.ignis*2>maxStacks?maxStacks:ignis*2;
+//			this.terra = this.terra*2>maxStacks?maxStacks:terra*2;
+//			this.aqua = this.aqua*2>maxStacks?maxStacks:aqua*2;
 //			p.getPower("Runesmith:RunesonancePower").flash();
 //		}
         if (this.ignis != 0) {
