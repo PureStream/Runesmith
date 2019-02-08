@@ -10,6 +10,8 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import runesmith.actions.ApplyElementsPowerAction;
 import runesmith.patches.AbstractCardEnum;
+import runesmith.powers.TerraPower;
+import runesmith.relics.CoreCrystal;
 
 public class Terraform extends CustomCard {
     public static final String ID = "Runesmith:Terraform";
@@ -45,13 +47,21 @@ public class Terraform extends CustomCard {
             multiplier = 3;
         else
             multiplier = 2;
-        if (p.hasPower("Runesmith:RunesonancePower"))
-            this.baseBlock = 2 * multiplier;
-        else
-            this.baseBlock = 1 * multiplier;
-        if (p.hasPower("Runesmith:TerraPower"))
-            this.baseBlock += (p.getPower("Runesmith:TerraPower").amount * multiplier);
 
+        int playerTerra = 0;
+        if (p.hasRelic(CoreCrystal.ID))
+            playerTerra += 2;
+        else
+            playerTerra++;
+
+        if (p.hasPower(TerraPower.POWER_ID)) {
+            playerTerra += p.getPower(TerraPower.POWER_ID).amount;
+            int maxStacks = p.hasRelic(CoreCrystal.ID) ? 20 : 10;
+            if (playerTerra > maxStacks)
+                playerTerra = maxStacks;
+        }
+
+        this.baseBlock = playerTerra*multiplier;
         super.applyPowers();
 
         String extendString = EXTENDED_DESCRIPTION[0];
