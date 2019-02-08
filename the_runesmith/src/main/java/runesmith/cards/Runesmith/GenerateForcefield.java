@@ -41,14 +41,14 @@ public class GenerateForcefield extends CustomCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int cnt = EnergyPanel.totalCount;
-        if (upgraded) cnt++;
+        int energy = EnergyPanel.totalCount;
+        if (upgraded) energy++;
         if (p.hasRelic("Chemical X"))
-            cnt += 2;
+            energy += 2;
         if (!this.freeToPlayOnce)
             p.energy.use(EnergyPanel.totalCount);
 
-        if (p.orbs.size() == 0 || cnt == 0) return;
+        if (p.orbs.size() == 0 || energy == 0) return;
 
         int count = 0;
         for (AbstractOrb o : p.orbs) {
@@ -58,7 +58,7 @@ public class GenerateForcefield extends CustomCard {
                 AbstractDungeon.actionManager.addToBottom(
                         new BreakRuneAction(r)
                 );
-                if (count == cnt) break;
+                if (count == energy) break;
             }
         }
         if (count == 0) return;

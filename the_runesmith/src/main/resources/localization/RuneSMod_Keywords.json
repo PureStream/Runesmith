@@ -51,7 +51,7 @@
         "break",
         "broken"
       ],
-      "DESCRIPTION": "Destroy a rune and activate its effect twice. Passive effects will be removed at the start of your next turn."
+      "DESCRIPTION": "Destroy a rune and activate its effect twice. Power-based effects will be removed before the start of your next turn."
     },
     {
       "NAMES": [
