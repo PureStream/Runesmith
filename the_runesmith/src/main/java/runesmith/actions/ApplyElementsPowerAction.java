@@ -45,13 +45,14 @@ public class ApplyElementsPowerAction extends AbstractGameAction {
 //			this.aqua = this.aqua*2>maxStacks?maxStacks:aqua*2;
 //			p.getPower("Runesmith:RunesonancePower").flash();
 //		}
-        if (this.ignis != 0) {
+
+        if (this.aqua != 0) {
             AbstractDungeon.actionManager.addToTop(
                     new ApplyPowerAction(
                             p,
                             p,
-                            new IgnisPower(p, this.ignis),
-                            this.ignis
+                            new AquaPower(p, this.aqua),
+                            this.aqua
                     )
             );
         }
@@ -65,16 +66,17 @@ public class ApplyElementsPowerAction extends AbstractGameAction {
                     )
             );
         }
-        if (this.aqua != 0) {
+        if (this.ignis != 0) {
             AbstractDungeon.actionManager.addToTop(
                     new ApplyPowerAction(
                             p,
                             p,
-                            new AquaPower(p, this.aqua),
-                            this.aqua
+                            new IgnisPower(p, this.ignis),
+                            this.ignis
                     )
             );
         }
+
         ElementsGainedCountField.elementsCount.set(p, ElementsGainedCountField.elementsCount.get(p) + oriIgnis + oriTerra + oriAqua);
         this.isDone = true;
     }
