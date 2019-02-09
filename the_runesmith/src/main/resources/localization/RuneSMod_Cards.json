@@ -322,8 +322,7 @@
   },
   "Runesmith:DoubleUp": {
     "NAME": "Double Up",
-    "DESCRIPTION": "Gain !B! Block. NL Upgrade !M! card in your hand and Enhance it.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Upgrade !M! cards in your hand and Enhance them."
+    "DESCRIPTION": "Gain !B! Block. NL Upgrade and Enhance !M! card in your hand."
   },
   "Runesmith:Refinement": {
     "NAME": "Refinement",
