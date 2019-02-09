@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import runesmith.actions.EnhanceCard;
+import runesmith.patches.EnhanceCountField;
 
 public class GrindstonePower extends AbstractPower {
 
@@ -47,6 +48,10 @@ public class GrindstonePower extends AbstractPower {
                 card.upgrade();
             } else if (EnhanceCard.canEnhance(card)) {
                 flash();
+                if(EnhanceCountField.enhanceReset.get(card)){
+                    EnhanceCountField.enhanceReset.set(card, false);
+                    EnhanceCountField.enhanceCount.set(card, 0);
+                }
                 EnhanceCard.enhance(card);
             }
         } else
