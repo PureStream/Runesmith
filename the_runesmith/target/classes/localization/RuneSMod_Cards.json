@@ -40,8 +40,7 @@
   },
   "Runesmith:Terraform": {
     "NAME": "Terraform",
-    "DESCRIPTION": "Gain 1 Terra. NL Gain Block equals to double the number of Terra.",
-    "UPGRADE_DESCRIPTION": "Gain 1 Terra. NL Gain Block equals to triple the number of Terra.",
+    "DESCRIPTION": "Gain 1 Terra. NL Gain Block equals to !M! times the number of Terra.",
     "EXTENDED_DESCRIPTION": [
       " NL (Gain !B! Block.)"
     ]
@@ -112,7 +111,6 @@
   "Runesmith:Prism": {
     "NAME": "Prism",
     "DESCRIPTION": "Gain Block equals to !M! times the number of all your Elements. NL Remove half of your Elements.",
-    "UPGRADE_DESCRIPTION": "Gain Block equals to !M! times the number of all your Elements. NL Remove half of your Elements.",
     "EXTENDED_DESCRIPTION": [
       " NL (Gain !B! Block)"
     ]
@@ -171,8 +169,8 @@
   },
   "Runesmith:HammerTime": {
     "NAME": "Hammer Time",
-    "DESCRIPTION": " Deal !D! damage. NL Enhance ALL of your cards containing \"Hammer\".",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Enhance ALL of your cards containing \"Hammer\" twice."
+    "DESCRIPTION": " Deal !D! damage. NL Enhance ALL of your other cards containing \"Hammer\".",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Enhance ALL of your other cards containing \"Hammer\" twice."
   },
   "Runesmith:MakeshiftArmor": {
     "NAME": "Makeshift Armor",
@@ -250,7 +248,7 @@
   "Runesmith:GenerateForcefield": {
     "NAME": "Generate Forcefield",
     "DESCRIPTION": "Break X non-Dud runes. For each rune broken, prevent the next time you would lose HP. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Break X+1 non-Dud runes, For each rune broken, prevent the next time you would lose HP. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Break X+1 non-Dud runes. For each rune broken, prevent the next time you would lose HP. NL Exhaust."
   },
   "Runesmith:Supernova": {
     "NAME": "Supernova",
@@ -324,8 +322,7 @@
   },
   "Runesmith:DoubleUp": {
     "NAME": "Double Up",
-    "DESCRIPTION": "Gain !B! Block. NL Upgrade !M! card in your hand and Enhance it.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Upgrade !M! cards in your hand and Enhance them."
+    "DESCRIPTION": "Gain !B! Block. NL Upgrade and Enhance !M! card in your hand."
   },
   "Runesmith:Refinement": {
     "NAME": "Refinement",
@@ -348,7 +345,7 @@
   },
   "Runesmith:PoweredAnvil": {
     "NAME": "Powered Anvil",
-    "DESCRIPTION": "After you Enhanced a card, Enhance it one additional time.",
+    "DESCRIPTION": "After you Enhance a card, Enhance it one additional time.",
     "UPGRADE_DESCRIPTION": "Innate. NL After you Enhanced a card, Enhance it one additional time."
   },
   "Runesmith:Malloc": {
@@ -362,7 +359,7 @@
   },
   "Runesmith:FrozenChisel": {
     "NAME": "Frozen Chisel",
-    "DESCRIPTION": "Deal !D! damage. Apply 1 Slow. Enemy loses Slow after !M! turns."
+    "DESCRIPTION": "Deal !D! damage. Apply 1 Slow. Enemy loses Slow after !M! turns. NL Gain 1 Terra and 1 Aqua."
   },
   "Runesmith:Accelerate": {
     "NAME": "Accelerate",
@@ -402,7 +399,7 @@
   },
   "Runesmith:ReplicatingBarrier": {
     "NAME": "Replicating Barrier",
-    "DESCRIPTION": "Every 2 turns, 2 Terra: Craft a Protectio rune with !Pot! Potency."
+    "DESCRIPTION": "2 Terra: Craft a Protectio rune with !Pot! potency. NL Every 2 turns, Craft a Protectio rune with !Pot! Potency."
   },
   "Runesmith:TimeMachine_old": {
     "NAME": "Time Machine",
