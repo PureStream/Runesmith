@@ -400,7 +400,7 @@
   },
   "Runesmith:ReplicatingBarrier": {
     "NAME": "Replicating Barrier",
-    "DESCRIPTION": "2 Terra: Craft a Protectio rune with !Pot! potency. NL Every 2 turns, Craft a Protection rune with !Pot! Potency."
+    "DESCRIPTION": "2 Terra: Craft a Protectio rune with !Pot! potency. NL Every 2 turns, Craft a Protectio rune with !Pot! Potency."
   },
   "Runesmith:TimeMachine_old": {
     "NAME": "Time Machine",
