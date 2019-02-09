@@ -17,7 +17,6 @@ public class Prism extends CustomCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
     private static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
     private static final int COST = 0;
     private static final int TIMES_AMT = 2;
@@ -42,14 +41,9 @@ public class Prism extends CustomCard {
     @Override
     public void applyPowers() {
         AbstractPlayer p = AbstractDungeon.player;
-        int multiplier;
+        int multiplier = this.magicNumber;
         int totalElements = 0;
         this.baseBlock = 0;
-        if (this.upgraded) {
-            multiplier = 3;
-        } else {
-            multiplier = 2;
-        }
         if (p.hasPower("Runesmith:IgnisPower")) {
             totalElements += p.getPower("Runesmith:IgnisPower").amount;
         }
@@ -65,24 +59,17 @@ public class Prism extends CustomCard {
         }
         if (this.block > 0) {
             String extendString = EXTENDED_DESCRIPTION[0];
-            if (!this.upgraded) {
-                this.rawDescription = DESCRIPTION + extendString;
-            } else {
-                this.rawDescription = DESCRIPTION_UPG + extendString;
-            }
+            this.rawDescription = DESCRIPTION + extendString;
             initializeDescription();
         }
     }
 
     public void onMoveToDiscard() {
-        if (this.upgraded) {
-            this.rawDescription = DESCRIPTION_UPG;
-        } else {
-            this.rawDescription = DESCRIPTION;
-        }
+        this.rawDescription = DESCRIPTION;
         initializeDescription();
     }
 
+    @SuppressWarnings("IntegerDivisionInFloatingPointContext")
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (this.block > 0) {
             AbstractDungeon.actionManager.addToBottom(
@@ -108,7 +95,6 @@ public class Prism extends CustomCard {
         if (!this.upgraded) {
             upgradeName();
             upgradeMagicNumber(UPGRADE_TIMES_AMT);
-            this.rawDescription = DESCRIPTION_UPG;
             initializeDescription();
         }
     }
