@@ -40,6 +40,12 @@ public class ReplicatingBarrier extends AbstractRunicCard {
         this.basePotency = this.potency = POTENCY_AMT;
     }
 
+    @Override
+    public void applyPowers() {
+        super.applyPowers();
+        checkElements(0, TERRA_AMT, 0, true);
+    }
+
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (checkElements(0, TERRA_AMT, 0)) {
             AbstractDungeon.actionManager.addToBottom(
