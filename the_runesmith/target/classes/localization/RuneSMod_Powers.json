@@ -3,21 +3,21 @@
     "NAME": "Ignis",
     "DESCRIPTIONS": [
       "You currently have #b",
-      " out of 10 #yIgnis."
+      " out of "," #yIgnis."
     ]
   },
   "Runesmith:TerraPower": {
     "NAME": "Terra",
     "DESCRIPTIONS": [
       "You currently have #b",
-      " out of 10 #yTerra."
+      " out of "," #yTerra."
     ]
   },
   "Runesmith:AquaPower": {
     "NAME": "Aqua",
     "DESCRIPTIONS": [
       "You currently have #b",
-      " out of 10 #yAqua."
+      " out of "," #yAqua."
     ]
   },
   "Runesmith:GrindstonePower": {
