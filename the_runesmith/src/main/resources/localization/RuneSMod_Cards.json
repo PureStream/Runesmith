@@ -360,7 +360,7 @@
   },
   "Runesmith:FrozenChisel": {
     "NAME": "Frozen Chisel",
-    "DESCRIPTION": "Deal !D! damage. Apply 1 Slow. Enemy loses Slow after !M! turns."
+    "DESCRIPTION": "Deal !D! damage. Apply 1 Slow. Enemy loses Slow after !M! turns. NL Gain 1 Terra and 1 Aqua."
   },
   "Runesmith:Accelerate": {
     "NAME": "Accelerate",
