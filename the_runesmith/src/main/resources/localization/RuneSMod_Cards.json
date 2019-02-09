@@ -248,7 +248,7 @@
   "Runesmith:GenerateForcefield": {
     "NAME": "Generate Forcefield",
     "DESCRIPTION": "Break X non-Dud runes. For each rune broken, prevent the next time you would lose HP. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Break X+1 non-Dud runes, For each rune broken, prevent the next time you would lose HP. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Break X+1 non-Dud runes. For each rune broken, prevent the next time you would lose HP. NL Exhaust."
   },
   "Runesmith:Supernova": {
     "NAME": "Supernova",
@@ -346,7 +346,7 @@
   },
   "Runesmith:PoweredAnvil": {
     "NAME": "Powered Anvil",
-    "DESCRIPTION": "After you Enhanced a card, Enhance it one additional time.",
+    "DESCRIPTION": "After you Enhance a card, Enhance it one additional time.",
     "UPGRADE_DESCRIPTION": "Innate. NL After you Enhanced a card, Enhance it one additional time."
   },
   "Runesmith:Malloc": {

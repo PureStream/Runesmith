@@ -45,7 +45,7 @@ public class Grindstone extends CustomCard {
                 new GainBlockAction(p, p, this.block)
         );
         AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p,
-                new GrindstonePower(p, this.magicNumber), POWER_AMT));
+                new GrindstonePower(p, this.magicNumber), this.magicNumber));
     }
 
     public AbstractCard makeCopy() {
