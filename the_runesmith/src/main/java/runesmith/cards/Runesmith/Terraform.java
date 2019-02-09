@@ -19,10 +19,12 @@ public class Terraform extends CustomCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
     private static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
     private static final int COST = 1;
     private static final int TERRA_AMT = 1;
+    private static final int TIMES_AMT = 2;
+    private static final int UPGRADE_TIMES_AMT = 1;
+
 
     public Terraform() {
         super(
@@ -37,16 +39,13 @@ public class Terraform extends CustomCard {
                 AbstractCard.CardTarget.SELF
         );
         this.baseBlock = this.block = 0;
+        this.baseMagicNumber = this.magicNumber = TIMES_AMT;
     }
 
     @Override
     public void applyPowers() {
         AbstractPlayer p = AbstractDungeon.player;
-        int multiplier;
-        if (this.upgraded)
-            multiplier = 3;
-        else
-            multiplier = 2;
+        int multiplier = this.magicNumber;
 
         int playerTerra = 0;
         if (p.hasRelic(CoreCrystal.ID))
@@ -66,16 +65,12 @@ public class Terraform extends CustomCard {
 
         String extendString = EXTENDED_DESCRIPTION[0];
 
-        this.rawDescription = (!this.upgraded) ? DESCRIPTION + extendString : DESCRIPTION_UPG + extendString;
+        this.rawDescription = DESCRIPTION + extendString;
         initializeDescription();
     }
 
     public void onMoveToDiscard() {
-        if (this.upgraded) {
-            this.rawDescription = DESCRIPTION_UPG;
-        } else {
-            this.rawDescription = DESCRIPTION;
-        }
+        this.rawDescription = DESCRIPTION;
         initializeDescription();
     }
 
@@ -96,8 +91,7 @@ public class Terraform extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            this.rawDescription = DESCRIPTION_UPG;
-            initializeDescription();
+            upgradeMagicNumber(UPGRADE_TIMES_AMT);
         }
     }
 }

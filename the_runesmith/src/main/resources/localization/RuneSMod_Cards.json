@@ -40,8 +40,7 @@
   },
   "Runesmith:Terraform": {
     "NAME": "Terraform",
-    "DESCRIPTION": "Gain 1 Terra. NL Gain Block equals to double the number of Terra.",
-    "UPGRADE_DESCRIPTION": "Gain 1 Terra. NL Gain Block equals to triple the number of Terra.",
+    "DESCRIPTION": "Gain 1 Terra. NL Gain Block equals to !M! times the number of Terra.",
     "EXTENDED_DESCRIPTION": [
       " NL (Gain !B! Block.)"
     ]
@@ -112,7 +111,6 @@
   "Runesmith:Prism": {
     "NAME": "Prism",
     "DESCRIPTION": "Gain Block equals to !M! times the number of all your Elements. NL Remove half of your Elements.",
-    "UPGRADE_DESCRIPTION": "Gain Block equals to !M! times the number of all your Elements. NL Remove half of your Elements.",
     "EXTENDED_DESCRIPTION": [
       " NL (Gain !B! Block)"
     ]
