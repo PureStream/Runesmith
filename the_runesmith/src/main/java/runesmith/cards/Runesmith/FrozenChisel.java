@@ -29,7 +29,7 @@ public class FrozenChisel extends CustomCard {
     private static final int UPGRADE_PLUS_DMG = 4;
     private static final int SLOW_RECOVER = 3;
     private static final int UPGRADE_SLOW_RECOVER = 1;
-    private static final int AQUA_AMT = 2;
+    private static final int ELEMENT_AMT = 1;
 
     public FrozenChisel() {
         super(
@@ -61,8 +61,7 @@ public class FrozenChisel extends CustomCard {
         AbstractDungeon.actionManager.addToBottom(
                 new ApplyPowerAction(m, p, new IceColdPower(m, this.magicNumber), this.magicNumber));
         AbstractDungeon.actionManager.addToBottom(
-                new ApplyElementsPowerAction(p, p, 0, 0, AQUA_AMT));
-//		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new IgnisPower(p, IGNIS_AMT), IGNIS_AMT));
+                new ApplyElementsPowerAction(p, p, 0, ELEMENT_AMT, ELEMENT_AMT));
     }
 
     public AbstractCard makeCopy() {

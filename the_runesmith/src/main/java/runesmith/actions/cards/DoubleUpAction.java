@@ -17,7 +17,7 @@ public class DoubleUpAction extends AbstractGameAction {
     public static final String[] TEXT = uiStrings.TEXT;
 
     private AbstractPlayer p;
-    private ArrayList<AbstractCard> cannotUpgrade = new ArrayList<>();
+    private ArrayList<AbstractCard> cannotUpgradeAndEnhance = new ArrayList<>();
     private int cardNums;
 
     public DoubleUpAction(int cardNums) {
@@ -31,21 +31,23 @@ public class DoubleUpAction extends AbstractGameAction {
         if (this.duration == Settings.ACTION_DUR_FAST) {
 
             for (AbstractCard c : this.p.hand.group) {
-                if (!c.canUpgrade()) {
-                    this.cannotUpgrade.add(c);
+                if (!(c.canUpgrade() || EnhanceCard.canEnhance(c))) {
+                    this.cannotUpgradeAndEnhance.add(c);
                 }
             }
 
-            if (this.cannotUpgrade.size() == this.p.hand.group.size()) {
+            if (this.cannotUpgradeAndEnhance.size() == this.p.hand.group.size()) {
                 this.isDone = true;
                 return;
             }
 
-            if (this.p.hand.group.size() - this.cannotUpgrade.size() <= cardNums) {
+            if (this.p.hand.group.size() - this.cannotUpgradeAndEnhance.size() <= cardNums) {
                 for (AbstractCard c : this.p.hand.group) {
-                    if (c.canUpgrade()) {
-                        c.upgrade();
-                        EnhanceCard.enhance(c);
+                    if (c.canUpgrade() || EnhanceCard.canEnhance(c)) {
+                        if (c.canUpgrade())
+                            c.upgrade();
+                        if (EnhanceCard.canEnhance(c))
+                            EnhanceCard.enhance(c);
                         c.superFlash(RunesmithMod.BEIGE);
                     }
                 }
@@ -53,7 +55,7 @@ public class DoubleUpAction extends AbstractGameAction {
                 return;
             }
 
-            this.p.hand.group.removeAll(this.cannotUpgrade);
+            this.p.hand.group.removeAll(this.cannotUpgradeAndEnhance);
 
             if (this.p.hand.group.size() > cardNums) {
                 AbstractDungeon.handCardSelectScreen.open(TEXT[0], cardNums, false, false, false, false);
@@ -63,8 +65,10 @@ public class DoubleUpAction extends AbstractGameAction {
 
             if (this.p.hand.group.size() <= cardNums) {
                 for (AbstractCard c : this.p.hand.group) {
-                    c.upgrade();
-                    EnhanceCard.enhance(c);
+                    if (c.canUpgrade())
+                        c.upgrade();
+                    if (EnhanceCard.canEnhance(c))
+                        EnhanceCard.enhance(c);
                     this.p.hand.getTopCard().superFlash(RunesmithMod.BEIGE);
                 }
                 returnCards();
@@ -75,8 +79,10 @@ public class DoubleUpAction extends AbstractGameAction {
 
         if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {
             for (AbstractCard c : AbstractDungeon.handCardSelectScreen.selectedCards.group) {
-                c.upgrade();
-                EnhanceCard.enhance(c);
+                if (c.canUpgrade())
+                    c.upgrade();
+                if (EnhanceCard.canEnhance(c))
+                    EnhanceCard.enhance(c);
                 c.superFlash(RunesmithMod.BEIGE);
                 this.p.hand.addToTop(c);
             }
@@ -90,7 +96,7 @@ public class DoubleUpAction extends AbstractGameAction {
     }
 
     private void returnCards() {
-        for (AbstractCard c : this.cannotUpgrade) {
+        for (AbstractCard c : this.cannotUpgradeAndEnhance) {
             this.p.hand.addToTop(c);
         }
         this.p.hand.refreshHandLayout();

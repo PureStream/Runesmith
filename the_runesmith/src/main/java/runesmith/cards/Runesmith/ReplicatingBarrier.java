@@ -7,6 +7,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import runesmith.actions.RuneChannelAction;
+import runesmith.orbs.ProtectioRune;
 import runesmith.patches.AbstractCardEnum;
 import runesmith.powers.ReplicatingBarrierPower;
 
@@ -18,8 +20,9 @@ public class ReplicatingBarrier extends AbstractRunicCard {
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     public static final String IMG_PATH = "images/cards/ReplicatingBarrier.png"; //<-------------- need some img
     private static final int COST = 1;
-    private static final int UPG_COST = 0;
     private static final int POTENCY_AMT = 4;
+    private static final int UPG_POTENCY_AMT = 1;
+    private static final int TERRA_AMT = 2;
 
     public ReplicatingBarrier() {
         super(
@@ -37,10 +40,20 @@ public class ReplicatingBarrier extends AbstractRunicCard {
         this.basePotency = this.potency = POTENCY_AMT;
     }
 
+    @Override
+    public void applyPowers() {
+        super.applyPowers();
+        checkElements(0, TERRA_AMT, 0, true);
+    }
+
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (!p.hasPower("Runesmith:ReplicatingBarrierPower"))
-            AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p,
-                    new ReplicatingBarrierPower(p, this.potency)));
+        if (checkElements(0, TERRA_AMT, 0)) {
+            AbstractDungeon.actionManager.addToBottom(
+                    new RuneChannelAction(
+                            new ProtectioRune(this.potency)));
+        }
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
+                new ReplicatingBarrierPower(p, this.potency)));
     }
 
     public AbstractCard makeCopy() {
@@ -50,7 +63,7 @@ public class ReplicatingBarrier extends AbstractRunicCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBaseCost(UPG_COST);
+            upgradePotency(UPG_POTENCY_AMT);
         }
     }
 }

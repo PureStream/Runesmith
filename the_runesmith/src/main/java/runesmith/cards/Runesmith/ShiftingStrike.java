@@ -37,6 +37,7 @@ public class ShiftingStrike extends CustomCard {
                 CardTarget.ENEMY
         );
         this.baseDamage = ATTACK_DMG;
+        this.tags.add(AbstractCard.CardTags.STRIKE);
     }
 
     public AbstractCard makeCopy() {
