@@ -16,7 +16,7 @@ public class PotentialDownPower extends AbstractPower {
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    public static final int AMOUNT_CAP = 999;
+    private static final int AMOUNT_CAP = 999;
 
     public PotentialDownPower(AbstractCreature owner, int amount) {
         this.name = NAME;
@@ -32,8 +32,8 @@ public class PotentialDownPower extends AbstractPower {
     public void stackPower(int stackAmount) {
         this.fontScale = 8.0F;
         this.amount += stackAmount;
-        if (this.amount > this.AMOUNT_CAP) {
-            this.amount = this.AMOUNT_CAP;
+        if (this.amount > AMOUNT_CAP) {
+            this.amount = AMOUNT_CAP;
         }
     }
 
@@ -47,7 +47,7 @@ public class PotentialDownPower extends AbstractPower {
                             -amount
                     )
             );
-            AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this.POWER_ID));
+            AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
         }
     }
 
