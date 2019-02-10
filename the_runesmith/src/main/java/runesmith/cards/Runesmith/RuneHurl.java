@@ -44,7 +44,10 @@ public class RuneHurl extends CustomCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (p.orbs.size() == 0) return;
+        if (p.orbs.size() == 0) {
+            AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, DRAW_AMT));
+            return;
+        }
 
         RuneOrb r = null;
         for (AbstractOrb o : p.orbs) {
@@ -55,6 +58,7 @@ public class RuneHurl extends CustomCard {
         }
         if (r == null){
             AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, DRAW_AMT));
+            return;
         }
 
         AbstractDungeon.actionManager.addToTop(

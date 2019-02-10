@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -15,6 +16,7 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.vfx.combat.OrbFlareEffect;
 import com.megacrit.cardcrawl.vfx.combat.PlasmaOrbActivateEffect;
+import runesmith.powers.ArcReactorPower;
 import runesmith.powers.PotentialPower;
 import runesmith.relics.PocketReactor;
 
@@ -139,8 +141,9 @@ public abstract class RuneOrb extends AbstractOrb {
 
     public void onCraft() {
         AbstractPlayer p = AbstractDungeon.player;
-        if (p.hasPower("Runesmith:ArcReactorPower")) {
-            int decAmount = p.getPower("Runesmith:ArcReactorPower").amount;
+        if (p.hasPower(ArcReactorPower.POWER_ID)) {
+            int decAmount = p.getPower(ArcReactorPower.POWER_ID).amount;
+//            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, PotentialPower.POWER_ID, decAmount));
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PotentialPower(p, -decAmount), -decAmount));
         }
     }

@@ -29,7 +29,7 @@ public class ConvertIgnis extends CustomCard {
                 IMG_PATH,
                 COST,
                 DESCRIPTION,
-                AbstractCard.CardType.SKILL,
+                CardType.ATTACK,
                 AbstractCard.CardColor.COLORLESS,
                 AbstractCard.CardRarity.SPECIAL,
                 CardTarget.ENEMY

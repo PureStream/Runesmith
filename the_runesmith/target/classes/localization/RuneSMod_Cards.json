@@ -247,8 +247,8 @@
   },
   "Runesmith:GenerateForcefield": {
     "NAME": "Generate Forcefield",
-    "DESCRIPTION": "Break X non-Dud runes. For each rune broken, prevent the next time you would lose HP. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Break X+1 non-Dud runes. For each rune broken, prevent the next time you would lose HP. NL Exhaust."
+    "DESCRIPTION": "Break X non-Dud runes. For each rune Broken, prevent the next time you would lose HP. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Break X+1 non-Dud runes. For each rune Broken, prevent the next time you would lose HP. NL Exhaust."
   },
   "Runesmith:Supernova": {
     "NAME": "Supernova",
