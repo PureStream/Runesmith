@@ -3,6 +3,7 @@ package runesmith.cards.Runesmith;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -24,6 +25,7 @@ public class RuneHurl extends CustomCard {
     private static final int COST = 0;
     private static final int ATTACK_DMG = 10;
     private static final int UPGRADE_PLUS_DMG = 4;
+    private static final int DRAW_AMT = 1;
 
     public RuneHurl() {
         super(
@@ -38,6 +40,7 @@ public class RuneHurl extends CustomCard {
                 CardTarget.ENEMY
         );
         this.baseDamage = ATTACK_DMG;
+//        this.baseMagicNumber = this.magicNumber = DRAW_AMT;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -50,7 +53,9 @@ public class RuneHurl extends CustomCard {
                 break;
             }
         }
-        if (r == null) return;
+        if (r == null){
+            AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, DRAW_AMT));
+        }
 
         AbstractDungeon.actionManager.addToTop(
                 new DamageAction(

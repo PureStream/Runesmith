@@ -131,11 +131,11 @@ public abstract class AbstractRunicCard extends CustomCard {
 
         int pIgnis = 0, pTerra = 0, pAqua = 0;
 
-        if (isAnAttackCard) {
+       /* if (isAnAttackCard) {
             if (p.hasRelic(BrokenRuby.ID))
                 if (p.getRelic(BrokenRuby.ID).counter == 2)
                     pIgnis++;
-        }
+        }*/
 
         if (p.hasPower("Runesmith:IgnisPower")) {
             pIgnis += p.getPower("Runesmith:IgnisPower").amount;
