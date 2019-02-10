@@ -164,5 +164,15 @@
       " turn.",
       " turns."
     ]
+  },
+  "Runesmith:LastStandPower": {
+    "NAME": "Last Stand",
+    "DESCRIPTIONS": [
+      "In #b",
+      " turns,",
+      " turn,",
+      " Deal #b",
+      " damage to ALL enemies."
+    ]
   }
 }

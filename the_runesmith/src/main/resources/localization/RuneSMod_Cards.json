@@ -236,7 +236,8 @@
   },
   "Runesmith:LastStand": {
     "NAME": "Last Stand",
-    "DESCRIPTION": "Downgrade ALL cards in your draw pile. Remove all Elements. Deal !M! times the number of Downgraded cards to ALL enemies. NL Exhaust.",
+    "DESCRIPTION": "Downgrade ALL cards in your deck. Remove all Elements. Deal !M! times the number of Downgraded cards to ALL enemies after 3 turns. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Downgrade ALL cards in your deck. Remove all Elements. Deal !M! times the number of Downgraded cards to ALL enemies after 2 turns. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       " NL (Deal !D! damage)"
     ]
