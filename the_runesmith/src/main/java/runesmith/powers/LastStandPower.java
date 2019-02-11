@@ -32,8 +32,8 @@ public class LastStandPower extends AbstractPower {
         this.damageAmount = damageAmount;
         this.amount = turns;
         updateDescription();
-        this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/ReplicatingBarrier.png"), 0, 0, 84, 84);
-        this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/ReplicatingBarrierSmall.png"), 0, 0, 32, 32);
+        this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/LastStand.png"), 0, 0, 84, 84);
+        this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/LastStandSmall.png"), 0, 0, 32, 32);
     }
 
     public void stackPower(int stackAmount) {
