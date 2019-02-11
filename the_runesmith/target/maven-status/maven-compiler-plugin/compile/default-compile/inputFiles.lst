@@ -11,6 +11,7 @@ C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\actions\cards\
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\PoweredAnvil.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\actions\cards\AttractionDrawThenDiscardAction.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\powers\ReservoPower.java
+C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\actions\DowngradeEntireDrawPileAction.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\HammerSlam.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\Rearm.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\powers\IceColdPower.java
@@ -141,6 +142,7 @@ C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\patches\Elemen
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\powers\CreatorFormPower.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\Prism.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\powers\ReplicatingBarrierPower.java
+C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\powers\LastStandPower.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\actions\DowngradeCard.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\helpers\PotencyVariable.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\Electrocute.java

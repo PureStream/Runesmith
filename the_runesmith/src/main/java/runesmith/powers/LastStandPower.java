@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.vfx.combat.ExplosionSmallEffect;
 
 public class LastStandPower extends AbstractPower {
 
@@ -49,8 +50,10 @@ public class LastStandPower extends AbstractPower {
             if (this.amount == 1) {
                 flash();
                 AbstractPlayer p = AbstractDungeon.player;
-                AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.utility.SFXAction("ATTACK_HEAVY"));
-                AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new com.megacrit.cardcrawl.vfx.combat.MindblastEffect(p.dialogX, p.dialogY, p.flipHorizontal), 0.1F));
+//                AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.utility.SFXAction("ATTACK_HEAVY"));
+                for(AbstractCreature c: AbstractDungeon.getMonsters().monsters)
+                    AbstractDungeon.actionManager.addToBottom(new VFXAction(new ExplosionSmallEffect(c.hb.cX, c.hb.cY), 0.1F));
+//                AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new com.megacrit.cardcrawl.vfx.combat.MindblastEffect(p.dialogX, p.dialogY, p.flipHorizontal), 0.1F));
                 AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(null,
                         DamageInfo.createDamageMatrix(damageAmount, true),
                         DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.NONE));
