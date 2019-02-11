@@ -302,7 +302,7 @@
   },
   "Runesmith:WhiteBalance": {
     "NAME": "White Balance",
-    "DESCRIPTION": "Deal damage equals to !M! times the number of Elements gained this turn to ALL enemies.",
+    "DESCRIPTION": "Deal damage equals to !M! times the number of Elements gained this turn.",
     "EXTENDED_DESCRIPTION": [
       " NL (Deals !D! damage.)"
     ]
