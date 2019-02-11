@@ -3,8 +3,9 @@ package runesmith.cards.Runesmith;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -36,16 +37,15 @@ public class WhiteBalance extends CustomCard {
                 CardType.ATTACK,
                 AbstractCardEnum.RUNESMITH_BEIGE,
                 CardRarity.UNCOMMON,
-                CardTarget.ALL_ENEMY
+                CardTarget.ENEMY
         );
         this.baseDamage = 0;
         this.baseMagicNumber = this.magicNumber = BASE_MULTIPLY;
-        this.isMultiDamage = true;
+//        this.isMultiDamage = true;
     }
 
     @Override
-    public void use(AbstractPlayer arg0, AbstractMonster arg1) {
-        AbstractPlayer p = AbstractDungeon.player;
+    public void use(AbstractPlayer p, AbstractMonster m) {
 //		int elem = ElementsGainedCountField.elementsCount.get(p);
 
 //		this.baseDamage = (elem * this.magicNumber);
@@ -53,13 +53,21 @@ public class WhiteBalance extends CustomCard {
 
 
         AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new com.megacrit.cardcrawl.vfx.combat.MindblastEffect(p.dialogX, p.dialogY, p.flipHorizontal), 0.1F));
+//        AbstractDungeon.actionManager.addToBottom(
+//                new DamageAllEnemiesAction(
+//                        p,
+//                        this.multiDamage, this.damageTypeForTurn,
+//                        AbstractGameAction.AttackEffect.FIRE
+//                )
+//        );
         AbstractDungeon.actionManager.addToBottom(
-                new DamageAllEnemiesAction(
-                        p,
-                        this.multiDamage, this.damageTypeForTurn,
+                new DamageAction(
+                        m,
+                        new DamageInfo(p, this.damage, this.damageTypeForTurn),
                         AbstractGameAction.AttackEffect.FIRE
                 )
         );
+
     }
 
 //	public void calculateCardDamage(AbstractMonster mo) {
@@ -75,8 +83,7 @@ public class WhiteBalance extends CustomCard {
 
     @Override
     public void applyPowers() {
-        int elem = ElementsGainedCountField.elementsCount.get(AbstractDungeon.player);
-        this.baseDamage = elem * this.magicNumber;
+        this.baseDamage = ElementsGainedCountField.elementsCount.get(AbstractDungeon.player) * this.magicNumber;
         super.applyPowers();
         this.rawDescription = (DESCRIPTION + EXTENDED_DESCRIPTION[0]);
         initializeDescription();
