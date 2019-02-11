@@ -1,8 +1,7 @@
 package runesmith.cards.Runesmith;
 
 import basemod.abstracts.CustomCard;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -14,6 +13,10 @@ import runesmith.actions.DowngradeEntireDeckAction;
 import runesmith.patches.AbstractCardEnum;
 import runesmith.patches.CardStasisStatus;
 import runesmith.patches.EnhanceCountField;
+import runesmith.powers.AquaPower;
+import runesmith.powers.IgnisPower;
+import runesmith.powers.LastStandPower;
+import runesmith.powers.TerraPower;
 
 public class LastStand extends CustomCard {
     public static final String ID = "Runesmith:LastStand";
@@ -25,6 +28,7 @@ public class LastStand extends CustomCard {
     private static final int COST = 3;
     private static final int MULTIPLIER_AMT = 5;
     private static final int UPG_MULTIPLIER_AMT = 2;
+    private static final int TURNS = 2;
 
     public LastStand() {
         super(
@@ -33,18 +37,18 @@ public class LastStand extends CustomCard {
                 IMG_PATH,
                 COST,
                 DESCRIPTION,
-                CardType.ATTACK,
+                CardType.SKILL,
                 AbstractCardEnum.RUNESMITH_BEIGE,
                 CardRarity.RARE,
-                CardTarget.ALL_ENEMY
+                CardTarget.NONE
         );
         this.baseDamage = this.damage = 0;
-        this.isMultiDamage = true;
+//        this.isMultiDamage = true;
         this.baseMagicNumber = this.magicNumber = MULTIPLIER_AMT;
         this.exhaust = true;
     }
 
-    public static int countCards() {
+    private static int countCards() {
         int count = 0;
         for (AbstractCard c : AbstractDungeon.player.discardPile.group) {
             if (c.upgraded || EnhanceCountField.enhanceCount.get(c) > 0 || CardStasisStatus.isStasis.get(c)) {
@@ -66,8 +70,8 @@ public class LastStand extends CustomCard {
 
     @Override
     public void applyPowers() {
-        this.baseDamage = ((this.upgraded) ? countCards() - 1 : countCards()) * this.magicNumber;
-
+//        this.baseDamage = ((this.upgraded) ? countCards() - 1 : countCards()) * this.magicNumber;
+        this.baseDamage = countCards() * this.magicNumber;
         super.applyPowers();
 
         String extendString = EXTENDED_DESCRIPTION[0];
@@ -81,21 +85,24 @@ public class LastStand extends CustomCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(
-                new DowngradeEntireDeckAction(p));
+        AbstractDungeon.actionManager.addToBottom(new DowngradeEntireDeckAction(p));
 
-        if (p.hasPower("IgnisPower"))
-            AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(p, p, "Runesmith:IgnisPower"));
-        if (p.hasPower("TerraPower"))
-            AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(p, p, "Runesmith:TerraPower"));
-        if (p.hasPower("AquaPower"))
-            AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(p, p, "Runesmith:AquaPower"));
+        if (p.hasPower(IgnisPower.POWER_ID))
+            AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(p, p, IgnisPower.POWER_ID));
+        if (p.hasPower(TerraPower.POWER_ID))
+            AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(p, p, TerraPower.POWER_ID));
+        if (p.hasPower(AquaPower.POWER_ID))
+            AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(p, p, AquaPower.POWER_ID));
 
-        AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.utility.SFXAction("ATTACK_HEAVY"));
-        AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new com.megacrit.cardcrawl.vfx.combat.MindblastEffect(p.dialogX, p.dialogY, p.flipHorizontal), 0.1F));
-        AbstractDungeon.actionManager.addToBottom(
-                new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect.NONE)
-        );
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
+                new LastStandPower(p, this.damage, TURNS)));
+
+//        AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.utility.SFXAction("ATTACK_HEAVY"));
+//        AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new com.megacrit.cardcrawl.vfx.combat.MindblastEffect(p.dialogX, p.dialogY, p.flipHorizontal), 0.1F));
+//        AbstractDungeon.actionManager.addToBottom(
+//                new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect.NONE)
+//        );
+
     }
 
     public AbstractCard makeCopy() {
@@ -106,7 +113,6 @@ public class LastStand extends CustomCard {
         if (!this.upgraded) {
             upgradeName();
             upgradeMagicNumber(UPG_MULTIPLIER_AMT);
-            initializeDescription();
         }
     }
 }
