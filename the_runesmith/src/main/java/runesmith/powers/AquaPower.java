@@ -32,7 +32,7 @@ public class AquaPower extends AbstractPower {
         this.fontScale = 8.0F;
         this.amount += stackAmount;
         if (this.amount <= 0)
-            AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, "AquaPower"));
+            AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this));
         int maxStacks = (AbstractDungeon.player.hasRelic(CoreCrystal.ID)) ? 20 : 10;
         if (this.amount > maxStacks)
             this.amount = maxStacks;

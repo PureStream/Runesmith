@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -38,9 +39,11 @@ public class LastStandPower extends AbstractPower {
     public void stackPower(int stackAmount) {
         this.fontScale = 8.0F;
         this.amount += stackAmount;
+        if (amount <= 0)
+            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(owner, owner, this));
     }
 
-    public void atStartOfTurnPostDraw() {
+    public void atEndOfTurn(boolean isPlayer) {
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
             AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, this, 1));
             if (this.amount == 1) {
@@ -58,9 +61,9 @@ public class LastStandPower extends AbstractPower {
 
     public void updateDescription() {
         if (amount == 2)
-            this.description = (DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + DESCRIPTIONS[3] + damageAmount + DESCRIPTIONS[4]);
+            this.description = (DESCRIPTIONS[0] + DESCRIPTIONS[2] + damageAmount + DESCRIPTIONS[3]);
         else
-            this.description = (DESCRIPTIONS[0] + amount + DESCRIPTIONS[2] + DESCRIPTIONS[3] + damageAmount + DESCRIPTIONS[4]);
+            this.description = (DESCRIPTIONS[1] + DESCRIPTIONS[2] + damageAmount + DESCRIPTIONS[3]);
     }
 
 }
