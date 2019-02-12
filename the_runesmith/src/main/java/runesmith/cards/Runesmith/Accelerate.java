@@ -23,6 +23,7 @@ public class Accelerate extends CustomCard {
     private static final int COST = 1;
     private static final int BLOCK_AMT = 7;
     private static final int UPGRADE_PLUS_BLOCK = 2;
+    private static final int BASE_DRAW_AMT = 1;
     private static final int DRAW_AMT = 2;
     private static final int UPGRADE_DRAW_AMT = 1;
 
@@ -43,11 +44,17 @@ public class Accelerate extends CustomCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        int drawAmt = BASE_DRAW_AMT;
         AbstractDungeon.actionManager.addToBottom(
                 new GainBlockAction(p, p, this.block)
         );
 
-        if (p.orbs.size() == 0) return;
+        if (p.orbs.size() == 0) {
+            AbstractDungeon.actionManager.addToBottom(
+                    new DrawCardAction(p, drawAmt)
+            );
+            return;
+        }
 
         RuneOrb r = null;
         for (AbstractOrb o : p.orbs) {
@@ -56,14 +63,17 @@ public class Accelerate extends CustomCard {
                 break;
             }
         }
-        if (r == null) return;
 
-        AbstractDungeon.actionManager.addToTop(
-                new DrawCardAction(p, this.magicNumber)
-        );
+        if (r != null) {
+            drawAmt += this.magicNumber;
+
+            AbstractDungeon.actionManager.addToBottom(
+                    new BreakRuneAction(r)
+            );
+        }
 
         AbstractDungeon.actionManager.addToBottom(
-                new BreakRuneAction(r)
+                new DrawCardAction(p, drawAmt)
         );
     }
 
