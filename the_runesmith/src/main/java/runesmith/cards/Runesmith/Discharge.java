@@ -75,14 +75,15 @@ public class Discharge extends CustomCard {
         AbstractDungeon.actionManager.addToBottom(new SFXAction("ORB_LIGHTNING_EVOKE"));
 
         AbstractDungeon.actionManager.addToBottom(
+                new GainBlockAction(p, p, this.block)
+        );
+
+        AbstractDungeon.actionManager.addToBottom(
                 new DamageAction(
                         m,
                         new DamageInfo(p, this.damage, this.damageTypeForTurn),
                         AbstractGameAction.AttackEffect.NONE
                 )
-        );
-        AbstractDungeon.actionManager.addToBottom(
-                new GainBlockAction(p, p, this.block)
         );
 
         AbstractDungeon.actionManager.addToBottom(
