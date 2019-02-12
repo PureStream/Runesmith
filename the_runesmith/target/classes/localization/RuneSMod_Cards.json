@@ -252,7 +252,7 @@
   },
   "Runesmith:Supernova": {
     "NAME": "Supernova",
-    "DESCRIPTION": "Break all of your runes. Draw 1 card and gain [E] for each non-Dud rune destroyed."
+    "DESCRIPTION": "Break all of your runes. Draw 1 card and gain [E] for each non-Dud rune Broken."
   },
   "Runesmith:CreatorForm": {
     "NAME": "Creator Form",
@@ -363,7 +363,7 @@
   },
   "Runesmith:Accelerate": {
     "NAME": "Accelerate",
-    "DESCRIPTION": "Gain !B! Block. NL Break your oldest rune to draw !M! cards."
+    "DESCRIPTION": "Gain !B! Block. NL Draw 1 card. NL Break your oldest rune to draw !M! more cards."
   },
   "Runesmith:NanitesCloud": {
     "NAME": "Nanites Cloud",
@@ -387,7 +387,7 @@
   },
   "Runesmith:Discharge": {
     "NAME": "Discharge",
-    "DESCRIPTION": "Break your oldest non-Dud rune to deal !D! damage, gain !B! Block and Craft a Dud rune."
+    "DESCRIPTION": "Break your oldest non-Dud rune to gain !B! Block, deal !D! damage, and Craft a Dud rune."
   },
   "Runesmith:Attraction": {
     "NAME": "Attraction",
@@ -431,5 +431,9 @@
     "NAME": "Augmentation",
     "DESCRIPTION": "Gain !B! Block. NL Lose all Aqua. NL Gain 1 Artifact for every 2 Aqua lost. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Lose half of your Aqua. NL Gain 1 Artifact for each Aqua lost. NL Exhaust."
+  },
+  "Runesmith:ChargedHammer": {
+    "NAME": "Charged Hammer",
+    "DESCRIPTION": "Deal !D! damage. NL Spend !M! random Elements and Break your oldest Dud rune to Craft a random non-Dud rune."
   }
 }

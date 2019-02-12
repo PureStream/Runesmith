@@ -434,6 +434,6 @@
   },
   "Runesmith:ChargedHammer": {
     "NAME": "Charged Hammer",
-    "DESCRIPTION": "Deal !D! damage. NL Spend 2 random Elements and Break your oldest Dud rune to Craft a random rune."
+    "DESCRIPTION": "Deal !D! damage. NL Spend !M! random Elements and Break your oldest Dud rune to Craft a random non-Dud rune."
   }
 }

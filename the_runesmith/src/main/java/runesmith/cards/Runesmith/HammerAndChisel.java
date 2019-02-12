@@ -40,6 +40,8 @@ public class HammerAndChisel extends CustomCard {
                 AbstractCard.CardRarity.UNCOMMON,
                 AbstractCard.CardTarget.SELF
         );
+        this.tags.add(HAMMER);
+        this.tags.add(CHISEL);
         this.exhaust = true;
     }
 

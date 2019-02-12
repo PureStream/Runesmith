@@ -39,8 +39,10 @@ public class ChargedHammer extends CustomCard {
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     public static final String IMG_PATH = "images/cards/ChargedHammer.png"; //<-------------- need some img
     private static final int COST = 2;
-    private static final int ATTACK_DMG = 14;
-    private static final int UPGRADE_PLUS_DMG = 3;
+    private static final int ATTACK_DMG = 16;
+    private static final int UPGRADE_PLUS_DMG = 4;
+    private static final int ELEMENT_SPENT = 3;
+    private static final int ELEMENT_SPENT_UPG = -1;
 
     public ChargedHammer() {
         super(
@@ -51,11 +53,12 @@ public class ChargedHammer extends CustomCard {
                 DESCRIPTION,
                 CardType.ATTACK,
                 AbstractCardEnum.RUNESMITH_BEIGE,
-                CardRarity.COMMON,
+                CardRarity.UNCOMMON,
                 CardTarget.ENEMY
         );
         this.baseDamage = ATTACK_DMG;
         this.tags.add(HAMMER);
+        this.baseMagicNumber = this.magicNumber = ELEMENT_SPENT;
     }
 
     public AbstractCard makeCopy() {
@@ -66,6 +69,7 @@ public class ChargedHammer extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
+            upgradeMagicNumber(ELEMENT_SPENT_UPG);
             upgradeDamage(UPGRADE_PLUS_DMG);
         }
     }
@@ -97,8 +101,8 @@ public class ChargedHammer extends CustomCard {
                     terra = p.getPower(terraID).amount;
                 if (p.hasPower(aquaID))
                     aqua = p.getPower(aquaID).amount;
-                if (ignis + terra + aqua >= 2) {
-                    for (int i=0; i<2; i++) {
+                if (ignis + terra + aqua >= this.magicNumber) {
+                    for (int i=0; i<this.magicNumber; i++) {
                         List<String> elementsList = new ArrayList<>();
                         if (ignis > 0)
                             elementsList.add(ignisID);
@@ -130,7 +134,7 @@ public class ChargedHammer extends CustomCard {
                     if (p.hasPower(PotentialPower.POWER_ID))
                         playerPot = p.getPower(PotentialPower.POWER_ID).amount;
                     AbstractDungeon.actionManager.addToBottom(new BreakRuneAction(r));
-                    AbstractDungeon.actionManager.addToBottom(new RuneChannelAction(RuneOrb.getRandomRune(true, playerPot)));
+                    AbstractDungeon.actionManager.addToBottom(new RuneChannelAction(RuneOrb.getRandomRune(true, playerPot, true)));
                 }
             }
         }

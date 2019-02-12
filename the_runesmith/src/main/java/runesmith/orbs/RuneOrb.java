@@ -81,13 +81,18 @@ public abstract class RuneOrb extends AbstractOrb {
         this.description = tmpDesc.replace("{Pot}", this.potential + "");
     }
 
-    public static RuneOrb getRandomRune(boolean useCardRng, int playerPotency) {
+    public static RuneOrb getRandomRune(boolean useCardRng, int playerPotency){
+        return getRandomRune(useCardRng,playerPotency,false);
+    }
+
+    public static RuneOrb getRandomRune(boolean useCardRng, int playerPotency, boolean noDud) {
         int selectedRune;
         int potency;
+        int range = noDud ? 10: 11;
         if (useCardRng)
-            selectedRune = AbstractDungeon.cardRandomRng.random(11);
+            selectedRune = AbstractDungeon.cardRandomRng.random(range);
         else
-            selectedRune = MathUtils.random(11);
+            selectedRune = MathUtils.random(range);
         switch (selectedRune) {
             case 0:
                 potency = potencyCal(SpiculumRune.basePotency, playerPotency);
