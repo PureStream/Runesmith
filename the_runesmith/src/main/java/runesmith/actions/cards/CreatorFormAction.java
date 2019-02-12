@@ -11,13 +11,14 @@ import runesmith.RunesmithMod;
 import runesmith.actions.EnhanceCard;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class CreatorFormAction extends AbstractGameAction {
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("Runesmith:FortifyAction");
     public static final String[] TEXT = uiStrings.TEXT;
 
     private AbstractPlayer p;
-    private ArrayList<AbstractCard> cannotEnhance = new ArrayList<>();
+    private List<AbstractCard> cannotEnhance = new ArrayList<>();
     private int cardNums;
 
     public CreatorFormAction(int cardNums) {
@@ -41,13 +42,18 @@ public class CreatorFormAction extends AbstractGameAction {
                 return;
             }
 
+
             if (this.p.hand.group.size() - this.cannotEnhance.size() <= cardNums) {
+                int enhanceCount = 0;
                 for (AbstractCard c : this.p.hand.group) {
                     if (EnhanceCard.canEnhance(c)) {
+                        enhanceCount++;
                         EnhanceCard.enhance(c);
                         c.superFlash(RunesmithMod.BEIGE);
                     }
                 }
+                if ((cardNums -= enhanceCount) > 0)
+                    AbstractDungeon.actionManager.addToTop(new CreatorFormAction(cardNums));
                 this.isDone = true;
                 return;
             }
@@ -60,15 +66,18 @@ public class CreatorFormAction extends AbstractGameAction {
                 return;
             }
 
-            if (this.p.hand.group.size() <= cardNums) {
-                for (AbstractCard c : this.p.hand.group) {
-                    EnhanceCard.enhance(c);
-                    this.p.hand.getTopCard().superFlash(RunesmithMod.BEIGE);
-                    returnCards();
-                }
-                this.isDone = true;
+            //if (this.p.hand.group.size() <= cardNums)
+            this.p.hand.group.size();
+            int enhanceCount = 0;
+            for (AbstractCard c : this.p.hand.group) {
+                enhanceCount++;
+                EnhanceCard.enhance(c);
+                this.p.hand.getTopCard().superFlash(RunesmithMod.BEIGE);
             }
-
+            returnCards();
+            if ((cardNums -= enhanceCount) > 0)
+                AbstractDungeon.actionManager.addToTop(new CreatorFormAction(cardNums));
+            this.isDone = true;
         }
 
         if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {
