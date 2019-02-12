@@ -431,5 +431,9 @@
     "NAME": "Augmentation",
     "DESCRIPTION": "Gain !B! Block. NL Lose all Aqua. NL Gain 1 Artifact for every 2 Aqua lost. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Lose half of your Aqua. NL Gain 1 Artifact for each Aqua lost. NL Exhaust."
+  },
+  "Runesmith:ChargedHammer": {
+    "NAME": "Charged Hammer",
+    "DESCRIPTION": "Deal !D! damage. NL Spend 2 random Elements and Break your oldest Dud rune to Craft a random rune."
   }
 }
