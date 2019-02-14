@@ -24,6 +24,7 @@ public abstract class EnhanceCard {
             AbstractDungeon.player.getPower(PoweredAnvilPower.POWER_ID).flashWithoutSound();
         }
 
+        c.applyPowers();
     }
 
     private static void doEnhance(AbstractCard c) {
