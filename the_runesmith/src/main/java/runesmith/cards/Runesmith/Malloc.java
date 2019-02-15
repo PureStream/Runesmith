@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import runesmith.actions.cards.MallocAction;
+import runesmith.actions.DowngradeEntireHandAction;
 import runesmith.patches.AbstractCardEnum;
 
 public class Malloc extends CustomCard {
@@ -54,7 +54,7 @@ public class Malloc extends CustomCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
-                new MallocAction(p)
+                new DowngradeEntireHandAction(p)
         );
         AbstractDungeon.actionManager.addToBottom(
                 new GainEnergyAction(this.magicNumber));

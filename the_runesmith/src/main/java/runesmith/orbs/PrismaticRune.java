@@ -10,6 +10,10 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 
 public class PrismaticRune extends RuneOrb {
 
+    PrismaticRune() {
+        this(false);
+    }
+
     public PrismaticRune(boolean upgraded) {
         super("Prismatic",
                 upgraded,

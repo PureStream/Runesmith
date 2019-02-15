@@ -23,6 +23,7 @@ public class PotentiaRune extends RuneOrb {
 
     @Override
     public void onCraft() {
+        super.onCraft();
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PotentialPower(p, this.potential), this.potential));
     }
 

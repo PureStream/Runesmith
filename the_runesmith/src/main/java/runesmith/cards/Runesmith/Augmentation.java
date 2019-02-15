@@ -1,7 +1,6 @@
 package runesmith.cards.Runesmith;
 
 import basemod.abstracts.CustomCard;
-import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
@@ -48,19 +47,18 @@ public class Augmentation extends CustomCard {
                 new GainBlockAction(p, p, this.block)
         );
         int aqua = 0;
-        if(p.hasPower(AquaPower.POWER_ID)){
+        if(p.hasPower(AquaPower.POWER_ID))
             aqua = p.getPower(AquaPower.POWER_ID).amount;
-        }
-        if(upgraded){
-            aqua = aqua / 2;
-        }
+
+        if(upgraded)
+            aqua = (int) Math.round(aqua/2.0);
         if(aqua == 0) return;
+
         AbstractDungeon.actionManager.addToBottom(
                 new ReducePowerAction(p,p,AquaPower.POWER_ID,aqua)
         );
-        if(!upgraded){
+        if(!upgraded)
             aqua = aqua / 2;
-        }
         AbstractDungeon.actionManager.addToBottom(
                 new ApplyPowerAction(p,p,
                         new ArtifactPower(p, aqua),aqua)
