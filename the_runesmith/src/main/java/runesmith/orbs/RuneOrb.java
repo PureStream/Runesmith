@@ -5,7 +5,6 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -30,7 +29,7 @@ public abstract class RuneOrb extends AbstractOrb {
 
     public boolean upgraded;
     public boolean useMultiBreak = false;
-    public boolean showPotentialValue = true;
+    boolean showPotentialValue = true;
     public int potential;
     private String[] descriptions;
 
@@ -62,7 +61,7 @@ public abstract class RuneOrb extends AbstractOrb {
         AbstractDungeon.actionManager.addToTop(new VFXAction(new OrbFlareEffect(this, OrbFlareEffect.OrbFlareColor.PLASMA), speedTime));
     }
 
-    public void activateEndOfTurnEffect() {
+    void activateEndOfTurnEffect() {
         float speedTime = 0.6F / AbstractDungeon.player.orbs.size();
         if (Settings.FAST_MODE) {
             speedTime = 0.0F;
@@ -118,7 +117,7 @@ public abstract class RuneOrb extends AbstractOrb {
                 potency = potencyCal(PotentiaRune.basePotency, playerPotency);
                 return new PotentiaRune(potency);
             case 8:
-                return new PrismaticRune(false);
+                return new PrismaticRune();
             case 9:
                 potency = potencyCal(ProtectioRune.basePotency, playerPotency);
                 return new ProtectioRune(potency);
