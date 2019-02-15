@@ -106,7 +106,7 @@
   },
   "Runesmith:StaticCage": {
     "NAME": "Static Cage",
-    "DESCRIPTION": "runesmith:Break your oldest Rune. NL runesmith:Stasis a card. NL Gain !B! Block."
+    "DESCRIPTION": "runesmith:Break your oldest Rune. NL runesmith:Stasis a card in your hand. NL Gain !B! Block."
   },
   "Runesmith:Prism": {
     "NAME": "Prism",
@@ -322,13 +322,13 @@
   },
   "Runesmith:DoubleUp": {
     "NAME": "Double Up",
-    "DESCRIPTION": "Gain !B! Block. NL Upgrade and runesmith:Enhance !M! card.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Upgrade and runesmith:Enhance !M! cards."
+    "DESCRIPTION": "Gain !B! Block. NL Upgrade and runesmith:Enhance !M! card in your hand.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Upgrade and runesmith:Enhance !M! cards in your hand."
   },
   "Runesmith:Refinement": {
     "NAME": "Refinement",
-    "DESCRIPTION": "runesmith:Enhance a card X times. NL If you spend at least [E] , gain [E] .",
-    "UPGRADE_DESCRIPTION": "runesmith:Enhance a card X+1 times. NL If you spend at least [E] , gain [E] ."
+    "DESCRIPTION": "runesmith:Enhance a card X times. NL If you spend NL at least [E] , gain [E] .",
+    "UPGRADE_DESCRIPTION": "runesmith:Enhance a card X+1 times. NL If you spend NL at least [E] , gain [E] ."
   },
   "Runesmith:Permafrost": {
     "NAME": "Permafrost",
@@ -376,8 +376,8 @@
   },
   "Runesmith:HammerAndChisel": {
     "NAME": "Hammer and Chisel",
-    "DESCRIPTION": "Add a random Hammer card and a random Chisel card to your hand. They cost 1 less this combat. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add a random upgraded Hammer card and a random upgraded Chisel card to your hand. They cost 1 less this combat. NL Exhaust."
+    "DESCRIPTION": "Add a random Hammer card and a random Chisel card into your hand. They cost 1 less this combat. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add a random upgraded Hammer card and a random upgraded Chisel card into your hand. They cost 1 less this combat. NL Exhaust."
   },
   "Runesmith:Firewall": {
     "NAME": "Firewall",
