@@ -37,5 +37,14 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Maven: elementalistmod:elementalistmod:0.0.2">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../lib/ElementalistMod.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>

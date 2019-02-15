@@ -435,5 +435,9 @@
   "Runesmith:ChargedHammer": {
     "NAME": "Charged Hammer",
     "DESCRIPTION": "Deal !D! damage. NL Spend !M! random runesmith:Elements and runesmith:Break your oldest runesmith:Dud rune to runesmith:Craft a random runesmith:non-Dud rune."
+  },
+  "Runesmith:Devolution": {
+    "NAME": "Devolution",
+    "DESCRIPTION": "Unplayable. NL At the end of your turn, runesmith:Downgrade all cards in your hand."
   }
 }

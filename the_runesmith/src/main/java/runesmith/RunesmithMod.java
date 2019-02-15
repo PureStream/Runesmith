@@ -424,6 +424,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
         cardsToAdd.add(new Accelerate());
         cardsToAdd.add(new Augmentation());
         cardsToAdd.add(new ChargedHammer());
+        cardsToAdd.add(new Devolution());
     }
 
     @Override
@@ -496,10 +497,10 @@ public class RunesmithMod implements PostExhaustSubscriber,
         logger.info("current block is: " + p.currentBlock);
         int blockLoss = arg0;
         if (p.hasPower("Runesmith:PermafrostPower")) {
-            blockLoss = Math.min(blockLoss, p.currentBlock / 2);
-            if (blockLoss == p.currentBlock / 2) {
+            int lostByPermafrost = (int) Math.round(p.currentBlock / 2.0);
+            blockLoss = Math.min(blockLoss, lostByPermafrost);
+            if (blockLoss == lostByPermafrost)
                 p.getPower("Runesmith:PermafrostPower").flash();
-            }
         }
         return blockLoss;
     }

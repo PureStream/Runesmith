@@ -69,22 +69,19 @@ public class Prism extends CustomCard {
         initializeDescription();
     }
 
-    @SuppressWarnings("IntegerDivisionInFloatingPointContext")
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (this.block > 0) {
             AbstractDungeon.actionManager.addToBottom(
                     new GainBlockAction(p, p, this.block)
             );
         }
-        if (p.hasPower("Runesmith:IgnisPower")) {
-            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, "Runesmith:IgnisPower", Math.round(p.getPower("Runesmith:IgnisPower").amount / 2)));
-        }
-        if (p.hasPower("Runesmith:TerraPower")) {
-            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, "Runesmith:TerraPower", Math.round(p.getPower("Runesmith:TerraPower").amount / 2)));
-        }
-        if (p.hasPower("Runesmith:AquaPower")) {
-            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, "Runesmith:AquaPower", Math.round(p.getPower("Runesmith:AquaPower").amount / 2)));
-        }
+        if (p.hasPower("Runesmith:IgnisPower"))
+            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, "Runesmith:IgnisPower", (int) Math.round(p.getPower("Runesmith:IgnisPower").amount / 2.0)));
+        if (p.hasPower("Runesmith:TerraPower"))
+            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, "Runesmith:TerraPower", (int) Math.round(p.getPower("Runesmith:TerraPower").amount / 2.0)));
+        if (p.hasPower("Runesmith:AquaPower"))
+            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, "Runesmith:AquaPower", (int) Math.round(p.getPower("Runesmith:AquaPower").amount / 2.0)));
+
     }
 
     public AbstractCard makeCopy() {
