@@ -11,7 +11,8 @@
   "sts_version": "",
   "mts_version": "3.7.5",
   "dependencies": [
-    "basemod"
+    "basemod",
+    "stslib"
   ],
   "update_json": ""
 }
