@@ -54,7 +54,7 @@ public class TimeTravel extends CustomCard {
         int curAqua = (p.hasPower("Runesmith:AquaPower") ? p.getPower("Runesmith:AquaPower").amount : 0);
 
 
-        int values[] = null;
+        int[] values = null;
         if (p.hasPower("Runesmith:TimeMachinePower")) {
             AbstractPower pow = p.getPower("Runesmith:TimeMachinePower");
             if (pow instanceof TimeMachinePower) {
@@ -66,6 +66,7 @@ public class TimeTravel extends CustomCard {
             return;
         }
 
+        assert values != null;
         int savedHealth = values[0];
         int savedBlock = values[1];
         int savedIgnis = values[2];
