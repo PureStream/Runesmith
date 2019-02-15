@@ -27,6 +27,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import runesmith.cards.Runesmith.*;
 import runesmith.character.player.RunesmithCharacter;
+import runesmith.helpers.KeywordWithProper;
 import runesmith.helpers.PotencyVariable;
 import runesmith.patches.CardStasisStatus;
 import runesmith.patches.ElementsGainedCountField;
@@ -240,15 +241,19 @@ public class RunesmithMod implements PostExhaustSubscriber,
         Gson gson = new Gson();
         Keywords keywords;
         keywords = gson.fromJson(loadJson(keywordsPath), Keywords.class);
-        for (Keyword key : keywords.keywords) {
+        for (KeywordWithProper key : keywords.keywords) {
             logger.info("Loading keyword : " + key.NAMES[0]);
-            BaseMod.addKeyword(key.NAMES, key.DESCRIPTION);
+            BaseMod.addKeyword("runesmith", key.PROPER_NAME, key.NAMES, key.DESCRIPTION);
         }
         logger.info("Keywords setting finished.");
     }
 
     private static String loadJson(String jsonPath) {
         return Gdx.files.internal(jsonPath).readString(String.valueOf(StandardCharsets.UTF_8));
+    }
+
+    class Keywords {
+        KeywordWithProper[] keywords;
     }
 
     @Override
@@ -291,10 +296,6 @@ public class RunesmithMod implements PostExhaustSubscriber,
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
         AbstractPlayer p = AbstractDungeon.player;
         renderElementsCounter = p instanceof RunesmithCharacter;
-    }
-
-    class Keywords {
-        Keyword[] keywords;
     }
 
     @Override
