@@ -400,7 +400,7 @@
   },
   "Runesmith:ReplicatingBarrier": {
     "NAME": "Replicating Barrier",
-    "DESCRIPTION": "2 runesmith:Terra: runesmith:Craft a runesmith:Protectio Rune with !Pot! runesmith:Potency. NL Every 2 turns, runesmith:Craft a runesmith:Protectio Rune with !Pot! runesmith:Potency."
+    "DESCRIPTION": "2 runesmith:Terra: runesmith:Craft a runesmith:Protectio Rune with !Pot! runesmith:Potency. NL Every 2 turns, 2 runesmith:Terra: runesmith:Craft a runesmith:Protectio Rune with !Pot! runesmith:Potency."
   },
   "Runesmith:TimeMachine_old": {
     "NAME": "Time Machine",

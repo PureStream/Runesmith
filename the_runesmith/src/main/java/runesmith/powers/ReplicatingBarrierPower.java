@@ -8,6 +8,8 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import runesmith.actions.RuneChannelAction;
+import runesmith.cards.Runesmith.AbstractRunicCard;
+import runesmith.cards.Runesmith.CraftProtectio;
 import runesmith.orbs.ProtectioRune;
 
 public class ReplicatingBarrierPower extends AbstractPower {
@@ -16,9 +18,10 @@ public class ReplicatingBarrierPower extends AbstractPower {
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-//    private static final int TERRA_AMT = 2;
+    private static final int TERRA_AMT = 2;
     private int POT_AMT;
     private static int RepBarrierIdOffset;
+    private static final AbstractRunicCard CALL = new CraftProtectio();
 
     public ReplicatingBarrierPower(AbstractCreature owner, int potency) {
         this.name = NAME;
@@ -42,13 +45,10 @@ public class ReplicatingBarrierPower extends AbstractPower {
         if (this.amount == 0) {
             flash();
             this.amount = 2;
-            AbstractDungeon.actionManager.addToBottom(new RuneChannelAction(new ProtectioRune(POT_AMT)));
+//            AbstractDungeon.actionManager.addToBottom(new RuneChannelAction(new ProtectioRune(POT_AMT)));
 //            AbstractRunicCard tmp = new CraftProtectio();
-//            if (tmp.checkElements(0, TERRA_AMT, 0)) {
-//                AbstractDungeon.actionManager.addToBottom(
-//                        new RuneChannelAction(
-//                                new ProtectioRune(POT_AMT)));
-//            }
+            if (CALL.checkElements(0, TERRA_AMT, 0))
+                AbstractDungeon.actionManager.addToBottom(new RuneChannelAction(new ProtectioRune(POT_AMT)));
 //			AbstractDungeon.player.limbo.addToBottom(tmp);
 //			tmp.freeToPlayOnce = true;
 //			tmp.purgeOnUse = true;
