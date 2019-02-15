@@ -4,6 +4,7 @@ import basemod.abstracts.CustomRelic;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import runesmith.ui.ElementsCounter;
 
 public class CoreCrystal extends CustomRelic {
 
@@ -31,6 +32,12 @@ public class CoreCrystal extends CustomRelic {
         } else {
             super.obtain();
         }
+        ElementsCounter.setMaxElements(20);
+    }
+
+    @Override
+    public void onUnequip(){
+        ElementsCounter.setMaxElements(10);
     }
 
     public boolean canSpawn() {

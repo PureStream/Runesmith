@@ -217,6 +217,10 @@ public class ElementsCounter extends ClickableUIElement {
         aquaHitbox.update();
     }
 
+    public static void setMaxElements(int elem){
+        MAX_ELEMENTS = elem;
+    }
+
     @Override
     public void update(){
         this.angle1 += Gdx.graphics.getDeltaTime() * -20.0F;
@@ -243,12 +247,12 @@ public class ElementsCounter extends ClickableUIElement {
             } else if (this.aquaHitbox.hovered){
                 onAquaHover();
             }
-            if(!checkMax) {
-                if (AbstractDungeon.player.hasRelic(CoreCrystal.ID)) {
-                    MAX_ELEMENTS = 20;
-                    checkMax = true;
-                }
-            }
+//            if(!checkMax) {
+//                if (AbstractDungeon.player.hasRelic(CoreCrystal.ID)) {
+//                    MAX_ELEMENTS = 20;
+//                    checkMax = true;
+//                }
+//            }
             int prev;
             prev = this.ignisCount;
             this.ignisCount = p.hasPower(IgnisPower.POWER_ID)? p.getPower(IgnisPower.POWER_ID).amount:0;
