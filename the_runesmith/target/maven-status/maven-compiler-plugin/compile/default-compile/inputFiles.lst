@@ -3,6 +3,7 @@ C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\deprecat
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\orbs\ReservoRune.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\relics\Locket.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\orbs\IncendiumRune.java
+C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\ChargedHammer.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\CraftIndustria.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\CraftSpiculum.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\Malloc.java
@@ -12,7 +13,6 @@ C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmit
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\actions\cards\AttractionDrawThenDiscardAction.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\powers\ReservoPower.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\actions\DowngradeEntireDrawPileAction.java
-C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\HammerSlam.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\Rearm.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\powers\IceColdPower.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\relics\PocketReactor.java
@@ -40,6 +40,7 @@ C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\deprecat
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\ConstructBifrost.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\Discharge.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\orbs\ProtectioRune.java
+C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\deprecated\HammerSlam.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\CraftIncendium.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\vfx\ShowStasisCardAndAddToDiscardEffect.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\actions\ApplyElementsPowerAction.java
@@ -89,6 +90,7 @@ C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\actions\cards\
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\powers\RunesonancePower.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\powers\IgnisPower.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\Runesonance.java
+C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\ui\ElementsCounter.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\actions\cards\RefinementAction.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\UnlimitedPower.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\powers\ArcReactorPower.java

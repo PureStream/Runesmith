@@ -30,6 +30,13 @@
             <scope>system</scope>
             <systemPath>${basedir}/../lib/ModTheSpire.jar</systemPath>
         </dependency>
+        <dependency>
+            <groupId>elementalistmod</groupId>
+            <artifactId>elementalistmod</artifactId>
+            <version>0.0.2</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/../lib/ElementalistMod.jar</systemPath>
+        </dependency>
     </dependencies>
 
     <build>

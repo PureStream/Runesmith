@@ -10,20 +10,23 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.glutils.FrameBuffer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import runesmith.RunesmithMod;
 
 public class EnergyOrbBeige extends CustomEnergyOrb {
-    Texture ENERGY_BEIGE_LAYER1 = ImageMaster.loadImage("images/ui/beige/1.png");
-    Texture ENERGY_BEIGE_LAYER2 = ImageMaster.loadImage("images/ui/beige/2.png");
-    Texture ENERGY_BEIGE_LAYER3 = ImageMaster.loadImage("images/ui/beige/3.png");
-    Texture ENERGY_BEIGE_LAYER4 = ImageMaster.loadImage("images/ui/beige/4.png");
-    Texture ENERGY_BEIGE_LAYER5 = ImageMaster.loadImage("images/ui/beige/5.png");
-    Texture ENERGY_BEIGE_LAYER6 = ImageMaster.loadImage("images/ui/beige/border.png");
-    Texture ENERGY_BEIGE_LAYER1D = ImageMaster.loadImage("images/ui/beige/1d.png");
-    Texture ENERGY_BEIGE_LAYER2D = ImageMaster.loadImage("images/ui/beige/2d.png");
-    Texture ENERGY_BEIGE_LAYER3D = ImageMaster.loadImage("images/ui/beige/3d.png");
-    Texture ENERGY_BEIGE_LAYER4D = ImageMaster.loadImage("images/ui/beige/4d.png");
-    Texture ENERGY_BEIGE_LAYER5D = ImageMaster.loadImage("images/ui/beige/5d.png");
-    Texture ENERGY_BEIGE_MASK = ImageMaster.loadImage("images/ui/beige/mask.png");
+    private Texture ENERGY_BEIGE_LAYER1 = ImageMaster.loadImage("images/ui/beige/1.png");
+    private Texture ENERGY_BEIGE_LAYER2 = ImageMaster.loadImage("images/ui/beige/2.png");
+    private Texture ENERGY_BEIGE_LAYER3 = ImageMaster.loadImage("images/ui/beige/3.png");
+    private Texture ENERGY_BEIGE_LAYER4 = ImageMaster.loadImage("images/ui/beige/4.png");
+    private Texture ENERGY_BEIGE_LAYER5 = ImageMaster.loadImage("images/ui/beige/5.png");
+    private Texture ENERGY_BEIGE_LAYER6 = ImageMaster.loadImage("images/ui/beige/border.png");
+    private Texture ENERGY_BEIGE_LAYER1D = ImageMaster.loadImage("images/ui/beige/1d.png");
+    private Texture ENERGY_BEIGE_LAYER2D = ImageMaster.loadImage("images/ui/beige/2d.png");
+    private Texture ENERGY_BEIGE_LAYER3D = ImageMaster.loadImage("images/ui/beige/3d.png");
+    private Texture ENERGY_BEIGE_LAYER4D = ImageMaster.loadImage("images/ui/beige/4d.png");
+    private Texture ENERGY_BEIGE_LAYER5D = ImageMaster.loadImage("images/ui/beige/5d.png");
+    private Texture ENERGY_BEIGE_MASK = ImageMaster.loadImage("images/ui/beige/mask.png");
     public static float fontScale = 1.0F;
     private static final float ORB_IMG_SCALE;
     private float angle4 = 0.0F;
@@ -32,6 +35,9 @@ public class EnergyOrbBeige extends CustomEnergyOrb {
     private float angle1 = 0.0F;
     private FrameBuffer fbo;
 //    private SpriteBatch sbTmp;
+
+    public static final Logger logger = LogManager.getLogger(RunesmithMod.class.getName());
+
 
     public EnergyOrbBeige() {
         super((String[]) null, (String) null, (float[]) null);
@@ -59,6 +65,8 @@ public class EnergyOrbBeige extends CustomEnergyOrb {
         if (enabled) {
             sb.setColor(Color.WHITE);
             sb.end();
+
+//            logger.info("current x: "+current_x+" current_y: "+current_y);
 
             this.fbo.begin();
             {

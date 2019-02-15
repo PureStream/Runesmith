@@ -7,6 +7,8 @@ import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.audio.Sfx;
@@ -14,10 +16,13 @@ import com.megacrit.cardcrawl.audio.SoundMaster;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import elementalist_mod.ElementalistMod;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import runesmith.cards.Runesmith.*;
@@ -27,7 +32,11 @@ import runesmith.patches.CardStasisStatus;
 import runesmith.patches.ElementsGainedCountField;
 import runesmith.patches.EnhanceCountField;
 import runesmith.patches.PlayerClassEnum;
+import runesmith.powers.AquaPower;
+import runesmith.powers.IgnisPower;
+import runesmith.powers.TerraPower;
 import runesmith.relics.*;
+import runesmith.ui.ElementsCounter;
 
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
@@ -51,7 +60,8 @@ public class RunesmithMod implements PostExhaustSubscriber,
         OnPowersModifiedSubscriber,
         OnPlayerLoseBlockSubscriber,
         PostDrawSubscriber,
-        PreMonsterTurnSubscriber {
+        PreMonsterTurnSubscriber,
+        OnStartBattleSubscriber{
 
     public static final Logger logger = LogManager.getLogger(RunesmithMod.class.getName());
 
@@ -70,6 +80,11 @@ public class RunesmithMod implements PostExhaustSubscriber,
     private List<AbstractCard> cardsToAdd = new ArrayList<>();
     private List<CustomRelic> relicsToAddOnlyThisClass = new ArrayList<>();
     private List<CustomRelic> relicsToAddAllClass = new ArrayList<>();
+
+    private static boolean renderElementsCounter = false;
+    private static ElementsCounter elementsCounter;
+    private static boolean elementalistEnabled = false;
+    private static Texture ELEMENTS_GREEN_MASK = ImageMaster.loadImage("images/ui/elements/GMask.png");
 
     public RunesmithMod() {
         BaseMod.subscribe(this);
@@ -90,7 +105,6 @@ public class RunesmithMod implements PostExhaustSubscriber,
 
     public static void initialize() {
         RunesmithMod mod = new RunesmithMod();
-
     }
 
     @Override
@@ -241,6 +255,42 @@ public class RunesmithMod implements PostExhaustSubscriber,
     public boolean receivePreMonsterTurn(AbstractMonster abstractMonster) {
         ElementsGainedCountField.elementsCount.set(AbstractDungeon.player, 0);
         return true;
+    }
+
+    public static void renderElementsCounter(SpriteBatch sb, float current_x){
+//        AbstractPlayer p = AbstractDungeon.player;
+        if(elementalistEnabled){
+            if (getRenderElementalistOrbs()) {
+                elementsCounter.setYOffset(95.0F * Settings.scale);
+            } else{
+                elementsCounter.setYOffset(0.0F);
+            }
+        }
+        elementsCounter.update();
+        elementsCounter.render(sb, current_x);
+    }
+
+    private static boolean getRenderElementalistOrbs(){
+        return ElementalistMod.elementalEnergyIsEnabled();
+    }
+
+    public static boolean getElementsRender(){
+        AbstractPlayer p = AbstractDungeon.player;
+        if (CardCrawlGame.dungeon != null && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
+            if(renderElementsCounter) {
+                return true;
+            }else if ((p.hasPower(IgnisPower.POWER_ID) || p.hasPower(TerraPower.POWER_ID) || p.hasPower(AquaPower.POWER_ID))) {
+                renderElementsCounter = true;
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override
+    public void receiveOnBattleStart(AbstractRoom abstractRoom) {
+        AbstractPlayer p = AbstractDungeon.player;
+        renderElementsCounter = p instanceof RunesmithCharacter;
     }
 
     class Keywords {
@@ -407,6 +457,17 @@ public class RunesmithMod implements PostExhaustSubscriber,
     @Override
     public void receivePostInitialize() {
         this.loadAudio();
+        elementsCounter = new ElementsCounter(ELEMENTS_GREEN_MASK);
+        try{
+            initializeElementalist();
+        }catch (ClassNotFoundException | NoClassDefFoundError e){
+            logger.info("Runesmith | Elementalist not found");
+        }
+    }
+
+    private void initializeElementalist() throws ClassNotFoundException, NoClassDefFoundError{
+        Class<ElementalistMod> elementalist = ElementalistMod.class;
+        elementalistEnabled = true;
     }
 
     @Override
@@ -419,6 +480,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
     public void receivePostBattle(AbstractRoom arg0) {
         //Reset Elements gained count.
         ElementsGainedCountField.elementsCount.set(AbstractDungeon.player, 0);
+        renderElementsCounter = false;
     }
 
     @Override
