@@ -50,7 +50,7 @@ public class CreatorFormAction extends AbstractGameAction {
                         enhanceCount++;
                         EnhanceCard.enhance(c);
                         c.superFlash(RunesmithMod.BEIGE);
-                        c.applyPowers();
+//                        c.applyPowers();
                     }
                 }
                 if ((cardNums -= enhanceCount) > 0)
@@ -72,7 +72,7 @@ public class CreatorFormAction extends AbstractGameAction {
             for (AbstractCard c : this.p.hand.group) {
                 enhanceCount++;
                 EnhanceCard.enhance(c);
-                c.applyPowers();
+//                c.applyPowers();
                 this.p.hand.getTopCard().superFlash(RunesmithMod.BEIGE);
             }
             returnCards();
@@ -86,7 +86,7 @@ public class CreatorFormAction extends AbstractGameAction {
                 EnhanceCard.enhance(c);
                 c.superFlash(RunesmithMod.BEIGE);
                 this.p.hand.addToTop(c);
-                c.applyPowers();
+//                c.applyPowers();
             }
             returnCards();
             AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;
