@@ -22,7 +22,7 @@ public class EquivalentCopyPatch {
                 ((AbstractRunicCard) card[0]).basePotency = ((AbstractRunicCard) __instance).basePotency;
                 ((AbstractRunicCard) card[0]).freeElementOnce = ((AbstractRunicCard) __instance).freeElementOnce;
             }
-            logger.info("" + card[0].name);
+//            logger.info("" + card[0].name);
             card[0].initializeDescription();
 //            card[0].description = __instance.description;
 //            logger.info(card[0].rawDescription);

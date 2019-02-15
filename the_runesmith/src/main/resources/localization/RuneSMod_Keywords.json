@@ -34,7 +34,8 @@
       "PROPER_NAME": "Craft",
       "NAMES": [
         "craft",
-        "crafted"
+        "crafted",
+        "crafting"
       ],
       "DESCRIPTION": "Create a rune using #yElements. If rune cannot be crafted, gain that many #yElements instead. You can have no more than 7 active runes."
     },
@@ -144,8 +145,7 @@
     {
       "PROPER_NAME": "Dud",
       "NAMES": [
-        "dud",
-        "non-dud"
+        "dud"
       ],
       "DESCRIPTION": "Rune: No effect."
     },
@@ -157,11 +157,12 @@
       "DESCRIPTION": "Rune: Deals damage to random enemy and gain Block."
     },
     {
-      "PROPER_NAME": "WWWWWWWWWWWWWW",
+      "PROPER_NAME": "Time Travel",
       "NAMES": [
-        "WWWWWWWWWWWWWWWWW"
+        "time travel",
+        "time_travel"
       ],
-      "DESCRIPTION": "WWWWWWWWWWWWWWWWW"
+      "DESCRIPTION": "Set your current HP, Block, and Elements to the saved values."
     }
   ]
 }
