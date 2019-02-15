@@ -20,7 +20,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: basemod:basemod:5.9.0">
+      <library name="Maven: basemod:basemod:5.11.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/../lib/BaseMod.jar!/" />
         </CLASSES>
@@ -32,6 +32,15 @@
       <library name="Maven: com.evacipated.cardcrawl:ModTheSpire:3.8.2">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/../lib/ModTheSpire.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Maven: com.evacipated.cardcrawl.mod:StSLib:1.14.0">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../lib/StSLib.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

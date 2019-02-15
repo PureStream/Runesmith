@@ -31,6 +31,13 @@
             <systemPath>${basedir}/../lib/ModTheSpire.jar</systemPath>
         </dependency>
         <dependency>
+            <groupId>com.evacipated.cardcrawl.mod</groupId>
+            <artifactId>StSLib</artifactId>
+            <version>1.14.0</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/../lib/StSLib.jar</systemPath>
+        </dependency>
+        <dependency>
             <groupId>elementalistmod</groupId>
             <artifactId>elementalistmod</artifactId>
             <version>0.0.2</version>
