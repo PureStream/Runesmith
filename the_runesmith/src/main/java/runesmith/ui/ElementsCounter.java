@@ -66,6 +66,7 @@ public class ElementsCounter extends ClickableUIElement {
     private Hitbox ignisHitbox;
     private Hitbox terraHitbox;
     private Hitbox aquaHitbox;
+    private float currentYOffset = 0.0F;
     private static float ignisH = 31.0F * Settings.scale * ELEMENTS_IMG_SCALE;
     private static float terraH = 34.0F * Settings.scale * ELEMENTS_IMG_SCALE;
     private FrameBuffer fbo;
@@ -80,7 +81,11 @@ public class ElementsCounter extends ClickableUIElement {
     }
 
     public void setYOffset(float yOffset){
+        this.currentYOffset = yOffset;
         y = textY = baseY + yOffset;
+        ignisHitbox.translate(ignisHitbox.x, baseY + terraH/2 + yOffset);
+        terraHitbox.translate(terraHitbox.x, baseY - terraH/2 + yOffset);
+        aquaHitbox.translate(aquaHitbox.x, baseY - terraH/2 - ignisH + yOffset);
     }
 
 
@@ -199,15 +204,15 @@ public class ElementsCounter extends ClickableUIElement {
     }
 
     private void onIgnisHover(){
-        TipHelper.renderGenericTip(300.0F * Settings.scale, 350.0F * Settings.scale, IgnisText[0], IgnisText[1]);
+        TipHelper.renderGenericTip(300.0F * Settings.scale, 350.0F * Settings.scale + currentYOffset, IgnisText[0], IgnisText[1]);
     }
 
     private void onTerraHover(){
-        TipHelper.renderGenericTip(300.0F * Settings.scale, 350.0F * Settings.scale, TerraText[0], TerraText[1]);
+        TipHelper.renderGenericTip(300.0F * Settings.scale, 350.0F * Settings.scale + currentYOffset, TerraText[0], TerraText[1]);
     }
 
     private void onAquaHover(){
-        TipHelper.renderGenericTip(300.0F * Settings.scale, 350.0F * Settings.scale, AquaText[0], AquaText[1]);
+        TipHelper.renderGenericTip(300.0F * Settings.scale, 350.0F * Settings.scale + currentYOffset, AquaText[0], AquaText[1]);
     }
 
     @Override

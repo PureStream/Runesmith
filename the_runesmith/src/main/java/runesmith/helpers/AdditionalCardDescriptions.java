@@ -12,7 +12,7 @@ import runesmith.patches.EnhanceCountField;
 public abstract class AdditionalCardDescriptions {
     public static final Logger logger = LogManager.getLogger(AdditionalCardDescriptions.class.getName());
 
-    private static final UIStrings uiStrings1 = CardCrawlGame.languagePack.getUIString("Runesmith:StasisAction");
+    private static final UIStrings uiStrings1 = CardCrawlGame.languagePack.getUIString("Runesmith:CardStasis");
     public static final String[] STASIS_TEXT = uiStrings1.TEXT;
 
     private static final UIStrings uiStrings2 = CardCrawlGame.languagePack.getUIString("Runesmith:CardEnhanced");

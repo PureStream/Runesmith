@@ -16,7 +16,12 @@
   },
   "Runesmith:CardEnhanced": {
     "TEXT": [
-      "Enhanced"
+      "runesmith:Enhanced"
+    ]
+  },
+  "Runesmith:CardStasis": {
+    "TEXT": [
+      "runesmith:Stasis"
     ]
   },
   "Runesmith:DoubleUpAction": {

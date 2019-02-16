@@ -435,7 +435,7 @@
   },
   "Runesmith:ChargedHammer": {
     "NAME": "Charged Hammer",
-    "DESCRIPTION": "Deal !D! damage. NL Spend !M! random runesmith:Elements and runesmith:Break your oldest runesmith:Dud rune to runesmith:Craft a random non-Dud rune."
+    "DESCRIPTION": "Deal !D! damage. NL Spend !M! random runesmith:Elements and runesmith:Break your oldest runesmith:Dud Rune to runesmith:Craft a random non-Dud rune."
   },
   "Runesmith:Devolution": {
     "NAME": "Devolution",
