@@ -2,7 +2,6 @@ package runesmith.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -10,6 +9,7 @@ import com.megacrit.cardcrawl.vfx.cardManip.ExhaustCardEffect;
 import runesmith.patches.CardStasisStatus;
 import runesmith.patches.EnhanceCountField;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -23,57 +23,29 @@ public class DowngradeEntireDeckAction extends AbstractGameAction {
         this.duration = Settings.ACTION_DUR_FAST;
     }
 
-    private void downgrade(AbstractCard c, CardGroup cardGroup) {
-        AbstractDungeon.effectList.add(new ExhaustCardEffect(c));
-        DowngradeCard.downgrade(cardGroup.group, c);
-    }
-
     @Override
     public void update() {
-        List<CardGroup> allCardsGroup = Arrays.asList(p.hand, p.drawPile, p.discardPile);
-        allCardsGroup.forEach(cardGroup -> cardGroup.group.stream()
-                        .filter(c -> c.upgraded || EnhanceCountField.enhanceCount.get(c) > 0 || CardStasisStatus.isStasis.get(c))
-                        .forEach(c -> downgrade(c,cardGroup)));
-//        for (AbstractCard c : this.p.discardPile.group) {
-//            if (c.upgraded || EnhanceCountField.enhanceCount.get(c) > 0 || CardStasisStatus.isStasis.get(c)) {
-//                AbstractDungeon.effectList.add(new ExhaustCardEffect(c));
-//                DowngradeCard.downgrade(this.p.discardPile.group, c);
-//            }
-//        }
-//        for (AbstractCard c : this.p.drawPile.group) {
-//            if (c.upgraded || EnhanceCountField.enhanceCount.get(c) > 0 || CardStasisStatus.isStasis.get(c)) {
-//                AbstractDungeon.effectList.add(new ExhaustCardEffect(c));
-//                DowngradeCard.downgrade(this.p.drawPile.group, c);
-//            }
-//        }
-//        for (AbstractCard c : this.p.hand.group) {
-//            if (c.upgraded || EnhanceCountField.enhanceCount.get(c) > 0 || CardStasisStatus.isStasis.get(c)) {
-//                AbstractDungeon.effectList.add(new ExhaustCardEffect(c));
-//                DowngradeCard.downgrade(this.p.hand.group, c);
-//            }
-//        }
+        List<ArrayList<AbstractCard>> allCardsGroup = Arrays.asList(p.hand.group, p.drawPile.group, p.discardPile.group);
+        allCardsGroup.forEach(cardGroup -> cardGroup
+                .stream()
+                .filter(c -> c.upgraded || EnhanceCountField.enhanceCount.get(c) > 0 || CardStasisStatus.isStasis.get(c))
+                .forEach(c -> {
+                    AbstractDungeon.effectList.add(new ExhaustCardEffect(c));
+                    DowngradeCard.downgrade(cardGroup, c);
+                }));
+//        this.p.discardPile.group.stream().filter(c -> c.upgraded || EnhanceCountField.enhanceCount.get(c) > 0 || CardStasisStatus.isStasis.get(c)).forEach(c -> {
+//            AbstractDungeon.effectList.add(new ExhaustCardEffect(c));
+//            DowngradeCard.downgrade(this.p.discardPile.group, c);
+//        });
+//        this.p.drawPile.group.stream().filter(c -> c.upgraded || EnhanceCountField.enhanceCount.get(c) > 0 || CardStasisStatus.isStasis.get(c)).forEach(c -> {
+//            AbstractDungeon.effectList.add(new ExhaustCardEffect(c));
+//            DowngradeCard.downgrade(this.p.drawPile.group, c);
+//        });
+//        this.p.hand.group.stream().filter(c -> c.upgraded || EnhanceCountField.enhanceCount.get(c) > 0 || CardStasisStatus.isStasis.get(c)).forEach(c -> {
+//            AbstractDungeon.effectList.add(new ExhaustCardEffect(c));
+//            DowngradeCard.downgrade(this.p.hand.group, c);
+//        });
         this.isDone = true;
     }
-/*
-	private void replaceCard(ArrayList<AbstractCard> group, AbstractCard select) {
-		if(!((select instanceof SearingBlow)||(select instanceof FieryHammer))) {
-			int index = group.indexOf(select);
-			group.set(index, select.makeCopy());
-		}else if(select instanceof SearingBlow){
-			int index = group.indexOf(select);
-			AbstractCard tmp = new SearingBlow();
-			for(int i = 0; i < select.timesUpgraded - 1; i++) {
-				tmp.upgrade();
-			}
-			group.set(index, tmp);
-		}else if(select instanceof FieryHammer) {
-			int index = group.indexOf(select);
-			AbstractCard tmp = new FieryHammer();
-			for(int i = 0; i < select.timesUpgraded - 1; i++) {
-				tmp.upgrade();
-			}
-			group.set(index, tmp);
-		}
-	}*/
 
 }
