@@ -14,7 +14,7 @@ import runesmith.relics.CoreCrystal;
 
 public class ApplyElementsPowerAction extends AbstractGameAction {
 
-    private int oriIgnis, oriTerra, oriAqua;
+//    private int oriIgnis, oriTerra, oriAqua;
     private int ignis;
     private int terra;
     private int aqua;
@@ -23,17 +23,19 @@ public class ApplyElementsPowerAction extends AbstractGameAction {
     public ApplyElementsPowerAction(AbstractCreature target, AbstractCreature source, int ignis, int terra, int aqua) {
         this.p = (AbstractPlayer) target;
         int maxStacks = RunesmithMod.DEFAULT_MAX_ELEMENTS;
-        int multipler = 1;
         if (p.hasRelic(CoreCrystal.ID)) {
             maxStacks = CoreCrystal.MAX_ELEMENTS;
-            multipler = 2;
+            double multipler = 1.5;
+            ignis = (int) (ignis*multipler);
+            terra = (int) (terra*multipler);
+            aqua = (int) (aqua*multipler);
         }
-        oriIgnis = ignis*multipler;
-        oriTerra = terra*multipler;
-        oriAqua = aqua*multipler;
-        this.ignis = ignis*multipler > maxStacks ? maxStacks : ignis*multipler;
-        this.terra = terra*multipler > maxStacks ? maxStacks : terra*multipler;
-        this.aqua = aqua*multipler > maxStacks ? maxStacks : aqua*multipler;
+//        oriIgnis = (int) (ignis*multipler);
+//        oriTerra = (int) (terra*multipler);
+//        oriAqua = (int) (aqua*multipler);
+        this.ignis = ignis > maxStacks ? maxStacks : ignis;
+        this.terra = terra > maxStacks ? maxStacks : terra;
+        this.aqua = aqua > maxStacks ? maxStacks : aqua;
         
     }
 
@@ -78,7 +80,7 @@ public class ApplyElementsPowerAction extends AbstractGameAction {
             );
         }
 
-        ElementsGainedCountField.elementsCount.set(p, ElementsGainedCountField.elementsCount.get(p) + oriIgnis + oriTerra + oriAqua);
+        ElementsGainedCountField.elementsCount.set(p, ElementsGainedCountField.elementsCount.get(p) + ignis + terra + aqua);
         this.isDone = true;
     }
 }
