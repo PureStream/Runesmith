@@ -1,12 +1,14 @@
 package runesmith.actions.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
+import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import runesmith.RunesmithMod;
 import runesmith.actions.EnhanceCard;
 
@@ -19,15 +21,30 @@ public class RefinementAction extends AbstractGameAction {
     private AbstractPlayer p;
     private ArrayList<AbstractCard> cannotEnhance = new ArrayList<>();
     private int enhanceNums;
+    private boolean freeToPlayOnce;
+    private boolean upgraded;
 
-    public RefinementAction(int enhanceNums) {
+    public RefinementAction(int enhanceNums, boolean freeToPlayOnce, boolean upgraded) {
         this.actionType = AbstractGameAction.ActionType.CARD_MANIPULATION;
         this.p = AbstractDungeon.player;
         this.duration = Settings.ACTION_DUR_FAST;
+        this.freeToPlayOnce = freeToPlayOnce;
         this.enhanceNums = enhanceNums;
+        this.upgraded = upgraded;
     }
 
     public void update() {
+        if (upgraded)
+            enhanceNums++;
+        if (p.hasRelic("Chemical X"))
+            enhanceNums += 2;
+        if (!this.freeToPlayOnce) {
+            if (EnergyPanel.totalCount > 0) {
+                p.energy.use(EnergyPanel.totalCount);
+                AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
+            }
+        }
+
         if (this.duration == Settings.ACTION_DUR_FAST) {
 
             for (AbstractCard c : this.p.hand.group) {
