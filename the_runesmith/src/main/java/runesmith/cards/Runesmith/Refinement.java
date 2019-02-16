@@ -47,11 +47,7 @@ public class Refinement extends CustomCard {
         if (this.energyOnUse < EnergyPanel.totalCount)
             this.energyOnUse = EnergyPanel.totalCount;
 
-        if (this.energyOnUse > 0) {
-            AbstractDungeon.actionManager.addToBottom(
-                    new RefinementAction(this.energyOnUse, this.freeToPlayOnce, this.upgraded)
-            );
-        }
+        AbstractDungeon.actionManager.addToBottom(new RefinementAction(this.energyOnUse, this.freeToPlayOnce, this.upgraded));
     }
 
     public AbstractCard makeCopy() {
