@@ -87,6 +87,8 @@ public class RunesmithMod implements PostExhaustSubscriber,
     private static boolean elementalistEnabled = false;
     private static Texture ELEMENTS_GREEN_MASK = ImageMaster.loadImage("images/ui/elements/GMask.png");
 
+    public static final int DEFAULT_MAX_ELEMENTS = 10;
+
     public RunesmithMod() {
         BaseMod.subscribe(this);
         logger.info("creating the color : RUNESMITH_BEIGE");

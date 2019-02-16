@@ -18,7 +18,6 @@ import runesmith.actions.ApplyElementsPowerAction;
 import runesmith.orbs.RuneOrb;
 import runesmith.patches.EnhanceCountField;
 import runesmith.powers.PotentialPower;
-import runesmith.relics.BrokenRuby;
 import runesmith.relics.PocketReactor;
 
 public abstract class AbstractRunicCard extends CustomCard {
@@ -34,7 +33,7 @@ public abstract class AbstractRunicCard extends CustomCard {
     public boolean isPotencyModified;
 
     public boolean isCraftable = false;
-    public boolean renderCraftable = true;
+    boolean renderCraftable = true;
 
     public boolean freeElementOnce = false;
 
