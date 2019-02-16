@@ -122,7 +122,8 @@ public class RunesmithMod implements PostExhaustSubscriber,
         logger.info("done editing characters");
     }
 
-    public void loadAudio() {
+    private void loadAudio() {
+        @SuppressWarnings (value="unchecked")
         HashMap<String, Sfx> map = (HashMap<String, Sfx>) ReflectionHacks.getPrivate(CardCrawlGame.sound, SoundMaster.class, "map");
         map.put("RUNESMITH_HAMMER", new Sfx("audio/HammerDoubleHit.ogg", false));
     }
@@ -200,10 +201,10 @@ public class RunesmithMod implements PostExhaustSubscriber,
         );
         BaseMod.loadCustomStrings(OrbStrings.class, orbStrings);
 
-//        potionStrings = Gdx.files.internal(potion).readString(
-//                String.valueOf(StandardCharsets.UTF_8)
-//        );
-//        BaseMod.loadCustomStrings(PotionStrings.class, potionStrings);
+        potionStrings = Gdx.files.internal(potion).readString(
+                String.valueOf(StandardCharsets.UTF_8)
+        );
+        BaseMod.loadCustomStrings(PotionStrings.class, potionStrings);
 
         uiStrings = Gdx.files.internal(ui).readString(
                 String.valueOf(StandardCharsets.UTF_8)
@@ -246,8 +247,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
         keywordsPath = KEYWORD_STRING;
 
         Gson gson = new Gson();
-        Keywords keywords;
-        keywords = gson.fromJson(loadJson(keywordsPath), Keywords.class);
+        Keywords keywords = gson.fromJson(loadJson(keywordsPath), Keywords.class);
         Arrays.stream(keywords.keywords).forEach(key -> {
             logger.info("Loading keyword : " + key.NAMES[0]);
             BaseMod.addKeyword("runesmith", key.PROPER_NAME, key.NAMES, key.DESCRIPTION);
@@ -469,6 +469,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
         }
     }
 
+    @SuppressWarnings("")
     private void initializeElementalist() throws ClassNotFoundException, NoClassDefFoundError{
         Class<ElementalistMod> elementalist = ElementalistMod.class;
         elementalistEnabled = true;
