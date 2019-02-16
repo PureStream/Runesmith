@@ -9,11 +9,13 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import runesmith.actions.BreakRuneAction;
 import runesmith.orbs.DudRune;
 import runesmith.orbs.RuneOrb;
 import runesmith.patches.AbstractCardEnum;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class Supernova extends CustomCard {
     public static final String ID = "Runesmith:Supernova";
@@ -23,7 +25,6 @@ public class Supernova extends CustomCard {
     public static final String IMG_PATH = "images/cards/Supernova.png"; //need some img
     private static final int COST = 1;
     private static final int UPG_COST = 0;
-    private static final int SKILL_AMT = 1;
 
     public Supernova() {
         super(
@@ -40,23 +41,25 @@ public class Supernova extends CustomCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (p.orbs.size() == 0) return;
+        List<RuneOrb> runes = p.orbs
+                .stream()
+                .filter(o -> o instanceof RuneOrb)
+                .map(RuneOrb.class::cast)
+                .collect(Collectors.toList());
+        if(runes.size() == 0)
+            return;
 
         int count = 0;
-        for (AbstractOrb o : p.orbs) {
-            if (o instanceof RuneOrb) {
-                RuneOrb r = (RuneOrb) o;
-                if (!(r instanceof DudRune))
-                    count++;
-                AbstractDungeon.actionManager.addToBottom(
-                        new BreakRuneAction(r)
-                );
-            }
+        for (RuneOrb rune : runes) {
+            if (!(rune instanceof DudRune))
+                count++;
+            AbstractDungeon.actionManager.addToBottom(new BreakRuneAction(rune));
         }
+
         if (count == 0) return;
 
-        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, SKILL_AMT * count));
-        AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(SKILL_AMT * count));
+        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, count));
+        AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(count));
     }
 
     public AbstractCard makeCopy() {

@@ -7,6 +7,8 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import runesmith.RunesmithMod;
 import runesmith.ui.ElementsCounter;
 
+import java.util.stream.IntStream;
+
 public class CoreCrystal extends CustomRelic {
 
     public static final String ID = "Runesmith:CoreCrystal";
@@ -26,15 +28,12 @@ public class CoreCrystal extends CustomRelic {
     @Override
     public void obtain() {
         if (AbstractDungeon.player.hasRelic(BrokenRuby.ID)) {
-            for (int i=0; i<AbstractDungeon.player.relics.size(); ++i) {
-                if (AbstractDungeon.player.relics.get(i).relicId.equals(BrokenRuby.ID)) {
-                    instantObtain(AbstractDungeon.player, i, true);
-                    break;
-                }
-            }
-        } else {
+            IntStream.range(0, AbstractDungeon.player.relics.size())
+                    .filter(i -> AbstractDungeon.player.relics.get(i).relicId.equals(BrokenRuby.ID))
+                    .findFirst()
+                    .ifPresent(i -> instantObtain(AbstractDungeon.player, i, true));
+        } else
             super.obtain();
-        }
         ElementsCounter.setMaxElements(MAX_ELEMENTS);
     }
 

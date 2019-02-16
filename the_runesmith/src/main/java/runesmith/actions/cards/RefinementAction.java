@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
+import com.megacrit.cardcrawl.relics.ChemicalX;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import runesmith.RunesmithMod;
 import runesmith.actions.EnhanceCard;
@@ -34,18 +35,19 @@ public class RefinementAction extends AbstractGameAction {
     }
 
     public void update() {
-        if (upgraded)
-            enhanceNums++;
-        if (p.hasRelic("Chemical X"))
-            enhanceNums += 2;
-        if (!this.freeToPlayOnce) {
-            if (EnergyPanel.totalCount > 0) {
-                p.energy.use(EnergyPanel.totalCount);
-                AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
-            }
-        }
-
         if (this.duration == Settings.ACTION_DUR_FAST) {
+            if (upgraded)
+                enhanceNums++;
+            if (p.hasRelic(ChemicalX.ID)){
+                enhanceNums += 2;
+                p.getRelic(ChemicalX.ID).flash();
+            }
+            if (!this.freeToPlayOnce) {
+                if (EnergyPanel.totalCount > 0) {
+                    p.energy.use(EnergyPanel.totalCount);
+                    AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
+                }
+            }
 
             for (AbstractCard c : this.p.hand.group) {
                 if (!EnhanceCard.canEnhance(c)) {
@@ -85,13 +87,11 @@ public class RefinementAction extends AbstractGameAction {
 
         }
 
-
         if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {
-            for (AbstractCard c : AbstractDungeon.handCardSelectScreen.selectedCards.group) {
-                EnhanceCard.enhance(c, enhanceNums);
-                c.superFlash(RunesmithMod.BEIGE);
-                this.p.hand.addToTop(c);
-            }
+            AbstractCard c = AbstractDungeon.handCardSelectScreen.selectedCards.group.get(0);
+            EnhanceCard.enhance(c, enhanceNums);
+            c.superFlash(RunesmithMod.BEIGE);
+            this.p.hand.addToTop(c);
 
             returnCards();
             AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;

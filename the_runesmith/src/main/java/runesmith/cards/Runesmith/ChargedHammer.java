@@ -14,7 +14,6 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.vfx.combat.LightningEffect;
 import runesmith.actions.BreakRuneAction;
 import runesmith.actions.RuneChannelAction;
@@ -85,13 +84,9 @@ public class ChargedHammer extends CustomCard {
         );
 
         if (p.orbs.size() != 0) {
-            RuneOrb r = null;
-            for (AbstractOrb o : p.orbs) {
-                if (o instanceof DudRune) {
-                    r = (RuneOrb) o;
-                    break;
-                }
-            }
+            RuneOrb r = (RuneOrb) p.orbs.stream()
+                    .filter(o -> o instanceof DudRune)
+                    .findFirst().orElse(null);
             if (r != null) {
                 int ignis = 0, terra = 0, aqua = 0;
                 String ignisID = IgnisPower.POWER_ID, terraID = TerraPower.POWER_ID, aquaID = AquaPower.POWER_ID;

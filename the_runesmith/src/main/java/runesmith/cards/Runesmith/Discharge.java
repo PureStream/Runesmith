@@ -14,7 +14,6 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.vfx.combat.LightningEffect;
 import runesmith.actions.BreakRuneAction;
 import runesmith.actions.RuneChannelAction;
@@ -53,15 +52,9 @@ public class Discharge extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (p.orbs.size() == 0) return;
 
-        RuneOrb r = null;
-        for (AbstractOrb o : p.orbs) {
-            if (o instanceof RuneOrb) {
-                if (!(o instanceof DudRune)) {
-                    r = (RuneOrb) o;
-                    break;
-                }
-            }
-        }
+        RuneOrb r = (RuneOrb) p.orbs.stream()
+                .filter(o -> o instanceof RuneOrb && !(o instanceof DudRune))
+                .findFirst().orElse(null);
         if (r == null) return;
         AbstractDungeon.actionManager.addToBottom(
                 new BreakRuneAction(r)

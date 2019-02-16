@@ -1,7 +1,6 @@
 package runesmith.actions.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
@@ -30,8 +29,7 @@ public class EnchantAction extends AbstractGameAction {
     }
 
     private void upgradeThenEnhanceAllCardsInGroup(CardGroup cardGroup) {
-        for (AbstractCard c : cardGroup.group) {
-
+        cardGroup.group.forEach(c -> {
             if (isUpgraded) {
                 if (c.canUpgrade()) {
                     c.upgrade();
@@ -48,8 +46,7 @@ public class EnchantAction extends AbstractGameAction {
                     c.applyPowers();
                 }
             }
-
-        }
+        });
     }
 
 }

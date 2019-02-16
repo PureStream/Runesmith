@@ -74,6 +74,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
     private static final String CARD_STRING = "localization/RuneSMod_Cards.json";
     private static final String RELIC_STRING = "localization/RuneSMod_Relics.json";
     private static final String POWER_STRING = "localization/RuneSMod_Powers.json";
+    private static final String ORB_STRING = "localization/RuneSMod_Orbs.json";
     private static final String POTION_STRING = "localization/RuneSMod_Potions.json";
     private static final String UI_STRING = "localization/RuneSMod_UI.json";
     private static final String KEYWORD_STRING = "localization/RuneSMod_Keywords.json";
@@ -121,7 +122,8 @@ public class RunesmithMod implements PostExhaustSubscriber,
         logger.info("done editing characters");
     }
 
-    public void loadAudio() {
+    private void loadAudio() {
+        @SuppressWarnings (value="unchecked")
         HashMap<String, Sfx> map = (HashMap<String, Sfx>) ReflectionHacks.getPrivate(CardCrawlGame.sound, SoundMaster.class, "map");
         map.put("RUNESMITH_HAMMER", new Sfx("audio/HammerDoubleHit.ogg", false));
     }
@@ -130,12 +132,13 @@ public class RunesmithMod implements PostExhaustSubscriber,
     public void receiveEditStrings() {
         logger.info("start editing strings");
 
-        String relicStrings, cardStrings, powerStrings, potionStrings, relic, card, power, potion, ui, uiStrings, event, eventStrings;
+        String relicStrings, cardStrings, powerStrings, orbStrings, potionStrings, relic, card, power, orb, potion, ui, uiStrings, event, eventStrings;
 
         logger.info("lang == eng");
         card = CARD_STRING;
         relic = RELIC_STRING;
         power = POWER_STRING;
+        orb = ORB_STRING;
         potion = POTION_STRING;
         ui = UI_STRING;
         event = EVENT_STRING;
@@ -193,9 +196,15 @@ public class RunesmithMod implements PostExhaustSubscriber,
         );
         BaseMod.loadCustomStrings(PowerStrings.class, powerStrings);
 
+        orbStrings = Gdx.files.internal(orb).readString(
+                String.valueOf(StandardCharsets.UTF_8)
+        );
+        BaseMod.loadCustomStrings(OrbStrings.class, orbStrings);
+
         potionStrings = Gdx.files.internal(potion).readString(
                 String.valueOf(StandardCharsets.UTF_8)
         );
+        BaseMod.loadCustomStrings(PotionStrings.class, potionStrings);
 
         uiStrings = Gdx.files.internal(ui).readString(
                 String.valueOf(StandardCharsets.UTF_8)
@@ -206,10 +215,6 @@ public class RunesmithMod implements PostExhaustSubscriber,
                 String.valueOf(StandardCharsets.UTF_8)
         );
         BaseMod.loadCustomStrings(EventStrings.class, eventStrings);
-
-        String orbStrings = Gdx.files.internal("localization/RuneSMod_Orbs.json").readString(String.valueOf(StandardCharsets.UTF_8));
-        BaseMod.loadCustomStrings(OrbStrings.class, orbStrings);
-//		BaseMod.loadCustomStrings(PotionStrings.class, potionStrings);
 
         logger.info("done editing strings");
     }
@@ -242,8 +247,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
         keywordsPath = KEYWORD_STRING;
 
         Gson gson = new Gson();
-        Keywords keywords;
-        keywords = gson.fromJson(loadJson(keywordsPath), Keywords.class);
+        Keywords keywords = gson.fromJson(loadJson(keywordsPath), Keywords.class);
         Arrays.stream(keywords.keywords).forEach(key -> {
             logger.info("Loading keyword : " + key.NAMES[0]);
             BaseMod.addKeyword("runesmith", key.PROPER_NAME, key.NAMES, key.DESCRIPTION);
@@ -465,6 +469,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
         }
     }
 
+    @SuppressWarnings("")
     private void initializeElementalist() throws ClassNotFoundException, NoClassDefFoundError{
         Class<ElementalistMod> elementalist = ElementalistMod.class;
         elementalistEnabled = true;

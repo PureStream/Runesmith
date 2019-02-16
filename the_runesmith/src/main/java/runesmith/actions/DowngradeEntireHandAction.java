@@ -1,7 +1,6 @@
 package runesmith.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -21,12 +20,12 @@ public class DowngradeEntireHandAction extends AbstractGameAction {
 
     @Override
     public void update() {
-        for (AbstractCard c : this.p.hand.group) {
-            if (c.upgraded || EnhanceCountField.enhanceCount.get(c) > 0 || CardStasisStatus.isStasis.get(c)) {
-                AbstractDungeon.effectList.add(new ExhaustCardEffect(c));
-                DowngradeCard.downgrade(this.p.hand.group, c);
-            }
-        }
+        this.p.hand.group.stream()
+                .filter(c -> c.upgraded || EnhanceCountField.enhanceCount.get(c) > 0 || CardStasisStatus.isStasis.get(c))
+                .forEach(c -> {
+                    AbstractDungeon.effectList.add(new ExhaustCardEffect(c));
+                    DowngradeCard.downgrade(this.p.hand.group, c);
+                });
         this.isDone = true;
     }
 }

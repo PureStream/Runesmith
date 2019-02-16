@@ -2,12 +2,14 @@ package runesmith.character.player;
 
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpriterAnimation;
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.math.MathUtils;
+import com.google.gson.Gson;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -32,19 +34,20 @@ import runesmith.patches.PlayerClassEnum;
 import runesmith.relics.BrokenRuby;
 import runesmith.ui.EnergyOrbBeige;
 
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
 public class RunesmithCharacter extends CustomPlayer {
-    public static final int ENERGY_PER_TURN = 3;
+    private static final int ENERGY_PER_TURN = 3;
 
-    public static final String THE_RUNESMITH_SHOULDER_2 = "images/character/shoulder2.png"; // campfire pose
-    public static final String THE_RUNESMITH_SHOULDER_1 = "images/character/shoulder.png"; // another campfire pose
-    public static final String THE_RUNESMITH_CORPSE = "images/character/corpse.png"; // dead corpse
-    public static final String THE_RUNESMITH_SKELETON_ATLAS = "images/character/idle/skeleton.atlas"; // spine animation atlas
-    public static final String THE_RUNESMITH_SKELETON_JSON = "images/character/idle/skeleton.json"; // spine animation json
-    public static final String THE_RUNESMITH_SPRITER = "images/character/idle/animation.scml"; //Spriter File
+    private static final String THE_RUNESMITH_SHOULDER_2 = "images/character/shoulder2.png"; // campfire pose
+    private static final String THE_RUNESMITH_SHOULDER_1 = "images/character/shoulder.png"; // another campfire pose
+    private static final String THE_RUNESMITH_CORPSE = "images/character/corpse.png"; // dead corpse
+    private static final String THE_RUNESMITH_SKELETON_ATLAS = "images/character/idle/skeleton.atlas"; // spine animation atlas
+    private static final String THE_RUNESMITH_SKELETON_JSON = "images/character/idle/skeleton.json"; // spine animation json
+    private static final String THE_RUNESMITH_SPRITER = "images/character/idle/animation.scml"; //Spriter File
 
-    Texture BEIGE_ORB_FLASH_VFX = ImageMaster.loadImage("images/ui/beige/energyBeigeVFX.png");
+    private Texture BEIGE_ORB_FLASH_VFX = ImageMaster.loadImage("images/ui/beige/energyBeigeVFX.png");
     private EnergyOrbInterface energyOrb = new EnergyOrbBeige();
 
     private static final EventStrings heartString = CardCrawlGame.languagePack.getEventString("Runesmith:SpireHeart");
@@ -89,17 +92,31 @@ public class RunesmithCharacter extends CustomPlayer {
         return retVal;
     }
 
-    public static final int STARTING_HP = 70;
-    public static final int MAX_HP = 70;
-    public static final int STARTING_GOLD = 99;
-    public static final int HAND_SIZE = 5;
-    public static final int ORB_SLOTS = 0;
+    private static final int STARTING_HP = 70;
+    private static final int MAX_HP = 70;
+    private static final int STARTING_GOLD = 99;
+    private static final int HAND_SIZE = 5;
+    private static final int ORB_SLOTS = 0;
+    private static final String CHARACTER_STRING = "localization/RuneSMod_Character.json";
 
     public CharSelectInfo getLoadout() { // the rest of the character loadout so includes your character select screen info plus hp and starting gold
         // TODO use Character.json instead
-        return new CharSelectInfo("The Runesmith", "A smith from a long lost civilization. NL Uses forgotten technology to craft runes.",
+
+        Gson gson = new Gson();
+        Character character = gson.fromJson(loadJson(), Character.class);
+
+        return new CharSelectInfo(character.NAME, character.FLAVOR_TEXT,
                 STARTING_HP, MAX_HP, ORB_SLOTS, STARTING_GOLD, HAND_SIZE,
                 this, getStartingRelics(), getStartingDeck(), false);
+    }
+
+    private static String loadJson() {
+        return Gdx.files.internal(CHARACTER_STRING).readString(String.valueOf(StandardCharsets.UTF_8));
+    }
+
+    class Character {
+        String NAME;
+        String FLAVOR_TEXT;
     }
 
     @Override

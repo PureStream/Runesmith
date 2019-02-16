@@ -1,6 +1,5 @@
 package runesmith.actions.cards;
 
-import com.megacrit.cardcrawl.actions.common.ShuffleAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import runesmith.actions.DiscardToDrawAction;
@@ -17,7 +16,7 @@ public class RearmAction extends com.megacrit.cardcrawl.actions.AbstractGameActi
 
     public void update() {
         if (this.p.discardPile.size() > 0) {
-            AbstractDungeon.actionManager.addToTop(new ShuffleAction(p.drawPile, false));
+//            AbstractDungeon.actionManager.addToTop(new ShuffleAction(p.drawPile, false));
             p.discardPile.group.stream()
                     .filter(c -> (c.upgraded || EnhanceCountField.enhanceCount.get(c) > 0))
                     .forEach(x -> AbstractDungeon.actionManager.addToTop(new DiscardToDrawAction(x)));

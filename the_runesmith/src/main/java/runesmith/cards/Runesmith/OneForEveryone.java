@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
@@ -50,13 +49,7 @@ public class OneForEveryone extends CustomCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        RuneOrb r = null;
-        for (AbstractOrb o : p.orbs) {
-            if (o instanceof RuneOrb) {
-                r = (RuneOrb) o;
-                break;
-            }
-        }
+        RuneOrb r = (RuneOrb) p.orbs.stream().filter(o -> o instanceof RuneOrb).findFirst().orElse(null);
         if (r != null) {
             AbstractDungeon.actionManager.addToBottom(
                     new BreakRuneAction(r)

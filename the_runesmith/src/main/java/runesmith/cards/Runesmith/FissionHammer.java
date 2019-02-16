@@ -11,7 +11,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import runesmith.actions.BreakRuneAction;
 import runesmith.actions.BreakWithoutRemovingRuneAction;
 import runesmith.orbs.RuneOrb;
@@ -64,13 +63,9 @@ public class FissionHammer extends CustomCard {
 
         if (p.orbs.size() == 0) return;
 
-        RuneOrb r = null;
-        for (AbstractOrb o : p.orbs) {
-            if (o instanceof RuneOrb) {
-                r = (RuneOrb) o;
-                break;
-            }
-        }
+        RuneOrb r = (RuneOrb) p.orbs.stream()
+                .filter(o -> o instanceof RuneOrb)
+                .findFirst().orElse(null);
         if (r == null) return;
 
         AbstractDungeon.actionManager.addToBottom(new BreakWithoutRemovingRuneAction(1, r));
