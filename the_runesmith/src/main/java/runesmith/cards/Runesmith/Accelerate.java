@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import runesmith.actions.BreakRuneAction;
 import runesmith.orbs.RuneOrb;
 import runesmith.patches.AbstractCardEnum;
@@ -44,32 +43,21 @@ public class Accelerate extends CustomCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int drawAmt = BASE_DRAW_AMT;
-        AbstractDungeon.actionManager.addToBottom(
-                new GainBlockAction(p, p, this.block)
-        );
+        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
 
+        int drawAmt = BASE_DRAW_AMT;
         if (p.orbs.size() == 0) {
-            AbstractDungeon.actionManager.addToBottom(
-                    new DrawCardAction(p, drawAmt)
-            );
+            AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, drawAmt));
             return;
         }
 
-        RuneOrb r = null;
-        for (AbstractOrb o : p.orbs) {
-            if (o instanceof RuneOrb) {
-                r = (RuneOrb) o;
-                break;
-            }
-        }
+        RuneOrb r = (RuneOrb) p.orbs.stream()
+                .filter(o -> o instanceof RuneOrb)
+                .findFirst().orElse(null);
 
         if (r != null) {
             drawAmt += this.magicNumber;
-
-            AbstractDungeon.actionManager.addToBottom(
-                    new BreakRuneAction(r)
-            );
+            AbstractDungeon.actionManager.addToBottom(new BreakRuneAction(r));
         }
 
         AbstractDungeon.actionManager.addToBottom(

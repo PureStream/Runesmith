@@ -327,8 +327,8 @@
   },
   "Runesmith:Refinement": {
     "NAME": "Refinement",
-    "DESCRIPTION": "runesmith:Enhance a card X times. NL If you spend at least [E] , gain [E] .",
-    "UPGRADE_DESCRIPTION": "runesmith:Enhance a card X+1 times. NL If you spend at least [E] , gain [E] ."
+    "DESCRIPTION": "runesmith:Enhance a card X times. NL Refund 1.",
+    "UPGRADE_DESCRIPTION": "runesmith:Enhance a card X+1 times. NL Refund 1."
   },
   "Runesmith:Permafrost": {
     "NAME": "Permafrost",

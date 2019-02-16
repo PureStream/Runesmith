@@ -38,7 +38,7 @@ public class RunicBullets extends CustomCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new RunicBulletsAction(m,
-                new DamageInfo(p, this.damage, com.megacrit.cardcrawl.cards.DamageInfo.DamageType.NORMAL)));
+                new DamageInfo(p, this.damage, DamageInfo.DamageType.NORMAL)));
     }
 
     public AbstractCard makeCopy() {

@@ -49,23 +49,9 @@ public class LastStand extends CustomCard {
     }
 
     private static int countCards() {
-        int count = 0;
-        for (AbstractCard c : AbstractDungeon.player.discardPile.group) {
-            if (c.upgraded || EnhanceCountField.enhanceCount.get(c) > 0 || CardStasisStatus.isStasis.get(c)) {
-                count++;
-            }
-        }
-        for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
-            if (c.upgraded || EnhanceCountField.enhanceCount.get(c) > 0 || CardStasisStatus.isStasis.get(c)) {
-                count++;
-            }
-        }
-        for (AbstractCard c : AbstractDungeon.player.hand.group) {
-            if (c.upgraded || EnhanceCountField.enhanceCount.get(c) > 0 || CardStasisStatus.isStasis.get(c)) {
-                count++;
-            }
-        }
-        return count;
+        return (int) (AbstractDungeon.player.discardPile.group.stream().filter(c -> c.upgraded || EnhanceCountField.enhanceCount.get(c) > 0 || CardStasisStatus.isStasis.get(c)).count()
+                + AbstractDungeon.player.drawPile.group.stream().filter(c -> c.upgraded || EnhanceCountField.enhanceCount.get(c) > 0 || CardStasisStatus.isStasis.get(c)).count()
+                + AbstractDungeon.player.hand.group.stream().filter(c -> c.upgraded || EnhanceCountField.enhanceCount.get(c) > 0 || CardStasisStatus.isStasis.get(c)).count());
     }
 
     @Override

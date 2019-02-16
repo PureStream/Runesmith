@@ -1,7 +1,6 @@
 package runesmith.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
@@ -14,9 +13,16 @@ public class EnhanceEntireHandAction extends AbstractGameAction {
 
     private Logger logger = LogManager.getLogger(RunesmithMod.class.getName());
 
+    private int enhanceNums;
+
     public EnhanceEntireHandAction() {
+        this(1);
+    }
+
+    public EnhanceEntireHandAction(int enhanceNums) {
         this.duration = Settings.ACTION_DUR_FAST;
         this.actionType = ActionType.WAIT;
+        this.enhanceNums = enhanceNums;
     }
 
     public void update() {
@@ -31,13 +37,11 @@ public class EnhanceEntireHandAction extends AbstractGameAction {
     }
 
     private void EnhanceAllCardsInGroup(CardGroup cardGroup) {
-        for (AbstractCard c : cardGroup.group) {
-            if (EnhanceCard.canEnhance(c)) {
-                c.superFlash();
-                EnhanceCard.enhance(c);
-                c.applyPowers();
-            }
-        }
+        cardGroup.group.stream().filter(EnhanceCard::canEnhance)
+                .forEach(c -> {
+                    c.superFlash();
+                    EnhanceCard.enhance(c, enhanceNums);
+                });
     }
 
 }

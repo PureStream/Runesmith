@@ -43,11 +43,7 @@ public class RunesonancePower extends AbstractPower {
     public void atStartOfTurn() {
         if (!p.orbs.isEmpty()) {
             flash();
-            for (AbstractOrb o : p.orbs) {
-                if (o instanceof RuneOrb) {
-                    o.onStartOfTurn();
-                }
-            }
+            p.orbs.stream().filter(o -> o instanceof RuneOrb).forEach(AbstractOrb::onStartOfTurn);
         }
         AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, "Runesmith:RunesonancePower", 1));
     }
@@ -57,11 +53,7 @@ public class RunesonancePower extends AbstractPower {
         if (isPlayer) {
             if (!p.orbs.isEmpty()) {
                 flash();
-                for (AbstractOrb o : p.orbs) {
-                    if (o instanceof RuneOrb) {
-                        o.onEndOfTurn();
-                    }
-                }
+                p.orbs.stream().filter(o -> o instanceof RuneOrb).forEach(AbstractOrb::onEndOfTurn);
             }
         }
     }
