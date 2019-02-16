@@ -8,6 +8,9 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import runesmith.actions.EnhanceCard;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class MetallurgicalResearchAction extends AbstractGameAction {
 
     public MetallurgicalResearchAction() {
@@ -18,11 +21,11 @@ public class MetallurgicalResearchAction extends AbstractGameAction {
     public void update() {
         if (this.duration == Settings.ACTION_DUR_MED) {
             AbstractPlayer p = AbstractDungeon.player;
-
-            upgradeAndEnhanceAllCardsInGroup(p.hand);
-            upgradeAndEnhanceAllCardsInGroup(p.drawPile);
-            upgradeAndEnhanceAllCardsInGroup(p.discardPile);
-
+            List<CardGroup> allCardsGroup = Arrays.asList(p.hand, p.drawPile, p.discardPile);
+            allCardsGroup.forEach(this::upgradeAndEnhanceAllCardsInGroup);
+//            upgradeAndEnhanceAllCardsInGroup(p.hand);
+//            upgradeAndEnhanceAllCardsInGroup(p.drawPile);
+//            upgradeAndEnhanceAllCardsInGroup(p.discardPile);
             this.isDone = true;
         }
     }

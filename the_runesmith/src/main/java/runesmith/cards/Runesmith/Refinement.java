@@ -1,7 +1,6 @@
 package runesmith.cards.Runesmith;
 
 import basemod.abstracts.CustomCard;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -45,20 +44,12 @@ public class Refinement extends CustomCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int cnt = EnergyPanel.totalCount;
-        if (upgraded) cnt++;
-        if (p.hasRelic("Chemical X"))
-            cnt += 2;
-        if (!this.freeToPlayOnce) {
-            boolean ifEnergyUsed = (EnergyPanel.totalCount > 0) ? true : false;
-            p.energy.use(EnergyPanel.totalCount);
-            if (ifEnergyUsed)
-                AbstractDungeon.actionManager.addToBottom(
-                        new GainEnergyAction(1));
-        }
-        if (cnt > 0) {
+        if (this.energyOnUse < EnergyPanel.totalCount)
+            this.energyOnUse = EnergyPanel.totalCount;
+
+        if (this.energyOnUse > 0) {
             AbstractDungeon.actionManager.addToBottom(
-                    new RefinementAction(cnt)
+                    new RefinementAction(this.energyOnUse, this.freeToPlayOnce, this.upgraded)
             );
         }
     }

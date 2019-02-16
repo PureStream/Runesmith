@@ -41,6 +41,7 @@ import runesmith.ui.ElementsCounter;
 
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
@@ -243,10 +244,10 @@ public class RunesmithMod implements PostExhaustSubscriber,
         Gson gson = new Gson();
         Keywords keywords;
         keywords = gson.fromJson(loadJson(keywordsPath), Keywords.class);
-        for (KeywordWithProper key : keywords.keywords) {
+        Arrays.stream(keywords.keywords).forEach(key -> {
             logger.info("Loading keyword : " + key.NAMES[0]);
             BaseMod.addKeyword("runesmith", key.PROPER_NAME, key.NAMES, key.DESCRIPTION);
-        }
+        });
         logger.info("Keywords setting finished.");
     }
 
@@ -333,9 +334,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
 
         logger.info("add cards for the Runesmith");
 
-        for (AbstractCard card : cardsToAdd) {
-            BaseMod.addCard(card);
-        }
+        cardsToAdd.forEach(BaseMod::addCard);
 
         logger.info("done editing cards");
     }
@@ -435,11 +434,8 @@ public class RunesmithMod implements PostExhaustSubscriber,
 
         loadRelicsToAdd();
 
-        for (CustomRelic relic : relicsToAddOnlyThisClass)
-            BaseMod.addRelicToCustomPool(relic, RUNESMITH_BEIGE);
-        for (CustomRelic relic : relicsToAddAllClass)
-            BaseMod.addRelic(relic, RelicType.SHARED);
-
+        relicsToAddOnlyThisClass.forEach(r -> BaseMod.addRelicToCustomPool(r, RUNESMITH_BEIGE));
+        relicsToAddAllClass.forEach(r -> BaseMod.addRelic(r, RelicType.SHARED));
     }
 
     private void loadRelicsToAdd() {

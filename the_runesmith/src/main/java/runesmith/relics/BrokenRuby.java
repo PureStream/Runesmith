@@ -1,6 +1,7 @@
 package runesmith.relics;
 
 import basemod.abstracts.CustomRelic;
+import com.evacipated.cardcrawl.mod.stslib.relics.OnAfterUseCardRelic;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -11,7 +12,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import runesmith.RunesmithMod;
 import runesmith.actions.ApplyElementsPowerAction;
 
-public class BrokenRuby extends CustomRelic {
+public class BrokenRuby extends CustomRelic implements OnAfterUseCardRelic {
 
     public static final String ID = "Runesmith:BrokenRuby";
     private static final String IMG = "images/relics/BrokenRuby.png"; //<--------- Need some img
@@ -37,7 +38,8 @@ public class BrokenRuby extends CustomRelic {
         AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(p, this));
     }
 
-    public void onUseCard(AbstractCard card, UseCardAction action) {
+    @Override
+    public void onAfterUseCard(AbstractCard card, UseCardAction useCardAction) {
         AbstractPlayer p = AbstractDungeon.player;
         if (card.type == AbstractCard.CardType.ATTACK) {
             this.counter += 1;
@@ -59,5 +61,6 @@ public class BrokenRuby extends CustomRelic {
     public AbstractRelic makeCopy() {
         return new BrokenRuby();
     }
+
 
 }

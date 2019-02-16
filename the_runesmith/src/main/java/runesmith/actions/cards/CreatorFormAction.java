@@ -21,6 +21,8 @@ public class CreatorFormAction extends AbstractGameAction {
     private List<AbstractCard> cannotEnhance = new ArrayList<>();
     private int cardNums;
 
+    private int enhanceCount = 0;
+
     public CreatorFormAction(int cardNums) {
         this.actionType = AbstractGameAction.ActionType.CARD_MANIPULATION;
         this.p = AbstractDungeon.player;
@@ -44,15 +46,17 @@ public class CreatorFormAction extends AbstractGameAction {
 
 
             if (this.p.hand.group.size() - this.cannotEnhance.size() <= cardNums) {
-                int enhanceCount = 0;
-                for (AbstractCard c : this.p.hand.group) {
-                    if (EnhanceCard.canEnhance(c)) {
-                        enhanceCount++;
-                        EnhanceCard.enhance(c);
-                        c.superFlash(RunesmithMod.BEIGE);
-//                        c.applyPowers();
-                    }
-                }
+                this.p.hand.group.stream()
+                        .filter(EnhanceCard::canEnhance)
+                        .forEach(this::enhanceCard);
+//                for (AbstractCard c : this.p.hand.group) {
+//                    if (EnhanceCard.canEnhance(c)) {
+//                        enhanceCount++;
+//                        EnhanceCard.enhance(c);
+//                        c.superFlash(RunesmithMod.BEIGE);
+////                        c.applyPowers();
+//                    }
+//                }
                 if ((cardNums -= enhanceCount) > 0)
                     AbstractDungeon.actionManager.addToTop(new CreatorFormAction(cardNums));
                 this.isDone = true;
@@ -68,13 +72,16 @@ public class CreatorFormAction extends AbstractGameAction {
             }
 
             //if (this.p.hand.group.size() <= cardNums)
-            int enhanceCount = 0;
-            for (AbstractCard c : this.p.hand.group) {
-                enhanceCount++;
-                EnhanceCard.enhance(c);
-//                c.applyPowers();
-                this.p.hand.getTopCard().superFlash(RunesmithMod.BEIGE);
-            }
+            this.p.hand.group.stream()
+                    .filter(EnhanceCard::canEnhance)
+                    .forEach(this::enhanceCard);
+//            int enhanceCount = 0;
+//            for (AbstractCard c : this.p.hand.group) {
+//                enhanceCount++;
+//                EnhanceCard.enhance(c);
+////                c.applyPowers();
+//                this.p.hand.getTopCard().superFlash(RunesmithMod.BEIGE);
+//            }
             returnCards();
             if ((cardNums -= enhanceCount) > 0)
                 AbstractDungeon.actionManager.addToTop(new CreatorFormAction(cardNums));
@@ -82,12 +89,19 @@ public class CreatorFormAction extends AbstractGameAction {
         }
 
         if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {
-            for (AbstractCard c : AbstractDungeon.handCardSelectScreen.selectedCards.group) {
-                EnhanceCard.enhance(c);
-                c.superFlash(RunesmithMod.BEIGE);
-                this.p.hand.addToTop(c);
-//                c.applyPowers();
-            }
+            AbstractDungeon.handCardSelectScreen.selectedCards.group.stream()
+                    .filter(EnhanceCard::canEnhance)
+                    .forEach(c -> {
+                        EnhanceCard.enhance(c);
+                        c.superFlash(RunesmithMod.BEIGE);
+                        this.p.hand.addToTop(c);
+                    });
+//            for (AbstractCard c : AbstractDungeon.handCardSelectScreen.selectedCards.group) {
+//                EnhanceCard.enhance(c);
+//                c.superFlash(RunesmithMod.BEIGE);
+//                this.p.hand.addToTop(c);
+////                c.applyPowers();
+//            }
             returnCards();
             AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;
             AbstractDungeon.handCardSelectScreen.selectedCards.group.clear();
@@ -95,6 +109,12 @@ public class CreatorFormAction extends AbstractGameAction {
         }
 
         tickDuration();
+    }
+
+    private void enhanceCard(AbstractCard c) {
+        enhanceCount++;
+        EnhanceCard.enhance(c);
+        c.superFlash(RunesmithMod.BEIGE);
     }
 
     private void returnCards() {
