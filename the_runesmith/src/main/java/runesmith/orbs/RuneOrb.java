@@ -201,13 +201,7 @@ public abstract class RuneOrb extends AbstractOrb {
     }
 
     public static int getRuneCount(AbstractPlayer p){
-        int runeCount = 0;
-        for(AbstractOrb o : p.orbs){
-            if(o instanceof RuneOrb){
-                runeCount++;
-            }
-        }
-        return runeCount;
+        return (int) p.orbs.stream().filter(o -> o instanceof RuneOrb).count();
     }
 
     public static int getMaxRune(AbstractPlayer p) {
