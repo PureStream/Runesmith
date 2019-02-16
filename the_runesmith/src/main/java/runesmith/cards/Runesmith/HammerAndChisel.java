@@ -12,7 +12,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import runesmith.patches.AbstractCardEnum;
 
 import java.util.ArrayList;
-import java.util.Map;
 
 import static runesmith.patches.CardTagEnum.CHISEL;
 import static runesmith.patches.CardTagEnum.HAMMER;
@@ -48,14 +47,12 @@ public class HammerAndChisel extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         ArrayList<String> hammer = new ArrayList<>();
         ArrayList<String> chisel = new ArrayList<>();
-        for (Map.Entry<String, AbstractCard> stringAbstractCardEntry : CardLibrary.cards.entrySet()) {
-            @SuppressWarnings({"rawtypes"})
-            Map.Entry<String, AbstractCard> c = stringAbstractCardEntry;
-            if (c.getValue().hasTag(HAMMER))
-                hammer.add(c.getKey());
-            if (c.getValue().hasTag(CHISEL))
-                chisel.add(c.getKey());
-        }
+        CardLibrary.cards.forEach((key, value) -> {
+            if (value.hasTag(HAMMER))
+                hammer.add(key);
+            if (value.hasTag(CHISEL))
+                chisel.add(key);
+        });
         AbstractCard c1;
         AbstractCard c2;
         c1 = CardLibrary.cards.get(hammer.get(AbstractDungeon.cardRng.random(0, hammer.size() - 1))).makeCopy();

@@ -14,6 +14,7 @@ import runesmith.patches.AbstractCardEnum;
 
 import java.util.ArrayList;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 import static runesmith.patches.CardTagEnum.CRAFT;
 
@@ -48,20 +49,17 @@ public class RunicBlueprint extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         //AbstractCard c = AbstractDungeon.returnTrulyRandomCardInCombat(AbstractCard.CardType.).makeCopy();
 
-        ArrayList<String> tmp = new ArrayList<>();
-        for (Map.Entry<String, AbstractCard> stringAbstractCardEntry : CardLibrary.cards.entrySet()) {
-            @SuppressWarnings({"rawtypes"})
-            Map.Entry<String, AbstractCard> c = stringAbstractCardEntry;
-            if (c.getValue().hasTag(CRAFT))
-                tmp.add(c.getKey());
-        }
+        ArrayList<String> tmp = CardLibrary.cards.entrySet().stream()
+                .filter(s -> s.getValue().hasTag(CRAFT))
+                .map(Map.Entry::getKey)
+                .collect(Collectors.toCollection(ArrayList::new));
+
         AbstractCard cZero = CardLibrary.cards.get(tmp.get(AbstractDungeon.cardRng.random(0, tmp.size() - 1))).makeCopy();
         cZero.setCostForTurn(0);
         if (cZero instanceof AbstractRunicCard)
             ((AbstractRunicCard) cZero).freeElementOnce = true;
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(cZero));
-        AbstractDungeon.actionManager.addToBottom(
-                new ApplyElementsPowerAction(p, p, 0, 0, AQUA_AMT));
+        AbstractDungeon.actionManager.addToBottom(new ApplyElementsPowerAction(p, p, 0, 0, AQUA_AMT));
 //        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new AquaPower(p, AQUA_AMT), AQUA_AMT));
 
     }

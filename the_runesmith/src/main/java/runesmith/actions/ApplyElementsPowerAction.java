@@ -23,6 +23,7 @@ public class ApplyElementsPowerAction extends AbstractGameAction {
     public ApplyElementsPowerAction(AbstractCreature target, AbstractCreature source, int ignis, int terra, int aqua) {
         this.p = (AbstractPlayer) target;
         int maxStacks = RunesmithMod.DEFAULT_MAX_ELEMENTS;
+
         if (p.hasRelic(CoreCrystal.ID)) {
             maxStacks = CoreCrystal.MAX_ELEMENTS;
             double multipler = 1.5;
@@ -41,7 +42,6 @@ public class ApplyElementsPowerAction extends AbstractGameAction {
 
     @Override
     public void update() {
-
 //		if(p.hasPower("Runesmith:RunesonancePower")) {
 //			this.ignis = this.ignis*2>maxStacks?maxStacks:ignis*2;
 //			this.terra = this.terra*2>maxStacks?maxStacks:terra*2;

@@ -2,12 +2,16 @@ package runesmith.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.cardManip.ExhaustCardEffect;
 import runesmith.patches.CardStasisStatus;
 import runesmith.patches.EnhanceCountField;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class DowngradeEntireDeckAction extends AbstractGameAction {
 
@@ -19,26 +23,35 @@ public class DowngradeEntireDeckAction extends AbstractGameAction {
         this.duration = Settings.ACTION_DUR_FAST;
     }
 
+    private void downgrade(AbstractCard c, CardGroup cardGroup) {
+        AbstractDungeon.effectList.add(new ExhaustCardEffect(c));
+        DowngradeCard.downgrade(cardGroup.group, c);
+    }
+
     @Override
     public void update() {
-        for (AbstractCard c : this.p.discardPile.group) {
-            if (c.upgraded || EnhanceCountField.enhanceCount.get(c) > 0 || CardStasisStatus.isStasis.get(c)) {
-                AbstractDungeon.effectList.add(new ExhaustCardEffect(c));
-                DowngradeCard.downgrade(this.p.discardPile.group, c);
-            }
-        }
-        for (AbstractCard c : this.p.drawPile.group) {
-            if (c.upgraded || EnhanceCountField.enhanceCount.get(c) > 0 || CardStasisStatus.isStasis.get(c)) {
-                AbstractDungeon.effectList.add(new ExhaustCardEffect(c));
-                DowngradeCard.downgrade(this.p.drawPile.group, c);
-            }
-        }
-        for (AbstractCard c : this.p.hand.group) {
-            if (c.upgraded || EnhanceCountField.enhanceCount.get(c) > 0 || CardStasisStatus.isStasis.get(c)) {
-                AbstractDungeon.effectList.add(new ExhaustCardEffect(c));
-                DowngradeCard.downgrade(this.p.hand.group, c);
-            }
-        }
+        List<CardGroup> allCardsGroup = Arrays.asList(p.hand, p.drawPile, p.discardPile);
+        allCardsGroup.forEach(cardGroup -> cardGroup.group.stream()
+                        .filter(c -> c.upgraded || EnhanceCountField.enhanceCount.get(c) > 0 || CardStasisStatus.isStasis.get(c))
+                        .forEach(c -> downgrade(c,cardGroup)));
+//        for (AbstractCard c : this.p.discardPile.group) {
+//            if (c.upgraded || EnhanceCountField.enhanceCount.get(c) > 0 || CardStasisStatus.isStasis.get(c)) {
+//                AbstractDungeon.effectList.add(new ExhaustCardEffect(c));
+//                DowngradeCard.downgrade(this.p.discardPile.group, c);
+//            }
+//        }
+//        for (AbstractCard c : this.p.drawPile.group) {
+//            if (c.upgraded || EnhanceCountField.enhanceCount.get(c) > 0 || CardStasisStatus.isStasis.get(c)) {
+//                AbstractDungeon.effectList.add(new ExhaustCardEffect(c));
+//                DowngradeCard.downgrade(this.p.drawPile.group, c);
+//            }
+//        }
+//        for (AbstractCard c : this.p.hand.group) {
+//            if (c.upgraded || EnhanceCountField.enhanceCount.get(c) > 0 || CardStasisStatus.isStasis.get(c)) {
+//                AbstractDungeon.effectList.add(new ExhaustCardEffect(c));
+//                DowngradeCard.downgrade(this.p.hand.group, c);
+//            }
+//        }
         this.isDone = true;
     }
 /*
