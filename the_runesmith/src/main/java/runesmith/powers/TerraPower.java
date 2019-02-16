@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import runesmith.RunesmithMod;
 import runesmith.relics.CoreCrystal;
 
 public class TerraPower extends AbstractPower implements InvisiblePower {
@@ -34,7 +35,7 @@ public class TerraPower extends AbstractPower implements InvisiblePower {
         this.amount += stackAmount;
         if (this.amount <= 0)
             AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this));
-        int maxStacks = (AbstractDungeon.player.hasRelic(CoreCrystal.ID)) ? 20 : 10;
+        int maxStacks = (AbstractDungeon.player.hasRelic(CoreCrystal.ID)) ? CoreCrystal.MAX_ELEMENTS : RunesmithMod.DEFAULT_MAX_ELEMENTS;
         if (this.amount > maxStacks)
             this.amount = maxStacks;
     }

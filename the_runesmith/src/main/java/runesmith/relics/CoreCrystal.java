@@ -4,6 +4,7 @@ import basemod.abstracts.CustomRelic;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import runesmith.RunesmithMod;
 import runesmith.ui.ElementsCounter;
 
 public class CoreCrystal extends CustomRelic {
@@ -11,6 +12,8 @@ public class CoreCrystal extends CustomRelic {
     public static final String ID = "Runesmith:CoreCrystal";
     private static final String IMG = "images/relics/CoreCrystal.png"; //<--------- Need some img
     private static final String IMG_O = "images/relics/CoreCrystal_o.png";
+
+    public static final int MAX_ELEMENTS = 20;
 
     public CoreCrystal() {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_O), RelicTier.BOSS, LandingSound.MAGICAL);
@@ -32,12 +35,12 @@ public class CoreCrystal extends CustomRelic {
         } else {
             super.obtain();
         }
-        ElementsCounter.setMaxElements(20);
+        ElementsCounter.setMaxElements(MAX_ELEMENTS);
     }
 
     @Override
     public void onUnequip(){
-        ElementsCounter.setMaxElements(10);
+        ElementsCounter.setMaxElements(RunesmithMod.DEFAULT_MAX_ELEMENTS);
     }
 
     public boolean canSpawn() {

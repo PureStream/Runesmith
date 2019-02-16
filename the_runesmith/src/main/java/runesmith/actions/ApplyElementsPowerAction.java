@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import runesmith.RunesmithMod;
 import runesmith.patches.ElementsGainedCountField;
 import runesmith.powers.AquaPower;
 import runesmith.powers.IgnisPower;
@@ -21,10 +22,10 @@ public class ApplyElementsPowerAction extends AbstractGameAction {
 
     public ApplyElementsPowerAction(AbstractCreature target, AbstractCreature source, int ignis, int terra, int aqua) {
         this.p = (AbstractPlayer) target;
-        int maxStacks = 10;
+        int maxStacks = RunesmithMod.DEFAULT_MAX_ELEMENTS;
         int multipler = 1;
         if (p.hasRelic(CoreCrystal.ID)) {
-            maxStacks = 20;
+            maxStacks = CoreCrystal.MAX_ELEMENTS;
             multipler = 2;
         }
         oriIgnis = ignis*multipler;
