@@ -137,12 +137,12 @@ public class RunesmithCharacter extends CustomPlayer {
 
     @Override
     public Color getCardRenderColor() {
-        return RunesmithMod.BEIGE;
+        return RunesmithMod.BEIGE.cpy();
     }
 
     @Override
     public Color getCardTrailColor() {
-        return RunesmithMod.BEIGE;
+        return RunesmithMod.BEIGE.cpy();
     }
 
     @Override
