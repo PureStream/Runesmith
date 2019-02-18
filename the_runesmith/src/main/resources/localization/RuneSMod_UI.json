@@ -56,5 +56,21 @@
       "Aqua",
       "Your current #yAqua count. NL Can be spent to craft runes."
     ]
+  },
+  "Runesmith:ConstructBifrost": {
+    "TEXT": [
+      "Prismatic",
+      "Prismatic+",
+      "Rune: Give a random class card each turn.",
+      "Rune: Give a random upgraded class card each turn."
+    ]
+  },
+  "Runesmith:CraftReservo": {
+    "TEXT": [
+      "Reservo",
+      "Reservo+",
+      "Rune: #yRetain a card.",
+      "Rune: #yRetain 2 cards."
+    ]
   }
 }

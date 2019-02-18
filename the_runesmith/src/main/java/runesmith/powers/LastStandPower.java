@@ -49,7 +49,10 @@ public class LastStandPower extends AbstractPower {
             if (this.amount == 1) {
                 flash();
 //                AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.utility.SFXAction("ATTACK_HEAVY"));
-                AbstractDungeon.getMonsters().monsters.forEach(c -> AbstractDungeon.actionManager.addToBottom(new VFXAction(new ExplosionSmallEffect(c.hb.cX, c.hb.cY), 0.1F)));
+                AbstractDungeon.getMonsters().monsters
+                        .stream()
+                        .filter(mo -> !mo.isDeadOrEscaped())
+                        .forEach(mo -> AbstractDungeon.actionManager.addToBottom(new VFXAction(new ExplosionSmallEffect(mo.hb.cX, mo.hb.cY), 0.1F)));
 //                AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new com.megacrit.cardcrawl.vfx.combat.MindblastEffect(p.dialogX, p.dialogY, p.flipHorizontal), 0.1F));
                 AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(null,
                         DamageInfo.createDamageMatrix(damageAmount, true),
