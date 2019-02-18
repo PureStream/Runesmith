@@ -27,7 +27,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import runesmith.cards.Runesmith.*;
 import runesmith.character.player.RunesmithCharacter;
-import runesmith.helpers.KeywordWithProper;
+import runesmith.utils.KeywordWithProper;
 import runesmith.helpers.PotencyVariable;
 import runesmith.patches.CardStasisStatus;
 import runesmith.patches.ElementsGainedCountField;

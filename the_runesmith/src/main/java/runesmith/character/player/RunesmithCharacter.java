@@ -162,7 +162,7 @@ public class RunesmithCharacter extends CustomPlayer {
 
     @Override
     public Color getSlashAttackColor() {
-        return RunesmithMod.BEIGE;
+        return RunesmithMod.BEIGE.cpy();
     }
 
     @Override
