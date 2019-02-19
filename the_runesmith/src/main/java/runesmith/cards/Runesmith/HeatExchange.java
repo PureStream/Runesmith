@@ -56,11 +56,11 @@ public class HeatExchange extends CustomCard {
         }
         super.applyPowers();
 
-        if (upgraded)
-            this.rawDescription = DESCRIPTION_UPG;
-        else
-            this.rawDescription = DESCRIPTION;
-        initializeDescription();
+//        if (upgraded)
+//            this.rawDescription = DESCRIPTION_UPG;
+//        else
+//            this.rawDescription = DESCRIPTION;
+//        initializeDescription();
     }
 
     public void onMoveToDiscard() {

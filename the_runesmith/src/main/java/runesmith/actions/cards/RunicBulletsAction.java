@@ -3,26 +3,32 @@ package runesmith.actions.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.orbs.EmptyOrbSlot;
+import runesmith.RunesmithMod;
+import runesmith.orbs.RuneOrb;
 
 public class RunicBulletsAction extends AbstractGameAction {
-    private DamageInfo info = null;
+    private DamageInfo info;
+    private AbstractPlayer p;
     private AbstractCreature target;
 
     public RunicBulletsAction(AbstractCreature m, DamageInfo info) {
         this.duration = Settings.ACTION_DUR_FAST;
+        p = AbstractDungeon.player;
         this.info = info;
         this.target = m;
     }
 
     public void update() {
         if (this.duration == Settings.ACTION_DUR_FAST) {
-            AbstractDungeon.player.orbs.stream()
-                    .filter(r -> !(r instanceof EmptyOrbSlot))
-                    .forEach(r -> AbstractDungeon.actionManager.addToTop(new DamageAction(this.target, this.info, AttackEffect.BLUNT_LIGHT, true)));
+            int bound = RuneOrb.getAllRunes(p).size();
+            RunesmithMod.logger.info("Runes count = " + bound);
+            for (int i = 0; i < bound; i++) {
+                AbstractDungeon.actionManager.addToTop(new DamageAction(this.target, this.info, AttackEffect.BLUNT_LIGHT, true));
+            }
         }
         tickDuration();
     }

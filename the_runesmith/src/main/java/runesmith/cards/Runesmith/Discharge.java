@@ -52,9 +52,7 @@ public class Discharge extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (p.orbs.size() == 0) return;
 
-        RuneOrb r = (RuneOrb) p.orbs.stream()
-                .filter(o -> o instanceof RuneOrb && !(o instanceof DudRune))
-                .findFirst().orElse(null);
+        RuneOrb r = RuneOrb.getFirstRune(p, true);
         if (r == null) return;
         AbstractDungeon.actionManager.addToBottom(
                 new BreakRuneAction(r)

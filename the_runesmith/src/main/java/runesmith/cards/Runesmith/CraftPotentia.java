@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import runesmith.actions.RemoveRuneAction;
 import runesmith.actions.RuneChannelAction;
 import runesmith.orbs.PotentiaRune;
@@ -54,13 +53,7 @@ public class CraftPotentia extends AbstractRunicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
         if (checkElements(ELEMENT_AMT, ELEMENT_AMT, ELEMENT_AMT, false, true)) {
-            RuneOrb r = null;
-            for (AbstractOrb o : p.orbs) {
-                if (o instanceof RuneOrb) {
-                    r = (RuneOrb) o;
-                    break;
-                }
-            }
+            RuneOrb r = RuneOrb.getFirstRune(p);
             if (r != null) {
                 AbstractDungeon.actionManager.addToBottom(new RemoveRuneAction(r));
             }

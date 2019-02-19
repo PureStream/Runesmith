@@ -19,13 +19,16 @@ import runesmith.powers.ArcReactorPower;
 import runesmith.powers.PotentialPower;
 import runesmith.relics.PocketReactor;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 
 public abstract class RuneOrb extends AbstractOrb {
-    private float vfxTimer = 1.0F;
-    private float vfxIntervalMin = 0.2F;
-    private float vfxIntervalMax = 0.7F;
-    private static final float ORB_WAVY_DIST = 0.04F;
-    private static final float PI_4 = 12.566371F;
+//    private float vfxTimer = 1.0F;
+//    private float vfxIntervalMin = 0.2F;
+//    private float vfxIntervalMax = 0.7F;
+//    private static final float ORB_WAVY_DIST = 0.04F;
+//    private static final float PI_4 = 12.566371F;
 
     public boolean upgraded;
     public boolean useMultiBreak = false;
@@ -42,7 +45,6 @@ public abstract class RuneOrb extends AbstractOrb {
         this.upgraded = upgraded;
         this.potential = potential;
 
-
         this.descriptions = CardCrawlGame.languagePack.getOrbString(this.ID).DESCRIPTION;
         this.name = CardCrawlGame.languagePack.getOrbString(this.ID).NAME;
         if (this.upgraded) {
@@ -50,6 +52,29 @@ public abstract class RuneOrb extends AbstractOrb {
         }
 
         updateDescription();
+    }
+
+    public static RuneOrb getFirstRune(AbstractPlayer p) {
+        return getFirstRune(p, false);
+    }
+
+    public static RuneOrb getFirstRune(AbstractPlayer p, Boolean checkDud) {
+        return (RuneOrb) p.orbs
+                .stream()
+                .filter(o -> (o instanceof RuneOrb) && !(o instanceof DudRune && checkDud))
+                .findFirst().orElse(null);
+    }
+
+    public static List<RuneOrb> getAllRunes(AbstractPlayer p) {
+        return getAllRunes(p, false);
+    }
+
+    public static List<RuneOrb> getAllRunes(AbstractPlayer p, Boolean checkDud) {
+        return p.orbs
+                .stream()
+                .filter(o -> (o instanceof RuneOrb) && !(o instanceof DudRune && checkDud))
+                .map(RuneOrb.class::cast)
+                .collect(Collectors.toList());
     }
 
     public void activateEffect() {
@@ -201,7 +226,10 @@ public abstract class RuneOrb extends AbstractOrb {
     }
 
     public static int getRuneCount(AbstractPlayer p){
-        return (int) p.orbs.stream().filter(o -> o instanceof RuneOrb).count();
+        return (int) p.orbs
+                .stream()
+                .filter(o -> o instanceof RuneOrb)
+                .count();
     }
 
     public static int getMaxRune(AbstractPlayer p) {

@@ -15,7 +15,6 @@ import runesmith.orbs.RuneOrb;
 import runesmith.patches.AbstractCardEnum;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class Supernova extends CustomCard {
     public static final String ID = "Runesmith:Supernova";
@@ -41,11 +40,7 @@ public class Supernova extends CustomCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        List<RuneOrb> runes = p.orbs
-                .stream()
-                .filter(o -> o instanceof RuneOrb)
-                .map(RuneOrb.class::cast)
-                .collect(Collectors.toList());
+        List<RuneOrb> runes = RuneOrb.getAllRunes(p);
         if(runes.size() == 0)
             return;
 
