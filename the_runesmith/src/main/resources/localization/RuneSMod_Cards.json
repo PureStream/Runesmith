@@ -98,7 +98,7 @@
   },
   "Runesmith:OneForEveryone": {
     "NAME": "One for Everyone",
-    "DESCRIPTION": "runesmith:Break your oldest Rune to NL gain [E] , deal 1 damage, apply 1 Weak and Vulnerable to ALL enemies, NL gain 1 Block, gain 1 of each runesmith:Element and draw 1 card."
+    "DESCRIPTION": "runesmith:Break your oldest Rune to NL gain [E] , gain 1 Block, NL deal 1 damage and NL apply 1 Weak and Vulnerable to ALL enemies, NL gain 1 of each runesmith:Element and draw 1 card."
   },
   "Runesmith:RunicBullets": {
     "NAME": "Runic Bullets",

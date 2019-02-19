@@ -59,14 +59,14 @@ public class OneForEveryone extends CustomCard {
             AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.utility.SFXAction("ATTACK_HEAVY"));
             AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new CleaveEffect(), 0.1F));
             AbstractDungeon.actionManager.addToBottom(
+                    new GainBlockAction(p, p, this.block)
+            );
+            AbstractDungeon.actionManager.addToBottom(
                     new DamageAllEnemiesAction(
                             p,
                             this.multiDamage, this.damageTypeForTurn,
                             AttackEffect.NONE
                     )
-            );
-            AbstractDungeon.actionManager.addToBottom(
-                    new GainBlockAction(p, p, this.block)
             );
             AbstractDungeon.actionManager.addToBottom(
                     new ApplyElementsPowerAction(p, p, this.magicNumber, this.magicNumber, this.magicNumber));

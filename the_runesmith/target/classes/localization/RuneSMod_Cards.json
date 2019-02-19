@@ -98,7 +98,7 @@
   },
   "Runesmith:OneForEveryone": {
     "NAME": "One for Everyone",
-    "DESCRIPTION": "runesmith:Break your oldest Rune to NL gain [E] , deal 1 damage, apply 1 Weak and Vulnerable to ALL enemies, NL gain 1 Block, gain 1 of each runesmith:Element and draw 1 card."
+    "DESCRIPTION": "runesmith:Break your oldest Rune to NL gain [E] , gain 1 Block, NL deal 1 damage and NL apply 1 Weak and Vulnerable to ALL enemies, NL gain 1 of each runesmith:Element and draw 1 card."
   },
   "Runesmith:RunicBullets": {
     "NAME": "Runic Bullets",
@@ -126,8 +126,8 @@
   },
   "Runesmith:CraftReservo": {
     "NAME": "Craft Reservo",
-    "DESCRIPTION": "2 runesmith:Aqua: runesmith:Craft a runesmith:Reservo rune. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "2 runesmith:Aqua: runesmith:Craft a runesmith:Reservo+ rune. NL Exhaust.",
+    "DESCRIPTION": "2 runesmith:Aqua: runesmith:Craft a [#EFC851]Reservo Rune. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "2 runesmith:Aqua: runesmith:Craft a [#EFC851]Reservo+ Rune. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
@@ -214,8 +214,8 @@
   },
   "Runesmith:ConstructBifrost": {
     "NAME": "Construct Bifrost",
-    "DESCRIPTION": "1 of each runesmith:Element: runesmith:Craft a runesmith:Prismatic Rune.",
-    "UPGRADE_DESCRIPTION": "1 of each runesmith:Element: runesmith:Craft a runesmith:Prismatic+ Rune.",
+    "DESCRIPTION": "1 of each runesmith:Element: runesmith:Craft a [#EFC851]Prismatic Rune.",
+    "UPGRADE_DESCRIPTION": "1 of each runesmith:Element: runesmith:Craft a [#EFC851]Prismatic+ Rune.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
