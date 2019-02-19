@@ -10,11 +10,9 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.powers.BufferPower;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import runesmith.actions.BreakRuneAction;
-import runesmith.orbs.DudRune;
 import runesmith.orbs.RuneOrb;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class GenerateForcefieldAction extends AbstractGameAction {
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("Runesmith:FortifyAction");
@@ -43,11 +41,7 @@ public class GenerateForcefieldAction extends AbstractGameAction {
             if (!this.freeToPlayOnce)
                 p.energy.use(EnergyPanel.totalCount);
 
-            List<RuneOrb> runes = p.orbs
-                    .stream()
-                    .filter(o -> o instanceof RuneOrb && !(o instanceof DudRune))
-                    .map(RuneOrb.class::cast)
-                    .collect(Collectors.toList());
+            List<RuneOrb> runes = RuneOrb.getAllRunes(p, true);
             if (runes.size() == 0) {
                 this.isDone = true;
                 return;

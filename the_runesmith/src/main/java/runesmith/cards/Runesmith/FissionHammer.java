@@ -63,9 +63,7 @@ public class FissionHammer extends CustomCard {
 
         if (p.orbs.size() == 0) return;
 
-        RuneOrb r = (RuneOrb) p.orbs.stream()
-                .filter(o -> o instanceof RuneOrb)
-                .findFirst().orElse(null);
+        RuneOrb r = RuneOrb.getFirstRune(p);
         if (r == null) return;
 
         AbstractDungeon.actionManager.addToBottom(new BreakWithoutRemovingRuneAction(1, r));

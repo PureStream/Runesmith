@@ -51,9 +51,7 @@ public class Accelerate extends CustomCard {
             return;
         }
 
-        RuneOrb r = (RuneOrb) p.orbs.stream()
-                .filter(o -> o instanceof RuneOrb)
-                .findFirst().orElse(null);
+        RuneOrb r = RuneOrb.getFirstRune(p);
 
         if (r != null) {
             drawAmt += this.magicNumber;

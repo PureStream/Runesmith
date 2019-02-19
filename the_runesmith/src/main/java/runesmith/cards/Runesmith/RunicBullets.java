@@ -1,6 +1,8 @@
 package runesmith.cards.Runesmith;
 
 import basemod.abstracts.CustomCard;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -8,8 +10,11 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import runesmith.actions.cards.RunicBulletsAction;
+import runesmith.RunesmithMod;
+import runesmith.orbs.RuneOrb;
 import runesmith.patches.AbstractCardEnum;
+
+import java.util.stream.IntStream;
 
 public class RunicBullets extends CustomCard {
     public static final String ID = "Runesmith:RunicBullets";
@@ -37,8 +42,12 @@ public class RunicBullets extends CustomCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new RunicBulletsAction(m,
-                new DamageInfo(p, this.damage, DamageInfo.DamageType.NORMAL)));
+        int bound = RuneOrb.getRuneCount(p);
+        RunesmithMod.logger.info("Runes count = " + bound);
+        IntStream
+                .range(0, bound)
+                .forEach(i -> AbstractDungeon.actionManager.addToTop(new DamageAction(m, new DamageInfo(p, this.damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT, true)));
+//        AbstractDungeon.actionManager.addToBottom(new RunicBulletsAction(m, new DamageInfo(p, this.damage, DamageInfo.DamageType.NORMAL)));
     }
 
     public AbstractCard makeCopy() {

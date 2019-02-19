@@ -27,7 +27,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import runesmith.cards.Runesmith.*;
 import runesmith.character.player.RunesmithCharacter;
-import runesmith.utils.KeywordWithProper;
 import runesmith.helpers.PotencyVariable;
 import runesmith.patches.CardStasisStatus;
 import runesmith.patches.ElementsGainedCountField;
@@ -38,6 +37,7 @@ import runesmith.powers.IgnisPower;
 import runesmith.powers.TerraPower;
 import runesmith.relics.*;
 import runesmith.ui.ElementsCounter;
+import runesmith.utils.KeywordWithProper;
 
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
@@ -79,6 +79,16 @@ public class RunesmithMod implements PostExhaustSubscriber,
     private static final String UI_STRING = "localization/RuneSMod_UI.json";
     private static final String KEYWORD_STRING = "localization/RuneSMod_Keywords.json";
     private static final String EVENT_STRING = "localization/RuneSMod_Events.json";
+
+//    private static final String LOCALIZATION = "localization/";
+//    private static final String CARD_STRING = "RuneSMod_Cards.json";
+//    private static final String RELIC_STRING = "RuneSMod_Relics.json";
+//    private static final String POWER_STRING = "RuneSMod_Powers.json";
+//    private static final String ORB_STRING = "RuneSMod_Orbs.json";
+//    private static final String POTION_STRING = "RuneSMod_Potions.json";
+//    private static final String UI_STRING = "RuneSMod_UI.json";
+//    private static final String KEYWORD_STRING = "RuneSMod_Keywords.json";
+//    private static final String EVENT_STRING = "RuneSMod_Events.json";
 
     private List<AbstractCard> cardsToAdd = new ArrayList<>();
     private List<CustomRelic> relicsToAddOnlyThisClass = new ArrayList<>();

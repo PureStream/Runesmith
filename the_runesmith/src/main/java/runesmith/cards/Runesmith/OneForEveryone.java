@@ -49,7 +49,7 @@ public class OneForEveryone extends CustomCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        RuneOrb r = (RuneOrb) p.orbs.stream().filter(o -> o instanceof RuneOrb).findFirst().orElse(null);
+        RuneOrb r = RuneOrb.getFirstRune(p);
         if (r != null) {
             AbstractDungeon.actionManager.addToBottom(
                     new BreakRuneAction(r)
