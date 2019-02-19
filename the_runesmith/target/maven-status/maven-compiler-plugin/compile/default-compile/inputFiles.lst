@@ -42,6 +42,7 @@ C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmit
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\orbs\ProtectioRune.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\deprecated\HammerSlam.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\CraftIncendium.java
+C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\utils\AdditionalCardDescriptions.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\vfx\ShowStasisCardAndAddToDiscardEffect.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\actions\ApplyElementsPowerAction.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\Firestorm.java
@@ -113,6 +114,7 @@ C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\relics\CoreCry
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\actions\BreakWithoutRemovingRuneAction.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\Overpower.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\LastStand.java
+C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\patches\TinyCardPatch.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\Attraction.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\CraftProtectio.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\ElementalConversion.java
@@ -178,13 +180,11 @@ C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\actions\cards\
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\MakeshiftArmor.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\powers\MetallurgicalResearchPower.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\relics\MiniCore.java
-C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\helpers\KeywordWithProper.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\orbs\SpiculumRune.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\DuctTape.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\RunesmithMod.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\Devolution.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\CraftMagma.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\patches\EnhanceCountField.java
-C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\helpers\AdditionalCardDescriptions.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\actions\RemoveRuneAction.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\ChaoticBlast.java

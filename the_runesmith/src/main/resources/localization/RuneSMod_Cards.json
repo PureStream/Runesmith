@@ -154,7 +154,7 @@
   },
   "Runesmith:CraftPotentia": {
     "NAME": "Craft Potentia",
-    "DESCRIPTION": "2 runesmith:Ignis 2 runesmith:Terra 2 runesmith:Aqua: Remove your oldest Rune and runesmith:Craft a runesmith:Potentia Rune with !Pot! runesmith:Potency.",
+    "DESCRIPTION": "2 of each runesmith:Element: Remove your oldest Rune and runesmith:Craft a runesmith:Potentia Rune with !Pot! runesmith:Potency.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
