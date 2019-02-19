@@ -27,6 +27,7 @@ public abstract class DowngradeCard {
         tmp.upgraded = manualUpgrade.upgraded;
         tmp.timesUpgraded = manualUpgrade.timesUpgraded;
         tmp.name = manualUpgrade.name;
+        tmp.rawDescription = manualUpgrade.rawDescription;
         tmp.target = manualUpgrade.target;
         tmp.baseDamage = manualUpgrade.baseDamage;
         tmp.baseBlock = manualUpgrade.baseBlock;
@@ -41,6 +42,8 @@ public abstract class DowngradeCard {
         if(tmp instanceof AbstractRunicCard && manualUpgrade instanceof AbstractRunicCard){
             ((AbstractRunicCard) tmp).basePotency = ((AbstractRunicCard) manualUpgrade).basePotency;
         }
+
+        tmp.initializeDescription();
 
         group.set(index, tmp);
 
