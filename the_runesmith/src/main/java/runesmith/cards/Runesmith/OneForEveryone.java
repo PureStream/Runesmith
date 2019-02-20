@@ -75,9 +75,9 @@ public class OneForEveryone extends CustomCard {
 //			AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new AquaPower(p, this.magicNumber), this.magicNumber));
             for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p,
-                        new VulnerablePower(mo, this.magicNumber, false), this.magicNumber));
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p,
                         new WeakPower(mo, this.magicNumber, false), this.magicNumber));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p,
+                        new VulnerablePower(mo, this.magicNumber, false), this.magicNumber));
             }
             AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, this.magicNumber));
         }
