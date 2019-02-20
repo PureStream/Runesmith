@@ -66,7 +66,7 @@ public class EnhancedCardValueModified {
                 if ((boolean) ReflectionHacks.getPrivate(self, AbstractCard.class, "isMultiDamage")) {
                     for (int i = 0; i < self.multiDamage.length; i++) {
                         self.multiDamage[i] = self.multiDamage[i] + MathUtils.floor(self.multiDamage[i] * (0.5F * EnhanceCountField.enhanceCount.get(self)));
-                        logger.info("multiDamage modified: " + self.multiDamage[i]);
+//                        logger.info("multiDamage modified: " + self.multiDamage[i]);
                     }
                 }
 
@@ -125,7 +125,7 @@ public class EnhancedCardValueModified {
                 EnhanceCountField.lastEnhance.set(self, 0);
 
 
-                logger.info("reset attributes");
+//                logger.info("reset attributes");
 
 //	            if(self instanceof AbstractRunicCard) {
 //	            	int tmp2 = ((AbstractRunicCard) self).potency;

@@ -1,17 +1,23 @@
 package runesmith.actions;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import runesmith.cards.Runesmith.AbstractRunicCard;
 import runesmith.patches.CardStasisStatus;
 import runesmith.patches.EnhanceCountField;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 
 public abstract class DowngradeCard {
+
+    public static final Logger logger = LogManager.getLogger(DowngradeCard.class.getName());
+
     public static void downgrade(ArrayList<AbstractCard> group, AbstractCard select) {
         int index = group.indexOf(select);
         AbstractCard manualUpgrade = select.makeCopy();
+        manualUpgrade.timesUpgraded = 0;
+//        logger.info("times upgraded = "+select.timesUpgraded);
         for (int i = 0; i < select.timesUpgraded - 1; i++) {
             manualUpgrade.upgrade();
         }
