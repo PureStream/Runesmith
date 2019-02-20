@@ -9,13 +9,15 @@ import runesmith.RunesmithMod;
 
 public class TinyCardPatch {
 
+    private static final Color BEIGE = RunesmithMod.BEIGE.cpy();
+
     @SpirePatch(clz = TinyCard.class, method="getIconBackgroundColor")
     public static class getIconBackgroundColor {
 
         public static SpireReturn<Color> Prefix(TinyCard __instance, AbstractCard card)
         {
             if (card.color == AbstractCardEnum.RUNESMITH_BEIGE) {
-                return SpireReturn.Return(RunesmithMod.BEIGE.cpy());
+                return SpireReturn.Return(BEIGE.cpy());
             }
             return SpireReturn.Continue();
         }
@@ -27,7 +29,7 @@ public class TinyCardPatch {
         public static SpireReturn<Color> Prefix(TinyCard __instance, AbstractCard card)
         {
             if (card.color == AbstractCardEnum.RUNESMITH_BEIGE) {
-                return SpireReturn.Return(RunesmithMod.BEIGE.cpy());
+                return SpireReturn.Return(BEIGE.cpy());
             }
             return SpireReturn.Continue();
         }

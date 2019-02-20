@@ -106,7 +106,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
         logger.info("creating the color : RUNESMITH_BEIGE");
         BaseMod.addColor(
                 RUNESMITH_BEIGE,
-                BEIGE,
+                BEIGE.cpy(),
                 "images/cardui/512/bg_attack_beige.png", //attackBg
                 "images/cardui/512/bg_skill_beige.png", //skillBg
                 "images/cardui/512/bg_power_beige.png", //powerBg
