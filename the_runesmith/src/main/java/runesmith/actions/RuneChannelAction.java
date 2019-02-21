@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.TutorialStrings;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.orbs.EmptyOrbSlot;
 import com.megacrit.cardcrawl.vfx.ThoughtBubble;
@@ -17,6 +18,8 @@ public class RuneChannelAction extends AbstractGameAction {
     private boolean autoEvoke;
     private int maxRunes;
     private int runeCount = 0;
+    private static final TutorialStrings tutorialStrings = CardCrawlGame.languagePack.getTutorialString("Rune Tip");
+    private static final String FULL_RUNE_TEXT = tutorialStrings.TEXT[0];
 
     public RuneChannelAction(AbstractOrb newOrbType) {
         this(newOrbType, true);
@@ -34,7 +37,7 @@ public class RuneChannelAction extends AbstractGameAction {
         maxRunes = RuneOrb.getMaxRune(p);
         this.runeCount = RuneOrb.getRuneCount(p);
         if (this.runeCount >= maxRunes) {
-            AbstractDungeon.effectList.add(new ThoughtBubble(p.dialogX, p.dialogY, 3.0F, "I'm out of #rrunes space.", true));
+            AbstractDungeon.effectList.add(new ThoughtBubble(p.dialogX, p.dialogY, 3.0F, FULL_RUNE_TEXT, true));
             this.isDone = true;
             return;
         } else {
@@ -77,7 +80,7 @@ public class RuneChannelAction extends AbstractGameAction {
                 ((RuneOrb) this.orbType).onCraft();
             }
         } else {
-            AbstractDungeon.effectList.add(new ThoughtBubble(p.dialogX, p.dialogY, 3.0F, "I'm out of #rrunes space.", true));
+            AbstractDungeon.effectList.add(new ThoughtBubble(p.dialogX, p.dialogY, 3.0F, FULL_RUNE_TEXT, true));
             this.isDone = true;
         }
     }

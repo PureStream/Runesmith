@@ -1,4 +1,10 @@
 {
-  "NAME" : "The Runesmith",
-  "FLAVOR_TEXT": "A smith from a long lost civilization. NL Uses forgotten knowledge to craft runes."
+  "The Runesmith": {
+    "NAMES" : [
+      "The Runesmith"
+    ],
+    "TEXT": [
+      "A smith from a long lost civilization. NL Uses forgotten knowledge to craft runes."
+    ]
+  }
 }
