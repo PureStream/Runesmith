@@ -6,8 +6,8 @@
     "PureStream"
   ],
   "description": "Add a new class called The Runesmith",
-  "credits": "BDWSSBB: Card descriptions wording improvements.",
-  "version": "0.3.1",
+  "credits": "BDWSSBB: Card descriptions wording improvements.\nDalamzi: Korean translation.",
+  "version": "0.3.2",
   "sts_version": "",
   "mts_version": "3.7.5",
   "dependencies": [
