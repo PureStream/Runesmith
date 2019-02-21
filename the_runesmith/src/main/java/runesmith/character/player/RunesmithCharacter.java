@@ -2,14 +2,12 @@ package runesmith.character.player;
 
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpriterAnimation;
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.math.MathUtils;
-import com.google.gson.Gson;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -20,6 +18,7 @@ import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
+import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbInterface;
@@ -34,7 +33,6 @@ import runesmith.patches.PlayerClassEnum;
 import runesmith.relics.BrokenRuby;
 import runesmith.ui.EnergyOrbBeige;
 
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
 public class RunesmithCharacter extends CustomPlayer {
@@ -51,6 +49,9 @@ public class RunesmithCharacter extends CustomPlayer {
     private EnergyOrbInterface energyOrb = new EnergyOrbBeige();
 
     private static final EventStrings heartString = CardCrawlGame.languagePack.getEventString("Runesmith:SpireHeart");
+    private static final CharacterStrings characterString = CardCrawlGame.languagePack.getCharacterString("The Runesmith");
+    private static final String CHAR_NAME = characterString.NAMES[0];
+    private static final String CHAR_FLAVOR_TEXT = characterString.TEXT[0];
 
     public RunesmithCharacter(String name) {
         super(name, PlayerClassEnum.RUNESMITH_CLASS, null, "images/vfx.png", new SpriterAnimation(THE_RUNESMITH_SPRITER));
@@ -97,27 +98,15 @@ public class RunesmithCharacter extends CustomPlayer {
     private static final int STARTING_GOLD = 99;
     private static final int HAND_SIZE = 5;
     private static final int ORB_SLOTS = 0;
-    private static final String CHARACTER_STRING = "localization/RuneSMod_Character.json";
 
     public CharSelectInfo getLoadout() { // the rest of the character loadout so includes your character select screen info plus hp and starting gold
         // TODO use Character.json instead
 
-        Gson gson = new Gson();
-        Character character = gson.fromJson(loadJson(), Character.class);
-
-        return new CharSelectInfo(character.NAME, character.FLAVOR_TEXT,
+        return new CharSelectInfo(CHAR_NAME, CHAR_FLAVOR_TEXT,
                 STARTING_HP, MAX_HP, ORB_SLOTS, STARTING_GOLD, HAND_SIZE,
                 this, getStartingRelics(), getStartingDeck(), false);
     }
 
-    private static String loadJson() {
-        return Gdx.files.internal(CHARACTER_STRING).readString(String.valueOf(StandardCharsets.UTF_8));
-    }
-
-    class Character {
-        String NAME;
-        String FLAVOR_TEXT;
-    }
 
     @Override
     public void doCharSelectScreenSelectEffect() {
