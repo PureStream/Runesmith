@@ -42,15 +42,15 @@ public class ElementsCounter extends ClickableUIElement {
     private float gFontScale = fontScale;
     private float bFontScale = fontScale;
 
-    private static final float ELEMENTS_IMG_SCALE = 1.15F;
+    private static final float ELEMENTS_IMG_SCALE = 1.15F * Settings.scale;
 
     private static float x = 198.0F * Settings.scale;
     private static float baseY = 320.0F * Settings.scale;
     private static float y = 320.0F * Settings.scale;
     private static float textX = 198.0F * Settings.scale;
     private static float textY = 320.0F * Settings.scale;
-    private static float hb_w = 70.0F * Settings.scale * ELEMENTS_IMG_SCALE;
-    private static float hb_h = 96.0F * Settings.scale * ELEMENTS_IMG_SCALE;
+    private static float hb_w = 70.0F * ELEMENTS_IMG_SCALE;
+    private static float hb_h = 96.0F * ELEMENTS_IMG_SCALE;
 
     private static String[] IgnisText = CardCrawlGame.languagePack.getUIString("Runesmith:IgnisElement").TEXT;
     private static String[] TerraText = CardCrawlGame.languagePack.getUIString("Runesmith:TerraElement").TEXT;
@@ -67,8 +67,8 @@ public class ElementsCounter extends ClickableUIElement {
     private Hitbox terraHitbox;
     private Hitbox aquaHitbox;
     private float currentYOffset = 0.0F;
-    private static float ignisH = 31.0F * Settings.scale * ELEMENTS_IMG_SCALE;
-    private static float terraH = 34.0F * Settings.scale * ELEMENTS_IMG_SCALE;
+    private static float ignisH = 31.0F * ELEMENTS_IMG_SCALE;
+    private static float terraH = 34.0F * ELEMENTS_IMG_SCALE;
     private FrameBuffer fbo;
 
     public ElementsCounter(Texture image){
@@ -182,9 +182,9 @@ public class ElementsCounter extends ClickableUIElement {
 
         sb.draw(ELEMENTS_FRAME, x - 128.0F, y - 128.0F, 128.0F, 128.0F, 256.0F, 256.0F, ELEMENTS_IMG_SCALE, ELEMENTS_IMG_SCALE, 0.0F, 0, 0, 256, 256, false, false);
 
-        FontHelper.renderFontCentered(sb, FontHelper.energyNumFontRed, this.ignisCount+"/"+MAX_ELEMENTS, textX, textY + 31.0F * Settings.scale * ELEMENTS_IMG_SCALE, Color.WHITE, rFontScale);
+        FontHelper.renderFontCentered(sb, FontHelper.energyNumFontRed, this.ignisCount+"/"+MAX_ELEMENTS, textX, textY + 31.0F * ELEMENTS_IMG_SCALE, Color.WHITE, rFontScale);
         FontHelper.renderFontCentered(sb, FontHelper.energyNumFontGreen, this.terraCount+"/"+MAX_ELEMENTS, textX, textY, Color.WHITE, gFontScale);
-        FontHelper.renderFontCentered(sb, FontHelper.energyNumFontBlue, this.aquaCount+"/"+MAX_ELEMENTS, textX, textY - 31.0F * Settings.scale * ELEMENTS_IMG_SCALE, Color.WHITE, bFontScale);
+        FontHelper.renderFontCentered(sb, FontHelper.energyNumFontBlue, this.aquaCount+"/"+MAX_ELEMENTS, textX, textY - 31.0F * ELEMENTS_IMG_SCALE, Color.WHITE, bFontScale);
     }
 
     @Override
