@@ -71,9 +71,9 @@ public class RunesmithMod implements PostExhaustSubscriber,
     private static final String RUNESMITH_PORTRAIT = "images/character/runesmithPortrait.png";
     public static Color BEIGE = new Color(175f / 255f, 145f / 255f, 100f / 255f, 1f);
 
-
     private static final String LOCALIZATION_ENG = "localization/ENG/";
     private static final String LOCALIZATION_KOR = "localization/KOR/";
+
     private static final String CARD_STRING = "RuneSMod_Cards.json";
     private static final String CHARACTER_STRING = "RuneSMod_Character.json";
     private static final String RELIC_STRING = "RuneSMod_Relics.json";
@@ -230,26 +230,6 @@ public class RunesmithMod implements PostExhaustSubscriber,
         logger.info("Setting up custom keywords");
 
         String keywordsPath;
-	    /*switch (Settings.language) {
-	      case ZHT:
-	        keywordsPath = KEYWORD_STRING_ZHT;
-	        break;
-	      case ZHS:
-	        keywordsPath = KEYWORD_STRING_ZHS;
-	        break;
-	      case KOR:
-	        keywordsPath = KEYWORD_STRING_KR;
-	        break;
-	      case JPN:
-	        keywordsPath = KEYWORD_STRING_JP;
-	        break;
-	      case FRA:
-	      keywordsPath = KEYWORD_STRING_FR;
-	      break;
-	      default:
-	        keywordsPath = KEYWORD_STRING;
-	        break;
-	    }*/
         keywordsPath = LOCALIZATION_ENG + KEYWORD_STRING;
 
         loadKeywords(keywordsPath);
@@ -529,6 +509,5 @@ public class RunesmithMod implements PostExhaustSubscriber,
         }
         return blockLoss;
     }
-
 
 }
