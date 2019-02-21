@@ -71,7 +71,9 @@ public class RunesmithMod implements PostExhaustSubscriber,
     private static final String RUNESMITH_PORTRAIT = "images/character/runesmithPortrait.png";
     public static Color BEIGE = new Color(175f / 255f, 145f / 255f, 100f / 255f, 1f);
 
-    private static final String LOCALIZATION = "localization/";
+
+    private static final String LOCALIZATION_ENG = "localization/ENG/";
+    private static final String LOCALIZATION_KOR = "localization/KOR/";
     private static final String CARD_STRING = "RuneSMod_Cards.json";
     private static final String CHARACTER_STRING = "RuneSMod_Character.json";
     private static final String RELIC_STRING = "RuneSMod_Relics.json";
@@ -135,20 +137,48 @@ public class RunesmithMod implements PostExhaustSubscriber,
     public void receiveEditStrings() {
         logger.info("start editing strings");
 
-        String local, relicStrings, cardStrings, characterStrings, powerStrings, orbStrings, potionStrings, uiStrings, eventStrings, tutorialStrings, relic, card, character, power, orb, potion, ui, tutorial, event;
+        String local, relic, card, character, power, orb, potion, ui, tutorial, event;
 
-        local = LOCALIZATION + "ENG/";
+        local = LOCALIZATION_ENG;
         card = local + CARD_STRING;
         character = local + CHARACTER_STRING;
-        relic = local + RELIC_STRING;
-        power = local + POWER_STRING;
+        event = local + EVENT_STRING;
         orb = local + ORB_STRING;
         potion = local + POTION_STRING;
-        ui = local + UI_STRING;
+        power = local + POWER_STRING;
+        relic = local + RELIC_STRING;
         tutorial = local + TUTORIAL_STRING;
-        event = local + EVENT_STRING;
+        ui = local + UI_STRING;
         logger.info("Insert ENG Strings");
 
+        loadStrings(card, character, event, orb, potion, power, relic, tutorial, ui);
+
+        boolean isEng = true;
+        if (Settings.language == Settings.GameLanguage.KOR) {
+            local = LOCALIZATION_KOR;
+            isEng = false;
+            logger.info("Insert KOR Strings");
+        }
+        // else if other languages
+
+        if (!isEng) {
+            card = local + CARD_STRING;
+            character = local + CHARACTER_STRING;
+            relic = local + RELIC_STRING;
+            power = local + POWER_STRING;
+            orb = local + ORB_STRING;
+            potion = local + POTION_STRING;
+            ui = local + UI_STRING;
+            tutorial = local + TUTORIAL_STRING;
+            event = local + EVENT_STRING;
+            loadStrings(card, character, event, orb, potion, power, relic, tutorial, ui);
+        }
+
+        logger.info("done editing strings");
+    }
+
+    private static void loadStrings(String card, String character, String event, String orb, String potion, String power, String relic, String tutorial, String ui) {
+        String relicStrings, cardStrings, characterStrings, powerStrings, orbStrings, potionStrings, uiStrings, eventStrings, tutorialStrings;
         relicStrings = Gdx.files.internal(relic).readString(
                 String.valueOf(StandardCharsets.UTF_8)
         );
@@ -193,79 +223,13 @@ public class RunesmithMod implements PostExhaustSubscriber,
                 String.valueOf(StandardCharsets.UTF_8)
         );
         BaseMod.loadCustomStrings(EventStrings.class, eventStrings);
-
-        boolean isEng = true;
-        if (Settings.language == Settings.GameLanguage.KOR) {
-            local = LOCALIZATION + "KOR/";
-            isEng = false;
-            logger.info("Insert KOR Strings");
-        }
-        // else if other languages
-
-        if (!isEng) {
-            card = local + CARD_STRING;
-            character = local + CHARACTER_STRING;
-            relic = local + RELIC_STRING;
-            power = local + POWER_STRING;
-            orb = local + ORB_STRING;
-            potion = local + POTION_STRING;
-            ui = local + UI_STRING;
-            tutorial = local + TUTORIAL_STRING;
-            event = local + EVENT_STRING;
-            relicStrings = Gdx.files.internal(relic).readString(
-                    String.valueOf(StandardCharsets.UTF_8)
-            );
-            BaseMod.loadCustomStrings(RelicStrings.class, relicStrings);
-
-            cardStrings = Gdx.files.internal(card).readString(
-                    String.valueOf(StandardCharsets.UTF_8)
-            );
-            BaseMod.loadCustomStrings(CardStrings.class, cardStrings);
-
-            characterStrings = Gdx.files.internal(character).readString(
-                    String.valueOf(StandardCharsets.UTF_8)
-            );
-            BaseMod.loadCustomStrings(CharacterStrings.class, characterStrings);
-
-            powerStrings = Gdx.files.internal(power).readString(
-                    String.valueOf(StandardCharsets.UTF_8)
-            );
-            BaseMod.loadCustomStrings(PowerStrings.class, powerStrings);
-
-            orbStrings = Gdx.files.internal(orb).readString(
-                    String.valueOf(StandardCharsets.UTF_8)
-            );
-            BaseMod.loadCustomStrings(OrbStrings.class, orbStrings);
-
-            potionStrings = Gdx.files.internal(potion).readString(
-                    String.valueOf(StandardCharsets.UTF_8)
-            );
-            BaseMod.loadCustomStrings(PotionStrings.class, potionStrings);
-
-            uiStrings = Gdx.files.internal(ui).readString(
-                    String.valueOf(StandardCharsets.UTF_8)
-            );
-            BaseMod.loadCustomStrings(UIStrings.class, uiStrings);
-
-            tutorialStrings = Gdx.files.internal(tutorial).readString(
-                    String.valueOf(StandardCharsets.UTF_8)
-            );
-            BaseMod.loadCustomStrings(TutorialStrings.class, tutorialStrings);
-
-            eventStrings = Gdx.files.internal(event).readString(
-                    String.valueOf(StandardCharsets.UTF_8)
-            );
-            BaseMod.loadCustomStrings(EventStrings.class, eventStrings);
-        }
-
-        logger.info("done editing strings");
     }
 
     @Override
     public void receiveEditKeywords() {
         logger.info("Setting up custom keywords");
 
-        String local, keywordsPath;
+        String keywordsPath;
 	    /*switch (Settings.language) {
 	      case ZHT:
 	        keywordsPath = KEYWORD_STRING_ZHT;
@@ -286,34 +250,31 @@ public class RunesmithMod implements PostExhaustSubscriber,
 	        keywordsPath = KEYWORD_STRING;
 	        break;
 	    }*/
-	    local = LOCALIZATION + "ENG/";
-        keywordsPath = local + KEYWORD_STRING;
+        keywordsPath = LOCALIZATION_ENG + KEYWORD_STRING;
 
+        loadKeywords(keywordsPath);
+
+        boolean isEng = true;
+        if (Settings.language == Settings.GameLanguage.KOR) {
+            keywordsPath = LOCALIZATION_KOR + KEYWORD_STRING;
+            isEng = false;
+        }
+        //else if other languages
+
+        if (!isEng)
+            loadKeywords(keywordsPath);
+
+
+        logger.info("Keywords setting finished.");
+    }
+
+    private static void loadKeywords(String keywordsPath) {
         Gson gson = new Gson();
         Keywords keywords = gson.fromJson(loadJson(keywordsPath), Keywords.class);
         Arrays.stream(keywords.keywords).forEach(key -> {
             logger.info("Loading keyword : " + key.NAMES[0]);
             BaseMod.addKeyword("runesmith", key.PROPER_NAME, key.NAMES, key.DESCRIPTION);
         });
-
-        boolean isEng = true;
-        if (Settings.language == Settings.GameLanguage.KOR) {
-            local = LOCALIZATION + "KOR/";
-            isEng = false;
-            logger.info("Insert KOR Strings");
-        }
-        //else if other languages
-
-        if (!isEng) {
-            keywordsPath = local + KEYWORD_STRING;
-            keywords = gson.fromJson(loadJson(keywordsPath), Keywords.class);
-            Arrays.stream(keywords.keywords).forEach(key -> {
-                logger.info("Loading keyword : " + key.NAMES[0]);
-                BaseMod.addKeyword("runesmith", key.PROPER_NAME, key.NAMES, key.DESCRIPTION);
-            });
-        }
-
-        logger.info("Keywords setting finished.");
     }
 
     private static String loadJson(String jsonPath) {
