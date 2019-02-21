@@ -146,7 +146,7 @@ public class RunesmithCharacter extends CustomPlayer {
 
     @Override
     public String getLocalizedCharacterName() {
-        return "The Runesmith";
+        return CHAR_NAME;
     }
 
     @Override

@@ -1,0 +1,177 @@
+{
+  "Runesmith:IgnisPower": {
+    "NAME": "화염",
+    "DESCRIPTIONS": [
+      "현재 #y화염 #b",
+      " 개 중 "," 개를 보유하고 있습니다."
+    ]
+  },
+  "Runesmith:TerraPower": {
+    "NAME": "대지",
+    "DESCRIPTIONS": [
+      "현재 #y대지 #b",
+      " 개 중 "," 개를 보유하고 있습니다."
+    ]
+  },
+  "Runesmith:AquaPower": {
+    "NAME": "바다",
+    "DESCRIPTIONS": [
+      "현재 #y바다 #b",
+      " 개 중 "," 개를 보유하고 있습니다."
+    ]
+  },
+  "Runesmith:GrindstonePower": {
+    "NAME": "연마석",
+    "DESCRIPTIONS": [
+      "이번 턴에 내는 모든 카드가 #y강화 됩니다. 이미 #y강화 된 카드는 #y향상 됩니다.",
+      "#b",
+      " 턴 동안 내는 모든 카드가 #y강화 됩니다. 이미 #y강화 된 카드는 #y향상 됩니다."
+    ]
+  },
+  "Runesmith:FirestormPower": {
+    "NAME": "화염폭풍",
+    "DESCRIPTIONS": [
+      "턴 시작시 #y화염 #b",
+      " #y대지 #b",
+      " 를 얻습니다."
+    ]
+  },
+  "Runesmith:DuplicatePower": {
+    "NAME": "복제",
+    "DESCRIPTIONS": [
+      "이번 턴 동안 #y제련 하는 다음 #b",
+      " 개의 룬을 복제하여 #y제련 합니다.",
+      " 개의 룬을 복제하여 #y제련 합니다."
+    ]
+  },
+  "Runesmith:PotentialPower": {
+    "NAME": "잠재력",
+    "DESCRIPTIONS": [
+      "#y제련 카드의 #y잠재력 을 #b",
+      "#y제련 카드의 #y잠재력 을 #b",
+      "만큼 증가 또는 감소 시킵니다."
+    ]
+  },
+  "Runesmith:ArcReactorPower": {
+    "NAME": "피폭",
+    "DESCRIPTIONS": [
+      "내 턴이 끝날 때 #y잠재력 을 #b",
+      " 잃습니다."
+    ]
+  },
+  "Runesmith:UnlimitedPowerPower": {
+    "NAME": "끝 없는 힘으로",
+    "DESCRIPTIONS": [
+      "#y제련 할 때 더 이상 원소를 소비하지 않습니다."
+    ]
+  },
+  "Runesmith:RunesonancePower": {
+    "NAME": "룬 공명",
+    "DESCRIPTIONS": [
+      "#b1 턴 동안, 룬이 2번 발동합니다.",
+      "#b",
+      " 턴 동안, 룬이 2번 발동합니다."
+    ]
+  },
+  "Runesmith:ReservoPower": {
+    "NAME": "카드 보존",
+    "DESCRIPTIONS": [
+      "At the end of your turn, you may #yRetain #b",
+      " card.",
+      " cards."
+    ]
+  },
+  "Runesmith:DuctTapePower": {
+    "NAME": "덕트 테이프",
+    "DESCRIPTIONS": [
+      "내 턴이 시작할 때 카드 #b",
+      " 장에 #y정지장 을 부여합니다.",
+      " 장에 #y정지장 을 부여합니다."
+    ]
+  },
+  "Runesmith:SpiculumDownPower": {
+    "NAME": "가시 내리기",
+    "DESCRIPTIONS": [
+      "내 턴이 끝날 때 #y가시 를 #b",
+      " 잃습니다"
+    ]
+  },
+  "Runesmith:PotentialDownPower": {
+    "NAME": "잠재력 약화",
+    "DESCRIPTIONS": [
+      "내 턴이 끝날 때 #y잠재력 을 #b",
+      " 잃습니다."
+    ]
+  },
+  "Runesmith:MetallurgicalResearchPower": {
+    "NAME": "금속공학 연구",
+    "DESCRIPTIONS": [
+      "#b",
+      " 턴 뒤 모든 카드를 #y강화 하고 #y향상 시킵니다.",
+      " 턴 뒤 모든 카드를 #y강화 하고 #y향상 시킵니다."
+    ]
+  },
+  "Runesmith:PermafrostPower": {
+    "NAME": "영구동토",
+    "DESCRIPTIONS": [
+      "턴 시작시 #y방어도 를 절반만 잃습니다.",
+      "턴 시작시 #y방어도 를 절반만 잃습니다."
+    ]
+  },
+  "Runesmith:CreatorFormPower": {
+    "NAME": "창조자의 형상",
+    "DESCRIPTIONS": [
+      "내 턴이 시작할 때 #b",
+      " 장의 카드를 #y향상 시킵니다.",
+      " 장의 카드를 #y향상 시킵니다."
+    ]
+  },
+  "Runesmith:PoweredAnvilPower": {
+    "NAME": "강화된 모루",
+    "DESCRIPTIONS": [
+      "카드를 #y향상 시킨 후 #b",
+      " 번 더 #y향상 시킵니다.",
+      " 번 더 #y향상 시킵니다."
+    ]
+  },
+  "Runesmith:IceColdPower": {
+    "NAME": "살떨어지는 추위",
+    "DESCRIPTIONS": [
+      "#b",
+      " 턴 후 #y둔화 를 잃습니다.",
+      " 턴 후 #y둔화 를 잃습니다."
+    ]
+  },
+  "Runesmith:ReplicatingBarrierPower": {
+    "NAME": "복제된 보호막",
+    "DESCRIPTIONS": [
+      "#b",
+      " 턴 동안,",
+      " 턴 동안,",
+      " #y대지 2 : #b",
+      " 잠재력을 가진 #y보호석 을 #y제련 합니다."
+    ]
+  },
+  "Runesmith:TimeMachinePower": {
+    "NAME": "웜홀",
+    "DESCRIPTIONS": [
+      "체력 #b",
+      " , #y방어도 #b",
+      " ,#y불꽃 #b",
+      " ,#y대지 #b",
+      " ,#y바다 #b",
+      " 가 저장되었습니다. NL #b",
+      " 턴 후 사라집니다.",
+      " 턴 후 사라집니다."
+    ]
+  },
+  "Runesmith:LastStandPower": {
+    "NAME": "최후의 저항",
+    "DESCRIPTIONS": [
+      "다음 턴 종료 후, ",
+      "턴 종료 후, ",
+      " 모든 적에게 피해를 #b",
+      " 줍니다."
+    ]
+  }
+}
