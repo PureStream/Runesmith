@@ -58,8 +58,10 @@ public class FrozenChisel extends CustomCard {
         );
         AbstractDungeon.actionManager.addToBottom(
                 new ApplyPowerAction(m, p, new SlowPower(m, 0), 0));
-        AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(m, p, new IceColdPower(m, this.magicNumber), this.magicNumber));
+        if (!m.hasPower("Artifact")) {
+            AbstractDungeon.actionManager.addToBottom(
+                    new ApplyPowerAction(m, p, new IceColdPower(m, this.magicNumber), this.magicNumber));
+        }
         AbstractDungeon.actionManager.addToBottom(
                 new ApplyElementsPowerAction(p, p, 0, ELEMENT_AMT, ELEMENT_AMT));
     }
