@@ -71,9 +71,6 @@ public class RunesmithMod implements PostExhaustSubscriber,
     private static final String RUNESMITH_PORTRAIT = "images/character/runesmithPortrait.png";
     public static Color BEIGE = new Color(175f / 255f, 145f / 255f, 100f / 255f, 1f);
 
-    private static final String LOCALIZATION_ENG = "localization/ENG/";
-    private static final String LOCALIZATION_KOR = "localization/KOR/";
-
     private static final String CARD_STRING = "RuneSMod_Cards.json";
     private static final String CHARACTER_STRING = "RuneSMod_Character.json";
     private static final String RELIC_STRING = "RuneSMod_Relics.json";
@@ -133,13 +130,18 @@ public class RunesmithMod implements PostExhaustSubscriber,
         map.put("RUNESMITH_HAMMER", new Sfx("audio/HammerDoubleHit.ogg", false));
     }
 
+    private static String getLocalString(String language) {
+        return String.valueOf(new StringBuilder("localization/").append(language).append("/"));
+    }
+
     @Override
     public void receiveEditStrings() {
         logger.info("start editing strings");
 
         String local, relic, card, character, power, orb, potion, ui, tutorial, event;
 
-        local = LOCALIZATION_ENG;
+        local = getLocalString("ENG");
+        logger.info("Insert ENG Strings");
         card = local + CARD_STRING;
         character = local + CHARACTER_STRING;
         event = local + EVENT_STRING;
@@ -149,29 +151,29 @@ public class RunesmithMod implements PostExhaustSubscriber,
         relic = local + RELIC_STRING;
         tutorial = local + TUTORIAL_STRING;
         ui = local + UI_STRING;
-        logger.info("Insert ENG Strings");
-
         loadStrings(card, character, event, orb, potion, power, relic, tutorial, ui);
 
-        boolean isEng = true;
-        if (Settings.language == Settings.GameLanguage.KOR) {
-            local = LOCALIZATION_KOR;
-            isEng = false;
-            logger.info("Insert KOR Strings");
-        }
-        // else if other languages
+        if (Settings.language != Settings.GameLanguage.ENG) {
+            boolean isFound = false;
+            if (Settings.language == Settings.GameLanguage.KOR) {
+                isFound = true;
+                local = getLocalString("KOR");
+                logger.info("Insert KOR Strings");
+            }
+            // else if other languages
 
-        if (!isEng) {
-            card = local + CARD_STRING;
-            character = local + CHARACTER_STRING;
-            relic = local + RELIC_STRING;
-            power = local + POWER_STRING;
-            orb = local + ORB_STRING;
-            potion = local + POTION_STRING;
-            ui = local + UI_STRING;
-            tutorial = local + TUTORIAL_STRING;
-            event = local + EVENT_STRING;
-            loadStrings(card, character, event, orb, potion, power, relic, tutorial, ui);
+            if (isFound) {
+                card = local + CARD_STRING;
+                character = local + CHARACTER_STRING;
+                relic = local + RELIC_STRING;
+                power = local + POWER_STRING;
+                orb = local + ORB_STRING;
+                potion = local + POTION_STRING;
+                ui = local + UI_STRING;
+                tutorial = local + TUTORIAL_STRING;
+                event = local + EVENT_STRING;
+                loadStrings(card, character, event, orb, potion, power, relic, tutorial, ui);
+            }
         }
 
         logger.info("done editing strings");
@@ -230,20 +232,21 @@ public class RunesmithMod implements PostExhaustSubscriber,
         logger.info("Setting up custom keywords");
 
         String keywordsPath;
-        keywordsPath = LOCALIZATION_ENG + KEYWORD_STRING;
+        keywordsPath = getLocalString("ENG") + KEYWORD_STRING;
 
         loadKeywords(keywordsPath);
 
-        boolean isEng = true;
-        if (Settings.language == Settings.GameLanguage.KOR) {
-            keywordsPath = LOCALIZATION_KOR + KEYWORD_STRING;
-            isEng = false;
+        if (Settings.language != Settings.GameLanguage.ENG) {
+            boolean isFound = false;
+            if (Settings.language == Settings.GameLanguage.KOR){
+                isFound = true;
+                keywordsPath = getLocalString("KOR") + KEYWORD_STRING;
+            }
+            //else if other languages
+
+            if (isFound)
+                loadKeywords(keywordsPath);
         }
-        //else if other languages
-
-        if (!isEng)
-            loadKeywords(keywordsPath);
-
 
         logger.info("Keywords setting finished.");
     }
