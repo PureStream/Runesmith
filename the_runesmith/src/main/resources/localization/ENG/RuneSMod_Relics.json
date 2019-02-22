@@ -31,7 +31,7 @@
     "NAME": "Uranium Anvil",
     "FLAVOR": "This block of metal holds massive amount of energy but weakens anyone who come near it.",
     "DESCRIPTIONS": [
-      " at the start of your turn. #yrunesmith:Downgrade a random card in your deck each turn.",
+      " at the start of your turn. #yrunesmith:Downgrade a random card in your draw pile, hand, or discard pile each turn.",
       "Gain [E]"
     ]
   },
