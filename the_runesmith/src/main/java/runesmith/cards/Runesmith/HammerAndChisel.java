@@ -3,12 +3,14 @@ package runesmith.cards.Runesmith;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import runesmith.RunesmithMod;
 import runesmith.patches.AbstractCardEnum;
 
 import java.util.ArrayList;
@@ -24,7 +26,6 @@ public class HammerAndChisel extends CustomCard {
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
-
     private static final int COST = 2;
 
     public HammerAndChisel() {
@@ -45,18 +46,10 @@ public class HammerAndChisel extends CustomCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        ArrayList<String> hammer = new ArrayList<>();
-        ArrayList<String> chisel = new ArrayList<>();
-        CardLibrary.cards.forEach((key, value) -> {
-            if (value.hasTag(HAMMER))
-                hammer.add(key);
-            if (value.hasTag(CHISEL))
-                chisel.add(key);
-        });
         AbstractCard c1;
         AbstractCard c2;
-        c1 = CardLibrary.cards.get(hammer.get(AbstractDungeon.cardRng.random(0, hammer.size() - 1))).makeCopy();
-        c2 = CardLibrary.cards.get(chisel.get(AbstractDungeon.cardRng.random(0, chisel.size() - 1))).makeCopy();
+        c1 = RunesmithMod.getHammerCards().getRandomCard(AbstractDungeon.cardRandomRng).makeCopy();
+        c2 = RunesmithMod.getChiselCards().getRandomCard(AbstractDungeon.cardRandomRng).makeCopy();
 
         if (this.upgraded) {
             c1.upgrade();

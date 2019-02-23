@@ -21,7 +21,7 @@ public class GrandSlam extends CustomCard {
     private static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
     public static final String IMG_PATH = "images/cards/GrandSlam.png"; //<-------------- need some img
     private static final int COST = 2;
-    private static final int ATTACK_DMG = 13;
+    private static final int ATTACK_DMG = 10;
 
     public GrandSlam() {
         super(

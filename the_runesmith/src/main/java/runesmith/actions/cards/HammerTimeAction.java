@@ -33,6 +33,7 @@ public class HammerTimeAction extends AbstractGameAction {
             List<CardGroup> allCardsGroup = Arrays.asList(p.hand, p.drawPile, p.discardPile);
             allCardsGroup.forEach(cardGroup -> cardGroup.group.stream()
                     .filter(c -> c.hasTag(HAMMER))
+                    .filter(EnhanceCard::canEnhance)
                     .forEach(c -> {
                         EnhanceCard.enhance(c, enhanceNums);
                         if (cardGroup == p.hand)

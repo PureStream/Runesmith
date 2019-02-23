@@ -14,10 +14,12 @@ import com.google.gson.Gson;
 import com.megacrit.cardcrawl.audio.Sfx;
 import com.megacrit.cardcrawl.audio.SoundMaster;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -46,6 +48,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import static runesmith.patches.AbstractCardEnum.RUNESMITH_BEIGE;
+import static runesmith.patches.CardTagEnum.*;
 
 
 @SpireInitializer
@@ -93,6 +96,10 @@ public class RunesmithMod implements PostExhaustSubscriber,
     private static ElementsCounter elementsCounter;
     private static boolean elementalistEnabled = false;
     private static Texture ELEMENTS_GREEN_MASK = ImageMaster.loadImage("images/ui/elements/GMask.png");
+
+    private static CardGroup hammerCards;
+    private static CardGroup chiselCards;
+    private static CardGroup craftCards;
 
     public static final int DEFAULT_MAX_ELEMENTS = 10;
 
@@ -463,12 +470,38 @@ public class RunesmithMod implements PostExhaustSubscriber,
     @Override
     public void receivePostInitialize() {
         this.loadAudio();
+
         elementsCounter = new ElementsCounter(ELEMENTS_GREEN_MASK);
         try{
             initializeElementalist();
         }catch (ClassNotFoundException | NoClassDefFoundError e){
             logger.info("Runesmith | Elementalist not found");
         }
+
+        if(hammerCards == null){
+            hammerCards = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+            chiselCards = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+            CardLibrary.getAllCards().forEach((value) -> {
+                if (value.hasTag(HAMMER))
+                    hammerCards.addToBottom(value);
+                if (value.hasTag(CHISEL))
+                    chiselCards.addToBottom(value);
+                if(value.hasTag(CRAFT))
+                    craftCards.addToBottom(value);
+            });
+        }
+    }
+
+    public static CardGroup getHammerCards(){
+        return hammerCards;
+    }
+
+    public static CardGroup getChiselCards(){
+        return chiselCards;
+    }
+
+    public static CardGroup getCraftCards(){
+        return craftCards;
     }
 
     @SuppressWarnings("")

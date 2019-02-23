@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import runesmith.RunesmithMod;
 import runesmith.actions.ApplyElementsPowerAction;
 import runesmith.patches.AbstractCardEnum;
 
@@ -49,12 +50,12 @@ public class RunicBlueprint extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         //AbstractCard c = AbstractDungeon.returnTrulyRandomCardInCombat(AbstractCard.CardType.).makeCopy();
 
-        ArrayList<String> tmp = CardLibrary.cards.entrySet().stream()
-                .filter(s -> s.getValue().hasTag(CRAFT))
-                .map(Map.Entry::getKey)
-                .collect(Collectors.toCollection(ArrayList::new));
+//        ArrayList<String> tmp = CardLibrary.cards.entrySet().stream()
+//                .filter(s -> s.getValue().hasTag(CRAFT))
+//                .map(Map.Entry::getKey)
+//                .collect(Collectors.toCollection(ArrayList::new));
 
-        AbstractCard cZero = CardLibrary.cards.get(tmp.get(AbstractDungeon.cardRng.random(0, tmp.size() - 1))).makeCopy();
+        AbstractCard cZero = RunesmithMod.getCraftCards().getRandomCard(AbstractDungeon.cardRandomRng).makeCopy();
         cZero.setCostForTurn(0);
         if (cZero instanceof AbstractRunicCard)
             ((AbstractRunicCard) cZero).freeElementOnce = true;
