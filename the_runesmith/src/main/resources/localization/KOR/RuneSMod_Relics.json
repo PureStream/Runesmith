@@ -1,11 +1,4 @@
 {
-  "Blueberries": {
-	"NAME": "블루베리",
-	"FLAVOR": "잊혀진 자가 남기고 간 수수께끼의 베리입니다.",
-	"DESCRIPTIONS": [
-	  "최대 체력을 8 얻습니다."
-	]
-  },
   "Runesmith:BrokenRuby": {
 	"NAME": "부서진 루비",
 	"FLAVOR": "붉은 보석을 닮은 크리스탈입니다. 비록 부서졌지만 희미하나마 에너지가 남아있습니다.",

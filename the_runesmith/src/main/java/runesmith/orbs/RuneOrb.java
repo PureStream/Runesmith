@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
+import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.vfx.combat.OrbFlareEffect;
 import com.megacrit.cardcrawl.vfx.combat.PlasmaOrbActivateEffect;
 import runesmith.powers.ArcReactorPower;
@@ -105,18 +106,15 @@ public abstract class RuneOrb extends AbstractOrb {
         this.description = tmpDesc.replace("{Pot}", this.potential + "");
     }
 
-    public static RuneOrb getRandomRune(boolean useCardRng, int playerPotency){
-        return getRandomRune(useCardRng,playerPotency,false);
+    public static RuneOrb getRandomRune(Random rng, int playerPotency){
+        return getRandomRune(rng,playerPotency,false);
     }
 
-    public static RuneOrb getRandomRune(boolean useCardRng, int playerPotency, boolean noDud) {
+    public static RuneOrb getRandomRune(Random rng, int playerPotency, boolean noDud) {
         int selectedRune;
         int potency;
-        int range = noDud ? 10: 11;
-        if (useCardRng)
-            selectedRune = AbstractDungeon.cardRandomRng.random(range);
-        else
-            selectedRune = MathUtils.random(range);
+        int range = noDud ? 9: 10;
+        selectedRune = rng.random(range);
         switch (selectedRune) {
             case 0:
                 potency = potencyCal(SpiculumRune.basePotency, playerPotency);
@@ -136,17 +134,14 @@ public abstract class RuneOrb extends AbstractOrb {
                 potency = potencyCal(MagmaRune.basePotency, playerPotency);
                 return new MagmaRune(potency);
             case 6:
-                potency = potencyCal(MedicinaeRune.basePotency, playerPotency);
-                return new MedicinaeRune(potency);
-            case 7:
                 potency = potencyCal(PotentiaRune.basePotency, playerPotency);
                 return new PotentiaRune(potency);
-            case 8:
+            case 7:
                 return new PrismaticRune();
-            case 9:
+            case 8:
                 potency = potencyCal(ProtectioRune.basePotency, playerPotency);
                 return new ProtectioRune(potency);
-            case 10:
+            case 9:
                 return new ReservoRune();
         }
         return new DudRune();

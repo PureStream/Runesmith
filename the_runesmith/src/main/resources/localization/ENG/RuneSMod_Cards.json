@@ -236,7 +236,7 @@
   },
   "Runesmith:LastStand": {
     "NAME": "Last Stand",
-    "DESCRIPTION": "runesmith:Downgrade ALL your cards. Lose all runesmith:Elements. At the end of next turn, deal !M! times the number of runesmith:Downgraded cards to ALL enemies. NL Exhaust.",
+    "DESCRIPTION": "runesmith:Downgrade ALL your cards. Lose all runesmith:Elements. At the end of next turn, deal !M! times the number of runesmith:downgraded cards damage to ALL enemies. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       " NL (Deal !D! damage)"
     ]
@@ -269,7 +269,7 @@
   },
   "Runesmith:ArmorUp": {
     "NAME": "Armor Up",
-    "DESCRIPTION": "Gain Block equal to !M! times the number of cards runesmith:Enhanced this combat."
+    "DESCRIPTION": "Gain Block equal to !M! times the number of cards runesmith:enhanced this combat."
   },
   "Runesmith:Border Wall": {
     "NAME": "Border Wall",
@@ -293,7 +293,7 @@
   },
   "Runesmith:Rearm": {
     "NAME": "Rearm",
-    "DESCRIPTION": "Shuffle all upgraded or runesmith:Enhanced cards from your discard pile into your draw pile.  NL Draw !M! cards."
+    "DESCRIPTION": "Shuffle all upgraded or runesmith:enhanced cards from your discard pile into your draw pile.  NL Draw !M! cards."
   },
   "Runesmith:UnlimitedPower": {
     "NAME": "Unlimited Power",
@@ -418,7 +418,8 @@
   },
   "Runesmith:TimeTravel": {
     "NAME": "Time Travel",
-    "DESCRIPTION": "Set your current HP, Block, and runesmith:Elements to the saved values. NL Exhaust."
+    "DESCRIPTION": "Ethereal. Set your current HP, Block, and runesmith:Elements to the saved values. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Set your current HP, Block, and runesmith:Elements to the saved values. NL Exhaust."
   },
   "Runesmith:Electrocute": {
     "NAME": "Electrocute",

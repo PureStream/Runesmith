@@ -3,13 +3,17 @@ package runesmith.cards.Runesmith;
 import basemod.abstracts.CustomCard;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.graphics.g2d.GlyphLayout;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.ExceptionHandler;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -40,11 +44,9 @@ public abstract class AbstractRunicCard extends CustomCard {
     private Logger logger = LogManager.getLogger(RunesmithMod.class.getName());
 
     private Color renderColor = Color.WHITE.cpy();
-    private static Texture craftableTab = ImageMaster.loadImage("images/cardui/512/craftable_tag.png");
-
-//	public void triggerWhenDrawn() {
-//		this.upgradePotency(0);
-//	}
+    private Color textColor =  Settings.CREAM_COLOR.cpy();
+    private static Texture craftableTab = ImageMaster.loadImage("images/cardui/512/craftable_tag_blank.png");
+    private static String[] craftableString = CardCrawlGame.languagePack.getUIString("Runesmith:Craftable").TEXT;
 
     @Override
     public void applyPowers() {
@@ -198,6 +200,13 @@ public abstract class AbstractRunicCard extends CustomCard {
         if (AbstractDungeon.player != null) {
             if (this.isCraftable && this.renderCraftable) {
                 this.renderHelper(sb, this.renderColor, craftableTab, drawX, drawY);
+                BitmapFont font = FontHelper.menuBannerFont;
+                font.getData().setScale(1.0F);
+                GlyphLayout gl = new GlyphLayout(font, craftableString[0]);
+                float scale = Math.min((82.0F*this.drawScale)/gl.width, (15.0F*this.drawScale)/gl.height);
+                FontHelper.menuBannerFont.getData().setScale(scale);
+                FontHelper.renderRotatedText(sb, FontHelper.menuBannerFont, craftableString[0], this.current_x, this.current_y, 0.0F, 429.0F * Settings.scale * this.drawScale / 2.0F, this.angle, true, this.textColor);
+                FontHelper.menuBannerFont.getData().setScale(1.0F);
             }
         }
     }

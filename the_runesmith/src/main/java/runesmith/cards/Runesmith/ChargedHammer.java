@@ -129,7 +129,7 @@ public class ChargedHammer extends CustomCard {
                     if (p.hasPower(PotentialPower.POWER_ID))
                         playerPot = p.getPower(PotentialPower.POWER_ID).amount;
                     AbstractDungeon.actionManager.addToBottom(new BreakRuneAction(r));
-                    AbstractDungeon.actionManager.addToBottom(new RuneChannelAction(RuneOrb.getRandomRune(true, playerPot, true)));
+                    AbstractDungeon.actionManager.addToBottom(new RuneChannelAction(RuneOrb.getRandomRune(AbstractDungeon.cardRandomRng, playerPot, true)));
                 }
             }
         }

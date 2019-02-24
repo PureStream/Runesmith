@@ -1,11 +1,4 @@
 {
-  "Blueberries": {
-    "NAME": "Blueberries",
-    "FLAVOR": "A mysterious berries left by the forgotten one.",
-    "DESCRIPTIONS": [
-      "Gain 8 max HP."
-    ]
-  },
   "Runesmith:BrokenRuby": {
     "NAME": "Broken Ruby",
     "FLAVOR": "A crystal that resembles a red gem. Although it is broken, faint energy still remains.",
@@ -53,7 +46,7 @@
     "NAME": "Emergency Provisions",
     "FLAVOR": "A self-contained, individual field ration in lightweight packaging.",
     "DESCRIPTIONS": [
-      "Every time you play a Craft card, gain #b1 random runesmith:Element."
+      "Every time you play a Craft card, gain #b1 random #yrunesmith:Element."
     ]
   },
   "Runesmith:PocketReactor": {

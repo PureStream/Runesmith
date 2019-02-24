@@ -59,11 +59,11 @@ public class ChaoticBlast extends AbstractRunicCard {
 
         if (!this.upgraded) {
             if (checkElements(this.magicNumber, this.magicNumber, this.magicNumber, false, false, true))
-                AbstractDungeon.actionManager.addToBottom(new RuneChannelAction(RuneOrb.getRandomRune(true, playerPot)));
+                AbstractDungeon.actionManager.addToBottom(new RuneChannelAction(RuneOrb.getRandomRune(AbstractDungeon.cardRandomRng, playerPot)));
         } else {
             if (checkElements(this.magicNumber, this.magicNumber, this.magicNumber, false, false, true)) {
-                AbstractDungeon.actionManager.addToBottom(new RuneChannelAction(RuneOrb.getRandomRune(true, playerPot)));
-                AbstractDungeon.actionManager.addToBottom(new RuneChannelAction(RuneOrb.getRandomRune(true, playerPot)));
+                AbstractDungeon.actionManager.addToBottom(new RuneChannelAction(RuneOrb.getRandomRune(AbstractDungeon.cardRandomRng, playerPot)));
+                AbstractDungeon.actionManager.addToBottom(new RuneChannelAction(RuneOrb.getRandomRune(AbstractDungeon.cardRandomRng, playerPot)));
             }
         }
 
