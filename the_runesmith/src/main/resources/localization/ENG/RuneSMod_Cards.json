@@ -409,8 +409,8 @@
   },
   "Runesmith:TimeMachine": {
     "NAME": "Time Machine",
-    "DESCRIPTION": "Save your current HP, Block, and runesmith:Elements for !M! turns. NL Add a Time Travel card into your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Save your current HP, Block, and runesmith:Elements for !M! turns. NL Add a Time Travel card into your hand. NL Exhaust."
+    "DESCRIPTION": "Ethereal. NL Save your current HP, Block, and runesmith:Elements. NL Add a Time Travel card to the bottom of your draw pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Save your current HP, Block, and runesmith:Elements. NL Add a Time Travel card to the bottom of your draw pile. NL Exhaust."
   },
   "Runesmith:TimeTravel_old": {
     "NAME": "Time Travel",
@@ -418,7 +418,7 @@
   },
   "Runesmith:TimeTravel": {
     "NAME": "Time Travel",
-    "DESCRIPTION": "Ethereal. Set your current HP, Block, and runesmith:Elements to the saved values. NL Exhaust.",
+    "DESCRIPTION": "Ethereal. NL Set your current HP, Block, and runesmith:Elements to the saved values. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Set your current HP, Block, and runesmith:Elements to the saved values. NL Exhaust."
   },
   "Runesmith:Electrocute": {

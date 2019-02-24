@@ -160,7 +160,8 @@
       " #yBlock, #b",
       " #yIgnis, #b",
       " #yTerra, #b",
-      " #yAqua. NL Expires in #b",
+      " #yAqua.",
+      " NL Expires in #b",
       " turn.",
       " turns."
     ]

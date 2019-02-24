@@ -18,54 +18,53 @@ public class TimeMachinePower extends AbstractPower {
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
     private int health, block, ignis, terra, aqua;
 
-    public TimeMachinePower(AbstractCreature owner, int health, int block, int ignis, int terra, int aqua, int turns) {
+    public TimeMachinePower(AbstractCreature owner, int health, int block, int ignis, int terra, int aqua) {
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = owner;
         this.type = PowerType.BUFF;
-        this.amount = turns;
+//        this.amount = turns;
         this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/TimeMachine.png"), 0, 0, 84, 84);
         this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/TimeMachineSmall.png"), 0, 0, 32, 32);
-        this.setValues(health, block, ignis, terra, aqua, turns);
+        this.setValues(health, block, ignis, terra, aqua);
         updateDescription();
     }
 
     public void stackPower(int stackAmount) {
-        this.fontScale = 8.0F;
-        this.amount += stackAmount;
-        if (this.amount <= 0) {
-            AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this.POWER_ID));
-        }
+//        this.fontScale = 8.0F;
+//        this.amount += stackAmount;
+//        if (this.amount <= 0) {
+//            AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
+//        }
     }
 
     public void atEndOfTurn(boolean isPlayer) {
-        if (isPlayer) {
-            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, this.POWER_ID, 1));
-        }
+//        if (isPlayer) {
+//            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, POWER_ID, 1));
+//        }
     }
 
     public void updateDescription() {
         if (this.amount == 1) {
             this.description = DESCRIPTIONS[0] + this.health + DESCRIPTIONS[1] + this.block + DESCRIPTIONS[2] + this.ignis +
-                    DESCRIPTIONS[3] + this.terra + DESCRIPTIONS[4] + this.aqua + DESCRIPTIONS[5] + this.amount + DESCRIPTIONS[6];
+                    DESCRIPTIONS[3] + this.terra + DESCRIPTIONS[4] + this.aqua + DESCRIPTIONS[5];
         } else {
             this.description = DESCRIPTIONS[0] + this.health + DESCRIPTIONS[1] + this.block + DESCRIPTIONS[2] + this.ignis +
-                    DESCRIPTIONS[3] + this.terra + DESCRIPTIONS[4] + this.aqua + DESCRIPTIONS[5] + this.amount + DESCRIPTIONS[7];
+                    DESCRIPTIONS[3] + this.terra + DESCRIPTIONS[4] + this.aqua + DESCRIPTIONS[5];
         }
     }
 
     public int[] getValues() {
-        int intArr[] = {this.health, this.block, this.ignis, this.terra, this.aqua};
-        return intArr;
+        return new int[]{this.health, this.block, this.ignis, this.terra, this.aqua};
     }
 
-    public void setValues(int health, int block, int ignis, int terra, int aqua, int amount) {
+    public void setValues(int health, int block, int ignis, int terra, int aqua) {
         this.health = health;
         this.block = block;
         this.ignis = ignis;
         this.terra = terra;
         this.aqua = aqua;
-        this.amount = amount;
+//        this.amount = amount;
         updateDescription();
         this.flash();
     }

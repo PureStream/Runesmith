@@ -29,7 +29,7 @@ public class PotentiaRune extends RuneOrb {
 
     @Override
     public void onRemove() {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PotentialPower(p, -potential), -potential));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PotentialPower(p, -(potential>999?999:potential)), -(potential>999?999:potential)));
     }
 
     @Override

@@ -3,6 +3,7 @@ package runesmith.cards.Runesmith;
 import basemod.abstracts.CustomCard;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -14,6 +15,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.screens.SingleCardViewPopup;
+import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToDrawPileEffect;
 import runesmith.patches.AbstractCardEnum;
 import runesmith.powers.TimeMachinePower;
 
@@ -24,7 +26,7 @@ public class TimeMachine extends CustomCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("Runesmith:TimeMachine");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-//	public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+	public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
     private static final int COST = 3;
     private static final int TURNS = 5;
@@ -47,6 +49,7 @@ public class TimeMachine extends CustomCard {
                 AbstractCard.CardTarget.SELF
         );
         this.exhaust = true;
+        this.isEthereal = true;
         this.baseMagicNumber = this.magicNumber = TURNS;
     }
 
@@ -61,12 +64,12 @@ public class TimeMachine extends CustomCard {
         if (p.hasPower("Runesmith:TimeMachinePower")) {
             AbstractPower pow = p.getPower("Runesmith:TimeMachinePower");
             if (pow instanceof TimeMachinePower) {
-                ((TimeMachinePower) pow).setValues(health, block, ignis, terra, aqua, this.magicNumber);
+                ((TimeMachinePower) pow).setValues(health, block, ignis, terra, aqua);
             }
         } else {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new TimeMachinePower(p, health, block, ignis, terra, aqua, this.magicNumber)));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new TimeMachinePower(p, health, block, ignis, terra, aqua)));
         }
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new TimeTravel()));
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new TimeTravel(), 1, false, true,true));
     }
 
     @Override
@@ -131,7 +134,10 @@ public class TimeMachine extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
+            this.rawDescription = UPGRADE_DESCRIPTION;
+            this.isEthereal = false;
             upgradeMagicNumber(UPGRADE_TURNS);
+            this.initializeDescription();
         }
     }
 

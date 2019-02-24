@@ -45,7 +45,7 @@ public class TimeTravel extends CustomCard {
                 AbstractCard.CardRarity.SPECIAL,
                 AbstractCard.CardTarget.SELF
         );
-
+        this.isEthereal = true;
         this.exhaust = true;
     }
 
@@ -124,7 +124,10 @@ public class TimeTravel extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBaseCost(UPG_COST);
+            this.isEthereal = false;
+            this.rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
+//            upgradeBaseCost(UPG_COST);
         }
     }
 
