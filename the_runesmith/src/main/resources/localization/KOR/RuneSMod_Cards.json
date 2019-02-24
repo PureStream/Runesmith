@@ -406,19 +406,20 @@
     "NAME": "Time Machine",
     "DESCRIPTION": "Save your current HP, Block, and runesmith:Elements. NL Add a Time Travel card to your hand. NL 소멸.",
     "UPGRADE_DESCRIPTION": "Save your current HP, Block, and runesmith:Elements. NL Add an upgraded Time Travel card to your hand. NL 선천성. NL 소멸."
-  },
+ },
   "Runesmith:TimeMachine": {
-    "NAME": "타임 머신",
-    "DESCRIPTION": "현재의 체력, 방어도, runesmith:원소 를 !M! 턴 동안 기억합니다. NL 시간 여행 카드를 손에 가져옵니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "선천성. NL 현재의 체력, 방어도, runesmith:원소 를 !M! 턴 동안 기억합니다. NL 시간 여행 카드를 손에 가져옵니다. NL 소멸."
+    "NAME": "타임머신",
+    "DESCRIPTION": "휘발성. NL 현재 체력, 방어도, runesmith:원소 를 저장합니다. NL 시간 여행 카드를 1장 뽑을 카드 더미 맨 아랫쪽에 넣습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "현재 체력, 방어도, runesmith:원소 를 저장합니다. NL 시간 여행 카드를 1장 뽑을 카드 더미 맨 아랫쪽에 넣습니다. NL 소멸."
   },
   "Runesmith:TimeTravel_old": {
     "NAME": "Time Travel",
     "DESCRIPTION": "Set your current HP, Block, and runesmith:Elements to the saved values. NL Purge."
-  },
+    },
   "Runesmith:TimeTravel": {
     "NAME": "시간 여행",
-    "DESCRIPTION": "체력, 방어도, runesmith:원소 를 타임 머신으로 기억한 때로 되돌립니다. NL 소멸."
+    "DESCRIPTION": "휘발성. NL 체력, 방어도, runesmith:원소 를 타임 머신 카드로 저장한 수치로 되돌립니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "체력, 방어도, runesmith:원소 를 타임 머신 카드로 저장한 수치로 되돌립니다. NL 소멸."
   },
   "Runesmith:Electrocute": {
     "NAME": "전기의자",
