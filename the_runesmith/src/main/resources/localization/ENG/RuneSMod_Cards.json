@@ -347,7 +347,7 @@
   "Runesmith:PoweredAnvil": {
     "NAME": "Powered Anvil",
     "DESCRIPTION": "Whenever you runesmith:Enhance a card, runesmith:Enhance it 1 additional time.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you runesmith:Enhance a card, runesmith:Enhance it 1 additional time."
+    "UPGRADE_DESCRIPTION": "Whenever you runesmith:Enhance a card, runesmith:Enhance it 1 additional time. NL Enhance a card in your hand."
   },
   "Runesmith:Malloc": {
     "NAME": "Malloc",

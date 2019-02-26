@@ -32,9 +32,9 @@ public class PotentialDownPower extends AbstractPower {
     public void stackPower(int stackAmount) {
         this.fontScale = 8.0F;
         this.amount += stackAmount;
-        if (this.amount > AMOUNT_CAP) {
-            this.amount = AMOUNT_CAP;
-        }
+//        if (this.amount > AMOUNT_CAP) {
+//            this.amount = AMOUNT_CAP;
+//        }
     }
 
     public void atEndOfTurn(boolean isPlayer) {

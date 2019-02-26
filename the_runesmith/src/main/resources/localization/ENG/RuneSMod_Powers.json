@@ -99,8 +99,8 @@
   "Runesmith:PotentialDownPower": {
     "NAME": "Potential Down",
     "DESCRIPTIONS": [
-      "Lose #b",
-      " #yPotential at the end of your turn."
+      "At the end of this turn, lose #b",
+      " #yPotential."
     ]
   },
   "Runesmith:MetallurgicalResearchPower": {

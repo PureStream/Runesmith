@@ -83,9 +83,9 @@ public abstract class AbstractRunicCard extends CustomCard {
     private int getPotentialPowerValue() {
         AbstractPlayer p = AbstractDungeon.player;
         if (p != null) {
-            if (p.hasPower("Runesmith:PotentialPower")) {
-                PotentialPower pPower = (PotentialPower) p.getPower("Runesmith:PotentialPower");
-                return (pPower.onVictory) ? 0 : pPower.amount;
+            if (p.hasPower(PotentialPower.POWER_ID)) {
+                PotentialPower pPower = (PotentialPower) p.getPower(PotentialPower.POWER_ID);
+                return pPower.amount;
             }
         }
         return 0;

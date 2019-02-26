@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import runesmith.actions.cards.FortifyAction;
 import runesmith.patches.AbstractCardEnum;
 import runesmith.powers.PoweredAnvilPower;
 
@@ -36,8 +37,11 @@ public class PoweredAnvil extends CustomCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (!p.hasPower("PoweredAnvilPower"))
-            AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p,
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
                     new PoweredAnvilPower(p, 1), 1));
+        if(this.upgraded){
+            AbstractDungeon.actionManager.addToBottom(new FortifyAction(true));
+        }
     }
 
     public AbstractCard makeCopy() {
@@ -47,7 +51,7 @@ public class PoweredAnvil extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            this.isInnate = true;
+//            this.isInnate = true;
             this.rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }

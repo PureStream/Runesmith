@@ -17,14 +17,16 @@ public class PotentialPower extends AbstractPower {
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    public boolean onVictory = false;
     private static final int AMOUNT_CAP = 999;
+
+    private int trueAmount;
 
     public PotentialPower(AbstractCreature owner, int amount) {
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = owner;
         this.amount = amount;
+        this.trueAmount = amount;
         this.canGoNegative = true;
         this.priority = 3;
         updateDescription();
@@ -34,45 +36,50 @@ public class PotentialPower extends AbstractPower {
 
     public void stackPower(int stackAmount) {
         this.fontScale = 8.0F;
-        this.amount += stackAmount;
-        if (this.amount == 0) {
+        this.trueAmount += stackAmount;
+        if (this.trueAmount == 0) {
+//            this.amount = 0;
             AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this));
-        } else if (this.amount > AMOUNT_CAP) {
+        } else if (this.trueAmount > AMOUNT_CAP) {
             this.amount = AMOUNT_CAP;
-        } else if (this.amount < -AMOUNT_CAP) {
+        } else if (this.trueAmount < -AMOUNT_CAP) {
             this.amount = -AMOUNT_CAP;
+        } else {
+            this.amount = this.trueAmount;
         }
-        updatePotentialEffects();
+//        updatePotentialEffects();
     }
 
     public void reducePower(int reduceAmount) {
         this.fontScale = 8.0F;
-        this.amount -= reduceAmount;
-        if (this.amount == 0) {
+        this.trueAmount -= reduceAmount;
+        if (this.trueAmount == 0) {
             AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+        }else if (this.trueAmount < AMOUNT_CAP){
+            this.amount = -AMOUNT_CAP;
         }
-        updatePotentialEffects();
+//        updatePotentialEffects();
     }
 
-    public void onInitialApplication() {
-        updatePotentialEffects();
-    }
+//    public void onInitialApplication() {
+//        updatePotentialEffects();
+//    }
 
-    public void onDrawOrDiscard() {
-        updatePotentialEffects();
-    }
-	
+//    public void onDrawOrDiscard() {
+//        updatePotentialEffects();
+//    }
+
 	/*public void onAfterUseCard(AbstractCard card, UseCardAction action) {
 		updatePotencialEffects();
 	}*/
 
-    private void updatePotentialEffects() {
-        for (AbstractCard c : AbstractDungeon.player.hand.group) {
-            if (c instanceof AbstractRunicCard) {
-                ((AbstractRunicCard) c).upgradePotency(0);
-            }
-        }
-    }
+//    private void updatePotentialEffects() {
+//        for (AbstractCard c : AbstractDungeon.player.hand.group) {
+//            if (c instanceof AbstractRunicCard) {
+//                ((AbstractRunicCard) c).upgradePotency(0);
+//            }
+//        }
+//    }
 
     public void updateDescription() {
         if (this.amount > 0) {
@@ -80,11 +87,6 @@ public class PotentialPower extends AbstractPower {
         } else {
             this.description = (DESCRIPTIONS[1] + -this.amount + DESCRIPTIONS[2]);
         }
-    }
-
-    public void onVictory() {
-        onVictory = true;
-//		AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this));
     }
 
 }
