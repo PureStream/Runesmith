@@ -1,0 +1,81 @@
+{
+  "Runesmith:FortifyAction": {
+    "TEXT": [
+      "强化"
+    ]
+  },
+  "Runesmith:DowngradeAction": {
+    "TEXT": [
+      "降级"
+    ]
+  },
+  "Runesmith:StasisAction": {
+    "TEXT": [
+      "凝滞"
+    ]
+  },
+  "Runesmith:CardEnhanced": {
+    "TEXT": [
+      "强化"
+    ]
+  },
+  "Runesmith:CardStasis": {
+    "TEXT": [
+      "凝滞"
+    ]
+  },
+  "Runesmith:DoubleUpAction": {
+    "TEXT": [
+      "升级和强化"
+    ]
+  },
+  "Runesmith:FlexTapeAction": {
+    "TEXT": [
+      "凝滞"
+    ]
+  },
+  "Runesmith:StasisCardInDeckAction": {
+    "TEXT": [
+      "凝滞一张牌"
+    ]
+  },
+  "Runesmith:IgnisElement": {
+    "TEXT": [
+      "火素",
+      "你目前的 火素 数量 NL 不够 打造 一个符文。"
+    ]
+  },
+  "Runesmith:TerraElement": {
+    "TEXT": [
+      "土素",
+      "你目前的 土素 数量 NL 不够 打造 一个符文。"
+    ]
+  },
+  "Runesmith:AquaElement": {
+    "TEXT": [
+      "水素",
+      "你目前的 水素 数量 NL 不够 打造 一个符文。"
+    ]
+  },
+  "Runesmith:ConstructBifrost": {
+    "TEXT": [
+      "棱镜",
+      "棱镜+",
+      "符文: 每回合给予你一个随机角色牌。",
+      "符文: 每回合给予你一个已 升级 的随机角色牌。"
+    ]
+  },
+  "Runesmith:CraftReservo": {
+    "TEXT": [
+      "保留",
+      "保留+",
+      "符文: #y保留 1 张牌。",
+      "符文: #y保留 2 张牌。"
+    ]
+  },
+  "Runesmith:Craftable": {
+    "TEXT": [
+      "可打造"
+    ]
+  }
+}

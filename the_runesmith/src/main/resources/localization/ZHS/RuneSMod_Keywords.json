@@ -1,0 +1,161 @@
+{
+  "keywords": [
+    {
+      "PROPER_NAME": "强化",
+      "NAMES": [
+        "强化"
+      ],
+      "DESCRIPTION": "提升一张牌的 #b50% 的 伤害，格挡 和 动能 。可叠加。 #y强化 效果被打出后失效。"
+    },
+    {
+      "PROPER_NAME": "降级",
+      "NAMES": [
+        "降级"
+      ],
+      "DESCRIPTION": "降低已 升级 的牌 1 级并失效所有的 强化 或 凝滞 一张牌。"
+    },
+    {
+      "PROPER_NAME": "凝滞",
+      "NAMES": [
+        "凝滞"
+      ],
+      "DESCRIPTION": " 弃牌 而不是 消耗 。 NL 不能叠加。"
+    },
+    {
+      "PROPER_NAME": "动能",
+      "NAMES": [
+        "动能"
+      ],
+      "DESCRIPTION": "动能是一种符文被 打造 出来时自带的能量 。"
+    },
+    {
+      "PROPER_NAME": "打造",
+      "NAMES": [
+        "打造"
+      ],
+      "DESCRIPTION": "用 元素 制作一个符文。 如果符文不能被打造， 则获得等量的 元素 。你不能同时拥有超过 7 个符文。"
+    },
+    {
+      "PROPER_NAME": "元素",
+      "NAMES": [
+        "元素",
+        "火素",
+        "土素",
+        "水素"
+      ],
+      "DESCRIPTION": " 元素(火素, 水素和土素) 是用来 打造 符文 或另有他用。"
+    },
+    {
+      "PROPER_NAME": "凋亡",
+      "NAMES": [
+        "凋亡"
+      ],
+      "DESCRIPTION": "摧毁一个符文并 激发 两次。 Power-based effects 将会在下个回合开始前结束"
+    },
+    {
+      "PROPER_NAME": "火焰",
+      "NAMES": [
+        "火焰"
+      ],
+      "DESCRIPTION": "符文: 对所有敌人造成伤害。"
+    },
+    {
+      "PROPER_NAME": "火石",
+      "NAMES": [
+        "火石"
+      ],
+      "DESCRIPTION": "符文: 对随机敌人造成伤害。"
+    },
+    {
+      "PROPER_NAME": "保护",
+      "NAMES": [
+        "保护"
+      ],
+      "DESCRIPTION": "符文：获得 格挡 。"
+    },
+    {
+      "PROPER_NAME": "保留",
+      "NAMES": [
+        "保留"
+      ],
+      "DESCRIPTION": "符文: 保留 一张牌。"
+    },
+    {
+      "PROPER_NAME": "保留+",
+      "NAMES": [
+        "保留+"
+      ],
+      "DESCRIPTION": "符文: 保留 两张牌。"
+    },
+    {
+      "PROPER_NAME": "倒钩",
+      "NAMES": [
+        "倒钩"
+      ],
+      "DESCRIPTION": "符文: 获得 荆棘 。"
+    },
+    {
+      "PROPER_NAME": "动力",
+      "NAMES": [
+        "动力"
+      ],
+      "DESCRIPTION": "符文： 获得 动能 。"
+    },
+    {
+      "PROPER_NAME": "钢铁",
+      "NAMES": [
+        "钢铁"
+      ],
+      "DESCRIPTION": "符文: 变更你的多重护甲不低于你的 动能 。"
+    },
+    {
+      "PROPER_NAME": "棱镜",
+      "NAMES": [
+        "棱镜"
+      ],
+      "DESCRIPTION": "符文: 每回合给随机一个角色牌。"
+    },
+    {
+      "PROPER_NAME": "棱镜+",
+      "NAMES": [
+        "棱镜+"
+      ],
+      "DESCRIPTION": "符文: 每回合给随机已 升级 的一个角色牌。"
+    },
+    {
+      "PROPER_NAME": "工业",
+      "NAMES": [
+        "工业"
+      ],
+      "DESCRIPTION": "符文: 每回合开始时获得 [E] 。"
+    },
+    {
+      "PROPER_NAME": "医疗",
+      "NAMES": [
+        "医疗"
+      ],
+      "DESCRIPTION": "符文: 凋亡时治疗。"
+    },
+    {
+      "PROPER_NAME": "空白",
+      "NAMES": [
+        "空白"
+      ],
+      "DESCRIPTION": "符文: 没有效果。"
+    },
+    {
+      "PROPER_NAME": "岩浆",
+      "NAMES": [
+        "岩浆"
+      ],
+      "DESCRIPTION": "符文: 对随机敌人造成伤害并获得 格挡 "
+    },
+    {
+      "PROPER_NAME": "时间旅行",
+      "NAMES": [
+        "时间旅行"
+      ],
+      "DESCRIPTION": "保存你当前的 生命 ， 格挡 和 元素 数值。"
+    }
+  ]
+}

@@ -9,6 +9,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.utils.GdxRuntimeException;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.audio.Sfx;
@@ -161,15 +162,10 @@ public class RunesmithMod implements PostExhaustSubscriber,
         loadStrings(card, character, event, orb, potion, power, relic, tutorial, ui);
 
         if (Settings.language != Settings.GameLanguage.ENG) {
-            boolean isFound = false;
-            if (Settings.language == Settings.GameLanguage.KOR) {
-                isFound = true;
-                local = getLocalString("KOR");
-                logger.info("Insert KOR Strings");
-            }
-            // else if other languages
-
-            if (isFound) {
+            String language = Settings.language.name();
+            logger.info("Insert " + language +" Strings");
+            try {
+                local = getLocalString(language);
                 card = local + CARD_STRING;
                 character = local + CHARACTER_STRING;
                 relic = local + RELIC_STRING;
@@ -180,6 +176,8 @@ public class RunesmithMod implements PostExhaustSubscriber,
                 tutorial = local + TUTORIAL_STRING;
                 event = local + EVENT_STRING;
                 loadStrings(card, character, event, orb, potion, power, relic, tutorial, ui);
+            } catch (GdxRuntimeException e) {
+                logger.info(language + " json files not found.");
             }
         }
 
@@ -244,15 +242,13 @@ public class RunesmithMod implements PostExhaustSubscriber,
         loadKeywords(keywordsPath);
 
         if (Settings.language != Settings.GameLanguage.ENG) {
-            boolean isFound = false;
-            if (Settings.language == Settings.GameLanguage.KOR){
-                isFound = true;
-                keywordsPath = getLocalString("KOR") + KEYWORD_STRING;
-            }
-            //else if other languages
-
-            if (isFound)
+            String language = Settings.language.name();
+            try {
+                keywordsPath = getLocalString(language) + KEYWORD_STRING;
                 loadKeywords(keywordsPath);
+            } catch (GdxRuntimeException e) {
+                logger.info(language + " keywords not found.");
+            }
         }
 
         logger.info("Keywords setting finished.");
