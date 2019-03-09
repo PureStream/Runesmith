@@ -76,16 +76,16 @@ public class RunesmithMod implements PostExhaustSubscriber,
     private static final String RUNESMITH_PORTRAIT = "images/character/runesmithPortrait.png";
     public static Color BEIGE = new Color(175f / 255f, 145f / 255f, 100f / 255f, 1f);
 
-    private static final String CARD_STRING = "RuneSMod_Cards.json";
-    private static final String CHARACTER_STRING = "RuneSMod_Character.json";
-    private static final String RELIC_STRING = "RuneSMod_Relics.json";
-    private static final String POWER_STRING = "RuneSMod_Powers.json";
-    private static final String ORB_STRING = "RuneSMod_Orbs.json";
-    private static final String POTION_STRING = "RuneSMod_Potions.json";
-    private static final String UI_STRING = "RuneSMod_UI.json";
-    private static final String TUTORIAL_STRING = "RuneSMod_Tutorials.json";
-    private static final String KEYWORD_STRING = "RuneSMod_Keywords.json";
-    private static final String EVENT_STRING = "RuneSMod_Events.json";
+    private static final String CARD_STRING = "localization/%s/RuneSMod_Cards.json";
+    private static final String CHARACTER_STRING = "localization/%s/RuneSMod_Character.json";
+    private static final String RELIC_STRING = "localization/%s/RuneSMod_Relics.json";
+    private static final String POWER_STRING = "localization/%s/RuneSMod_Powers.json";
+    private static final String ORB_STRING = "localization/%s/RuneSMod_Orbs.json";
+    private static final String POTION_STRING = "localization/%s/RuneSMod_Potions.json";
+    private static final String UI_STRING = "localization/%s/RuneSMod_UI.json";
+    private static final String TUTORIAL_STRING = "localization/%s/RuneSMod_Tutorials.json";
+    private static final String KEYWORD_STRING = "localization/%s/RuneSMod_Keywords.json";
+    private static final String EVENT_STRING = "localization/%s/RuneSMod_Events.json";
 
     private List<AbstractCard> cardsToAdd = new ArrayList<>();
     private List<CustomRelic> relicsToAddOnlyThisClass = new ArrayList<>();
@@ -143,10 +143,6 @@ public class RunesmithMod implements PostExhaustSubscriber,
         map.put("RUNESMITH_HAMMER", new Sfx("audio/HammerDoubleHit.ogg", false));
     }
 
-    private static String getLocalString(String language) {
-        return String.valueOf(new StringBuilder("localization/").append(language).append("/"));
-    }
-
     @Override
     public void receiveEditStrings() {
         logger.info("start editing strings");
@@ -164,34 +160,15 @@ public class RunesmithMod implements PostExhaustSubscriber,
     }
 
     private static void loadStrings(String lang) {
-        String relicStrings, cardStrings, characterStrings, powerStrings, orbStrings, potionStrings, uiStrings, eventStrings, tutorialStrings;
-        String local = getLocalString(lang);
-        relicStrings = loadJson(local+RELIC_STRING);
-        BaseMod.loadCustomStrings(RelicStrings.class, relicStrings);
-
-        cardStrings = loadJson(local+CARD_STRING);
-        BaseMod.loadCustomStrings(CardStrings.class, cardStrings);
-
-        characterStrings = loadJson(local+CHARACTER_STRING);
-        BaseMod.loadCustomStrings(CharacterStrings.class, characterStrings);
-
-        powerStrings = loadJson(local+POWER_STRING);
-        BaseMod.loadCustomStrings(PowerStrings.class, powerStrings);
-
-        orbStrings = loadJson(local+ORB_STRING);
-        BaseMod.loadCustomStrings(OrbStrings.class, orbStrings);
-
-        potionStrings = loadJson(local+POTION_STRING);
-        BaseMod.loadCustomStrings(PotionStrings.class, potionStrings);
-
-        uiStrings = loadJson(local+UI_STRING);
-        BaseMod.loadCustomStrings(UIStrings.class, uiStrings);
-
-        tutorialStrings = loadJson(local+TUTORIAL_STRING);
-        BaseMod.loadCustomStrings(TutorialStrings.class, tutorialStrings);
-
-        eventStrings = loadJson(local+EVENT_STRING);
-        BaseMod.loadCustomStrings(EventStrings.class, eventStrings);
+        BaseMod.loadCustomStringsFile(RelicStrings.class, String.format(RELIC_STRING, lang));
+        BaseMod.loadCustomStringsFile(CardStrings.class, String.format(CARD_STRING, lang));
+        BaseMod.loadCustomStringsFile(CharacterStrings.class, String.format(CHARACTER_STRING, lang));
+        BaseMod.loadCustomStringsFile(PowerStrings.class, String.format(POWER_STRING, lang));
+        BaseMod.loadCustomStringsFile(OrbStrings.class, String.format(ORB_STRING, lang));
+        BaseMod.loadCustomStringsFile(PotionStrings.class, String.format(POTION_STRING, lang));
+        BaseMod.loadCustomStringsFile(UIStrings.class, String.format(UI_STRING, lang));
+        BaseMod.loadCustomStringsFile(TutorialStrings.class, String.format(TUTORIAL_STRING, lang));
+        BaseMod.loadCustomStringsFile(EventStrings.class, String.format(EVENT_STRING, lang));
     }
 
     @Override
@@ -210,7 +187,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
 
     private static void loadKeywords(String lang) {
         Gson gson = new Gson();
-        Keywords keywords = gson.fromJson(loadJson(getLocalString(lang)+KEYWORD_STRING), Keywords.class);
+        Keywords keywords = gson.fromJson(loadJson(String.format(KEYWORD_STRING, lang)), Keywords.class);
         Arrays.stream(keywords.keywords).forEach(key -> {
             logger.info("Loading keyword : " + key.PROPER_NAME);
             BaseMod.addKeyword("runesmith", key.PROPER_NAME, key.NAMES, key.DESCRIPTION);
