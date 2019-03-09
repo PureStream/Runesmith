@@ -421,11 +421,8 @@ public class RunesmithMod implements PostExhaustSubscriber,
         this.loadAudio();
 
         elementsCounter = new ElementsCounter(ELEMENTS_GREEN_MASK);
-        try {
-            initializeElementalist();
-        } catch (NoClassDefFoundError e){
-            logger.info("Runesmith | Elementalist not found");
-        }
+
+        initializeElementalist();
 
         if(hammerCards == null){
             hammerCards = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
@@ -454,12 +451,12 @@ public class RunesmithMod implements PostExhaustSubscriber,
         return craftCards;
     }
 
-    private void initializeElementalist() throws NoClassDefFoundError {
+    private void initializeElementalist() {
         try {
             Class<ElementalistMod> elementalist = ElementalistMod.class;
             elementalistEnabled = true;
-        } catch (NoClassDefFoundError e) {
-            throw new NoClassDefFoundError();
+        } catch (NoClassDefFoundError e){
+            logger.info("Runesmith | Elementalist not found");
         }
     }
 
