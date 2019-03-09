@@ -37,6 +37,7 @@ import runesmith.patches.EnhanceCountField;
 import runesmith.patches.PlayerClassEnum;
 import runesmith.powers.AquaPower;
 import runesmith.powers.IgnisPower;
+import runesmith.powers.PermafrostPower;
 import runesmith.powers.TerraPower;
 import runesmith.relics.*;
 import runesmith.ui.ElementsCounter;
@@ -146,117 +147,66 @@ public class RunesmithMod implements PostExhaustSubscriber,
     public void receiveEditStrings() {
         logger.info("start editing strings");
 
-        String local, relic, card, character, power, orb, potion, ui, tutorial, event;
-
-        local = getLocalString("ENG");
-        logger.info("Insert ENG Strings");
-        card = local + CARD_STRING;
-        character = local + CHARACTER_STRING;
-        event = local + EVENT_STRING;
-        orb = local + ORB_STRING;
-        potion = local + POTION_STRING;
-        power = local + POWER_STRING;
-        relic = local + RELIC_STRING;
-        tutorial = local + TUTORIAL_STRING;
-        ui = local + UI_STRING;
-        loadStrings(card, character, event, orb, potion, power, relic, tutorial, ui);
-
-        if (Settings.language != Settings.GameLanguage.ENG) {
-            String language = Settings.language.name();
-            logger.info("Insert " + language +" Strings");
-            try {
-                local = getLocalString(language);
-                card = local + CARD_STRING;
-                character = local + CHARACTER_STRING;
-                relic = local + RELIC_STRING;
-                power = local + POWER_STRING;
-                orb = local + ORB_STRING;
-                potion = local + POTION_STRING;
-                ui = local + UI_STRING;
-                tutorial = local + TUTORIAL_STRING;
-                event = local + EVENT_STRING;
-                loadStrings(card, character, event, orb, potion, power, relic, tutorial, ui);
-            } catch (GdxRuntimeException e) {
-                logger.info(language + " json files not found.");
-            }
+        String language = Settings.language.name();
+        try {
+            logger.info("Insert " + language + " strings");
+            loadStrings(language);
+        } catch (GdxRuntimeException e) {
+            logger.info(language + " json files not found. \nInsert ENG strings instead.");
+            loadStrings("ENG");
         }
 
         logger.info("done editing strings");
     }
 
-    private static void loadStrings(String card, String character, String event, String orb, String potion, String power, String relic, String tutorial, String ui) {
+    private static void loadStrings(String lang) {
         String relicStrings, cardStrings, characterStrings, powerStrings, orbStrings, potionStrings, uiStrings, eventStrings, tutorialStrings;
-        relicStrings = Gdx.files.internal(relic).readString(
-                String.valueOf(StandardCharsets.UTF_8)
-        );
+        String local = getLocalString(lang);
+        relicStrings = loadJson(local+RELIC_STRING);
         BaseMod.loadCustomStrings(RelicStrings.class, relicStrings);
 
-        cardStrings = Gdx.files.internal(card).readString(
-                String.valueOf(StandardCharsets.UTF_8)
-        );
+        cardStrings = loadJson(local+CARD_STRING);
         BaseMod.loadCustomStrings(CardStrings.class, cardStrings);
 
-        characterStrings = Gdx.files.internal(character).readString(
-                String.valueOf(StandardCharsets.UTF_8)
-        );
+        characterStrings = loadJson(local+CHARACTER_STRING);
         BaseMod.loadCustomStrings(CharacterStrings.class, characterStrings);
 
-        powerStrings = Gdx.files.internal(power).readString(
-                String.valueOf(StandardCharsets.UTF_8)
-        );
+        powerStrings = loadJson(local+POWER_STRING);
         BaseMod.loadCustomStrings(PowerStrings.class, powerStrings);
 
-        orbStrings = Gdx.files.internal(orb).readString(
-                String.valueOf(StandardCharsets.UTF_8)
-        );
+        orbStrings = loadJson(local+ORB_STRING);
         BaseMod.loadCustomStrings(OrbStrings.class, orbStrings);
 
-        potionStrings = Gdx.files.internal(potion).readString(
-                String.valueOf(StandardCharsets.UTF_8)
-        );
+        potionStrings = loadJson(local+POTION_STRING);
         BaseMod.loadCustomStrings(PotionStrings.class, potionStrings);
 
-        uiStrings = Gdx.files.internal(ui).readString(
-                String.valueOf(StandardCharsets.UTF_8)
-        );
+        uiStrings = loadJson(local+UI_STRING);
         BaseMod.loadCustomStrings(UIStrings.class, uiStrings);
 
-        tutorialStrings = Gdx.files.internal(tutorial).readString(
-                String.valueOf(StandardCharsets.UTF_8)
-        );
+        tutorialStrings = loadJson(local+TUTORIAL_STRING);
         BaseMod.loadCustomStrings(TutorialStrings.class, tutorialStrings);
 
-        eventStrings = Gdx.files.internal(event).readString(
-                String.valueOf(StandardCharsets.UTF_8)
-        );
+        eventStrings = loadJson(local+EVENT_STRING);
         BaseMod.loadCustomStrings(EventStrings.class, eventStrings);
     }
 
     @Override
     public void receiveEditKeywords() {
         logger.info("Setting up custom keywords");
-
-        String keywordsPath;
-        keywordsPath = getLocalString("ENG") + KEYWORD_STRING;
-
-        loadKeywords(keywordsPath);
-
-        if (Settings.language != Settings.GameLanguage.ENG) {
-            String language = Settings.language.name();
-            try {
-                keywordsPath = getLocalString(language) + KEYWORD_STRING;
-                loadKeywords(keywordsPath);
-            } catch (GdxRuntimeException e) {
-                logger.info(language + " keywords not found.");
-            }
+        String language = Settings.language.name();
+        try {
+            logger.info("Insert " + language + " keywords.");
+            loadKeywords(language);
+        } catch (GdxRuntimeException e) {
+            logger.info(language + " keywords not found. \nInsert ENG keywords instead.");
+            loadKeywords("ENG");
         }
-
         logger.info("Keywords setting finished.");
     }
 
-    private static void loadKeywords(String keywordsPath) {
+    private static void loadKeywords(String lang) {
         Gson gson = new Gson();
-        Keywords keywords = gson.fromJson(loadJson(keywordsPath), Keywords.class);
+        Keywords keywords = gson.fromJson(loadJson(getLocalString(lang)+KEYWORD_STRING), Keywords.class);
         Arrays.stream(keywords.keywords).forEach(key -> {
             logger.info("Loading keyword : " + key.NAMES[0]);
             BaseMod.addKeyword("runesmith", key.PROPER_NAME, key.NAMES, key.DESCRIPTION);
@@ -279,7 +229,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
 
     public static void renderElementsCounter(SpriteBatch sb, float current_x){
 //        AbstractPlayer p = AbstractDungeon.player;
-        if(elementalistEnabled){
+        if (elementalistEnabled){
             if (getRenderElementalistOrbs()) {
                 elementsCounter.setYOffset(95.0F * Settings.scale);
             } else{
@@ -297,9 +247,9 @@ public class RunesmithMod implements PostExhaustSubscriber,
     public static boolean getElementsRender(){
         AbstractPlayer p = AbstractDungeon.player;
         if (CardCrawlGame.dungeon != null && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
-            if(renderElementsCounter) {
+            if (renderElementsCounter) {
                 return true;
-            }else if ((p.hasPower(IgnisPower.POWER_ID) || p.hasPower(TerraPower.POWER_ID) || p.hasPower(AquaPower.POWER_ID))) {
+            } else if ((p.hasPower(IgnisPower.POWER_ID) || p.hasPower(TerraPower.POWER_ID) || p.hasPower(AquaPower.POWER_ID))) {
                 renderElementsCounter = true;
                 return true;
             }
@@ -471,9 +421,9 @@ public class RunesmithMod implements PostExhaustSubscriber,
         this.loadAudio();
 
         elementsCounter = new ElementsCounter(ELEMENTS_GREEN_MASK);
-        try{
+        try {
             initializeElementalist();
-        }catch (ClassNotFoundException | NoClassDefFoundError e){
+        } catch (NoClassDefFoundError e){
             logger.info("Runesmith | Elementalist not found");
         }
 
@@ -481,13 +431,13 @@ public class RunesmithMod implements PostExhaustSubscriber,
             hammerCards = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
             chiselCards = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
             craftCards = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-            CardLibrary.getAllCards().forEach((value) -> {
-                if (value.hasTag(HAMMER))
-                    hammerCards.addToBottom(value);
-                if (value.hasTag(CHISEL))
-                    chiselCards.addToBottom(value);
-                if(value.hasTag(CRAFT))
-                    craftCards.addToBottom(value);
+            CardLibrary.getAllCards().forEach(card -> {
+                if (card.hasTag(HAMMER))
+                    hammerCards.addToBottom(card);
+                if (card.hasTag(CHISEL))
+                    chiselCards.addToBottom(card);
+                if(card.hasTag(CRAFT))
+                    craftCards.addToBottom(card);
             });
         }
     }
@@ -504,10 +454,13 @@ public class RunesmithMod implements PostExhaustSubscriber,
         return craftCards;
     }
 
-    @SuppressWarnings("")
-    private void initializeElementalist() throws ClassNotFoundException, NoClassDefFoundError{
-        Class<ElementalistMod> elementalist = ElementalistMod.class;
-        elementalistEnabled = true;
+    private void initializeElementalist() throws NoClassDefFoundError {
+        try {
+            Class<ElementalistMod> elementalist = ElementalistMod.class;
+            elementalistEnabled = true;
+        } catch (NoClassDefFoundError e) {
+            throw new NoClassDefFoundError();
+        }
     }
 
     @Override
@@ -534,11 +487,11 @@ public class RunesmithMod implements PostExhaustSubscriber,
         AbstractPlayer p = AbstractDungeon.player;
         logger.info("current block is: " + p.currentBlock);
         int blockLoss = arg0;
-        if (p.hasPower("Runesmith:PermafrostPower")) {
+        if (p.hasPower(PermafrostPower.POWER_ID)) {
             int lostByPermafrost = (int) Math.round(p.currentBlock / 2.0);
             blockLoss = Math.min(blockLoss, lostByPermafrost);
             if (blockLoss == lostByPermafrost)
-                p.getPower("Runesmith:PermafrostPower").flash();
+                p.getPower(PermafrostPower.POWER_ID).flash();
         }
         return blockLoss;
     }
