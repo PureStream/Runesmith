@@ -119,6 +119,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
                 "images/cardui/description_beige_orb.png"); //cardEnergyOrb
     }
 
+    @SuppressWarnings("unused")
     public static void initialize() {
         logger.info("========================= THE RUNESMITH INIT =========================");
 
