@@ -63,8 +63,8 @@
   },
   "Runesmith:ElementalConversion": {
     "NAME": "Elementary Particles",
-    "DESCRIPTION": "Choose: runesmith:Ignis Decay, runesmith:Terra Decay or runesmith:Aqua Decay.",
-    "UPGRADE_DESCRIPTION": "Choose: runesmith:Ignis Decay, runesmith:Terra Decay or runesmith:Aqua Decay. NL Draw !M! card."
+    "DESCRIPTION": "Choose: Ignis Decay, Terra Decay or Aqua Decay.",
+    "UPGRADE_DESCRIPTION": "Choose: Ignis Decay, Terra Decay or Aqua Decay. NL Draw !M! card."
   },
   "Runesmith:ConvertIgnis": {
     "NAME": "Ignis Decay",

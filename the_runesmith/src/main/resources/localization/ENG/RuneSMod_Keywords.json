@@ -80,20 +80,6 @@
       "DESCRIPTION": "Rune: Gain #yBlock."
     },
     {
-      "PROPER_NAME": "Reservo",
-      "NAMES": [
-        "reservo"
-      ],
-      "DESCRIPTION": "Rune: #yRetain a card."
-    },
-    {
-      "PROPER_NAME": "Reservo+",
-      "NAMES": [
-        "reservo+"
-      ],
-      "DESCRIPTION": "Rune: #yRetain two cards."
-    },
-    {
       "PROPER_NAME": "Spiculum",
       "NAMES": [
         "spiculum"
@@ -113,20 +99,6 @@
         "ferro"
       ],
       "DESCRIPTION": "Rune: Set #yPlated #yArmor to at least its #yPotency."
-    },
-    {
-      "PROPER_NAME": "Prismatic",
-      "NAMES": [
-        "prismatic"
-      ],
-      "DESCRIPTION": "Rune: Give a random class card each turn."
-    },
-    {
-      "PROPER_NAME": "Prismatic+",
-      "NAMES": [
-        "prismatic+"
-      ],
-      "DESCRIPTION": "Rune: Give a random upgraded class card each turn."
     },
     {
       "PROPER_NAME": "Industria",

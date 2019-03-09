@@ -120,7 +120,11 @@ public class RunesmithMod implements PostExhaustSubscriber,
     }
 
     public static void initialize() {
-        RunesmithMod mod = new RunesmithMod();
+        logger.info("========================= THE RUNESMITH INIT =========================");
+
+        new RunesmithMod();
+
+        logger.info("======================================================================");
     }
 
     @Override
@@ -208,7 +212,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
         Gson gson = new Gson();
         Keywords keywords = gson.fromJson(loadJson(getLocalString(lang)+KEYWORD_STRING), Keywords.class);
         Arrays.stream(keywords.keywords).forEach(key -> {
-            logger.info("Loading keyword : " + key.NAMES[0]);
+            logger.info("Loading keyword : " + key.PROPER_NAME);
             BaseMod.addKeyword("runesmith", key.PROPER_NAME, key.NAMES, key.DESCRIPTION);
         });
     }
@@ -453,7 +457,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
 
     private void initializeElementalist() {
         try {
-            Class<ElementalistMod> elementalist = ElementalistMod.class;
+            ElementalistMod.logger.info("Runesmith | Elementalist found");
             elementalistEnabled = true;
         } catch (NoClassDefFoundError e){
             logger.info("Runesmith | Elementalist not found");
