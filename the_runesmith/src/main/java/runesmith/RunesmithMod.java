@@ -148,13 +148,13 @@ public class RunesmithMod implements PostExhaustSubscriber,
     public void receiveEditStrings() {
         logger.info("start editing strings");
 
-        String language = Settings.language.name();
+        String language = Settings.language.toString();
         try {
             logger.info("Insert " + language + " strings");
-            loadStrings(language);
+            loadStrings(language.toLowerCase());
         } catch (GdxRuntimeException e) {
             logger.info(language + " json files not found. \nInsert ENG strings instead.");
-            loadStrings("ENG");
+            loadStrings("eng");
         }
 
         logger.info("done editing strings");
@@ -178,10 +178,10 @@ public class RunesmithMod implements PostExhaustSubscriber,
         String language = Settings.language.name();
         try {
             logger.info("Insert " + language + " keywords.");
-            loadKeywords(language);
+            loadKeywords(language.toLowerCase());
         } catch (GdxRuntimeException e) {
             logger.info(language + " keywords not found. \nInsert ENG keywords instead.");
-            loadKeywords("ENG");
+            loadKeywords("eng");
         }
         logger.info("Keywords setting finished.");
     }
