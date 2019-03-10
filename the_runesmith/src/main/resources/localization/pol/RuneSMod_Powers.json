@@ -1,0 +1,177 @@
+{
+  "Runesmith:IgnisPower": {
+    "NAME": "Ignis",
+    "DESCRIPTIONS": [
+      "Obecnie posiadasz #b",
+      " z "," #yIgnis."
+    ]
+  },
+  "Runesmith:TerraPower": {
+    "NAME": "Terra",
+    "DESCRIPTIONS": [
+      "Obecnie posiadasz #b",
+      " z "," #yTerra."
+    ]
+  },
+  "Runesmith:AquaPower": {
+    "NAME": "Aqua",
+    "DESCRIPTIONS": [
+      "Obecnie posiadasz #b",
+      " z "," #yAqua."
+    ]
+  },
+  "Runesmith:GrindstonePower": {
+    "NAME": "Osełka",
+    "DESCRIPTIONS": [
+      "Podczas tej tury, wsyztskie zagrane karty zostaną #yUlepszone. Jeżeli karta jest już #yUlepszona, zostanie #yWzmocniona.",
+      "Przez następne #b",
+      " tury, wsyztskie zagrane karty zostaną yUlepszone. Jeżeli karta jest już #yUlepszona, zostanie #yWzmocniona."
+    ]
+  },
+  "Runesmith:FirestormPower": {
+    "NAME": "Ognista burza",
+    "DESCRIPTIONS": [
+      "Zyskaj #b",
+      " #yIgnis i #b",
+      " #yTerra na początku tury."
+    ]
+  },
+  "Runesmith:DuplicatePower": {
+    "NAME": "Duplikat",
+    "DESCRIPTIONS": [
+      "Stwórz kopię #b",
+      " następnej runy, która zostanie #yWykuta podczas tej tury.",
+      " następnych run, które zostaną #yWykute podczas tej tury."
+    ]
+  },
+  "Runesmith:PotentialPower": {
+    "NAME": "Potencjał",
+    "DESCRIPTIONS": [
+      "Zwiększa #yPotencję kart #yWykucia o #b",
+      "Zmniejsza #yPotencję kart #yWykucia o #b",
+      "."
+    ]
+  },
+  "Runesmith:ArcReactorPower": {
+    "NAME": "Napromieniowanie",
+    "DESCRIPTIONS": [
+      "Za każdym razem kiedy runa zostanie #yWykuta, utrać #b",
+      " pkt. #yPotencji."
+    ]
+  },
+  "Runesmith:UnlimitedPowerPower": {
+    "NAME": "Nieograniczona moc",
+    "DESCRIPTIONS": [
+      "#yŻywioły nie są zużywane podczas Wykucia."
+    ]
+  },
+  "Runesmith:RunesonancePower": {
+    "NAME": "Runzonans",
+    "DESCRIPTIONS": [
+      "Przez #b1 turę, runy aktywują się dwa razy.",
+      "Przez #b",
+      " tury, runy aktywują się dwa razy."
+    ]
+  },
+  "Runesmith:ReservoPower": {
+    "NAME": "Zachowaj karty",
+    "DESCRIPTIONS": [
+      "Pod koniec tury możesz #yZachować #b",
+      " kartę.",
+      " kart."
+    ]
+  },
+  "Runesmith:DuctTapePower": {
+    "NAME": "Taśma klejąca",
+    "DESCRIPTIONS": [
+      "#yUstabilizuj do #b",
+      " karty na początku twojej tury.",
+      " kart na początku twojej tury."
+    ]
+  },
+  "Runesmith:SpiculumDownPower": {
+    "NAME": "Utrata cierni",
+    "DESCRIPTIONS": [
+      "Na początku twojej następej tury, utrać #b",
+      " pkt. #yCierni."
+    ]
+  },
+  "Runesmith:PotentialDownPower": {
+    "NAME": "Utrata potencji",
+    "DESCRIPTIONS": [
+      "Utrać #b",
+      " #yPotencji na końcu swojej tury."
+    ]
+  },
+  "Runesmith:MetallurgicalResearchPower": {
+    "NAME": "Badania metalurgiczne",
+    "DESCRIPTIONS": [
+      "#yUlepsz i #yWzmocnij WSZYSTKIE swoje karty za #b",
+      " tury.",
+      " turę."
+    ]
+  },
+  "Runesmith:PermafrostPower": {
+    "NAME": "Wieczna zmarzlina",
+    "DESCRIPTIONS": [
+      "Na początku twojej tury, utrać najwyżej połowę pkt. #yBloku.",
+      "Na początku tury, utraci najwyżej połowę pkt. #yBloku."
+    ]
+  },
+  "Runesmith:CreatorFormPower": {
+    "NAME": "Forma stworzyciela",
+    "DESCRIPTIONS": [
+      "#yWzmocnij #b",
+      " kartę na początku twojej tury.",
+      " kart na początku twojej tury."
+    ]
+  },
+  "Runesmith:PoweredAnvilPower": {
+    "NAME": "Turbokowadło",
+    "DESCRIPTIONS": [
+      "Po #yWzmocnieniu karty, #yWzmocnij ją jeszcze #b",
+      " raz.",
+      " razy."
+    ]
+  },
+  "Runesmith:IceColdPower": {
+    "NAME": "Zlodowaciały",
+    "DESCRIPTIONS": [
+      "Odtaje i utraci #yŚlamazarność za #b",
+      " tury.",
+      " turę."
+    ]
+  },
+  "Runesmith:ReplicatingBarrierPower": {
+    "NAME": "Odnawialna Bariera",
+    "DESCRIPTIONS": [
+      "Za #b",
+      " tury,",
+      " turę,",
+      " 2 #yTerra: #yWykuj runę #yKamień #yObrony z #b",
+      " Potencji."
+    ]
+  },
+  "Runesmith:TimeMachinePower": {
+    "NAME": "Tunel czasoprzestrzenny",
+    "DESCRIPTIONS": [
+      "Zapisane #b",
+      " PŻ, #b",
+      " pkt. #yBloku, #b",
+      " #yIgnis, #b",
+      " #yTerra, #b",
+      " #yAqua. NL Zostanie wykluczona za #b",
+      " turę.",
+      " tury."
+    ]
+  },
+  "Runesmith:LastStandPower": {
+    "NAME": "Ostatni Bastion",
+    "DESCRIPTIONS": [
+      "Na końcu następnej rundy, ",
+      "na końcu tej rundy, ",
+      " zadaj #b",
+      " pkt. obrażeń WSZYSTKIM przeciwnikom."
+    ]
+  }
+}

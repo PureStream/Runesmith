@@ -1,0 +1,73 @@
+{
+  "Blueberries": {
+    "NAME": "Jagody",
+    "FLAVOR": "Tajemnicze jagody pozostawione przez zapomnianego.",
+    "DESCRIPTIONS": [
+      "Zyskaj 8 maksymalnych PŻ."
+    ]
+  },
+  "Runesmith:BrokenRuby": {
+    "NAME": "Pęknięty Rubin",
+    "FLAVOR": "Kryształ przywodzący na myśl czerwony klejnot. Mimo pęknięcia, zachował odrobinę swojej mocy.",
+    "DESCRIPTIONS": [
+      "Na początku każdej potyczki, Zyskaj #b1 #yrunesmith:Ignis. Za kazde zagrane 3 ataki, zyskaj #b1 #yrunesmith:Ignis."
+    ]
+  },
+  "Runesmith:MiniCore": {
+    "NAME": "Minirdzeń",
+    "FLAVOR": "Ta interesująca kula była kiedyś wykorzystywana do przechowywania energii.",
+    "DESCRIPTIONS": [
+      "Zyskaj 1 #yrunesmith:Potencja na początku każdej potyczki."
+    ]
+  },
+  "Runesmith:Nanobots": {
+    "NAME": "Nanoboty",
+    "FLAVOR": "\"Te mikroskopijne maszyny mają niesamowite właściwości.\" -Ranwid",
+    "DESCRIPTIONS": [
+      "Na początku każdej potyczki #yrunesmith:Wzmocnij all cards in your hand."
+    ]
+  },
+  "Runesmith:UraniumAnvil": {
+    "NAME": "Kowadło z Uranu",
+    "FLAVOR": "Ten pokażny blok metalu zawiera niespożytkowane pokłady energii, ale osłabia wszytskich wokół.",
+    "DESCRIPTIONS": [
+      " na początku tury #yrunesmith:Zdeklasuj losową kartę ze swojej talii.",
+      "Zyskaj [E]"
+    ]
+  },
+  "Runesmith:Locket": {
+    "NAME": "Pamiątkowy Wisior",
+    "FLAVOR": "W środku znajduje się podobizna nieznanej a tobie jednak znajomej osoby.",
+    "DESCRIPTIONS": [
+      "Raz podczas potyczki, jeżeli twoje PŻ spadną poniżej #b15%, dodaj Ostatni Bastion na wierzch swojej talii."
+    ]
+  },
+  "Runesmith:AutoHammer": {
+    "NAME": "AutoMłot",
+    "FLAVOR": "Zautomatyzowany młot nie znający spoczynku.",
+    "DESCRIPTIONS": [
+      "Za każdym razem gdy zagrasz #b3 karty umiejętności w #b1 turę, #yrunesmith:Wzmocnij losową kartę w twojej ręce."
+    ]
+  },
+  "Runesmith:EmergencyProvisions": {
+    "NAME": "Posiłek awaryjny",
+    "FLAVOR": "Szczelnie zamknięta racja żywnościowa w lekkim pakunku.",
+    "DESCRIPTIONS": [
+      "Za każdym razem gdy zagrasz kartę Wykucia, zyskaj #b1 losowy runesmith:Żywioł."
+    ]
+  },
+  "Runesmith:PocketReactor": {
+    "NAME": "Kieszonkowy Reaktor",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "#yrunesmith:Żywioły nie są już wymagane do wykucia. Wszyskie karty tracą #b2 #yrunesmith:Potencję. "
+    ]
+  },
+  "Runesmith:CoreCrystal": {
+    "NAME": "Kryształowy rdzeń",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "Zastępuje #rPęknięty #rRubin. Zwiększa o 50% zysk #yrunesmith:Żywiołów ze wszystkich źródeł. Zwiększa maksymaplną ilość #yrunesmith:Żywiołów do #b20."
+    ]
+  }
+}

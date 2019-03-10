@@ -1,0 +1,76 @@
+{
+  "Runesmith:FortifyAction": {
+    "TEXT": [
+      "Wzmocnij"
+    ]
+  },
+  "Runesmith:DowngradeAction": {
+    "TEXT": [
+      "Zdeklasuj"
+    ]
+  },
+  "Runesmith:StasisAction": {
+    "TEXT": [
+      "Ustabilizuj"
+    ]
+  },
+  "Runesmith:CardEnhanced": {
+    "TEXT": [
+      "runesmith:Wzmocniona"
+    ]
+  },
+  "Runesmith:CardStasis": {
+    "TEXT": [
+      "runesmith:Ustabilizowana"
+    ]
+  },
+  "Runesmith:DoubleUpAction": {
+    "TEXT": [
+      "Ulepsz i Wzmocnij"
+    ]
+  },
+  "Runesmith:FlexTapeAction": {
+    "TEXT": [
+      "Ustabilizuj"
+    ]
+  },
+  "Runesmith:StasisCardInDeckAction": {
+    "TEXT": [
+      "Ustabilizuj Kartę"
+    ]
+  },
+  "Runesmith:IgnisElement": {
+    "TEXT": [
+      "Ignis",
+      "Ilość posiadanego #yIgnis. NL Może zostać wydany na wykucie run."
+    ]
+  },
+  "Runesmith:TerraElement": {
+    "TEXT": [
+      "Terra",
+      "Ilość posiadanej #yTerra. NL Może zostać wydana na wykucie run."
+    ]
+  },
+  "Runesmith:AquaElement": {
+    "TEXT": [
+      "Aqua",
+      "Ilość posiadanej #yAqua. NL Może zostać wydana na wykucie run."
+    ]
+  },
+  "Runesmith:ConstructBifrost": {
+    "TEXT": [
+      "Kamień pryzmatu",
+      "Kamień pryzmatu+",
+      "Runa: Daje losową klasową kartę na poczatku każdej tury.",
+      "Runa: Daje losową ulepszoną klasową kartę na poczatku każdej tury."
+    ]
+  },
+  "Runesmith:CraftReservo": {
+    "TEXT": [
+      "Kamień rezerwy",
+      "Kamień rezerwy+",
+      "Runa: #yZachowaj kartę.",
+      "Runa: #yZachowaj dwie karty."
+    ]
+  }
+}

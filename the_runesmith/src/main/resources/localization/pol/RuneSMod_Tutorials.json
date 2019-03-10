@@ -1,0 +1,18 @@
+{
+  "Rune Tip": {
+    "TEXT": [
+      "Nie mam miejsca na więcej #rrun."
+    ],
+    "LABEL": [
+      "Runa"
+    ]
+  },
+  "Wormhole Tip": {
+    "TEXT": [
+      "Nie ma #r~Tunelu #rCzasoprzestrzennego~ by przez niego przejść."
+    ],
+    "LABEL": [
+      "Podróż w czasie"
+    ]
+  }
+}

@@ -1,0 +1,385 @@
+{
+  "keywords": [
+    {
+      "PROPER_NAME": "Wzmocnij",
+      "NAMES": [
+        "wzmocnienie",
+        "wzmocnienia",
+        "wzmocnieniu",
+        "wzmocnieniem",
+        "wzmocnień",
+        "wzmocnieniom",
+        "wzmocnieniami",
+        "wzmocnieniach",
+        "wzmocniona",
+        "wzmocnionej",
+        "wzmocnioną",
+        "wzmocnione",
+        "wzmocnionych",
+        "wzmocnionym",
+        "wzmocnionymi",
+        "wzmocnij"
+      ],
+      "DESCRIPTION": "Zwiększ liczbę pkt. obrażeń, pkt. #yBloku i #yPotencji karty o #b50%. Kumuluje się addytywnie. Całe #yWzmocnienie zostanie zużyte, gdy karta zostanie zagrana."
+    },
+    {
+      "PROPER_NAME": "Zdeklasuj",
+      "NAMES": [
+        "zdeklasowana",
+        "zdeklasowanej",
+        "zdeklasowaną",
+        "zdeklasowane",
+        "zdeklasowanych",
+        "zdeklasowanym",
+        "zdeklasowanymi",
+        "zdeklasowanie",
+        "zdeklasowania",
+        "zdeklasowaniu",
+        "zdeklasowaniem",
+        "zdeklasowań",
+        "zdeklasowaniom",
+        "zdeklasowaniami",
+        "zdeklasowaniach",
+        "zdeklasuj"
+      ],
+      "DESCRIPTION": "Usuń jeden poziom #yUlepszenia i całe #yWzmocnienie i #yStabilność z karty."
+    },
+    {
+      "PROPER_NAME": "Ustabilizuj",
+      "NAMES": [
+        "stabilność",
+        "stabilności",
+        "stabilnością",
+        "stabilnościom",
+        "stabilnościami",
+        "stabilnościach",
+        "ustabilizuj",
+        "ustabilizowana",
+        "ustabilizowanej",
+        "ustabilizowaną",
+        "ustabilizowane",
+        "ustabilizowanych",
+        "ustabilizowanym",
+        "ustabilizowanymi"
+      ],
+      "DESCRIPTION": "Powstrzymaj #yWykluczenie jeden raz, zamiast tego karta zostanie wykluczona. Nie kumuluje się."
+    },
+    {
+      "PROPER_NAME": "Potencja",
+      "NAMES": [
+        "potencja",
+        "potencji",
+        "potencję",
+        "potencją",
+        "potencjo",
+        "potencje",
+        "potencjom",
+        "potencjami",
+        "potencjach"
+      ],
+      "DESCRIPTION": "Potencja oznacza siłę runy w momencie #yWykucia."
+    },
+    {
+      "PROPER_NAME": "Wykuj",
+      "NAMES": [
+        "wykuj",
+        "wykuta",
+        "wykutej",
+        "wykutą",
+        "wykute",
+        "wykutych",
+        "wykutym",
+        "wykutymi",
+        "wykucie",
+        "wykucia",
+        "wykuciu",
+        "wykuciem",
+        "wykuć",
+        "wykuciom",
+        "wykuciami",
+        "wykuciach"
+      ],
+      "DESCRIPTION": "Stwóż runę używając #yŻywiołów. Jeżeli runa nie może zostać stworzona, zyskaj tyle samo #yŻywiołów. Możesz mieć maksymalnie 7 aktywnych run."
+    },
+    {
+      "PROPER_NAME": "Żywioły",
+      "NAMES": [
+        "żywioł",
+        "żywiołu",
+        "żywiołowi",
+        "żywiołem",
+        "żywiole",
+        "żywioły",
+        "żywiołów",
+        "żywiołom",
+        "żywiołami",
+        "żywiołach",
+        "ignis",
+        "terra",
+        "aqua"
+      ],
+      "DESCRIPTION": "Żywioły (Ignis, Terra i Aqua) są zużywane do #yWykucia run a także do zasilenia innych umiejętności."
+    },
+    {
+      "PROPER_NAME": "Przełam",
+      "NAMES": [
+        "przełam",
+        "przełamanie",
+        "przełamania",
+        "przełamaniu",
+        "przełamaniem",
+        "przełamań",
+        "przełamaniom",
+        "przełamaniami",
+        "przełamaniach",
+        "przełamana",
+        "przełamanej",
+        "przełamaną",
+        "przełamane",
+        "przełamanych",
+        "przełamanym",
+        "przełamanymi"
+
+      ],
+      "DESCRIPTION": "Zniszcz runę i aktywuj jej efekt dwuktrotnie. Efekty bazowane na mocach zanikają na początku twojej następnej tury."
+    },
+    {
+      "PROPER_NAME": "Kamień eksplozji",
+      "NAMES": [
+        "kamień eksplozji",
+        "kamienia eksplozji",
+        "kamieniowi eksplozji",
+        "kamieniem eksplozji",
+        "kamieniu eksplozji",
+        "kamienie eksplozji",
+        "kamieni eksplozji",
+        "kamieniom eksplozji",
+        "kamieniami eksplozji",
+        "kamieniach eksplozji"
+      ],
+      "DESCRIPTION": "Runa: Zadaje obrażenia WSZYSTKIM przeciwnikom."
+    },
+    {
+      "PROPER_NAME": "Kamień ognia",
+      "NAMES": [
+        "kamień ognia",
+        "kamienia ognia",
+        "kamieniowi ognia",
+        "kamieniem ognia",
+        "kamieniu ognia",
+        "kamienie ognia",
+        "kamieni ognia",
+        "kamieniom ognia",
+        "kamieniami ognia",
+        "kamieniach ognia"
+      ],
+      "DESCRIPTION": "Runa: Zadaje obrażenia losowemu przeciwnikowi."
+    },
+    {
+      "PROPER_NAME": "Kamień obrony",
+      "NAMES": [
+        "kamień obrony",
+        "kamienia obrony",
+        "kamieniowi obrony",
+        "kamieniem obrony",
+        "kamieniu obrony",
+        "kamienie obrony",
+        "kamieni obrony",
+        "kamieniom obrony",
+        "kamieniami obrony",
+        "kamieniach obrony"
+      ],
+      "DESCRIPTION": "Runa: Zyskaj #yBlok."
+    },
+    {
+      "PROPER_NAME": "Kamień rezerwy",
+      "NAMES": [
+        "kamień rezerwy",
+        "kamienia rezerwy",
+        "kamieniowi rezerwy",
+        "kamieniem rezerwy",
+        "kamieniu rezerwy",
+        "kamienie rezerwy",
+        "kamieni rezerwy",
+        "kamieniom rezerwy",
+        "kamieniami rezerwy",
+        "kamieniach rezerwy"
+      ],
+      "DESCRIPTION": "Runa: #yZachowaj kartę."
+    },
+    {
+      "PROPER_NAME": "Kamień rezerwy+",
+      "NAMES": [
+        "kamień rezerwy+",
+        "kamienia rezerwy+",
+        "kamieniowi rezerwy+",
+        "kamieniem rezerwy+",
+        "kamieniu rezerwy+",
+        "kamienie rezerwy+",
+        "kamieni rezerwy+",
+        "kamieniom rezerwy+",
+        "kamieniami rezerwy+",
+        "kamieniach rezerwy+"
+      ],
+      "DESCRIPTION": "Runa: #yZachowaj dwie karty."
+    },
+    {
+      "PROPER_NAME": "Kamień kłucia",
+      "NAMES": [
+        "kamień kłucia",
+        "kamienia kłucia",
+        "kamieniowi kłucia",
+        "kamieniem kłucia",
+        "kamieniu kłucia",
+        "kamienie kłucia",
+        "kamieni kłucia",
+        "kamieniom kłucia",
+        "kamieniami kłucia",
+        "kamieniach kłucia"
+      ],
+      "DESCRIPTION": "Runa: Zyskaj #yCiernie."
+    },
+    {
+      "PROPER_NAME": "Kamień potencji",
+      "NAMES": [
+        "kamień potencji",
+        "kamienia potencji",
+        "kamieniowi potencji",
+        "kamieniem potencji",
+        "kamieniu potencji",
+        "kamienie potencji",
+        "kamieni potencji",
+        "kamieniom potencji",
+        "kamieniami potencji",
+        "kamieniach potencji"
+      ],
+      "DESCRIPTION": "Runa: Zyskaj #yPotecję"
+    },
+    {
+      "PROPER_NAME": "Kamień pancerza",
+      "NAMES": [
+        "kamień pancerza",
+        "kamienia pancerza",
+        "kamieniowi pancerza",
+        "kamieniem pancerza",
+        "kamieniu pancerza",
+        "kamienie pancerza",
+        "kamieni pancerza",
+        "kamieniom pancerza",
+        "kamieniami pancerza",
+        "kamieniach pancerza"
+      ],
+      "DESCRIPTION": "Runa: Ustawia wartość #yOpancerzenia na co najmniej swoją ilości #yPotencji."
+    },
+    {
+      "PROPER_NAME": "Kamień pryzmatu",
+      "NAMES": [
+        "kamień pryzmatu",
+        "kamienia pryzmatu",
+        "kamieniowi pryzmatu",
+        "kamieniem pryzmatu",
+        "kamieniu pryzmatu",
+        "kamienie pryzmatu",
+        "kamieni pryzmatu",
+        "kamieniom pryzmatu",
+        "kamieniami pryzmatu",
+        "kamieniach pryzmatu"
+      ],
+      "DESCRIPTION": "Runa: Daje losową klasową kartę na poczatku każdej tury."
+    },
+    {
+      "PROPER_NAME": "Kamień pryzmatu+",
+      "NAMES": [
+        "kamień pryzmatu+",
+        "kamienia pryzmatu+",
+        "kamieniowi pryzmatu+",
+        "kamieniem pryzmatu+",
+        "kamieniu pryzmatu+",
+        "kamienie pryzmatu+",
+        "kamieni pryzmatu+",
+        "kamieniom pryzmatu+",
+        "kamieniami pryzmatu+",
+        "kamieniach pryzmatu+"
+      ],
+      "DESCRIPTION": "Runa: Daje losową ulepszoną klasową kartę na poczatku każdej tury."
+    },
+    {
+      "PROPER_NAME": "Kamień energii",
+      "NAMES": [
+        "kamień energii",
+        "kamienia energii",
+        "kamieniowi energii",
+        "kamieniem energii",
+        "kamieniu energii",
+        "kamienie energii",
+        "kamieni energii",
+        "kamieniom energii",
+        "kamieniami energii",
+        "kamieniach energii"
+      ],
+      "DESCRIPTION": "Runa: Zyskaj [E] na początku każdej tury."
+    },
+    {
+      "PROPER_NAME": "Kamień leczenia",
+      "NAMES": [
+        "kamień leczenia",
+        "kamienia leczenia",
+        "kamieniowi leczenia",
+        "kamieniem leczenia",
+        "kamieniu leczenia",
+        "kamienie leczenia",
+        "kamieni leczenia",
+        "kamieniom leczenia",
+        "kamieniami leczenia",
+        "kamieniach leczenia"
+      ],
+      "DESCRIPTION": "Rune: Przywróć PŻ po #yPrzełamaniu."
+    },
+    {
+      "PROPER_NAME": "Niewypał",
+      "NAMES": [
+        "niewypał",
+        "niewypału",
+        "niewypałowi",
+        "niewypałem",
+        "niewypale",
+        "niewypały",
+        "niewypałów",
+        "niewypałom",
+        "niewypałami",
+        "niewypałach"
+      ],
+      "DESCRIPTION": "Runa: Brak efektu."
+    },
+    {
+      "PROPER_NAME": "Kamień magmy",
+      "NAMES": [
+        "kamień magmy",
+        "kamienia magmy",
+        "kamieniowi magmy",
+        "kamieniem magmy",
+        "kamieniu magmy",
+        "kamienie magmy",
+        "kamieni magmy",
+        "kamieniom magmy",
+        "kamieniami magmy",
+        "kamieniach magmy"
+      ],
+      "DESCRIPTION": "Runa: Zadaje obrażenia losowemu przeciwnikowi i daje Blok."
+    },
+    {
+      "PROPER_NAME": "Podróż w czasie",
+      "NAMES": [
+        "podróż w czasie",
+        "podróży w czasie",
+        "podróżą w czasie",
+        "podróże w czasie",
+        "podróżom w czasie",
+        "podróżami w czasie",
+        "podróżach w czasie",
+		"podróż_w_czasie"
+      ],
+      "DESCRIPTION": "Ustaw poziom PŻ, Bloku i Żywiołów na zapisany wcześniej."
+    }
+  ]
+}

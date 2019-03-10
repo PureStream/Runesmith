@@ -1,0 +1,444 @@
+{
+  "Runesmith:Strike_RS": {
+    "NAME": "Uderzenie",
+    "DESCRIPTION": "Zadaj !D! pkt. obrażeń."
+  },
+  "Runesmith:Defend_RS": {
+    "NAME": "Blok",
+    "DESCRIPTION": "Zyskaj !B! pkt. Bloku."
+  },
+  "Runesmith:CraftFirestone": {
+    "NAME": "Wykucie Kamienia Ognia",
+    "DESCRIPTION": "1 runesmith:Ignis: runesmith:Wykuj runę runesmith:Kamień ognia z !Pot! pkt. runesmith:Potencji.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "Runesmith:CraftProtectio": {
+    "NAME": "Wykucie Kamienia Obrony",
+    "DESCRIPTION": "2 runesmith:Terra: runesmith:Wykuj runę runesmith:Kamień obrony z !Pot! pkt. runesmith:Potencji.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "Runesmith:Fortify": {
+    "NAME": "Fortyfikacja",
+    "DESCRIPTION": "Zyskaj !B! pkt. Bloku. NL runesmith:Wzmocnij losową kartę ze swojej ręki.",
+    "UPGRADE_DESCRIPTION": "Zyskaj !B! pkt. Bloku. NL runesmith:Wzmocnij kartę ze swojej ręki."
+  },
+  "Runesmith:ChiselStab": {
+    "NAME": "Pchnięcie Dłutem",
+    "DESCRIPTION": "Zadaj !D! pkt. obrażeń. NL Zyskaj 2 runesmith:Ignis."
+  },
+  "Runesmith:EarthShield": {
+    "NAME": "Ziemna Tarcza",
+    "DESCRIPTION": "Zyskaj !B! pkt. Bloku. NL Zyskaj 2 runesmith:Terra."
+  },
+  "Runesmith:HeatedChisel": {
+    "NAME": "Rozgrzane Dłuto",
+    "DESCRIPTION": "Zadaj !D! pkt. obrażeń. NL Nałóż !M! pkt. Wrażliwości. NL Zyskaj 1 runesmith:Ignis i 1 runesmith:Terra."
+  },
+  "Runesmith:Terraform": {
+    "NAME": "Terraformacja",
+    "DESCRIPTION": "Zyskaj 1 runesmith:Terra. NL Zyskaj pkt. Bloku w ilości równej !M! razom ilości posiadanej runesmith:Terra.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Zyskaj !B! pkt. Bloku.)"
+    ]
+  },
+  "Runesmith:RuneHurl": {
+    "NAME": "Rzut Runą",
+    "DESCRIPTION": "runesmith:Przełam swoją najstarszą Runę by zadać !D! pkt. obrażeń. NL Jeżeli nie masz ani jednej Runy, dobierz 1 kartę."
+  },
+  "Runesmith:CraftIncendium": {
+    "NAME": "Wykucie Kamienia Eksplozji",
+    "DESCRIPTION": "3 runesmith:Ignis: runesmith:Wykuj runę runesmith:Kamień eksplozji z !Pot! pkt. runesmith:Potencji.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "Runesmith:HammerSlam": {
+    "NAME": "Walnięcie Młotem",
+    "DESCRIPTION": "Zadaj !D! pkt. obrażeń. NL Dobierz !M! kartę za każdy różny rodzaj posiadanej Runy.",
+    "UPGRADE_DESCRIPTION": "Zadaj !D! pkt. obrażeń. NL Dobierz !M! kartę. NL Dobierz !M! kartę za każdy różny rodzaj posiadanej Runy."
+  },
+  "Runesmith:ElementalConversion": {
+    "NAME": "Cząstki Elementarne",
+    "DESCRIPTION": "Wybierz: runesmith:Rozpad Ignis, runesmith:Rozpad Terra lub runesmith:Rozpad Aqua.",
+    "UPGRADE_DESCRIPTION": "Wybierz: runesmith:Rozpad Ignis, runesmith:Rozpad Terra lub runesmith:Rozpad Aqua. NL Dobierz !M! kartę."
+  },
+  "Runesmith:ConvertIgnis": {
+    "NAME": "Rozpad Ignis",
+    "DESCRIPTION": "Zadaj !D! pkt. obrażeń. NL Utrać cały runesmith:Ignis. NL Zyskaj runesmith:Terra i runesmith:Aqua w ilości równej utraconemu runesmith:Ignis."
+  },
+  "Runesmith:ConvertTerra": {
+    "NAME": "Rozpad Terra",
+    "DESCRIPTION": "Zyskaj !B! pkt. Bloku. NL Utrac całą runesmith:Terra. NL Zyskaj runesmith:Ignis i runesmith:Aqua w ilości równej utraconej runesmith:Terra."
+  },
+  "Runesmith:ConvertAqua": {
+    "NAME": "Rozpad Aqua",
+    "DESCRIPTION": "Zyskaj !M! pkt. runesmith:Potencji na czas obecnej tury. NL Utrac całą runesmith:Aqua. NL Zyskaj runesmith:Ignis i runesmith:Terra w ilości równej utraconej runesmith:Aqua."
+  },
+  "Runesmith:Repurpose": {
+    "NAME": "Przystosowanie",
+    "DESCRIPTION": "Wyklucz kartę. NL Atak: Zyskaj !M! runesmith:Ignis. NL Umiejętność: Zyskaj !M! runesmith:Terra. NL Moc: Zyskaj !M! runesmith:Aqua. NL Stan: Zyskaj 1 z każdego runesmith:Żywiołu.",
+    "UPGRADE_DESCRIPTION": "Wyklucz kartę. NL Atak: Zyskaj !M! runesmith:Ignis. NL Umiejętność: Zyskaj !M! runesmith:Terra. NL Moc: Zyskaj !M! runesmith:Aqua. NL Stan: Zyskaj 1 z każdego runesmith:Żywiołu. NL Klątwa: Zyskaj 2 z każdego runesmith:Żywiołu."
+  },
+  "Runesmith:EnergizedChisel": {
+    "NAME": "Naelektryzowane Dłuto",
+    "DESCRIPTION": "Zadaj !D! pkt. obrażeń. NL Zyskaj !B! pkt. Bloku. NL Nałóż !M! pkt. Osłabienia NL Zyskaj 1 runesmith:Ignis i 1 runesmith:Aqua."
+  },
+  "Runesmith:UnstableHammer": {
+    "NAME": "Niestabilny Młot",
+    "DESCRIPTION": "Zadaj !D! pkt. obrażeń. NL runesmith:Wykuj runę runesmith:Niewypał. NL Zyskaj 1 losowy runesmith:Żywioł."
+  },
+  "Runesmith:HammerThrow": {
+    "NAME": "Rzut Młotem",
+    "DESCRIPTION": "Zadaj !D! pkt. obrażeń. NL Dobierz !M! kartę i Ulepsz ją.",
+    "UPGRADE_DESCRIPTION": "Zadaj !D! pkt. obrażeń. NL Dobierz !M! kart i Ulepsz je"
+  },
+  "Runesmith:OneForEveryone": {
+    "NAME": "Jeden za Wszystkich",
+    "DESCRIPTION": "runesmith:Przełam swoją najstarszą runę by NL zyskać [E] , 1 pkt. Bloku, NL zadać 1 pkt. obrażeń, NL nałożyć WSZYSTKIM przeciwnikom 1 Słabość i Wrażliwość, zyskać  1 z każdego runesmith:Żywiołu i dobrać 1 kartę."
+  },
+  "Runesmith:RunicBullets": {
+    "NAME": "Runiczna Amunicja",
+    "DESCRIPTION": "Zadaj !D! pkt. obrażeń za każdą Runę jaką posiadasz."
+  },
+  "Runesmith:StaticCage": {
+    "NAME": "Statyczna Klatka",
+    "DESCRIPTION": "runesmith:Przełam swoją najstarszą runę. NL runesmith:Ustabilizuj kartę z ręki. NL Zyskaj !B! pkt. Bloku."
+  },
+  "Runesmith:Prism": {
+    "NAME": "Pryzmat",
+    "DESCRIPTION": "Zyskaj ilość pkt. Bloku równą !M! razy ilości wszystkich posiadanych runesmith:Żywiołów. NL Utrać połowę runesmith:Żywiołów.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Zyskaj !B! pkt. bloku)"
+    ]
+  },
+  "Runesmith:Grindstone": {
+    "NAME": "Osełka",
+    "DESCRIPTION": "Zyskaj !B! pkt. bloku. NL Kiedykolwiek zagrasz kartę podczas tej tury, NL Ulepsz ją. NL runesmith:Wzmocnij tą kartę jeżeli nie da się jej ulepszyć.",
+    "UPGRADE_DESCRIPTION": "Zyskaj !B! pkt. bloku. NL Kiedykolwiek zagrasz kartę podczas następnych !M! tur, NL Ulepsz ją. NL runesmith:Wzmocnij tą kartę jeżeli nie da się jej ulepszyć.."
+  },
+  "Runesmith:FieryHammer": {
+    "NAME": "Ognisty Młot",
+    "DESCRIPTION": "Zadaj !D! pkt. obrażeń WSZYSTKIM przeciwnikom. NL Może zostać ulepszona dowolną ilość razy."
+  },
+  "Runesmith:CraftReservo": {
+    "NAME": "Wykucie Kamienia Rezerwy",
+    "DESCRIPTION": "2 runesmith:Aqua: runesmith:Wykuj runę [#EFC851]Kamień [#EFC851]rezerwy. NL Wykluczenie.",
+    "UPGRADE_DESCRIPTION": "2 runesmith:Aqua: runesmith:Wykuj runę [#EFC851]Kamień [#EFC851]rezerwy+. NL Wykluczenie.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "Runesmith:LithiumIon": {
+    "NAME": "Bateria Litowa",
+    "DESCRIPTION": "Zyskaj !M! runesmith:Potencji."
+  },
+  "Runesmith:Firestorm": {
+    "NAME": "Ognista Burza",
+    "DESCRIPTION": "Na początku tury, zyskaj !M! runesmith:Ignis i !M! runesmith:Terra.",
+    "UPGRADE_DESCRIPTION": " Startowa. NL Na początku tury, zyskaj !M! runesmith:Ignis i !M! runesmith:Terra."
+  },
+  "Runesmith:RunicBlueprint": {
+    "NAME": "Schemat Runy",
+    "DESCRIPTION": "Dodaj losową kartę runesmith:Wykucia do swojej ręki. NL Podczas tej tury, będzie kosztować 0 i nie będzie wymagać runesmith:Żywiołów. NL Zyskaj 2 runesmith:Aqua. NL Wykluczenie."
+  },
+  "Runesmith:CraftSpiculum": {
+    "NAME": "Wykucie Kamienia Kłucia",
+    "DESCRIPTION": "1 runesmith:Ignis 1 runesmith:Aqua: runesmith:Wykuj runę runesmith:Kamień kłucia z !Pot! pkt. runesmith:Potencji. NL Wykluczenie.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "Runesmith:CraftPotentia": {
+    "NAME": "Wykucie Kamienia Potencji",
+    "DESCRIPTION": "2 z każdego runesmith:Żywiołu: Usuń swoją nasjtarszą Runę i runesmith:Wykuj runę runesmith:Kamień Potencji z !Pot! pkt. runesmith:Potencji.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "Runesmith:CraftFerro": {
+    "NAME": "Wykucie Kamienia Pancerza",
+    "DESCRIPTION": "2 runesmith:Terra 1 runesmith:Aqua: runesmith:Wykuj runę runesmith:Kamień Pancerza z !Pot! pkt. runesmith:Potencji.",
+    "UPGRADE_DESCRIPTION": "2 runesmith:Terra 1 runesmith:Aqua: runesmith:Wykuj runę runesmith:Kamień Pancerza z !Pot! pkt. runesmith:Potencji.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "Runesmith:HammerTime": {
+    "NAME": "Bez Młota To Nie Robota",
+    "DESCRIPTION": "Zadaj !D! pkt. obrażeń. NL runesmith:Wzmocnij WSZYSTKIE swoje karty zamierające \"Młot\".",
+    "UPGRADE_DESCRIPTION": "Zadaj !D! pkt. obrażeń. NL runesmith:Wzmocnij dwukotnie WSZYSTKIE swoje karty zamierające \"Młot\"."
+  },
+  "Runesmith:MakeshiftArmor": {
+    "NAME": "Zbroja ze Złomu",
+    "DESCRIPTION": "runesmith:Zdeklasuj losową kartę ze stosu kart rozgrywających, ręki lub ze stosu kart odrzuconych. NL Zyskaj !B! pkt. Bloku. NL Zyskaj 1 runesmith:Terra."
+  },
+  "Runesmith:ShiftingStrike": {
+    "NAME": "Przemieszczające Uderzenie",
+    "DESCRIPTION": "Zadaj !D! pkt. obrażeń. NL runesmith:Zdeklasuj kartę ze swojej ręki. NL Ulepsz kartę ze swojej ręki."
+  },
+  "Runesmith:ChaoticBlast": {
+    "NAME": "Chaotyczny Wybuch",
+    "DESCRIPTION": "Zadaj !D! pkt. obrażeń WSZYSTKIM przeciwnikom. NL !M! każdego runesmith:Żywiołu: runesmith:Wykuj losową Runę.",
+    "UPGRADE_DESCRIPTION": "Zadaj !D! pkt. obrażeń WSZYSTKIM przeciwnikom. NL !M! każdego runesmith:Żywiołu: runesmith:Wykuj dwie losowe Runy.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "Runesmith:Shatterune": {
+    "NAME": "Roztrzaskanie",
+    "DESCRIPTION": "runesmith:Przełam swoją najstarszą runę X razy.",
+    "UPGRADE_DESCRIPTION": "runesmith:Przełam swoją najstarszą runę X+1 razy."
+  },
+  "Runesmith:Empowerment": {
+    "NAME": "Skok Energii",
+    "DESCRIPTION": "Zyskaj Siłę równą ilości runesmith:Ignis na tą turę. NL Zyskaj ilość pkt. Zręczności równą ilości runesmith:Terra na tą turę."
+  },
+  "Runesmith:RunicSmithing": {
+    "NAME": "Runiczne Kowalstwo",
+    "DESCRIPTION": "Za każdą runesmith:Wzmocnioną kartę, zyskaj 1 z każdego runesmith:Żywiołu.",
+    "UPGRADE_DESCRIPTION": "Startowa. NL Za każdą runesmith:Wzmocnioną kartę, zyskaj 1 z każdego runesmith:Żywiołu."
+  },
+  "Runesmith:Runesonance": {
+    "NAME": "Runzonans",
+    "DESCRIPTION": "Do następnej tury, twoje Runy aktywują się dwukrotnie. Wykluczenie.",
+    "UPGRADE_DESCRIPTION": "Do następnej tury, twoje Runy aktywują się dwukrotnie."
+  },
+  "Runesmith:Duplicate": {
+    "NAME": "Duplikat",
+    "DESCRIPTION": "Podczas tej tury stwórz kopię następnej runy jaka zostanie runesmith:Wykuta.",
+    "UPGRADE_DESCRIPTION": "Podczas tej tury stwórz kopię następnych !M! run jakie zostaną runesmith:Wykute."
+  },
+  "Runesmith:ConstructBifrost": {
+    "NAME": "Wykuj Bifrost",
+    "DESCRIPTION": "1 z każdego runesmith:Żywiołu: runesmith:Wykuj runę [#EFC851]Kamień [#EFC851]Pryzmatu.",
+    "UPGRADE_DESCRIPTION": "1 z każdego runesmith:Żywiołu: runesmith:Wykuj runę [#EFC851]Kamień [#EFC851]Pryzmatu+.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "Runesmith:CraftIndustria": {
+    "NAME": "Wykucie Kamienia Energii",
+    "DESCRIPTION": "!M! runesmith:Aqua: runesmith:Wykuj runę runesmith:Kamień Energii.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "Runesmith:CraftMedicinae": {
+    "NAME": "Wykucie Kamienia Leczenia",
+    "DESCRIPTION": "5 runesmith:Terra: runesmith:Wykuj runę runesmith:Kamień Leczenia z !Pot! pkt. runesmith:Potencji. NL Wykluczenie.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "Runesmith:LastStand": {
+    "NAME": "Ostatni Bastion",
+    "DESCRIPTION": "runesmith:Zdeklasuj WSZYSTKIE swoje karty. Utrać WSZYTSKIE runesmith:Żywioły. Pod koniec następnej tury zadaj ilość pkt. obrażeń WSZYSTKIM przeciwnikom równą !M! razy ilości wszystkich runesmith:Zdeklasowanych kart. NL Wykluczenie.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Zadaj !D! pkt. obrażeń)"
+    ]
+  },
+  "Runesmith:SpecialReserve": {
+    "NAME": "Specjalna Rezerwa",
+    "DESCRIPTION": "Zadaj !D! pkt. obrażeń i runesmith:Ustabilizuj !M! kart ze stosu kart rozgrywających."
+  },
+  "Runesmith:GenerateForcefield": {
+    "NAME": "Generacja Pola Siłowego",
+    "DESCRIPTION": "runesmith:Przełam X swoich najstarszych run niebędących niewypałami. Za każdą runesmith:Przełamaną Runę, zapobiegnij 1 raz otrzymaniu obrażeń. NL Wykluczenie.",
+    "UPGRADE_DESCRIPTION": "runesmith:Przełam X+1 swoich najstarszych run niebędących niewypałami. Za każdą runesmith:Przełamaną Runę, zapobiegnij 1 raz otrzymaniu obrażeń. NL Wykluczenie."
+  },
+  "Runesmith:Supernova": {
+    "NAME": "Supernowa",
+    "DESCRIPTION": "runesmith:Przełam WSZYTSKIE swoje runy. NL Dobierz 1 kartę i zyskaj [E] za każdą runesmith:Przełamaną Runę niebędącą niewypałem."
+  },
+  "Runesmith:CreatorForm": {
+    "NAME": "Forma Twórcy",
+    "DESCRIPTION": "Na początku każdej tury runesmith:Wzmocnij !M! kart."
+  },
+  "Runesmith:DuctTape": {
+    "NAME": "Taśma Klejąca",
+    "DESCRIPTION": "Na początku każdej tury runesmith:Ustabilizuj do !M! karty ze swojej ręki.",
+    "UPGRADE_DESCRIPTION": "Na początku każdej tury runesmith:Ustabilizuj do !M! kart ze swojej ręki."
+  },
+  "Runesmith:MetallurgicalResearch": {
+    "NAME": "Badania Metalurgiczne",
+    "DESCRIPTION": "runesmith:Zdeklasuj WSZYSTKIE swoje karty. NL Po !M! turach Ulepsz i runesmith:Wzmocnij WSZYSTKIE swoje karty. NL Wykluczenie."
+  },
+  "Runesmith:ArmorUp": {
+    "NAME": "Dodaktowa Zbroja",
+    "DESCRIPTION": "Zyskaj ilość pkt. Bloku równą !M! razy ilości kart runesmith:Wzmocnionych podczas tej potyczki."
+  },
+  "Runesmith:Border Wall": {
+    "NAME": "Mur",
+    "DESCRIPTION": "Zyskaj !B! pkt. Bloku. 4 runesmith:Terra: runesmith:Wykuj 2 runy runesmith:Kamienie Obrony z !Pot! pkt. runesmith:Potencji."
+  },
+  "Runesmith:RuneMagnet": {
+    "NAME": "Runiczny Magnes",
+    "DESCRIPTION": "Dobieraj karty dopóki nie trafisz na kartę runesmith:Wykucia. NL Odrzuć wszystkie pozostałe dobrane karty. NL Wykluczenie."
+  },
+  "Runesmith:ThatsALotOfDamage": {
+    "NAME": "That's A Lot Of DAMAGE!",
+    "DESCRIPTION": "Przepoławia ilość PŻ i pkt. Bloku przeciwnika. NL Wykluczenie.",
+    "UPGRADE_DESCRIPTION": "Przepoławia ilość PŻ i pkt. Bloku przeciwnika. NL Startowa. NL Wykluczenie."
+  },
+  "Runesmith:CraftMagma": {
+    "NAME": "Wykucie Kamienia Magmy",
+    "DESCRIPTION": "2 runesmith:Ignis 1 runesmith:Terra: runesmith:Wykuj runę runesmith:Kamień Magmy z !Pot! pkt. runesmith:Potencji.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "Runesmith:Rearm": {
+    "NAME": "Dozbrojenie",
+    "DESCRIPTION": "Wtasuj wszystkie Ulepszone lub runesmith:Wzmocnione karty ze stosu kart odrzuconych do stosu kart rozgrywających.  NL Dobierz !M! karty."
+  },
+  "Runesmith:UnlimitedPower": {
+    "NAME": "Nieograniczona Moc",
+    "DESCRIPTION": "runesmith:Żywioły nie są zużywane podczas runesmith:Wykucia.",
+    "UPGRADE_DESCRIPTION": "Startowa. NL runesmith:Żywioły nie są zużywane podczas runesmith:Wykucia."
+  },
+  "Runesmith:WhiteBalance": {
+    "NAME": "Balans Bieli",
+    "DESCRIPTION": "Zadaj ilość pkt. obrażeń równą !M! razy ilości runesmith:Żywiołów zyskanych podczas tej tury.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Zadaj !D! pkt. obrażeń.)"
+    ]
+  },
+  "Runesmith:GrandSlam": {
+    "NAME": "Potężne Walnięcie",
+    "DESCRIPTION": "Zadaj !D! pkt. obrażeń. NL runesmith:Wzmocnij wszystkie karty ze swojej ręki.",
+    "UPGRADE_DESCRIPTION": "Zadaj !D! pkt. obrażeń. NL Dwukrotnie runesmith:Wzmocnij wszystkie karty ze swojej ręki."
+  },
+  "Runesmith:GoWithTheFlow": {
+    "NAME": "Płyń Z Nurtem",
+    "DESCRIPTION": "Zadaj !D! pkt. obrażeń. NL Zyskaj !M! runesmith:Aqua. NL Zyskaj 1 pkt. runesmith:Potencji. NL Wykluczenie."
+  },
+  "Runesmith:PerfectChisel": {
+    "NAME": "Doskonałe Dłuto",
+    "DESCRIPTION": "Zadaj !D! pkt. obrażeń. NL Zyskaj 1 z każdego runesmith:Żywiołu. NL Zyskaj !M! pkt. runesmith:Potencji na tą turę."
+  },
+  "Runesmith:DoubleUp": {
+    "NAME": "Podwójny Zysk",
+    "DESCRIPTION": "Zyskaj !B! pkt. Bloku. NL Ulepsz i runesmith:Wzmocnij !M! kartę z ręki.",
+    "UPGRADE_DESCRIPTION": "Zyskaj !B! pkt. Bloku. NL Ulepsz i runesmith:Wzmocnij !M! karty z ręki."
+  },
+  "Runesmith:Refinement": {
+    "NAME": "Udoskonalenie",
+    "DESCRIPTION": "runesmith:Wzmocnij kartę X razy. NL Refund 1.",
+    "UPGRADE_DESCRIPTION": "runesmith:Wzmocnij kartę X+1 razy. NL Refund 1."
+  },
+  "Runesmith:Permafrost": {
+    "NAME": "Wieczna Zmarzlina",
+    "DESCRIPTION": "Na początku swojej tury, utrać najwyżej połowę pkt. Bloku. NL Zyskaj 1 runesmith:Terra i 1 runesmith:Aqua."
+  },
+  "Runesmith:Reinforce": {
+    "NAME": "Zbrojenie",
+    "DESCRIPTION": "Ulepsz wszystkie karty w ręce. NL Wykluczenie.",
+    "UPGRADE_DESCRIPTION": "Ulepsz i runesmith:Wzmocnij wszystkie karty z ręki. NL Wykluczenie."
+  },
+  "Runesmith:HeatExchange": {
+    "NAME": "Wymiana Ciepła",
+    "DESCRIPTION": "Zadaj !D! pkt. obrażeń WSZYSTKIM przeciwnikom. NL Ta karta zyskuje dodatkowe !M! pkt. obrażeń za każdy runesmith:Ignis jaki posiadasz. NL Utrać 1 runesmith:Ignis.",
+    "UPGRADE_DESCRIPTION": "Zadaj !D! pkt. obrażeń WSZYSTKIM przeciwnikom. NL Ta karta zyskuje dodatkowe !M! pkt. obrażeń za każdy runesmith:Ignis jaki posiadasz. NL Utrać 1 runesmith:Ignis."
+  },
+  "Runesmith:PoweredAnvil": {
+    "NAME": "Turbokowadło",
+    "DESCRIPTION": "Za każdym razem gdy karta zostanie runesmith:Wzmocniona, runesmith:Wzmocnij ją 1 dodatkowy raz.",
+    "UPGRADE_DESCRIPTION": "Startowa. NL Za każdym razem gdy karta zostanie runesmith:Wzmocniona, runesmith:Wzmocnij ją 1 dodatkowy raz."
+  },
+  "Runesmith:Malloc": {
+    "NAME": "Malloc",
+    "DESCRIPTION": "runesmith:Zdeklasuj wszytskie karty z ręki. NL Zyskaj [E] [E].",
+    "UPGRADE_DESCRIPTION": "runesmith:Zdeklasuj wszytskie karty z ręki. NL Zyskaj [E] [E] [E]."
+  },
+  "Runesmith:Preparation": {
+    "NAME": "Przygotowania",
+    "DESCRIPTION": "Zyskaj !M! z każdego runesmith:Żywiołu. NL Dobierz 1 kartę. NL Może zostać Ulepszona do 4 razy. NL Wyklucz."
+  },
+  "Runesmith:FrozenChisel": {
+    "NAME": "Zamrożone Dłuto",
+    "DESCRIPTION": "Zadaj !D! pkt. obrażeń. NL Nałóż 1 Ślamazarność. NL Przeciwnik utraci Ślamazarność za !M! tur. NL ZYskaj 1 runesmith:Terra i 1 runesmith:Aqua."
+  },
+  "Runesmith:Accelerate": {
+    "NAME": "Przyspieszenie",
+    "DESCRIPTION": "Zyskaj !B! pkt Bloku. NL Dobierz 1 kartę. NL runesmith:Przełam swoją najstarszą Runę by dobrać !M! kolejne karty."
+  },
+  "Runesmith:NanitesCloud": {
+    "NAME": "Chmura Nanobotów",
+    "DESCRIPTION": "WSZYSTKIE postaci tracą !M! pkt. Siły na tą turę. NL Wykluczenie."
+  },
+  "Runesmith:Overpower": {
+    "NAME": "Obezwładnienie",
+    "DESCRIPTION": "Zadaj !D! pkt. obrażeń. NL runesmith:Zdeklasuj 2 losowe karty z ręki."
+  },
+  "Runesmith:HammerAndChisel": {
+    "NAME": "Młot i Dłuto",
+    "DESCRIPTION": "Dodaj losową kartę Młota i losową kartę Dłuta na rękę. Ich kosz jest obniżony o 1 na czas tej potyczki. NL Wykluczenie.",
+    "UPGRADE_DESCRIPTION": "Dodaj losową ulepszoną kartę Młota i losową ulepszoną kartę Dłuta na rękę. Ich kosz jest obniżony o 1 na czas tej potyczki. NL Wykluczenie."
+  },
+  "Runesmith:Firewall": {
+    "NAME": "Firewall",
+    "DESCRIPTION": "Zyskaj !B! pkt. Bloku. NL 3 runesmith:Ignis: runesmith:Wykuj 2 runy runesmith:Kamienie Ognia z !Pot! pkt. runesmith:Potencji.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "Runesmith:Discharge": {
+    "NAME": "Rozładowanie",
+    "DESCRIPTION": "runesmith:Przełam swoją najstarszą niebędącą niewypałem by zyskać !B! pkt. Bloku, zadać !D! pkt. obrażeń i runesmith:Wykuć runę runesmith:Niewypału."
+  },
+  "Runesmith:Attraction": {
+    "NAME": "Przyciąganie",
+    "DESCRIPTION": "Dobieraj i odrzucaj karty niebędące Wykuciem, dopóki nie trafisz na kartę runesmith:Wykucia lub dopóki nie skończyły się karty w stosie kart rozgrywających."
+  },
+  "Runesmith:ArcReactor": {
+    "NAME": "Reaktor Łukowy",
+    "DESCRIPTION": "Zyskaj !M! pkt. runesmith:Potencji. Za każdym razem kiedy runa zostanie runesmith:Wykuta, utrać 1 pkt. runesmith:Potencji."
+  },
+  "Runesmith:ReplicatingBarrier": {
+    "NAME": "Odnawialna Bariera",
+    "DESCRIPTION": "2 runesmith:Terra: runesmith:Wykuj runę runesmith:Kamień Obrony z !Pot! pkt. runesmith:Potencji. NL Co 2 tury, 2 runesmith:Terra: runesmith:Wykuj runę runesmith:Kamień Obrony z !Pot! pkt. runesmith:Potencji."
+  },
+  "Runesmith:TimeMachine_old": {
+    "NAME": "Time Machine",
+    "DESCRIPTION": "Zapisz ilość swoich PŻ, pkt. Bloku i runesmith:Żywiołów. NL Dodaj Podróż w Czasie na rękę. NL Wykluczenie.",
+    "UPGRADE_DESCRIPTION": "Zapisz ilość swoich PŻ, pkt. Bloku i runesmith:Żywiołów. NL Dodaj Podróż w Czasie na rękę. NL Startowa. NL Wykluczenie."
+  },
+  "Runesmith:TimeMachine": {
+    "NAME": "Time Machine",
+    "DESCRIPTION": "Zapisz ilość swoich PŻ, pkt. Bloku i runesmith:Żywiołów na !M! tur. NL Dodaj Podróż w Czasie na rękę. NL Wykluczenie.",
+    "UPGRADE_DESCRIPTION": "Startowa. NL Zapisz ilość swoich PŻ, pkt. Bloku i runesmith:Żywiołów na !M! tur. NL Dodaj Podróż w Czasie na rękę. NL Wykluczenie."
+  },
+  "Runesmith:TimeTravel_old": {
+    "NAME": "Podróż w Czasie",
+    "DESCRIPTION": "Ustaw ilość PŻ, pkt. Bloku i runesmith:Żywiołów na zapisane wartości. NL Purge."
+  },
+  "Runesmith:TimeTravel": {
+    "NAME": "Podróż w Czasie",
+    "DESCRIPTION": "Ustaw ilość PŻ, pkt. Bloku i runesmith:Żywiołów na zapisane wartości. NL Wykluczenie."
+  },
+  "Runesmith:Electrocute": {
+    "NAME": "Porażenie Prądem",
+    "DESCRIPTION": "Zadaj !D! pkt. obrażeń. NL Otrzymaj !M! pkt. obrażeń. NL runesmith:Ustabilizuj kartę ze stosu kart rozgrywających."
+  },
+  "Runesmith:FissionHammer": {
+    "NAME": "Rozszczepiający Młot",
+    "DESCRIPTION": "Zadaj !D! pkt. obrażeń. NL Zadaj !D! pkt. obrażeń WSZYSTKIM przeciwnikom. NL Dwukrotnie runesmith:Przełam swoją najstarszą Runę."
+  },
+  "Runesmith:Augmentation": {
+    "NAME": "Powiększenie",
+    "DESCRIPTION": "Zyskaj !B! pkt. Bloku. NL Utrać całą runesmith:Aqua. NL Zyskaj 1 Hart za każde 2 utracone runesmith:Aqua. NL Wykluczenie.",
+    "UPGRADE_DESCRIPTION": "Zyskaj !B! pkt. Bloku. NL Utrać połowę runesmith:Aqua. NL Zyskaj 1 Hart za każdą utraconą runesmith:Aqua. NL Wykluczenie."
+  },
+  "Runesmith:ChargedHammer": {
+    "NAME": "Naładowany Młot",
+    "DESCRIPTION": "Zadaj !D! pkt. obrażeń. NL Wydaj !M! losowe runesmith:Żywioły i runesmith:Przełam najstarszy runesmith:Niewypał by runesmith:Wykuć losową runę niebędącą Niewypałem."
+  },
+  "Runesmith:Devolution": {
+    "NAME": "Dewolucja",
+    "DESCRIPTION": "Niezagrywalna. NL Pod koniec tury runesmith:Zdeklasuj wszystkie karty z ręki."
+  }
+}

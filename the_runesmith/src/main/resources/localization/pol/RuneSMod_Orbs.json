@@ -1,0 +1,82 @@
+{
+  "Firestone": {
+    "NAME": "Kamień ognia",
+    "DESCRIPTION": [
+      "Na koniecu tury zadaje #b{Pot} pkt. obrażeń losowemu przeciwnikowi."
+    ]
+  },
+  "Protectio": {
+    "NAME": "Kamień obrony",
+    "DESCRIPTION": [
+      "Na koniecu tury daje #b{Pot} pkt. #yBloku."
+    ]
+  },
+  "Incendium": {
+    "NAME": "Kamień eksplozji",
+    "DESCRIPTION": [
+      "Na koniecu tury zadaje #b{Pot} pkt. obrażeń WSZYSTKIM przeciwnikom."
+    ]
+  },
+  "Reservo": {
+    "NAME": "Kamień rezerwy",
+    "DESCRIPTION": [
+      "Na końcu tury #yZachowaj do #b1 karty. NL #yPrzełam: #yZachowaj do #b2 kart. Efekt zanika na końcu tury.",
+      "Na końcu tury #yZachowaj do #b2 kart. NL #yPrzełam: #yZachowaj do #b2 kart. Efekt zanika na końcu tury."
+    ]
+  },
+  "Spiculum": {
+    "NAME": "Kamień kłucia",
+    "DESCRIPTION": [
+      "Daje #b{Pot} pkt. #yCierni. NL #yPrzełam: Daje kolejne #b{Pot} pkt. #yCierni na końcu tury zanika ich podwójna ilość."
+    ]
+  },
+  "Potentia": {
+    "NAME": "Kamień potencji",
+    "DESCRIPTION": [
+      "Daje #b{Pot} pkt. #yPotencji. NL #yPrzełam: Daje kolejne #b{Pot} pkt. #yPotencji na końcu tury zanika ich podwójna ilość."
+    ]
+  },
+  "Ferro": {
+    "NAME": "Kamień pancerza",
+    "DESCRIPTION": [
+      "Brak efektu co turę. NL #yPrzełam: Ustawia wartość #yOpancerzenia na co najmniej #b{2Pot}."
+    ]
+  },
+  "Prismatic": {
+    "NAME": "Kamień pryzmatu",
+    "DESCRIPTION": [
+      "Na początku tury daje losową kartę.",
+      "Na początku tury daje losową #yUlepszoną kartę."
+    ]
+  },
+  "Industria": {
+    "NAME": "Kamień energii",
+    "DESCRIPTION": [
+      "Na początku tury daje [E] ."
+    ]
+  },
+  "Medicinae": {
+    "NAME": "Kamień leczenia",
+    "DESCRIPTION": [
+      "#yPrzełam: Leczy {Pot} PŻ dwukrotnie."
+    ]
+  },
+  "Dud": {
+    "NAME": "Niewypał",
+    "DESCRIPTION": [
+      "Brak efektu."
+    ]
+  },
+  "Magma": {
+    "NAME": "Kamień magmy",
+    "DESCRIPTION": [
+      "Na końcu tury zadaje #b{Pot} damage and gain #b{Pot2} #yBlock."
+    ]
+  },
+  "WWWWWWWWWWWWWW": {
+    "NAME": "ŁŁŁŁŁŁŁŁŁŁŁŁŁŁŁŁŁŁŁŁŁŁŁŁŁŁŁ",
+    "DESCRIPTION": [
+      "ŁŁŁŁŁŁŁŁŁŁŁŁŁŁŁŁŁŁŁŁŁŁŁŁŁŁŁ"
+    ]
+  }
+}

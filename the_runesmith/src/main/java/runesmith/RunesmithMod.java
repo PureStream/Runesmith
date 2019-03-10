@@ -148,14 +148,17 @@ public class RunesmithMod implements PostExhaustSubscriber,
     public void receiveEditStrings() {
         logger.info("start editing strings");
 
+        logger.info("Insert ENG strings");
+        loadStrings("eng");
+
         String language = Settings.language.toString();
-        try {
-            logger.info("Insert " + language + " strings");
-            loadStrings(language.toLowerCase());
-        } catch (GdxRuntimeException e) {
-            logger.info(language + " json files not found. \nInsert ENG strings instead.");
-            loadStrings("eng");
-        }
+        if (!language.equals("ENG"))
+            try {
+                logger.info("Insert " + language + " strings");
+                loadStrings(language.toLowerCase());
+            } catch (GdxRuntimeException e) {
+                logger.info(language + " json files not found.");
+            }
 
         logger.info("done editing strings");
     }
@@ -175,14 +178,19 @@ public class RunesmithMod implements PostExhaustSubscriber,
     @Override
     public void receiveEditKeywords() {
         logger.info("Setting up custom keywords");
+
+        logger.info("Insert ENG keywords.");
+        loadKeywords("eng");
+
         String language = Settings.language.name();
-        try {
-            logger.info("Insert " + language + " keywords.");
-            loadKeywords(language.toLowerCase());
-        } catch (GdxRuntimeException e) {
-            logger.info(language + " keywords not found. \nInsert ENG keywords instead.");
-            loadKeywords("eng");
-        }
+        if (!language.equals("ENG"))
+            try {
+                logger.info("Insert " + language + " keywords.");
+                loadKeywords(language.toLowerCase());
+            } catch (GdxRuntimeException e) {
+                logger.info(language + " keywords not found.");
+            }
+
         logger.info("Keywords setting finished.");
     }
 
