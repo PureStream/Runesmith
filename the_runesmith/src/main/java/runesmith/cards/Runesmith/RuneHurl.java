@@ -54,6 +54,10 @@ public class RuneHurl extends CustomCard {
             return;
         }
 
+        AbstractDungeon.actionManager.addToBottom(
+                new BreakRuneAction(r)
+        );
+
         AbstractDungeon.actionManager.addToTop(
                 new DamageAction(
                         m,
@@ -61,11 +65,6 @@ public class RuneHurl extends CustomCard {
                         AbstractGameAction.AttackEffect.BLUNT_HEAVY
                 )
         );
-
-        AbstractDungeon.actionManager.addToBottom(
-                new BreakRuneAction(r)
-        );
-
     }
 
     public AbstractCard makeCopy() {
