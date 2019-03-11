@@ -1,0 +1,66 @@
+{
+  "Runesmith:BrokenRuby": {
+	"NAME": "부서진 루비",
+	"FLAVOR": "붉은 보석을 닮은 크리스탈입니다. 비록 부서졌지만 희미하나마 에너지가 남아있습니다.",
+	"DESCRIPTIONS": [
+	  "전투가 시작할 때 #yrunesmith:화염 을 #b1 얻습니다. 공격 카드를 3번 낼 때 마다 #yrunesmith:화염 을 #b1 얻습니다."
+	]
+  },
+  "Runesmith:MiniCore": {
+	"NAME": "소형 코어",
+	"FLAVOR": "이 독특한 구체는 에너지 저장 공간으로 활용된 적이 있습니다.",
+	"DESCRIPTIONS": [
+	  "전투가 시작할 때 #yrunesmith:잠재력 을 1 얻습니다."
+	]
+  },
+  "Runesmith:Nanobots": {
+	"NAME": "나노봇",
+	"FLAVOR": "\"이 작은 기계들이 어찌나 일을 잘하던지요.\" -랜위드",
+	"DESCRIPTIONS": [
+	  "전투가 시작할 때 내 손에 있는 모든 카드를 #yrunesmith:향상 시킵니다."
+	]
+  },
+  "Runesmith:UraniumAnvil": {
+	"NAME": "우라늄 모루",
+	"FLAVOR": "이 쇳덩이는 강력한 에너지로 가득하지만 근처로 오는 자들의 힘을 약화시킵니다.",
+	"DESCRIPTIONS": [
+	  "내 턴이 시작할 때 내 덱에 있는 무작위 카드 한 장을 #yrunesmith:퇴화 시킵니다.",
+      "매 턴 시작 시 [E] 를 추가로 얻습니다."
+	]
+  },
+  "Runesmith:Locket": {
+	 "NAME": "로켓",
+	 "FLAVOR": "무엇인지는 알 수 없지만 친숙한 모습이 들어 있는 로켓입니다.",
+	 "DESCRIPTIONS": [
+	  "매 전투마다 한 번 내 체력이 15% 아래로 떨어질 때 최후의 저항 카드를 뽑기 카드 더미 맨 위에 추가합니다."
+	]
+  },
+  "Runesmith:AutoHammer": {
+	 "NAME": "자동망치",
+	 "FLAVOR": "절대 망치질을 멈추지 않는 자동 망치 입니다.",
+	 "DESCRIPTIONS": [
+	  "#b한 턴에 스킬 카드 #b3 장을 사용할 때 마다 손에 있는 무작위 카드를 #y향상 시킵니다."
+	]
+  },
+  "Runesmith:EmergencyProvisions": {
+	 "NAME": "비상 식량",
+	 "FLAVOR": "영양가, 경량화 포장에 신경 쓴 실전 압축 식량입니다.",
+	 "DESCRIPTIONS": [
+	  "#yrunesmith:제련 카드를 사용할 때 마다 무작위 #yrunesmith:원소 를 #b1 얻습니다."
+	]
+  },
+  "Runesmith:PocketReactor": {
+    "NAME": "휴대용 반응로",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "#yrunesmith:제련 할 때 더 이상 #yrunesmith:원소 를 사용하지 않습니다. 모든 카드가 #b2 #yrunesmith:잠재력 을 잃습니다. "
+    ]
+  },
+  "Runesmith:CoreCrystal": {
+    "NAME": "코어 크리스탈",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "#r부서진 #r루비 를 대체합니다. 모든 #yrunesmith:원소 의 획득량이 #b50% 증가합니다. #yrunesmith:원소 의 최대 보유량이 #b20 으로 증가합니다."
+    ]
+  }
+}

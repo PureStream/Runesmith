@@ -1,0 +1,178 @@
+{
+  "Runesmith:IgnisPower": {
+    "NAME": "火素",
+    "DESCRIPTIONS": [
+      "你当前拥有 #b",
+      " 点 ","#y火素 。"
+    ]
+  },
+  "Runesmith:TerraPower": {
+    "NAME": "Terra",
+    "DESCRIPTIONS": [
+      "你当前拥有 #b",
+      " 点 "," #y土素 。"
+    ]
+  },
+  "Runesmith:AquaPower": {
+    "NAME": "水素",
+    "DESCRIPTIONS": [
+      "你当前拥有 #b",
+      " 点 "," #y水素 。"
+    ]
+  },
+  "Runesmith:GrindstonePower": {
+    "NAME": "磨刀石",
+    "DESCRIPTIONS": [
+      "本回合, 将你所有打出的牌 升级 ，已 #y升级 的牌则 #y强化 。",
+      "接下来 #b",
+      " 个回合, 将你所有打出的牌 升级 ，已 #y升级 的牌则 #y强化 。"
+    ]
+  },
+  "Runesmith:FirestormPower": {
+    "NAME": "烈焰风暴",
+    "DESCRIPTIONS": [
+      "回合开始时，获得 #b",
+      " 点 #y水素 和 #b",
+      " 点 #y土素 。"
+    ]
+  },
+  "Runesmith:DuplicatePower": {
+    "NAME": "复制品",
+    "DESCRIPTIONS": [
+      "复制本回合下 #b",
+      " 个符文。",
+      " 个符文。"
+    ]
+  },
+  "Runesmith:PotentialPower": {
+    "NAME": "动力",
+    "DESCRIPTIONS": [
+      "增加 打造 牌的 #b 点 #y动能 。",
+      "降低 打造 牌的 #b 点 #y动能 。",
+      "."
+    ]
+  },
+  "Runesmith:ArcReactorPower": {
+    "NAME": "辐射",
+    "DESCRIPTIONS": [
+      "每当你 #y打造 一个符文，失去 #b",
+      " 点 #y动能 。"
+    ]
+  },
+  "Runesmith:UnlimitedPowerPower": {
+    "NAME": "无限能量",
+    "DESCRIPTIONS": [
+      " #y打造 符文不再消耗 #y元素 。"
+    ]
+  },
+  "Runesmith:RunesonancePower": {
+    "NAME": "谐振",
+    "DESCRIPTIONS": [
+      "本回合， #y激发 你的符文两次",
+      "接下来 #b",
+      " 个回合，#y激发 你的符文两次"
+    ]
+  },
+  "Runesmith:ReservoPower": {
+    "NAME": "保留",
+    "DESCRIPTIONS": [
+      "回合结束时。你可以 #y保留 #b",
+      " 张牌。",
+      " 张牌。"
+    ]
+  },
+  "Runesmith:DuctTapePower": {
+    "NAME": "管道胶带",
+    "DESCRIPTIONS": [
+      "你的回合开始时 #y凝滞 #b",
+      " 张牌。",
+      " 张牌。"
+    ]
+  },
+  "Runesmith:SpiculumDownPower": {
+    "NAME": "蜕刺",
+    "DESCRIPTIONS": [
+      "你下回合开始时， 失去 #b",
+      " 层 #y荆棘 。"
+    ]
+  },
+  "Runesmith:PotentialDownPower": {
+    "NAME": "动能下降",
+    "DESCRIPTIONS": [
+      "回合结束时，失去 #b",
+      " 点动能。"
+    ]
+  },
+  "Runesmith:MetallurgicalResearchPower": {
+    "NAME": "冶金研究",
+    "DESCRIPTIONS": [
+      " 在 #b",
+      " 个回合内， #y升级 并 #y强化 你的所有牌 。",
+      " 个回合内， #y升级 并 #y强化 你的所有牌 。"
+    ]
+  },
+  "Runesmith:PermafrostPower": {
+    "NAME": "永久冻土",
+    "DESCRIPTIONS": [
+      "回合开始时，最多失去一半的 #y格挡 。",
+      "回合开始时，最多失去一半的 #y格挡 。"
+    ]
+  },
+  "Runesmith:CreatorFormPower": {
+    "NAME": "创造形态",
+    "DESCRIPTIONS": [
+      " 你的回合开始时，强化 #b",
+      " 张牌。",
+      " 张牌。"
+    ]
+  },
+  "Runesmith:PoweredAnvilPower": {
+    "NAME": "动力铁砧",
+    "DESCRIPTIONS": [
+      "当你 #y强化 一张牌后， 额外 #y强化 #b",
+      " 次 。",
+      " 次 。"
+    ]
+  },
+  "Runesmith:IceColdPower": {
+    "NAME": "冰冷",
+    "DESCRIPTIONS": [
+      "在 #b",
+      " 个回合后，解冻并失去 #y缓慢 。",
+      " 个回合后，解冻并失去 #y缓慢 。"
+    ]
+  },
+  "Runesmith:ReplicatingBarrierPower": {
+    "NAME": "复制障碍",
+    "DESCRIPTIONS": [
+      "在 #b",
+      " 个回合，",
+      " 个回合，",
+      " 用 2 个 #y土素 和 #b",
+      " 点 #y动能 来 打造 #y动力 符文"
+    ]
+  },
+  "Runesmith:TimeMachinePower": {
+    "NAME": "虫洞",
+    "DESCRIPTIONS": [
+      "保存 #b",
+      " 点 #r生命 ， NL  #b",
+      " 点 #b格挡 ， NL  #b",
+      " 点 #y火素 ， NL  #b",
+      " 点 #y土素 ， NL  #b",
+      " 点 #y水素 ，",
+      " NL 但在 #b",
+      " 回合后 #y过期 。",
+      " 回合后 #y过期 。"
+    ]
+  },
+  "Runesmith:LastStandPower": {
+    "NAME": "最后机会",
+    "DESCRIPTIONS": [
+      " #y下回合 结束时， ",
+      " #y本回合 结束时， ",
+      " 对所有敌人造成 #b",
+      " 点伤害。"
+    ]
+  }
+}

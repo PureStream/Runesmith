@@ -1,0 +1,66 @@
+{
+  "Runesmith:BrokenRuby": {
+    "NAME": "破碎红宝石",
+    "FLAVOR": "一种类似红色宝石的水晶。 虽然它被打破了，但仍然存在微弱的能量。",
+    "DESCRIPTIONS": [
+      "每场战斗开始, 获得 #b1 点  #yrunesmith:火素 。 NL 每打出三张攻击牌，获得 #b1 点  #yrunesmith:火素 。"
+    ]
+  },
+  "Runesmith:MiniCore": {
+    "NAME": "迷你核心",
+    "FLAVOR": "这种奇特的球体曾被用作储能器。",
+    "DESCRIPTIONS": [
+      "每场战斗开始，获得 1 层 #yrunesmith:动能 。"
+    ]
+  },
+  "Runesmith:Nanobots": {
+    "NAME": "纳米机器人",
+    "FLAVOR": "\"这些小机器具有奇妙的性能。\" -兰伟德",
+    "DESCRIPTIONS": [
+      "每场战斗开始， #yrunesmith:强化 你的所有手牌。"
+    ]
+  },
+  "Runesmith:UraniumAnvil": {
+    "NAME": "铀铁砧",
+    "FLAVOR": "这块金属拥有巨大的能量，但会削弱任何靠近它的人。",
+    "DESCRIPTIONS": [
+      " 你的回合开始时，随机 #yrunesmith:降级 抽牌堆，手牌或弃牌堆的一张牌。",
+      "获得 [E] "
+    ]
+  },
+  "Runesmith:Locket": {
+    "NAME": "小盒",
+    "FLAVOR": "未知但熟悉的形象的图像存在于其中。",
+    "DESCRIPTIONS": [
+      "每场战斗一次, 如果你的血量低于 #b15%, 在你的抽牌堆顶部加入 最后机会 。"
+    ]
+  },
+  "Runesmith:AutoHammer": {
+    "NAME": "自动锤",
+    "FLAVOR": "永不停止锤击的自动锤。",
+    "DESCRIPTIONS": [
+      "每回合内你每打出 #b3 张技能牌，随机 #yrunesmith:强化 一张你手牌。"
+    ]
+  },
+  "Runesmith:EmergencyProvisions": {
+    "NAME": "紧急背包",
+    "FLAVOR": "一个自给自足的, 私人领域的轻量级配给背包。",
+    "DESCRIPTIONS": [
+      "每当你打出一张 #yrunesmith:打造 牌, 获得 #b1 点随机 #yrunesmith:元素 。"
+    ]
+  },
+  "Runesmith:PocketReactor": {
+    "NAME": "袖珍反应堆",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      " #yrunesmith:元素 不止能用于 runesmith:打造。 所有的牌失去 #b2 点 #yrunesmith:动能 。"
+    ]
+  },
+  "Runesmith:CoreCrystal": {
+    "NAME": "核心水晶",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "替换 #r破碎红宝石 。 全部 #yrunesmith:元素 获得增加 #b50% 。 增加最大 #yrunesmith:元素 上限到 #b20 点。"
+    ]
+  }
+}
