@@ -9,14 +9,14 @@
   },
   "Runesmith:CraftFirestone": {
     "NAME": "Wykucie Kamienia Ognia",
-    "DESCRIPTION": "1 runesmith:Ignis: runesmith:Wykuj runę runesmith:Kamień ognia z !Pot! pkt. runesmith:Potencji.",
+    "DESCRIPTION": "1 runesmith:Ignis: runesmith:Wykuj runę runesmith:Kamień_ognia z !Pot! pkt. runesmith:Potencji.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
   },
   "Runesmith:CraftProtectio": {
     "NAME": "Wykucie Kamienia Obrony",
-    "DESCRIPTION": "2 runesmith:Terra: runesmith:Wykuj runę runesmith:Kamień obrony z !Pot! pkt. runesmith:Potencji.",
+    "DESCRIPTION": "2 runesmith:Terra: runesmith:Wykuj runę runesmith:Kamień_obrony z !Pot! pkt. runesmith:Potencji.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
@@ -51,7 +51,7 @@
   },
   "Runesmith:CraftIncendium": {
     "NAME": "Wykucie Kamienia Eksplozji",
-    "DESCRIPTION": "3 runesmith:Ignis: runesmith:Wykuj runę runesmith:Kamień eksplozji z !Pot! pkt. runesmith:Potencji.",
+    "DESCRIPTION": "3 runesmith:Ignis: runesmith:Wykuj runę runesmith:Kamień_eksplozji z !Pot! pkt. runesmith:Potencji.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
@@ -63,8 +63,8 @@
   },
   "Runesmith:ElementalConversion": {
     "NAME": "Cząstki Elementarne",
-    "DESCRIPTION": "Wybierz: runesmith:Rozpad Ignis, runesmith:Rozpad Terra lub runesmith:Rozpad Aqua.",
-    "UPGRADE_DESCRIPTION": "Wybierz: runesmith:Rozpad Ignis, runesmith:Rozpad Terra lub runesmith:Rozpad Aqua. NL Dobierz !M! kartę."
+    "DESCRIPTION": "Wybierz: Rozpad Ignis, Rozpad Terra lub Rozpad Aqua.",
+    "UPGRADE_DESCRIPTION": "Wybierz: Rozpad Ignis, Rozpad Terra lub Rozpad Aqua. NL Dobierz !M! kartę."
   },
   "Runesmith:ConvertIgnis": {
     "NAME": "Rozpad Ignis",
@@ -147,22 +147,22 @@
   },
   "Runesmith:CraftSpiculum": {
     "NAME": "Wykucie Kamienia Kłucia",
-    "DESCRIPTION": "1 runesmith:Ignis 1 runesmith:Aqua: runesmith:Wykuj runę runesmith:Kamień kłucia z !Pot! pkt. runesmith:Potencji. NL Wykluczenie.",
+    "DESCRIPTION": "1 runesmith:Ignis 1 runesmith:Aqua: runesmith:Wykuj runę runesmith:Kamień_kłucia z !Pot! pkt. runesmith:Potencji. NL Wykluczenie.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
   },
   "Runesmith:CraftPotentia": {
     "NAME": "Wykucie Kamienia Potencji",
-    "DESCRIPTION": "2 z każdego runesmith:Żywiołu: Usuń swoją nasjtarszą Runę i runesmith:Wykuj runę runesmith:Kamień Potencji z !Pot! pkt. runesmith:Potencji.",
+    "DESCRIPTION": "2 z każdego runesmith:Żywiołu: Usuń swoją nasjtarszą Runę i runesmith:Wykuj runę runesmith:Kamień_Potencji z !Pot! pkt. runesmith:Potencji.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
   },
   "Runesmith:CraftFerro": {
     "NAME": "Wykucie Kamienia Pancerza",
-    "DESCRIPTION": "2 runesmith:Terra 1 runesmith:Aqua: runesmith:Wykuj runę runesmith:Kamień Pancerza z !Pot! pkt. runesmith:Potencji.",
-    "UPGRADE_DESCRIPTION": "2 runesmith:Terra 1 runesmith:Aqua: runesmith:Wykuj runę runesmith:Kamień Pancerza z !Pot! pkt. runesmith:Potencji.",
+    "DESCRIPTION": "2 runesmith:Terra 1 runesmith:Aqua: runesmith:Wykuj runę runesmith:Kamień_Pancerza z !Pot! pkt. runesmith:Potencji.",
+    "UPGRADE_DESCRIPTION": "2 runesmith:Terra 1 runesmith:Aqua: runesmith:Wykuj runę runesmith:Kamień_Pancerza z !Pot! pkt. runesmith:Potencji.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
@@ -222,14 +222,14 @@
   },
   "Runesmith:CraftIndustria": {
     "NAME": "Wykucie Kamienia Energii",
-    "DESCRIPTION": "!M! runesmith:Aqua: runesmith:Wykuj runę runesmith:Kamień Energii.",
+    "DESCRIPTION": "!M! runesmith:Aqua: runesmith:Wykuj runę runesmith:Kamień_Energii.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
   },
   "Runesmith:CraftMedicinae": {
     "NAME": "Wykucie Kamienia Leczenia",
-    "DESCRIPTION": "5 runesmith:Terra: runesmith:Wykuj runę runesmith:Kamień Leczenia z !Pot! pkt. runesmith:Potencji. NL Wykluczenie.",
+    "DESCRIPTION": "5 runesmith:Terra: runesmith:Wykuj runę runesmith:Kamień_Leczenia z !Pot! pkt. runesmith:Potencji. NL Wykluczenie.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
@@ -271,7 +271,7 @@
     "NAME": "Dodaktowa Zbroja",
     "DESCRIPTION": "Zyskaj ilość pkt. Bloku równą !M! razy ilości kart runesmith:Wzmocnionych podczas tej potyczki."
   },
-  "Runesmith:Border Wall": {
+  "Runesmith:BorderWall": {
     "NAME": "Mur",
     "DESCRIPTION": "Zyskaj !B! pkt. Bloku. 4 runesmith:Terra: runesmith:Wykuj 2 runy runesmith:Kamienie Obrony z !Pot! pkt. runesmith:Potencji."
   },
@@ -286,7 +286,7 @@
   },
   "Runesmith:CraftMagma": {
     "NAME": "Wykucie Kamienia Magmy",
-    "DESCRIPTION": "2 runesmith:Ignis 1 runesmith:Terra: runesmith:Wykuj runę runesmith:Kamień Magmy z !Pot! pkt. runesmith:Potencji.",
+    "DESCRIPTION": "2 runesmith:Ignis 1 runesmith:Terra: runesmith:Wykuj runę runesmith:Kamień_Magmy z !Pot! pkt. runesmith:Potencji.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
@@ -381,7 +381,7 @@
   },
   "Runesmith:Firewall": {
     "NAME": "Firewall",
-    "DESCRIPTION": "Zyskaj !B! pkt. Bloku. NL 3 runesmith:Ignis: runesmith:Wykuj 2 runy runesmith:Kamienie Ognia z !Pot! pkt. runesmith:Potencji.",
+    "DESCRIPTION": "Zyskaj !B! pkt. Bloku. NL 3 runesmith:Ignis: runesmith:Wykuj 2 runy runesmith:Kamienie_Ognia z !Pot! pkt. runesmith:Potencji.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
@@ -400,7 +400,7 @@
   },
   "Runesmith:ReplicatingBarrier": {
     "NAME": "Odnawialna Bariera",
-    "DESCRIPTION": "2 runesmith:Terra: runesmith:Wykuj runę runesmith:Kamień Obrony z !Pot! pkt. runesmith:Potencji. NL Co 2 tury, 2 runesmith:Terra: runesmith:Wykuj runę runesmith:Kamień Obrony z !Pot! pkt. runesmith:Potencji."
+    "DESCRIPTION": "2 runesmith:Terra: runesmith:Wykuj runę runesmith:Kamień_Obrony z !Pot! pkt. runesmith:Potencji. NL Co 2 tury, 2 runesmith:Terra: runesmith:Wykuj runę runesmith:Kamień_Obrony z !Pot! pkt. runesmith:Potencji."
   },
   "Runesmith:TimeMachine_old": {
     "NAME": "Time Machine",
