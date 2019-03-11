@@ -204,7 +204,7 @@ public abstract class AbstractRunicCard extends CustomCard {
                 font.getData().setScale(1.0F);
                 GlyphLayout gl = new GlyphLayout(font, craftableString[0]);
                 float scale = Math.min((82.0F*this.drawScale)/gl.width, (15.0F*this.drawScale)/gl.height);
-                FontHelper.menuBannerFont.getData().setScale(scale);
+                FontHelper.menuBannerFont.getData().setScale(scale*Settings.scale);
                 FontHelper.renderRotatedText(sb, FontHelper.menuBannerFont, craftableString[0], this.current_x, this.current_y, 0.0F, 429.0F * Settings.scale * this.drawScale / 2.0F, this.angle, true, this.textColor);
                 FontHelper.menuBannerFont.getData().setScale(1.0F);
             }
