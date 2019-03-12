@@ -39,8 +39,8 @@
   "Prismatic": {
     "NAME": "Prismatic",
     "DESCRIPTION": [
-      "At the start of turn, gain a random card.",
-      "At the start of turn, gain a random #yUpgraded card."
+      "At the start of turn, gain a random card. The card costs 0 this turn.",
+      "At the start of turn, gain a random #yUpgraded card. The card costs 0 this turn."
     ]
   },
   "Industria": {
@@ -65,6 +65,12 @@
     "NAME": "Magma",
     "DESCRIPTION": [
       "At the end of turn, Deal #b{Pot} damage and gain #b{Pot2} #yBlock."
+    ]
+  },
+  "Obretio": {
+    "NAME": "Obretio",
+    "DESCRIPTION": [
+      "At the end of turn, enemy with highest attack damage intent loses #b{Pot} #yStrength this turn."
     ]
   }
 }

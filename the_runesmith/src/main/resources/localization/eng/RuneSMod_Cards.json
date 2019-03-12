@@ -338,5 +338,17 @@
   "Runesmith:Devolution": {
     "NAME": "Devolution",
     "DESCRIPTION": "Unplayable. NL At the end of your turn, runesmith:Downgrade all cards in your hand."
+  },
+  "Runesmith:CraftObretio": {
+    "NAME": "Craft Obretio",
+    "DESCRIPTION": "2 runesmith:Terra 1 runesmith:Aqua: runesmith:Craft an runesmith:Obretio Rune with !Pot! runesmith:Potency."
+  },
+  "Runesmith:LightningRod": {
+    "NAME": "Lightning Rod",
+    "DESCRIPTION": "For !M! turns, you lose runesmith:Elements instead of HP. Gain 2 of each runesmith:Elements. The value is affected by runesmith:Potency."
+  },
+  "Runesmith:NegativeSpace": {
+    "NAME": "Negative Space",
+    "DESCRIPTION": "Deal !D! damage for each Rune. Gain !B! Block minus !M! for each Rune."
   }
 }

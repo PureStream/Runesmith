@@ -127,6 +127,13 @@
         "decay"
       ],
       "DESCRIPTION": "Do a certain effect depending on what #yElements selected and lose all selected #yElements then gain other #yElements equal to the lost amount."
+    },
+    {
+      "PROPER_NAME": "Obretio",
+      "NAMES": [
+        "obretio"
+      ],
+      "DESCRIPTION": "Rune: enemy with highest attack damage intent loses #yStrength this turn."
     }
   ]
 }
