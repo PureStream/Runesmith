@@ -14,7 +14,7 @@ public class RemoveRuneAndSlotAction extends AbstractGameAction {
 
     private RuneOrb rune;
 
-    public RemoveRuneAndSlotAction(RuneOrb runeToRemove) {
+    RemoveRuneAndSlotAction(RuneOrb runeToRemove) {
         this.duration = Settings.ACTION_DUR_FAST;
         this.actionType = ActionType.BLOCK;
         this.rune = runeToRemove;

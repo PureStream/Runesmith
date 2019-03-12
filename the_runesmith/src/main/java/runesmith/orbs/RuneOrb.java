@@ -34,6 +34,7 @@ public abstract class RuneOrb extends AbstractOrb {
     boolean showPotentialValue = true;
     public int potential;
     private String[] descriptions;
+    public static int runeCount = 0;
 
     public RuneOrb(String ID, boolean upgraded, int potential) {
         this.ID = ID;
@@ -156,6 +157,7 @@ public abstract class RuneOrb extends AbstractOrb {
     }
 
     public void onCraft() {
+        runeCount++;
         AbstractPlayer p = AbstractDungeon.player;
         if (p.hasPower(ArcReactorPower.POWER_ID)) {
             int decAmount = p.getPower(ArcReactorPower.POWER_ID).amount;
@@ -207,13 +209,6 @@ public abstract class RuneOrb extends AbstractOrb {
 
         renderText(sb);
         this.hb.render(sb);
-    }
-
-    public static int getRuneCount(AbstractPlayer p){
-        return (int) p.orbs
-                .stream()
-                .filter(o -> o instanceof RuneOrb)
-                .count();
     }
 
     public static int getMaxRune(AbstractPlayer p) {

@@ -349,6 +349,6 @@
   },
   "Runesmith:NegativeSpace": {
     "NAME": "Negative Space",
-    "DESCRIPTION": "Deal !D! damage for each Rune. Gain !B! Block minus !M! for each Rune."
+    "DESCRIPTION": "Gain !B! Block. NL Gain 3 less Block for each Rune you have. NL Deal !D! damage for each Rune."
   }
 }
