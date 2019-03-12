@@ -6,13 +6,5 @@
     "LABEL": [
       "Rune"
     ]
-  },
-  "Wormhole Tip": {
-    "TEXT": [
-      "There is no #r~Wormhole~ to travel through."
-    ],
-    "LABEL": [
-      "Time Travel"
-    ]
   }
 }

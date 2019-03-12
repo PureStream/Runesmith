@@ -2,10 +2,8 @@ package runesmith.orbs;
 
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -157,12 +155,6 @@ public abstract class RuneOrb extends AbstractOrb {
     public void onStartOfTurn() {
     }
 
-    public void onCardUse(AbstractCard c) {
-    }
-
-    public void onCardDraw(AbstractCard c) {
-    }
-
     public void onCraft() {
         AbstractPlayer p = AbstractDungeon.player;
         if (p.hasPower(ArcReactorPower.POWER_ID)) {
@@ -179,9 +171,6 @@ public abstract class RuneOrb extends AbstractOrb {
     }
 
     public void onRemove() {
-    }
-
-    public void atTurnStartPostDraw() {
     }
 
     @Override

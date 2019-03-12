@@ -61,8 +61,8 @@
     "TEXT": [
       "Prismatic",
       "Prismatic+",
-      "Rune: Give a random class card each turn.",
-      "Rune: Give a random upgraded class card each turn."
+      "Rune: Give a random class card at the start of your turn and on #yCraft.",
+      "Rune: Give a random upgraded class card at the start of your turn turn and on #yCraft."
     ]
   },
   "Runesmith:CraftReservo": {

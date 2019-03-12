@@ -55,8 +55,9 @@
   "Runesmith:ArcReactorPower": {
     "NAME": "Radiated",
     "DESCRIPTIONS": [
-      "Every time a rune is #yCrafted, lose #b",
-      " #yPotency."
+      "At the start of your turn, gain #b",
+      " #yPotency.",
+      " Whenever you #yCraft a Rune, lose #b"
     ]
   },
   "Runesmith:UnlimitedPowerPower": {
@@ -150,20 +151,6 @@
       " turn,",
       " 2 #yTerra: #yCraft a #yProtectio rune with #b",
       " Potency."
-    ]
-  },
-  "Runesmith:TimeMachinePower": {
-    "NAME": "Wormhole",
-    "DESCRIPTIONS": [
-      "Saved #b",
-      " HP, #b",
-      " #yBlock, #b",
-      " #yIgnis, #b",
-      " #yTerra, #b",
-      " #yAqua.",
-      " NL Expires in #b",
-      " turn.",
-      " turns."
     ]
   },
   "Runesmith:LastStandPower": {
