@@ -251,6 +251,10 @@ public class RunesmithMod implements PostExhaustSubscriber,
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
         AbstractPlayer p = AbstractDungeon.player;
         renderElementsCounter = p instanceof RunesmithCharacter;
+        if (p.hasRelic(CoreCrystal.ID))
+            ElementsCounter.setMaxElements(CoreCrystal.MAX_ELEMENTS);
+        else
+            ElementsCounter.setMaxElements(DEFAULT_MAX_ELEMENTS);
     }
 
     @Override
@@ -372,6 +376,8 @@ public class RunesmithMod implements PostExhaustSubscriber,
         cardsToAdd.add(new ChargedHammer());
 //        cardsToAdd.add(new Devolution());
         cardsToAdd.add(new NegativeSpace());
+        cardsToAdd.add(new LightningRod());
+        cardsToAdd.add(new UnstableHammer());
     }
 
     @Override

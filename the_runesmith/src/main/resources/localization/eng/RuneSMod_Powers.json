@@ -161,5 +161,11 @@
       " deal #b",
       " damage to ALL enemies."
     ]
+  },
+  "Runesmith:LightningRodPower": {
+    "NAME": "Magic Guard",
+    "DESCRIPTIONS": [
+      "Lose #yElements instead of HP."
+    ]
   }
 }
