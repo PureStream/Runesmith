@@ -1,4 +1,4 @@
-package runesmith.cards.Runesmith;
+package runesmith.cards.deprecated;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import runesmith.actions.RuneChannelAction;
+import runesmith.cards.Runesmith.AbstractRunicCard;
 import runesmith.orbs.FerroRune;
 import runesmith.patches.AbstractCardEnum;
 

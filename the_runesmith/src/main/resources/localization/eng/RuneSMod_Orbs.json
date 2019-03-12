@@ -36,23 +36,17 @@
       "Gain #b{Pot} #yPotency. NL #yBreak: Gain another #b{Pot} #yPotency then lose twice that at the end of turn."
     ]
   },
-  "Ferro": {
-    "NAME": "Ferro",
-    "DESCRIPTION": [
-      "No effect. NL #yBreak: Set #yPlated #yArmor to at least #b{2Pot}."
-    ]
-  },
   "Prismatic": {
     "NAME": "Prismatic",
     "DESCRIPTION": [
-      "At the start of turn, gain a random card.",
-      "At the start of turn, gain a random #yUpgraded card."
+      "At the start of turn, gain a random card. The card costs 0 this turn.",
+      "At the start of turn, gain a random #yUpgraded card. The card costs 0 this turn."
     ]
   },
   "Industria": {
     "NAME": "Industria",
     "DESCRIPTION": [
-      "At the start of turn, gain [E] ."
+      "At the start of turn, gain [E] and draw 1 card."
     ]
   },
   "Medicinae": {
@@ -73,10 +67,10 @@
       "At the end of turn, Deal #b{Pot} damage and gain #b{Pot2} #yBlock."
     ]
   },
-  "WWWWWWWWWWWWWW": {
-    "NAME": "WWWWWWWWWWWWWW",
+  "Obretio": {
+    "NAME": "Obretio",
     "DESCRIPTION": [
-      "WWWWWWWWWWWWWW"
+      "At the end of turn, enemy with highest attack damage intent loses #b{Pot} #yStrength this turn."
     ]
   }
 }

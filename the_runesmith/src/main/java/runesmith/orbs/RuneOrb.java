@@ -2,10 +2,8 @@ package runesmith.orbs;
 
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -36,6 +34,7 @@ public abstract class RuneOrb extends AbstractOrb {
     boolean showPotentialValue = true;
     public int potential;
     private String[] descriptions;
+    public static int runeCount = 0;
 
     public RuneOrb(String ID, boolean upgraded, int potential) {
         this.ID = ID;
@@ -157,13 +156,8 @@ public abstract class RuneOrb extends AbstractOrb {
     public void onStartOfTurn() {
     }
 
-    public void onCardUse(AbstractCard c) {
-    }
-
-    public void onCardDraw(AbstractCard c) {
-    }
-
     public void onCraft() {
+        runeCount++;
         AbstractPlayer p = AbstractDungeon.player;
         if (p.hasPower(ArcReactorPower.POWER_ID)) {
             int decAmount = p.getPower(ArcReactorPower.POWER_ID).amount;
@@ -179,9 +173,6 @@ public abstract class RuneOrb extends AbstractOrb {
     }
 
     public void onRemove() {
-    }
-
-    public void atTurnStartPostDraw() {
     }
 
     @Override
@@ -218,13 +209,6 @@ public abstract class RuneOrb extends AbstractOrb {
 
         renderText(sb);
         this.hb.render(sb);
-    }
-
-    public static int getRuneCount(AbstractPlayer p){
-        return (int) p.orbs
-                .stream()
-                .filter(o -> o instanceof RuneOrb)
-                .count();
     }
 
     public static int getMaxRune(AbstractPlayer p) {

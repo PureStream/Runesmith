@@ -1,4 +1,4 @@
-package runesmith.cards.Runesmith;
+package runesmith.cards.deprecated;
 
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;

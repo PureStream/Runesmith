@@ -115,7 +115,7 @@ public abstract class AbstractRunicCard extends CustomCard {
 
         //logger.info("Start checking elements.");
         AbstractPlayer p = AbstractDungeon.player;
-        int runeCount = RuneOrb.getRuneCount(p);
+        int runeCount = RuneOrb.runeCount;
         int maxRunes = RuneOrb.getMaxRune(p);
 
         if (this.freeElementOnce || p.hasPower("Runesmith:UnlimitedPowerPower") || p.hasRelic(PocketReactor.ID)) {

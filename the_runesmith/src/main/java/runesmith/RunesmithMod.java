@@ -268,9 +268,12 @@ public class RunesmithMod implements PostExhaustSubscriber,
     @Override
     public void receiveCardUsed(AbstractCard c) {
         if (CardStasisStatus.isStasis.get(c) || EnhanceCountField.enhanceCount.get(c) > 0) {
-            if (EnhanceCountField.enhanceCount.get(c) > 0) {
-                EnhanceCountField.enhanceReset.set(c, true);
-            }
+            if (CardStasisStatus.isStasis.get(c) && !c.exhaust)
+                CardStasisStatus.isStasis.set(c, false);
+            else
+                if (EnhanceCountField.enhanceCount.get(c) > 0)
+                    EnhanceCountField.enhanceReset.set(c, true);
+
 //			AdditionalCardDescriptions.modifyDescription(c);
             c.initializeDescription();
         }
@@ -305,8 +308,6 @@ public class RunesmithMod implements PostExhaustSubscriber,
         cardsToAdd.add(new CraftProtectio());
         cardsToAdd.add(new CraftIncendium());
         cardsToAdd.add(new Prism());
-        cardsToAdd.add(new UnstableHammer());
-//        cardsToAdd.add(new HammerSlam());
         cardsToAdd.add(new EnergizedChisel());
         cardsToAdd.add(new MakeshiftArmor());
         cardsToAdd.add(new HammerThrow());
@@ -318,9 +319,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
         cardsToAdd.add(new StaticCage());
         cardsToAdd.add(new Duplicate());
         cardsToAdd.add(new CraftIndustria());
-//        cardsToAdd.add(new Shatterune());
         cardsToAdd.add(new LithiumIon());
-        cardsToAdd.add(new RunicBullets());
         cardsToAdd.add(new RunicBlueprint());
         cardsToAdd.add(new CraftMagma());
         cardsToAdd.add(new ArcReactor());
@@ -337,7 +336,6 @@ public class RunesmithMod implements PostExhaustSubscriber,
         cardsToAdd.add(new Runesonance());
         cardsToAdd.add(new DuctTape());
         cardsToAdd.add(new CraftReservo());
-        cardsToAdd.add(new CraftFerro());
         cardsToAdd.add(new CraftSpiculum());
         cardsToAdd.add(new CraftPotentia());
         cardsToAdd.add(new ChaoticBlast());
@@ -351,7 +349,6 @@ public class RunesmithMod implements PostExhaustSubscriber,
         cardsToAdd.add(new DoubleUp());
         cardsToAdd.add(new Refinement());
         cardsToAdd.add(new Permafrost());
-//		cardsToAdd.add(new ThatsALotOfDamage());
         cardsToAdd.add(new CreatorForm());
         cardsToAdd.add(new Reinforce());
         cardsToAdd.add(new HeatExchange());
@@ -368,16 +365,13 @@ public class RunesmithMod implements PostExhaustSubscriber,
         cardsToAdd.add(new Attraction());
         cardsToAdd.add(new PoweredAnvil());
         cardsToAdd.add(new ReplicatingBarrier());
-//		cardsToAdd.add(new TimeMachine_old());
-//		cardsToAdd.add(new TimeTravel_old());
-        cardsToAdd.add(new TimeMachine());
-        cardsToAdd.add(new TimeTravel());
         cardsToAdd.add(new Electrocute());
         cardsToAdd.add(new FissionHammer());
         cardsToAdd.add(new Accelerate());
         cardsToAdd.add(new Augmentation());
         cardsToAdd.add(new ChargedHammer());
 //        cardsToAdd.add(new Devolution());
+        cardsToAdd.add(new NegativeSpace());
     }
 
     @Override

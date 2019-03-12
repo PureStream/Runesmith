@@ -1,12 +1,10 @@
 package runesmith.actions;
 
 import com.megacrit.cardcrawl.core.Settings;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import runesmith.orbs.RuneOrb;
 
 public class BreakWithoutRemovingRuneAction extends com.megacrit.cardcrawl.actions.AbstractGameAction {
-    public static final Logger logger = LogManager.getLogger(BreakWithoutRemovingRuneAction.class.getName());
+//    public static final Logger logger = LogManager.getLogger(BreakWithoutRemovingRuneAction.class.getName());
     private int orbCount;
     private RuneOrb rune;
 
@@ -25,7 +23,7 @@ public class BreakWithoutRemovingRuneAction extends com.megacrit.cardcrawl.actio
     public void update() {
         if (this.duration == this.startDuration) {
             for (int i = 0; i < this.orbCount; i++) {
-                logger.info("breaking once");
+//                logger.info("breaking once");
                 if (rune.useMultiBreak) {
                     rune.onMultiBreak();
                 } else {

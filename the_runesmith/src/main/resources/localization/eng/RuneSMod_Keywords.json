@@ -21,7 +21,7 @@
       "NAMES": [
         "stasis"
       ],
-      "DESCRIPTION": "Prevent a card from being #yExhausted once and discard it instead. Cannot be stacked."
+      "DESCRIPTION": "Prevent a card from being #yExhausted once and discard it instead or from losing #yEnhancement once. Cannot be stacked."
     },
     {
       "PROPER_NAME": "Potency",
@@ -94,18 +94,11 @@
       "DESCRIPTION": "Rune: Gain #yPotency"
     },
     {
-      "PROPER_NAME": "Ferro",
-      "NAMES": [
-        "ferro"
-      ],
-      "DESCRIPTION": "Rune: Set #yPlated #yArmor to at least its #yPotency."
-    },
-    {
       "PROPER_NAME": "Industria",
       "NAMES": [
         "industria"
       ],
-      "DESCRIPTION": "Rune: Gain [E] at the start of your turn."
+      "DESCRIPTION": "Rune: Gain [E] and draw 1 card at the start of your turn."
     },
     {
       "PROPER_NAME": "Medicinae",
@@ -127,6 +120,20 @@
         "magma"
       ],
       "DESCRIPTION": "Rune: Deals damage to random enemy and gain Block."
+    },
+    {
+      "PROPER_NAME": "Decay",
+      "NAMES": [
+        "decay"
+      ],
+      "DESCRIPTION": "Do a certain effect depending on what #yElements selected and lose all selected #yElements then gain other #yElements equal to the lost amount."
+    },
+    {
+      "PROPER_NAME": "Obretio",
+      "NAMES": [
+        "obretio"
+      ],
+      "DESCRIPTION": "Rune: enemy with highest attack damage intent loses #yStrength this turn."
     }
   ]
 }

@@ -9,17 +9,11 @@
   },
   "Runesmith:CraftFirestone": {
     "NAME": "Craft Firestone",
-    "DESCRIPTION": "1 runesmith:Ignis: runesmith:Craft a runesmith:Firestone Rune with !Pot! runesmith:Potency.",
-    "EXTENDED_DESCRIPTION": [
-      ""
-    ]
+    "DESCRIPTION": "1 runesmith:Ignis: runesmith:Craft a runesmith:Firestone Rune with !Pot! runesmith:Potency."
   },
   "Runesmith:CraftProtectio": {
     "NAME": "Craft Protectio",
-    "DESCRIPTION": "2 runesmith:Terra: runesmith:Craft a runesmith:Protectio Rune with !Pot! runesmith:Potency.",
-    "EXTENDED_DESCRIPTION": [
-      ""
-    ]
+    "DESCRIPTION": "2 runesmith:Terra: runesmith:Craft a runesmith:Protectio Rune with !Pot! runesmith:Potency."
   },
   "Runesmith:Fortify": {
     "NAME": "Fortify",
@@ -51,20 +45,12 @@
   },
   "Runesmith:CraftIncendium": {
     "NAME": "Craft Incendium",
-    "DESCRIPTION": "3 runesmith:Ignis: runesmith:Craft an runesmith:Incendium Rune with !Pot! runesmith:Potency.",
-    "EXTENDED_DESCRIPTION": [
-      ""
-    ]
-  },
-  "Runesmith:HammerSlam": {
-    "NAME": "Hammer Slam",
-    "DESCRIPTION": "Deal !D! damage. NL Draw !M! card for each unique Rune you have.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Draw !M! card. NL Draw !M! card for each unique Rune you have."
+    "DESCRIPTION": "3 runesmith:Ignis: runesmith:Craft an runesmith:Incendium Rune with !Pot! runesmith:Potency."
   },
   "Runesmith:ElementalConversion": {
     "NAME": "Elementary Particles",
-    "DESCRIPTION": "Choose: Ignis Decay, Terra Decay or Aqua Decay.",
-    "UPGRADE_DESCRIPTION": "Choose: Ignis Decay, Terra Decay or Aqua Decay. NL Draw !M! card."
+    "DESCRIPTION": "Choose runesmith:Elements to runesmith:Decay",
+    "UPGRADE_DESCRIPTION": "Choose runesmith:Elements to runesmith:Decay NL Draw !M! card."
   },
   "Runesmith:ConvertIgnis": {
     "NAME": "Ignis Decay",
@@ -100,10 +86,6 @@
     "NAME": "One for Everyone",
     "DESCRIPTION": "runesmith:Break your oldest Rune to NL gain [E] , gain 1 Block, NL deal 1 damage and NL apply 1 Weak and Vulnerable to ALL enemies, NL gain 1 of each runesmith:Element and draw 1 card."
   },
-  "Runesmith:RunicBullets": {
-    "NAME": "Runic Bullets",
-    "DESCRIPTION": "Deal !D! damage for each Rune you have."
-  },
   "Runesmith:StaticCage": {
     "NAME": "Static Cage",
     "DESCRIPTION": "runesmith:Break your oldest Rune. NL runesmith:Stasis a card in your hand. NL Gain !B! Block."
@@ -127,10 +109,7 @@
   "Runesmith:CraftReservo": {
     "NAME": "Craft Reservo",
     "DESCRIPTION": "2 runesmith:Aqua: runesmith:Craft a [#EFC851]Reservo Rune. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "2 runesmith:Aqua: runesmith:Craft a [#EFC851]Reservo+ Rune. NL Exhaust.",
-    "EXTENDED_DESCRIPTION": [
-      ""
-    ]
+    "UPGRADE_DESCRIPTION": "2 runesmith:Aqua: runesmith:Craft a [#EFC851]Reservo+ Rune. NL Exhaust."
   },
   "Runesmith:LithiumIon": {
     "NAME": "Lithium Ion",
@@ -147,25 +126,11 @@
   },
   "Runesmith:CraftSpiculum": {
     "NAME": "Craft Spiculum",
-    "DESCRIPTION": "1 runesmith:Ignis 1 runesmith:Aqua: runesmith:Craft a runesmith:Spiculum Rune with !Pot! runesmith:Potency. NL Exhaust.",
-    "EXTENDED_DESCRIPTION": [
-      ""
-    ]
+    "DESCRIPTION": "1 runesmith:Ignis 1 runesmith:Aqua: runesmith:Craft a runesmith:Spiculum Rune with !Pot! runesmith:Potency. NL Exhaust."
   },
   "Runesmith:CraftPotentia": {
     "NAME": "Craft Potentia",
-    "DESCRIPTION": "2 of each runesmith:Element: Remove your oldest Rune and runesmith:Craft a runesmith:Potentia Rune with !Pot! runesmith:Potency.",
-    "EXTENDED_DESCRIPTION": [
-      ""
-    ]
-  },
-  "Runesmith:CraftFerro": {
-    "NAME": "Craft Ferro",
-    "DESCRIPTION": "2 runesmith:Terra 1 runesmith:Aqua: runesmith:Craft a runesmith:Ferro Rune with !Pot! runesmith:Potency.",
-    "UPGRADE_DESCRIPTION": "2 runesmith:Terra 1 runesmith:Aqua: runesmith:Craft a runesmith:Ferro Rune with !Pot! runesmith:Potency.",
-    "EXTENDED_DESCRIPTION": [
-      ""
-    ]
+    "DESCRIPTION": "2 of each runesmith:Element: Remove your oldest Rune and runesmith:Craft a runesmith:Potentia Rune with !Pot! runesmith:Potency."
   },
   "Runesmith:HammerTime": {
     "NAME": "Hammer Time",
@@ -182,25 +147,12 @@
   },
   "Runesmith:ChaoticBlast": {
     "NAME": "Chaotic Blast",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL !M! of each runesmith:Element: runesmith:Craft a random Rune.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. NL !M! of each runesmith:Element: runesmith:Craft two random Runes.",
-    "EXTENDED_DESCRIPTION": [
-      ""
-    ]
-  },
-  "Runesmith:Shatterune": {
-    "NAME": "Shatterune",
-    "DESCRIPTION": "runesmith:Break your oldest Rune X times.",
-    "UPGRADE_DESCRIPTION": "runesmith:Break your oldest Rune X+1 times."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL !M! of each runesmith:Element: runesmith:Craft !M! random Rune.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. NL !M! of each runesmith:Element: runesmith:Craft !M! random Runes."
   },
   "Runesmith:Empowerment": {
     "NAME": "Empowerment",
     "DESCRIPTION": "Gain Strength equal to your runesmith:Ignis this turn. NL Gain Dexterity equal to your runesmith:Terra this turn."
-  },
-  "Runesmith:RunicSmithing": {
-    "NAME": "Runic Smithing",
-    "DESCRIPTION": "For each card you runesmith:Enhance, you gain 1 of each runesmith:Elements.",
-    "UPGRADE_DESCRIPTION": "Innate. NL For each card you runesmith:Enhance, you gain 1 of each runesmith:Elements."
   },
   "Runesmith:Runesonance": {
     "NAME": "Runesonance",
@@ -215,24 +167,15 @@
   "Runesmith:ConstructBifrost": {
     "NAME": "Construct Bifrost",
     "DESCRIPTION": "1 of each runesmith:Element: runesmith:Craft a [#EFC851]Prismatic Rune.",
-    "UPGRADE_DESCRIPTION": "1 of each runesmith:Element: runesmith:Craft a [#EFC851]Prismatic+ Rune.",
-    "EXTENDED_DESCRIPTION": [
-      ""
-    ]
+    "UPGRADE_DESCRIPTION": "1 of each runesmith:Element: runesmith:Craft a [#EFC851]Prismatic+ Rune."
   },
   "Runesmith:CraftIndustria": {
     "NAME": "Craft Industria",
-    "DESCRIPTION": "!M! runesmith:Aqua: runesmith:Craft an runesmith:Industria Rune.",
-    "EXTENDED_DESCRIPTION": [
-      ""
-    ]
+    "DESCRIPTION": "!M! runesmith:Aqua: runesmith:Craft an runesmith:Industria Rune."
   },
   "Runesmith:CraftMedicinae": {
     "NAME": "Craft Medicinae",
-    "DESCRIPTION": "5 runesmith:Terra: runesmith:Craft a runesmith:Medicinae Rune with !Pot! runesmith:Potency. NL Exhaust.",
-    "EXTENDED_DESCRIPTION": [
-      ""
-    ]
+    "DESCRIPTION": "5 runesmith:Terra: runesmith:Craft a runesmith:Medicinae Rune with !Pot! runesmith:Potency. NL Exhaust."
   },
   "Runesmith:LastStand": {
     "NAME": "Last Stand",
@@ -240,10 +183,6 @@
     "EXTENDED_DESCRIPTION": [
       " NL (Deal !D! damage)"
     ]
-  },
-  "Runesmith:SpecialReserve": {
-    "NAME": "Special Reserve",
-    "DESCRIPTION": "Deal !D! damage and runesmith:Stasis !M! card in your deck."
   },
   "Runesmith:GenerateForcefield": {
     "NAME": "Generate Forcefield",
@@ -265,31 +204,11 @@
   },
   "Runesmith:MetallurgicalResearch": {
     "NAME": "Metallurgical Research",
-    "DESCRIPTION": "runesmith:Downgrade ALL your cards. NL Upgrade and runesmith:Enhance ALL your cards after !M! turns. NL Exhaust."
-  },
-  "Runesmith:ArmorUp": {
-    "NAME": "Armor Up",
-    "DESCRIPTION": "Gain Block equal to !M! times the number of cards runesmith:enhanced this combat."
-  },
-  "Runesmith:Border Wall": {
-    "NAME": "Border Wall",
-    "DESCRIPTION": "Gain !B! Block. 4 runesmith:Terra: runesmith:Craft 2 runesmith:Protectio Rune with !Pot! runesmith:Potency."
-  },
-  "Runesmith:RuneMagnet": {
-    "NAME": "Rune Magnet",
-    "DESCRIPTION": "Draw cards until you draw a runesmith:Craft card. NL Discard all other cards drawn this way. NL Exhaust."
-  },
-  "Runesmith:ThatsALotOfDamage": {
-    "NAME": "That's A Lot Of DAMAGE!",
-    "DESCRIPTION": "Halves enemies current HP and Block. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Halves enemies current HP and Block. NL Innate. NL Exhaust."
+    "DESCRIPTION": "Upgrade and runesmith:Enhance ALL your cards after !M! turns. NL Exhaust."
   },
   "Runesmith:CraftMagma": {
     "NAME": "Craft Magma",
-    "DESCRIPTION": "2 runesmith:Ignis 1 runesmith:Terra: runesmith:Craft a runesmith:Magma Rune with !Pot! runesmith:Potency.",
-    "EXTENDED_DESCRIPTION": [
-      ""
-    ]
+    "DESCRIPTION": "2 runesmith:Ignis 1 runesmith:Terra: runesmith:Craft a runesmith:Magma Rune with !Pot! runesmith:Potency."
   },
   "Runesmith:Rearm": {
     "NAME": "Rearm",
@@ -336,8 +255,8 @@
   },
   "Runesmith:Reinforce": {
     "NAME": "Reinforce",
-    "DESCRIPTION": "Upgrade all cards in your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Upgrade and runesmith:Enhance all cards in your hand. NL Exhaust."
+    "DESCRIPTION": "Draw !M! card. NL Upgrade all cards in your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Draw !M! card. NL Upgrade and runesmith:Enhance all cards in your hand. NL Exhaust."
   },
   "Runesmith:HeatExchange": {
     "NAME": "Heat Exchange",
@@ -360,7 +279,7 @@
   },
   "Runesmith:FrozenChisel": {
     "NAME": "Frozen Chisel",
-    "DESCRIPTION": "Deal !D! damage. NL Apply 1 Slow. NL Enemy loses Slow after !M! turns. NL Gain 1 runesmith:Terra and 1 runesmith:Aqua."
+    "DESCRIPTION": "Deal !D! damage. NL Apply 2 Weak and 1 Slow. NL Enemy loses Slow after !M! turns. NL Gain 1 runesmith:Terra and 1 runesmith:Aqua."
   },
   "Runesmith:Accelerate": {
     "NAME": "Accelerate",
@@ -381,10 +300,7 @@
   },
   "Runesmith:Firewall": {
     "NAME": "Firewall",
-    "DESCRIPTION": "Gain !B! Block. NL 3 runesmith:Ignis: runesmith:Craft 2 runesmith:Firestone Runes with !Pot! runesmith:Potency.",
-    "EXTENDED_DESCRIPTION": [
-      ""
-    ]
+    "DESCRIPTION": "Gain !B! Block. NL 3 runesmith:Ignis: runesmith:Craft 2 runesmith:Firestone Runes with !Pot! runesmith:Potency."
   },
   "Runesmith:Discharge": {
     "NAME": "Discharge",
@@ -392,34 +308,15 @@
   },
   "Runesmith:Attraction": {
     "NAME": "Attraction",
-    "DESCRIPTION": "Draw and discard non-Craft cards until you draw a runesmith:Craft card or the draw pile is empty."
+    "DESCRIPTION": "Put !M! runesmith:Craft card from discard, draw, or exhaust pile into your hand. NL Exhaust."
   },
   "Runesmith:ArcReactor": {
     "NAME": "Arc Reactor",
-    "DESCRIPTION": "Gain !M! runesmith:Potency. Whenever a Rune is runesmith:Crafted, lose 1 runesmith:Potency."
+    "DESCRIPTION": "Gain !M! runesmith:Potency. At the start of your turn, gain 2 runesmith:Potency. Whenever you runesmith:Craft a Rune, lose 2 runesmith:Potency."
   },
   "Runesmith:ReplicatingBarrier": {
     "NAME": "Replicating Barrier",
     "DESCRIPTION": "2 runesmith:Terra: runesmith:Craft a runesmith:Protectio Rune with !Pot! runesmith:Potency. NL Every 2 turns, 2 runesmith:Terra: runesmith:Craft a runesmith:Protectio Rune with !Pot! runesmith:Potency."
-  },
-  "Runesmith:TimeMachine_old": {
-    "NAME": "Time Machine",
-    "DESCRIPTION": "Save your current HP, Block, and runesmith:Elements. NL Add a Time Travel card to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Save your current HP, Block, and runesmith:Elements. NL Add an upgraded Time Travel card to your hand. NL Innate. NL Exhaust."
-  },
-  "Runesmith:TimeMachine": {
-    "NAME": "Time Machine",
-    "DESCRIPTION": "Ethereal. NL Save your current HP, Block, and runesmith:Elements. NL Add a Time Travel card to the bottom of your draw pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Save your current HP, Block, and runesmith:Elements. NL Add a Time Travel card to the bottom of your draw pile. NL Exhaust."
-  },
-  "Runesmith:TimeTravel_old": {
-    "NAME": "Time Travel",
-    "DESCRIPTION": "Set your current HP, Block, and runesmith:Elements to the saved values. NL Purge."
-  },
-  "Runesmith:TimeTravel": {
-    "NAME": "Time Travel",
-    "DESCRIPTION": "Ethereal. NL Set your current HP, Block, and runesmith:Elements to the saved values. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Set your current HP, Block, and runesmith:Elements to the saved values. NL Exhaust."
   },
   "Runesmith:Electrocute": {
     "NAME": "Electrocute",
@@ -441,5 +338,17 @@
   "Runesmith:Devolution": {
     "NAME": "Devolution",
     "DESCRIPTION": "Unplayable. NL At the end of your turn, runesmith:Downgrade all cards in your hand."
+  },
+  "Runesmith:CraftObretio": {
+    "NAME": "Craft Obretio",
+    "DESCRIPTION": "2 runesmith:Terra 1 runesmith:Aqua: runesmith:Craft an runesmith:Obretio Rune with !Pot! runesmith:Potency."
+  },
+  "Runesmith:LightningRod": {
+    "NAME": "Lightning Rod",
+    "DESCRIPTION": "For !M! turns, you lose runesmith:Elements instead of HP. Gain 2 of each runesmith:Elements. The value is affected by runesmith:Potency."
+  },
+  "Runesmith:NegativeSpace": {
+    "NAME": "Negative Space",
+    "DESCRIPTION": "Gain !B! Block. NL Gain 3 less Block for each Rune you have. NL Deal !D! damage for each Rune."
   }
 }

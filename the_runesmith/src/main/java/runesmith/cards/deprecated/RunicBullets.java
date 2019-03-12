@@ -1,4 +1,4 @@
-package runesmith.cards.Runesmith;
+package runesmith.cards.deprecated;
 
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -41,7 +41,7 @@ public class RunicBullets extends CustomCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int bound = RuneOrb.getRuneCount(p);
+        int bound = RuneOrb.runeCount;
         IntStream
                 .range(0, bound)
                 .forEach(i -> AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT, true)));

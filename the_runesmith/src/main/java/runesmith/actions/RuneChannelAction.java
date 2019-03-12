@@ -35,7 +35,7 @@ public class RuneChannelAction extends AbstractGameAction {
     public void update() {
         AbstractPlayer p = AbstractDungeon.player;
         maxRunes = RuneOrb.getMaxRune(p);
-        this.runeCount = RuneOrb.getRuneCount(p);
+        this.runeCount = RuneOrb.runeCount;
         if (this.runeCount >= maxRunes) {
             AbstractDungeon.effectList.add(new ThoughtBubble(p.dialogX, p.dialogY, 3.0F, FULL_RUNE_TEXT, true));
             this.isDone = true;
