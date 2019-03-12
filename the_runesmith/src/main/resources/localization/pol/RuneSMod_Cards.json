@@ -418,7 +418,8 @@
   },
   "Runesmith:TimeTravel": {
     "NAME": "Podróż w Czasie",
-    "DESCRIPTION": "Ustaw ilość PŻ, pkt. Bloku i runesmith:Żywiołów na zapisane wartości. NL Wykluczenie."
+    "DESCRIPTION": "Ustaw ilość PŻ, pkt. Bloku i runesmith:Żywiołów na zapisane wartości. NL Wykluczenie.",
+    "UPGRADE_DESCRIPTION": "Ustaw ilość PŻ, pkt. Bloku i runesmith:Żywiołów na zapisane wartości."
   },
   "Runesmith:Electrocute": {
     "NAME": "Porażenie Prądem",
