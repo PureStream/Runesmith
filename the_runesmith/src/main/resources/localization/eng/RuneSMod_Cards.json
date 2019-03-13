@@ -147,8 +147,11 @@
   },
   "Runesmith:ChaoticBlast": {
     "NAME": "Chaotic Blast",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL !M! of each runesmith:Element: runesmith:Craft !M! random Rune.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. NL !M! of each runesmith:Element: runesmith:Craft !M! random Runes."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL !M! of each runesmith:Element: runesmith:Craft !M! random",
+    "EXTENDED_DESCRIPTION": [
+      " Rune.",
+      " Runes."
+    ]
   },
   "Runesmith:Empowerment": {
     "NAME": "Empowerment",
@@ -308,7 +311,7 @@
   },
   "Runesmith:Attraction": {
     "NAME": "Attraction",
-    "DESCRIPTION": "Put !M! runesmith:Craft card from discard, draw, or exhaust pile into your hand. NL Exhaust."
+    "DESCRIPTION": "Put !M! runesmith:Craft card from draw, discard or exhaust pile into your hand. NL Exhaust."
   },
   "Runesmith:ArcReactor": {
     "NAME": "Arc Reactor",
