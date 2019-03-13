@@ -69,6 +69,7 @@ public class ElementsCounter extends ClickableUIElement {
 
     //Elements data for player
     private static int ignis = 0, terra = 0, aqua = 0;
+    public static String IGNIS_ID = "IGNIS_ID", TERRA_ID = "TERRA_ID", AQUA_ID = "AQUA_ID";
 
     public static int getIgnis() {
         return ignis;
@@ -82,18 +83,41 @@ public class ElementsCounter extends ClickableUIElement {
         return aqua;
     }
 
-    public static void applyElements(int ignis, int terra, int aqua) {
-        int maxElements = (AbstractDungeon.player.hasRelic(CoreCrystal.ID)) ? CoreCrystal.MAX_ELEMENTS : RunesmithMod.DEFAULT_MAX_ELEMENTS;
-        ElementsCounter.ignis += ignis;
-        ElementsCounter.terra += terra;
-        ElementsCounter.aqua += aqua;
+    public static int getElementByID(String id) {
+        if (id.equals(IGNIS_ID))
+            return ignis;
+        else if (id.equals(TERRA_ID))
+            return terra;
+        else if (id.equals(AQUA_ID))
+            return  aqua;
+        return 0;
+    }
 
-        if (ElementsCounter.ignis > maxElements || ElementsCounter.ignis < 0)
-             ElementsCounter.ignis = (ElementsCounter.ignis > maxElements) ? maxElements : 0;
-        if (ElementsCounter.terra > maxElements || ElementsCounter.terra < 0)
-            ElementsCounter.terra = (ElementsCounter.terra > maxElements) ? maxElements : 0;
-        if (ElementsCounter.aqua > maxElements || ElementsCounter.aqua < 0)
-            ElementsCounter.aqua = (ElementsCounter.aqua > maxElements) ? maxElements : 0;
+    public static void applyElements(int ignis, int terra, int aqua) {
+        if (ignis != 0)
+            ElementsCounter.ignis = limitElementBound(ElementsCounter.ignis + ignis);
+        if (terra != 0)
+            ElementsCounter.terra = limitElementBound(ElementsCounter.terra + terra);
+        if (aqua != 0)
+            ElementsCounter.aqua = limitElementBound(ElementsCounter.aqua + aqua) ;
+    }
+
+    public static void applyElementsByID(String id, int amount) {
+        if (id.equals(IGNIS_ID))
+            applyElements(amount, 0, 0);
+        else if (id.equals(TERRA_ID))
+            applyElements(0, amount, 0);
+        else if (id.equals(AQUA_ID))
+            applyElements(0, 0, amount);
+    }
+
+    private static int limitElementBound(int element) {
+        int maxElements = (AbstractDungeon.player.hasRelic(CoreCrystal.ID)) ? CoreCrystal.MAX_ELEMENTS : RunesmithMod.DEFAULT_MAX_ELEMENTS;
+        if (element > maxElements)
+            return maxElements;
+        if (element < 0)
+            return 0;
+        return element;
     }
 
     public static void resetElements() {

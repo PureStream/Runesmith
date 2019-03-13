@@ -7,7 +7,6 @@ import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.GlyphLayout;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.ExceptionHandler;
@@ -19,10 +18,14 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import runesmith.RunesmithMod;
 import runesmith.actions.ApplyElementsAction;
+import runesmith.actions.ReduceElementsAction;
 import runesmith.orbs.RuneOrb;
 import runesmith.patches.EnhanceCountField;
 import runesmith.powers.PotentialPower;
+import runesmith.powers.UnlimitedPowerPower;
 import runesmith.relics.PocketReactor;
+
+import static runesmith.ui.ElementsCounter.*;
 
 public abstract class AbstractRunicCard extends CustomCard {
     public AbstractRunicCard(String id, String name, String img, int cost, String rawDescription, CardType type, CardColor color,
@@ -118,7 +121,7 @@ public abstract class AbstractRunicCard extends CustomCard {
         int runeCount = RuneOrb.getRuneCount();
         int maxRunes = RuneOrb.getMaxRune(p);
 
-        if (this.freeElementOnce || p.hasPower("Runesmith:UnlimitedPowerPower") || p.hasRelic(PocketReactor.ID)) {
+        if (this.freeElementOnce || p.hasPower(UnlimitedPowerPower.POWER_ID) || p.hasRelic(PocketReactor.ID)) {
             if (this.freeElementOnce && !checkOnly)
                 freeElementOnce = false;
 
@@ -130,58 +133,25 @@ public abstract class AbstractRunicCard extends CustomCard {
             return true;
         }
 
-        int pIgnis = 0, pTerra = 0, pAqua = 0;
+        int pIgnis = getIgnis(), pTerra = getTerra(), pAqua = getAqua();
 
-       /* if (isAnAttackCard) {
-            if (p.hasRelic(BrokenRuby.ID))
-                if (p.getRelic(BrokenRuby.ID).counter == 2)
-                    pIgnis++;
-        }*/
-
-        if (p.hasPower("Runesmith:IgnisPower")) {
-            pIgnis += p.getPower("Runesmith:IgnisPower").amount;
-        }
-        if (p.hasPower("Runesmith:TerraPower")) {
-            pTerra += p.getPower("Runesmith:TerraPower").amount;
-        }
-        if (p.hasPower("Runesmith:AquaPower")) {
-            pAqua += p.getPower("Runesmith:AquaPower").amount;
-        }
         if (pIgnis >= ignis && pTerra >= terra && pAqua >= aqua) {
             //logger.info("Have enough elements.");
             if (!checkOnly) {
                 if (runeCount >= maxRunes && !isPotentia)
                     AbstractDungeon.actionManager.addToBottom(new ApplyElementsAction(p, p, ignis, terra, aqua));
-                else {
-                    if (pIgnis > 0 && ignis > 0) {
-                        p.getPower("Runesmith:IgnisPower").reducePower(ignis);
-                        if (p.getPower("Runesmith:IgnisPower").amount == 0)
-                            AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(p, p, "Runesmith:IgnisPower"));
-                    }
-                    if (pTerra > 0 && terra > 0) {
-                        p.getPower("Runesmith:TerraPower").reducePower(terra);
-                        if (p.getPower("Runesmith:TerraPower").amount == 0)
-                            AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(p, p, "Runesmith:TerraPower"));
-                    }
-                    if (pAqua > 0 && aqua > 0) {
-                        p.getPower("Runesmith:AquaPower").reducePower(aqua);
-                        if (p.getPower("Runesmith:AquaPower").amount == 0)
-                            AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(p, p, "Runesmith:AquaPower"));
-                    }
-                }
-
+                else
+                    AbstractDungeon.actionManager.addToBottom(new ReduceElementsAction(p, p, ignis, terra, aqua));
             }
-            if (checkOnly) this.isCraftable = true;
+            if (checkOnly)
+                this.isCraftable = true;
             return true;
         }
         //logger.info("Not enough elements.");
-        if (!checkOnly) {
-            AbstractDungeon.actionManager.addToBottom(
-                    new ApplyElementsAction(p, p, ignis, terra, aqua));
-        }
-        if (checkOnly) {
+        if (!checkOnly)
+            AbstractDungeon.actionManager.addToBottom(new ApplyElementsAction(p, p, ignis, terra, aqua));
+        if (checkOnly)
             this.isCraftable = false;
-        }
         return false;
     }
 
@@ -229,37 +199,4 @@ public abstract class AbstractRunicCard extends CustomCard {
         }
     }
 
-//	public void addPower(String element, int value) {
-//		AbstractPlayer p = AbstractDungeon.player;
-//		if (element.equals("IgnisPower")) {
-//			AbstractDungeon.actionManager.addToTop(
-//			          new ApplyPowerAction(
-//			              p,
-//			              p,
-//			              new IgnisPower(p, value),
-//			              value
-//			          )
-//			      );
-//		}
-//		else if (element.equals("TerraPower")) {
-//			AbstractDungeon.actionManager.addToTop(
-//			          new ApplyPowerAction(
-//			              p,
-//			              p,
-//			              new TerraPower(p, value),
-//			              value
-//			          )
-//			      );
-//		}
-//		else {
-//			AbstractDungeon.actionManager.addToTop(
-//			          new ApplyPowerAction(
-//			              p,
-//			              p,
-//			              new AquaPower(p, value),
-//			              value
-//			          )
-//			      );
-//		}
-//	}
 }
