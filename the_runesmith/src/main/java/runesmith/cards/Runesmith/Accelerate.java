@@ -23,7 +23,7 @@ public class Accelerate extends CustomCard {
     private static final int BLOCK_AMT = 7;
     private static final int UPGRADE_PLUS_BLOCK = 2;
     private static final int BASE_DRAW_AMT = 1;
-    private static final int DRAW_AMT = 2;
+    private static final int DRAW_AMT = 1;
     private static final int UPGRADE_DRAW_AMT = 1;
 
     public Accelerate() {

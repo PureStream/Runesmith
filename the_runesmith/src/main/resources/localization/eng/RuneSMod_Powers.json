@@ -53,7 +53,7 @@
     ]
   },
   "Runesmith:ArcReactorPower": {
-    "NAME": "Radiated",
+    "NAME": "Arc Reactor",
     "DESCRIPTIONS": [
       "At the start of your turn, gain #b",
       " #yPotency.",

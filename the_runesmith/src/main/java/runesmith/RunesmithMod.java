@@ -31,6 +31,7 @@ import org.apache.logging.log4j.Logger;
 import runesmith.cards.Runesmith.*;
 import runesmith.character.player.RunesmithCharacter;
 import runesmith.helpers.PotencyVariable;
+import runesmith.orbs.MedicinaeRune;
 import runesmith.orbs.RuneOrb;
 import runesmith.patches.CardStasisStatus;
 import runesmith.patches.ElementsGainedCountField;
@@ -461,8 +462,12 @@ public class RunesmithMod implements PostExhaustSubscriber,
 
     @Override
     public void receivePostBattle(AbstractRoom arg0) {
+        AbstractPlayer p = AbstractDungeon.player;
+        RuneOrb.getAllRunes(p, new MedicinaeRune(0))
+                .forEach(r -> p.heal(r.getPotential()/2));
+
         //Reset Elements gained count.
-        ElementsGainedCountField.elementsCount.set(AbstractDungeon.player, 0);
+        ElementsGainedCountField.elementsCount.set(p, 0);
         renderElementsCounter = false;
 
         RuneOrb.runeCountReset();

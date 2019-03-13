@@ -49,8 +49,8 @@
   },
   "Runesmith:ElementalConversion": {
     "NAME": "Elementary Particles",
-    "DESCRIPTION": "Choose an runesmith:Element to runesmith:Decay",
-    "UPGRADE_DESCRIPTION": "Choose an runesmith:Element to runesmith:Decay NL Draw !M! card."
+    "DESCRIPTION": "Choose an runesmith:Element to runesmith:Decay.",
+    "UPGRADE_DESCRIPTION": "Choose an runesmith:Element to runesmith:Decay. NL Draw !M! card."
   },
   "Runesmith:ConvertIgnis": {
     "NAME": "Ignis Decay",
@@ -282,7 +282,7 @@
   },
   "Runesmith:FrozenChisel": {
     "NAME": "Frozen Chisel",
-    "DESCRIPTION": "Deal !D! damage. NL Apply 2 Weak and 1 Slow. NL Enemy loses Slow after !M! turns. NL Gain 1 runesmith:Terra and 1 runesmith:Aqua."
+    "DESCRIPTION": "Deal !D! damage. NL Apply 1 Slow and 2 Weak. NL Enemy loses Slow after !M! turns. NL Gain 1 runesmith:Terra and 1 runesmith:Aqua."
   },
   "Runesmith:Accelerate": {
     "NAME": "Accelerate",

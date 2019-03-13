@@ -1,6 +1,7 @@
 package runesmith.cards.Runesmith;
 
 import basemod.abstracts.CustomCard;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -16,8 +17,9 @@ public class Reinforce extends CustomCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
+    private static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
     private static final int COST = 1;
+    private static final int DRAW_AMT = 1;
 
     public Reinforce() {
         super(
@@ -32,10 +34,12 @@ public class Reinforce extends CustomCard {
                 AbstractCard.CardTarget.SELF
         );
         this.exhaust = true;
+        this.magicNumber = this.baseMagicNumber = DRAW_AMT;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToTop(new EnchantAction(upgraded));
+        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new EnchantAction(upgraded));
     }
 
     public AbstractCard makeCopy() {

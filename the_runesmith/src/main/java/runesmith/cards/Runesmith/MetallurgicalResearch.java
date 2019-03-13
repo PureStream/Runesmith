@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import runesmith.actions.DowngradeEntireDeckAction;
 import runesmith.patches.AbstractCardEnum;
 import runesmith.powers.MetallurgicalResearchPower;
 
@@ -39,10 +38,10 @@ public class MetallurgicalResearch extends CustomCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(
-                new DowngradeEntireDeckAction(p)
-        );
-        if (!p.hasPower("Runesmith:MetallurgicalResearchPower"))
+//        AbstractDungeon.actionManager.addToBottom(
+//                new DowngradeEntireDeckAction(p)
+//        );
+        if (!p.hasPower(MetallurgicalResearchPower.POWER_ID))
             AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p,
                     new MetallurgicalResearchPower(p, this.magicNumber), this.magicNumber));
     }

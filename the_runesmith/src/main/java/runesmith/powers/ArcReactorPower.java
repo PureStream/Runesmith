@@ -1,8 +1,10 @@
 package runesmith.powers;
 
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -19,7 +21,6 @@ public class ArcReactorPower extends AbstractPower {
         this.ID = POWER_ID;
         this.owner = owner;
         this.amount = amount;
-        this.type = PowerType.DEBUFF;
         updateDescription();
         this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/ArcReactor.png"), 0, 0, 84, 84);
         this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/ArcReactorSmall.png"), 0, 0, 32, 32);
@@ -30,8 +31,12 @@ public class ArcReactorPower extends AbstractPower {
         this.amount += stackAmount;
     }
 
+    public void atStartOfTurn() {
+        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(this.owner, this.owner, new PotentialPower(this.owner, this.amount), this.amount));
+    }
+
     public void updateDescription() {
-        this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
+        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + DESCRIPTIONS[2] + this.amount + DESCRIPTIONS[1];
     }
 
 }

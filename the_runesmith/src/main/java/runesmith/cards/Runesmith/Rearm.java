@@ -19,7 +19,7 @@ public class Rearm extends CustomCard {
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 1;
     private static final int UPG_DRAW_AMT = 1;
-    private static final int DRAW_AMT = 2;
+    private static final int DRAW_AMT = 3;
 
     public Rearm() {
         super(

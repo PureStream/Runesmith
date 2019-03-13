@@ -32,7 +32,7 @@ public abstract class RuneOrb extends AbstractOrb {
     public boolean upgraded;
     public boolean useMultiBreak = false;
     boolean showPotentialValue = true;
-    public int potential;
+    protected int potential;
     private String[] descriptions;
     private static int runeCount = 0;
 
@@ -54,6 +54,14 @@ public abstract class RuneOrb extends AbstractOrb {
         updateDescription();
     }
 
+    public int getPotential() {
+        return potential;
+    }
+
+    public void setPotential(int potential) {
+        this.potential = potential;
+    }
+
     public static RuneOrb getFirstRune(AbstractPlayer p) {
         return getFirstRune(p, false);
     }
@@ -69,10 +77,18 @@ public abstract class RuneOrb extends AbstractOrb {
         return getAllRunes(p, false);
     }
 
-    public static List<RuneOrb> getAllRunes(AbstractPlayer p, Boolean checkDud) {
+    public static List<RuneOrb> getAllRunes(AbstractPlayer p, Boolean checkNonDud) {
         return p.orbs
                 .stream()
-                .filter(o -> (o instanceof RuneOrb) && !(o instanceof DudRune && checkDud))
+                .filter(o -> (o instanceof RuneOrb) && !(o instanceof DudRune && checkNonDud))
+                .map(RuneOrb.class::cast)
+                .collect(Collectors.toList());
+    }
+
+    public static List<RuneOrb> getAllRunes(AbstractPlayer p, RuneOrb checkForRune) {
+        return p.orbs
+                .stream()
+                .filter(o -> o.getClass().equals(checkForRune.getClass()))
                 .map(RuneOrb.class::cast)
                 .collect(Collectors.toList());
     }
