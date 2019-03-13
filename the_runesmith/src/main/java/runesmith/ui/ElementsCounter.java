@@ -73,7 +73,7 @@ public class ElementsCounter extends ClickableUIElement {
 
     public ElementsCounter(Texture image){
         super(image, x, y , hb_w, hb_h);
-        this.fbo = new FrameBuffer(Pixmap.Format.RGBA8888, Settings.WIDTH, Settings.HEIGHT, false, false);
+        this.fbo = new FrameBuffer(Pixmap.Format.RGBA8888, Settings.M_W, Settings.M_H, false, false);
         this.ignisHitbox = new Hitbox(x - hb_w/2,y + terraH/2, hb_w,ignisH);
         this.terraHitbox = new Hitbox(x - hb_w/2, y - terraH/2, hb_w,terraH);
         this.aquaHitbox = new Hitbox(x - hb_w/2,y - terraH/2 - ignisH, hb_w,ignisH);
@@ -119,7 +119,7 @@ public class ElementsCounter extends ClickableUIElement {
         sb.begin();
         TextureRegion drawTex = new TextureRegion(this.fbo.getColorBufferTexture());
         drawTex.flip(false, true);
-        sb.draw(drawTex, 0.0F, 0.0F);
+        sb.draw(drawTex, 0.0F - Settings.VERT_LETTERBOX_AMT, 0.0F - Settings.HORIZ_LETTERBOX_AMT);
 //        sb.draw(this.fbo.getColorBufferTexture(), 0.0F, 0.0F,Settings.WIDTH,Settings.HEIGHT,0.0F,0.0F,1.0F,1.0F,0.0F,0,0,Settings.WIDTH,Settings.HEIGHT,false,true );
         sb.end();
 
@@ -149,7 +149,7 @@ public class ElementsCounter extends ClickableUIElement {
 //        sb.draw(this.fbo.getColorBufferTexture(), 0.0F, (float) (-Settings.HEIGHT) + 2.0F * y);
         drawTex = new TextureRegion(this.fbo.getColorBufferTexture());
         drawTex.flip(false, true);
-        sb.draw(drawTex, 0.0F, 0.0F);
+        sb.draw(drawTex, 0.0F - Settings.VERT_LETTERBOX_AMT, 0.0F - Settings.HORIZ_LETTERBOX_AMT);
         sb.end();
 
         this.fbo.begin();
@@ -178,7 +178,7 @@ public class ElementsCounter extends ClickableUIElement {
 //        sb.draw(this.fbo.getColorBufferTexture(), 0.0F, (float) (-Settings.HEIGHT) + 2.0F * y);
         drawTex = new TextureRegion(this.fbo.getColorBufferTexture());
         drawTex.flip(false, true);
-        sb.draw(drawTex, 0.0F, 0.0F);
+        sb.draw(drawTex, 0.0F - Settings.VERT_LETTERBOX_AMT, 0.0F - Settings.HORIZ_LETTERBOX_AMT);
 
         sb.draw(ELEMENTS_FRAME, x - 128.0F, y - 128.0F, 128.0F, 128.0F, 256.0F, 256.0F, ELEMENTS_IMG_SCALE, ELEMENTS_IMG_SCALE, 0.0F, 0, 0, 256, 256, false, false);
 

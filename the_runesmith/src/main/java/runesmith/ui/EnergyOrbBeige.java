@@ -9,6 +9,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.graphics.glutils.FrameBuffer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import org.apache.logging.log4j.LogManager;
@@ -41,8 +42,8 @@ public class EnergyOrbBeige extends CustomEnergyOrb {
 
 
     public EnergyOrbBeige() {
-        super((String[]) null, (String) null, (float[]) null);
-        this.fbo = new FrameBuffer(Format.RGBA8888, Settings.WIDTH, Settings.HEIGHT, false, false);
+        super( null,  null,  null);
+        this.fbo = new FrameBuffer(Format.RGBA8888, Settings.M_W, Settings.M_H, false, false);
         //        this.sbTmp = new SpriteBatch();
     }
 
@@ -97,7 +98,7 @@ public class EnergyOrbBeige extends CustomEnergyOrb {
             sb.begin();
             TextureRegion drawTex = new TextureRegion(this.fbo.getColorBufferTexture());
             drawTex.flip(false, true);
-            sb.draw(drawTex, 0.0F, 0.0F);
+            sb.draw(drawTex, 0.0F - Settings.VERT_LETTERBOX_AMT, 0.0F - Settings.HORIZ_LETTERBOX_AMT);
 //            sb.draw(this.fbo.getColorBufferTexture(), 0.0F, (float) (-Settings.HEIGHT) + 2.0F * current_y);
             sb.draw(this.ENERGY_BEIGE_LAYER5, current_x - 128.0F, current_y - 128.0F, 128.0F, 128.0F, 256.0F, 256.0F, ORB_IMG_SCALE, ORB_IMG_SCALE, 0.0F, 0, 0, 256, 256, false, false);
             sb.draw(this.ENERGY_BEIGE_LAYER6, current_x - 128.0F, current_y - 128.0F, 128.0F, 128.0F, 256.0F, 256.0F, ORB_IMG_SCALE, ORB_IMG_SCALE, 0.0F, 0, 0, 256, 256, false, false);
@@ -131,7 +132,7 @@ public class EnergyOrbBeige extends CustomEnergyOrb {
             sb.begin();
             TextureRegion drawTex = new TextureRegion(this.fbo.getColorBufferTexture());
             drawTex.flip(false, true);
-            sb.draw(drawTex, 0.0F, 0.0F);
+            sb.draw(drawTex, 0.0F - Settings.VERT_LETTERBOX_AMT, 0.0F - Settings.HORIZ_LETTERBOX_AMT);
 //            sb.draw((Texture) this.fbo.getColorBufferTexture(), 0.0F, (float) (-Settings.HEIGHT) + 2.0F * current_y);
             sb.draw(this.ENERGY_BEIGE_LAYER5D, current_x - 128.0F, current_y - 128.0F, 128.0F, 128.0F, 256.0F, 256.0F, ORB_IMG_SCALE, ORB_IMG_SCALE, 0.0F, 0, 0, 256, 256, false, false);
             sb.draw(this.ENERGY_BEIGE_LAYER6, current_x - 128.0F, current_y - 128.0F, 128.0F, 128.0F, 256.0F, 256.0F, ORB_IMG_SCALE, ORB_IMG_SCALE, 0.0F, 0, 0, 256, 256, false, false);
