@@ -58,7 +58,7 @@ public class NegativeSpace extends CustomCard {
             defaultBlock += UPGRADE_BLOCK_AMT;
         int runeCount = RuneOrb.getRuneCount();
         defaultBlock -= runeCount*SCALE_AMT;
-        this.baseBlock = defaultBlock;
+        this.baseBlock = (defaultBlock >= 0) ? defaultBlock : 0;
 
         super.applyPowers();
 

@@ -282,7 +282,7 @@
   },
   "Runesmith:FrozenChisel": {
     "NAME": "Frozen Chisel",
-    "DESCRIPTION": "Deal !D! damage. NL Apply 1 Slow and 2 Weak. NL Enemy loses Slow after !M! turns. NL Gain 1 runesmith:Terra and 1 runesmith:Aqua."
+    "DESCRIPTION": "Deal !D! damage. NL Apply 1 Slow. NL Enemy loses 1 Strength. NL Enemy loses Slow after !M! turns. NL Gain 1 runesmith:Terra and 1 runesmith:Aqua."
   },
   "Runesmith:Accelerate": {
     "NAME": "Accelerate",
@@ -315,7 +315,7 @@
   },
   "Runesmith:ArcReactor": {
     "NAME": "Arc Reactor",
-    "DESCRIPTION": "Gain !M! runesmith:Potency. At the start of your turn, gain 2 runesmith:Potency. Whenever you runesmith:Craft a Rune, lose 2 runesmith:Potency."
+    "DESCRIPTION": "Gain !M! runesmith:Potency. At the start of your turn, gain 2 runesmith:Potency. Whenever you runesmith:Craft a Rune, halves your current runesmith:Potency."
   },
   "Runesmith:ReplicatingBarrier": {
     "NAME": "Replicating Barrier",

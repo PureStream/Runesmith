@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.SlowPower;
-import com.megacrit.cardcrawl.powers.WeakPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import runesmith.actions.ApplyElementsPowerAction;
 import runesmith.patches.AbstractCardEnum;
 import runesmith.powers.IceColdPower;
@@ -26,9 +26,9 @@ public class FrozenChisel extends CustomCard {
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String IMG_PATH = "images/cards/FrozenChisel.png"; //<-------------- need some img
     private static final int COST = 2;
-    private static final int ATTACK_DMG = 15;
+    private static final int ATTACK_DMG = 13;
     private static final int UPGRADE_PLUS_DMG = 4;
-    private static final int WEAK_AMT = 2;
+    private static final int STR_DOWN_AMT = 1;
     private static final int SLOW_RECOVER = 3;
     private static final int UPGRADE_SLOW_RECOVER = 1;
     private static final int ELEMENT_AMT = 1;
@@ -63,7 +63,7 @@ public class FrozenChisel extends CustomCard {
         if (!m.hasPower("Artifact"))
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new IceColdPower(m, this.magicNumber), this.magicNumber));
 
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new WeakPower(m, WEAK_AMT, false), WEAK_AMT));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new StrengthPower(m, -STR_DOWN_AMT), -STR_DOWN_AMT));
 
         AbstractDungeon.actionManager.addToBottom(new ApplyElementsPowerAction(p, p, 0, ELEMENT_AMT, ELEMENT_AMT));
     }
