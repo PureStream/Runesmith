@@ -126,7 +126,7 @@
       "NAMES": [
         "decay"
       ],
-      "DESCRIPTION": "Do a certain effect depending on what #yElements selected and lose all selected #yElements then gain other #yElements equal to the lost amount."
+      "DESCRIPTION": "Lose all selected #yElement then gain other #yElements equals to the amount lost and perform certain action depending on the #yElement chosen."
     },
     {
       "PROPER_NAME": "Obretio",

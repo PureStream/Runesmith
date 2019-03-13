@@ -49,8 +49,8 @@
   },
   "Runesmith:ElementalConversion": {
     "NAME": "Elementary Particles",
-    "DESCRIPTION": "Choose runesmith:Elements to runesmith:Decay",
-    "UPGRADE_DESCRIPTION": "Choose runesmith:Elements to runesmith:Decay NL Draw !M! card."
+    "DESCRIPTION": "Choose an runesmith:Element to runesmith:Decay",
+    "UPGRADE_DESCRIPTION": "Choose an runesmith:Element to runesmith:Decay NL Draw !M! card."
   },
   "Runesmith:ConvertIgnis": {
     "NAME": "Ignis Decay",
