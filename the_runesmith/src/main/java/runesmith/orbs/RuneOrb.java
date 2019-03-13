@@ -34,7 +34,7 @@ public abstract class RuneOrb extends AbstractOrb {
     boolean showPotentialValue = true;
     public int potential;
     private String[] descriptions;
-    public static int runeCount = 0;
+    private static int runeCount = 0;
 
     public RuneOrb(String ID, boolean upgraded, int potential) {
         this.ID = ID;
@@ -119,8 +119,8 @@ public abstract class RuneOrb extends AbstractOrb {
                 potency = potencyCal(SpiculumRune.basePotency, playerPotency);
                 return new SpiculumRune(potency);
             case 1:
-                potency = potencyCal(FerroRune.basePotency, playerPotency);
-                return new FerroRune(potency);
+                potency = potencyCal(ObretioRune.basePotency, playerPotency);
+                return new ObretioRune(potency);
             case 2:
                 potency = potencyCal(FirestoneRune.basePotency, playerPotency);
                 return new FirestoneRune(potency);
@@ -209,6 +209,18 @@ public abstract class RuneOrb extends AbstractOrb {
 
         renderText(sb);
         this.hb.render(sb);
+    }
+
+    public static int getRuneCount() {
+        return runeCount;
+    }
+
+    public static void runeCountDown() {
+        runeCount--;
+    }
+
+    public static void runeCountReset() {
+        runeCount = 0;
     }
 
     public static int getMaxRune(AbstractPlayer p) {
