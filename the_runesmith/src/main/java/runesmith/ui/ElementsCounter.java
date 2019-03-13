@@ -102,7 +102,7 @@ public class ElementsCounter extends ClickableUIElement {
             ElementsCounter.aqua = limitElementBound(ElementsCounter.aqua + aqua) ;
     }
 
-    public static void applyElementsByID(String id, int amount) {
+    public static void applyElements(String id, int amount) {
         if (id.equals(IGNIS_ID))
             applyElements(amount, 0, 0);
         else if (id.equals(TERRA_ID))

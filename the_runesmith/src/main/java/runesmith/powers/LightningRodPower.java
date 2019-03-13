@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import runesmith.ui.ElementsCounter;
 
 import static runesmith.ui.ElementsCounter.*;
 
@@ -47,10 +48,10 @@ public class LightningRodPower extends AbstractPower {
         if (damageAmount > 0) {
             int element = getElementByID(elementID);
             if (damageAmount > element) {
-                applyElementsByID(elementID, -element);
+                ElementsCounter.applyElements(elementID, -element);
                 damageAmount -= element;
             } else {
-                applyElementsByID(elementID, -damageAmount);
+                ElementsCounter.applyElements(elementID, -damageAmount);
                 damageAmount = 0;
             }
         }
