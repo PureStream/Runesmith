@@ -133,7 +133,7 @@
       "NAMES": [
         "obretio"
       ],
-      "DESCRIPTION": "Rune: enemy with highest attack damage intent loses #yStrength this turn."
+      "DESCRIPTION": "Rune: Reduces an enemy #yStrength for a turn."
     }
   ]
 }
