@@ -6,18 +6,11 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import runesmith.RunesmithMod;
-import runesmith.actions.ApplyElementsPowerAction;
+import runesmith.actions.ApplyElementsAction;
 import runesmith.patches.AbstractCardEnum;
-
-import java.util.ArrayList;
-import java.util.Map;
-import java.util.stream.Collectors;
-
-import static runesmith.patches.CardTagEnum.CRAFT;
 
 public class RunicBlueprint extends CustomCard {
 
@@ -60,7 +53,7 @@ public class RunicBlueprint extends CustomCard {
         if (cZero instanceof AbstractRunicCard)
             ((AbstractRunicCard) cZero).freeElementOnce = true;
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(cZero));
-        AbstractDungeon.actionManager.addToBottom(new ApplyElementsPowerAction(p, p, 0, 0, AQUA_AMT));
+        AbstractDungeon.actionManager.addToBottom(new ApplyElementsAction(p, p, 0, 0, AQUA_AMT));
 //        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new AquaPower(p, AQUA_AMT), AQUA_AMT));
 
     }

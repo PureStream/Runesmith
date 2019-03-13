@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import runesmith.actions.ApplyElementsPowerAction;
+import runesmith.actions.ApplyElementsAction;
 
 public class ConvertTerra extends CustomCard {
     public static final String ID = "Runesmith:ConvertTerra";
@@ -43,7 +43,7 @@ public class ConvertTerra extends CustomCard {
             int convertAmount;
             convertAmount = p.getPower("Runesmith:TerraPower").amount;
             AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, "Runesmith:TerraPower"));
-            AbstractDungeon.actionManager.addToBottom(new ApplyElementsPowerAction(p, p, convertAmount, 0, convertAmount));
+            AbstractDungeon.actionManager.addToBottom(new ApplyElementsAction(p, p, convertAmount, 0, convertAmount));
         }
 
     }

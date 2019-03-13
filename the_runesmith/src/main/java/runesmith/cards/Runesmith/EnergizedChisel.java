@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.WeakPower;
-import runesmith.actions.ApplyElementsPowerAction;
+import runesmith.actions.ApplyElementsAction;
 import runesmith.patches.AbstractCardEnum;
 
 import static runesmith.patches.CardTagEnum.CHISEL;
@@ -63,7 +63,7 @@ public class EnergizedChisel extends CustomCard {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
                 new WeakPower(m, this.magicNumber, false), this.magicNumber));
         AbstractDungeon.actionManager.addToBottom(
-                new ApplyElementsPowerAction(p, p, ELEMENT_AMT, 0, ELEMENT_AMT));
+                new ApplyElementsAction(p, p, ELEMENT_AMT, 0, ELEMENT_AMT));
 //		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, 
 //				new IgnisPower(p, ELEMENT_AMT),ELEMENT_AMT));
 //		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, 

@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import runesmith.actions.ApplyElementsPowerAction;
+import runesmith.actions.ApplyElementsAction;
 import runesmith.actions.RuneChannelAction;
 import runesmith.orbs.DudRune;
 import runesmith.patches.AbstractCardEnum;
@@ -57,11 +57,11 @@ public class UnstableHammer extends CustomCard {
                         new DudRune()));
         int selectedPower = AbstractDungeon.cardRandomRng.random(2);
         if (selectedPower == 0)
-            AbstractDungeon.actionManager.addToBottom(new ApplyElementsPowerAction(p, p, ELEMENT_AMT, 0, 0));
+            AbstractDungeon.actionManager.addToBottom(new ApplyElementsAction(p, p, ELEMENT_AMT, 0, 0));
         else if (selectedPower == 1)
-            AbstractDungeon.actionManager.addToBottom(new ApplyElementsPowerAction(p, p, 0, ELEMENT_AMT, 0));
+            AbstractDungeon.actionManager.addToBottom(new ApplyElementsAction(p, p, 0, ELEMENT_AMT, 0));
         else
-            AbstractDungeon.actionManager.addToBottom(new ApplyElementsPowerAction(p, p, 0, 0, ELEMENT_AMT));
+            AbstractDungeon.actionManager.addToBottom(new ApplyElementsAction(p, p, 0, 0, ELEMENT_AMT));
 
 //		if (random == 0) 
 //			AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new IgnisPower(p, ELEMENT_AMT), ELEMENT_AMT));

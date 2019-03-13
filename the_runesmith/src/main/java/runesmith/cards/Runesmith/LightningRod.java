@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import runesmith.actions.ApplyElementsPowerAction;
+import runesmith.actions.ApplyElementsAction;
 import runesmith.patches.AbstractCardEnum;
 import runesmith.powers.LightningRodPower;
 
@@ -41,7 +41,7 @@ public class LightningRod extends CustomCard {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
                 new LightningRodPower(p, this.magicNumber), this.magicNumber));
         AbstractDungeon.actionManager.addToBottom(
-                new ApplyElementsPowerAction(p, p, this.magicNumber, this.magicNumber, this.magicNumber));
+                new ApplyElementsAction(p, p, this.magicNumber, this.magicNumber, this.magicNumber));
     }
 
     public AbstractCard makeCopy() {

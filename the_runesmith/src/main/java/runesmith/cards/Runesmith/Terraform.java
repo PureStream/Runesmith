@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import runesmith.actions.ApplyElementsPowerAction;
+import runesmith.actions.ApplyElementsAction;
 import runesmith.patches.AbstractCardEnum;
 import runesmith.powers.TerraPower;
 import runesmith.relics.CoreCrystal;
@@ -76,7 +76,7 @@ public class Terraform extends CustomCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
-                new ApplyElementsPowerAction(p, p, 0, TERRA_AMT, 0));
+                new ApplyElementsAction(p, p, 0, TERRA_AMT, 0));
 //		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, 
 //				new TerraPower(p, TERRA_AMT),TERRA_AMT));\
         AbstractDungeon.actionManager.addToBottom(

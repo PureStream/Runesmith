@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
-import runesmith.actions.ApplyElementsPowerAction;
+import runesmith.actions.ApplyElementsAction;
 import runesmith.patches.AbstractCardEnum;
 
 import static runesmith.patches.CardTagEnum.CHISEL;
@@ -58,7 +58,7 @@ public class HeatedChisel extends CustomCard {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
                 new VulnerablePower(m, this.magicNumber, false), this.magicNumber));
         AbstractDungeon.actionManager.addToBottom(
-                new ApplyElementsPowerAction(p, p, ELEMENT_AMT, ELEMENT_AMT, 0));
+                new ApplyElementsAction(p, p, ELEMENT_AMT, ELEMENT_AMT, 0));
 //		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, 
 //				new IgnisPower(p, ELEMENT_AMT),ELEMENT_AMT));
 //		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, 

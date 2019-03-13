@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import runesmith.actions.ApplyElementsPowerAction;
+import runesmith.actions.ApplyElementsAction;
 
 public class TimeTravel_old extends CustomCard {
 
@@ -81,21 +81,21 @@ public class TimeTravel_old extends CustomCard {
 
         if (curIgnis < savedIgnis)
             AbstractDungeon.actionManager.addToBottom(
-                    new ApplyElementsPowerAction(p, p, savedIgnis - curIgnis, 0, 0));
+                    new ApplyElementsAction(p, p, savedIgnis - curIgnis, 0, 0));
         else if (savedIgnis < curIgnis)
             AbstractDungeon.actionManager.addToBottom(
                     new ReducePowerAction(p, p, "Runesmith:IgnisPower", curIgnis - savedIgnis));
 
         if (curTerra < savedTerra)
             AbstractDungeon.actionManager.addToBottom(
-                    new ApplyElementsPowerAction(p, p, savedTerra - curTerra, 0, 0));
+                    new ApplyElementsAction(p, p, savedTerra - curTerra, 0, 0));
         else if (savedTerra < curTerra)
             AbstractDungeon.actionManager.addToBottom(
                     new ReducePowerAction(p, p, "Runesmith:TerraPower", curTerra - savedTerra));
 
         if (curAqua < savedAqua)
             AbstractDungeon.actionManager.addToBottom(
-                    new ApplyElementsPowerAction(p, p, savedAqua - curAqua, 0, 0));
+                    new ApplyElementsAction(p, p, savedAqua - curAqua, 0, 0));
         else if (savedAqua < curAqua)
             AbstractDungeon.actionManager.addToBottom(
                     new ReducePowerAction(p, p, "Runesmith:AquaPower", curAqua - savedAqua));

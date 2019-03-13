@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import runesmith.actions.ApplyElementsPowerAction;
+import runesmith.actions.ApplyElementsAction;
 import runesmith.powers.PotentialDownPower;
 import runesmith.powers.PotentialPower;
 
@@ -45,7 +45,7 @@ public class ConvertAqua extends CustomCard {
             int convertAmount;
             convertAmount = p.getPower("Runesmith:AquaPower").amount;
             AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, "Runesmith:AquaPower"));
-            AbstractDungeon.actionManager.addToBottom(new ApplyElementsPowerAction(p, p, convertAmount, convertAmount, 0));
+            AbstractDungeon.actionManager.addToBottom(new ApplyElementsAction(p, p, convertAmount, convertAmount, 0));
         }
 
     }

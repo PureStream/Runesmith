@@ -18,7 +18,7 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import runesmith.RunesmithMod;
-import runesmith.actions.ApplyElementsPowerAction;
+import runesmith.actions.ApplyElementsAction;
 import runesmith.orbs.RuneOrb;
 import runesmith.patches.EnhanceCountField;
 import runesmith.powers.PotentialPower;
@@ -123,7 +123,7 @@ public abstract class AbstractRunicCard extends CustomCard {
                 freeElementOnce = false;
 
             if (runeCount >= maxRunes && !checkOnly && !isPotentia)
-                AbstractDungeon.actionManager.addToBottom(new ApplyElementsPowerAction(p, p, ignis, terra, aqua));
+                AbstractDungeon.actionManager.addToBottom(new ApplyElementsAction(p, p, ignis, terra, aqua));
 
             this.isCraftable = true;
 
@@ -151,7 +151,7 @@ public abstract class AbstractRunicCard extends CustomCard {
             //logger.info("Have enough elements.");
             if (!checkOnly) {
                 if (runeCount >= maxRunes && !isPotentia)
-                    AbstractDungeon.actionManager.addToBottom(new ApplyElementsPowerAction(p, p, ignis, terra, aqua));
+                    AbstractDungeon.actionManager.addToBottom(new ApplyElementsAction(p, p, ignis, terra, aqua));
                 else {
                     if (pIgnis > 0 && ignis > 0) {
                         p.getPower("Runesmith:IgnisPower").reducePower(ignis);
@@ -177,7 +177,7 @@ public abstract class AbstractRunicCard extends CustomCard {
         //logger.info("Not enough elements.");
         if (!checkOnly) {
             AbstractDungeon.actionManager.addToBottom(
-                    new ApplyElementsPowerAction(p, p, ignis, terra, aqua));
+                    new ApplyElementsAction(p, p, ignis, terra, aqua));
         }
         if (checkOnly) {
             this.isCraftable = false;

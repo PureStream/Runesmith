@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import runesmith.actions.ApplyElementsPowerAction;
+import runesmith.actions.ApplyElementsAction;
 import runesmith.patches.AbstractCardEnum;
 
 public class Preparation extends CustomCard {
@@ -74,7 +74,7 @@ public class Preparation extends CustomCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
-                new ApplyElementsPowerAction(p, p, this.baseMagicNumber, this.baseMagicNumber, this.baseMagicNumber));
+                new ApplyElementsAction(p, p, this.baseMagicNumber, this.baseMagicNumber, this.baseMagicNumber));
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, DRAW_AMT));
     }
 

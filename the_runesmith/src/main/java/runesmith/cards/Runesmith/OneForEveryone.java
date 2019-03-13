@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
-import runesmith.actions.ApplyElementsPowerAction;
+import runesmith.actions.ApplyElementsAction;
 import runesmith.actions.BreakRuneAction;
 import runesmith.orbs.RuneOrb;
 import runesmith.patches.AbstractCardEnum;
@@ -69,7 +69,7 @@ public class OneForEveryone extends CustomCard {
                     )
             );
             AbstractDungeon.actionManager.addToBottom(
-                    new ApplyElementsPowerAction(p, p, this.magicNumber, this.magicNumber, this.magicNumber));
+                    new ApplyElementsAction(p, p, this.magicNumber, this.magicNumber, this.magicNumber));
 //			AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new IgnisPower(p, this.magicNumber), this.magicNumber));
 //			AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new TerraPower(p, this.magicNumber), this.magicNumber));
 //			AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new AquaPower(p, this.magicNumber), this.magicNumber));

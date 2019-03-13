@@ -14,12 +14,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.*;
-import com.megacrit.cardcrawl.helpers.input.InputHelper;
-import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import runesmith.powers.AquaPower;
-import runesmith.powers.IgnisPower;
-import runesmith.powers.TerraPower;
+import runesmith.RunesmithMod;
 import runesmith.relics.CoreCrystal;
 
 public class ElementsCounter extends ClickableUIElement {
@@ -70,6 +66,41 @@ public class ElementsCounter extends ClickableUIElement {
     private static float ignisH = 31.0F * ELEMENTS_IMG_SCALE;
     private static float terraH = 34.0F * ELEMENTS_IMG_SCALE;
     private FrameBuffer fbo;
+
+    //Elements data for player
+    private static int ignis = 0, terra = 0, aqua = 0;
+
+    public static int getIgnis() {
+        return ignis;
+    }
+
+    public static int getTerra() {
+        return terra;
+    }
+
+    public static int getAqua() {
+        return aqua;
+    }
+
+    public static void applyElements(int ignis, int terra, int aqua) {
+        int maxElements = (AbstractDungeon.player.hasRelic(CoreCrystal.ID)) ? CoreCrystal.MAX_ELEMENTS : RunesmithMod.DEFAULT_MAX_ELEMENTS;
+        ElementsCounter.ignis += ignis;
+        ElementsCounter.terra += terra;
+        ElementsCounter.aqua += aqua;
+
+        if (ElementsCounter.ignis > maxElements || ElementsCounter.ignis < 0)
+             ElementsCounter.ignis = (ElementsCounter.ignis > maxElements) ? maxElements : 0;
+        if (ElementsCounter.terra > maxElements || ElementsCounter.terra < 0)
+            ElementsCounter.terra = (ElementsCounter.terra > maxElements) ? maxElements : 0;
+        if (ElementsCounter.aqua > maxElements || ElementsCounter.aqua < 0)
+            ElementsCounter.aqua = (ElementsCounter.aqua > maxElements) ? maxElements : 0;
+    }
+
+    public static void resetElements() {
+        ignis = 0;
+        terra = 0;
+        aqua = 0;
+    }
 
     public ElementsCounter(Texture image){
         super(image, x, y , hb_w, hb_h);
@@ -260,13 +291,13 @@ public class ElementsCounter extends ClickableUIElement {
 //            }
             int prev;
             prev = this.ignisCount;
-            this.ignisCount = p.hasPower(IgnisPower.POWER_ID)? p.getPower(IgnisPower.POWER_ID).amount:0;
+            this.ignisCount = getIgnis();
             if(prev != this.ignisCount) rFontScale = 1.0F;
             prev = this.terraCount;
-            this.terraCount = p.hasPower(TerraPower.POWER_ID)? p.getPower(TerraPower.POWER_ID).amount:0;
+            this.terraCount = getTerra();
             if(prev != this.terraCount) gFontScale = 1.0F;
             prev = this.aquaCount;
-            this.aquaCount = p.hasPower(AquaPower.POWER_ID)? p.getPower(AquaPower.POWER_ID).amount:0;
+            this.aquaCount = getAqua();
             if(prev != this.aquaCount) bFontScale = 1.0F;
         }
     }

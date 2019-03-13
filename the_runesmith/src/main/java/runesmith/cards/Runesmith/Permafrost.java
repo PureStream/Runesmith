@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import runesmith.actions.ApplyElementsPowerAction;
+import runesmith.actions.ApplyElementsAction;
 import runesmith.patches.AbstractCardEnum;
 import runesmith.powers.PermafrostPower;
 
@@ -41,7 +41,7 @@ public class Permafrost extends CustomCard {
             AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p,
                     new PermafrostPower(p)));
         AbstractDungeon.actionManager.addToBottom(
-                new ApplyElementsPowerAction(p, p, 0, ELEMENT_AMT, ELEMENT_AMT));
+                new ApplyElementsAction(p, p, 0, ELEMENT_AMT, ELEMENT_AMT));
     }
 
     public AbstractCard makeCopy() {

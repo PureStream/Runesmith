@@ -4,7 +4,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import runesmith.actions.ApplyElementsPowerAction;
+import runesmith.actions.ApplyElementsAction;
 
 public class RepurposeAction extends AbstractGameAction {
     private static final com.megacrit.cardcrawl.localization.UIStrings uiStrings = com.megacrit.cardcrawl.core.CardCrawlGame.languagePack.getUIString("RecycleAction");
@@ -60,24 +60,24 @@ public class RepurposeAction extends AbstractGameAction {
         switch (c.type) {
             case ATTACK:
                 AbstractDungeon.actionManager.addToBottom(
-                        new ApplyElementsPowerAction(p, p, this.amount, 0, 0));
+                        new ApplyElementsAction(p, p, this.amount, 0, 0));
                 return;
             case SKILL:
                 AbstractDungeon.actionManager.addToBottom(
-                        new ApplyElementsPowerAction(p, p, 0, this.amount, 0));
+                        new ApplyElementsAction(p, p, 0, this.amount, 0));
                 return;
             case POWER:
                 AbstractDungeon.actionManager.addToBottom(
-                        new ApplyElementsPowerAction(p, p, 0, 0, this.amount));
+                        new ApplyElementsAction(p, p, 0, 0, this.amount));
                 return;
             case STATUS:
                 AbstractDungeon.actionManager.addToBottom(
-                        new ApplyElementsPowerAction(p, p, this.allAmt, this.allAmt, this.allAmt));
+                        new ApplyElementsAction(p, p, this.allAmt, this.allAmt, this.allAmt));
                 return;
             case CURSE:
                 if (this.upgraded) {
                     AbstractDungeon.actionManager.addToBottom(
-                            new ApplyElementsPowerAction(p, p, this.allAmt + this.allAmtPlus, this.allAmt + this.allAmtPlus, this.allAmt + this.allAmtPlus));
+                            new ApplyElementsAction(p, p, this.allAmt + this.allAmtPlus, this.allAmt + this.allAmtPlus, this.allAmt + this.allAmtPlus));
                 }
             default:
                 return;
