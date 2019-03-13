@@ -56,7 +56,7 @@ public class NegativeSpace extends CustomCard {
         int defaultBlock = BLOCK_AMT;
         if (upgraded)
             defaultBlock += UPGRADE_BLOCK_AMT;
-        int runeCount = RuneOrb.runeCount;
+        int runeCount = RuneOrb.getRuneCount();
         defaultBlock -= runeCount*SCALE_AMT;
         this.baseBlock = defaultBlock;
 
@@ -86,7 +86,7 @@ public class NegativeSpace extends CustomCard {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
 
         IntStream
-                .range(0, RuneOrb.runeCount)
+                .range(0, RuneOrb.getRuneCount())
                 .forEach(i -> AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT, true)));
     }
 

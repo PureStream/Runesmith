@@ -31,6 +31,7 @@ import org.apache.logging.log4j.Logger;
 import runesmith.cards.Runesmith.*;
 import runesmith.character.player.RunesmithCharacter;
 import runesmith.helpers.PotencyVariable;
+import runesmith.orbs.RuneOrb;
 import runesmith.patches.CardStasisStatus;
 import runesmith.patches.ElementsGainedCountField;
 import runesmith.patches.EnhanceCountField;
@@ -374,10 +375,12 @@ public class RunesmithMod implements PostExhaustSubscriber,
         cardsToAdd.add(new Accelerate());
         cardsToAdd.add(new Augmentation());
         cardsToAdd.add(new ChargedHammer());
+        cardsToAdd.add(new UnstableHammer());
 //        cardsToAdd.add(new Devolution());
         cardsToAdd.add(new NegativeSpace());
         cardsToAdd.add(new LightningRod());
-        cardsToAdd.add(new UnstableHammer());
+        cardsToAdd.add(new CraftObretio());
+
     }
 
     @Override
@@ -461,6 +464,8 @@ public class RunesmithMod implements PostExhaustSubscriber,
         //Reset Elements gained count.
         ElementsGainedCountField.elementsCount.set(AbstractDungeon.player, 0);
         renderElementsCounter = false;
+
+        RuneOrb.runeCountReset();
     }
 
     @Override
