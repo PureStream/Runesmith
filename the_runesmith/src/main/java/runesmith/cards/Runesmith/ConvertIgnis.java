@@ -3,7 +3,6 @@ package runesmith.cards.Runesmith;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -11,11 +10,11 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import runesmith.actions.ApplyElementsAction;
-import runesmith.actions.ReduceElementsAction;
-import runesmith.ui.ElementsCounter;
+import runesmith.actions.ApplyElementsPowerAction;
+import runesmith.actions.ReduceElementsPowerAction;
 
-import static runesmith.ui.ElementsCounter.*;
+import static runesmith.ui.ElementsCounter.Elements;
+import static runesmith.ui.ElementsCounter.getElementByID;
 
 public class ConvertIgnis extends CustomCard {
     public static final String ID = "Runesmith:ConvertIgnis";
@@ -52,9 +51,9 @@ public class ConvertIgnis extends CustomCard {
         int convertAmt = getElementByID(Elements.IGNIS);
         if (convertAmt > 0) {
             AbstractDungeon.actionManager.addToBottom(
-                    new ReduceElementsAction(p, p, convertAmt, 0, 0));
+                    new ReduceElementsPowerAction(p, p, convertAmt, 0, 0));
             AbstractDungeon.actionManager.addToBottom(
-                    new ApplyElementsAction(p, p, 0, convertAmt, convertAmt));
+                    new ApplyElementsPowerAction(p, p, 0, convertAmt, convertAmt));
 
         }
     }

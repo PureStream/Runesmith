@@ -2,15 +2,14 @@ package runesmith.cards.Runesmith;
 
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import runesmith.actions.ApplyElementsAction;
-import runesmith.actions.ReduceElementsAction;
+import runesmith.actions.ApplyElementsPowerAction;
+import runesmith.actions.ReduceElementsPowerAction;
 import runesmith.ui.ElementsCounter;
 
 import static runesmith.ui.ElementsCounter.getElementByID;
@@ -46,9 +45,9 @@ public class ConvertTerra extends CustomCard {
         int convertAmt = getElementByID(ElementsCounter.Elements.TERRA);
         if (convertAmt > 0) {
             AbstractDungeon.actionManager.addToBottom(
-                    new ReduceElementsAction(p, p, 0, convertAmt, 0));
+                    new ReduceElementsPowerAction(p, p, 0, convertAmt, 0));
             AbstractDungeon.actionManager.addToBottom(
-                    new ApplyElementsAction(p, p, convertAmt, 0, convertAmt));
+                    new ApplyElementsPowerAction(p, p, convertAmt, 0, convertAmt));
 
         }
     }

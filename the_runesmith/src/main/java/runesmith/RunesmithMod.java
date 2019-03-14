@@ -37,10 +37,7 @@ import runesmith.patches.CardStasisStatus;
 import runesmith.patches.ElementsGainedCountField;
 import runesmith.patches.EnhanceCountField;
 import runesmith.patches.PlayerClassEnum;
-import runesmith.powers.AquaPower;
-import runesmith.powers.IgnisPower;
 import runesmith.powers.PermafrostPower;
-import runesmith.powers.TerraPower;
 import runesmith.relics.*;
 import runesmith.ui.ElementsCounter;
 import runesmith.utils.KeywordWithProper;
@@ -237,11 +234,10 @@ public class RunesmithMod implements PostExhaustSubscriber,
     }
 
     public static boolean getElementsRender(){
-        AbstractPlayer p = AbstractDungeon.player;
         if (CardCrawlGame.dungeon != null && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
             if (renderElementsCounter) {
                 return true;
-            } else if ((p.hasPower(IgnisPower.POWER_ID) || p.hasPower(TerraPower.POWER_ID) || p.hasPower(AquaPower.POWER_ID))) {
+            } else if (ElementsCounter.getIgnis() > 0 || ElementsCounter.getTerra() > 0 || ElementsCounter.getAqua() > 0) {
                 renderElementsCounter = true;
                 return true;
             }

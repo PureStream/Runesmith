@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import runesmith.actions.ApplyElementsAction;
+import runesmith.actions.ApplyElementsPowerAction;
 import runesmith.patches.AbstractCardEnum;
 import runesmith.powers.PotentialPower;
 
@@ -54,7 +54,7 @@ public class GoWithTheFlow extends CustomCard {
                 )
         );
         AbstractDungeon.actionManager.addToBottom(
-                new ApplyElementsAction(p, p, 0, 0, this.magicNumber));
+                new ApplyElementsPowerAction(p, p, 0, 0, this.magicNumber));
         AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new PotentialPower(p, POT_AMT), POT_AMT));
     }
 

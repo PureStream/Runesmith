@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import runesmith.actions.ApplyElementsAction;
+import runesmith.actions.ApplyElementsPowerAction;
 import runesmith.patches.AbstractCardEnum;
 
 import static runesmith.patches.CardTagEnum.CHISEL;
@@ -50,7 +50,7 @@ public class ChiselStab extends CustomCard {
                         AbstractGameAction.AttackEffect.SLASH_DIAGONAL
                 )
         );
-        AbstractDungeon.actionManager.addToBottom(new ApplyElementsAction(IGNIS_AMT, 0, 0));
+        AbstractDungeon.actionManager.addToBottom(new ApplyElementsPowerAction(IGNIS_AMT, 0, 0));
 //		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new IgnisPower(p, IGNIS_AMT), IGNIS_AMT));
     }
 

@@ -8,10 +8,11 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import runesmith.actions.ApplyElementsAction;
+import runesmith.RunesmithMod;
+import runesmith.actions.ApplyElementsPowerAction;
 import runesmith.patches.AbstractCardEnum;
-import runesmith.powers.TerraPower;
 import runesmith.relics.CoreCrystal;
+import runesmith.ui.ElementsCounter;
 
 public class Terraform extends CustomCard {
     public static final String ID = "Runesmith:Terraform";
@@ -47,18 +48,10 @@ public class Terraform extends CustomCard {
         AbstractPlayer p = AbstractDungeon.player;
         int multiplier = this.magicNumber;
 
-        int playerTerra = 0;
-        if (p.hasRelic(CoreCrystal.ID))
-            playerTerra += 2;
-        else
-            playerTerra++;
-
-        if (p.hasPower(TerraPower.POWER_ID)) {
-            playerTerra += p.getPower(TerraPower.POWER_ID).amount;
-            int maxStacks = p.hasRelic(CoreCrystal.ID) ? 20 : 10;
-            if (playerTerra > maxStacks)
-                playerTerra = maxStacks;
-        }
+        int playerTerra = 1 + ElementsCounter.getTerra();
+        int maxStacks = p.hasRelic(CoreCrystal.ID) ? CoreCrystal.MAX_ELEMENTS : RunesmithMod.DEFAULT_MAX_ELEMENTS;
+        if (playerTerra > maxStacks)
+            playerTerra = maxStacks;
 
         this.baseBlock = playerTerra*multiplier;
         super.applyPowers();
@@ -76,7 +69,7 @@ public class Terraform extends CustomCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
-                new ApplyElementsAction(p, p, 0, TERRA_AMT, 0));
+                new ApplyElementsPowerAction(p, p, 0, TERRA_AMT, 0));
 //		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, 
 //				new TerraPower(p, TERRA_AMT),TERRA_AMT));\
         AbstractDungeon.actionManager.addToBottom(

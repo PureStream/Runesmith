@@ -2,15 +2,14 @@ package runesmith.cards.Runesmith;
 
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import runesmith.actions.ApplyElementsAction;
-import runesmith.actions.ReduceElementsAction;
+import runesmith.actions.ApplyElementsPowerAction;
+import runesmith.actions.ReduceElementsPowerAction;
 import runesmith.powers.PotentialDownPower;
 import runesmith.powers.PotentialPower;
 import runesmith.ui.ElementsCounter;
@@ -48,9 +47,9 @@ public class ConvertAqua extends CustomCard {
         int convertAmt = getElementByID(ElementsCounter.Elements.AQUA);
         if(convertAmt>0) {
             AbstractDungeon.actionManager.addToBottom(
-                    new ReduceElementsAction(p, p, convertAmt, 0, convertAmt));
+                    new ReduceElementsPowerAction(p, p, convertAmt, 0, convertAmt));
             AbstractDungeon.actionManager.addToBottom(
-                    new ApplyElementsAction(p, p, convertAmt, convertAmt, 0));
+                    new ApplyElementsPowerAction(p, p, convertAmt, convertAmt, 0));
         }
 
     }

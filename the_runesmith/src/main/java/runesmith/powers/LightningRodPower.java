@@ -11,7 +11,8 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import runesmith.ui.ElementsCounter;
 
-import static runesmith.ui.ElementsCounter.*;
+import static runesmith.ui.ElementsCounter.Elements;
+import static runesmith.ui.ElementsCounter.getElementByID;
 
 public class LightningRodPower extends AbstractPower {
 
@@ -26,6 +27,7 @@ public class LightningRodPower extends AbstractPower {
         this.ID = POWER_ID;
         this.owner = owner;
         this.amount = amount;
+        this.isTurnBased = true;
         updateDescription();
         this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/Aqua.png"), 0, 0, 84, 84);
         this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/AquaSmall.png"), 0, 0, 32, 32);

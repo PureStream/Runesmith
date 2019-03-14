@@ -14,8 +14,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import runesmith.orbs.RuneOrb;
 import runesmith.patches.AbstractCardEnum;
 
-import java.util.stream.IntStream;
-
 public class NegativeSpace extends CustomCard {
     public static final String ID = "Runesmith:NegativeSpace";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -48,11 +46,11 @@ public class NegativeSpace extends CustomCard {
     }
 
     public void applyPowers() {
-        int tempBlock = this.baseBlock;
-        int defaultBlock = tempBlock;
+//        int tempBlock = this.baseBlock;
+//        int defaultBlock = tempBlock;
 //        defaultBlock -= runeCount*SCALE_AMT;
 //        this.baseBlock = defaultBlock;
-//        int defaultBlock = BLOCK_AMT;
+        int defaultBlock = BLOCK_AMT;
         if (upgraded)
             defaultBlock += UPGRADE_BLOCK_AMT;
         int runeCount = RuneOrb.getRuneCount();
@@ -67,7 +65,7 @@ public class NegativeSpace extends CustomCard {
             switchType(0);
         this.loadCardImage(textureImg);
 
-        this.baseBlock = tempBlock;
+//        this.baseBlock = tempBlock;
     }
 
     private void switchType(int type) {

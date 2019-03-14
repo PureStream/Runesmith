@@ -3,7 +3,6 @@ package runesmith.cards.Runesmith;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -11,8 +10,9 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
+import runesmith.actions.ReduceElementsPowerAction;
 import runesmith.patches.AbstractCardEnum;
-import runesmith.powers.AquaPower;
+import runesmith.ui.ElementsCounter;
 
 public class Augmentation extends CustomCard {
 
@@ -46,23 +46,16 @@ public class Augmentation extends CustomCard {
         AbstractDungeon.actionManager.addToBottom(
                 new GainBlockAction(p, p, this.block)
         );
-        int aqua = 0;
-        if(p.hasPower(AquaPower.POWER_ID))
-            aqua = p.getPower(AquaPower.POWER_ID).amount;
+        int aqua = ElementsCounter.getAqua();
 
         if(upgraded)
             aqua = (int) Math.round(aqua/2.0);
         if(aqua == 0) return;
 
-        AbstractDungeon.actionManager.addToBottom(
-                new ReducePowerAction(p,p,AquaPower.POWER_ID,aqua)
-        );
+        AbstractDungeon.actionManager.addToBottom(new ReduceElementsPowerAction(0, 0, aqua));
         if(!upgraded)
             aqua = aqua / 2;
-        AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(p,p,
-                        new ArtifactPower(p, aqua),aqua)
-        );
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p,p, new ArtifactPower(p, aqua),aqua));
     }
 
     public AbstractCard makeCopy() {
