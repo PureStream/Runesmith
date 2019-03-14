@@ -99,8 +99,8 @@
   },
   "Runesmith:Grindstone": {
     "NAME": "Grindstone",
-    "DESCRIPTION": "Gain !B! block. NL This turn, whenever you play a card, NL Upgrade it. NL runesmith:Enhance the card if it cannot be upgraded.",
-    "UPGRADE_DESCRIPTION": "Gain !B! block. NL For !M! turns, whenever you play a card, NL Upgrade it. NL runesmith:Enhance the card if it cannot be upgraded."
+    "DESCRIPTION": "Gain !B! Block. NL This turn, whenever you play a card, NL Upgrade it. NL runesmith:Enhance the card if it cannot be upgraded.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL For !M! turns, whenever you play a card, NL Upgrade it. NL runesmith:Enhance the card if it cannot be upgraded."
   },
   "Runesmith:FieryHammer": {
     "NAME": "Fiery Hammer",
