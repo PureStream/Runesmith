@@ -177,10 +177,9 @@ public abstract class RuneOrb extends AbstractOrb {
         runeCount++;
         AbstractPlayer p = AbstractDungeon.player;
         if (p.hasPower(ArcReactorPower.POWER_ID)) {
-            int decAmount = ((TwoAmountPower)p.getPower(ArcReactorPower.POWER_ID)).amount2;
-//            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, PotentialPower.POWER_ID, decAmount));
-//            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PotentialPower(p, -decAmount), -decAmount));
-//            int decAmount = (int)Math.round(p.getPower(PotentialPower.POWER_ID).amount/2.0);
+            TwoAmountPower arcPower = (TwoAmountPower)p.getPower(ArcReactorPower.POWER_ID);
+            arcPower.flash();
+            int decAmount = arcPower.amount2;
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PotentialPower(p, -decAmount), -decAmount));
         }
     }

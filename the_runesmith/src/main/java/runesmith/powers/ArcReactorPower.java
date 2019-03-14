@@ -38,6 +38,7 @@ public class ArcReactorPower extends TwoAmountPower {
     }
 
     public void atStartOfTurn() {
+        flash();
         AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(this.owner, this.owner, new PotentialPower(this.owner, this.amount), this.amount));
     }
 
