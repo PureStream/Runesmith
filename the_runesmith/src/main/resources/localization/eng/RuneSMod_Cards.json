@@ -174,7 +174,8 @@
   },
   "Runesmith:CraftIndustria": {
     "NAME": "Craft Industria",
-    "DESCRIPTION": "!M! runesmith:Aqua: runesmith:Craft an runesmith:Industria Rune."
+    "DESCRIPTION": "3 runesmith:Aqua: runesmith:Craft an [#EFC851]Industria Rune.",
+    "UPGRADE_DESCRIPTION": "3 runesmith:Aqua: runesmith:Craft an [#EFC851]Industria+ Rune."
   },
   "Runesmith:CraftMedicinae": {
     "NAME": "Craft Medicinae",

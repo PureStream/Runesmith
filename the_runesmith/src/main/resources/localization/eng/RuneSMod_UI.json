@@ -73,6 +73,14 @@
       "Rune: #yRetain 2 cards."
     ]
   },
+  "Runesmith:CraftIndustria": {
+    "TEXT": [
+      "Industria",
+      "Industria+",
+      "Rune: Gain [E] at the start of your turn.",
+      "Rune: Gain [E] and draw 1 card at the start of your turn."
+    ]
+  },
   "Runesmith:Craftable": {
     "TEXT": [
       "Craftable"
