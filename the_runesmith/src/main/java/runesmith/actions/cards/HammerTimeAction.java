@@ -37,7 +37,7 @@ public class HammerTimeAction extends AbstractGameAction {
                     .forEach(c -> {
                         EnhanceCard.enhance(c, enhanceNums);
                         if (cardGroup == p.hand)
-                            c.superFlash(RunesmithMod.BEIGE);
+                            c.superFlash(RunesmithMod.BEIGE.cpy());
                     }));
         }
         tickDuration();

@@ -74,9 +74,7 @@ public class FlexTapeAction extends AbstractGameAction {
         if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {
             for (AbstractCard c : AbstractDungeon.handCardSelectScreen.selectedCards.group) {
                 StasisCard.stasis(c);
-//				if (!c.isEthereal)
-//					c.retain = true;
-                c.superFlash(RunesmithMod.BEIGE);
+                c.superFlash(RunesmithMod.BEIGE.cpy());
                 this.p.hand.addToTop(c);
             }
 

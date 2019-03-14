@@ -20,7 +20,7 @@ public class FortifyAction extends AbstractGameAction {
 
     private AbstractPlayer p;
     private ArrayList<AbstractCard> cannotEnhance = new ArrayList<>();
-    private boolean upgraded = false;
+    private boolean upgraded;
 
     public FortifyAction(boolean fortifyPlus) {
         this.actionType = AbstractGameAction.ActionType.CARD_MANIPULATION;
@@ -51,7 +51,7 @@ public class FortifyAction extends AbstractGameAction {
                 if (!canEnhance.isEmpty()) {
                     AbstractCard selectedCard = canEnhance.getRandomCard(AbstractDungeon.cardRandomRng);
                     EnhanceCard.enhance(selectedCard);
-                    selectedCard.superFlash(RunesmithMod.BEIGE);
+                    selectedCard.superFlash(RunesmithMod.BEIGE.cpy());
                 }
                 this.isDone = true;
                 return;
@@ -62,7 +62,7 @@ public class FortifyAction extends AbstractGameAction {
                     if (EnhanceCard.canEnhance(c)) {
                         EnhanceCard.enhance(c);
 //						c.upgrade();
-                        c.superFlash(RunesmithMod.BEIGE);
+                        c.superFlash(RunesmithMod.BEIGE.cpy());
                         this.isDone = true;
                         return;
                     }
@@ -79,7 +79,7 @@ public class FortifyAction extends AbstractGameAction {
             if (this.p.hand.group.size() == 1) {
                 EnhanceCard.enhance(this.p.hand.getTopCard());
 //				this.p.hand.getTopCard().upgrade();
-                this.p.hand.getTopCard().superFlash(RunesmithMod.BEIGE);
+                this.p.hand.getTopCard().superFlash(RunesmithMod.BEIGE.cpy());
                 returnCards();
                 this.isDone = true;
             }
@@ -91,7 +91,7 @@ public class FortifyAction extends AbstractGameAction {
             for (AbstractCard c : AbstractDungeon.handCardSelectScreen.selectedCards.group) {
                 EnhanceCard.enhance(c);
 //				c.upgrade();
-                c.superFlash(RunesmithMod.BEIGE);
+                c.superFlash(RunesmithMod.BEIGE.cpy());
                 this.p.hand.addToTop(c);
             }
 
@@ -105,8 +105,7 @@ public class FortifyAction extends AbstractGameAction {
     }
 
     private boolean canEnhance(AbstractCard c) {
-        if (c.type == CardType.CURSE || c.type == CardType.STATUS) return false;
-        else return true;
+        return c.type != CardType.CURSE && c.type != CardType.STATUS;
     }
 
     private void returnCards() {

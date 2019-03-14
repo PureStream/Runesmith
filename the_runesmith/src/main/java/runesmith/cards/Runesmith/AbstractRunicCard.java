@@ -55,7 +55,6 @@ public abstract class AbstractRunicCard extends CustomCard {
     public void applyPowers() {
         this.applyPowersToPotency();
         super.applyPowers();
-
     }
 
     private void applyPowersToPotency() {

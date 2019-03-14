@@ -93,7 +93,7 @@ public class CreatorFormAction extends AbstractGameAction {
                     .filter(EnhanceCard::canEnhance)
                     .forEach(c -> {
                         EnhanceCard.enhance(c);
-                        c.superFlash(RunesmithMod.BEIGE);
+                        c.superFlash(RunesmithMod.BEIGE.cpy());
                         this.p.hand.addToTop(c);
                     });
 //            for (AbstractCard c : AbstractDungeon.handCardSelectScreen.selectedCards.group) {
@@ -114,7 +114,7 @@ public class CreatorFormAction extends AbstractGameAction {
     private void enhanceCard(AbstractCard c) {
         enhanceCount++;
         EnhanceCard.enhance(c);
-        c.superFlash(RunesmithMod.BEIGE);
+        c.superFlash(RunesmithMod.BEIGE.cpy());
     }
 
     private void returnCards() {

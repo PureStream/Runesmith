@@ -35,7 +35,7 @@ public class EnchantAction extends AbstractGameAction {
                     c.upgrade();
                 }
                 if (EnhanceCard.canEnhance(c)) {
-                    c.superFlash(RunesmithMod.BEIGE);
+                    c.superFlash(RunesmithMod.BEIGE.cpy());
                     EnhanceCard.enhance(c);
                     c.applyPowers();
                 }
