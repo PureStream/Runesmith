@@ -138,7 +138,8 @@
   "Runesmith:IceColdPower": {
     "NAME": "Ice-Cold",
     "DESCRIPTIONS": [
-      "Thaws and loses #ySlow in #b",
+      "Decreases attack damage by #b",
+      ". Thaws and loses #ySlow in #b",
       " turns.",
       "turn."
     ]

@@ -105,7 +105,7 @@
       "NAMES": [
         "medicinae"
       ],
-      "DESCRIPTION": "Rune: Heals on #yBreak."
+      "DESCRIPTION": "Rune: Heals on #yBreak or at the end of combat."
     },
     {
       "PROPER_NAME": "Dud",
@@ -134,6 +134,13 @@
         "obretio"
       ],
       "DESCRIPTION": "Rune: Reduces an enemy #yStrength for a turn."
+    },
+    {
+      "PROPER_NAME": "Ice-Cold",
+      "NAMES": [
+        "ice-cold"
+      ],
+      "DESCRIPTION": "Decreases attack damage by #b1 per stack. Stack is reduced by #b1 at the end of turn. NL Removes #ySlow when stack reaches #b0."
     }
   ]
 }

@@ -282,7 +282,7 @@
   },
   "Runesmith:FrozenChisel": {
     "NAME": "Frozen Chisel",
-    "DESCRIPTION": "Deal !D! damage. NL Apply 1 Slow. NL Enemy loses 1 Strength. NL Enemy loses Slow after !M! turns. NL Gain 1 runesmith:Terra and 1 runesmith:Aqua."
+    "DESCRIPTION": "Deal !D! damage. NL Apply 1 Slow. NL Apply !M! runesmith:Ice-Cold. NL Gain 1 runesmith:Terra and 1 runesmith:Aqua."
   },
   "Runesmith:Accelerate": {
     "NAME": "Accelerate",
@@ -352,6 +352,6 @@
   },
   "Runesmith:NegativeSpace": {
     "NAME": "Negative Space",
-    "DESCRIPTION": "Gain !B! Block. NL Gain 3 less Block for each Rune you have. NL Deal !D! damage for each Rune."
+    "DESCRIPTION": "Gain !B! Block. NL Gain 3 less Block for each active Rune. NL Deal !D! damage for each active Rune."
   }
 }

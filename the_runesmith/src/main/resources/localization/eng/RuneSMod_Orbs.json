@@ -52,7 +52,7 @@
   "Medicinae": {
     "NAME": "Medicinae",
     "DESCRIPTION": [
-      "#yBreak: Heals {Pot} HP twice."
+      "At the end of combat, heals {Pot2} HP. NL #yBreak: Heals {Pot} HP twice."
     ]
   },
   "Dud": {

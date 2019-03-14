@@ -26,9 +26,9 @@ public class FrozenChisel extends CustomCard {
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String IMG_PATH = "images/cards/FrozenChisel.png"; //<-------------- need some img
     private static final int COST = 2;
-    private static final int ATTACK_DMG = 13;
-    private static final int UPGRADE_PLUS_DMG = 4;
-    private static final int STR_DOWN_AMT = 1;
+    private static final int ATTACK_DMG = 12;
+    private static final int UPGRADE_PLUS_DMG = 2;
+//    private static final int STR_DOWN_AMT = 1;
     private static final int SLOW_RECOVER = 3;
     private static final int UPGRADE_SLOW_RECOVER = 1;
     private static final int ELEMENT_AMT = 1;
@@ -60,10 +60,10 @@ public class FrozenChisel extends CustomCard {
         );
 
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new SlowPower(m, 0), 0));
-        if (!m.hasPower("Artifact"))
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new IceColdPower(m, this.magicNumber), this.magicNumber));
+//        if (!m.hasPower("Artifact"))
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new IceColdPower(m, this.magicNumber), this.magicNumber));
 
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new StrengthPower(m, -STR_DOWN_AMT), -STR_DOWN_AMT));
+//        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new StrengthPower(m, -STR_DOWN_AMT), -STR_DOWN_AMT));
 
         AbstractDungeon.actionManager.addToBottom(new ApplyElementsAction(p, p, 0, ELEMENT_AMT, ELEMENT_AMT));
     }
