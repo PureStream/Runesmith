@@ -50,7 +50,7 @@ public class LightningRodPower extends AbstractPower {
         if (damageAmount > 0) {
             int element = getElementByID(elementID);
             if (damageAmount > element) {
-                ElementsCounter.applyElements(Elements.IGNIS, -element);
+                ElementsCounter.applyElements(elementID, -element);
                 damageAmount -= element;
             } else {
                 ElementsCounter.applyElements(elementID, -damageAmount);
@@ -65,7 +65,7 @@ public class LightningRodPower extends AbstractPower {
     }
 
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0];
+        this.description = DESCRIPTIONS[0] + ((this.amount > 1) ? DESCRIPTIONS[2] : DESCRIPTIONS[1]) + DESCRIPTIONS[3];
     }
 
 }

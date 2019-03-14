@@ -348,7 +348,7 @@
   },
   "Runesmith:LightningRod": {
     "NAME": "Lightning Rod",
-    "DESCRIPTION": "For !M! turns, you lose runesmith:Elements instead of HP. Gain !M! of each runesmith:Elements."
+    "DESCRIPTION": "For !M! turns, you lose runesmith:Elements instead of HP. Gain 1 of each runesmith:Elements."
   },
   "Runesmith:NegativeSpace": {
     "NAME": "Negative Space",

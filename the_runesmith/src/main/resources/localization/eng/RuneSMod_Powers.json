@@ -164,9 +164,12 @@
     ]
   },
   "Runesmith:LightningRodPower": {
-    "NAME": "Magic Guard",
+    "NAME": "Lightning Rod",
     "DESCRIPTIONS": [
-      "Lose #yElements instead of HP."
+      "For #b",
+      " turn,",
+      " turns,",
+      " lose #yElements instead of HP."
     ]
   }
 }
