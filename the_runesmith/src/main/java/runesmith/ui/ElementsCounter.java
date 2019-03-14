@@ -16,6 +16,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.*;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import runesmith.RunesmithMod;
+import runesmith.patches.ElementsGainedCountField;
 import runesmith.relics.CoreCrystal;
 
 public class ElementsCounter extends ClickableUIElement {
@@ -103,6 +104,19 @@ public class ElementsCounter extends ClickableUIElement {
     }
 
     public static void applyElements(int ignis, int terra, int aqua) {
+        AbstractPlayer p = AbstractDungeon.player;
+        if (ignis > 0 || terra > 0 || aqua > 0) {
+            int totalElementsGain = 0;
+            double multiplier = (p.hasRelic(CoreCrystal.ID)) ? 1.5 : 1;
+            if (ignis > 0)
+                totalElementsGain += (ignis *= multiplier);
+            if (terra > 0)
+                totalElementsGain += (terra *= multiplier);
+            if (aqua > 0)
+                totalElementsGain += (aqua *= multiplier);
+            ElementsGainedCountField.elementsCount.set(p, ElementsGainedCountField.elementsCount.get(p) + totalElementsGain);
+        }
+
         if (ignis != 0)
             ElementsCounter.ignis = limitElementBound(ElementsCounter.ignis + ignis);
         if (terra != 0)

@@ -315,7 +315,7 @@
   },
   "Runesmith:ArcReactor": {
     "NAME": "Arc Reactor",
-    "DESCRIPTION": "Gain !M! runesmith:Potency. At the start of your turn, gain 2 runesmith:Potency. Whenever you runesmith:Craft a Rune, halves your current runesmith:Potency."
+    "DESCRIPTION": "Gain !M! runesmith:Potency. At the start of your turn, gain 1 runesmith:Potency. Whenever you runesmith:Craft a Rune, Lose 2 runesmith:Potency."
   },
   "Runesmith:ReplicatingBarrier": {
     "NAME": "Replicating Barrier",

@@ -141,7 +141,7 @@ public abstract class AbstractRunicCard extends CustomCard {
                 if (runeCount >= maxRunes && !isPotentia)
                     AbstractDungeon.actionManager.addToBottom(new ApplyElementsAction(p, p, ignis, terra, aqua));
                 else
-                    AbstractDungeon.actionManager.addToBottom(new ReduceElementsAction(p, p, ignis, terra, aqua));
+                    AbstractDungeon.actionManager.addToBottom(new ReduceElementsAction(ignis, terra, aqua));
             }
             if (checkOnly)
                 this.isCraftable = true;

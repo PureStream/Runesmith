@@ -2,6 +2,7 @@ package runesmith.orbs;
 
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -175,11 +176,11 @@ public abstract class RuneOrb extends AbstractOrb {
     public void onCraft() {
         runeCount++;
         AbstractPlayer p = AbstractDungeon.player;
-        if (p.hasPower(PotentialPower.POWER_ID) && p.hasPower(ArcReactorPower.POWER_ID)) {
-//            int decAmount = p.getPower(ArcReactorPower.POWER_ID).amount;
+        if (p.hasPower(ArcReactorPower.POWER_ID)) {
+            int decAmount = ((TwoAmountPower)p.getPower(ArcReactorPower.POWER_ID)).amount2;
 //            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, PotentialPower.POWER_ID, decAmount));
 //            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PotentialPower(p, -decAmount), -decAmount));
-            int decAmount = (int)Math.round(p.getPower(PotentialPower.POWER_ID).amount/2.0);
+//            int decAmount = (int)Math.round(p.getPower(PotentialPower.POWER_ID).amount/2.0);
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PotentialPower(p, -decAmount), -decAmount));
         }
     }

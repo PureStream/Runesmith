@@ -57,7 +57,7 @@
     "DESCRIPTIONS": [
       "At the start of your turn, gain #b",
       " #yPotency.",
-      " Whenever you #yCraft a Rune, halves your current #yPotency."
+      " Whenever you #yCraft a Rune, Lose #b"
     ]
   },
   "Runesmith:UnlimitedPowerPower": {
