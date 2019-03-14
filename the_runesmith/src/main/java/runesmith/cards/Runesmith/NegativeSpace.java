@@ -23,11 +23,11 @@ public class NegativeSpace extends CustomCard {
     private static final AbstractCard.CardType[] CARD_TYPE = {CardType.SKILL, CardType.ATTACK};
     private static final AbstractCard.CardTarget[] CARD_TARGET = {CardTarget.SELF, CardTarget.ENEMY};
     private static final int COST = 1;
-    private static final int ATTACK_DMG = 4;
-    private static final int UPGRADE_PLUS_DMG = 2;
-    private static final int BLOCK_AMT = 9;
-    private static final int UPGRADE_BLOCK_AMT = 3;
-    private static final int SCALE_AMT = 3;
+    private static final int ATTACK_DMG = 3;
+    private static final int UPGRADE_PLUS_DMG = 1;
+    private static final int BLOCK_AMT = 8;
+    private static final int UPGRADE_BLOCK_AMT = 2;
+    private static final int SCALE_AMT = 2;
 
     public NegativeSpace() {
         super(
