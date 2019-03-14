@@ -15,7 +15,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.LightningEffect;
 import runesmith.actions.BreakRuneAction;
-import runesmith.actions.ReduceElementsAction;
+import runesmith.actions.ReduceElementsPowerAction;
 import runesmith.actions.RuneChannelAction;
 import runesmith.orbs.DudRune;
 import runesmith.orbs.RuneOrb;
@@ -104,7 +104,7 @@ public class ChargedHammer extends CustomCard {
                             terra--;
                         else
                             aqua--;
-                        AbstractDungeon.actionManager.addToBottom(new ReduceElementsAction(rngElementID, 1));
+                        AbstractDungeon.actionManager.addToBottom(new ReduceElementsPowerAction(rngElementID, 1));
                     }
                     float speedTime = 0.1F;
                     if (Settings.FAST_MODE) {

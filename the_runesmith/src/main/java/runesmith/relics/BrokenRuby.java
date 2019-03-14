@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import runesmith.actions.ApplyElementsAction;
+import runesmith.actions.ApplyElementsPowerAction;
 import runesmith.actions.cards.FortifyAction;
 
 public class BrokenRuby extends CustomRelic {
@@ -31,7 +31,7 @@ public class BrokenRuby extends CustomRelic {
         setCounter(0);
         AbstractPlayer p = AbstractDungeon.player;
         flash();
-        AbstractDungeon.actionManager.addToTop(new ApplyElementsAction(p, p, IGNIS_AMT, 0, 0));
+        AbstractDungeon.actionManager.addToTop(new ApplyElementsPowerAction(p, p, IGNIS_AMT, 0, 0));
         AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(p, this));
     }
 
@@ -59,7 +59,7 @@ public class BrokenRuby extends CustomRelic {
 //                flash();
 //                RunesmithMod.logger.info("BrokenRuby : Applying Ignis for using " + NUM_CARDS + " attack cards");
 //                AbstractDungeon.actionManager.addToTop(
-//                        new ApplyElementsAction(p, p, IGNIS_AMT, 0, 0));
+//                        new ApplyElementsPowerAction(p, p, IGNIS_AMT, 0, 0));
 //                AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, this));
 //            }
 //        }

@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import runesmith.actions.ApplyElementsAction;
+import runesmith.actions.ApplyElementsPowerAction;
 
 import static runesmith.patches.CardTagEnum.CRAFT;
 
@@ -33,11 +33,11 @@ public class EmergencyProvisions extends CustomRelic {
             flash();
             int rng = AbstractDungeon.cardRandomRng.random(2);
             if (rng == 0)
-                AbstractDungeon.actionManager.addToBottom(new ApplyElementsAction(p, p, ELEMENT_AMT, 0, 0));
+                AbstractDungeon.actionManager.addToBottom(new ApplyElementsPowerAction(p, p, ELEMENT_AMT, 0, 0));
             else if (rng == 1)
-                AbstractDungeon.actionManager.addToBottom(new ApplyElementsAction(p, p, 0, ELEMENT_AMT, 0));
+                AbstractDungeon.actionManager.addToBottom(new ApplyElementsPowerAction(p, p, 0, ELEMENT_AMT, 0));
             else
-                AbstractDungeon.actionManager.addToBottom(new ApplyElementsAction(p, p, 0, 0, ELEMENT_AMT));
+                AbstractDungeon.actionManager.addToBottom(new ApplyElementsPowerAction(p, p, 0, 0, ELEMENT_AMT));
             AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(p, this));
         }
     }

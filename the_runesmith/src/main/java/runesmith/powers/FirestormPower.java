@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import runesmith.actions.ApplyElementsAction;
+import runesmith.actions.ApplyElementsPowerAction;
 
 public class FirestormPower extends AbstractPower {
 
@@ -37,7 +37,7 @@ public class FirestormPower extends AbstractPower {
     public void atStartOfTurn() {
         flash();
         AbstractDungeon.actionManager.addToBottom(
-                new ApplyElementsAction(owner, owner, amount, amount, 0));
+                new ApplyElementsPowerAction(owner, owner, amount, amount, 0));
 //		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(owner, owner, new IgnisPower(owner, amount), amount));
 //		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(owner, owner, new TerraPower(owner, amount), amount));
     }

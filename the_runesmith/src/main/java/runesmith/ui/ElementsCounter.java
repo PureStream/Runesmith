@@ -9,6 +9,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.graphics.glutils.FrameBuffer;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -123,6 +124,8 @@ public class ElementsCounter extends ClickableUIElement {
             ElementsCounter.terra = limitElementBound(ElementsCounter.terra + terra);
         if (aqua != 0)
             ElementsCounter.aqua = limitElementBound(ElementsCounter.aqua + aqua) ;
+
+        p.hand.group.forEach(AbstractCard::applyPowers);
     }
 
     public static void applyElements(Elements id, int amount) {

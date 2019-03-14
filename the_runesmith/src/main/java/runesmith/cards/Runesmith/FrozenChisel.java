@@ -12,8 +12,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.SlowPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
-import runesmith.actions.ApplyElementsAction;
+import runesmith.actions.ApplyElementsPowerAction;
 import runesmith.patches.AbstractCardEnum;
 import runesmith.powers.IceColdPower;
 
@@ -65,7 +64,7 @@ public class FrozenChisel extends CustomCard {
 
 //        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new StrengthPower(m, -STR_DOWN_AMT), -STR_DOWN_AMT));
 
-        AbstractDungeon.actionManager.addToBottom(new ApplyElementsAction(p, p, 0, ELEMENT_AMT, ELEMENT_AMT));
+        AbstractDungeon.actionManager.addToBottom(new ApplyElementsPowerAction(p, p, 0, ELEMENT_AMT, ELEMENT_AMT));
     }
 
     public AbstractCard makeCopy() {

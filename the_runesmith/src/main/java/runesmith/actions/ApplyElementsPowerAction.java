@@ -6,23 +6,23 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import static runesmith.ui.ElementsCounter.Elements;
 import static runesmith.ui.ElementsCounter.applyElements;
 
-public class ReduceElementsAction extends AbstractGameAction {
+public class ApplyElementsPowerAction extends AbstractGameAction {
 
     private int ignis;
     private int terra;
     private int aqua;
 
-    public ReduceElementsAction(AbstractCreature target, AbstractCreature source, int ignis, int terra, int aqua) {
+    public ApplyElementsPowerAction(AbstractCreature target, AbstractCreature source, int ignis, int terra, int aqua) {
         this.ignis = ignis;
         this.terra = terra;
         this.aqua = aqua;
     }
 
-    public ReduceElementsAction(int ignis, int terra, int aqua) {
+    public ApplyElementsPowerAction(int ignis, int terra, int aqua) {
         this(null, null, ignis, terra, aqua);
     }
 
-    public ReduceElementsAction(Elements element, int amount) {
+    public ApplyElementsPowerAction(Elements element, int amount) {
         if (element == Elements.IGNIS)
             ignis = amount;
         else if (element == Elements.TERRA)
@@ -33,7 +33,7 @@ public class ReduceElementsAction extends AbstractGameAction {
 
     @Override
     public void update() {
-        applyElements(-ignis, -terra, -aqua);
+        applyElements(ignis, terra, aqua);
         this.isDone = true;
     }
 }

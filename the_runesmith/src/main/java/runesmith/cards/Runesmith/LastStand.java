@@ -2,7 +2,6 @@ package runesmith.cards.Runesmith;
 
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -13,10 +12,8 @@ import runesmith.actions.DowngradeEntireDeckAction;
 import runesmith.patches.AbstractCardEnum;
 import runesmith.patches.CardStasisStatus;
 import runesmith.patches.EnhanceCountField;
-import runesmith.powers.AquaPower;
-import runesmith.powers.IgnisPower;
 import runesmith.powers.LastStandPower;
-import runesmith.powers.TerraPower;
+import runesmith.ui.ElementsCounter;
 
 public class LastStand extends CustomCard {
     public static final String ID = "Runesmith:LastStand";
@@ -49,9 +46,13 @@ public class LastStand extends CustomCard {
     }
 
     private static int countCards() {
-        return (int) (AbstractDungeon.player.discardPile.group.stream().filter(c -> c.upgraded || EnhanceCountField.enhanceCount.get(c) > 0 || CardStasisStatus.isStasis.get(c)).count()
-                + AbstractDungeon.player.drawPile.group.stream().filter(c -> c.upgraded || EnhanceCountField.enhanceCount.get(c) > 0 || CardStasisStatus.isStasis.get(c)).count()
-                + AbstractDungeon.player.hand.group.stream().filter(c -> c.upgraded || EnhanceCountField.enhanceCount.get(c) > 0 || CardStasisStatus.isStasis.get(c)).count());
+        return (int) (AbstractDungeon.player.discardPile.group.stream().filter(LastStand::cardCheck).count()
+                + AbstractDungeon.player.drawPile.group.stream().filter(LastStand::cardCheck).count()
+                + AbstractDungeon.player.hand.group.stream().filter(LastStand::cardCheck).count());
+    }
+
+    private static boolean cardCheck(AbstractCard c) {
+        return c.upgraded || EnhanceCountField.enhanceCount.get(c) > 0 || CardStasisStatus.isStasis.get(c);
     }
 
     @Override
@@ -73,12 +74,7 @@ public class LastStand extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new DowngradeEntireDeckAction(p));
 
-        if (p.hasPower(IgnisPower.POWER_ID))
-            AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(p, p, IgnisPower.POWER_ID));
-        if (p.hasPower(TerraPower.POWER_ID))
-            AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(p, p, TerraPower.POWER_ID));
-        if (p.hasPower(AquaPower.POWER_ID))
-            AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(p, p, AquaPower.POWER_ID));
+        ElementsCounter.resetElements();
 
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
                 new LastStandPower(p, this.damage, TURNS)));

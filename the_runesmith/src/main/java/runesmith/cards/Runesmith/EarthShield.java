@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import runesmith.actions.ApplyElementsAction;
+import runesmith.actions.ApplyElementsPowerAction;
 import runesmith.patches.AbstractCardEnum;
 
 public class EarthShield extends CustomCard {
@@ -42,7 +42,7 @@ public class EarthShield extends CustomCard {
                 new GainBlockAction(p, p, this.block)
         );
         AbstractDungeon.actionManager.addToBottom(
-                new ApplyElementsAction(p, p, 0, TERRA_AMT, 0));
+                new ApplyElementsPowerAction(p, p, 0, TERRA_AMT, 0));
 //		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, 
 //				new TerraPower(p, TERRA_AMT),TERRA_AMT));
     }

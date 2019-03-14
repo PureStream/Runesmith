@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import runesmith.actions.ApplyElementsAction;
+import runesmith.actions.ApplyElementsPowerAction;
 import runesmith.patches.AbstractCardEnum;
 import runesmith.powers.PotentialDownPower;
 import runesmith.powers.PotentialPower;
@@ -57,7 +57,7 @@ public class PerfectChisel extends CustomCard {
                 )
         );
         AbstractDungeon.actionManager.addToBottom(
-                new ApplyElementsAction(p, p, ELEMENT_AMT, ELEMENT_AMT, ELEMENT_AMT));
+                new ApplyElementsPowerAction(p, p, ELEMENT_AMT, ELEMENT_AMT, ELEMENT_AMT));
         AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new PotentialPower(p, this.magicNumber), this.magicNumber));
         AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new PotentialDownPower(p, this.magicNumber), this.magicNumber));
     }
