@@ -12,6 +12,10 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import runesmith.actions.ApplyElementsAction;
+import runesmith.actions.ReduceElementsAction;
+import runesmith.ui.ElementsCounter;
+
+import static runesmith.ui.ElementsCounter.*;
 
 public class ConvertIgnis extends CustomCard {
     public static final String ID = "Runesmith:ConvertIgnis";
@@ -45,13 +49,14 @@ public class ConvertIgnis extends CustomCard {
                         AbstractGameAction.AttackEffect.BLUNT_HEAVY
                 )
         );
-        if (p.hasPower("Runesmith:IgnisPower")) {
-            int convertAmount;
-            convertAmount = p.getPower("Runesmith:IgnisPower").amount;
-            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, "Runesmith:IgnisPower"));
-            AbstractDungeon.actionManager.addToBottom(new ApplyElementsAction(p, p, 0, convertAmount, convertAmount));
-        }
+        int convertAmt = getElementByID(Elements.IGNIS);
+        if (convertAmt > 0) {
+            AbstractDungeon.actionManager.addToBottom(
+                    new ReduceElementsAction(p, p, convertAmt, 0, 0));
+            AbstractDungeon.actionManager.addToBottom(
+                    new ApplyElementsAction(p, p, 0, convertAmt, convertAmt));
 
+        }
     }
 
     public AbstractCard makeCopy() {

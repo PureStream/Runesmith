@@ -48,12 +48,11 @@ public class NegativeSpace extends CustomCard {
     }
 
     public void applyPowers() {
-//        int tempBlock = this.baseBlock;
-//        int defaultBlock = tempBlock;
-//        int runeCount = RuneOrb.getRuneCount(AbstractDungeon.player);
+        int tempBlock = this.baseBlock;
+        int defaultBlock = tempBlock;
 //        defaultBlock -= runeCount*SCALE_AMT;
 //        this.baseBlock = defaultBlock;
-        int defaultBlock = BLOCK_AMT;
+//        int defaultBlock = BLOCK_AMT;
         if (upgraded)
             defaultBlock += UPGRADE_BLOCK_AMT;
         int runeCount = RuneOrb.getRuneCount();
@@ -68,7 +67,7 @@ public class NegativeSpace extends CustomCard {
             switchType(0);
         this.loadCardImage(textureImg);
 
-//        this.baseBlock = tempBlock;
+        this.baseBlock = tempBlock;
     }
 
     private void switchType(int type) {
@@ -85,9 +84,9 @@ public class NegativeSpace extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
 
-        IntStream
-                .range(0, RuneOrb.getRuneCount())
-                .forEach(i -> AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT, true)));
+        for (int i = 0; i < RuneOrb.getRuneCount(); i++) {
+            AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT, true));
+        }
     }
 
     public AbstractCard makeCopy() {

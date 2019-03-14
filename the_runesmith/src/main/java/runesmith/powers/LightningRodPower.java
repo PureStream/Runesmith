@@ -19,7 +19,7 @@ public class LightningRodPower extends AbstractPower {
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    private static final String[] ELEMENTS_ID = {IGNIS_ID, TERRA_ID, AQUA_ID};
+    private static final Elements[] ELEMENTS_ID = {Elements.IGNIS, Elements.TERRA, Elements.AQUA};
 
     public LightningRodPower(AbstractCreature owner, int amount) {
         this.name = NAME;
@@ -39,16 +39,16 @@ public class LightningRodPower extends AbstractPower {
     }
 
     public int onLoseHp(int damageAmount) {
-        for (String powerStr : ELEMENTS_ID)
-            damageAmount = elementsLostCheck(damageAmount, powerStr);
+        for (Elements elem : ELEMENTS_ID)
+            damageAmount = elementsLostCheck(damageAmount, elem);
         return damageAmount;
     }
 
-    private int elementsLostCheck(int damageAmount, String elementID) {
+    private int elementsLostCheck(int damageAmount, Elements elementID) {
         if (damageAmount > 0) {
             int element = getElementByID(elementID);
             if (damageAmount > element) {
-                ElementsCounter.applyElements(elementID, -element);
+                ElementsCounter.applyElements(Elements.IGNIS, -element);
                 damageAmount -= element;
             } else {
                 ElementsCounter.applyElements(elementID, -damageAmount);

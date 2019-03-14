@@ -18,7 +18,6 @@ C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmit
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\orbs\ProtectioRune.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\deprecated\HammerSlam.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\vfx\ShowStasisCardAndAddToDiscardEffect.java
-C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\actions\ApplyElementsPowerAction.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\Empowerment.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\AbstractRunicCard.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\powers\DuplicatePower.java
@@ -36,6 +35,7 @@ C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\patches\CardSt
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\LightningRod.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\Terraform.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\HammerThrow.java
+C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\actions\ReduceElementsAction.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\Defend_RS.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\ui\EnergyOrbBeige.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\powers\AquaPower.java
@@ -98,6 +98,7 @@ C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\actions\Remove
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\patches\RunicCardGlow.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\orbs\ReservoRune.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\relics\Locket.java
+C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\actions\ApplyElementsAction.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\orbs\IncendiumRune.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\CraftIndustria.java
 C:\Users\Nook\git\Runesmith\the_runesmith\src\main\java\runesmith\cards\Runesmith\Malloc.java

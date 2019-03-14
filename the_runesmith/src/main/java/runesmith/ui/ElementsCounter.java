@@ -69,7 +69,13 @@ public class ElementsCounter extends ClickableUIElement {
 
     //Elements data for player
     private static int ignis = 0, terra = 0, aqua = 0;
-    public static String IGNIS_ID = "IGNIS_ID", TERRA_ID = "TERRA_ID", AQUA_ID = "AQUA_ID";
+//    public static String IGNIS_ID = "IGNIS_ID", TERRA_ID = "TERRA_ID", AQUA_ID = "AQUA_ID";
+
+    public enum Elements{
+        IGNIS,
+        TERRA,
+        AQUA
+    }
 
     public static int getIgnis() {
         return ignis;
@@ -83,14 +89,17 @@ public class ElementsCounter extends ClickableUIElement {
         return aqua;
     }
 
-    public static int getElementByID(String id) {
-        if (id.equals(IGNIS_ID))
-            return ignis;
-        else if (id.equals(TERRA_ID))
-            return terra;
-        else if (id.equals(AQUA_ID))
-            return  aqua;
-        return 0;
+    public static int getElementByID(Elements id) {
+        switch(id){
+            case IGNIS:
+                return ignis;
+            case TERRA:
+                return terra;
+            case AQUA:
+                return aqua;
+            default:
+                return 0;
+        }
     }
 
     public static void applyElements(int ignis, int terra, int aqua) {
@@ -102,13 +111,17 @@ public class ElementsCounter extends ClickableUIElement {
             ElementsCounter.aqua = limitElementBound(ElementsCounter.aqua + aqua) ;
     }
 
-    public static void applyElements(String id, int amount) {
-        if (id.equals(IGNIS_ID))
-            applyElements(amount, 0, 0);
-        else if (id.equals(TERRA_ID))
-            applyElements(0, amount, 0);
-        else if (id.equals(AQUA_ID))
-            applyElements(0, 0, amount);
+    public static void applyElements(Elements id, int amount) {
+        switch(id){
+            case IGNIS:
+                applyElements(amount, 0, 0);
+                break;
+            case TERRA:
+                applyElements(0, amount, 0);
+                break;
+            case AQUA:
+                applyElements(0,0,amount);
+        }
     }
 
     private static int limitElementBound(int element) {

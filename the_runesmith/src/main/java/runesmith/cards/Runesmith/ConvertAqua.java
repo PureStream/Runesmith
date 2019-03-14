@@ -10,8 +10,12 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import runesmith.actions.ApplyElementsAction;
+import runesmith.actions.ReduceElementsAction;
 import runesmith.powers.PotentialDownPower;
 import runesmith.powers.PotentialPower;
+import runesmith.ui.ElementsCounter;
+
+import static runesmith.ui.ElementsCounter.getElementByID;
 
 public class ConvertAqua extends CustomCard {
     public static final String ID = "Runesmith:ConvertAqua";
@@ -41,11 +45,12 @@ public class ConvertAqua extends CustomCard {
         AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new PotentialPower(p, this.magicNumber), this.magicNumber));
         AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new PotentialDownPower(p, this.magicNumber), this.magicNumber));
 
-        if (p.hasPower("Runesmith:AquaPower")) {
-            int convertAmount;
-            convertAmount = p.getPower("Runesmith:AquaPower").amount;
-            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, "Runesmith:AquaPower"));
-            AbstractDungeon.actionManager.addToBottom(new ApplyElementsAction(p, p, convertAmount, convertAmount, 0));
+        int convertAmt = getElementByID(ElementsCounter.Elements.AQUA);
+        if(convertAmt>0) {
+            AbstractDungeon.actionManager.addToBottom(
+                    new ReduceElementsAction(p, p, convertAmt, 0, convertAmt));
+            AbstractDungeon.actionManager.addToBottom(
+                    new ApplyElementsAction(p, p, convertAmt, convertAmt, 0));
         }
 
     }

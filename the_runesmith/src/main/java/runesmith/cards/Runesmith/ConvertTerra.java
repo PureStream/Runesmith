@@ -10,6 +10,10 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import runesmith.actions.ApplyElementsAction;
+import runesmith.actions.ReduceElementsAction;
+import runesmith.ui.ElementsCounter;
+
+import static runesmith.ui.ElementsCounter.getElementByID;
 
 public class ConvertTerra extends CustomCard {
     public static final String ID = "Runesmith:ConvertTerra";
@@ -39,13 +43,14 @@ public class ConvertTerra extends CustomCard {
         AbstractDungeon.actionManager.addToBottom(
                 new GainBlockAction(p, p, this.block)
         );
-        if (p.hasPower("Runesmith:TerraPower")) {
-            int convertAmount;
-            convertAmount = p.getPower("Runesmith:TerraPower").amount;
-            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, "Runesmith:TerraPower"));
-            AbstractDungeon.actionManager.addToBottom(new ApplyElementsAction(p, p, convertAmount, 0, convertAmount));
-        }
+        int convertAmt = getElementByID(ElementsCounter.Elements.TERRA);
+        if (convertAmt > 0) {
+            AbstractDungeon.actionManager.addToBottom(
+                    new ReduceElementsAction(p, p, 0, convertAmt, 0));
+            AbstractDungeon.actionManager.addToBottom(
+                    new ApplyElementsAction(p, p, convertAmt, 0, convertAmt));
 
+        }
     }
 
     public AbstractCard makeCopy() {
