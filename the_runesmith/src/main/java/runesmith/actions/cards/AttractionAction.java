@@ -29,11 +29,6 @@ public class AttractionAction extends AbstractGameAction {
         setValues(p, p, amount);
         this.actionType = ActionType.CARD_MANIPULATION;
         this.duration = Settings.ACTION_DUR_MED;
-
-        if (p.hand.size() == BaseMod.MAX_HAND_SIZE) {
-            AbstractDungeon.player.createHandIsFullDialog();
-            this.isDone = true;
-        }
     }
 
     @Override
