@@ -48,10 +48,9 @@ public class StasisCardInHandAction extends AbstractGameAction {
             //stasis every card if amount is at least the number of stasis-able card
             if (!isOptional) {
                 if (this.p.hand.size() - this.cannotStasis.size() <= this.amount) {
-                    p.hand.group.forEach(c -> {
-                        if (StasisCard.canStasis(c))
+                    p.hand.group.stream().filter(StasisCard::canStasis).forEach(c -> {
                             StasisCard.stasis(c);
-                        c.superFlash(RunesmithMod.BEIGE.cpy());
+                            c.superFlash(RunesmithMod.BEIGE.cpy());
                     });
                     this.isDone = true;
                     return;
