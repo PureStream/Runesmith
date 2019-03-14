@@ -50,8 +50,7 @@ public class ChiselStab extends CustomCard {
                         AbstractGameAction.AttackEffect.SLASH_DIAGONAL
                 )
         );
-        AbstractDungeon.actionManager.addToBottom(
-                new ApplyElementsAction(p, p, IGNIS_AMT, 0, 0));
+        AbstractDungeon.actionManager.addToBottom(new ApplyElementsAction(IGNIS_AMT, 0, 0));
 //		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new IgnisPower(p, IGNIS_AMT), IGNIS_AMT));
     }
 

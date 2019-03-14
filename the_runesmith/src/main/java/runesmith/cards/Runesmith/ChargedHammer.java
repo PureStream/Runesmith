@@ -4,7 +4,6 @@ import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -16,19 +15,18 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.LightningEffect;
 import runesmith.actions.BreakRuneAction;
+import runesmith.actions.ReduceElementsAction;
 import runesmith.actions.RuneChannelAction;
 import runesmith.orbs.DudRune;
 import runesmith.orbs.RuneOrb;
 import runesmith.patches.AbstractCardEnum;
-import runesmith.powers.AquaPower;
-import runesmith.powers.IgnisPower;
 import runesmith.powers.PotentialPower;
-import runesmith.powers.TerraPower;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import static runesmith.patches.CardTagEnum.HAMMER;
+import static runesmith.ui.ElementsCounter.*;
 
 public class ChargedHammer extends CustomCard {
     public static final String ID = "Runesmith:ChargedHammer";
@@ -88,36 +86,25 @@ public class ChargedHammer extends CustomCard {
                     .filter(o -> o instanceof DudRune)
                     .findFirst().orElse(null);
             if (r != null) {
-                int ignis = 0, terra = 0, aqua = 0;
-                String ignisID = IgnisPower.POWER_ID, terraID = TerraPower.POWER_ID, aquaID = AquaPower.POWER_ID;
-                if (p.hasPower(ignisID))
-                    ignis = p.getPower(ignisID).amount;
-                if (p.hasPower(terraID))
-                    terra = p.getPower(terraID).amount;
-                if (p.hasPower(aquaID))
-                    aqua = p.getPower(aquaID).amount;
+                int ignis = getIgnis(), terra = getTerra(), aqua = getAqua();
+
                 if (ignis + terra + aqua >= this.magicNumber) {
                     for (int i=0; i<this.magicNumber; i++) {
-                        List<String> elementsList = new ArrayList<>();
+                        List<Elements> elementsList = new ArrayList<>();
                         if (ignis > 0)
-                            elementsList.add(ignisID);
+                            elementsList.add(Elements.IGNIS);
                         if (terra > 0)
-                            elementsList.add(terraID);
+                            elementsList.add(Elements.TERRA);
                         if (aqua > 0)
-                            elementsList.add(aquaID);
-                        String rngElementID = elementsList.get(AbstractDungeon.cardRandomRng.random(elementsList.size()-1));
-                        if (rngElementID.equals(ignisID)) {
-                            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, ignisID, 1));
+                            elementsList.add(Elements.AQUA);
+                        Elements rngElementID = elementsList.get(AbstractDungeon.cardRandomRng.random(elementsList.size()-1));
+                        if (rngElementID == Elements.IGNIS)
                             ignis--;
-                        }
-                        else if (rngElementID.equals(terraID)) {
-                            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, terraID, 1));
+                        else if (rngElementID == Elements.TERRA)
                             terra--;
-                        }
-                        else {
-                            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, aquaID, 1));
+                        else
                             aqua--;
-                        }
+                        AbstractDungeon.actionManager.addToBottom(new ReduceElementsAction(rngElementID, 1));
                     }
                     float speedTime = 0.1F;
                     if (Settings.FAST_MODE) {

@@ -20,8 +20,8 @@ public class ArcReactor extends CustomCard {
     public static final String IMG_PATH = "images/cards/ArcReactor.png"; //<-------------- need some img
     private static final int COST = 1;
     private static final int POWER_AMT = 2;
-    private static final int UPGRADE_POWER_AMT = 2;
-    private static final int ARC_AMT = 2;
+    private static final int UPGRADE_POWER_AMT = 1;
+    private static final int ARC_AMT = 1;
 
     public ArcReactor() {
         super(
