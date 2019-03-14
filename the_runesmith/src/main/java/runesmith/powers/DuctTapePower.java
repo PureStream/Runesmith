@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import runesmith.actions.StasisCardInHandAction;
-import runesmith.actions.cards.FlexTapeAction;
 
 public class DuctTapePower extends AbstractPower {
 
@@ -39,9 +38,7 @@ public class DuctTapePower extends AbstractPower {
     public void atStartOfTurnPostDraw() {
         if(owner instanceof AbstractPlayer) {
             flash();
-            AbstractDungeon.actionManager.addToBottom(
-                    new StasisCardInHandAction((AbstractPlayer) owner, amount)
-            );
+            AbstractDungeon.actionManager.addToBottom(new StasisCardInHandAction((AbstractPlayer) owner, amount, true));
         }
     }
 
