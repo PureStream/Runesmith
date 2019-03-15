@@ -39,8 +39,8 @@
   "Prismatic": {
     "NAME": "Prismatic",
     "DESCRIPTION": [
-      "At the start of turn, gain a random card. The card costs #b0 this turn.",
-      "At the start of turn, gain a random #yUpgraded card. The card costs #b0 this turn."
+      "At the start of turn, gain a random card. It costs #b0 this turn.",
+      "At the start of turn, gain a random #yUpgraded card. It costs #b0 this turn."
     ]
   },
   "Industria": {
