@@ -80,20 +80,6 @@
       "DESCRIPTION": "룬 : #y방어도 를 얻습니다."
     },
     {
-      "PROPER_NAME": "보존석",
-      "NAMES": [
-        "보존석"
-      ],
-      "DESCRIPTION": "룬 : 카드를 1장 #y보존 합니다."
-    },
-    {
-      "PROPER_NAME": "보존석+",
-      "NAMES": [
-        "보존석+"
-      ],
-      "DESCRIPTION": "룬 : 카드를 2장 #y보존 합니다."
-    },
-    {
       "PROPER_NAME": "미늘석",
       "NAMES": [
         "미늘석"
@@ -106,34 +92,6 @@
         "잠재석"
       ],
       "DESCRIPTION": "룬 : #y잠재력 을 얻습니다."
-    },
-    {
-      "PROPER_NAME": "판금석",
-      "NAMES": [
-        "판금석"
-      ],
-      "DESCRIPTION": "룬 : #y잠재력 만큼 #y판금 #y갑옷 을 얻습니다."
-    },
-    {
-      "PROPER_NAME": "프리즘",
-      "NAMES": [
-        "프리즘"
-      ],
-      "DESCRIPTION": "룬 : 매 턴 무작위 직업의 카드를 얻습니다."
-    },
-    {
-      "PROPER_NAME": "프리즘+",
-      "NAMES": [
-        "프리즘+"
-      ],
-      "DESCRIPTION": "룬 : 매 턴 무작위 직업의 강화된 카드를 얻습니다."
-    },
-    {
-      "PROPER_NAME": "근면석",
-      "NAMES": [
-        "근면석"
-      ],
-      "DESCRIPTION": "룬 : 내 턴이 시작할 때 [E] 를 얻습니다."
     },
     {
       "PROPER_NAME": "약제석",
@@ -157,12 +115,25 @@
       "DESCRIPTION": "룬 : 무작위 적에게 피해를 주고 방어도를 얻습니다."
     },
     {
-      "PROPER_NAME": "시간여행",
+      "PROPER_NAME": "부패",
       "NAMES": [
-        "시간여행",
-        "time_travel"
+        "부패"
       ],
-      "DESCRIPTION": "현재의 체력, 방어도, 원소 를 저장해 놓습니다."
+      "DESCRIPTION": "선택한 #y원소 를 모두 잃고 다른 #y원소를 그만큼 얻습니다. 선택한 #y원소 에 따라 특정한 효과를 얻을 수 있습니다."
+    },
+    {
+      "PROPER_NAME": "탈진석",
+      "NAMES": [
+        "탈진석"
+      ],
+      "DESCRIPTION": "룬 : 이번 턴만 적이 #y힘 을 잃습니다."
+    },
+    {
+      "PROPER_NAME": "살얼음",
+      "NAMES": [
+        "살얼음"
+      ],
+      "DESCRIPTION": "중첩 당 적이 주는 피해량이 #b1 감소합니다. 중첩은 매 턴 #b1 씩 감소합니다. NL 중첩이 #b0 이 되면 #y둔화 효과가 제거됩니다."
     }
   ]
 }

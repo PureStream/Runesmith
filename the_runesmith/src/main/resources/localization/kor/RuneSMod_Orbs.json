@@ -36,12 +36,6 @@
       "#y잠재력 을 #b{Pot} 얻습니다. NL #y파쇄: #y잠재력 을 추가로 #b{Pot} 얻고 내 턴이 끝날 때 2배로 잃습니다."
     ]
   },
-  "Ferro": {
-    "NAME": "판금석",
-    "DESCRIPTION": [
-      "아무 효과도 없습니다. NL #y파쇄: #y판금 #y갑옷 을 #b{2Pot} 얻습니다."
-    ]
-  },
   "Prismatic": {
     "NAME": "프리즘",
     "DESCRIPTION": [
@@ -52,7 +46,8 @@
   "Industria": {
     "NAME": "근면석",
     "DESCRIPTION": [
-      "내 턴이 시작할 때 [E] 를 얻습니다."
+      "내 턴이 시작할 때 [E] 를 얻습니다.",
+	  "내 턴이 시작할 때 [E] 를 얻고 카드를 #b1 장 뽑습니다."
     ]
   },
   "Medicinae": {
@@ -73,10 +68,10 @@
       "턴 종료시 , 피해를 #b{Pot} 주고 #y방어도 를 #b{Pot2} 얻습니다."
     ]
   },
-  "WWWWWWWWWWWWWW": {
-    "NAME": "WWWWWWWWWWWWWW",
+  "Obretio": {
+    "NAME": "탈진석",
     "DESCRIPTION": [
-      "WWWWWWWWWWWWWW"
+      "턴 종료시 이번 턴만 가장 높은 공격력을 가진 적의 #y힘 을 #b{Pot} 만큼 잃게 합니다."
     ]
   }
 }
