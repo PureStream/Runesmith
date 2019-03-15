@@ -169,8 +169,8 @@
   },
   "Runesmith:ConstructBifrost": {
     "NAME": "Construct Bifrost",
-    "DESCRIPTION": "1 of each runesmith:Element: runesmith:Craft a [#EFC851]Prismatic Rune.",
-    "UPGRADE_DESCRIPTION": "1 of each runesmith:Element: runesmith:Craft a [#EFC851]Prismatic+ Rune."
+    "DESCRIPTION": "2 of each runesmith:Element: runesmith:Craft a [#EFC851]Prismatic Rune.",
+    "UPGRADE_DESCRIPTION": "2 of each runesmith:Element: runesmith:Craft a [#EFC851]Prismatic+ Rune."
   },
   "Runesmith:CraftIndustria": {
     "NAME": "Craft Industria",

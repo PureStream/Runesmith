@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import runesmith.ui.ElementsCounter;
+import runesmith.utils.TextureLoader;
 
 import static runesmith.ui.ElementsCounter.Elements;
 import static runesmith.ui.ElementsCounter.getElementByID;
@@ -29,8 +30,8 @@ public class LightningRodPower extends AbstractPower {
         this.amount = amount;
         this.isTurnBased = true;
         updateDescription();
-        this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/Aqua.png"), 0, 0, 84, 84);
-        this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/AquaSmall.png"), 0, 0, 32, 32);
+        this.region128 = new TextureAtlas.AtlasRegion(TextureLoader.getTexture("images/powers/LightningRod.png"), 0, 0, 84, 84);
+        this.region48 = new TextureAtlas.AtlasRegion(TextureLoader.getTexture("images/powers/LightningRodSmall.png"), 0, 0, 32, 32);
     }
 
     public void stackPower(int stackAmount) {
@@ -65,7 +66,7 @@ public class LightningRodPower extends AbstractPower {
     }
 
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0] + ((this.amount > 1) ? DESCRIPTIONS[2] : DESCRIPTIONS[1]) + DESCRIPTIONS[3];
+        this.description = DESCRIPTIONS[0] + this.amount + ((this.amount > 1) ? DESCRIPTIONS[2] : DESCRIPTIONS[1]) + DESCRIPTIONS[3];
     }
 
 }

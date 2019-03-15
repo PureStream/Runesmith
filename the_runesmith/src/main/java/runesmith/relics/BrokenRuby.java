@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import runesmith.actions.ApplyElementsPowerAction;
 import runesmith.actions.cards.FortifyAction;
+import runesmith.utils.TextureLoader;
 
 public class BrokenRuby extends CustomRelic {
 
@@ -20,7 +21,7 @@ public class BrokenRuby extends CustomRelic {
     private static final int NUM_CARDS = 2;
 
     public BrokenRuby() {
-        super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_O), RelicTier.STARTER, LandingSound.CLINK);
+        super(ID, TextureLoader.getTexture(IMG), TextureLoader.getTexture(IMG_O), RelicTier.STARTER, LandingSound.CLINK);
     }
 
     public String getUpdatedDescription() {
