@@ -1,5 +1,6 @@
 package runesmith.orbs;
 
+import basemod.ReflectionHacks;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
@@ -20,16 +21,9 @@ public class ObretioRune extends RuneOrb {
     @Override
     public void onEndOfTurn() {
         this.activateEndOfTurnEffect();
-        AbstractMonster m = AbstractDungeon.getMonsters().monsters
-                .stream()
-                .reduce(null, this::getHighestHealthMonsterWithAttackIntent);
-        if (m != null) {
-            AbstractDungeon.actionManager.addToBottom(new ObretioRuneAction(potential, m));
-        } else {
-            m = AbstractDungeon.getMonsters().getRandomMonster(null, true, AbstractDungeon.cardRng);
-            AbstractDungeon.actionManager.addToBottom(new ObretioRuneAction(potential, m));
-        }
+        AbstractDungeon.actionManager.addToBottom(new ObretioRuneAction(potential));
     }
+
 
     private AbstractMonster getHighestHealthMonsterWithAttackIntent(AbstractMonster m1, AbstractMonster m2) {
         int m1Health = 0;
@@ -43,18 +37,7 @@ public class ObretioRune extends RuneOrb {
 
     @Override
     public void onBreak() {
-        AbstractMonster m = AbstractDungeon.getMonsters().monsters
-                .stream()
-                .reduce(null, this::getHighestHealthMonsterWithAttackIntent);
-        if (m != null) {
-            AbstractDungeon.actionManager.addToBottom(new ObretioRuneAction(potential, m));
-            AbstractDungeon.actionManager.addToBottom(new ObretioRuneAction(potential, m));
-        } else {
-            m = AbstractDungeon.getMonsters().getRandomMonster(null, true, AbstractDungeon.cardRng);
-            AbstractDungeon.actionManager.addToBottom(new ObretioRuneAction(potential, m));
-            m = AbstractDungeon.getMonsters().getRandomMonster(null, true, AbstractDungeon.cardRng);
-            AbstractDungeon.actionManager.addToBottom(new ObretioRuneAction(potential, m));
-        }
+        AbstractDungeon.actionManager.addToBottom(new ObretioRuneAction(potential));
         this.activateEffect();
     }
 

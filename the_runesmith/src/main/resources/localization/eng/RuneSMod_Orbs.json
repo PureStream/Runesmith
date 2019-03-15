@@ -71,7 +71,7 @@
   "Obretio": {
     "NAME": "Obretio",
     "DESCRIPTION": [
-      "At the end of turn, enemy with attack intent and highest HP loses #b{Pot} #yStrength this turn."
+      "At the end of turn, enemy with highest attack intent loses #b{Pot} #yStrength this turn."
     ]
   }
 }

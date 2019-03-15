@@ -230,16 +230,23 @@ public abstract class RuneOrb extends AbstractOrb {
     }
 
     public static int getRuneCount() {
+        AbstractPlayer p = AbstractDungeon.player;
+        int runeCount = 0;
+        if(p!= null){
+            runeCount = (int) p.orbs.stream()
+                    .filter(orb -> orb instanceof RuneOrb)
+                    .count();
+        }
         return runeCount;
     }
 
-    public static void runeCountDown() {
-        runeCount--;
-    }
+//    public static void runeCountDown() {
+//        runeCount--;
+//    }
 
-    public static void runeCountReset() {
-        runeCount = 0;
-    }
+//    public static void runeCountReset() {
+//        runeCount = 0;
+//    }
 
     public static int getMaxRune(AbstractPlayer p) {
         return 7;

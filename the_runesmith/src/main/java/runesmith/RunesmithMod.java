@@ -466,7 +466,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
         ElementsGainedCountField.elementsCount.set(p, 0);
         renderElementsCounter = false;
 
-        RuneOrb.runeCountReset();
+//        RuneOrb.runeCountReset();
         ElementsCounter.resetElements();
     }
 
