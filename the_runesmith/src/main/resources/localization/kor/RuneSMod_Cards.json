@@ -147,7 +147,7 @@
   },
   "Runesmith:ChaoticBlast": {
     "NAME": "혼돈의 폭발",
-    "DESCRIPTION": "모든 적에게 피해를 !D! 줍니다. NL 모든 runesmith:원소 !M! : 무작위 룬을 !M! ",
+    "DESCRIPTION": "모든 적에게 피해를 !D! 줍니다. NL 모든 runesmith:원소 !M! : 무작위 룬을 !M!",
     "EXTENDED_DESCRIPTION": [
       " 개 runesmith:제련 합니다.",
       " 개 runesmith:제련 합니다."
@@ -294,7 +294,7 @@
     "DESCRIPTION": "모든 캐릭터가 이번 턴에 힘을 !M! 잃습니다. 소멸."
   },
   "Runesmith:Overpower": {
-    "NAME": "강력함",
+    "NAME": "압도",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 내 손에 있는 무작위 카드 2장을 runesmith:퇴화 시킵니다."
   },
   "Runesmith:HammerAndChisel": {
