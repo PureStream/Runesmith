@@ -253,6 +253,9 @@ public class RunesmithMod implements PostExhaustSubscriber,
             ElementsCounter.setMaxElements(CoreCrystal.MAX_ELEMENTS);
         else
             ElementsCounter.setMaxElements(DEFAULT_MAX_ELEMENTS);
+
+        ElementsGainedCountField.elementsCount.set(p, 0);
+        ElementsCounter.resetElements();
     }
 
     @Override
@@ -462,12 +465,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
         RuneOrb.getAllRunes(p, new MedicinaeRune(0))
                 .forEach(r -> p.heal(r.getPotential()/2));
 
-        //Reset Elements gained count.
-        ElementsGainedCountField.elementsCount.set(p, 0);
         renderElementsCounter = false;
-
-//        RuneOrb.runeCountReset();
-        ElementsCounter.resetElements();
     }
 
     @Override
