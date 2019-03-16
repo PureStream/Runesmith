@@ -25,6 +25,7 @@ public class IceColdPower extends AbstractPower {
         this.owner = owner;
         this.amount = amount;
         this.isTurnBased = true;
+        this.type = PowerType.DEBUFF;
         updateDescription();
         this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/IceCold.png"), 0, 0, 84, 84);  //<-------- NEED SOME IMG
         this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/IceColdSmall.png"), 0, 0, 32, 32); //<-------- NEED SOME IMG

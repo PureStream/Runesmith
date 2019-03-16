@@ -42,20 +42,24 @@ public class ObretioRuneAction extends AbstractGameAction {
 
     private AbstractMonster getHighestAttackMonster(AbstractMonster m1, AbstractMonster m2){
         int m1Attack = 0;
-        if (m1 != null && (m1.intent == AbstractMonster.Intent.ATTACK || m1.intent == AbstractMonster.Intent.ATTACK_BUFF || m1.intent == AbstractMonster.Intent.ATTACK_DEBUFF || m1.intent == AbstractMonster.Intent.ATTACK_DEFEND)) {
-            boolean m1IsMulti = (boolean) ReflectionHacks.getPrivate(m1, AbstractMonster.class, "isMultiDmg");
-            if(m1IsMulti)
-                m1Attack = (int) ReflectionHacks.getPrivate(m1, AbstractMonster.class, "intentDmg") * (int) ReflectionHacks.getPrivate(m1, AbstractMonster.class, "intentMultiAmt");
-            else
-                m1Attack = (int) ReflectionHacks.getPrivate(m1, AbstractMonster.class, "intentDmg");
+        if(m1 != null && !m1.isDeadOrEscaped()) {
+            if (m1.intent == AbstractMonster.Intent.ATTACK || m1.intent == AbstractMonster.Intent.ATTACK_BUFF || m1.intent == AbstractMonster.Intent.ATTACK_DEBUFF || m1.intent == AbstractMonster.Intent.ATTACK_DEFEND) {
+                boolean m1IsMulti = (boolean) ReflectionHacks.getPrivate(m1, AbstractMonster.class, "isMultiDmg");
+                if (m1IsMulti)
+                    m1Attack = (int) ReflectionHacks.getPrivate(m1, AbstractMonster.class, "intentDmg") * (int) ReflectionHacks.getPrivate(m1, AbstractMonster.class, "intentMultiAmt");
+                else
+                    m1Attack = (int) ReflectionHacks.getPrivate(m1, AbstractMonster.class, "intentDmg");
+            }
         }
         int m2Attack = 0;
-        if (m2 != null && (m2.intent == AbstractMonster.Intent.ATTACK || m2.intent == AbstractMonster.Intent.ATTACK_BUFF || m2.intent == AbstractMonster.Intent.ATTACK_DEBUFF || m2.intent == AbstractMonster.Intent.ATTACK_DEFEND)) {
-            boolean m2IsMulti = (boolean) ReflectionHacks.getPrivate(m2, AbstractMonster.class, "isMultiDmg");
-            if(m2IsMulti)
-                m2Attack = (int) ReflectionHacks.getPrivate(m2, AbstractMonster.class, "intentDmg") * (int) ReflectionHacks.getPrivate(m2, AbstractMonster.class, "intentMultiAmt");
-            else
-                m2Attack = (int) ReflectionHacks.getPrivate(m2, AbstractMonster.class, "intentDmg");
+        if(m2 != null && !m2.isDeadOrEscaped()) {
+            if (m2.intent == AbstractMonster.Intent.ATTACK || m2.intent == AbstractMonster.Intent.ATTACK_BUFF || m2.intent == AbstractMonster.Intent.ATTACK_DEBUFF || m2.intent == AbstractMonster.Intent.ATTACK_DEFEND) {
+                boolean m2IsMulti = (boolean) ReflectionHacks.getPrivate(m2, AbstractMonster.class, "isMultiDmg");
+                if (m2IsMulti)
+                    m2Attack = (int) ReflectionHacks.getPrivate(m2, AbstractMonster.class, "intentDmg") * (int) ReflectionHacks.getPrivate(m2, AbstractMonster.class, "intentMultiAmt");
+                else
+                    m2Attack = (int) ReflectionHacks.getPrivate(m2, AbstractMonster.class, "intentDmg");
+            }
         }
         return (m1Attack >= m2Attack) ? m1 : m2;
     }
