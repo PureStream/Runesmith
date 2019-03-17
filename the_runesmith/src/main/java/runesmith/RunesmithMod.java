@@ -246,19 +246,6 @@ public class RunesmithMod implements PostExhaustSubscriber,
     }
 
     @Override
-    public void receiveOnBattleStart(AbstractRoom abstractRoom) {
-        AbstractPlayer p = AbstractDungeon.player;
-        renderElementsCounter = p instanceof RunesmithCharacter;
-        if (p.hasRelic(CoreCrystal.ID))
-            ElementsCounter.setMaxElements(CoreCrystal.MAX_ELEMENTS);
-        else
-            ElementsCounter.setMaxElements(DEFAULT_MAX_ELEMENTS);
-
-        ElementsGainedCountField.elementsCount.set(p, 0);
-        ElementsCounter.resetElements();
-    }
-
-    @Override
     public void receivePostDraw(AbstractCard arg0) {
         // TODO Auto-generated method stub
 
@@ -460,12 +447,28 @@ public class RunesmithMod implements PostExhaustSubscriber,
     }
 
     @Override
+    public void receiveOnBattleStart(AbstractRoom abstractRoom) {
+        AbstractPlayer p = AbstractDungeon.player;
+        renderElementsCounter = p instanceof RunesmithCharacter;
+        if (p.hasRelic(CoreCrystal.ID))
+            ElementsCounter.setMaxElements(CoreCrystal.MAX_ELEMENTS);
+        else
+            ElementsCounter.setMaxElements(DEFAULT_MAX_ELEMENTS);
+
+        ElementsCounter.resetElements();
+    }
+
+    @Override
     public void receivePostBattle(AbstractRoom arg0) {
         AbstractPlayer p = AbstractDungeon.player;
         RuneOrb.getAllRunes(p, new MedicinaeRune(0))
                 .forEach(r -> p.heal(r.getPotential()/2));
 
+        //Reset Elements gained count.
+        ElementsGainedCountField.elementsCount.set(p, 0);
         renderElementsCounter = false;
+
+        ElementsCounter.resetElements();
     }
 
     @Override
