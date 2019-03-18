@@ -75,7 +75,7 @@
   },
   "Runesmith:UnstableHammer": {
     "NAME": "Unstable Hammer",
-    "DESCRIPTION": "Deal !D! damage. NL runesmith:Craft a runesmith:Dud rune. NL Gain 1 random runesmith:Element."
+    "DESCRIPTION": "Deal !D! damage. NL runesmith:Craft a runesmith:Dud Rune. NL Gain 1 random runesmith:Element."
   },
   "Runesmith:HammerThrow": {
     "NAME": "Hammer Throw",
@@ -190,12 +190,12 @@
   },
   "Runesmith:GenerateForcefield": {
     "NAME": "Generate Forcefield",
-    "DESCRIPTION": "runesmith:Break your X oldest non-Dud runes. Prevent the next time you would lose HP for each Rune runesmith:Broken. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "runesmith:Break your X+1 oldest non-Dud runes. Prevent the next time you would lose HP for each Rune runesmith:Broken. NL Exhaust."
+    "DESCRIPTION": "runesmith:Break your X oldest non-Dud Runes. Prevent the next time you would lose HP for each Rune runesmith:Broken. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "runesmith:Break your X+1 oldest non-Dud Runes. Prevent the next time you would lose HP for each Rune runesmith:Broken. NL Exhaust."
   },
   "Runesmith:Supernova": {
     "NAME": "Supernova",
-    "DESCRIPTION": "runesmith:Break all your runes. NL Draw 1 card and gain [E] for each non-Dud Rune runesmith:Broken."
+    "DESCRIPTION": "runesmith:Break all your Runes. NL Draw 1 card and gain [E] for each non-Dud Rune runesmith:Broken."
   },
   "Runesmith:CreatorForm": {
     "NAME": "Creator Form",
@@ -308,7 +308,7 @@
   },
   "Runesmith:Discharge": {
     "NAME": "Discharge",
-    "DESCRIPTION": "runesmith:Break your oldest non-Dud Rune to gain !B! Block, deal !D! damage, and runesmith:Craft a runesmith:Dud rune."
+    "DESCRIPTION": "runesmith:Break your oldest non-Dud Rune to gain !B! Block, deal !D! damage, and runesmith:Craft a runesmith:Dud Rune."
   },
   "Runesmith:Attraction": {
     "NAME": "Attraction",
@@ -337,7 +337,7 @@
   },
   "Runesmith:ChargedHammer": {
     "NAME": "Charged Hammer",
-    "DESCRIPTION": "Deal !D! damage. NL Spend !M! random runesmith:Elements and runesmith:Break your oldest runesmith:Dud Rune to runesmith:Craft a random non-Dud rune."
+    "DESCRIPTION": "Deal !D! damage. NL Spend !M! random runesmith:Elements and runesmith:Break your oldest runesmith:Dud Rune to runesmith:Craft a random non-Dud Rune."
   },
   "Runesmith:Devolution": {
     "NAME": "Devolution",
