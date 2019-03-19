@@ -16,7 +16,7 @@ import runesmith.actions.ApplyElementsPowerAction;
 import runesmith.patches.AbstractCardEnum;
 import runesmith.powers.IceColdPower;
 
-import static runesmith.patches.CardTagEnum.CHISEL;
+import static runesmith.patches.CardTagEnum.RS_CHISEL;
 
 public class FrozenChisel extends CustomCard {
     public static final String ID = "Runesmith:FrozenChisel";
@@ -46,7 +46,7 @@ public class FrozenChisel extends CustomCard {
         );
         this.baseDamage = ATTACK_DMG;
         this.baseMagicNumber = this.magicNumber = SLOW_RECOVER;
-        this.tags.add(CHISEL);
+        this.tags.add(RS_CHISEL);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

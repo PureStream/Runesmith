@@ -25,7 +25,7 @@ import runesmith.powers.PotentialPower;
 import java.util.ArrayList;
 import java.util.List;
 
-import static runesmith.patches.CardTagEnum.HAMMER;
+import static runesmith.patches.CardTagEnum.RS_HAMMER;
 import static runesmith.ui.ElementsCounter.*;
 
 public class ChargedHammer extends CustomCard {
@@ -54,7 +54,7 @@ public class ChargedHammer extends CustomCard {
                 CardTarget.ENEMY
         );
         this.baseDamage = ATTACK_DMG;
-        this.tags.add(HAMMER);
+        this.tags.add(RS_HAMMER);
         this.baseMagicNumber = this.magicNumber = ELEMENT_SPENT;
     }
 

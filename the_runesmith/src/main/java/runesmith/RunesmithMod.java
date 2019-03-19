@@ -409,11 +409,11 @@ public class RunesmithMod implements PostExhaustSubscriber,
             chiselCards = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
             craftCards = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
             CardLibrary.getAllCards().forEach(card -> {
-                if (card.hasTag(HAMMER))
+                if (card.hasTag(RS_HAMMER))
                     hammerCards.addToBottom(card);
-                if (card.hasTag(CHISEL))
+                if (card.hasTag(RS_CHISEL))
                     chiselCards.addToBottom(card);
-                if(card.hasTag(CRAFT))
+                if(card.hasTag(RS_CRAFT))
                     craftCards.addToBottom(card);
             });
         }

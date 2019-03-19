@@ -35,7 +35,7 @@ public class DuplicatePower extends AbstractPower {
     }
 
 //	public void onUseCard(AbstractCard card, UseCardAction action) {
-//		if ((!card.purgeOnUse) && (card.hasTag(CRAFT)) && (this.amount > 0)) {
+//		if ((!card.purgeOnUse) && (card.hasTag(RS_CRAFT)) && (this.amount > 0)) {
 //			flash();
 //			
 //			AbstractMonster m = null;

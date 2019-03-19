@@ -15,7 +15,7 @@ import runesmith.actions.RuneChannelAction;
 import runesmith.orbs.DudRune;
 import runesmith.patches.AbstractCardEnum;
 
-import static runesmith.patches.CardTagEnum.HAMMER;
+import static runesmith.patches.CardTagEnum.RS_HAMMER;
 
 public class UnstableHammer extends CustomCard {
     public static final String ID = "Runesmith:UnstableHammer";
@@ -41,7 +41,7 @@ public class UnstableHammer extends CustomCard {
                 CardTarget.ENEMY
         );
         this.baseDamage = ATTACK_DMG;
-        this.tags.add(HAMMER);
+        this.tags.add(RS_HAMMER);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

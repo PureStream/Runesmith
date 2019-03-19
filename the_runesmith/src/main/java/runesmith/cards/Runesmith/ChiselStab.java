@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import runesmith.actions.ApplyElementsPowerAction;
 import runesmith.patches.AbstractCardEnum;
 
-import static runesmith.patches.CardTagEnum.CHISEL;
+import static runesmith.patches.CardTagEnum.RS_CHISEL;
 
 public class ChiselStab extends CustomCard {
     public static final String ID = "Runesmith:ChiselStab";
@@ -39,7 +39,7 @@ public class ChiselStab extends CustomCard {
                 CardTarget.ENEMY
         );
         this.baseDamage = ATTACK_DMG;
-        this.tags.add(CHISEL);
+        this.tags.add(RS_CHISEL);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

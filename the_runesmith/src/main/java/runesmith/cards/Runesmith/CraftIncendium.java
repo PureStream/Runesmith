@@ -10,7 +10,7 @@ import runesmith.actions.RuneChannelAction;
 import runesmith.orbs.IncendiumRune;
 import runesmith.patches.AbstractCardEnum;
 
-import static runesmith.patches.CardTagEnum.CRAFT;
+import static runesmith.patches.CardTagEnum.RS_CRAFT;
 
 public class CraftIncendium extends AbstractRunicCard {
 
@@ -40,7 +40,7 @@ public class CraftIncendium extends AbstractRunicCard {
 
         this.basePotency = POTENCY;
         this.potency = this.basePotency;
-        this.tags.add(CRAFT);
+        this.tags.add(RS_CRAFT);
 
     }
 

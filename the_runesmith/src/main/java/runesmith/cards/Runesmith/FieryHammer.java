@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import runesmith.patches.AbstractCardEnum;
 
-import static runesmith.patches.CardTagEnum.HAMMER;
+import static runesmith.patches.CardTagEnum.RS_HAMMER;
 
 public class FieryHammer extends CustomCard {
     public static final String ID = "Runesmith:FieryHammer";
@@ -40,7 +40,7 @@ public class FieryHammer extends CustomCard {
         );
         this.baseDamage = ATTACK_DMG;
         this.isMultiDamage = true;
-        this.tags.add(HAMMER);
+        this.tags.add(RS_HAMMER);
     }
 
     public AbstractCard makeCopy() {

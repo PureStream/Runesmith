@@ -16,7 +16,7 @@ import runesmith.actions.BreakWithoutRemovingRuneAction;
 import runesmith.orbs.RuneOrb;
 import runesmith.patches.AbstractCardEnum;
 
-import static runesmith.patches.CardTagEnum.HAMMER;
+import static runesmith.patches.CardTagEnum.RS_HAMMER;
 
 public class FissionHammer extends CustomCard {
     public static final String ID = "Runesmith:FissionHammer";
@@ -42,7 +42,7 @@ public class FissionHammer extends CustomCard {
         );
         this.baseDamage = this.damage = ATTACK_DMG;
         this.isMultiDamage = true;
-        this.tags.add(HAMMER);
+        this.tags.add(RS_HAMMER);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

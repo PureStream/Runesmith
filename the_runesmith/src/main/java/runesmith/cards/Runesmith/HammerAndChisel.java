@@ -3,20 +3,13 @@ package runesmith.cards.Runesmith;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import runesmith.RunesmithMod;
 import runesmith.patches.AbstractCardEnum;
-
-import java.util.ArrayList;
-
-import static runesmith.patches.CardTagEnum.CHISEL;
-import static runesmith.patches.CardTagEnum.HAMMER;
 
 public class HammerAndChisel extends CustomCard {
 
@@ -40,8 +33,8 @@ public class HammerAndChisel extends CustomCard {
                 AbstractCard.CardRarity.UNCOMMON,
                 AbstractCard.CardTarget.SELF
         );
-//        this.tags.add(HAMMER);
-//        this.tags.add(CHISEL);
+//        this.tags.add(RS_HAMMER);
+//        this.tags.add(RS_CHISEL);
         this.exhaust = true;
     }
 

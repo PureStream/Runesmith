@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import runesmith.actions.cards.HammerTimeAction;
 import runesmith.patches.AbstractCardEnum;
 
-import static runesmith.patches.CardTagEnum.HAMMER;
+import static runesmith.patches.CardTagEnum.RS_HAMMER;
 
 public class HammerTime extends CustomCard {
     public static final String ID = "Runesmith:HammerTime";
@@ -39,7 +39,7 @@ public class HammerTime extends CustomCard {
                 CardTarget.ENEMY
         );
         this.baseDamage = ATTACK_DMG;
-        this.tags.add(HAMMER);
+        this.tags.add(RS_HAMMER);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

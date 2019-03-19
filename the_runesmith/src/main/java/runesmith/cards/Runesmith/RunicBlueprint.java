@@ -44,7 +44,7 @@ public class RunicBlueprint extends CustomCard {
         //AbstractCard c = AbstractDungeon.returnTrulyRandomCardInCombat(AbstractCard.CardType.).makeCopy();
 
 //        ArrayList<String> tmp = CardLibrary.cards.entrySet().stream()
-//                .filter(s -> s.getValue().hasTag(CRAFT))
+//                .filter(s -> s.getValue().hasTag(RS_CRAFT))
 //                .map(Map.Entry::getKey)
 //                .collect(Collectors.toCollection(ArrayList::new));
 

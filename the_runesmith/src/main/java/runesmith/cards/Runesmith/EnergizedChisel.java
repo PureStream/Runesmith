@@ -16,7 +16,7 @@ import com.megacrit.cardcrawl.powers.WeakPower;
 import runesmith.actions.ApplyElementsPowerAction;
 import runesmith.patches.AbstractCardEnum;
 
-import static runesmith.patches.CardTagEnum.CHISEL;
+import static runesmith.patches.CardTagEnum.RS_CHISEL;
 
 public class EnergizedChisel extends CustomCard {
     public static final String ID = "Runesmith:EnergizedChisel";
@@ -46,7 +46,7 @@ public class EnergizedChisel extends CustomCard {
         this.baseDamage = ATTACK_DMG;
         this.baseBlock = BLOCK_AMT;
         this.baseMagicNumber = this.magicNumber = WEAK_AMT;
-        this.tags.add(CHISEL);
+        this.tags.add(RS_CHISEL);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

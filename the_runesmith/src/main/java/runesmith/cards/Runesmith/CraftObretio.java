@@ -10,7 +10,7 @@ import runesmith.actions.RuneChannelAction;
 import runesmith.orbs.ObretioRune;
 import runesmith.patches.AbstractCardEnum;
 
-import static runesmith.patches.CardTagEnum.CRAFT;
+import static runesmith.patches.CardTagEnum.RS_CRAFT;
 
 public class CraftObretio extends AbstractRunicCard {
 
@@ -41,7 +41,7 @@ public class CraftObretio extends AbstractRunicCard {
         );
 
         this.potency = this.basePotency = POTENCY;
-        this.tags.add(CRAFT);
+        this.tags.add(RS_CRAFT);
     }
 
     @Override

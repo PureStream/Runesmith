@@ -15,7 +15,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import static com.megacrit.cardcrawl.cards.CardGroup.*;
-import static runesmith.patches.CardTagEnum.CRAFT;
+import static runesmith.patches.CardTagEnum.RS_CRAFT;
 
 public class AttractionAction extends AbstractGameAction {
 
@@ -41,7 +41,7 @@ public class AttractionAction extends AbstractGameAction {
             List<List<AbstractCard>> allCardsGroup = Arrays.asList(drawPile.group, discardPile.group, exhaustPile.group);
             allCardsGroup.forEach(cardGroup -> cardGroup
                     .stream()
-                    .filter(c -> c.hasTag(CRAFT))
+                    .filter(c -> c.hasTag(RS_CRAFT))
                     .forEach(temp::addToRandomSpot));
 
             if (temp.size() <= amount) {
@@ -144,7 +144,7 @@ public class AttractionAction extends AbstractGameAction {
 //
 ////		ArrayList<AbstractCard> toDiscard = new ArrayList<AbstractCard>();
 //        for (int i = p.drawPile.size() - 1; i >= 0; i--) {
-//            if (p.drawPile.group.get(i).hasTag(CRAFT)) {
+//            if (p.drawPile.group.get(i).hasTag(RS_CRAFT)) {
 //                AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
 //                break;
 //            } else {

@@ -13,7 +13,7 @@
 //import runesmith.actions.cards.HammerSlamAction;
 //import runesmith.patches.AbstractCardEnum;
 //
-//import static runesmith.patches.CardTagEnum.HAMMER;
+//import static runesmith.patches.CardTagEnum.RS_HAMMER;
 //
 //public class HammerSlam extends CustomCard {
 //    public static final String ID = "Runesmith:HammerSlam";
@@ -42,7 +42,7 @@
 //        );
 //        this.baseDamage = ATTACK_DMG;
 //        this.baseMagicNumber = this.magicNumber = BASE_DRAW;
-//        this.tags.add(HAMMER);
+//        this.tags.add(RS_HAMMER);
 //    }
 //
 //    public AbstractCard makeCopy() {
