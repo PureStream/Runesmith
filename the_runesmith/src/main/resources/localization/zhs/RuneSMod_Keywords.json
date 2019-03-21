@@ -19,7 +19,7 @@
       "NAMES": [
         "凝滞"
       ],
-      "DESCRIPTION": " #y弃牌 而不是 #y消耗 。 NL 不能叠加。"
+      "DESCRIPTION": " #y弃牌 或失效所有的 #y强化 ，而不是 #y消耗 。 NL 不能叠加。"
     },
     {
       "PROPER_NAME": "动能",
@@ -39,6 +39,7 @@
       "PROPER_NAME": "元素",
       "NAMES": [
         "元素",
+	    "元素",
         "火素",
         "土素",
         "水素"
@@ -81,13 +82,6 @@
       "DESCRIPTION": "符文: #y保留 一张牌。"
     },
     {
-      "PROPER_NAME": "保留+",
-      "NAMES": [
-        "保留+"
-      ],
-      "DESCRIPTION": "符文: #y保留 两张牌。"
-    },
-    {
       "PROPER_NAME": "倒钩",
       "NAMES": [
         "倒钩"
@@ -100,34 +94,6 @@
         "动力"
       ],
       "DESCRIPTION": "符文： 获得 #y动能 。"
-    },
-    {
-      "PROPER_NAME": "钢铁",
-      "NAMES": [
-        "钢铁"
-      ],
-      "DESCRIPTION": "符文: 变更你的 #y多层护甲 不低于你的 #y动能 。"
-    },
-    {
-      "PROPER_NAME": "棱镜",
-      "NAMES": [
-        "棱镜"
-      ],
-      "DESCRIPTION": "符文: 每回合给随机一个角色牌。"
-    },
-    {
-      "PROPER_NAME": "棱镜+",
-      "NAMES": [
-        "棱镜+"
-      ],
-      "DESCRIPTION": "符文: 每回合给随机已 升级 的一个角色牌。"
-    },
-    {
-      "PROPER_NAME": "工业",
-      "NAMES": [
-        "工业"
-      ],
-      "DESCRIPTION": "符文: 每回合开始时获得 [E] 。"
     },
     {
       "PROPER_NAME": "医疗",
@@ -151,11 +117,25 @@
       "DESCRIPTION": "符文: 对随机敌人造成伤害并获得 格挡 "
     },
     {
-      "PROPER_NAME": "时间旅行",
+      "PROPER_NAME": "衰变",
       "NAMES": [
-        "时间旅行"
+        "衰变"
       ],
-      "DESCRIPTION": "保存你当前的 生命 ， 格挡 和 元素 数值。"
+      "DESCRIPTION": "失去所有被选中的 #y元素 然后获得等量的 #y元素 并根据所选 #y元素 做出对应的行为。"
+    },
+    {
+      "PROPER_NAME": "绞索",
+      "NAMES": [
+        "绞索"
+      ],
+      "DESCRIPTION": "符文: 本回合降低一名敌人的 #y力量 。"
+    },
+    {
+      "PROPER_NAME": "冰冷",
+      "NAMES": [
+        "冰冷"
+      ],
+      "DESCRIPTION": "每次叠加降低 #b1 点伤害。回合结束时降低 #b1 层。 NL 当层数为零时，移除 #y缓慢 。"
     }
   ]
 }

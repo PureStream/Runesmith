@@ -3,7 +3,7 @@
     "NAME": "破碎红宝石",
     "FLAVOR": "一种类似红色宝石的水晶。 虽然它被打破了，但仍然存在微弱的能量。",
     "DESCRIPTIONS": [
-      "每场战斗开始, 获得 #b1 点  #yrunesmith:火素 。 NL 每打出三张攻击牌，获得 #b1 点  #yrunesmith:火素 。"
+      "每场战斗开始, 获得 #b2 点  #yrunesmith:火素 。 NL 如果你上回合打出至少 #b2 张 #y攻击牌 ，随机 #y强化 你的一张手牌。"
     ]
   },
   "Runesmith:MiniCore": {
@@ -32,7 +32,7 @@
     "NAME": "小盒",
     "FLAVOR": "未知但熟悉的形象的图像存在于其中。",
     "DESCRIPTIONS": [
-      "每场战斗一次, 如果你的血量低于 #b15%, 在你的抽牌堆顶部加入 最后机会 。"
+      "每场战斗一次, 如果你的血量低于 #b15%, 在你的抽牌堆顶部加入 拼死一搏 。"
     ]
   },
   "Runesmith:AutoHammer": {
@@ -53,7 +53,7 @@
     "NAME": "袖珍反应堆",
     "FLAVOR": "",
     "DESCRIPTIONS": [
-      " #yrunesmith:元素 不止能用于 runesmith:打造。 所有的牌失去 #b2 点 #yrunesmith:动能 。"
+      " #yrunesmith:元素 再用于 runesmith:打造。 所有的牌失去 #b2 点 #yrunesmith:动能 。"
     ]
   },
   "Runesmith:CoreCrystal": {

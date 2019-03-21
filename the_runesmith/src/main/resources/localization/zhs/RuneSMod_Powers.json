@@ -55,8 +55,9 @@
   "Runesmith:ArcReactorPower": {
     "NAME": "辐射",
     "DESCRIPTIONS": [
-      "每当你 #y打造 一个符文，失去 #b",
-      " 点 #y动能 。"
+      "你的回合开始时， 获得 #b 点",
+      " #y动能 。",
+      " 每当你 #y打造 一个符文， 失去 #b 点"
     ]
   },
   "Runesmith:UnlimitedPowerPower": {
@@ -100,22 +101,22 @@
     "NAME": "动能下降",
     "DESCRIPTIONS": [
       "回合结束时，失去 #b",
-      " 点动能。"
+      " 点动力。"
     ]
   },
   "Runesmith:MetallurgicalResearchPower": {
     "NAME": "冶金研究",
     "DESCRIPTIONS": [
       " 在 #b",
-      " 个回合内， #y升级 并 #y强化 你的所有牌 。",
-      " 个回合内， #y升级 并 #y强化 你的所有牌 。"
+      " 个回合后， #y升级 并 #y强化 你的所有牌 。",
+      " 个回合后， #y升级 并 #y强化 你的所有牌 。"
     ]
   },
   "Runesmith:PermafrostPower": {
     "NAME": "永久冻土",
     "DESCRIPTIONS": [
-      "回合开始时，最多失去一半的 #y格挡 。",
-      "回合开始时，最多失去一半的 #y格挡 。"
+      "的回合开始时，最多失去一半的 #y格挡 。",
+      "的回合开始时，最多失去一半的 #y格挡 。"
     ]
   },
   "Runesmith:CreatorFormPower": {
@@ -137,42 +138,38 @@
   "Runesmith:IceColdPower": {
     "NAME": "冰冷",
     "DESCRIPTIONS": [
-      "在 #b",
+	  "降低伤害 #b" ,
+      " 点。在 #b",
       " 个回合后，解冻并失去 #y缓慢 。",
       " 个回合后，解冻并失去 #y缓慢 。"
     ]
   },
   "Runesmith:ReplicatingBarrierPower": {
-    "NAME": "复制障碍",
+    "NAME": "复制屏障",
     "DESCRIPTIONS": [
       "在 #b",
       " 个回合，",
       " 个回合，",
-      " 用 2 个 #y土素 和 #b",
-      " 点 #y动能 来 打造 #y动力 符文"
-    ]
-  },
-  "Runesmith:TimeMachinePower": {
-    "NAME": "虫洞",
-    "DESCRIPTIONS": [
-      "保存 #b",
-      " 点 #r生命 ， NL  #b",
-      " 点 #b格挡 ， NL  #b",
-      " 点 #y火素 ， NL  #b",
-      " 点 #y土素 ， NL  #b",
-      " 点 #y水素 ，",
-      " NL 但在 #b",
-      " 回合后 #y过期 。",
-      " 回合后 #y过期 。"
+      " 用 2 个 #y土素 #y打造 一个有 #b",
+      " 点动能的 #y动力 符文。"
     ]
   },
   "Runesmith:LastStandPower": {
-    "NAME": "最后机会",
+    "NAME": "拼死一搏",
     "DESCRIPTIONS": [
       " #y下回合 结束时， ",
       " #y本回合 结束时， ",
       " 对所有敌人造成 #b",
       " 点伤害。"
+    ]
+  },
+    "Runesmith:LightningRodPower": {
+    "NAME": "避雷针",
+    "DESCRIPTIONS": [
+      "在 #b",
+      " 个回合，",
+      " 个回合，",
+      " 失去 #y元素 而不是生命。"
     ]
   }
 }

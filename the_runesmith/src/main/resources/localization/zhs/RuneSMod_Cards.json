@@ -9,17 +9,11 @@
   },
   "Runesmith:CraftFirestone": {
     "NAME": "制作火石",
-    "DESCRIPTION": "1 runesmith:火素 ： NL  runesmith:打造 一个 runesmith:火石 符文，其拥有 !Pot! 点 runesmith:动能 。",
-    "EXTENDED_DESCRIPTION": [
-      ""
-    ]
+    "DESCRIPTION": "1 runesmith:火素 ： NL  runesmith:打造 一个 runesmith:火石 符文，其拥有 !Pot! 点 runesmith:动能 。"
   },
   "Runesmith:CraftProtectio": {
     "NAME": "打造保护",
-    "DESCRIPTION": "2 runesmith:土素 : NL  runesmith:打造 一个 runesmith:保护 符文，拥有 !Pot! 点 runesmith:动能 。",
-    "EXTENDED_DESCRIPTION": [
-      ""
-    ]
+    "DESCRIPTION": "2 runesmith:土素 : NL  runesmith:打造 一个 runesmith:保护 符文，拥有 !Pot! 点 runesmith:动能 。"
   },
   "Runesmith:Fortify": {
     "NAME": "强化",
@@ -51,19 +45,11 @@
   },
   "Runesmith:CraftIncendium": {
     "NAME": "打造火炉",
-    "DESCRIPTION": "3 runesmith:火素 : runesmith:打造 一个 runesmith:火焰 符文，拥有 !Pot! 点 runesmith:动能 。",
-    "EXTENDED_DESCRIPTION": [
-      ""
-    ]
-  },
-  "Runesmith:HammerSlam": {
-    "NAME": "钢锤重击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张你拥有的符文数量的牌。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌。 NL 抽 !M! 张你拥有的符文数量的牌。"
+    "DESCRIPTION": "3 runesmith:火素 : runesmith:打造 一个 runesmith:火焰 符文，拥有 !Pot! 点 runesmith:动能 。"
   },
   "Runesmith:ElementalConversion": {
     "NAME": "元素粒子",
-    "DESCRIPTION": "选择裂变: runesmith:火素 ， runesmith:土素 或 runesmith:水素 。",
+    "DESCRIPTION": "选择衰变: runesmith:火素 ， runesmith:土素 或 runesmith:水素 。",
     "UPGRADE_DESCRIPTION": "选择裂变: runesmith:火素 ， runesmith:土素 或 runesmith:水素 。 NL 抽 !M! 张牌。"
   },
   "Runesmith:ConvertIgnis": {
@@ -76,12 +62,12 @@
   },
   "Runesmith:ConvertAqua": {
     "NAME": "水素衰变",
-    "DESCRIPTION": "获得 !M! 点 runesmith:动能 。 NL 失去所有的 runesmith:水素 。 NL 获得等量的 runesmith:火素 和 runesmith:土素 "
+    "DESCRIPTION": "本回合获得 !M! 点 runesmith:动能 。 NL 失去所有的 runesmith:水素 。 NL 获得等量的 runesmith:火素 和 runesmith:土素 "
   },
   "Runesmith:Repurpose": {
     "NAME": "重新规划",
-    "DESCRIPTION": " 消耗 一张牌。 NL 攻击： 获得 !M! 点 runesmith:火素 。 NL 技能: 获得 !M! 点 runesmith:土素 。 NL 能力: 获得 !M! 点 runesmith:水素 。 NL 状态: 获得 1 点前三种。",
-    "UPGRADE_DESCRIPTION": " 消耗 一张牌。 NL 攻击： 获得 !M! 点 runesmith:火素 。 NL 技能: 获得 点 runesmith:土素 。 NL 能力: 获得 !M! 点 runesmith:水素 。 NL 状态: 获得 1 点前三种。 NL 状态: 获得 2 点前三种。"
+    "DESCRIPTION": " 消耗 一张牌。 NL 攻击： 获得 !M! 点 runesmith:火素 。 NL 技能: 获得 !M! 点 runesmith:土素 。 NL 能力: 获得 !M! 点 runesmith:水素 。 NL 状态: 获得 1 点三种元素。",
+    "UPGRADE_DESCRIPTION": " 消耗 一张牌。 NL 攻击： 获得 !M! 点 runesmith:火素 。 NL 技能: 获得 !M! 点 runesmith:土素 。 NL 能力: 获得 !M! 点 runesmith:水素 。 NL 状态: 获得 1 点三种元素。 NL 状态: 获得 2 点三种元素。"
   },
   "Runesmith:EnergizedChisel": {
     "NAME": "带电凿子",
@@ -97,12 +83,8 @@
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌并 升级 。"
   },
   "Runesmith:OneForEveryone": {
-    "NAME": "奉献",
+    "NAME": "万物归一",
     "DESCRIPTION": " runesmith:凋亡 最先 runesmith:打造 的符文， NL 获得 [E] , 获得 1 点 格挡 , NL 造成 1 点伤害并给予所有敌人 1 层 虚弱 和 易伤， NL 获得 1 点 三种 runesmith:元素 并抽 1 张卡。"
-  },
-  "Runesmith:RunicBullets": {
-    "NAME": "符文子弹",
-    "DESCRIPTION": "每拥有一个符文造成 !D! 点伤害。"
   },
   "Runesmith:StaticCage": {
     "NAME": "法拉第笼",
@@ -127,10 +109,7 @@
   "Runesmith:CraftReservo": {
     "NAME": "打造储备",
     "DESCRIPTION": "2 runesmith:水素 : runesmith:打造 一个 [#EFC851]储备[] 符文。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "2 runesmith:水素: runesmith:打造 一个 [#EFC851]储备+[] 符文。 NL 消耗。",
-    "EXTENDED_DESCRIPTION": [
-      ""
-    ]
+    "UPGRADE_DESCRIPTION": "2 runesmith:水素: runesmith:打造 一个 [#EFC851]储备+[] 符文。 NL 消耗。"
   },
   "Runesmith:LithiumIon": {
     "NAME": "锂电池",
@@ -147,34 +126,20 @@
   },
   "Runesmith:CraftSpiculum": {
     "NAME": "打造针尖",
-    "DESCRIPTION": "1 runesmith:火素 1 runesmith:水素 : runesmith:打造 一个 runesmith:倒钩 符文，其拥有 !Pot! 点 runesmith:动能 。 NL 消耗 。",
-    "EXTENDED_DESCRIPTION": [
-      ""
-    ]
+    "DESCRIPTION": "1 runesmith:火素 1 runesmith:水素 : runesmith:打造 一个 runesmith:倒钩 符文，其拥有 !Pot! 点 runesmith:动能 。 NL 消耗 。"
   },
   "Runesmith:CraftPotentia": {
     "NAME": "打造动力",
-    "DESCRIPTION": "2 runesmith:元素 :  runesmith:凋亡 最先 runesmith:打造 的符文并 runesmith:打造 一个 动力 符文，其拥有 !Pot! 点 runesmith:动能 。",
-    "EXTENDED_DESCRIPTION": [
-      ""
-    ]
-  },
-  "Runesmith:CraftFerro": {
-    "NAME": "打造钢铁",
-    "DESCRIPTION": "2 runesmith:土素 1 runesmith:水素 : runesmith:打造 一个 runesmith:钢铁 符文，其拥有 !Pot! 点 runesmith:动能 。",
-    "UPGRADE_DESCRIPTION": "2 runesmith:土素 1 runesmith:水素 : runesmith:打造 一个 runesmith:钢铁 符文，其拥有 !Pot! 点 runesmith:动能 。",
-    "EXTENDED_DESCRIPTION": [
-      ""
-    ]
+    "DESCRIPTION": "2 runesmith:元素 :  runesmith:凋亡 最先 runesmith:打造 的符文并 runesmith:打造 一个 动力 符文，其拥有 !Pot! 点 runesmith:动能 。"
   },
   "Runesmith:HammerTime": {
     "NAME": "钢锤时刻",
-    "DESCRIPTION": " 造成 !D! 点伤害。 NL runesmith:强化 你所有其他的钢锤卡。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL runesmith:强化 你所有的钢锤卡两次。"
+    "DESCRIPTION": " 造成 !D! 点伤害。 NL runesmith:强化 你所有其他的钢锤牌。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL runesmith:强化 你所有的钢锤牌两次。"
   },
   "Runesmith:MakeshiftArmor": {
     "NAME": "临时护甲",
-    "DESCRIPTION": "随机 runesmith:降级 抽牌堆，手牌或弃牌堆的一张牌。 NL 获得 1 点 runesmith:土素 。"
+    "DESCRIPTION": "随机 runesmith:降级 抽牌堆，手牌或弃牌堆的一张牌。 NL 获得 !B! 点 格挡 。 NL 获得 1 点 runesmith:土素 。"
   },
   "Runesmith:ShiftingStrike": {
     "NAME": "移动打击",
@@ -182,25 +147,15 @@
   },
   "Runesmith:ChaoticBlast": {
     "NAME": "混沌爆破",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害 。 NL 每有 !M! 点 runesmith:元素 : runesmith:打造 一个随机符文。",
-    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害 。 每有 !M! 点 runesmith:元素 : runesmith:打造 两个随机符文。",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害 。 NL 每有 !M! 点 runesmith:元素 : runesmith:打造 一个随机",
     "EXTENDED_DESCRIPTION": [
-      ""
+      " 符文。",
+      " 符文。"
     ]
-  },
-  "Runesmith:Shatterune": {
-    "NAME": "符文破碎",
-    "DESCRIPTION": " runesmith:凋亡 最先 runesmith:打造 的符文 X 次。",
-    "UPGRADE_DESCRIPTION": " runesmith:凋亡 最先 runesmith:打造 的符文 X+1 次。"
   },
   "Runesmith:Empowerment": {
     "NAME": "赋权",
     "DESCRIPTION": "本回合获得等于你 runesmith:火素 数量的 力量 。 NL 获得等于你 runesmith:土素 数量的 敏捷  。"
-  },
-  "Runesmith:RunicSmithing": {
-    "NAME": "符文锻造",
-    "DESCRIPTION": "你每 runesmith:强化 一张牌, 你获得 1 点 runesmith:元素 。",
-    "UPGRADE_DESCRIPTION": " 固有 。 NL 你每 runesmith:强化 一张牌, 你获得 1 点 runesmith:元素 。"
   },
   "Runesmith:Runesonance": {
     "NAME": "符文奏鸣曲",
@@ -215,35 +170,23 @@
   "Runesmith:ConstructBifrost": {
     "NAME": "建造彩虹桥",
     "DESCRIPTION": "1 runesmith:元素 : runesmith:打造 一个 [#EFC851]棱镜[] 符文。",
-    "UPGRADE_DESCRIPTION": "1 runesmith:元素 : runesmith:打造 一个 [#EFC851]棱镜+[] 符文。",
-    "EXTENDED_DESCRIPTION": [
-      ""
-    ]
+    "UPGRADE_DESCRIPTION": "1 runesmith:元素 : runesmith:打造 一个 [#EFC851]棱镜+[] 符文。"
   },
   "Runesmith:CraftIndustria": {
     "NAME": "打造工业",
-    "DESCRIPTION": " !M! runesmith:水素 : runesmith:打造 一个 runesmith:工业 符文。",
-    "EXTENDED_DESCRIPTION": [
-      ""
-    ]
+    "DESCRIPTION": " 3 runesmith:水素 : runesmith:打造 一个 [#EFC851]工业[] 符文。",
+    "UPGRADE_DESCRIPTION": "3 runesmith:水素 : runesmith:打造 一个 [#EFC851]工业+[] 符文。"
   },
   "Runesmith:CraftMedicinae": {
     "NAME": "打造医疗",
-    "DESCRIPTION": "5 runesmith:土素 : runesmith:打造 一个 runesmith:医疗 符文，其拥有 !Pot! 点 runesmith:动能 。 NL 消耗 。",
-    "EXTENDED_DESCRIPTION": [
-      ""
-    ]
+    "DESCRIPTION": "5 runesmith:土素 : runesmith:打造 一个 runesmith:医疗 符文，其拥有 !Pot! 点 runesmith:动能 。 NL 消耗 。"
   },
   "Runesmith:LastStand": {
-    "NAME": "终焉抵抗（困兽犹斗）",
+    "NAME": "拼死一搏",
     "DESCRIPTION": " runesmith:降级 你所有的牌。 失去所有的 runesmith:元素 。 下回合结束时, 对所有的敌人造成 !M! 倍所 runesmith:降级 总数的伤害。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       " NL (造成 !D! 点伤害)"
     ]
-  },
-  "Runesmith:SpecialReserve": {
-    "NAME": "特别准备",
-    "DESCRIPTION": "造成 !D! 点伤害并 runesmith:凝滞 你卡组中的 !M! 张牌。"
   },
   "Runesmith:GenerateForcefield": {
     "NAME": "生成力场",
@@ -265,31 +208,11 @@
   },
   "Runesmith:MetallurgicalResearch": {
     "NAME": "冶金研究",
-    "DESCRIPTION": " runesmith:降级 你所有的牌。 NL 在 !M! 个回合后， 升级 并 runesmith:强化 你所有的牌。 NL 消耗 。"
-  },
-  "Runesmith:ArmorUp": {
-    "NAME": "装甲部队",
-    "DESCRIPTION": "获得 !M! 倍等于你本场 runesmith:强化 数量的 格挡 。"
-  },
-  "Runesmith:Border Wall": {
-    "NAME": "边墙",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 4 runesmith:土素 :  runesmith:打造 两个 runesmith:保护 符文， 其拥有 !Pot! 点 runesmith:动力 。"
-  },
-  "Runesmith:RuneMagnet": {
-    "NAME": "符文磁铁",
-    "DESCRIPTION": "抽卡直到你抽到打造牌。 NL 并丢弃所有抽上来的其他牌。 NL 消耗。"
-  },
-  "Runesmith:ThatsALotOfDamage": {
-    "NAME": "这破坏得可真够厉害的",
-    "DESCRIPTION": "减半所有敌人当前的 生命 和 格挡 。 NL 消耗。",
-    "UPGRADE_DESCRIPTION": " 固有 ， NL 减半所有敌人当前的生命和 格挡 。 NL 消耗 。"
+    "DESCRIPTION": "在 !M! 个回合后， 升级 并 runesmith:强化 你所有的牌。 NL 消耗 。"
   },
   "Runesmith:CraftMagma": {
     "NAME": "打造岩浆",
-    "DESCRIPTION": "2 runesmith:火素 1 runesmith:土素 : runesmith:打造 一个 岩浆 符文，其拥有 !Pot! 点 runesmith:动能 。",
-    "EXTENDED_DESCRIPTION": [
-      ""
-    ]
+    "DESCRIPTION": "2 runesmith:火素 1 runesmith:土素 : runesmith:打造 一个 岩浆 符文，其拥有 !Pot! 点 runesmith:动能 。"
   },
   "Runesmith:Rearm": {
     "NAME": "重新武装",
@@ -302,7 +225,7 @@
   },
   "Runesmith:WhiteBalance": {
     "NAME": "白平衡",
-    "DESCRIPTION": "造成 !M! 倍等于你获得 runesmith:元素 的伤害。",
+    "DESCRIPTION": "造成 !M! 倍等于你本回合获得的 runesmith:元素 的伤害。",
     "EXTENDED_DESCRIPTION": [
       " NL (造成 !D! 点伤害。)"
     ]
@@ -318,7 +241,7 @@
   },
   "Runesmith:PerfectChisel": {
     "NAME": "完美凿子",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 1 runesmith:元素 。 NL 本回合获得 !M! 点 runesmith:动能 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 1 点 runesmith:元素 。 NL 本回合获得 !M! 点 runesmith:动能 。"
   },
   "Runesmith:DoubleUp": {
     "NAME": "加倍",
@@ -327,8 +250,8 @@
   },
   "Runesmith:Refinement": {
     "NAME": "精致",
-    "DESCRIPTION": " runesmith:强化 一张牌 X 次。 NL 退回 1 。",
-    "UPGRADE_DESCRIPTION": " runesmith:强化 一张牌 X+1 次。 NL 退回 1 。"
+    "DESCRIPTION": " runesmith:强化 一张牌 X 次。 NL 返还 [E] 。",
+    "UPGRADE_DESCRIPTION": " runesmith:强化 一张牌 X+1 次。 NL 返还 [E] 。"
   },
   "Runesmith:Permafrost": {
     "NAME": "永久冻土",
@@ -336,8 +259,8 @@
   },
   "Runesmith:Reinforce": {
     "NAME": "升级",
-    "DESCRIPTION": " 升级 你的手牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " 升级 并 runesmith:强化 你的手牌。 NL 消耗 。"
+    "DESCRIPTION": "抽 !M! 张牌， NL  升级 你的手牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "抽 !M! 张牌， NL  升级 并 runesmith:强化 你的手牌。 NL 消耗 。"
   },
   "Runesmith:HeatExchange": {
     "NAME": "热交换",
@@ -360,11 +283,11 @@
   },
   "Runesmith:FrozenChisel": {
     "NAME": "冷冻凿",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 1 层 缓慢 。 NL 效果在 !M! 回合后结束。 NL 获得 1 点 runesmith:土素 和 1 点 runesmith:水素 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 1 层 缓慢 。 NL 给予 !M! 层 runesmith:冰冻 。 NL 获得 1 点 runesmith:土素 和 1 点 runesmith:水素 。"
   },
   "Runesmith:Accelerate": {
     "NAME": "加速",
-    "DESCRIPTION": "获得 !B! 点格挡。 NL 抽 1 张牌。 NL  runesmith:凋亡 最先 runesmith:打造 的符文，抽 !M! 张牌。"
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 抽 1 张牌。 NL  runesmith:凋亡 最先 runesmith:打造 的符文以抽 !M! 张牌。"
   },
   "Runesmith:NanitesCloud": {
     "NAME": "云母云",
@@ -381,45 +304,23 @@
   },
   "Runesmith:Firewall": {
     "NAME": "防火墙",
-    "DESCRIPTION": "获得 !B! 点格挡。 NL 3 runesmith:火素 : runesmith:打造 2 个 runesmith:火石 ，其有用 !Pot! 点 runesmith:动能 。",
-    "EXTENDED_DESCRIPTION": [
-      ""
-    ]
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 3 runesmith:火素 : runesmith:打造 2 个 runesmith:火石 ，其有用 !Pot! 点 runesmith:动能 。"
   },
   "Runesmith:Discharge": {
     "NAME": "去充能",
     "DESCRIPTION": " 凋零 你最先 runesmith:打造 的非 runesmith:空白 符文。 获得 !B! 点格挡, 造成 !D! 点伤害， 并 runesmith:打造 一个 runesmith:空白 符文 。"
   },
   "Runesmith:Attraction": {
-    "NAME": "吸引力",
-    "DESCRIPTION": "抽牌直到抽到 runesmith:打造 牌或抽牌堆为空为止。"
+    "NAME": "吸引",
+    "DESCRIPTION": "将抽牌堆，弃牌堆，和消耗堆的 !M! 张 runesmith:打造 牌放到到你的手牌中。"
   },
   "Runesmith:ArcReactor": {
     "NAME": "电弧反应器",
-    "DESCRIPTION": "获得 !M! 点 runesmith:动能 。 当 runesmith:打造 一个符文时，失去 1 点 runesmith:动能 。"
+    "DESCRIPTION": "获得 !M! 点 runesmith:动能 。每回合开始时，获得 1 点 runesmith:动能 。当 runesmith:打造 一个符文时，失去 2 点 runesmith:动能 。"
   },
   "Runesmith:ReplicatingBarrier": {
     "NAME": "复制屏障",
     "DESCRIPTION": "2 runesmith:土素 :  runesmith:打造 一个 runesmith:保护 符文，其拥有 !Pot! 点 runesmith:动能 。 NL 每 2 个回合, 2 runesmith:土素 : runesmith:打造 一个 runesmith:保护 符文，其拥有 !Pot! 点 runesmith:动能 。"
-  },
-  "Runesmith:TimeMachine_old": {
-    "NAME": "（旧版）时间机器",
-    "DESCRIPTION": "保存你的生命，格挡和  runesmith:元素 数值。 NL 在你手牌上增加一张 （旧版）时间旅行 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " 固有 。保存你的生命， 格挡 和 runesmith:元素 数值。 NL 在你手牌上增加一张 （旧版）时间旅行 。 NL 消耗 。"
-  },
-  "Runesmith:TimeMachine": {
-    "NAME": "时间机器",
-    "DESCRIPTION": " 虚无 。 NL 保存你的生命， 格挡 和 runesmith:元素 数值。 NL 在你的抽牌堆底部增加一张 时间旅行 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "保存你的生命， 格挡 和 runesmith:元素 数值。 NL 保存你的生命，格挡和 runesmith:元素 数值。 NL 在你的抽牌堆底部增加一张 时间旅行 。 NL 消耗 "
-  },
-  "Runesmith:TimeTravel_old": {
-    "NAME": "（旧版）时间旅行",
-    "DESCRIPTION": "变更你的生命，格挡和 runesmith:元素 数值到保存值。 NL 净化 。"
-  },
-  "Runesmith:TimeTravel": {
-    "NAME": "时间旅行",
-    "DESCRIPTION": " 虚无 。 NL 变更你的生命， 格挡 和 runesmith:元素 数值到保存值。 NL 消耗。",
-    "UPGRADE_DESCRIPTION": "变更你的生命， 格挡 和 runesmith:元素 数值到保存值。 NL 消耗。"
   },
   "Runesmith:Electrocute": {
     "NAME": "触电",
@@ -441,5 +342,17 @@
   "Runesmith:Devolution": {
     "NAME": "放权",
     "DESCRIPTION": " 不能被打出 。 NL 回合结束时,  runesmith:降级 你的手牌。"
+   },
+  "Runesmith:CraftObretio": {
+    "NAME": "打造绞索",
+    "DESCRIPTION": " 2 runesmith:土素 1 runesmith:水素 : runesmith:打造 一个 runesmith:绞索 符文，其拥有 !Pot! 点 runesmith:动能 。"
+  },
+  "Runesmith:LightningRod": {
+    "NAME": "避雷针",
+    "DESCRIPTION": "接下来 !M! 个回合， 你失去 runesmith:元素 而不是生命。获得 1 点三种 runesmith:元素 。"
+  },
+  "Runesmith:NegativeSpace": {
+    "NAME": "负空间",
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 你每有一个符文减少 2 点 格挡。 NL 你每有一个符文造成 !D! 点伤害。"
   }
 }
