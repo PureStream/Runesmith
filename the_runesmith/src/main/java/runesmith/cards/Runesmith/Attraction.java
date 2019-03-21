@@ -18,8 +18,10 @@ public class Attraction extends CustomCard {
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 
-    private static final int COST = 1;
-    private static final int COST_UPGRADE = 0;
+    private static final int COST = 0;
+//    private static final int COST_UPGRADE = 0;
+    private static final int SELECT_AMT = 1;
+    private static final int UPG_SELECT_AMT = 1;
 
     public Attraction() {
         super(
@@ -33,14 +35,12 @@ public class Attraction extends CustomCard {
                 AbstractCard.CardRarity.UNCOMMON,
                 AbstractCard.CardTarget.SELF
         );
-//		this.exhaust = true;
+		this.exhaust = true;
+		this.magicNumber = this.baseMagicNumber = SELECT_AMT;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(
-//			new AttractionDrawThenDiscardAction(false)
-                new AttractionAction(p)
-        );
+        AbstractDungeon.actionManager.addToBottom(new AttractionAction(magicNumber));
     }
 
     public AbstractCard makeCopy() {
@@ -50,7 +50,7 @@ public class Attraction extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBaseCost(COST_UPGRADE);
+            upgradeMagicNumber(UPG_SELECT_AMT);
         }
     }
 

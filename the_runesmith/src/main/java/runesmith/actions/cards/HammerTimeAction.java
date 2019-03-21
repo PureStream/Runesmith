@@ -11,7 +11,7 @@ import runesmith.actions.EnhanceCard;
 import java.util.Arrays;
 import java.util.List;
 
-import static runesmith.patches.CardTagEnum.HAMMER;
+import static runesmith.patches.CardTagEnum.RS_HAMMER;
 
 public class HammerTimeAction extends AbstractGameAction {
 
@@ -32,12 +32,12 @@ public class HammerTimeAction extends AbstractGameAction {
         if (this.duration == Settings.ACTION_DUR_FAST) {
             List<CardGroup> allCardsGroup = Arrays.asList(p.hand, p.drawPile, p.discardPile);
             allCardsGroup.forEach(cardGroup -> cardGroup.group.stream()
-                    .filter(c -> c.hasTag(HAMMER))
+                    .filter(c -> c.hasTag(RS_HAMMER))
                     .filter(EnhanceCard::canEnhance)
                     .forEach(c -> {
                         EnhanceCard.enhance(c, enhanceNums);
                         if (cardGroup == p.hand)
-                            c.superFlash(RunesmithMod.BEIGE);
+                            c.superFlash(RunesmithMod.BEIGE.cpy());
                     }));
         }
         tickDuration();

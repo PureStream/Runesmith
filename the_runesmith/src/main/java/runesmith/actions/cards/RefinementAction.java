@@ -64,7 +64,7 @@ public class RefinementAction extends AbstractGameAction {
                 for (AbstractCard c : this.p.hand.group) {
                     if (EnhanceCard.canEnhance(c)) {
                         EnhanceCard.enhance(c, enhanceNums);
-                        c.superFlash(RunesmithMod.BEIGE);
+                        c.superFlash(RunesmithMod.BEIGE.cpy());
                         this.isDone = true;
                         return;
                     }
@@ -80,7 +80,7 @@ public class RefinementAction extends AbstractGameAction {
             }
             if (this.p.hand.group.size() == 1) {
                 EnhanceCard.enhance(this.p.hand.getTopCard(), enhanceNums);
-                this.p.hand.getTopCard().superFlash(RunesmithMod.BEIGE);
+                this.p.hand.getTopCard().superFlash(RunesmithMod.BEIGE.cpy());
                 returnCards();
                 this.isDone = true;
             }
@@ -90,7 +90,7 @@ public class RefinementAction extends AbstractGameAction {
         if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {
             AbstractCard c = AbstractDungeon.handCardSelectScreen.selectedCards.group.get(0);
             EnhanceCard.enhance(c, enhanceNums);
-            c.superFlash(RunesmithMod.BEIGE);
+            c.superFlash(RunesmithMod.BEIGE.cpy());
             this.p.hand.addToTop(c);
 
             returnCards();

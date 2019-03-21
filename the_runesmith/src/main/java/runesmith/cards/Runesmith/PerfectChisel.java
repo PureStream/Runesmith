@@ -16,7 +16,7 @@ import runesmith.patches.AbstractCardEnum;
 import runesmith.powers.PotentialDownPower;
 import runesmith.powers.PotentialPower;
 
-import static runesmith.patches.CardTagEnum.CHISEL;
+import static runesmith.patches.CardTagEnum.RS_CHISEL;
 
 public class PerfectChisel extends CustomCard {
     public static final String ID = "Runesmith:PerfectChisel";
@@ -45,7 +45,7 @@ public class PerfectChisel extends CustomCard {
         );
         this.baseDamage = this.damage = ATTACK_DMG;
         this.baseMagicNumber = this.magicNumber = POT_AMT;
-        this.tags.add(CHISEL);
+        this.tags.add(RS_CHISEL);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

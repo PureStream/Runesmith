@@ -2,6 +2,7 @@ package runesmith.orbs;
 
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -32,9 +33,9 @@ public abstract class RuneOrb extends AbstractOrb {
     public boolean upgraded;
     public boolean useMultiBreak = false;
     boolean showPotentialValue = true;
-    public int potential;
+    protected int potential;
     private String[] descriptions;
-    public static int runeCount = 0;
+    private static int runeCount = 0;
 
     public RuneOrb(String ID, boolean upgraded, int potential) {
         this.ID = ID;
@@ -54,6 +55,14 @@ public abstract class RuneOrb extends AbstractOrb {
         updateDescription();
     }
 
+    public int getPotential() {
+        return potential;
+    }
+
+    public void setPotential(int potential) {
+        this.potential = potential;
+    }
+
     public static RuneOrb getFirstRune(AbstractPlayer p) {
         return getFirstRune(p, false);
     }
@@ -69,10 +78,18 @@ public abstract class RuneOrb extends AbstractOrb {
         return getAllRunes(p, false);
     }
 
-    public static List<RuneOrb> getAllRunes(AbstractPlayer p, Boolean checkDud) {
+    public static List<RuneOrb> getAllRunes(AbstractPlayer p, Boolean checkNonDud) {
         return p.orbs
                 .stream()
-                .filter(o -> (o instanceof RuneOrb) && !(o instanceof DudRune && checkDud))
+                .filter(o -> (o instanceof RuneOrb) && !(o instanceof DudRune && checkNonDud))
+                .map(RuneOrb.class::cast)
+                .collect(Collectors.toList());
+    }
+
+    public static List<RuneOrb> getAllRunes(AbstractPlayer p, RuneOrb checkForRune) {
+        return p.orbs
+                .stream()
+                .filter(o -> o.getClass().equals(checkForRune.getClass()))
                 .map(RuneOrb.class::cast)
                 .collect(Collectors.toList());
     }
@@ -119,8 +136,8 @@ public abstract class RuneOrb extends AbstractOrb {
                 potency = potencyCal(SpiculumRune.basePotency, playerPotency);
                 return new SpiculumRune(potency);
             case 1:
-                potency = potencyCal(FerroRune.basePotency, playerPotency);
-                return new FerroRune(potency);
+                potency = potencyCal(ObretioRune.basePotency, playerPotency);
+                return new ObretioRune(potency);
             case 2:
                 potency = potencyCal(FirestoneRune.basePotency, playerPotency);
                 return new FirestoneRune(potency);
@@ -160,8 +177,9 @@ public abstract class RuneOrb extends AbstractOrb {
         runeCount++;
         AbstractPlayer p = AbstractDungeon.player;
         if (p.hasPower(ArcReactorPower.POWER_ID)) {
-            int decAmount = p.getPower(ArcReactorPower.POWER_ID).amount;
-//            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, PotentialPower.POWER_ID, decAmount));
+            TwoAmountPower arcPower = (TwoAmountPower)p.getPower(ArcReactorPower.POWER_ID);
+            arcPower.flash();
+            int decAmount = arcPower.amount2;
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PotentialPower(p, -decAmount), -decAmount));
         }
     }
@@ -210,6 +228,25 @@ public abstract class RuneOrb extends AbstractOrb {
         renderText(sb);
         this.hb.render(sb);
     }
+
+    public static int getRuneCount() {
+        AbstractPlayer p = AbstractDungeon.player;
+        int runeCount = 0;
+        if(p!= null){
+            runeCount = (int) p.orbs.stream()
+                    .filter(orb -> orb instanceof RuneOrb)
+                    .count();
+        }
+        return runeCount;
+    }
+
+//    public static void runeCountDown() {
+//        runeCount--;
+//    }
+
+//    public static void runeCountReset() {
+//        runeCount = 0;
+//    }
 
     public static int getMaxRune(AbstractPlayer p) {
         return 7;

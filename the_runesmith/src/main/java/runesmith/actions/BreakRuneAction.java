@@ -18,7 +18,7 @@ public class BreakRuneAction extends AbstractGameAction {
     @Override
     public void update() {
         if (this.duration == Settings.ACTION_DUR_FAST) {
-            RuneOrb.runeCount--;
+//            RuneOrb.runeCountDown();
             AbstractDungeon.actionManager.addToTop(new RemoveRuneAndSlotAction(orb));
 
             orb.onBreak();

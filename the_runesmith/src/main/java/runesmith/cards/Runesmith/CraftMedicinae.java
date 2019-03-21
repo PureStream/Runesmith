@@ -10,7 +10,7 @@ import runesmith.actions.RuneChannelAction;
 import runesmith.orbs.MedicinaeRune;
 import runesmith.patches.AbstractCardEnum;
 
-import static runesmith.patches.CardTagEnum.CRAFT;
+import static runesmith.patches.CardTagEnum.RS_CRAFT;
 
 public class CraftMedicinae extends AbstractRunicCard {
 
@@ -37,7 +37,7 @@ public class CraftMedicinae extends AbstractRunicCard {
                 AbstractCard.CardRarity.RARE,
                 AbstractCard.CardTarget.SELF
         );
-        this.tags.add(CRAFT);
+        this.tags.add(RS_CRAFT);
         this.potency = this.basePotency = POTENCY;
         this.exhaust = true;
         this.tags.add(AbstractCard.CardTags.HEALING);

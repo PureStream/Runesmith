@@ -19,11 +19,18 @@ public class StasisCardInHandAction extends AbstractGameAction {
     private AbstractPlayer p;
     private ArrayList<AbstractCard> cannotStasis = new ArrayList<>();
 
+    private boolean isOptional;
+
     public StasisCardInHandAction(AbstractPlayer p, int amount) {
+        this(p, amount, false);
+    }
+
+    public StasisCardInHandAction(AbstractPlayer p, int amount, boolean isOptional) {
         this.actionType = AbstractGameAction.ActionType.CARD_MANIPULATION;
         this.p = p;
         this.duration = Settings.ACTION_DUR_FAST;
         this.amount = amount;
+        this.isOptional = isOptional;
     }
 
     @Override
@@ -36,37 +43,36 @@ public class StasisCardInHandAction extends AbstractGameAction {
             }
 
             //get list of card that can't be stasis
-            for (AbstractCard c : p.hand.group) {
-                if (!StasisCard.canStasis(c)) {
-                    this.cannotStasis.add(c);
-                }
-            }
+            p.hand.group.stream().filter(c -> !StasisCard.canStasis(c)).forEach(c -> this.cannotStasis.add(c));
 
             //stasis every card if amount is at least the number of stasis-able card
-            if (this.p.hand.size() - this.cannotStasis.size() <= this.amount) {
-                for (AbstractCard c : p.hand.group) {
-                    if (StasisCard.canStasis(c)) StasisCard.stasis(c);
-                    c.superFlash(RunesmithMod.BEIGE);
+            if (!isOptional) {
+                if (this.p.hand.size() - this.cannotStasis.size() <= this.amount) {
+                    p.hand.group.stream().filter(StasisCard::canStasis).forEach(c -> {
+                            StasisCard.stasis(c);
+                            c.superFlash(RunesmithMod.BEIGE.cpy());
+                    });
                     this.isDone = true;
                     return;
                 }
             }
 
             this.p.hand.group.removeAll(this.cannotStasis);
-
-            AbstractDungeon.handCardSelectScreen.open(TEXT[0], this.amount, false);
+            if (!isOptional)
+                AbstractDungeon.handCardSelectScreen.open(TEXT[0], this.amount, false);
+            else
+                AbstractDungeon.handCardSelectScreen.open(TEXT[0], this.amount, false, true, false, false, true);
             tickDuration();
             return;
-
         }
 
 
         if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {
-            for (AbstractCard c : AbstractDungeon.handCardSelectScreen.selectedCards.group) {
+            AbstractDungeon.handCardSelectScreen.selectedCards.group.forEach(c -> {
                 StasisCard.stasis(c);
-                c.superFlash(RunesmithMod.BEIGE);
+                c.superFlash(RunesmithMod.BEIGE.cpy());
                 this.p.hand.addToTop(c);
-            }
+            });
             returnCards();
             AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;
             AbstractDungeon.handCardSelectScreen.selectedCards.group.clear();

@@ -94,18 +94,11 @@
       "DESCRIPTION": "Rune: Gain #yPotency"
     },
     {
-      "PROPER_NAME": "Industria",
-      "NAMES": [
-        "industria"
-      ],
-      "DESCRIPTION": "Rune: Gain [E] and draw 1 card at the start of your turn."
-    },
-    {
       "PROPER_NAME": "Medicinae",
       "NAMES": [
         "medicinae"
       ],
-      "DESCRIPTION": "Rune: Heals on #yBreak."
+      "DESCRIPTION": "Rune: Heals on #yBreak or at the end of combat."
     },
     {
       "PROPER_NAME": "Dud",
@@ -126,14 +119,21 @@
       "NAMES": [
         "decay"
       ],
-      "DESCRIPTION": "Do a certain effect depending on what #yElements selected and lose all selected #yElements then gain other #yElements equal to the lost amount."
+      "DESCRIPTION": "Lose all selected #yElement then gain other #yElements equals to the amount lost and perform certain action depending on the #yElement chosen."
     },
     {
       "PROPER_NAME": "Obretio",
       "NAMES": [
         "obretio"
       ],
-      "DESCRIPTION": "Rune: enemy with highest attack damage intent loses #yStrength this turn."
+      "DESCRIPTION": "Rune: Reduces an enemy #yStrength for a turn."
+    },
+    {
+      "PROPER_NAME": "Ice-Cold",
+      "NAMES": [
+        "ice-cold"
+      ],
+      "DESCRIPTION": "Decreases attack damage by #b1 per stack. Stack is reduced by #b1 at the end of turn. NL Removes #ySlow when stack reaches #b0."
     }
   ]
 }

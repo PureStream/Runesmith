@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import runesmith.actions.DowngradeEntireDeckAction;
 import runesmith.patches.AbstractCardEnum;
 import runesmith.powers.MetallurgicalResearchPower;
 
@@ -18,8 +17,9 @@ public class MetallurgicalResearch extends CustomCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    private static final int COST = 1;
-    private static final int WAIT_AMT = 3;
+    private static final int COST = 2;
+//    private static final int COST_UPG = 1;
+    private static final int WAIT_AMT = 2;
     private static final int UPG_WAIT_AMT = -1;
 
     public MetallurgicalResearch() {
@@ -39,10 +39,10 @@ public class MetallurgicalResearch extends CustomCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(
-                new DowngradeEntireDeckAction(p)
-        );
-        if (!p.hasPower("Runesmith:MetallurgicalResearchPower"))
+//        AbstractDungeon.actionManager.addToBottom(
+//                new DowngradeEntireDeckAction(p)
+//        );
+        if (!p.hasPower(MetallurgicalResearchPower.POWER_ID))
             AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p,
                     new MetallurgicalResearchPower(p, this.magicNumber), this.magicNumber));
     }
@@ -54,6 +54,7 @@ public class MetallurgicalResearch extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
+//            upgradeBaseCost(COST_UPG);
             upgradeMagicNumber(UPG_WAIT_AMT);
         }
     }

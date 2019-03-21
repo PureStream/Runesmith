@@ -10,7 +10,7 @@ import runesmith.actions.RuneChannelAction;
 import runesmith.orbs.SpiculumRune;
 import runesmith.patches.AbstractCardEnum;
 
-import static runesmith.patches.CardTagEnum.CRAFT;
+import static runesmith.patches.CardTagEnum.RS_CRAFT;
 
 public class CraftSpiculum extends AbstractRunicCard {
 
@@ -40,7 +40,7 @@ public class CraftSpiculum extends AbstractRunicCard {
         );
 
         this.potency = this.basePotency = POTENCY;
-        this.tags.add(CRAFT);
+        this.tags.add(RS_CRAFT);
         this.exhaust = true;
     }
 

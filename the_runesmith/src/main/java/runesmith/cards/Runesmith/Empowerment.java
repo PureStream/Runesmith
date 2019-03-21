@@ -8,10 +8,12 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.*;
+import com.megacrit.cardcrawl.powers.DexterityPower;
+import com.megacrit.cardcrawl.powers.LoseDexterityPower;
+import com.megacrit.cardcrawl.powers.LoseStrengthPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import runesmith.patches.AbstractCardEnum;
-import runesmith.powers.IgnisPower;
-import runesmith.powers.TerraPower;
+import runesmith.ui.ElementsCounter;
 
 public class Empowerment extends CustomCard {
 
@@ -36,32 +38,18 @@ public class Empowerment extends CustomCard {
                 AbstractCard.CardRarity.UNCOMMON,
                 AbstractCard.CardTarget.SELF
         );
-        //this.tags.add(BaseModCardTags.BASIC_DEFEND);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int tmpStr = 0;
-        int tmpDex = 0;
-        for (AbstractPower pow : p.powers) {
-            if (pow instanceof IgnisPower) {
-                tmpStr = pow.amount;
-            } else if (pow instanceof TerraPower) {
-                tmpDex = pow.amount;
-            }
-        }
+        int tmpStr = ElementsCounter.getIgnis();
+        int tmpDex = ElementsCounter.getTerra();
         if (tmpStr > 0) {
-            AbstractDungeon.actionManager.addToBottom(
-                    new ApplyPowerAction(p, AbstractDungeon.player, new StrengthPower(p, tmpStr), tmpStr));
-
-            AbstractDungeon.actionManager.addToBottom(
-                    new ApplyPowerAction(p, AbstractDungeon.player, new LoseStrengthPower(p, tmpStr), tmpStr));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, AbstractDungeon.player, new StrengthPower(p, tmpStr), tmpStr));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, AbstractDungeon.player, new LoseStrengthPower(p, tmpStr), tmpStr));
         }
         if (tmpDex > 0) {
-            AbstractDungeon.actionManager.addToBottom(
-                    new ApplyPowerAction(p, AbstractDungeon.player, new DexterityPower(p, tmpDex), tmpDex));
-
-            AbstractDungeon.actionManager.addToBottom(
-                    new ApplyPowerAction(p, AbstractDungeon.player, new LoseDexterityPower(p, tmpDex), tmpDex));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, AbstractDungeon.player, new DexterityPower(p, tmpDex), tmpDex));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, AbstractDungeon.player, new LoseDexterityPower(p, tmpDex), tmpDex));
         }
     }
 

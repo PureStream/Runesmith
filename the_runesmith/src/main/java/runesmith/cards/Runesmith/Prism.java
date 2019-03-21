@@ -2,14 +2,16 @@ package runesmith.cards.Runesmith;
 
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import runesmith.actions.ReduceElementsPowerAction;
 import runesmith.patches.AbstractCardEnum;
+
+import static runesmith.ui.ElementsCounter.*;
 
 public class Prism extends CustomCard {
     public static final String ID = "Runesmith:Prism";
@@ -40,23 +42,9 @@ public class Prism extends CustomCard {
 
     @Override
     public void applyPowers() {
-        AbstractPlayer p = AbstractDungeon.player;
         int multiplier = this.magicNumber;
-        int totalElements = 0;
-        this.baseBlock = 0;
-        if (p.hasPower("Runesmith:IgnisPower")) {
-            totalElements += p.getPower("Runesmith:IgnisPower").amount;
-        }
-        if (p.hasPower("Runesmith:TerraPower")) {
-            totalElements += p.getPower("Runesmith:TerraPower").amount;
-        }
-        if (p.hasPower("Runesmith:AquaPower")) {
-            totalElements += p.getPower("Runesmith:AquaPower").amount;
-        }
-        if (totalElements > 0) {
-            this.baseBlock += (totalElements * multiplier);
-            super.applyPowers();
-        }
+        this.baseBlock = (getIgnis() + getTerra() + getAqua()) * multiplier;
+        super.applyPowers();
         if (this.block > 0) {
             String extendString = EXTENDED_DESCRIPTION[0];
             this.rawDescription = DESCRIPTION + extendString;
@@ -75,13 +63,7 @@ public class Prism extends CustomCard {
                     new GainBlockAction(p, p, this.block)
             );
         }
-        if (p.hasPower("Runesmith:IgnisPower"))
-            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, "Runesmith:IgnisPower", (int) Math.round(p.getPower("Runesmith:IgnisPower").amount / 2.0)));
-        if (p.hasPower("Runesmith:TerraPower"))
-            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, "Runesmith:TerraPower", (int) Math.round(p.getPower("Runesmith:TerraPower").amount / 2.0)));
-        if (p.hasPower("Runesmith:AquaPower"))
-            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, "Runesmith:AquaPower", (int) Math.round(p.getPower("Runesmith:AquaPower").amount / 2.0)));
-
+        AbstractDungeon.actionManager.addToBottom(new ReduceElementsPowerAction((int) Math.round(getIgnis()/2.0), (int) Math.round(getTerra()/2.0), (int) Math.round(getAqua()/2.0)));
     }
 
     public AbstractCard makeCopy() {

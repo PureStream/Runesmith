@@ -53,11 +53,11 @@
     ]
   },
   "Runesmith:ArcReactorPower": {
-    "NAME": "Radiated",
+    "NAME": "Arc Reactor",
     "DESCRIPTIONS": [
       "At the start of your turn, gain #b",
       " #yPotency.",
-      " Whenever you #yCraft a Rune, lose #b"
+      " Whenever you #yCraft a Rune, Lose #b"
     ]
   },
   "Runesmith:UnlimitedPowerPower": {
@@ -138,7 +138,8 @@
   "Runesmith:IceColdPower": {
     "NAME": "Ice-Cold",
     "DESCRIPTIONS": [
-      "Thaws and loses #ySlow in #b",
+      "Decreases attack damage by #b",
+      ". Thaws and loses #ySlow in #b",
       " turns.",
       "turn."
     ]
@@ -160,6 +161,15 @@
       "At the end of this turn, ",
       " deal #b",
       " damage to ALL enemies."
+    ]
+  },
+  "Runesmith:LightningRodPower": {
+    "NAME": "Lightning Rod",
+    "DESCRIPTIONS": [
+      "For #b",
+      " turn,",
+      " turns,",
+      " lose #yElements instead of HP."
     ]
   }
 }

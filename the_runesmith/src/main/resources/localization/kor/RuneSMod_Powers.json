@@ -53,10 +53,12 @@
     ]
   },
   "Runesmith:ArcReactorPower": {
-    "NAME": "피폭",
+    "NAME": "아크 원자로",
     "DESCRIPTIONS": [
-      "내 턴이 끝날 때 #y잠재력 을 #b",
-      " 잃습니다."
+      "턴 시작시, #y잠재력 을 #b",
+      " 얻습니다.",
+      " 룬을 #y제련 할 때 마다 #y잠재력 을 #b",
+	  " 잃습니다."
     ]
   },
   "Runesmith:UnlimitedPowerPower": {
@@ -135,11 +137,12 @@
     ]
   },
   "Runesmith:IceColdPower": {
-    "NAME": "살떨어지는 추위",
+    "NAME": "살얼음",
     "DESCRIPTIONS": [
-      "#b",
-      " 턴 후 #y둔화 를 잃습니다.",
-      " 턴 후 #y둔화 를 잃습니다."
+      "공격력을 #b",
+      " 만큼 감소시킵니다. 이 효과와 #y둔화 효과가 #b",
+      " 턴 후 사라집니다.",
+      " 턴 후 사라집니다."
     ]
   },
   "Runesmith:ReplicatingBarrierPower": {
@@ -152,20 +155,6 @@
       " 잠재력을 가진 #y보호석 을 #y제련 합니다."
     ]
   },
-  "Runesmith:TimeMachinePower": {
-    "NAME": "웜홀",
-    "DESCRIPTIONS": [
-      "체력 #b",
-      " , #y방어도 #b",
-      " , #y화염 #b",
-      " , #y대지 #b",
-      " , #y바다 #b",
-      " 를 저장했습니다.",
-      " NL #b",
-      " 턴 후 사라집니다.",
-      " 턴 후 사라집니다."
-    ]
-  },
   "Runesmith:LastStandPower": {
     "NAME": "최후의 저항",
     "DESCRIPTIONS": [
@@ -173,6 +162,15 @@
       "턴 종료 후, ",
       " 모든 적에게 피해를 #b",
       " 줍니다."
+    ]
+  },
+  "Runesmith:LightningRodPower": {
+    "NAME": "피뢰침",
+    "DESCRIPTIONS": [
+      "#b",
+      " 턴 동안",
+      " 턴 동안",
+      " 체력 대신 #y원소 를 잃습니다."
     ]
   }
 }

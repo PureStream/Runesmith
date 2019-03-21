@@ -31,6 +31,7 @@ public class LastStandPower extends AbstractPower {
         this.owner = owner;
         this.damageAmount = damageAmount;
         this.amount = turns;
+        this.isTurnBased = true;
         updateDescription();
         this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/LastStand.png"), 0, 0, 84, 84);
         this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/LastStandSmall.png"), 0, 0, 32, 32);

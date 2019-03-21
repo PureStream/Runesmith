@@ -180,24 +180,23 @@ public class EnhancedCardValueModified {
         }
     }
 
-    @SpirePatch(cls = "com.megacrit.cardcrawl.cards.AbstractCard", method = "resetAttributes")
+    @SpirePatch(clz = AbstractCard.class, method = "resetAttributes")
     public static class resetAttributes {
-        public static SpireReturn Prefix(AbstractCard self) {
-            // Check required for Compendium
-            if (AbstractDungeon.player != null) {
-                self.block = self.baseBlock;
-                self.isBlockModified = false;
-                self.damage = self.baseDamage;
-                self.isDamageModified = false;
+        public static void Postfix(AbstractCard self) {
+//            if (AbstractDungeon.player != null) {
+//                self.block = self.baseBlock;
+//                self.isBlockModified = false;
+//                self.damage = self.baseDamage;
+//                self.isDamageModified = false;
                 if (self instanceof AbstractRunicCard) {
                     ((AbstractRunicCard) self).potency = ((AbstractRunicCard) self).basePotency;
                     ((AbstractRunicCard) self).isPotencyModified = false;
                 }
-                self.magicNumber = self.baseMagicNumber;
-                self.isMagicNumberModified = false;
-                self.damageTypeForTurn = (DamageInfo.DamageType) ReflectionHacks.getPrivate(self, AbstractCard.class, "damageType");
+//                self.magicNumber = self.baseMagicNumber;
+//                self.isMagicNumberModified = false;
+//                self.damageTypeForTurn = (DamageInfo.DamageType) ReflectionHacks.getPrivate(self, AbstractCard.class, "damageType");
                 EnhanceCountField.enhanceReset.set(self, false);
-                EnhanceCountField.lastEnhance.set(self, 0);
+                EnhanceCountField.lastEnhance.set(self, EnhanceCountField.enhanceCount.get(self));
 
 
 //                logger.info("reset attributes");
@@ -209,9 +208,9 @@ public class EnhancedCardValueModified {
 //	            		((AbstractRunicCard) self).isPotencyModified = true;
 //	            	}
 //	            }
-            }
+//            }
 
-            return SpireReturn.Continue();
+//            return SpireReturn.Continue();
         }
     }
 }

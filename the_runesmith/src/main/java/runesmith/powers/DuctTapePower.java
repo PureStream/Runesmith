@@ -2,13 +2,14 @@ package runesmith.powers;
 
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import runesmith.actions.cards.FlexTapeAction;
+import runesmith.actions.StasisCardInHandAction;
 
 public class DuctTapePower extends AbstractPower {
 
@@ -35,10 +36,10 @@ public class DuctTapePower extends AbstractPower {
     }
 
     public void atStartOfTurnPostDraw() {
-        flash();
-        AbstractDungeon.actionManager.addToBottom(
-                new FlexTapeAction(amount)
-        );
+        if(owner instanceof AbstractPlayer) {
+            flash();
+            AbstractDungeon.actionManager.addToBottom(new StasisCardInHandAction((AbstractPlayer) owner, amount, true));
+        }
     }
 
     public void updateDescription() {

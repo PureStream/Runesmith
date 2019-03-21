@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import runesmith.actions.ApplyElementsPowerAction;
 
-import static runesmith.patches.CardTagEnum.CRAFT;
+import static runesmith.patches.CardTagEnum.RS_CRAFT;
 
 public class EmergencyProvisions extends CustomRelic {
 
@@ -28,7 +28,7 @@ public class EmergencyProvisions extends CustomRelic {
     }
 
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (card.hasTag(CRAFT)) {
+        if (card.hasTag(RS_CRAFT)) {
             AbstractPlayer p = AbstractDungeon.player;
             flash();
             int rng = AbstractDungeon.cardRandomRng.random(2);

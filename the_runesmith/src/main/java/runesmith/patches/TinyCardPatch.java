@@ -9,7 +9,7 @@ import runesmith.RunesmithMod;
 
 public class TinyCardPatch {
 
-    private static final Color BEIGE = RunesmithMod.BEIGE.cpy();
+    private static final Color BEIGE = new Color(175f / 255f, 145f / 255f, 100f / 255f, 1f);
 
     @SpirePatch(clz = TinyCard.class, method="getIconBackgroundColor")
     public static class getIconBackgroundColor {

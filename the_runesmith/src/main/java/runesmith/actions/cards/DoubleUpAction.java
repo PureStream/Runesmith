@@ -48,7 +48,7 @@ public class DoubleUpAction extends AbstractGameAction {
                             c.upgrade();
                         if (EnhanceCard.canEnhance(c))
                             EnhanceCard.enhance(c);
-                        c.superFlash(RunesmithMod.BEIGE);
+                        c.superFlash(RunesmithMod.BEIGE.cpy());
                     }
                 }
                 this.isDone = true;
@@ -63,17 +63,16 @@ public class DoubleUpAction extends AbstractGameAction {
                 return;
             }
 
-            if (this.p.hand.group.size() <= cardNums) {
-                for (AbstractCard c : this.p.hand.group) {
-                    if (c.canUpgrade())
-                        c.upgrade();
-                    if (EnhanceCard.canEnhance(c))
-                        EnhanceCard.enhance(c);
-                    this.p.hand.getTopCard().superFlash(RunesmithMod.BEIGE);
-                }
-                returnCards();
-                this.isDone = true;
+            this.p.hand.group.size();
+            for (AbstractCard c : this.p.hand.group) {
+                if (c.canUpgrade())
+                    c.upgrade();
+                if (EnhanceCard.canEnhance(c))
+                    EnhanceCard.enhance(c);
+                this.p.hand.getTopCard().superFlash(RunesmithMod.BEIGE.cpy());
             }
+            returnCards();
+            this.isDone = true;
 
         }
 
@@ -83,7 +82,7 @@ public class DoubleUpAction extends AbstractGameAction {
                     c.upgrade();
                 if (EnhanceCard.canEnhance(c))
                     EnhanceCard.enhance(c);
-                c.superFlash(RunesmithMod.BEIGE);
+                c.superFlash(RunesmithMod.BEIGE.cpy());
                 this.p.hand.addToTop(c);
             }
             returnCards();

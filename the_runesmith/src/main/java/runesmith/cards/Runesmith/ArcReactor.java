@@ -19,9 +19,9 @@ public class ArcReactor extends CustomCard {
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String IMG_PATH = "images/cards/ArcReactor.png"; //<-------------- need some img
     private static final int COST = 1;
-    private static final int POWER_AMT = 4;
+    private static final int POWER_AMT = 3;
     private static final int UPGRADE_POWER_AMT = 1;
-    private static final int BACKLASH_AMT = 1;
+    private static final int ARC_AMT = 1;
 
     public ArcReactor() {
         super(
@@ -39,10 +39,8 @@ public class ArcReactor extends CustomCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-                new PotentialPower(p, this.magicNumber), this.magicNumber));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-                new ArcReactorPower(p, BACKLASH_AMT), BACKLASH_AMT));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PotentialPower(p, this.magicNumber), this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ArcReactorPower(p, ARC_AMT), ARC_AMT));
     }
 
     public AbstractCard makeCopy() {

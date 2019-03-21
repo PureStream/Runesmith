@@ -3,6 +3,7 @@ package runesmith.powers;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -23,6 +24,8 @@ public class IceColdPower extends AbstractPower {
         this.ID = POWER_ID;
         this.owner = owner;
         this.amount = amount;
+        this.isTurnBased = true;
+        this.type = PowerType.DEBUFF;
         updateDescription();
         this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/IceCold.png"), 0, 0, 84, 84);  //<-------- NEED SOME IMG
         this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/IceColdSmall.png"), 0, 0, 32, 32); //<-------- NEED SOME IMG
@@ -49,11 +52,16 @@ public class IceColdPower extends AbstractPower {
         }
     }
 
+
+    public float atDamageGive(float damage, DamageInfo.DamageType type) {
+        return type == DamageInfo.DamageType.NORMAL ? damage - (float)this.amount : damage;
+    }
+
     public void updateDescription() {
         if (this.amount == 1) {
-            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[2];
+            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[3];
         } else {
-            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];
         }
     }
 }

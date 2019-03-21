@@ -39,20 +39,21 @@
   "Prismatic": {
     "NAME": "Prismatic",
     "DESCRIPTION": [
-      "At the start of turn, gain a random card. The card costs 0 this turn.",
-      "At the start of turn, gain a random #yUpgraded card. The card costs 0 this turn."
+      "At the start of turn, gain a random card. It costs #b0 this turn.",
+      "At the start of turn, gain a random #yUpgraded card. It costs #b0 this turn."
     ]
   },
   "Industria": {
     "NAME": "Industria",
     "DESCRIPTION": [
-      "At the start of turn, gain [E] and draw 1 card."
+      "At the start of turn, gain [E] .",
+      "At the start of turn, gain [E] and draw #b1 card."
     ]
   },
   "Medicinae": {
     "NAME": "Medicinae",
     "DESCRIPTION": [
-      "#yBreak: Heals {Pot} HP twice."
+      "At the end of combat, heals #b{Pot2} HP. NL #yBreak: Heals #b{Pot} HP twice."
     ]
   },
   "Dud": {
@@ -70,7 +71,7 @@
   "Obretio": {
     "NAME": "Obretio",
     "DESCRIPTION": [
-      "At the end of turn, enemy with highest attack damage intent loses #b{Pot} #yStrength this turn."
+      "At the end of turn, enemy with highest attack intent loses #b{Pot} #yStrength this turn."
     ]
   }
 }

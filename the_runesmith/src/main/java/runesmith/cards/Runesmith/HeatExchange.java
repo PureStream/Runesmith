@@ -3,14 +3,15 @@ package runesmith.cards.Runesmith;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import runesmith.actions.ReduceElementsPowerAction;
 import runesmith.patches.AbstractCardEnum;
+import runesmith.ui.ElementsCounter;
 
 public class HeatExchange extends CustomCard {
     public static final String ID = "Runesmith:HeatExchange";
@@ -44,39 +45,21 @@ public class HeatExchange extends CustomCard {
 
     @Override
     public void applyPowers() {
-        this.baseDamage = ATTACK_DMG;
-        AbstractPlayer p = AbstractDungeon.player;
-        /*if (p.hasRelic("Runesmith:BrokenRuby")) {
-            if (p.getRelic("Runesmith:BrokenRuby").counter == 2)
-                baseDamage += this.magicNumber;
-        }*/
-        if (p.hasPower("Runesmith:IgnisPower")) {
-            int additionDamage = p.getPower("Runesmith:IgnisPower").amount * this.magicNumber;
-            baseDamage += additionDamage;
-        }
+        this.baseDamage = ATTACK_DMG + ElementsCounter.getIgnis() * this.magicNumber;
         super.applyPowers();
+    }
 
+//    public void onMoveToDiscard() {
 //        if (upgraded)
 //            this.rawDescription = DESCRIPTION_UPG;
 //        else
 //            this.rawDescription = DESCRIPTION;
 //        initializeDescription();
-    }
-
-    public void onMoveToDiscard() {
-        if (upgraded)
-            this.rawDescription = DESCRIPTION_UPG;
-        else
-            this.rawDescription = DESCRIPTION;
-        initializeDescription();
-    }
+//    }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(
-                new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE)
-        );
-        AbstractDungeon.actionManager.addToBottom(
-                new ReducePowerAction(p, p, "Runesmith:IgnisPower", IGNIS_AMT));
+        AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE));
+        AbstractDungeon.actionManager.addToBottom(new ReduceElementsPowerAction(IGNIS_AMT, 0, 0));
     }
 
     public AbstractCard makeCopy() {

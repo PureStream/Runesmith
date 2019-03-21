@@ -31,14 +31,13 @@ import org.apache.logging.log4j.Logger;
 import runesmith.cards.Runesmith.*;
 import runesmith.character.player.RunesmithCharacter;
 import runesmith.helpers.PotencyVariable;
+import runesmith.orbs.MedicinaeRune;
+import runesmith.orbs.RuneOrb;
 import runesmith.patches.CardStasisStatus;
 import runesmith.patches.ElementsGainedCountField;
 import runesmith.patches.EnhanceCountField;
 import runesmith.patches.PlayerClassEnum;
-import runesmith.powers.AquaPower;
-import runesmith.powers.IgnisPower;
 import runesmith.powers.PermafrostPower;
-import runesmith.powers.TerraPower;
 import runesmith.relics.*;
 import runesmith.ui.ElementsCounter;
 import runesmith.utils.KeywordWithProper;
@@ -235,22 +234,15 @@ public class RunesmithMod implements PostExhaustSubscriber,
     }
 
     public static boolean getElementsRender(){
-        AbstractPlayer p = AbstractDungeon.player;
         if (CardCrawlGame.dungeon != null && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
             if (renderElementsCounter) {
                 return true;
-            } else if ((p.hasPower(IgnisPower.POWER_ID) || p.hasPower(TerraPower.POWER_ID) || p.hasPower(AquaPower.POWER_ID))) {
+            } else if (ElementsCounter.getIgnis() > 0 || ElementsCounter.getTerra() > 0 || ElementsCounter.getAqua() > 0) {
                 renderElementsCounter = true;
                 return true;
             }
         }
         return false;
-    }
-
-    @Override
-    public void receiveOnBattleStart(AbstractRoom abstractRoom) {
-        AbstractPlayer p = AbstractDungeon.player;
-        renderElementsCounter = p instanceof RunesmithCharacter;
     }
 
     @Override
@@ -370,8 +362,12 @@ public class RunesmithMod implements PostExhaustSubscriber,
         cardsToAdd.add(new Accelerate());
         cardsToAdd.add(new Augmentation());
         cardsToAdd.add(new ChargedHammer());
+        cardsToAdd.add(new UnstableHammer());
 //        cardsToAdd.add(new Devolution());
         cardsToAdd.add(new NegativeSpace());
+        cardsToAdd.add(new LightningRod());
+        cardsToAdd.add(new CraftObretio());
+
     }
 
     @Override
@@ -413,11 +409,11 @@ public class RunesmithMod implements PostExhaustSubscriber,
             chiselCards = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
             craftCards = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
             CardLibrary.getAllCards().forEach(card -> {
-                if (card.hasTag(HAMMER))
+                if (card.hasTag(RS_HAMMER))
                     hammerCards.addToBottom(card);
-                if (card.hasTag(CHISEL))
+                if (card.hasTag(RS_CHISEL))
                     chiselCards.addToBottom(card);
-                if(card.hasTag(CRAFT))
+                if(card.hasTag(RS_CRAFT))
                     craftCards.addToBottom(card);
             });
         }
@@ -451,9 +447,25 @@ public class RunesmithMod implements PostExhaustSubscriber,
     }
 
     @Override
-    public void receivePostBattle(AbstractRoom arg0) {
+    public void receiveOnBattleStart(AbstractRoom abstractRoom) {
+        AbstractPlayer p = AbstractDungeon.player;
+        renderElementsCounter = p instanceof RunesmithCharacter;
+        if (p.hasRelic(CoreCrystal.ID))
+            ElementsCounter.setMaxElements(CoreCrystal.MAX_ELEMENTS);
+        else
+            ElementsCounter.setMaxElements(DEFAULT_MAX_ELEMENTS);
+
         //Reset Elements gained count.
-        ElementsGainedCountField.elementsCount.set(AbstractDungeon.player, 0);
+        ElementsGainedCountField.elementsCount.set(p, 0);
+        ElementsCounter.resetElements();
+    }
+
+    @Override
+    public void receivePostBattle(AbstractRoom arg0) {
+        AbstractPlayer p = AbstractDungeon.player;
+        RuneOrb.getAllRunes(p, new MedicinaeRune(0))
+                .forEach(r -> p.heal(r.getPotential()/2));
+
         renderElementsCounter = false;
     }
 

@@ -29,11 +29,6 @@
       "Upgrade and Enhance"
     ]
   },
-  "Runesmith:FlexTapeAction": {
-    "TEXT": [
-      "Stasis"
-    ]
-  },
   "Runesmith:StasisCardInDeckAction": {
     "TEXT": [
       "Stasis a Card"
@@ -61,8 +56,8 @@
     "TEXT": [
       "Prismatic",
       "Prismatic+",
-      "Rune: Give a random class card at the start of your turn and. The card costs 0 this turn.",
-      "Rune: Give a random upgraded class card at the start of your turn turn. The card costs 0 this turn."
+      "Rune: Give a random class card at the start of your turn and. The card costs 0 for the turn.",
+      "Rune: Give a random upgraded class card at the start of your turn turn. The card costs 0 for the turn."
     ]
   },
   "Runesmith:CraftReservo": {
@@ -71,6 +66,14 @@
       "Reservo+",
       "Rune: #yRetain a card.",
       "Rune: #yRetain 2 cards."
+    ]
+  },
+  "Runesmith:CraftIndustria": {
+    "TEXT": [
+      "Industria",
+      "Industria+",
+      "Rune: Gain [E] at the start of your turn.",
+      "Rune: Gain [E] and draw 1 card at the start of your turn."
     ]
   },
   "Runesmith:Craftable": {

@@ -49,8 +49,8 @@
   },
   "Runesmith:ElementalConversion": {
     "NAME": "Elementary Particles",
-    "DESCRIPTION": "Choose runesmith:Elements to runesmith:Decay",
-    "UPGRADE_DESCRIPTION": "Choose runesmith:Elements to runesmith:Decay NL Draw !M! card."
+    "DESCRIPTION": "Choose an runesmith:Element to runesmith:Decay.",
+    "UPGRADE_DESCRIPTION": "Choose an runesmith:Element to runesmith:Decay. NL Draw !M! card."
   },
   "Runesmith:ConvertIgnis": {
     "NAME": "Ignis Decay",
@@ -75,7 +75,7 @@
   },
   "Runesmith:UnstableHammer": {
     "NAME": "Unstable Hammer",
-    "DESCRIPTION": "Deal !D! damage. NL runesmith:Craft a runesmith:Dud rune. NL Gain 1 random runesmith:Element."
+    "DESCRIPTION": "Deal !D! damage. NL runesmith:Craft a runesmith:Dud Rune. NL Gain 1 random runesmith:Element."
   },
   "Runesmith:HammerThrow": {
     "NAME": "Hammer Throw",
@@ -99,8 +99,8 @@
   },
   "Runesmith:Grindstone": {
     "NAME": "Grindstone",
-    "DESCRIPTION": "Gain !B! block. NL This turn, whenever you play a card, NL Upgrade it. NL runesmith:Enhance the card if it cannot be upgraded.",
-    "UPGRADE_DESCRIPTION": "Gain !B! block. NL For !M! turns, whenever you play a card, NL Upgrade it. NL runesmith:Enhance the card if it cannot be upgraded."
+    "DESCRIPTION": "Gain !B! Block. NL This turn, whenever you play a card, NL Upgrade it. NL runesmith:Enhance the card if it cannot be upgraded.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL For !M! turns, whenever you play a card, NL Upgrade it. NL runesmith:Enhance the card if it cannot be upgraded."
   },
   "Runesmith:FieryHammer": {
     "NAME": "Fiery Hammer",
@@ -147,8 +147,11 @@
   },
   "Runesmith:ChaoticBlast": {
     "NAME": "Chaotic Blast",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL !M! of each runesmith:Element: runesmith:Craft !M! random Rune.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. NL !M! of each runesmith:Element: runesmith:Craft !M! random Runes."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL !M! of each runesmith:Element: runesmith:Craft !M! random",
+    "EXTENDED_DESCRIPTION": [
+      " Rune.",
+      " Runes."
+    ]
   },
   "Runesmith:Empowerment": {
     "NAME": "Empowerment",
@@ -166,12 +169,13 @@
   },
   "Runesmith:ConstructBifrost": {
     "NAME": "Construct Bifrost",
-    "DESCRIPTION": "1 of each runesmith:Element: runesmith:Craft a [#EFC851]Prismatic Rune.",
-    "UPGRADE_DESCRIPTION": "1 of each runesmith:Element: runesmith:Craft a [#EFC851]Prismatic+ Rune."
+    "DESCRIPTION": "2 of each runesmith:Element: runesmith:Craft a [#EFC851]Prismatic Rune.",
+    "UPGRADE_DESCRIPTION": "2 of each runesmith:Element: runesmith:Craft a [#EFC851]Prismatic+ Rune."
   },
   "Runesmith:CraftIndustria": {
     "NAME": "Craft Industria",
-    "DESCRIPTION": "!M! runesmith:Aqua: runesmith:Craft an runesmith:Industria Rune."
+    "DESCRIPTION": "3 runesmith:Aqua: runesmith:Craft an [#EFC851]Industria Rune.",
+    "UPGRADE_DESCRIPTION": "3 runesmith:Aqua: runesmith:Craft an [#EFC851]Industria+ Rune."
   },
   "Runesmith:CraftMedicinae": {
     "NAME": "Craft Medicinae",
@@ -186,12 +190,12 @@
   },
   "Runesmith:GenerateForcefield": {
     "NAME": "Generate Forcefield",
-    "DESCRIPTION": "runesmith:Break your X oldest non-Dud runes. Prevent the next time you would lose HP for each Rune runesmith:Broken. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "runesmith:Break your X+1 oldest non-Dud runes. Prevent the next time you would lose HP for each Rune runesmith:Broken. NL Exhaust."
+    "DESCRIPTION": "runesmith:Break your X oldest non-Dud Runes. Prevent the next time you would lose HP for each Rune runesmith:Broken. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "runesmith:Break your X+1 oldest non-Dud Runes. Prevent the next time you would lose HP for each Rune runesmith:Broken. NL Exhaust."
   },
   "Runesmith:Supernova": {
     "NAME": "Supernova",
-    "DESCRIPTION": "runesmith:Break all your runes. NL Draw 1 card and gain [E] for each non-Dud Rune runesmith:Broken."
+    "DESCRIPTION": "runesmith:Break all your Runes. NL Draw 1 card and gain [E] for each non-Dud Rune runesmith:Broken."
   },
   "Runesmith:CreatorForm": {
     "NAME": "Creator Form",
@@ -279,7 +283,7 @@
   },
   "Runesmith:FrozenChisel": {
     "NAME": "Frozen Chisel",
-    "DESCRIPTION": "Deal !D! damage. NL Apply 2 Weak and 1 Slow. NL Enemy loses Slow after !M! turns. NL Gain 1 runesmith:Terra and 1 runesmith:Aqua."
+    "DESCRIPTION": "Deal !D! damage. NL Apply 1 Slow. NL Apply !M! runesmith:Ice-Cold. NL Gain 1 runesmith:Terra and 1 runesmith:Aqua."
   },
   "Runesmith:Accelerate": {
     "NAME": "Accelerate",
@@ -304,15 +308,15 @@
   },
   "Runesmith:Discharge": {
     "NAME": "Discharge",
-    "DESCRIPTION": "runesmith:Break your oldest non-Dud Rune to gain !B! Block, deal !D! damage, and runesmith:Craft a runesmith:Dud rune."
+    "DESCRIPTION": "runesmith:Break your oldest non-Dud Rune to gain !B! Block, deal !D! damage, and runesmith:Craft a runesmith:Dud Rune."
   },
   "Runesmith:Attraction": {
     "NAME": "Attraction",
-    "DESCRIPTION": "Put !M! runesmith:Craft card from discard, draw, or exhaust pile into your hand. NL Exhaust."
+    "DESCRIPTION": "Put !M! runesmith:Craft card from draw, discard or exhaust pile into your hand. NL Exhaust."
   },
   "Runesmith:ArcReactor": {
     "NAME": "Arc Reactor",
-    "DESCRIPTION": "Gain !M! runesmith:Potency. At the start of your turn, gain 2 runesmith:Potency. Whenever you runesmith:Craft a Rune, lose 2 runesmith:Potency."
+    "DESCRIPTION": "Gain !M! runesmith:Potency. At the start of your turn, gain 1 runesmith:Potency. Whenever you runesmith:Craft a Rune, Lose 2 runesmith:Potency."
   },
   "Runesmith:ReplicatingBarrier": {
     "NAME": "Replicating Barrier",
@@ -333,7 +337,7 @@
   },
   "Runesmith:ChargedHammer": {
     "NAME": "Charged Hammer",
-    "DESCRIPTION": "Deal !D! damage. NL Spend !M! random runesmith:Elements and runesmith:Break your oldest runesmith:Dud Rune to runesmith:Craft a random non-Dud rune."
+    "DESCRIPTION": "Deal !D! damage. NL Spend !M! random runesmith:Elements and runesmith:Break your oldest runesmith:Dud Rune to runesmith:Craft a random non-Dud Rune."
   },
   "Runesmith:Devolution": {
     "NAME": "Devolution",
@@ -345,10 +349,10 @@
   },
   "Runesmith:LightningRod": {
     "NAME": "Lightning Rod",
-    "DESCRIPTION": "For !M! turns, you lose runesmith:Elements instead of HP. Gain 2 of each runesmith:Elements. The value is affected by runesmith:Potency."
+    "DESCRIPTION": "For !M! turns, you lose runesmith:Elements instead of HP. Gain 1 of each runesmith:Element."
   },
   "Runesmith:NegativeSpace": {
     "NAME": "Negative Space",
-    "DESCRIPTION": "Gain !B! Block. NL Gain 3 less Block for each Rune you have. NL Deal !D! damage for each Rune."
+    "DESCRIPTION": "Gain !B! Block. NL Gain 2 less Block for each active Rune. NL Deal !D! damage for each active Rune."
   }
 }

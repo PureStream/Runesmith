@@ -9,20 +9,14 @@
   },
   "Runesmith:CraftFirestone": {
     "NAME": "화염석 제련",
-    "DESCRIPTION": "runesmith:화염 1 : !Pot! runesmith:잠재력 을 가진 runesmith:화염석 을 runesmith:제련 합니다.",
-    "EXTENDED_DESCRIPTION": [
-      ""
-    ]
+    "DESCRIPTION": "runesmith:화염 1 : !Pot! runesmith:잠재력 을 가진 runesmith:화염석 을 runesmith:제련 합니다."
   },
   "Runesmith:CraftProtectio": {
     "NAME": "보호석 제련",
-    "DESCRIPTION": "runesmith:대지 2 : !Pot! runesmith:잠재력 을 가진 runesmith:보호석 을 runesmith:제련 합니다.",
-    "EXTENDED_DESCRIPTION": [
-      ""
-    ]
+    "DESCRIPTION": "runesmith:대지 2 : !Pot! runesmith:잠재력 을 가진 runesmith:보호석 을 runesmith:제련 합니다."
   },
   "Runesmith:Fortify": {
-    "NAME": "숙성",
+    "NAME": "담금질",
     "DESCRIPTION": "방어도 를 !B! 얻습니다. NL 내 손에 있는 무작위 카드 1장을 runesmith:향상 시킵니다.",
     "UPGRADE_DESCRIPTION": "방어도 를 !B! 얻습니다. NL 내 손에 있는 카드 1장을 선택하여 runesmith:향상 시킵니다."
   },
@@ -51,15 +45,7 @@
   },
   "Runesmith:CraftIncendium": {
     "NAME": "흑요석 제련",
-    "DESCRIPTION": "runesmith:화염 3 : !Pot! runesmith:잠재력 을 가진 runesmith:흑요석 을  runesmith:제련 합니다.",
-    "EXTENDED_DESCRIPTION": [
-      ""
-    ]
-  },
-  "Runesmith:HammerSlam": {
-    "NAME": "망치 강타",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 보유중인 중복되지 않는 룬 의 갯수만큼 카드 !M! 장을 뽑습니다.",
-    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 !M! 장 뽑습니다. NL 보유중인 중복되지 않는 룬 의 갯수만큼 카드 !M! 장을 뽑습니다."
+    "DESCRIPTION": "runesmith:화염 3 : !Pot! runesmith:잠재력 을 가진 runesmith:흑요석 을  runesmith:제련 합니다."
   },
   "Runesmith:ElementalConversion": {
     "NAME": "원소 분해",
@@ -100,10 +86,6 @@
     "NAME": "모두를 위한 하나",
     "DESCRIPTION": "가장 오래된 룬을 하나 runesmith:파쇄 합니다. NL [E] 를 얻고, 모든 적에게 피해 1, 취약 1, 약화 1을 부여합니다. NL 방어도 1, 모든 runesmith:원소 를 1 얻고 카드를 1장 뽑습니다."
   },
-  "Runesmith:RunicBullets": {
-    "NAME": "룬 총알",
-    "DESCRIPTION": "피해를 !D! 씩 보유중인 룬 의 갯수만큼 줍니다."
-  },
   "Runesmith:StaticCage": {
     "NAME": "전자기 새장",
     "DESCRIPTION": "가장 오래된 룬을 runesmith:파쇄 합니다. NL 내 손에 있는 카드 1장에 runesmith:정지장 을 부여합니다. 방어도 를 !B! 얻습니다."
@@ -122,15 +104,12 @@
   },
   "Runesmith:FieryHammer": {
     "NAME": "이글거리는 망치",
-    "DESCRIPTION": "모든 적에게 피해를 !D! 줍니다. NL 여러 번 강화할 수 있습니다."
+    "DESCRIPTION": "모든 적에게 피해를 !D! 줍니다. NL 강화 횟수에 제한이 없습니다."
   },
   "Runesmith:CraftReservo": {
     "NAME": "보존석 제련",
     "DESCRIPTION": "runesmith:바다 2 : runesmith:보존석 을 runesmith:제련 합니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "runesmith:바다 2 : runesmith:보존석+ 을 runesmith:제련 합니다. NL 소멸.",
-    "EXTENDED_DESCRIPTION": [
-      ""
-    ]
+    "UPGRADE_DESCRIPTION": "runesmith:바다 2 : runesmith:보존석+ 을 runesmith:제련 합니다. NL 소멸."
   },
   "Runesmith:LithiumIon": {
     "NAME": "리튬 이온",
@@ -142,30 +121,16 @@
     "UPGRADE_DESCRIPTION": "선천성. NL 턴 시작시 runesmith:화염 !M! , runesmith:대지 !M! 을 얻습니다."
   },
   "Runesmith:RunicBlueprint": {
-    "NAME": "룬 청사진",
+     "NAME": "룬 청사진",
     "DESCRIPTION": "무작위 runesmith:제련 카드를 손에 넣습니다. NL 이번 턴 동안 비용이 0이 되고 runesmith:원소 를 소모하지 않습니다. NL runesmith:바다 2 를 얻습니다. NL 소멸."
   },
   "Runesmith:CraftSpiculum": {
     "NAME": "미늘석 제련",
-    "DESCRIPTION": "runesmith:화염 1 runesmith:바다 1: !Pot! runesmith:잠재력 을 가진 runesmith:미늘석 을 runesmith:제련 합니다. NL 소멸.",
-    "EXTENDED_DESCRIPTION": [
-      ""
-    ]
+    "DESCRIPTION": "runesmith:화염 1 runesmith:바다 1: !Pot! runesmith:잠재력 을 가진 runesmith:미늘석 을 runesmith:제련 합니다. NL 소멸."
   },
   "Runesmith:CraftPotentia": {
     "NAME": "잠재석 제련",
-    "DESCRIPTION": "모든 runesmith:원소 2 : 가장 오래된 룬을 제거하고 !Pot! runesmith:잠재력 을 가진 runesmith:잠재석 을 runesmith:제련 합니다.",
-    "EXTENDED_DESCRIPTION": [
-      ""
-    ]
-  },
-  "Runesmith:CraftFerro": {
-    "NAME": "미늘석 제련",
-    "DESCRIPTION": "runesmith:대지 2 runesmith:바다 1: !Pot! runesmith:잠재력 을 가진 판금석 을 runesmith:제련 합니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "runesmith:대지 2 runesmith:바다 1: !Pot! runesmith:잠재력 을 가진 판금석 을 runesmith:제련 합니다.",
-    "EXTENDED_DESCRIPTION": [
-      ""
-    ]
+    "DESCRIPTION": "모든 runesmith:원소 2 : 가장 오래된 룬을 제거하고 !Pot! runesmith:잠재력 을 가진 runesmith:잠재석 을 runesmith:제련 합니다."
   },
   "Runesmith:HammerTime": {
     "NAME": "망치 나가신다",
@@ -182,25 +147,15 @@
   },
   "Runesmith:ChaoticBlast": {
     "NAME": "혼돈의 폭발",
-    "DESCRIPTION": "모든 적에게 피해를 !D! 줍니다. 모든 runesmith:원소 !M! : 무작위 룬을 1개 runesmith:제련 합니다.",
-    "UPGRADE_DESCRIPTION": "모든 적에게 피해를 !D! 줍니다. 모든 runesmith:원소 !M! : 무작위 룬을 2개 runesmith:제련 합니다.",
+    "DESCRIPTION": "모든 적에게 피해를 !D! 줍니다. NL 모든 runesmith:원소 !M! : 무작위 룬을 !M!",
     "EXTENDED_DESCRIPTION": [
-      ""
+      " 개 runesmith:제련 합니다.",
+      " 개 runesmith:제련 합니다."
     ]
-  },
-  "Runesmith:Shatterune": {
-    "NAME": "룬파괴",
-    "DESCRIPTION": "가장 오래된 룬을 X 번 runesmith:파쇄 합니다.",
-    "UPGRADE_DESCRIPTION": "가장 오래된 룬을 X+1 번 runesmith:파쇄 합니다."
   },
   "Runesmith:Empowerment": {
     "NAME": "물리력 행사",
     "DESCRIPTION": "이번 턴에만 runesmith:화염 과 같은 양의 힘, runesmith:대지 와 같은 양의 민첩 을 얻습니다."
-  },
-  "Runesmith:RunicSmithing": {
-    "NAME": "룬 대장간",
-    "DESCRIPTION": "카드를 runesmith:향상 시킬 때 마다 모든 runesmith:원소 를 1씩 얻습니다.",
-    "UPGRADE_DESCRIPTION": "선천성. NL 카드를 runesmith:향상 시킬 때 마다 모든 runesmith:원소 를 1씩 얻습니다."
   },
   "Runesmith:Runesonance": {
     "NAME": "룬 공명",
@@ -214,41 +169,29 @@
   },
   "Runesmith:ConstructBifrost": {
     "NAME": "무지개다리 건설",
-    "DESCRIPTION": "모든 runesmith:원소 1 : [#EFC851]프리즘 룬을 runesmith:제련 합니다.",
-    "UPGRADE_DESCRIPTION": "모든 runesmith:원소 1 : [#EFC851]프리즘 룬을 runesmith:제련 합니다.",
-    "EXTENDED_DESCRIPTION": [
-      ""
-    ]
+    "DESCRIPTION": "모든 runesmith:원소 2 : [#EFC851]프리즘 룬을 runesmith:제련 합니다.",
+    "UPGRADE_DESCRIPTION": "모든 runesmith:원소 2 : [#EFC851]프리즘 룬을 runesmith:제련 합니다."
   },
   "Runesmith:CraftIndustria": {
     "NAME": "근면석 제련",
-    "DESCRIPTION": "runesmith:바다 !M! : runesmith:근면석 을 runesmith:제련 합니다.",
-    "EXTENDED_DESCRIPTION": [
-      ""
-    ]
+    "DESCRIPTION": "runesmith:바다 3 : [#EFC851]근면석 을 runesmith:제련 합니다.",
+    "UPGRADE_DESCRIPTION": "runesmith:바다 3 : [#EFC851]근면석+ 을 runesmith:제련 합니다."
   },
   "Runesmith:CraftMedicinae": {
     "NAME": "약제석 제련",
-    "DESCRIPTION": "runesmith:대지 5 : !Pot! runesmith:잠재력 을 가진 runesmith:약제석 을 runesmith:제련 합니다. NL 소멸.",
-    "EXTENDED_DESCRIPTION": [
-      ""
-    ]
+    "DESCRIPTION": "runesmith:대지 5 : !Pot! runesmith:잠재력 을 가진 runesmith:약제석 을 runesmith:제련 합니다. NL 소멸."
   },
   "Runesmith:LastStand": {
     "NAME": "최후의 저항",
-    "DESCRIPTION": "내 덱에 있는 모든 카드를 runesmith:퇴화 시킵니다. runesmith:원소 를 모두 제거합니다. runesmith:퇴화 된 카드 수의 !M! 배만큼 모든 적에게 피해를 줍니다. NL 소멸.",
+    "DESCRIPTION": "모든 카드를 runesmith:퇴화 시킵니다. runesmith:원소 를 모두 잃습니다. 다음 턴 종료시, runesmith:퇴화 된 카드 수의 !M! 배만큼 모든 적에게 피해를 줍니다. NL 소멸.",
     "EXTENDED_DESCRIPTION": [
       " NL (피해를 !D! 줍니다)"
     ]
   },
-  "Runesmith:SpecialReserve": {
-    "NAME": "특별 보호 구역",
-    "DESCRIPTION": "피해를 !D! 주고 내 덱에 있는 카드 !M! 장에 runesmith:정지장 을 부여합니다."
-  },
   "Runesmith:GenerateForcefield": {
     "NAME": "포스필드 생성",
     "DESCRIPTION": "더미가 아닌 룬 X 개를 runesmith:파쇄 하고 runesmith:파쇄 된 룬의 갯수 만큼 다음에 입을 피해를 방지합니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "더미가 아닌 룬 X 개를 runesmith:파쇄 하고 runesmith:파쇄 된 룬의 갯수 만큼 다음에 입을 피해를 방지합니다. NL 소멸."
+    "UPGRADE_DESCRIPTION": "더미가 아닌 룬 X+1 개를 runesmith:파쇄 하고 runesmith:파쇄 된 룬의 갯수 만큼 다음에 입을 피해를 방지합니다. NL 소멸."
   },
   "Runesmith:Supernova": {
     "NAME": "초신성",
@@ -267,29 +210,9 @@
     "NAME": "금속공학 연구",
     "DESCRIPTION": "내 덱을 모두 runesmith:퇴화 시키고 !M! 턴 뒤 내 덱 전체를 강화 하고, runesmith:향상 시킵니다. NL 소멸."
   },
-  "Runesmith:ArmorUp": {
-    "NAME": "동력 주입",
-    "DESCRIPTION": "이번 전투에서 향상된 카드의 !M! 배만큼 방어도 를 얻습니다."
-  },
-  "Runesmith:Border Wall": {
-    "NAME": "장벽",
-    "DESCRIPTION": "방어도 를 !B! 얻습니다. runesmith:대지 4: !Pot! runesmith:잠재력 을 가진 runesmith:보호석 2개를 runesmith:제련 합니다."
-  },
-  "Runesmith:RuneMagnet": {
-    "NAME": "룬 자석",
-    "DESCRIPTION": "runesmith:제련 카드가 나올 때 까지 카드를 뽑고 runesmith:제련 카드가 아닌 카드는 모두 버립니다. NL 소멸."
-  },
-  "Runesmith:ThatsALotOfDamage": {
-    "NAME": "무슨 딜이냐?!",
-    "DESCRIPTION": "적의 현재 체력과 방어도 를 절반으로 만듭니다.",
-    "UPGRADE_DESCRIPTION": "적의 현재 체력과 방어도 를 절반으로 만듭니다. NL 선천성. NL 소멸."
-  },
   "Runesmith:CraftMagma": {
     "NAME": "용암석 제련",
-    "DESCRIPTION": "runesmith:화염 2 runesmith:대지 1: !Pot! runesmith:잠재력 을 가진 용암석 을 runesmith:제련 합니다.",
-    "EXTENDED_DESCRIPTION": [
-      ""
-    ]
+    "DESCRIPTION": "runesmith:화염 2 runesmith:대지 1: !Pot! runesmith:잠재력 을 가진 용암석 을 runesmith:제련 합니다."
   },
   "Runesmith:Rearm": {
     "NAME": "재무장",
@@ -318,7 +241,7 @@
   },
   "Runesmith:PerfectChisel": {
     "NAME": "완벽한 대못",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 각 runesmith:원소 를 1씩 얻습니다. NL 이번 턴에만 runesmith:잠재력 !M! 을 얻습니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 각 runesmith:원소 를 1씩 얻습니다. NL 이번 턴에만 runesmith:잠재력 을 !M! 얻습니다."
   },
   "Runesmith:DoubleUp": {
     "NAME": "두 배로",
@@ -327,8 +250,8 @@
   },
   "Runesmith:Refinement": {
     "NAME": "정제",
-    "DESCRIPTION": "카드 1장을 X 번 runesmith:향상 시킵니다. NL [E] 1을 돌려받습니다.",
-    "UPGRADE_DESCRIPTION": "카드 1장을 X+1 번 runesmith:향상 시킵니다. NL [E] 1을 돌려받습니다."
+    "DESCRIPTION": "카드 1장을 X 번 runesmith:향상 시킵니다. NL [E] 를 돌려받습니다.",
+    "UPGRADE_DESCRIPTION": "카드 1장을 X+1 번 runesmith:향상 시킵니다. NL [E] 를 돌려받습니다."
   },
   "Runesmith:Permafrost": {
     "NAME": "영구동토",
@@ -346,8 +269,8 @@
   },
   "Runesmith:PoweredAnvil": {
     "NAME": "강화된 모루",
-    "DESCRIPTION": "카드를 runesmith:향상 한 후 1번 더 runesmith:향상 합니다.",
-    "UPGRADE_DESCRIPTION": "선천성. NL 카드를 runesmith:향상 한 후 1번 더 runesmith:향상 합니다."
+    "DESCRIPTION": "카드를 runesmith:향상 한 후 1번 더 runesmith:향상 시킵니다.",
+    "UPGRADE_DESCRIPTION": "카드를 runesmith:향상 한 후 1번 더 runesmith:향상 시킵니다. NL 내 손에 있는 카드 1장을 runesmith:향상 시킵니다."
   },
   "Runesmith:Malloc": {
     "NAME": "할당",
@@ -360,7 +283,7 @@
   },
   "Runesmith:FrozenChisel": {
     "NAME": "얼어붙은 대못",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 둔화를 1 부여합니다. NL !M! 턴 후 둔화가 사라집니다. NL runesmith:대지 1, runesmith:화염 1을 얻습니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 둔화를 1 부여합니다. NL runesmith:살얼음 을 !M! 부여합니다. NL runesmith:바다 와 runesmith:대지 를 1씩 얻습니다."
   },
   "Runesmith:Accelerate": {
     "NAME": "가속",
@@ -371,20 +294,17 @@
     "DESCRIPTION": "모든 캐릭터가 이번 턴에 힘을 !M! 잃습니다. 소멸."
   },
   "Runesmith:Overpower": {
-    "NAME": "개사기",
+    "NAME": "압도",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 내 손에 있는 무작위 카드 2장을 runesmith:퇴화 시킵니다."
   },
   "Runesmith:HammerAndChisel": {
     "NAME": "망치와 대못",
-    "DESCRIPTION": "무작위 망치 카드와 대못 카드를 1장씩 손으로 가져옵니다. 가져온 카드는 이번 전투동안 비용이 1 감소합니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "무작위 강화된 망치 카드와 대못 카드를 1장씩 손으로 가져옵니다. 가져온 카드는 이번 전투동안 비용이 1 감소합니다. NL 소멸."
+    "DESCRIPTION": "무작위 망치 카드와 대못 카드를 1장씩 손으로 가져옵니다. 이번 전투동안 가져온 카드의 비용이 1씩 감소합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "무작위 강화된 망치 카드와 대못 카드를 1장씩 손으로 가져옵니다. 이번 전투동안 가져온 카드의 비용이 1씩 감소합니다. NL 소멸."
   },
   "Runesmith:Firewall": {
     "NAME": "방화벽",
-    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL runesmith:화염 3 : !Pot! 잠재력을 가진 화염석 2개를 runesmith:제련 합니다.",
-    "EXTENDED_DESCRIPTION": [
-      ""
-    ]
+    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL runesmith:화염 3 : !Pot! 잠재력을 가진 화염석 2개를 runesmith:제련 합니다."
   },
   "Runesmith:Discharge": {
     "NAME": "방출",
@@ -392,34 +312,15 @@
   },
   "Runesmith:Attraction": {
     "NAME": "견인",
-    "DESCRIPTION": "runesmith:제련 카드를 뽑거나 뽑을 카드 더미가 빌 때 까지 카드를 뽑고 runesmith:제련 카드가 아닌 카드는 버립니다."
+    "DESCRIPTION": "뽑을 카드 더미, 버린 카드 더미, 소멸한 카드 더미에서 runesmith:제련 카드를 !M!장 손으로 가져옵니다. NL 소멸."
   },
   "Runesmith:ArcReactor": {
     "NAME": "아크 원자로",
-    "DESCRIPTION": "runesmith:잠재력 !M! 을 얻습니다. 룬 을 하나 runesmith:제련 할 때 마다 runesmith:잠재력 을 1 잃습니다."
+    "DESCRIPTION": "runesmith:잠재력 을 !M! 얻습니다. 턴 시작시 runesmith:잠재력 을 1 얻습니다. 룬을 runesmith:제련 할 때 마다 runesmith:잠재력 을 2 잃습니다."
   },
   "Runesmith:ReplicatingBarrier": {
     "NAME": "복제된 보호막",
     "DESCRIPTION": "runesmith:대지 2 : !Pot! 잠재력을 가진 runesmith:보호석 을 runesmith:제련 합니다. NL 매 2턴 마다 runesmith:대지 2 : !Pot! 잠재력을 가진 runesmith:보호석 을 runesmith:제련 합니다."
-  },
-  "Runesmith:TimeMachine_old": {
-    "NAME": "Time Machine",
-    "DESCRIPTION": "Save your current HP, Block, and runesmith:Elements. NL Add a Time Travel card to your hand. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "Save your current HP, Block, and runesmith:Elements. NL Add an upgraded Time Travel card to your hand. NL 선천성. NL 소멸."
- },
-  "Runesmith:TimeMachine": {
-    "NAME": "타임머신",
-    "DESCRIPTION": "휘발성. NL 현재 체력, 방어도, runesmith:원소 를 저장합니다. NL 시간 여행 카드를 1장 뽑을 카드 더미 맨 아랫쪽에 넣습니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "현재 체력, 방어도, runesmith:원소 를 저장합니다. NL 시간 여행 카드를 1장 뽑을 카드 더미 맨 아랫쪽에 넣습니다. NL 소멸."
-  },
-  "Runesmith:TimeTravel_old": {
-    "NAME": "Time Travel",
-    "DESCRIPTION": "Set your current HP, Block, and runesmith:Elements to the saved values. NL Purge."
-    },
-  "Runesmith:TimeTravel": {
-    "NAME": "시간 여행",
-    "DESCRIPTION": "휘발성. NL 체력, 방어도, runesmith:원소 를 타임 머신 카드로 저장한 수치로 되돌립니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "체력, 방어도, runesmith:원소 를 타임 머신 카드로 저장한 수치로 되돌립니다. NL 소멸."
   },
   "Runesmith:Electrocute": {
     "NAME": "전기의자",
@@ -427,7 +328,7 @@
   },
   "Runesmith:FissionHammer": {
     "NAME": "분열 망치",
-    "DESCRIPTION": "피해를 !D! 줍니다. 모든 적에게 피해를 !D! 줍니다. NL 가장 오래된 룬을 2번 runesmith:파쇄 합니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 모든 적에게 피해를 !D! 줍니다. NL 가장 오래된 룬을 2번 runesmith:파쇄 합니다."
   },
   "Runesmith:Augmentation": {
     "NAME": "증강",
@@ -441,5 +342,17 @@
   "Runesmith:Devolution": {
     "NAME": "퇴행",
     "DESCRIPTION": "사용불가. NL 턴 종료시 내 손에 있는 모든 카드를 runesmith:퇴화 시킵니다."
+  },
+  "Runesmith:CraftObretio": {
+    "NAME": "탈진석 제련",
+    "DESCRIPTION": "runesmith:대지 2 runesmith:바다 1 : !Pot! runesmith:잠재력 을 가진 runesmith:탈진석 을 runesmith:제련 합니다."
+  },
+  "Runesmith:LightningRod": {
+    "NAME": "피뢰침",
+    "DESCRIPTION": "!M! 턴 동안, 체력 대신 runesmith:원소 를 잃습니다. 모든 runesmith:원소 를 1씩 얻습니다."
+  },
+  "Runesmith:NegativeSpace": {
+    "NAME": "음의 공간",
+    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL 활성화 된 룬 하나 당 방어도 를 2 덜 얻습니다. NL 활성화 된 룬 하나 당 피해를 !D! 줍니다."
   }
 }

@@ -15,7 +15,7 @@ import runesmith.patches.AbstractCardEnum;
 import java.util.ArrayList;
 import java.util.List;
 
-import static runesmith.patches.CardTagEnum.CRAFT;
+import static runesmith.patches.CardTagEnum.RS_CRAFT;
 
 public class CraftReservo extends AbstractRunicCard {
 
@@ -44,7 +44,7 @@ public class CraftReservo extends AbstractRunicCard {
                 AbstractCard.CardRarity.UNCOMMON,
                 AbstractCard.CardTarget.SELF
         );
-        this.tags.add(CRAFT);
+        this.tags.add(RS_CRAFT);
         this.exhaust = true;
         this.baseMagicNumber = this.magicNumber = AQUA_AMT;
     }

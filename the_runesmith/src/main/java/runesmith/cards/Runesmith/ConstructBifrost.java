@@ -15,7 +15,7 @@ import runesmith.patches.AbstractCardEnum;
 import java.util.ArrayList;
 import java.util.List;
 
-import static runesmith.patches.CardTagEnum.CRAFT;
+import static runesmith.patches.CardTagEnum.RS_CRAFT;
 
 public class ConstructBifrost extends AbstractRunicCard {
 
@@ -27,8 +27,8 @@ public class ConstructBifrost extends AbstractRunicCard {
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
-    private static final int COST = 1;
-    private static final int ELEMENT_AMT = 1;
+    private static final int COST = 2;
+    private static final int ELEMENT_AMT = 2;
 
     private List<TooltipInfo> tips = new ArrayList<>();
 
@@ -44,7 +44,7 @@ public class ConstructBifrost extends AbstractRunicCard {
                 AbstractCard.CardRarity.RARE,
                 AbstractCard.CardTarget.SELF
         );
-        this.tags.add(CRAFT);
+        this.tags.add(RS_CRAFT);
     }
 
     @Override

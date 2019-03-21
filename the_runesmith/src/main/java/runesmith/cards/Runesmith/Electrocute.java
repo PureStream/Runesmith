@@ -57,7 +57,7 @@ public class Electrocute extends CustomCard {
         AbstractDungeon.actionManager.addToBottom(
                 new DamageAction(
                         p,
-                        new DamageInfo(p, this.magicNumber, this.damageTypeForTurn),
+                        new DamageInfo(p, this.magicNumber, DamageInfo.DamageType.THORNS),
                         AbstractGameAction.AttackEffect.NONE
                 )
         );

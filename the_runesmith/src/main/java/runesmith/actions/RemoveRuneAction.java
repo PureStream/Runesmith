@@ -19,7 +19,7 @@ public class RemoveRuneAction extends AbstractGameAction {
     public void update() {
         if (this.duration == Settings.ACTION_DUR_FAST) {
 
-            RuneOrb.runeCount--;
+//            RuneOrb.runeCountDown();
             orb.onRemove();
             AbstractDungeon.actionManager.addToTop(new RemoveRuneAndSlotAction(orb));
 

@@ -3,7 +3,7 @@
     "NAME": "Broken Ruby",
     "FLAVOR": "A crystal that resembles a red gem. Although it is broken, faint energy still remains.",
     "DESCRIPTIONS": [
-      "At the start of each combat, Gain #b1 #yrunesmith:Ignis. Gain #b1 #yrunesmith:Ignis for every three attacks played."
+      "At the start of each combat, gain #b2 #yrunesmith:Ignis. If you played at least #b2 #yAttacks last turn, #yEnhance a random card in your hand."
     ]
   },
   "Runesmith:MiniCore": {
@@ -60,7 +60,7 @@
     "NAME": "Core Crystal",
     "FLAVOR": "",
     "DESCRIPTIONS": [
-      "Replaces #rBroken #rRuby. All #yrunesmith:Element gains increased by #b50%. Raises maximum #yrunesmith:Elements to #b20."
+      "Replaces #rBroken #rRuby. All #yrunesmith:Element gains are increased by #b50%. Raises maximum #yrunesmith:Elements to #b20."
     ]
   }
 }

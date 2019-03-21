@@ -19,7 +19,6 @@ public class Preparation extends CustomCard {
     public static final String IMG_PATH = "images/cards/Preparation.png"; //<-------------- need some img
     private static final int COST = 1;
     private static final int BASE_AMT = 2;
-    private static final int UPG_BASE_AMT = 2;
     private static final int DRAW_AMT = 1;
 
     public Preparation() {
@@ -73,8 +72,7 @@ public class Preparation extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(
-                new ApplyElementsPowerAction(p, p, this.baseMagicNumber, this.baseMagicNumber, this.baseMagicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyElementsPowerAction(p, p, this.magicNumber, this.magicNumber, this.magicNumber));
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, DRAW_AMT));
     }
 

@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import runesmith.actions.DiscardTopCardAction;
 
-import static runesmith.patches.CardTagEnum.CRAFT;
+import static runesmith.patches.CardTagEnum.RS_CRAFT;
 
 public class AttractionDrawThenDiscardAction extends AbstractGameAction {
     private boolean shuffled;
@@ -56,7 +56,7 @@ public class AttractionDrawThenDiscardAction extends AbstractGameAction {
         AbstractCard c = p.drawPile.getTopCard();
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
 
-        if (c.hasTag(CRAFT)) {
+        if (c.hasTag(RS_CRAFT)) {
             this.isDone = true;
         } else {
             AbstractDungeon.actionManager.addToBottom(new DiscardTopCardAction());
