@@ -208,7 +208,8 @@
   },
   "Runesmith:MetallurgicalResearch": {
     "NAME": "금속공학 연구",
-    "DESCRIPTION": "내 덱을 모두 runesmith:퇴화 시키고 !M! 턴 뒤 내 덱 전체를 강화 하고, runesmith:향상 시킵니다. NL 소멸."
+    "DESCRIPTION": "내 덱을 모두 runesmith:퇴화 시키고 !M! 턴 뒤 내 덱 전체를 강화 하고, runesmith:향상 시킵니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "내 덱을 모두 runesmith:퇴화 시키고 !M! 턴 뒤 내 덱 전체를 강화 하고, runesmith:향상 시킵니다. NL 소멸."
   },
   "Runesmith:CraftMagma": {
     "NAME": "용암석 제련",

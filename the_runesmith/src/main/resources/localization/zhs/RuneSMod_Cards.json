@@ -208,7 +208,8 @@
   },
   "Runesmith:MetallurgicalResearch": {
     "NAME": "冶金研究",
-    "DESCRIPTION": "在 !M! 个回合后， 升级 并 runesmith:强化 你所有的牌。 NL 消耗 。"
+    "DESCRIPTION": "在 !M! 个回合后， 升级 并 runesmith:强化 你所有的牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "在 !M! 个回合后， 升级 并 runesmith:强化 你所有的牌。 NL 消耗 。"
   },
   "Runesmith:CraftMagma": {
     "NAME": "打造岩浆",
