@@ -265,7 +265,8 @@
   },
   "Runesmith:MetallurgicalResearch": {
     "NAME": "Badania Metalurgiczne",
-    "DESCRIPTION": "runesmith:Zdeklasuj WSZYSTKIE swoje karty. NL Po !M! turach Ulepsz i runesmith:Wzmocnij WSZYSTKIE swoje karty. NL Wykluczenie."
+    "DESCRIPTION": "runesmith:Zdeklasuj WSZYSTKIE swoje karty. NL Po !M! turach Ulepsz i runesmith:Wzmocnij WSZYSTKIE swoje karty. NL Wykluczenie.",
+    "UPGRADE_DESCRIPTION": "runesmith:Zdeklasuj WSZYSTKIE swoje karty. NL Po !M! turach Ulepsz i runesmith:Wzmocnij WSZYSTKIE swoje karty. NL Wykluczenie."
   },
   "Runesmith:ArmorUp": {
     "NAME": "Dodaktowa Zbroja",

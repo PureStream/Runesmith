@@ -208,7 +208,8 @@
   },
   "Runesmith:MetallurgicalResearch": {
     "NAME": "Metallurgical Research",
-    "DESCRIPTION": "Upgrade and runesmith:Enhance ALL your cards after !M! turns. NL Exhaust."
+    "DESCRIPTION": "Upgrade and runesmith:Enhance ALL your cards after !M! turns. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Upgrade and runesmith:Enhance ALL your cards after !M! turn. NL Exhaust."
   },
   "Runesmith:CraftMagma": {
     "NAME": "Craft Magma",
