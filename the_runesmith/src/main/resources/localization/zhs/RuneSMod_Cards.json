@@ -109,7 +109,7 @@
   "Runesmith:CraftReservo": {
     "NAME": "打造储备",
     "DESCRIPTION": "2 runesmith:水素 : runesmith:打造 一个 [#EFC851]储备[] 符文。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "2 runesmith:水素: runesmith:打造 一个 [#EFC851]储备+[] 符文。 NL 消耗。"
+    "UPGRADE_DESCRIPTION": "2 runesmith:水素 : runesmith:打造 一个 [#EFC851]储备+[] 符文。 NL 消耗。"
   },
   "Runesmith:LithiumIon": {
     "NAME": "锂电池",
@@ -147,7 +147,7 @@
   },
   "Runesmith:ChaoticBlast": {
     "NAME": "混沌爆破",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害 。 NL 每有 !M! 点 runesmith:元素 : runesmith:打造 一个随机",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害 。 NL 每有 !M! 点 runesmith:元素 : runesmith:打造 !M! 个随机",
     "EXTENDED_DESCRIPTION": [
       " 符文。",
       " 符文。"
@@ -208,8 +208,7 @@
   },
   "Runesmith:MetallurgicalResearch": {
     "NAME": "冶金研究",
-    "DESCRIPTION": "在 !M! 个回合后， 升级 并 runesmith:强化 你所有的牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "在 !M! 个回合后， 升级 并 runesmith:强化 你所有的牌。 NL 消耗 。"
+    "DESCRIPTION": "在 !M! 个回合后， 升级 并 runesmith:强化 你所有的牌。 NL 消耗 。"
   },
   "Runesmith:CraftMagma": {
     "NAME": "打造岩浆",
