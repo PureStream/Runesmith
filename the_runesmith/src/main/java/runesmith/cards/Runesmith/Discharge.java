@@ -18,10 +18,12 @@ import com.megacrit.cardcrawl.vfx.combat.LightningEffect;
 import runesmith.actions.BreakRuneAction;
 import runesmith.actions.RuneChannelAction;
 import runesmith.orbs.DudRune;
+import runesmith.orbs.PlayerRune;
 import runesmith.orbs.RuneOrb;
 import runesmith.patches.AbstractCardEnum;
+import runesmith.patches.PlayerRuneField;
 
-public class Discharge extends CustomCard {
+public class Discharge extends CustomCard implements BreakCard{
     public static final String ID = "Runesmith:Discharge";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
@@ -50,7 +52,8 @@ public class Discharge extends CustomCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (p.orbs.size() == 0) return;
+        PlayerRune playerRune = PlayerRuneField.playerRune.get(p);
+        if (!playerRune.hasRune()) return;
 
         RuneOrb r = RuneOrb.getFirstRune(p, true);
         if (r == null) return;
@@ -93,5 +96,16 @@ public class Discharge extends CustomCard {
             upgradeDamage(UPGRADE_PLUS_DMG);
             upgradeBlock(UPGRADE_BLOCK_AMT);
         }
+    }
+
+    @Override
+    public int showBreakValueAt() {
+        PlayerRune playerRune = PlayerRuneField.playerRune.get(AbstractDungeon.player);
+        return playerRune.getNonDudPosition();
+    }
+
+    @Override
+    public boolean showAllBreakValues() {
+        return false;
     }
 }

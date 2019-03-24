@@ -32,11 +32,9 @@ import runesmith.cards.Runesmith.*;
 import runesmith.character.player.RunesmithCharacter;
 import runesmith.helpers.PotencyVariable;
 import runesmith.orbs.MedicinaeRune;
+import runesmith.orbs.PlayerRune;
 import runesmith.orbs.RuneOrb;
-import runesmith.patches.CardStasisStatus;
-import runesmith.patches.ElementsGainedCountField;
-import runesmith.patches.EnhanceCountField;
-import runesmith.patches.PlayerClassEnum;
+import runesmith.patches.*;
 import runesmith.powers.PermafrostPower;
 import runesmith.relics.*;
 import runesmith.ui.ElementsCounter;
@@ -463,6 +461,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
     @Override
     public void receivePostBattle(AbstractRoom arg0) {
         AbstractPlayer p = AbstractDungeon.player;
+        PlayerRune playerRune = PlayerRuneField.playerRune.get(p);
         RuneOrb.getAllRunes(p, new MedicinaeRune(0))
                 .forEach(r -> p.heal(r.getPotential()/2));
 

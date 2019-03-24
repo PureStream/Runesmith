@@ -18,7 +18,7 @@ import runesmith.actions.BreakRuneAction;
 import runesmith.orbs.RuneOrb;
 import runesmith.patches.AbstractCardEnum;
 
-public class OneForEveryone extends CustomCard {
+public class OneForEveryone extends CustomCard implements BreakCard{
     public static final String ID = "Runesmith:OneForEveryone";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
@@ -92,5 +92,15 @@ public class OneForEveryone extends CustomCard {
             upgradeName();
             upgradeBaseCost(COST_UPGRADE);
         }
+    }
+
+    @Override
+    public int showBreakValueAt() {
+        return 0;
+    }
+
+    @Override
+    public boolean showAllBreakValues() {
+        return false;
     }
 }

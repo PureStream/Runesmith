@@ -12,10 +12,12 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import runesmith.actions.BreakRuneAction;
+import runesmith.orbs.PlayerRune;
 import runesmith.orbs.RuneOrb;
 import runesmith.patches.AbstractCardEnum;
+import runesmith.patches.PlayerRuneField;
 
-public class RuneHurl extends CustomCard {
+public class RuneHurl extends CustomCard implements BreakCard{
     public static final String ID = "Runesmith:RuneHurl";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
@@ -43,7 +45,8 @@ public class RuneHurl extends CustomCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (p.orbs.size() == 0) {
+        PlayerRune playerRune = PlayerRuneField.playerRune.get(p);
+        if (!playerRune.hasRune()){
             AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, DRAW_AMT));
             return;
         }
@@ -76,5 +79,15 @@ public class RuneHurl extends CustomCard {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
         }
+    }
+
+    @Override
+    public int showBreakValueAt() {
+        return 0;
+    }
+
+    @Override
+    public boolean showAllBreakValues() {
+        return false;
     }
 }

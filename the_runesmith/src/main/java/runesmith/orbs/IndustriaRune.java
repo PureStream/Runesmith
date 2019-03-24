@@ -23,6 +23,7 @@ public class IndustriaRune extends RuneOrb {
                 0);
         this.passiveAmount = 1;
         p = AbstractDungeon.player;
+        this.tc = Color.GREEN.cpy();
     }
 
     @Override
@@ -46,16 +47,28 @@ public class IndustriaRune extends RuneOrb {
 
     @Override
     public AbstractOrb makeCopy() {
-        return new IndustriaRune();
+        return new IndustriaRune(this.upgraded);
     }
 
     @Override
     protected void renderText(SpriteBatch sb) {
         if (this.upgraded) {
-            //render upgrade +
-            FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L,
-                    "+", this.cX + NUM_X_OFFSET, this.cY + this.bobEffect.y / 2.0F + NUM_Y_OFFSET,
-                    Color.GREEN.cpy(), this.fontScale);
+            if(!this.showBreakValue) {
+                //render upgrade +
+                FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L,
+                        "+", this.cX + NUM_X_OFFSET, this.cY + this.bobEffect.y / 2.0F + NUM_Y_OFFSET,
+                        this.tc, this.fontScale);
+            }else{
+                FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L,
+                        "2+", this.cX + NUM_X_OFFSET, this.cY + this.bobEffect.y / 2.0F + NUM_Y_OFFSET,
+                        this.tc, this.fontScale);
+            }
+        }else{
+            if(this.showBreakValue) {
+                FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L,
+                        "2", this.cX + NUM_X_OFFSET, this.cY + this.bobEffect.y / 2.0F + NUM_Y_OFFSET,
+                        this.tc, this.fontScale);
+            }
         }
     }
 
