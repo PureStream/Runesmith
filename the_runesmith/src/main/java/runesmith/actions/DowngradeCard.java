@@ -1,8 +1,6 @@
 package runesmith.actions;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import runesmith.cards.Runesmith.AbstractRunicCard;
 import runesmith.patches.CardStasisStatus;
 import runesmith.patches.EnhanceCountField;
@@ -11,23 +9,14 @@ import java.util.ArrayList;
 
 public abstract class DowngradeCard {
 
-    public static final Logger logger = LogManager.getLogger(DowngradeCard.class.getName());
-
     public static void downgrade(ArrayList<AbstractCard> group, AbstractCard select) {
         int index = group.indexOf(select);
         AbstractCard manualUpgrade = select.makeCopy();
         manualUpgrade.timesUpgraded = 0;
-//        logger.info("times upgraded = "+select.timesUpgraded);
         for (int i = 0; i < select.timesUpgraded - 1; i++) {
             manualUpgrade.upgrade();
         }
 
-//        if(select.timesUpgraded > 0){
-//            select.timesUpgraded--;
-//            if(select.timesUpgraded == 0){
-//                select.upgraded = false;
-//            }
-//        }
         AbstractCard tmp = select.makeSameInstanceOf();
 
         tmp.upgraded = manualUpgrade.upgraded;
@@ -52,22 +41,10 @@ public abstract class DowngradeCard {
         tmp.initializeDescription();
 
         group.set(index, tmp);
-
-//        Class<? extends AbstractCard> ci = select.getClass();
-//        try {
-//            AbstractCard tmp = ci.getConstructor().newInstance();
-//            for (int i = 0; i < select.timesUpgraded - 1; i++) {
-//                tmp.upgrade();
-//            }
-//            group.set(index, tmp);
-//        } catch (InstantiationException e) {
-//            e.printStackTrace();
-//        } catch (IllegalAccessException e) {
-//            e.printStackTrace();
-//        } catch (InvocationTargetException e) {
-//            e.printStackTrace();
-//        } catch (NoSuchMethodException e) {
-//            e.printStackTrace();
-//        }
     }
+
+    public static boolean canDowngrade(AbstractCard c) {
+        return c.upgraded || EnhanceCountField.enhanceCount.get(c) > 0 || CardStasisStatus.isStasis.get(c);
+    }
+
 }

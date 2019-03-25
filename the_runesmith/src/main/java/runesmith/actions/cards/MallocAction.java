@@ -1,6 +1,7 @@
-package runesmith.actions;
+package runesmith.actions.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -9,97 +10,58 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.vfx.cardManip.ExhaustCardEffect;
+import runesmith.actions.DowngradeCard;
 import runesmith.patches.CardStasisStatus;
 import runesmith.patches.EnhanceCountField;
 
 import java.util.ArrayList;
 
-public class DowngradeCardInHandAction extends AbstractGameAction {
+public class MallocAction extends AbstractGameAction {
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("Runesmith:DowngradeAction");
     public static final String[] TEXT = uiStrings.TEXT;
 
     private AbstractPlayer p;
     private CardGroup canDowngrade = new CardGroup(CardGroup.CardGroupType.CARD_POOL);
     private ArrayList<AbstractCard> cannotDowngrade = new ArrayList<>();
-    private boolean random, optional;
 
-    public DowngradeCardInHandAction(AbstractPlayer p, boolean random, int amount, boolean optional) {
+    public MallocAction(AbstractPlayer p) {
         this.actionType = AbstractGameAction.ActionType.CARD_MANIPULATION;
         this.p = p;
         this.duration = Settings.ACTION_DUR_FAST;
-        this.random = random;
-        this.amount = amount;
-        this.optional = optional;
-    }
-
-    public DowngradeCardInHandAction(AbstractPlayer p, boolean random, int amount) {
-        this(p, random, amount, false);
-    }
-
-    public DowngradeCardInHandAction(AbstractPlayer p, boolean random) {
-        this(p, random, 1);
     }
 
     @Override
     public void update() {
         for (AbstractCard c : this.p.hand.group) {
-            if (DowngradeCard.canDowngrade(c))
+            if (c.upgraded || EnhanceCountField.enhanceCount.get(c) > 0 || CardStasisStatus.isStasis.get(c))
                 canDowngrade.addToBottom(c);
         }
         if (canDowngrade.size() > 0) {
             if (this.duration == Settings.ACTION_DUR_FAST) {
-                if (random) {
-                    for (int i = 0; i < this.amount; i++) {
-                        if (canDowngrade.size() > 0) {
-                            AbstractCard selectedCard = canDowngrade.getRandomCard(AbstractDungeon.cardRandomRng);
-                            canDowngrade.removeCard(selectedCard);
-                            AbstractDungeon.effectList.add(new ExhaustCardEffect(selectedCard));
-                            DowngradeCard.downgrade(this.p.hand.group, selectedCard);
-                        }
-                    }
-                    this.isDone = true;
-                    return;
-                }
 
                 for (AbstractCard c : this.p.hand.group) {
                     if (!(c.upgraded || EnhanceCountField.enhanceCount.get(c) > 0 || CardStasisStatus.isStasis.get(c)))
                         cannotDowngrade.add(c);
                 }
 
-                if (this.p.hand.group.size() - this.cannotDowngrade.size() <= this.amount) {
-                    for (AbstractCard c : this.p.hand.group) {
-                        if (c.upgraded || EnhanceCountField.enhanceCount.get(c) > 0 || CardStasisStatus.isStasis.get(c)) {
-                            AbstractDungeon.effectList.add(new ExhaustCardEffect(c));
-                            DowngradeCard.downgrade(this.p.hand.group, c);
-                        }
-                    }
-                    this.isDone = true;
-                    return;
-                }
-
                 this.p.hand.group.removeAll(this.cannotDowngrade);
 
                 if (this.p.hand.group.size() > this.amount) {
-                    AbstractDungeon.handCardSelectScreen.open(TEXT[0], this.amount, false, optional, false, false, optional);
+                    AbstractDungeon.handCardSelectScreen.open(TEXT[0], this.amount, false, true, false, false, true);
                     tickDuration();
                     return;
                 }
-
-                for (AbstractCard c : this.p.hand.group) {
-                    AbstractDungeon.effectList.add(new ExhaustCardEffect(c));
-                    DowngradeCard.downgrade(this.p.hand.group, c);
-                }
-                returnCards();
-                this.isDone = true;
             }
 
             if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {
+                int exCount = 0;
                 for (AbstractCard c : AbstractDungeon.handCardSelectScreen.selectedCards.group) {
+                    exCount++;
                     AbstractDungeon.effectList.add(new ExhaustCardEffect(c));
                     this.p.hand.addToTop(c);
                     DowngradeCard.downgrade(this.p.hand.group, c);
                 }
-
+                AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(exCount));
                 returnCards();
                 AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;
                 AbstractDungeon.handCardSelectScreen.selectedCards.group.clear();
@@ -112,9 +74,8 @@ public class DowngradeCardInHandAction extends AbstractGameAction {
     }
 
     private void returnCards() {
-        for (AbstractCard c : this.cannotDowngrade) {
+        for (AbstractCard c : this.cannotDowngrade)
             this.p.hand.addToTop(c);
-        }
         this.p.hand.refreshHandLayout();
     }
 }

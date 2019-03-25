@@ -322,7 +322,6 @@ public class RunesmithMod implements PostExhaustSubscriber,
         cardsToAdd.add(new Rearm());
         cardsToAdd.add(new FieryHammer());
         cardsToAdd.add(new Empowerment());
-        cardsToAdd.add(new Runesonance());
         cardsToAdd.add(new DuctTape());
         cardsToAdd.add(new CraftReservo());
         cardsToAdd.add(new CraftSpiculum());
@@ -364,6 +363,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
         cardsToAdd.add(new NegativeSpace());
         cardsToAdd.add(new LightningRod());
         cardsToAdd.add(new CraftObretio());
+        cardsToAdd.add(new Superposition());
 
     }
 

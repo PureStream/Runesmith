@@ -6,8 +6,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.cardManip.ExhaustCardEffect;
-import runesmith.patches.CardStasisStatus;
-import runesmith.patches.EnhanceCountField;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -28,7 +26,7 @@ public class DowngradeEntireDeckAction extends AbstractGameAction {
         List<ArrayList<AbstractCard>> allCardsGroup = Arrays.asList(p.hand.group, p.drawPile.group, p.discardPile.group);
         allCardsGroup.forEach(cardGroup -> cardGroup
                 .stream()
-                .filter(c -> c.upgraded || EnhanceCountField.enhanceCount.get(c) > 0 || CardStasisStatus.isStasis.get(c))
+                .filter(DowngradeCard::canDowngrade)
                 .forEach(c -> {
                     AbstractDungeon.effectList.add(new ExhaustCardEffect(c));
                     DowngradeCard.downgrade(cardGroup, c);
