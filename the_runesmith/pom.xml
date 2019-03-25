@@ -8,41 +8,49 @@
     <name>TheRunesmith</name>
     <description>runesmith</description>
 
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <SlayTheSpire.version>01-23-2019</SlayTheSpire.version>
+        <ModTheSpire.version>3.9.2</ModTheSpire.version>
+        <Steam.path>C:/Program Files (x86)/Steam/steamapps</Steam.path>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>com.megacrit.cardcrawl</groupId>
             <artifactId>slaythespire</artifactId>
-            <version>017</version>
+            <version>${SlayTheSpire.version}</version>
             <scope>system</scope>
-            <systemPath>${basedir}/../lib/desktop-1.0.jar</systemPath>
+            <systemPath>${Steam.path}/common/SlayTheSpire/desktop-1.0.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>basemod</groupId>
             <artifactId>basemod</artifactId>
             <version>5.12.0</version>
             <scope>system</scope>
-            <systemPath>${basedir}/../lib/BaseMod.jar</systemPath>
+            <systemPath>${Steam.path}/workshop/content/646570/1605833019/BaseMod.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>com.evacipated.cardcrawl</groupId>
             <artifactId>ModTheSpire</artifactId>
-            <version>3.8.2</version>
+            <version>${ModTheSpire.version}</version>
             <scope>system</scope>
-            <systemPath>${basedir}/../lib/ModTheSpire.jar</systemPath>
+            <systemPath>${Steam.path}/workshop/content/646570/1605060445/ModTheSpire.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>com.evacipated.cardcrawl.mod</groupId>
             <artifactId>StSLib</artifactId>
             <version>1.14.0</version>
             <scope>system</scope>
-            <systemPath>${basedir}/../lib/StSLib.jar</systemPath>
+            <systemPath>${Steam.path}/workshop/content/646570/1609158507/StSLib.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>elementalistmod</groupId>
             <artifactId>elementalistmod</artifactId>
             <version>0.0.2</version>
             <scope>system</scope>
-            <systemPath>${basedir}/../lib/ElementalistMod.jar</systemPath>
+            <systemPath>${Steam.path}/workshop/content/646570/1637996817/ElementalistMod.jar</systemPath>
         </dependency>
     </dependencies>
 
@@ -88,7 +96,7 @@
 
                             <target>
 
-                                <copy file="target/TheRunesmith.jar" tofile="../lib/TheRunesmith.jar"/>
+                                <copy file="target/TheRunesmith.jar" tofile="${Steam.path}/common/SlayTheSpire/mods/${project.name}.jar"/>
 
                             </target>
 

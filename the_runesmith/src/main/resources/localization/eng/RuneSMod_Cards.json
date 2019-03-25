@@ -183,7 +183,7 @@
   },
   "Runesmith:LastStand": {
     "NAME": "Last Stand",
-    "DESCRIPTION": "runesmith:Downgrade ALL your cards. Lose all runesmith:Elements. At the end of next turn, deal !M! times the number of runesmith:downgraded cards damage to ALL enemies. NL Exhaust.",
+    "DESCRIPTION": "runesmith:Downgrade ALL your cards. Lose all runesmith:Elements. At the end of next turn, deal damage equals to !M! times the number of runesmith:downgraded cards to ALL enemies. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       " NL (Deal !D! damage)"
     ]
