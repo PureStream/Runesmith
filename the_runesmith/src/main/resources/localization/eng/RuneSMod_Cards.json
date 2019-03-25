@@ -358,6 +358,6 @@
   },
   "Runesmith:Superposition": {
     "NAME": "Superposition",
-    "DESCRIPTION": "Deal !D! damage. runesmith:Break your oldest Rune to gain !B! Block."
+    "DESCRIPTION": "Deal !D! damage. NL runesmith:Break your oldest Rune to gain !B! Block."
   }
 }

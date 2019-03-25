@@ -46,11 +46,9 @@ public class MallocAction extends AbstractGameAction {
 
                 this.p.hand.group.removeAll(this.cannotDowngrade);
 
-                if (this.p.hand.group.size() > this.amount) {
-                    AbstractDungeon.handCardSelectScreen.open(TEXT[0], this.amount, false, true, false, false, true);
-                    tickDuration();
-                    return;
-                }
+                AbstractDungeon.handCardSelectScreen.open(TEXT[0], this.p.hand.group.size(), true, true);
+                tickDuration();
+                return;
             }
 
             if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {
