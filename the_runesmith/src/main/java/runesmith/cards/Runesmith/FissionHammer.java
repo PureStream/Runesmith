@@ -18,7 +18,7 @@ import runesmith.patches.AbstractCardEnum;
 
 import static runesmith.patches.CardTagEnum.RS_HAMMER;
 
-public class FissionHammer extends CustomCard {
+public class FissionHammer extends CustomCard implements BreakCard{
     public static final String ID = "Runesmith:FissionHammer";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
@@ -61,8 +61,6 @@ public class FissionHammer extends CustomCard {
                 )
         );
 
-        if (p.orbs.size() == 0) return;
-
         RuneOrb r = RuneOrb.getFirstRune(p);
         if (r == null) return;
 
@@ -79,5 +77,15 @@ public class FissionHammer extends CustomCard {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
         }
+    }
+
+    @Override
+    public int showBreakValueAt() {
+        return 0;
+    }
+
+    @Override
+    public boolean showAllBreakValues() {
+        return false;
     }
 }
