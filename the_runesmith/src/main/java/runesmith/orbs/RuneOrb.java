@@ -2,6 +2,7 @@ package runesmith.orbs;
 
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -15,10 +16,12 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.vfx.combat.OrbFlareEffect;
 import com.megacrit.cardcrawl.vfx.combat.PlasmaOrbActivateEffect;
+import runesmith.patches.PlayerRuneField;
 import runesmith.powers.ArcReactorPower;
 import runesmith.powers.PotentialPower;
 import runesmith.relics.PocketReactor;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -33,9 +36,10 @@ public abstract class RuneOrb extends AbstractOrb {
     public boolean upgraded;
     public boolean useMultiBreak = false;
     boolean showPotentialValue = true;
+    boolean showBreakValue = false;
     protected int potential;
     private String[] descriptions;
-    private static int runeCount = 0;
+    protected Color tc;
 
     public RuneOrb(String ID, boolean upgraded, int potential) {
         this.ID = ID;
@@ -51,6 +55,10 @@ public abstract class RuneOrb extends AbstractOrb {
         if (this.upgraded) {
             this.name = this.name + "+";
         }
+        this.c = Color.WHITE.cpy();
+
+        this.cX = AbstractDungeon.player.drawX + AbstractDungeon.player.hb_x;
+        this.cY = AbstractDungeon.player.drawY + AbstractDungeon.player.hb_y + AbstractDungeon.player.hb_h / 2.0F;
 
         updateDescription();
     }
@@ -68,10 +76,17 @@ public abstract class RuneOrb extends AbstractOrb {
     }
 
     public static RuneOrb getFirstRune(AbstractPlayer p, Boolean checkDud) {
-        return (RuneOrb) p.orbs
-                .stream()
-                .filter(o -> (o instanceof RuneOrb) && !(o instanceof DudRune && checkDud))
-                .findFirst().orElse(null);
+        PlayerRune playerRune = PlayerRuneField.playerRune.get(p);
+        for(RuneOrb rune: playerRune.runes){
+            if(rune != null && !(rune instanceof DudRune && checkDud)){
+                return rune;
+            }
+        }
+        return null;
+//        return playerRune.runes
+//                .stream()
+//                .filter(o -> (o != null) && !(o instanceof DudRune && checkDud))
+//                .findFirst().orElse(null);
     }
 
     public static List<RuneOrb> getAllRunes(AbstractPlayer p) {
@@ -174,7 +189,7 @@ public abstract class RuneOrb extends AbstractOrb {
     }
 
     public void onCraft() {
-        runeCount++;
+//        runeCount++;
         AbstractPlayer p = AbstractDungeon.player;
         if (p.hasPower(ArcReactorPower.POWER_ID)) {
             TwoAmountPower arcPower = (TwoAmountPower)p.getPower(ArcReactorPower.POWER_ID);
@@ -210,8 +225,14 @@ public abstract class RuneOrb extends AbstractOrb {
     @Override
     protected void renderText(SpriteBatch sb) {
         if (this.showPotentialValue) {
-            FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L,
-                    Integer.toString(this.potential), this.cX + NUM_X_OFFSET, this.cY + this.bobEffect.y / 2.0F + NUM_Y_OFFSET, Color.WHITE.cpy(), this.fontScale);
+            if (this.showBreakValue) {
+                FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L,
+                        this.potential+"+"+this.potential, this.cX + NUM_X_OFFSET, this.cY + this.bobEffect.y / 2.0F + NUM_Y_OFFSET, this.c, this.fontScale);
+
+            } else {
+                FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L,
+                        Integer.toString(this.potential), this.cX + NUM_X_OFFSET, this.cY + this.bobEffect.y / 2.0F + NUM_Y_OFFSET, this.c, this.fontScale);
+            }
         }
     }
 
@@ -230,14 +251,40 @@ public abstract class RuneOrb extends AbstractOrb {
     }
 
     public static int getRuneCount() {
-        AbstractPlayer p = AbstractDungeon.player;
-        int runeCount = 0;
-        if(p!= null){
-            runeCount = (int) p.orbs.stream()
-                    .filter(orb -> orb instanceof RuneOrb)
-                    .count();
+        PlayerRune playerRune = PlayerRuneField.playerRune.get(AbstractDungeon.player);
+        return playerRune.runeCount();
+    }
+
+    public void setSlot(int slot, int count){
+        float dist = 420.0F * Settings.scale;
+        float angle = (count - 1) * 15.0F;
+        float offsetAngle = angle / 2.0F;
+        if(count!=1) {
+            angle *= (float) slot / ((float) count - 1.0F);
+        }else{
+            angle = 0.0F;
         }
-        return runeCount;
+        angle += 90.0F - offsetAngle;
+        this.tX = dist * MathUtils.cosDeg(angle) + AbstractDungeon.player.drawX;
+        float yOffset = -180.0F * Settings.scale;
+        if(AbstractDungeon.player.maxOrbs == 0) {
+            this.tY = dist * MathUtils.sinDeg(angle) + AbstractDungeon.player.drawY + AbstractDungeon.player.hb_h / 2.0F + yOffset;
+        }else{
+            yOffset += ((float)AbstractDungeon.player.maxOrbs * 10.0F + 20.0F) * Settings.scale;
+            this.tY = dist * MathUtils.sinDeg(angle) + AbstractDungeon.player.drawY + AbstractDungeon.player.hb_h / 2.0F + yOffset;
+        }
+        this.hb.move(this.tX, this.tY);
+    }
+
+    @Override
+    public void showEvokeValue(){
+        this.showBreakValue = true;
+        this.fontScale = 1.5F;
+    }
+
+    @Override
+    public void hideEvokeValues(){
+        this.showBreakValue = false;
     }
 
 //    public static void runeCountDown() {
@@ -249,7 +296,8 @@ public abstract class RuneOrb extends AbstractOrb {
 //    }
 
     public static int getMaxRune(AbstractPlayer p) {
-        return 7;
+        PlayerRune playerRune = PlayerRuneField.playerRune.get(p);
+        return playerRune.getMaxRunes();
     }
 
 }

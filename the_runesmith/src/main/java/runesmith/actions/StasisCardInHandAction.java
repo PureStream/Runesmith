@@ -58,6 +58,10 @@ public class StasisCardInHandAction extends AbstractGameAction {
             }
 
             this.p.hand.group.removeAll(this.cannotStasis);
+            if(this.p.hand.group.size()==0) {
+                this.isDone = true;
+                return;
+            }
             if (!isOptional)
                 AbstractDungeon.handCardSelectScreen.open(TEXT[0], this.amount, false);
             else

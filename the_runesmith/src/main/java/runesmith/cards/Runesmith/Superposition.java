@@ -2,8 +2,10 @@ package runesmith.cards.Runesmith;
 
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -11,24 +13,24 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.combat.WeightyImpactEffect;
 import runesmith.actions.BreakRuneAction;
-import runesmith.actions.BreakWithoutRemovingRuneAction;
 import runesmith.orbs.RuneOrb;
 import runesmith.patches.AbstractCardEnum;
 
-import static runesmith.patches.CardTagEnum.RS_HAMMER;
-
-public class FissionHammer extends CustomCard implements BreakCard{
-    public static final String ID = "Runesmith:FissionHammer";
+public class Superposition extends CustomCard implements BreakCard {
+    public static final String ID = "Runesmith:Superposition";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    public static final String IMG_PATH = "images/cards/FissionHammer.png"; //<-------------- need some img
-    private static final int COST = 1;
-    private static final int ATTACK_DMG = 4;
-    private static final int UPGRADE_PLUS_DMG = 2;
+    public static final String IMG_PATH = "images/cards/Superposition.png"; //<-------------- need some img
+    private static final int COST = 3;
+    private static final int DMG_AMT = 26;
+    private static final int UPGRADE_DMG_AMT = 6;
+    private static final int BLOCK_AMT = 13;
+    private static final int UPGRADE_PLUS_BLOCK = 4;
 
-    public FissionHammer() {
+    public Superposition() {
         super(
                 ID,
                 NAME,
@@ -37,15 +39,18 @@ public class FissionHammer extends CustomCard implements BreakCard{
                 DESCRIPTION,
                 CardType.ATTACK,
                 AbstractCardEnum.RUNESMITH_BEIGE,
-                CardRarity.RARE,
+                CardRarity.UNCOMMON,
                 CardTarget.ENEMY
         );
-        this.baseDamage = this.damage = ATTACK_DMG;
-        this.isMultiDamage = true;
-        this.tags.add(RS_HAMMER);
+        this.baseDamage = this.damage = DMG_AMT;
+        this.baseBlock = this.block = BLOCK_AMT;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        if (m != null) {
+            AbstractDungeon.actionManager.addToBottom(new VFXAction(new WeightyImpactEffect(m.hb.cX, m.hb.cY)));
+            AbstractDungeon.actionManager.addToBottom(new WaitAction(0.8F));
+        }
         AbstractDungeon.actionManager.addToBottom(
                 new DamageAction(
                         m,
@@ -53,29 +58,23 @@ public class FissionHammer extends CustomCard implements BreakCard{
                         AbstractGameAction.AttackEffect.BLUNT_HEAVY
                 )
         );
-        AbstractDungeon.actionManager.addToBottom(
-                new DamageAllEnemiesAction(
-                        p,
-                        this.multiDamage, this.damageTypeForTurn,
-                        AbstractGameAction.AttackEffect.FIRE
-                )
-        );
 
         RuneOrb r = RuneOrb.getFirstRune(p);
-        if (r == null) return;
-
-        AbstractDungeon.actionManager.addToBottom(new BreakWithoutRemovingRuneAction(1, r));
-        AbstractDungeon.actionManager.addToBottom(new BreakRuneAction(r));
+        if (r != null) {
+            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
+            AbstractDungeon.actionManager.addToBottom(new BreakRuneAction(r));
+        }
     }
 
     public AbstractCard makeCopy() {
-        return new FissionHammer();
+        return new Superposition();
     }
 
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeDamage(UPGRADE_PLUS_DMG);
+            upgradeDamage(UPGRADE_DMG_AMT);
+            upgradeBlock(UPGRADE_PLUS_BLOCK);
         }
     }
 

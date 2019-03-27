@@ -7,8 +7,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.cardManip.ExhaustCardEffect;
-import runesmith.patches.CardStasisStatus;
-import runesmith.patches.EnhanceCountField;
 
 public class DowngradeRandomCardInDeckAction extends AbstractGameAction {
 
@@ -30,15 +28,15 @@ public class DowngradeRandomCardInDeckAction extends AbstractGameAction {
     public void update() {
         for (AbstractCard c : this.p.discardPile.group) {
             //Downgrade considers upgraded, stasis, and enhanced
-            if (c.upgraded || EnhanceCountField.enhanceCount.get(c) > 0 || CardStasisStatus.isStasis.get(c))
+            if (DowngradeCard.canDowngrade(c))
                 canDowngrade.addToBottom(c);
         }
         for (AbstractCard c : this.p.drawPile.group) {
-            if (c.upgraded || EnhanceCountField.enhanceCount.get(c) > 0 || CardStasisStatus.isStasis.get(c))
+            if (DowngradeCard.canDowngrade(c))
                 canDowngrade.addToBottom(c);
         }
         for (AbstractCard c : this.p.hand.group) {
-            if (c.upgraded || EnhanceCountField.enhanceCount.get(c) > 0 || CardStasisStatus.isStasis.get(c))
+            if (DowngradeCard.canDowngrade(c))
                 canDowngrade.addToBottom(c);
         }
         for (int i = 0; i < this.amount; i++) {

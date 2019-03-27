@@ -6,8 +6,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.cardManip.ExhaustCardEffect;
-import runesmith.patches.CardStasisStatus;
-import runesmith.patches.EnhanceCountField;
 
 public class DowngradeEntireDrawPileAction extends AbstractGameAction {
 
@@ -22,7 +20,7 @@ public class DowngradeEntireDrawPileAction extends AbstractGameAction {
     @Override
     public void update() {
         for (AbstractCard c : this.p.drawPile.group) {
-            if (c.upgraded || EnhanceCountField.enhanceCount.get(c) > 0 || CardStasisStatus.isStasis.get(c)) {
+            if (DowngradeCard.canDowngrade(c)) {
                 AbstractDungeon.effectList.add(new ExhaustCardEffect(c));
                 DowngradeCard.downgrade(this.p.drawPile.group, c);
             }

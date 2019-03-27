@@ -34,14 +34,21 @@ public class MedicinaeRune extends RuneOrb {
 
     @Override
     protected void renderText(SpriteBatch sb) {
-        if (!this.showEvokeValue && this.showPotentialValue) {
-            //Block
+        if (!this.showBreakValue && this.showPotentialValue) {
+            //End of Turn
             FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L,
                     Integer.toString(this.potential / 2), this.cX + NUM_X_OFFSET, this.cY + this.bobEffect.y / 2.0F - NUM_Y_OFFSET,
                     new Color(0.05F, 0.92F, 0.05F, this.c.a), this.fontScale);
-            //Damage
+            //Current val
             FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L,
                     Integer.toString(this.potential), this.cX + NUM_X_OFFSET, this.cY + this.bobEffect.y / 2.0F + NUM_Y_OFFSET,
+                    Color.WHITE.cpy(), this.fontScale);
+        }else if(this.showBreakValue && this.showPotentialValue){
+            FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L,
+                    Integer.toString(this.potential / 2), this.cX + NUM_X_OFFSET, this.cY + this.bobEffect.y / 2.0F - NUM_Y_OFFSET,
+                    new Color(0.05F, 0.92F, 0.05F, this.c.a), this.fontScale);
+            FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L,
+                    this.potential + "+" + this.potential, this.cX + NUM_X_OFFSET, this.cY + this.bobEffect.y / 2.0F + NUM_Y_OFFSET,
                     Color.WHITE.cpy(), this.fontScale);
         }
     }

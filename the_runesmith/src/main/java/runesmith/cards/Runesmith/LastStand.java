@@ -8,10 +8,9 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import runesmith.actions.DowngradeCard;
 import runesmith.actions.DowngradeEntireDeckAction;
 import runesmith.patches.AbstractCardEnum;
-import runesmith.patches.CardStasisStatus;
-import runesmith.patches.EnhanceCountField;
 import runesmith.powers.LastStandPower;
 import runesmith.ui.ElementsCounter;
 
@@ -46,14 +45,11 @@ public class LastStand extends CustomCard {
     }
 
     private static int countCards() {
-        return (int) (AbstractDungeon.player.discardPile.group.stream().filter(LastStand::cardCheck).count()
-                + AbstractDungeon.player.drawPile.group.stream().filter(LastStand::cardCheck).count()
-                + AbstractDungeon.player.hand.group.stream().filter(LastStand::cardCheck).count());
+        return (int) (AbstractDungeon.player.discardPile.group.stream().filter(DowngradeCard::canDowngrade).count()
+                + AbstractDungeon.player.drawPile.group.stream().filter(DowngradeCard::canDowngrade).count()
+                + AbstractDungeon.player.hand.group.stream().filter(DowngradeCard::canDowngrade).count());
     }
 
-    private static boolean cardCheck(AbstractCard c) {
-        return c.upgraded || EnhanceCountField.enhanceCount.get(c) > 0 || CardStasisStatus.isStasis.get(c);
-    }
 
     @Override
     public void applyPowers() {

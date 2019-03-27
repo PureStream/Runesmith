@@ -183,7 +183,7 @@
   },
   "Runesmith:LastStand": {
     "NAME": "Last Stand",
-    "DESCRIPTION": "runesmith:Downgrade ALL your cards. Lose all runesmith:Elements. At the end of next turn, deal !M! times the number of runesmith:downgraded cards damage to ALL enemies. NL Exhaust.",
+    "DESCRIPTION": "runesmith:Downgrade ALL your cards. Lose all runesmith:Elements. At the end of next turn, deal damage equals to !M! times the number of runesmith:downgraded cards to ALL enemies. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       " NL (Deal !D! damage)"
     ]
@@ -275,8 +275,8 @@
   },
   "Runesmith:Malloc": {
     "NAME": "Malloc",
-    "DESCRIPTION": "runesmith:Downgrade all cards in your hand. NL Gain [E] [E].",
-    "UPGRADE_DESCRIPTION": "runesmith:Downgrade all cards in your hand. NL Gain [E] [E] [E]."
+    "DESCRIPTION": "runesmith:Downgrade any number of cards in your hand. NL Gain [E] for each card runesmith:Downgraded.",
+    "UPGRADE_DESCRIPTION": "Gain [E] . NL runesmith:Downgrade any number of cards in your hand. NL Gain [E] for each card runesmith:Downgraded."
   },
   "Runesmith:Preparation": {
     "NAME": "Preparation",
@@ -355,5 +355,9 @@
   "Runesmith:NegativeSpace": {
     "NAME": "Negative Space",
     "DESCRIPTION": "Gain !B! Block. NL Gain 2 less Block for each active Rune. NL Deal !D! damage for each active Rune."
+  },
+  "Runesmith:Superposition": {
+    "NAME": "Superposition",
+    "DESCRIPTION": "Deal !D! damage. NL runesmith:Break your oldest Rune to gain !B! Block."
   }
 }

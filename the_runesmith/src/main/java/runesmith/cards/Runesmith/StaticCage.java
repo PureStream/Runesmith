@@ -17,7 +17,7 @@ import runesmith.actions.StasisCardInHandAction;
 import runesmith.orbs.RuneOrb;
 import runesmith.patches.AbstractCardEnum;
 
-public class StaticCage extends CustomCard {
+public class StaticCage extends CustomCard implements BreakCard{
 
     public static final String ID = "Runesmith:StaticCage";
     public static final String IMG_PATH = "images/cards/StaticCage.png";
@@ -75,4 +75,13 @@ public class StaticCage extends CustomCard {
         }
     }
 
+    @Override
+    public int showBreakValueAt() {
+        return 0;
+    }
+
+    @Override
+    public boolean showAllBreakValues() {
+        return false;
+    }
 }

@@ -18,8 +18,10 @@ import runesmith.actions.BreakRuneAction;
 import runesmith.actions.ReduceElementsPowerAction;
 import runesmith.actions.RuneChannelAction;
 import runesmith.orbs.DudRune;
+import runesmith.orbs.PlayerRune;
 import runesmith.orbs.RuneOrb;
 import runesmith.patches.AbstractCardEnum;
+import runesmith.patches.PlayerRuneField;
 import runesmith.powers.PotentialPower;
 
 import java.util.ArrayList;
@@ -81,8 +83,9 @@ public class ChargedHammer extends CustomCard {
                 )
         );
 
-        if (p.orbs.size() != 0) {
-            RuneOrb r = (RuneOrb) p.orbs.stream()
+        PlayerRune playerRune = PlayerRuneField.playerRune.get(p);
+        if (!playerRune.hasRune()) {
+            RuneOrb r = playerRune.runes.stream()
                     .filter(o -> o instanceof DudRune)
                     .findFirst().orElse(null);
             if (r != null) {

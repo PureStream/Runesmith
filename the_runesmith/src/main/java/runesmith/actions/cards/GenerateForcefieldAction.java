@@ -8,9 +8,12 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.powers.BufferPower;
+import com.megacrit.cardcrawl.relics.ChemicalX;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import runesmith.actions.BreakRuneAction;
+import runesmith.orbs.PlayerRune;
 import runesmith.orbs.RuneOrb;
+import runesmith.patches.PlayerRuneField;
 
 import java.util.List;
 
@@ -36,19 +39,21 @@ public class GenerateForcefieldAction extends AbstractGameAction {
         if (this.duration == Settings.ACTION_DUR_FAST) {
             if (upgraded)
                 breakNums++;
-            if (p.hasRelic("Chemical X"))
+            if (p.hasRelic(ChemicalX.ID)) {
                 breakNums += 2;
+                p.getRelic(ChemicalX.ID).flash();
+            }
             if (!this.freeToPlayOnce)
                 p.energy.use(EnergyPanel.totalCount);
 
-            List<RuneOrb> runes = RuneOrb.getAllRunes(p, true);
-            if (runes.size() == 0) {
+            PlayerRune playerRune = PlayerRuneField.playerRune.get(p);
+            if (!playerRune.hasRune()) {
                 this.isDone = true;
                 return;
             }
 
             int count = 0;
-            for (RuneOrb rune : runes) {
+            for (RuneOrb rune : playerRune.runes) {
                 AbstractDungeon.actionManager.addToBottom(new BreakRuneAction(rune));
                 if (++count == breakNums)
                     break;

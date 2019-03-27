@@ -32,11 +32,9 @@ import runesmith.cards.Runesmith.*;
 import runesmith.character.player.RunesmithCharacter;
 import runesmith.helpers.PotencyVariable;
 import runesmith.orbs.MedicinaeRune;
+import runesmith.orbs.PlayerRune;
 import runesmith.orbs.RuneOrb;
-import runesmith.patches.CardStasisStatus;
-import runesmith.patches.ElementsGainedCountField;
-import runesmith.patches.EnhanceCountField;
-import runesmith.patches.PlayerClassEnum;
+import runesmith.patches.*;
 import runesmith.powers.PermafrostPower;
 import runesmith.relics.*;
 import runesmith.ui.ElementsCounter;
@@ -260,12 +258,11 @@ public class RunesmithMod implements PostExhaustSubscriber,
     @Override
     public void receiveCardUsed(AbstractCard c) {
         if (CardStasisStatus.isStasis.get(c) || EnhanceCountField.enhanceCount.get(c) > 0) {
-            if (CardStasisStatus.isStasis.get(c) && !c.exhaust)
+            if (CardStasisStatus.isStasis.get(c) && EnhanceCountField.enhanceCount.get(c) > 0 && !c.exhaust) {
                 CardStasisStatus.isStasis.set(c, false);
-            else
-                if (EnhanceCountField.enhanceCount.get(c) > 0)
-                    EnhanceCountField.enhanceReset.set(c, true);
-
+            }else if (EnhanceCountField.enhanceCount.get(c) > 0){
+                EnhanceCountField.enhanceReset.set(c, true);
+            }
 //			AdditionalCardDescriptions.modifyDescription(c);
             c.initializeDescription();
         }
@@ -325,7 +322,6 @@ public class RunesmithMod implements PostExhaustSubscriber,
         cardsToAdd.add(new Rearm());
         cardsToAdd.add(new FieryHammer());
         cardsToAdd.add(new Empowerment());
-        cardsToAdd.add(new Runesonance());
         cardsToAdd.add(new DuctTape());
         cardsToAdd.add(new CraftReservo());
         cardsToAdd.add(new CraftSpiculum());
@@ -367,6 +363,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
         cardsToAdd.add(new NegativeSpace());
         cardsToAdd.add(new LightningRod());
         cardsToAdd.add(new CraftObretio());
+        cardsToAdd.add(new Superposition());
 
     }
 
@@ -463,6 +460,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
     @Override
     public void receivePostBattle(AbstractRoom arg0) {
         AbstractPlayer p = AbstractDungeon.player;
+        PlayerRune playerRune = PlayerRuneField.playerRune.get(p);
         RuneOrb.getAllRunes(p, new MedicinaeRune(0))
                 .forEach(r -> p.heal(r.getPotential()/2));
 

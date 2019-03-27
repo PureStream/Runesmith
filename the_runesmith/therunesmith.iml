@@ -11,9 +11,9 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
-      <library name="Maven: com.megacrit.cardcrawl:slaythespire:017">
+      <library name="Maven: com.megacrit.cardcrawl:slaythespire:01-23-2019">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../lib/desktop-1.0.jar!/" />
+          <root url="jar://C:/Program Files (x86)/Steam/steamapps/common/SlayTheSpire/desktop-1.0.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -22,16 +22,16 @@
     <orderEntry type="module-library">
       <library name="Maven: basemod:basemod:5.12.0">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../lib/BaseMod.jar!/" />
+          <root url="jar://C:/Program Files (x86)/Steam/steamapps/workshop/content/646570/1605833019/BaseMod.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: com.evacipated.cardcrawl:ModTheSpire:3.8.2">
+      <library name="Maven: com.evacipated.cardcrawl:ModTheSpire:3.9.2">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../lib/ModTheSpire.jar!/" />
+          <root url="jar://C:/Program Files (x86)/Steam/steamapps/workshop/content/646570/1605060445/ModTheSpire.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -40,7 +40,7 @@
     <orderEntry type="module-library">
       <library name="Maven: com.evacipated.cardcrawl.mod:StSLib:1.14.0">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../lib/StSLib.jar!/" />
+          <root url="jar://C:/Program Files (x86)/Steam/steamapps/workshop/content/646570/1609158507/StSLib.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -49,7 +49,7 @@
     <orderEntry type="module-library">
       <library name="Maven: elementalistmod:elementalistmod:0.0.2">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../lib/ElementalistMod.jar!/" />
+          <root url="jar://C:/Program Files (x86)/Steam/steamapps/workshop/content/646570/1637996817/ElementalistMod.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

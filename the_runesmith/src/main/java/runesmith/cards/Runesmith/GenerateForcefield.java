@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import runesmith.actions.cards.GenerateForcefieldAction;
 import runesmith.patches.AbstractCardEnum;
 
-public class GenerateForcefield extends CustomCard {
+public class GenerateForcefield extends CustomCard implements BreakCard{
     public static final String ID = "Runesmith:GenerateForcefield";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
@@ -52,5 +52,15 @@ public class GenerateForcefield extends CustomCard {
             this.rawDescription = DESCRIPTION_UPG;
             initializeDescription();
         }
+    }
+
+    @Override
+    public int showBreakValueAt() {
+        return 0;
+    }
+
+    @Override
+    public boolean showAllBreakValues() {
+        return true;
     }
 }
