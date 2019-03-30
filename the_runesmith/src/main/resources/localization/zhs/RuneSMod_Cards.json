@@ -272,7 +272,7 @@
     "DESCRIPTION": "每次 runesmith:强化 时，额外 runesmith:强化 一次。",
     "UPGRADE_DESCRIPTION": "每次 runesmith:强化 时，额外 runesmith:强化 一次。 NL runesmith:强化 一张手牌。"
   },
-  "Runesmith:·": {
+  "Runesmith:Malloc": {
     "NAME": "分配",
     "DESCRIPTION": " runesmith:降级 任意数量手牌。 NL 每张获得 [E] 。",
     "UPGRADE_DESCRIPTION": "获得 [E] 。 NL runesmith:降级 任意数量手牌。 NL 每张获得 [E] 。"
