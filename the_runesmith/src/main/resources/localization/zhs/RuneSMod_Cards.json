@@ -272,10 +272,10 @@
     "DESCRIPTION": "每次 runesmith:强化 时，额外 runesmith:强化 一次。",
     "UPGRADE_DESCRIPTION": "每次 runesmith:强化 时，额外 runesmith:强化 一次。 NL runesmith:强化 一张手牌。"
   },
-  "Runesmith:Malloc": {
+  "Runesmith:·": {
     "NAME": "分配",
-    "DESCRIPTION": " runesmith:降级 全部手牌。 NL 获得 [E] [E] 。",
-    "UPGRADE_DESCRIPTION": " runesmith:降级 全部手牌。 NL 获得 [E] [E] [E] 。"
+    "DESCRIPTION": " runesmith:降级 任意数量手牌。 NL 每张获得 [E] 。",
+    "UPGRADE_DESCRIPTION": "获得 [E] 。 NL runesmith:降级 任意数量手牌。 NL 每张获得 [E] 。"
   },
   "Runesmith:Preparation": {
     "NAME": "预备",
@@ -354,5 +354,9 @@
   "Runesmith:NegativeSpace": {
     "NAME": "负空间",
     "DESCRIPTION": "获得 !B! 点格挡。 NL 你每有一个符文减少 2 点 格挡。 NL 你每有一个符文造成 !D! 点伤害。"
-  }
+  },
+  "Runesmith:Superposition": {
+    "NAME": "叠加",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL runesmith:凋零 你最先生成的符文以获得 !B! 点 格挡 。"
+	}
 }
