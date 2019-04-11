@@ -26,9 +26,9 @@ public class Superposition extends CustomCard implements BreakCard {
     public static final String IMG_PATH = "images/cards/Superposition.png"; //<-------------- need some img
     private static final int COST = 3;
     private static final int DMG_AMT = 26;
-    private static final int UPGRADE_DMG_AMT = 6;
+    private static final int UPGRADE_DMG_AMT = 8;
     private static final int BLOCK_AMT = 13;
-    private static final int UPGRADE_PLUS_BLOCK = 4;
+    private static final int UPGRADE_PLUS_BLOCK = 5;
 
     public Superposition() {
         super(

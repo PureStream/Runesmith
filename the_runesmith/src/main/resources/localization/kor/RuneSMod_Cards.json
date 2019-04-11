@@ -9,11 +9,11 @@
   },
   "Runesmith:CraftFirestone": {
     "NAME": "화염석 제련",
-    "DESCRIPTION": "runesmith:화염 1 : !Pot! runesmith:잠재력 을 가진 runesmith:화염석 을 runesmith:제련 합니다."
+    "DESCRIPTION": "runesmith:화염 1 : !RS:Pot! runesmith:잠재력 을 가진 runesmith:화염석 을 runesmith:제련 합니다."
   },
   "Runesmith:CraftProtectio": {
     "NAME": "보호석 제련",
-    "DESCRIPTION": "runesmith:대지 2 : !Pot! runesmith:잠재력 을 가진 runesmith:보호석 을 runesmith:제련 합니다."
+    "DESCRIPTION": "runesmith:대지 2 : !RS:Pot! runesmith:잠재력 을 가진 runesmith:보호석 을 runesmith:제련 합니다."
   },
   "Runesmith:Fortify": {
     "NAME": "담금질",
@@ -45,7 +45,7 @@
   },
   "Runesmith:CraftIncendium": {
     "NAME": "흑요석 제련",
-    "DESCRIPTION": "runesmith:화염 3 : !Pot! runesmith:잠재력 을 가진 runesmith:흑요석 을  runesmith:제련 합니다."
+    "DESCRIPTION": "runesmith:화염 3 : !RS:Pot! runesmith:잠재력 을 가진 runesmith:흑요석 을  runesmith:제련 합니다."
   },
   "Runesmith:ElementalConversion": {
     "NAME": "원소 분해",
@@ -126,11 +126,11 @@
   },
   "Runesmith:CraftSpiculum": {
     "NAME": "미늘석 제련",
-    "DESCRIPTION": "runesmith:화염 1 runesmith:바다 1: !Pot! runesmith:잠재력 을 가진 runesmith:미늘석 을 runesmith:제련 합니다. NL 소멸."
+    "DESCRIPTION": "runesmith:화염 1 runesmith:바다 1: !RS:Pot! runesmith:잠재력 을 가진 runesmith:미늘석 을 runesmith:제련 합니다. NL 소멸."
   },
   "Runesmith:CraftPotentia": {
     "NAME": "잠재석 제련",
-    "DESCRIPTION": "모든 runesmith:원소 2 : 가장 오래된 룬을 제거하고 !Pot! runesmith:잠재력 을 가진 runesmith:잠재석 을 runesmith:제련 합니다."
+    "DESCRIPTION": "모든 runesmith:원소 2 : 가장 오래된 룬을 제거하고 !RS:Pot! runesmith:잠재력 을 가진 runesmith:잠재석 을 runesmith:제련 합니다."
   },
   "Runesmith:HammerTime": {
     "NAME": "망치 나가신다",
@@ -179,7 +179,7 @@
   },
   "Runesmith:CraftMedicinae": {
     "NAME": "약제석 제련",
-    "DESCRIPTION": "runesmith:대지 5 : !Pot! runesmith:잠재력 을 가진 runesmith:약제석 을 runesmith:제련 합니다. NL 소멸."
+    "DESCRIPTION": "runesmith:대지 5 : !RS:Pot! runesmith:잠재력 을 가진 runesmith:약제석 을 runesmith:제련 합니다. NL 소멸."
   },
   "Runesmith:LastStand": {
     "NAME": "최후의 저항",
@@ -213,7 +213,7 @@
   },
   "Runesmith:CraftMagma": {
     "NAME": "용암석 제련",
-    "DESCRIPTION": "runesmith:화염 2 runesmith:대지 1: !Pot! runesmith:잠재력 을 가진 용암석 을 runesmith:제련 합니다."
+    "DESCRIPTION": "runesmith:화염 2 runesmith:대지 1: !RS:Pot! runesmith:잠재력 을 가진 용암석 을 runesmith:제련 합니다."
   },
   "Runesmith:Rearm": {
     "NAME": "재무장",
@@ -305,7 +305,7 @@
   },
   "Runesmith:Firewall": {
     "NAME": "방화벽",
-    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL runesmith:화염 3 : !Pot! 잠재력을 가진 화염석 2개를 runesmith:제련 합니다."
+    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL runesmith:화염 3 : !RS:Pot! 잠재력을 가진 화염석 2개를 runesmith:제련 합니다."
   },
   "Runesmith:Discharge": {
     "NAME": "방출",
@@ -321,7 +321,7 @@
   },
   "Runesmith:ReplicatingBarrier": {
     "NAME": "복제된 보호막",
-    "DESCRIPTION": "runesmith:대지 2 : !Pot! 잠재력을 가진 runesmith:보호석 을 runesmith:제련 합니다. NL 매 2턴 마다 runesmith:대지 2 : !Pot! 잠재력을 가진 runesmith:보호석 을 runesmith:제련 합니다."
+    "DESCRIPTION": "runesmith:대지 2 : !RS:Pot! 잠재력을 가진 runesmith:보호석 을 runesmith:제련 합니다. NL 매 2턴 마다 runesmith:대지 2 : !RS:Pot! 잠재력을 가진 runesmith:보호석 을 runesmith:제련 합니다."
   },
   "Runesmith:Electrocute": {
     "NAME": "전기의자",
@@ -346,7 +346,7 @@
   },
   "Runesmith:CraftObretio": {
     "NAME": "탈진석 제련",
-    "DESCRIPTION": "runesmith:대지 2 runesmith:바다 1 : !Pot! runesmith:잠재력 을 가진 runesmith:탈진석 을 runesmith:제련 합니다."
+    "DESCRIPTION": "runesmith:대지 2 runesmith:바다 1 : !RS:Pot! runesmith:잠재력 을 가진 runesmith:탈진석 을 runesmith:제련 합니다."
   },
   "Runesmith:LightningRod": {
     "NAME": "피뢰침",

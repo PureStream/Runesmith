@@ -9,11 +9,11 @@
   },
   "Runesmith:CraftFirestone": {
     "NAME": "制作火石",
-    "DESCRIPTION": "1 runesmith:火素 ： NL  runesmith:打造 一个 runesmith:火石 符文，其拥有 !Pot! 点 runesmith:动能 。"
+    "DESCRIPTION": "1 runesmith:火素 ： NL  runesmith:打造 一个 runesmith:火石 符文，其拥有 !RS:Pot! 点 runesmith:动能 。"
   },
   "Runesmith:CraftProtectio": {
     "NAME": "打造保护",
-    "DESCRIPTION": "2 runesmith:土素 : NL  runesmith:打造 一个 runesmith:保护 符文，拥有 !Pot! 点 runesmith:动能 。"
+    "DESCRIPTION": "2 runesmith:土素 : NL  runesmith:打造 一个 runesmith:保护 符文，拥有 !RS:Pot! 点 runesmith:动能 。"
   },
   "Runesmith:Fortify": {
     "NAME": "强化",
@@ -45,7 +45,7 @@
   },
   "Runesmith:CraftIncendium": {
     "NAME": "打造火炉",
-    "DESCRIPTION": "3 runesmith:火素 : runesmith:打造 一个 runesmith:火焰 符文，拥有 !Pot! 点 runesmith:动能 。"
+    "DESCRIPTION": "3 runesmith:火素 : runesmith:打造 一个 runesmith:火焰 符文，拥有 !RS:Pot! 点 runesmith:动能 。"
   },
   "Runesmith:ElementalConversion": {
     "NAME": "元素粒子",
@@ -126,11 +126,11 @@
   },
   "Runesmith:CraftSpiculum": {
     "NAME": "打造针尖",
-    "DESCRIPTION": "1 runesmith:火素 1 runesmith:水素 : runesmith:打造 一个 runesmith:倒钩 符文，其拥有 !Pot! 点 runesmith:动能 。 NL 消耗 。"
+    "DESCRIPTION": "1 runesmith:火素 1 runesmith:水素 : runesmith:打造 一个 runesmith:倒钩 符文，其拥有 !RS:Pot! 点 runesmith:动能 。 NL 消耗 。"
   },
   "Runesmith:CraftPotentia": {
     "NAME": "打造动力",
-    "DESCRIPTION": "2 runesmith:元素 :  runesmith:凋亡 最先 runesmith:打造 的符文并 runesmith:打造 一个 动力 符文，其拥有 !Pot! 点 runesmith:动能 。"
+    "DESCRIPTION": "2 runesmith:元素 :  runesmith:凋亡 最先 runesmith:打造 的符文并 runesmith:打造 一个 动力 符文，其拥有 !RS:Pot! 点 runesmith:动能 。"
   },
   "Runesmith:HammerTime": {
     "NAME": "钢锤时刻",
@@ -179,7 +179,7 @@
   },
   "Runesmith:CraftMedicinae": {
     "NAME": "打造医疗",
-    "DESCRIPTION": "5 runesmith:土素 : runesmith:打造 一个 runesmith:医疗 符文，其拥有 !Pot! 点 runesmith:动能 。 NL 消耗 。"
+    "DESCRIPTION": "5 runesmith:土素 : runesmith:打造 一个 runesmith:医疗 符文，其拥有 !RS:Pot! 点 runesmith:动能 。 NL 消耗 。"
   },
   "Runesmith:LastStand": {
     "NAME": "拼死一搏",
@@ -213,7 +213,7 @@
   },
   "Runesmith:CraftMagma": {
     "NAME": "打造岩浆",
-    "DESCRIPTION": "2 runesmith:火素 1 runesmith:土素 : runesmith:打造 一个 岩浆 符文，其拥有 !Pot! 点 runesmith:动能 。"
+    "DESCRIPTION": "2 runesmith:火素 1 runesmith:土素 : runesmith:打造 一个 岩浆 符文，其拥有 !RS:Pot! 点 runesmith:动能 。"
   },
   "Runesmith:Rearm": {
     "NAME": "重新武装",
@@ -305,7 +305,7 @@
   },
   "Runesmith:Firewall": {
     "NAME": "防火墙",
-    "DESCRIPTION": "获得 !B! 点格挡。 NL 3 runesmith:火素 : runesmith:打造 2 个 runesmith:火石 ，其有用 !Pot! 点 runesmith:动能 。"
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 3 runesmith:火素 : runesmith:打造 2 个 runesmith:火石 ，其有用 !RS:Pot! 点 runesmith:动能 。"
   },
   "Runesmith:Discharge": {
     "NAME": "去充能",
@@ -321,7 +321,7 @@
   },
   "Runesmith:ReplicatingBarrier": {
     "NAME": "复制屏障",
-    "DESCRIPTION": "2 runesmith:土素 :  runesmith:打造 一个 runesmith:保护 符文，其拥有 !Pot! 点 runesmith:动能 。 NL 每 2 个回合, 2 runesmith:土素 : runesmith:打造 一个 runesmith:保护 符文，其拥有 !Pot! 点 runesmith:动能 。"
+    "DESCRIPTION": "2 runesmith:土素 :  runesmith:打造 一个 runesmith:保护 符文，其拥有 !RS:Pot! 点 runesmith:动能 。 NL 每 2 个回合, 2 runesmith:土素 : runesmith:打造 一个 runesmith:保护 符文，其拥有 !RS:Pot! 点 runesmith:动能 。"
   },
   "Runesmith:Electrocute": {
     "NAME": "触电",
@@ -346,7 +346,7 @@
    },
   "Runesmith:CraftObretio": {
     "NAME": "打造绞索",
-    "DESCRIPTION": " 2 runesmith:土素 1 runesmith:水素 : runesmith:打造 一个 runesmith:绞索 符文，其拥有 !Pot! 点 runesmith:动能 。"
+    "DESCRIPTION": " 2 runesmith:土素 1 runesmith:水素 : runesmith:打造 一个 runesmith:绞索 符文，其拥有 !RS:Pot! 点 runesmith:动能 。"
   },
   "Runesmith:LightningRod": {
     "NAME": "避雷针",

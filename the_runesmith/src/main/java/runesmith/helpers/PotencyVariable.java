@@ -7,7 +7,7 @@ import runesmith.cards.Runesmith.AbstractRunicCard;
 public class PotencyVariable extends DynamicVariable {
     @Override
     public String key() {
-        return "Pot";
+        return "RS:Pot";
         // What you put in your localization file between ! to show your value. Eg, !myKey!.
     }
 

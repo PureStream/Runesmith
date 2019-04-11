@@ -133,7 +133,7 @@
       "NAMES": [
         "ice-cold"
       ],
-      "DESCRIPTION": "Decreases attack damage by #b1 per stack. Stack is reduced by #b1 at the end of turn. NL Removes #ySlow when stack reaches #b0."
+      "DESCRIPTION": "Decrease attack damage by #b1 per stack. Stack is reduced by #b1 at the end of turn. NL Remove #ySlow when stack reaches #b0."
     }
   ]
 }

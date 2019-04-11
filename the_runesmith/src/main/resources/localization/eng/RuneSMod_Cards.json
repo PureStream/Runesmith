@@ -9,11 +9,11 @@
   },
   "Runesmith:CraftFirestone": {
     "NAME": "Craft Firestone",
-    "DESCRIPTION": "1 runesmith:Ignis: runesmith:Craft a runesmith:Firestone Rune with !Pot! runesmith:Potency."
+    "DESCRIPTION": "1 runesmith:Ignis: runesmith:Craft a runesmith:Firestone Rune with !RS:Pot! runesmith:Potency."
   },
   "Runesmith:CraftProtectio": {
     "NAME": "Craft Protectio",
-    "DESCRIPTION": "2 runesmith:Terra: runesmith:Craft a runesmith:Protectio Rune with !Pot! runesmith:Potency."
+    "DESCRIPTION": "2 runesmith:Terra: runesmith:Craft a runesmith:Protectio Rune with !RS:Pot! runesmith:Potency."
   },
   "Runesmith:Fortify": {
     "NAME": "Fortify",
@@ -45,7 +45,7 @@
   },
   "Runesmith:CraftIncendium": {
     "NAME": "Craft Incendium",
-    "DESCRIPTION": "3 runesmith:Ignis: runesmith:Craft an runesmith:Incendium Rune with !Pot! runesmith:Potency."
+    "DESCRIPTION": "3 runesmith:Ignis: runesmith:Craft an runesmith:Incendium Rune with !RS:Pot! runesmith:Potency."
   },
   "Runesmith:ElementalConversion": {
     "NAME": "Elementary Particles",
@@ -67,7 +67,7 @@
   "Runesmith:Repurpose": {
     "NAME": "Repurpose",
     "DESCRIPTION": "Exhaust a card. NL Attack: Gain !M! runesmith:Ignis. NL Skill: Gain !M! runesmith:Terra. NL Power: Gain !M! runesmith:Aqua. NL Status: Gain 1 of each.",
-    "UPGRADE_DESCRIPTION": "Exhaust a card. Attack: Gain !M! runesmith:Ignis. NL Skill: Gain !M! runesmith:Terra. NL Power: Gain !M! runesmith:Aqua. NL Status: Gain 1 of each. NL Curse: Gain 2 of each."
+    "UPGRADE_DESCRIPTION": "Exhaust a card. NL Attack: Gain !M! runesmith:Ignis. NL Skill: Gain !M! runesmith:Terra. NL Power: Gain !M! runesmith:Aqua. NL Status: Gain 1 of each. NL Curse: Gain 2 of each."
   },
   "Runesmith:EnergizedChisel": {
     "NAME": "Energized Chisel",
@@ -126,11 +126,11 @@
   },
   "Runesmith:CraftSpiculum": {
     "NAME": "Craft Spiculum",
-    "DESCRIPTION": "1 runesmith:Ignis 1 runesmith:Aqua: runesmith:Craft a runesmith:Spiculum Rune with !Pot! runesmith:Potency. NL Exhaust."
+    "DESCRIPTION": "1 runesmith:Ignis 1 runesmith:Aqua: runesmith:Craft a runesmith:Spiculum Rune with !RS:Pot! runesmith:Potency. NL Exhaust."
   },
   "Runesmith:CraftPotentia": {
     "NAME": "Craft Potentia",
-    "DESCRIPTION": "2 of each runesmith:Element: Remove your oldest Rune and runesmith:Craft a runesmith:Potentia Rune with !Pot! runesmith:Potency."
+    "DESCRIPTION": "2 of each runesmith:Element: Remove your oldest Rune and runesmith:Craft a runesmith:Potentia Rune with !RS:Pot! runesmith:Potency."
   },
   "Runesmith:HammerTime": {
     "NAME": "Hammer Time",
@@ -179,7 +179,7 @@
   },
   "Runesmith:CraftMedicinae": {
     "NAME": "Craft Medicinae",
-    "DESCRIPTION": "5 runesmith:Terra: runesmith:Craft a runesmith:Medicinae Rune with !Pot! runesmith:Potency. NL Exhaust."
+    "DESCRIPTION": "5 runesmith:Terra: runesmith:Craft a runesmith:Medicinae Rune with !RS:Pot! runesmith:Potency. NL Exhaust."
   },
   "Runesmith:LastStand": {
     "NAME": "Last Stand",
@@ -213,7 +213,7 @@
   },
   "Runesmith:CraftMagma": {
     "NAME": "Craft Magma",
-    "DESCRIPTION": "2 runesmith:Ignis 1 runesmith:Terra: runesmith:Craft a runesmith:Magma Rune with !Pot! runesmith:Potency."
+    "DESCRIPTION": "2 runesmith:Ignis 1 runesmith:Terra: runesmith:Craft a runesmith:Magma Rune with !RS:Pot! runesmith:Potency."
   },
   "Runesmith:Rearm": {
     "NAME": "Rearm",
@@ -305,7 +305,7 @@
   },
   "Runesmith:Firewall": {
     "NAME": "Firewall",
-    "DESCRIPTION": "Gain !B! Block. NL 3 runesmith:Ignis: runesmith:Craft 2 runesmith:Firestone Runes with !Pot! runesmith:Potency."
+    "DESCRIPTION": "Gain !B! Block. NL 3 runesmith:Ignis: runesmith:Craft 2 runesmith:Firestone Runes with !RS:Pot! runesmith:Potency."
   },
   "Runesmith:Discharge": {
     "NAME": "Discharge",
@@ -321,7 +321,7 @@
   },
   "Runesmith:ReplicatingBarrier": {
     "NAME": "Replicating Barrier",
-    "DESCRIPTION": "2 runesmith:Terra: runesmith:Craft a runesmith:Protectio Rune with !Pot! runesmith:Potency. NL Every 2 turns, 2 runesmith:Terra: runesmith:Craft a runesmith:Protectio Rune with !Pot! runesmith:Potency."
+    "DESCRIPTION": "2 runesmith:Terra: runesmith:Craft a runesmith:Protectio Rune with !RS:Pot! runesmith:Potency. NL Every 2 turns, 2 runesmith:Terra: runesmith:Craft a runesmith:Protectio Rune with !RS:Pot! runesmith:Potency."
   },
   "Runesmith:Electrocute": {
     "NAME": "Electrocute",
@@ -346,7 +346,7 @@
   },
   "Runesmith:CraftObretio": {
     "NAME": "Craft Obretio",
-    "DESCRIPTION": "2 runesmith:Terra 1 runesmith:Aqua: runesmith:Craft an runesmith:Obretio Rune with !Pot! runesmith:Potency."
+    "DESCRIPTION": "2 runesmith:Terra 1 runesmith:Aqua: runesmith:Craft an runesmith:Obretio Rune with !RS:Pot! runesmith:Potency."
   },
   "Runesmith:LightningRod": {
     "NAME": "Lightning Rod",
