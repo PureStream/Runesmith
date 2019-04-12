@@ -275,8 +275,8 @@
   },
   "Runesmith:Malloc": {
     "NAME": "할당",
-    "DESCRIPTION": "내 손에 있는 카드를 모두 runesmith:퇴화 시킵니다. NL [E] [E] 를 얻습니다.",
-    "UPGRADE_DESCRIPTION": "내 손에 있는 카드를 모두 runesmith:퇴화 시킵니다. NL [E] [E] [E] 를 얻습니다."
+    "DESCRIPTION": "내 손에 있는 카드를 원하는 만큼 선택하여 runesmith:퇴화 시킵니다. NL runesmith:퇴화 된 카드 마다 [E] 를 얻습니다.",
+    "UPGRADE_DESCRIPTION": "[E] 를 얻습니다. NL 내 손에 있는 카드를 원하는 만큼 선택하여 runesmith:퇴화 시킵니다. NL runesmith:퇴화 된 카드 마다 [E] 를 얻습니다."
   },
   "Runesmith:Preparation": {
     "NAME": "마음가짐",
@@ -355,5 +355,9 @@
   "Runesmith:NegativeSpace": {
     "NAME": "음의 공간",
     "DESCRIPTION": "방어도 를 !B! 얻습니다. NL 활성화 된 룬 하나 당 방어도 를 2 덜 얻습니다. NL 활성화 된 룬 하나 당 피해를 !D! 줍니다."
+  },
+  "Runesmith:Superposition": {
+    "NAME": "중첩",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 가장 오래된 룬을 runesmith:파쇄 하고 방어도 를 !B! 얻습니다."
   }
 }
