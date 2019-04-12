@@ -169,8 +169,8 @@
   },
   "Runesmith:ConstructBifrost": {
     "NAME": "建造彩虹桥",
-    "DESCRIPTION": "1 runesmith:元素 : runesmith:打造 一个 [#EFC851]棱镜[] 符文。",
-    "UPGRADE_DESCRIPTION": "1 runesmith:元素 : runesmith:打造 一个 [#EFC851]棱镜+[] 符文。"
+    "DESCRIPTION": "2 runesmith:元素 : runesmith:打造 一个 [#EFC851]棱镜[] 符文。",
+    "UPGRADE_DESCRIPTION": "2 runesmith:元素 : runesmith:打造 一个 [#EFC851]棱镜+[] 符文。"
   },
   "Runesmith:CraftIndustria": {
     "NAME": "打造工业",

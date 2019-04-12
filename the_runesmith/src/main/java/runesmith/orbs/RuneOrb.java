@@ -94,15 +94,17 @@ public abstract class RuneOrb extends AbstractOrb {
     }
 
     public static List<RuneOrb> getAllRunes(AbstractPlayer p, Boolean checkNonDud) {
-        return p.orbs
+        PlayerRune playerRune = PlayerRuneField.playerRune.get(p);
+        return playerRune.runes
                 .stream()
-                .filter(o -> (o instanceof RuneOrb) && !(o instanceof DudRune && checkNonDud))
+                .filter(o -> (o != null) && !(o instanceof DudRune && checkNonDud))
                 .map(RuneOrb.class::cast)
                 .collect(Collectors.toList());
     }
 
     public static List<RuneOrb> getAllRunes(AbstractPlayer p, RuneOrb checkForRune) {
-        return p.orbs
+        PlayerRune playerRune = PlayerRuneField.playerRune.get(p);
+        return playerRune.runes
                 .stream()
                 .filter(o -> o.getClass().equals(checkForRune.getClass()))
                 .map(RuneOrb.class::cast)
@@ -110,7 +112,8 @@ public abstract class RuneOrb extends AbstractOrb {
     }
 
     public void activateEffect() {
-        float speedTime = 0.6F / AbstractDungeon.player.orbs.size();
+        PlayerRune playerRune = PlayerRuneField.playerRune.get(AbstractDungeon.player);
+        float speedTime = 0.6F / playerRune.runeCount();
         if (Settings.FAST_MODE) {
             speedTime = 0.0F;
         }
@@ -119,7 +122,8 @@ public abstract class RuneOrb extends AbstractOrb {
     }
 
     void activateEndOfTurnEffect() {
-        float speedTime = 0.6F / AbstractDungeon.player.orbs.size();
+        PlayerRune playerRune = PlayerRuneField.playerRune.get(AbstractDungeon.player);
+        float speedTime = 0.6F / playerRune.runeCount();
         if (Settings.FAST_MODE) {
             speedTime = 0.0F;
         }
