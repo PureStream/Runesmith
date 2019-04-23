@@ -84,7 +84,7 @@ public class ChargedHammer extends CustomCard {
         );
 
         PlayerRune playerRune = PlayerRuneField.playerRune.get(p);
-        if (!playerRune.hasRune()) {
+        if (playerRune.hasRune()) {
             RuneOrb r = playerRune.runes.stream()
                     .filter(o -> o instanceof DudRune)
                     .findFirst().orElse(null);
@@ -101,12 +101,11 @@ public class ChargedHammer extends CustomCard {
                         if (aqua > 0)
                             elementsList.add(Elements.AQUA);
                         Elements rngElementID = elementsList.get(AbstractDungeon.cardRandomRng.random(elementsList.size()-1));
-                        if (rngElementID == Elements.IGNIS)
-                            ignis--;
-                        else if (rngElementID == Elements.TERRA)
-                            terra--;
-                        else
-                            aqua--;
+                        switch(rngElementID){
+                            case IGNIS: ignis--; break;
+                            case TERRA: terra--; break;
+                            case AQUA: aqua--; break;
+                        }
                         AbstractDungeon.actionManager.addToBottom(new ReduceElementsPowerAction(rngElementID, 1));
                     }
                     float speedTime = 0.1F;

@@ -24,11 +24,11 @@ public class ReduceElementsPowerAction extends AbstractGameAction {
 
     public ReduceElementsPowerAction(Elements element, int amount) {
         if (element == Elements.IGNIS)
-            ignis = amount;
+            this.ignis = amount;
         else if (element == Elements.TERRA)
-            terra = amount;
+            this.terra = amount;
         else if (element == Elements.AQUA)
-            aqua = amount;
+            this.aqua = amount;
     }
 
     @Override
