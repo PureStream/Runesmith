@@ -32,6 +32,8 @@ public class ProtectioRune extends RuneOrb {
     private static float slope3 = (float) Math.tan(Math.toRadians(130));
     private int status = MathUtils.random(0,2);
 
+    private boolean[] drawloc = new boolean[6];
+
     public ProtectioRune(int potential) {
         super("Protectio",
                 false,
@@ -46,6 +48,37 @@ public class ProtectioRune extends RuneOrb {
             img6 = ImageMaster.loadImage("images/orbs/Protectio/Pro6.png");
         }
 
+        int rune_count;
+
+        if(potential < 6){
+            rune_count = 1;
+        }else if(potential < 8){
+            rune_count = 2;
+        }else if(potential < 12){
+            rune_count = 3;
+        }else if(potential < 16){
+            rune_count = 4;
+        }else if(potential < 20){
+            rune_count = 5;
+        }else{
+            rune_count = 6;
+        }
+
+        int remaining_slots = 6;
+        for (int i = 0; i < rune_count; i++) {
+            int loc = MathUtils.random(0,remaining_slots-1);
+            for (int j = 0; j < drawloc.length; j++) {
+                if(!drawloc[j]){
+                    if(loc == 0){
+                        drawloc[j] = true;
+                        break;
+                    }else{
+                        loc--;
+                    }
+                }
+            }
+            remaining_slots--;
+        }
     }
 
     @Override
@@ -101,26 +134,36 @@ public class ProtectioRune extends RuneOrb {
                     dY3 = (float) Math.sqrt(offset / (1 + 1 / (slope3 * slope3)));
                     break;
         }
-
-        sb.draw(img1, this.cX - 48.0F + this.bobEffect.y / 3.0F + dX1 + dX2 + dX3,
-                this.cY - 48.0F + this.bobEffect.y / 4.0F + dY1 + dY2 + dY3
-                , 48.0F, 48.0F, 96.0F, 96.0F, this.scale, this.scale, 0.0F, 0, 0, 96, 96, false, false);
-        sb.draw(img2, this.cX - 48.0F + this.bobEffect.y / 3.0F - dX1 + dX2 + dX3,
-                this.cY - 48.0F + this.bobEffect.y / 4.0F - dY1 + dY2 + dY3
-                , 48.0F, 48.0F, 96.0F, 96.0F, this.scale, this.scale, 0.0F, 0, 0, 96, 96, false, false);
-        sb.draw(img3, this.cX - 48.0F + this.bobEffect.y / 3.0F - dX1 - dX2 + dX3,
-                this.cY - 48.0F + this.bobEffect.y / 4.0F - dY1 - dY2 + dY3
-                , 48.0F, 48.0F, 96.0F, 96.0F, this.scale, this.scale, 0.0F, 0, 0, 96, 96, false, false);
-        sb.draw(img4, this.cX - 48.0F + this.bobEffect.y / 3.0F + dX1 + dX2 - dX3,
-                this.cY - 48.0F + this.bobEffect.y / 4.0F + dY1 + dY2 - dY3
-                , 48.0F, 48.0F, 96.0F, 96.0F, this.scale, this.scale, 0.0F, 0, 0, 96, 96, false, false);
-        sb.draw(img5, this.cX - 48.0F + this.bobEffect.y / 3.0F + dX1 - dX2 - dX3,
-                this.cY - 48.0F + this.bobEffect.y / 4.0F + dY1 - dY2 - dY3
-                , 48.0F, 48.0F, 96.0F, 96.0F, this.scale, this.scale, 0.0F, 0, 0, 96, 96, false, false);
-        sb.draw(img6, this.cX - 48.0F + this.bobEffect.y / 3.0F - dX1 - dX2 - dX3,
-                this.cY - 48.0F + this.bobEffect.y / 4.0F - dY1 - dY2 - dY3
-                , 48.0F, 48.0F, 96.0F, 96.0F, this.scale, this.scale, 0.0F, 0, 0, 96, 96, false, false);
-
+        if(drawloc[0]) {
+            sb.draw(img1, this.cX - 48.0F + this.bobEffect.y / 3.0F + dX1 + dX2 + dX3,
+                    this.cY - 48.0F + this.bobEffect.y / 4.0F + dY1 + dY2 + dY3
+                    , 48.0F, 48.0F, 96.0F, 96.0F, this.scale, this.scale, 0.0F, 0, 0, 96, 96, false, false);
+        }
+        if(drawloc[1]) {
+            sb.draw(img2, this.cX - 48.0F + this.bobEffect.y / 3.0F - dX1 + dX2 + dX3,
+                    this.cY - 48.0F + this.bobEffect.y / 4.0F - dY1 + dY2 + dY3
+                    , 48.0F, 48.0F, 96.0F, 96.0F, this.scale, this.scale, 0.0F, 0, 0, 96, 96, false, false);
+        }
+        if(drawloc[2]) {
+            sb.draw(img3, this.cX - 48.0F + this.bobEffect.y / 3.0F - dX1 - dX2 + dX3,
+                    this.cY - 48.0F + this.bobEffect.y / 4.0F - dY1 - dY2 + dY3
+                    , 48.0F, 48.0F, 96.0F, 96.0F, this.scale, this.scale, 0.0F, 0, 0, 96, 96, false, false);
+        }
+        if(drawloc[3]) {
+            sb.draw(img4, this.cX - 48.0F + this.bobEffect.y / 3.0F + dX1 + dX2 - dX3,
+                    this.cY - 48.0F + this.bobEffect.y / 4.0F + dY1 + dY2 - dY3
+                    , 48.0F, 48.0F, 96.0F, 96.0F, this.scale, this.scale, 0.0F, 0, 0, 96, 96, false, false);
+        }
+        if(drawloc[4]) {
+            sb.draw(img5, this.cX - 48.0F + this.bobEffect.y / 3.0F + dX1 - dX2 - dX3,
+                    this.cY - 48.0F + this.bobEffect.y / 4.0F + dY1 - dY2 - dY3
+                    , 48.0F, 48.0F, 96.0F, 96.0F, this.scale, this.scale, 0.0F, 0, 0, 96, 96, false, false);
+        }
+        if(drawloc[5]) {
+            sb.draw(img6, this.cX - 48.0F + this.bobEffect.y / 3.0F - dX1 - dX2 - dX3,
+                    this.cY - 48.0F + this.bobEffect.y / 4.0F - dY1 - dY2 - dY3
+                    , 48.0F, 48.0F, 96.0F, 96.0F, this.scale, this.scale, 0.0F, 0, 0, 96, 96, false, false);
+        }
         renderText(sb);
         this.hb.render(sb);
     }

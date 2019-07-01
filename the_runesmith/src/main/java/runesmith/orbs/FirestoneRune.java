@@ -26,6 +26,9 @@ public class FirestoneRune extends RuneOrb {
     private BobEffect extraBobEffect2 = new BobEffect(5.0F * Settings.scale, 2.2F);
     private float slope = (float) Math.tan(Math.toRadians(105));
 
+    private static int TIER1 = 8;
+    private static int TIER2 = 16;
+
     public FirestoneRune(int potential) {
         super("Firestone",
                 false,
@@ -87,12 +90,15 @@ public class FirestoneRune extends RuneOrb {
         sb.draw(img1, this.cX - 48.0F + this.bobEffect.y / 4.0F + dX + this.extraBobEffect2.y / 1.5F
                 , this.cY - 48.0F + this.bobEffect.y / 4.0F + dY
                 , 48.0F, 48.0F, 96.0F, 96.0F, this.scale, this.scale, 0.0F, 0, 0, 96, 96, false, false);
-        sb.draw(img2, this.cX - 48.0F + this.bobEffect.y / 4.0F + this.extraBobEffect2.y / 1.5F,
-                this.cY - 48.0F + this.bobEffect.y / 4.0F
-                , 48.0F, 48.0F, 96.0F, 96.0F, this.scale, this.scale, 0.0F, 0, 0, 96, 96, false, false);
-        sb.draw(img3, this.cX - 48.0F + this.bobEffect.y / 2.0F, this.cY - 48.0F + this.bobEffect.y / 4.0F
-                , 48.0F, 48.0F, 96.0F, 96.0F, this.scale, this.scale, 0.0F, 0, 0, 96, 96, false, false);
-
+        if(potential >= TIER1) {
+            sb.draw(img2, this.cX - 48.0F + this.bobEffect.y / 4.0F + this.extraBobEffect2.y / 1.5F,
+                    this.cY - 48.0F + this.bobEffect.y / 4.0F
+                    , 48.0F, 48.0F, 96.0F, 96.0F, this.scale, this.scale, 0.0F, 0, 0, 96, 96, false, false);
+        }
+        if(potential >= TIER2) {
+            sb.draw(img3, this.cX - 48.0F + this.bobEffect.y / 2.0F, this.cY - 48.0F + this.bobEffect.y / 4.0F
+                    , 48.0F, 48.0F, 96.0F, 96.0F, this.scale, this.scale, 0.0F, 0, 0, 96, 96, false, false);
+        }
 
 //		sb.draw(img1, this.cX - 48.0F + this.bobEffect.y / 4.0F + this.extraBobEffect1.y / slope + this.extraBobEffect2.y,
 //				this.cY - 48.0F + this.bobEffect.y / 4.0F + this.extraBobEffect1.y * slope

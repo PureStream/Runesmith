@@ -22,7 +22,7 @@ public class Firewall extends AbstractRunicCard {
     public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
     private static final int COST = 2;
     private static final int BLOCK_AMT = 12;
-    private static final int UPGRADE_PLUS_BLOCK = 4;
+    private static final int UPGRADE_PLUS_BLOCK = 3;
     private static final int IGNIS_AMT = 3;
     private static final int TERRA_AMT = 0;
     private static final int POTENCY = 2;

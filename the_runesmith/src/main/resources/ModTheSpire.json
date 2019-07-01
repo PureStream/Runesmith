@@ -8,7 +8,7 @@
   "description": "Add a new class called The Runesmith",
   "credits": "\nBDWSSBB - Card descriptions wording improvements.\nDalamzi - Korean translation.\nRita-Bernstein - Chinese translation.\nSlathos - Polish translation.",
   "version": "0.5.2",
-  "sts_version": "",
+  "sts_version": "01-23-2019",
   "mts_version": "3.8.2",
   "dependencies": [
     "basemod",
