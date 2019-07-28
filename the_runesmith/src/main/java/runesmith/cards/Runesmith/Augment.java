@@ -14,10 +14,10 @@ import runesmith.actions.ReduceElementsPowerAction;
 import runesmith.patches.AbstractCardEnum;
 import runesmith.ui.ElementsCounter;
 
-public class Augmentation extends CustomCard {
+public class Augment extends CustomCard {
 
-    public static final String ID = "Runesmith:Augmentation";
-    public static final String IMG_PATH = "images/cards/Augmentation.png";
+    public static final String ID = "Runesmith:Augment";
+    public static final String IMG_PATH = "images/cards/Augment.png";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
@@ -26,7 +26,7 @@ public class Augmentation extends CustomCard {
     private static final int BLOCK_AMT = 10;
     private static final int UPGRADE_PLUS_BLOCK = 4;
 
-    public Augmentation() {
+    public Augment() {
         super(
                 ID,
                 NAME,
@@ -59,7 +59,7 @@ public class Augmentation extends CustomCard {
     }
 
     public AbstractCard makeCopy() {
-        return new Augmentation();
+        return new Augment();
     }
 
     public void upgrade() {

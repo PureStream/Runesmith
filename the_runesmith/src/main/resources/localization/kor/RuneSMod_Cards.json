@@ -215,8 +215,8 @@
     "NAME": "용암석 제련",
     "DESCRIPTION": "runesmith:화염 2 runesmith:대지 1: !RS:Pot! runesmith:잠재력 을 가진 용암석 을 runesmith:제련 합니다."
   },
-  "Runesmith:Rearm": {
-    "NAME": "재무장",
+  "Runesmith:Retool": {
+    "NAME": "재정비",
     "DESCRIPTION": "내 버린 카드 더미에 있는 강화, runesmith:향상 된 카드를 모두 뽑을 카드 더미로 섞어 넣습니다. NL 카드를 !M! 장 뽑습니다."
   },
   "Runesmith:UnlimitedPower": {
@@ -249,7 +249,7 @@
     "DESCRIPTION": "방어도 를 !B! 얻습니다. NL 내 손에 있는 카드 !M! 장을 강화하고 runesmith:향상 시킵니다.",
     "UPGRADE_DESCRIPTION": "방어도 를 !B! 얻습니다. 내 손에 있는 카드 !M! 장을 강화하고 runesmith:향상 시킵니다."
   },
-  "Runesmith:Refinement": {
+  "Runesmith:Refine": {
     "NAME": "정제",
     "DESCRIPTION": "카드 1장을 X 번 runesmith:향상 시킵니다. NL [E] 를 돌려받습니다.",
     "UPGRADE_DESCRIPTION": "카드 1장을 X+1 번 runesmith:향상 시킵니다. NL [E] 를 돌려받습니다."
@@ -278,8 +278,8 @@
     "DESCRIPTION": "내 손에 있는 카드를 원하는 만큼 선택하여 runesmith:퇴화 시킵니다. NL runesmith:퇴화 된 카드 마다 [E] 를 얻습니다.",
     "UPGRADE_DESCRIPTION": "[E] 를 얻습니다. NL 내 손에 있는 카드를 원하는 만큼 선택하여 runesmith:퇴화 시킵니다. NL runesmith:퇴화 된 카드 마다 [E] 를 얻습니다."
   },
-  "Runesmith:Preparation": {
-    "NAME": "마음가짐",
+  "Runesmith:BackupBattery": {
+    "NAME": "보조 배터리",
     "DESCRIPTION": "모든 runesmith:원소 를 !M! 얻습니다. NL 4번 강화할 수 있습니다. NL 카드를 1장 뽑습니다. NL 소멸."
   },
   "Runesmith:FrozenChisel": {
@@ -331,7 +331,7 @@
     "NAME": "분열 망치",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 모든 적에게 피해를 !D! 줍니다. NL 가장 오래된 룬을 2번 runesmith:파쇄 합니다."
   },
-  "Runesmith:Augmentation": {
+  "Runesmith:Augment": {
     "NAME": "증강",
     "DESCRIPTION": "방어도 를 !B! 얻습니다. NL 모든 runesmith:바다 를 잃습니다. NL 잃은 runesmith:바다 2 마다 인공물 을 1 얻습니다. NL 소멸.",
     "UPGRADE_DESCRIPTION": "방어도 를 !B! 얻습니다. NL runesmith:바다 의 절반을 잃습니다. NL 잃은 runesmith:바다 1 마다 인공물 을 1 얻습니다. NL 소멸."

@@ -11,21 +11,21 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import runesmith.actions.ApplyElementsPowerAction;
 import runesmith.patches.AbstractCardEnum;
 
-public class Preparation extends CustomCard {
-    public static final String ID = "Runesmith:Preparation";
+public class BackupBattery extends CustomCard {
+    public static final String ID = "Runesmith:BackupBattery";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    public static final String IMG_PATH = "images/cards/Preparation.png"; //<-------------- need some img
+    public static final String IMG_PATH = "images/cards/BackupBattery.png"; //<-------------- need some img
     private static final int COST = 1;
     private static final int BASE_AMT = 2;
     private static final int DRAW_AMT = 1;
 
-    public Preparation() {
+    public BackupBattery() {
         this(0);
     }
 
-    public Preparation(int upgrades) {
+    public BackupBattery(int upgrades) {
         super(
                 ID,
                 NAME,
@@ -43,7 +43,7 @@ public class Preparation extends CustomCard {
     }
 
     public AbstractCard makeCopy() {
-        return new Preparation(this.timesUpgraded);
+        return new BackupBattery(this.timesUpgraded);
     }
 
     @Override

@@ -176,16 +176,16 @@ public class RunesmithMod implements PostExhaustSubscriber,
     public void receiveEditKeywords() {
         logger.info("Setting up custom keywords");
 
-        logger.info("Insert ENG keywords.");
+        logger.info("Inserting ENG keywords.");
         loadKeywords("eng");
 
         String language = Settings.language.name();
         if (!language.equals("ENG"))
             try {
-                logger.info("Insert " + language + " keywords.");
+                //logger.info("Insert " + language + " keywords.");
                 loadKeywords(language.toLowerCase());
             } catch (GdxRuntimeException e) {
-                logger.info(language + " keywords not found.");
+                //logger.info(language + " keywords not found.");
             }
 
         logger.info("Keywords setting finished.");
@@ -195,7 +195,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
         Gson gson = new Gson();
         Keywords keywords = gson.fromJson(loadJson(String.format(KEYWORD_STRING, lang)), Keywords.class);
         Arrays.stream(keywords.keywords).forEach(key -> {
-            logger.info("Loading keyword : " + key.PROPER_NAME);
+            //logger.info("Loading keyword : " + key.PROPER_NAME);
             BaseMod.addKeyword("runesmith", key.PROPER_NAME, key.NAMES, key.DESCRIPTION);
         });
     }
@@ -319,7 +319,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
         cardsToAdd.add(new ConvertIgnis());
         cardsToAdd.add(new ConvertTerra());
         cardsToAdd.add(new ConvertAqua());
-        cardsToAdd.add(new Rearm());
+        cardsToAdd.add(new Retool());
         cardsToAdd.add(new FieryHammer());
         cardsToAdd.add(new Empowerment());
         cardsToAdd.add(new DuctTape());
@@ -335,14 +335,14 @@ public class RunesmithMod implements PostExhaustSubscriber,
         cardsToAdd.add(new GoWithTheFlow());
         cardsToAdd.add(new PerfectChisel());
         cardsToAdd.add(new DoubleUp());
-        cardsToAdd.add(new Refinement());
+        cardsToAdd.add(new Refine());
         cardsToAdd.add(new Permafrost());
         cardsToAdd.add(new CreatorForm());
         cardsToAdd.add(new Reinforce());
         cardsToAdd.add(new HeatExchange());
         cardsToAdd.add(new Supernova());
         cardsToAdd.add(new GenerateForcefield());
-        cardsToAdd.add(new Preparation());
+        cardsToAdd.add(new BackupBattery());
         cardsToAdd.add(new Malloc());
         cardsToAdd.add(new FrozenChisel());
         cardsToAdd.add(new NanitesCloud());
@@ -356,7 +356,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
         cardsToAdd.add(new Electrocute());
         cardsToAdd.add(new FissionHammer());
         cardsToAdd.add(new Accelerate());
-        cardsToAdd.add(new Augmentation());
+        cardsToAdd.add(new Augment());
         cardsToAdd.add(new ChargedHammer());
         cardsToAdd.add(new UnstableHammer());
 //        cardsToAdd.add(new Devolution());

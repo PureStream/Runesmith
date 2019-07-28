@@ -84,7 +84,7 @@
   },
   "Runesmith:OneForEveryone": {
     "NAME": "One for Everyone",
-    "DESCRIPTION": "runesmith:Break your oldest Rune to NL gain [E] , gain 1 Block, NL deal 1 damage and NL apply 1 Weak and Vulnerable to ALL enemies, NL gain 1 of each runesmith:Element and draw 1 card."
+    "DESCRIPTION": "runesmith:Break your oldest Rune to NL gain [E] , gain 1 Block, NL deal 1 damage, NL apply 1 Weak and Vulnerable to ALL enemies, NL gain 1 of each runesmith:Element and draw 1 card."
   },
   "Runesmith:StaticCage": {
     "NAME": "Static Cage",
@@ -179,7 +179,7 @@
   },
   "Runesmith:CraftMedicinae": {
     "NAME": "Craft Medicinae",
-    "DESCRIPTION": "5 runesmith:Terra: runesmith:Craft a runesmith:Medicinae Rune with !RS:Pot! runesmith:Potency. NL Exhaust."
+    "DESCRIPTION": "5 runesmith:Terra: runesmith:Craft a runesmith:Medicinae Rune with !RS:Pot! runesmith:Potency. NL Exhaust. NL Cannot be runesmith:Stasis."
   },
   "Runesmith:LastStand": {
     "NAME": "Last Stand",
@@ -215,8 +215,8 @@
     "NAME": "Craft Magma",
     "DESCRIPTION": "2 runesmith:Ignis 1 runesmith:Terra: runesmith:Craft a runesmith:Magma Rune with !RS:Pot! runesmith:Potency."
   },
-  "Runesmith:Rearm": {
-    "NAME": "Rearm",
+  "Runesmith:Retool": {
+    "NAME": "Retool",
     "DESCRIPTION": "Shuffle all upgraded or runesmith:enhanced cards from your discard pile into your draw pile.  NL Draw !M! cards."
   },
   "Runesmith:UnlimitedPower": {
@@ -249,8 +249,8 @@
     "DESCRIPTION": "Gain !B! Block. NL Upgrade and runesmith:Enhance !M! card in your hand.",
     "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Upgrade and runesmith:Enhance !M! cards in your hand."
   },
-  "Runesmith:Refinement": {
-    "NAME": "Refinement",
+  "Runesmith:Refine": {
+    "NAME": "Refine",
     "DESCRIPTION": "runesmith:Enhance a card X times. NL Refund 1.",
     "UPGRADE_DESCRIPTION": "runesmith:Enhance a card X+1 times. NL Refund 1."
   },
@@ -271,15 +271,15 @@
   "Runesmith:PoweredAnvil": {
     "NAME": "Powered Anvil",
     "DESCRIPTION": "Whenever you runesmith:Enhance a card, runesmith:Enhance it 1 additional time.",
-    "UPGRADE_DESCRIPTION": "Whenever you runesmith:Enhance a card, runesmith:Enhance it 1 additional time. NL Enhance a card in your hand."
+    "UPGRADE_DESCRIPTION": "Whenever you runesmith:Enhance a card, runesmith:Enhance it 1 additional time. NL runesmith:Enhance a card in your hand."
   },
   "Runesmith:Malloc": {
     "NAME": "Malloc",
     "DESCRIPTION": "runesmith:Downgrade any number of cards in your hand. NL Gain [E] for each card runesmith:Downgraded.",
     "UPGRADE_DESCRIPTION": "Gain [E] . NL runesmith:Downgrade any number of cards in your hand. NL Gain [E] for each card runesmith:Downgraded."
   },
-  "Runesmith:Preparation": {
-    "NAME": "Preparation",
+  "Runesmith:BackupBattery": {
+    "NAME": "Backup Battery",
     "DESCRIPTION": "Gain !M! of each runesmith:Element. NL Draw 1 card. NL Can be upgraded 4 times. NL Exhaust."
   },
   "Runesmith:FrozenChisel": {
@@ -317,7 +317,7 @@
   },
   "Runesmith:ArcReactor": {
     "NAME": "Arc Reactor",
-    "DESCRIPTION": "Gain !M! runesmith:Potency. At the start of your turn, gain 1 runesmith:Potency. Whenever you runesmith:Craft a Rune, Lose 2 runesmith:Potency."
+    "DESCRIPTION": "Gain !M! runesmith:Potency. NL At the start of your turn, gain 1 runesmith:Potency. NL Whenever you runesmith:Craft a Rune, lose 2 runesmith:Potency."
   },
   "Runesmith:ReplicatingBarrier": {
     "NAME": "Replicating Barrier",
@@ -331,8 +331,8 @@
     "NAME": "Fission Hammer",
     "DESCRIPTION": "Deal !D! damage. NL Deal !D! damage to ALL enemies. NL runesmith:Break your oldest Rune twice."
   },
-  "Runesmith:Augmentation": {
-    "NAME": "Augmentation",
+  "Runesmith:Augment": {
+    "NAME": "Augment",
     "DESCRIPTION": "Gain !B! Block. NL Lose all runesmith:Aqua. NL Gain 1 Artifact for every 2 runesmith:Aqua lost. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Lose half your runesmith:Aqua. NL Gain 1 Artifact for each runesmith:Aqua lost. NL Exhaust."
   },

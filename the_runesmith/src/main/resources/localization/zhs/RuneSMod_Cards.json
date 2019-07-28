@@ -214,8 +214,8 @@
     "NAME": "打造岩浆",
     "DESCRIPTION": "2 runesmith:火素 1 runesmith:土素 : runesmith:打造 一个 岩浆 符文，其拥有 !RS:Pot! 点 runesmith:动能 。"
   },
-  "Runesmith:Rearm": {
-    "NAME": "重新武装",
+  "Runesmith:Retool": {
+    "NAME": "重组",
     "DESCRIPTION": "将在弃牌堆的已 升级 的和已 runesmith:强化 的牌洗入抽牌堆。  NL 抽 !M! 张牌。"
   },
   "Runesmith:UnlimitedPower": {
@@ -248,7 +248,7 @@
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 升级 并 runesmith:强化 !M! 张你的手牌。",
     "UPGRADE_DESCRIPTION": "获得 !B! 点格挡。 NL 升级 并 runesmith:强化 !M! 张你的手牌。"
   },
-  "Runesmith:Refinement": {
+  "Runesmith:Refine": {
     "NAME": "精致",
     "DESCRIPTION": " runesmith:强化 一张牌 X 次。 NL 返还 [E] 。",
     "UPGRADE_DESCRIPTION": " runesmith:强化 一张牌 X+1 次。 NL 返还 [E] 。"
@@ -277,8 +277,8 @@
     "DESCRIPTION": " runesmith:降级 任意数量手牌。 NL 每张获得 [E] 。",
     "UPGRADE_DESCRIPTION": "获得 [E] 。 NL runesmith:降级 任意数量手牌。 NL 每张获得 [E] 。"
   },
-  "Runesmith:Preparation": {
-    "NAME": "预备",
+  "Runesmith:BackupBattery": {
+    "NAME": "后备电池",
     "DESCRIPTION": "获得 !M! 点 runesmith:元素 。 NL 抽 1 张牌。 NL 能被 升级 4 次。 NL 消耗 。"
   },
   "Runesmith:FrozenChisel": {
@@ -330,7 +330,7 @@
     "NAME": "裂变钢锤",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 对所有敌人造成 !D! 点伤害。 NL 凋零 你最先 runesmith:打造 的符文两次。"
   },
-  "Runesmith:Augmentation": {
+  "Runesmith:Augment": {
     "NAME": "扩增",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 失去所有的 runesmith:水素 。 NL 每 2 点获得 1 层 人工制品。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "获得 !B! 点格挡。 NL 失去一半的 runesmith:水素 。 NL 每 1 点获得 1 层 人工制品。 NL 消耗 。"

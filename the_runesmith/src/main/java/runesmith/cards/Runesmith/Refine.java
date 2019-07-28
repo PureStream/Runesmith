@@ -11,16 +11,16 @@ import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import runesmith.actions.cards.RefinementAction;
 import runesmith.patches.AbstractCardEnum;
 
-public class Refinement extends CustomCard {
-    public static final String ID = "Runesmith:Refinement";
+public class Refine extends CustomCard {
+    public static final String ID = "Runesmith:Refine";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
-    public static final String IMG_PATH = "images/cards/Refinement.png";
+    public static final String IMG_PATH = "images/cards/Refine.png";
     private static final int COST = -1;
 
-    public Refinement() {
+    public Refine() {
         super(
                 ID,
                 NAME,
@@ -51,7 +51,7 @@ public class Refinement extends CustomCard {
     }
 
     public AbstractCard makeCopy() {
-        return new Refinement();
+        return new Refine();
     }
 
     public void upgrade() {

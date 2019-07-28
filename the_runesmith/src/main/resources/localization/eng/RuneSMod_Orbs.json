@@ -2,7 +2,7 @@
   "Firestone": {
     "NAME": "Firestone",
     "DESCRIPTION": [
-      "At the end of turn, deals #b{Pot} damage to a random enemy."
+      "At the end of turn, deal #b{Pot} damage to a random enemy."
     ]
   },
   "Protectio": {
@@ -65,7 +65,7 @@
   "Magma": {
     "NAME": "Magma",
     "DESCRIPTION": [
-      "At the end of turn, Deal #b{Pot} damage and gain #b{Pot2} #yBlock."
+      "At the end of turn, deal #b{Pot} damage and gain #b{Pot2} #yBlock."
     ]
   },
   "Obretio": {

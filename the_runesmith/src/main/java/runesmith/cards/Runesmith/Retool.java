@@ -11,9 +11,9 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import runesmith.actions.cards.RearmAction;
 import runesmith.patches.AbstractCardEnum;
 
-public class Rearm extends CustomCard {
-    public static final String ID = "Runesmith:Rearm";
-    public static final String IMG_PATH = "images/cards/Rearm.png"; //<-------- Image needed
+public class Retool extends CustomCard {
+    public static final String ID = "Runesmith:Retool";
+    public static final String IMG_PATH = "images/cards/Retool.png"; //<-------- Image needed
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
@@ -21,7 +21,7 @@ public class Rearm extends CustomCard {
     private static final int UPG_DRAW_AMT = 1;
     private static final int DRAW_AMT = 3;
 
-    public Rearm() {
+    public Retool() {
         super(
                 ID,
                 NAME,
@@ -42,7 +42,7 @@ public class Rearm extends CustomCard {
     }
 
     public AbstractCard makeCopy() {
-        return new Rearm();
+        return new Retool();
     }
 
     public void upgrade() {

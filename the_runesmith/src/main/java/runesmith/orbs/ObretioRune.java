@@ -6,7 +6,7 @@ import runesmith.actions.runes.ObretioRuneAction;
 
 public class ObretioRune extends RuneOrb {
 
-    public static final int basePotency = 4;
+    public static final int basePotency = 3;
 
     public ObretioRune(int potential) {
         super("Obretio",

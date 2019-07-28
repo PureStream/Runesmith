@@ -1,8 +1,10 @@
 package runesmith.patches;
 
 import basemod.ReflectionHacks;
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -19,13 +21,16 @@ import runesmith.cards.Runesmith.AbstractRunicCard;
 public class RunicCardGlow {
     public static final Logger logger = LogManager.getLogger(RunesmithMod.class.getName());
 
-    private static Texture CARD_RUNIC_ATTACK_BG_SILHOUETTE = ImageMaster.loadImage("images/cardui/512/craftable_attack_silhouette.png");
-    private static Texture CARD_RUNIC_SKILL_BG_SILHOUETTE = ImageMaster.loadImage("images/cardui/512/craftable_skill_silhouette.png");
+    private static TextureAtlas CARD_RUNIC_BG_SILHOUETTE = new TextureAtlas(Gdx.files.internal("images/cardui/512/craftable_cardui.atlas"));
+
+    private static TextureAtlas.AtlasRegion CARD_RUNIC_ATTACK_BG_SILHOUETTE = CARD_RUNIC_BG_SILHOUETTE.findRegion("craftable_attack_silhouette");
+    private static TextureAtlas.AtlasRegion CARD_RUNIC_SKILL_BG_SILHOUETTE = CARD_RUNIC_BG_SILHOUETTE.findRegion("craftable_skill_silhouette");
 
     @SpirePatch(clz = CardGlowBorder.class, method = SpirePatch.CONSTRUCTOR)
     public static class CardGlowPatch {
         @SpirePostfixPatch
         public static void runicCardGlowColor(CardGlowBorder __instance, AbstractCard inputCard) {
+
             if (inputCard instanceof AbstractRunicCard) {
                 if (((AbstractRunicCard) inputCard).isCraftable) {
                     Color color;

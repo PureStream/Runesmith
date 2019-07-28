@@ -292,7 +292,7 @@
       ""
     ]
   },
-  "Runesmith:Rearm": {
+  "Runesmith:Retool": {
     "NAME": "Dozbrojenie",
     "DESCRIPTION": "Wtasuj wszystkie Ulepszone lub runesmith:Wzmocnione karty ze stosu kart odrzuconych do stosu kart rozgrywających.  NL Dobierz !M! karty."
   },
@@ -326,7 +326,7 @@
     "DESCRIPTION": "Zyskaj !B! pkt. Bloku. NL Ulepsz i runesmith:Wzmocnij !M! kartę z ręki.",
     "UPGRADE_DESCRIPTION": "Zyskaj !B! pkt. Bloku. NL Ulepsz i runesmith:Wzmocnij !M! karty z ręki."
   },
-  "Runesmith:Refinement": {
+  "Runesmith:Refine": {
     "NAME": "Udoskonalenie",
     "DESCRIPTION": "runesmith:Wzmocnij kartę X razy. NL Refund 1.",
     "UPGRADE_DESCRIPTION": "runesmith:Wzmocnij kartę X+1 razy. NL Refund 1."
@@ -355,7 +355,7 @@
     "DESCRIPTION": "runesmith:Zdeklasuj wszytskie karty z ręki. NL Zyskaj [E] [E].",
     "UPGRADE_DESCRIPTION": "runesmith:Zdeklasuj wszytskie karty z ręki. NL Zyskaj [E] [E] [E]."
   },
-  "Runesmith:Preparation": {
+  "Runesmith:BackupBattery": {
     "NAME": "Przygotowania",
     "DESCRIPTION": "Zyskaj !M! z każdego runesmith:Żywiołu. NL Dobierz 1 kartę. NL Może zostać Ulepszona do 4 razy. NL Wyklucz."
   },
@@ -430,7 +430,7 @@
     "NAME": "Rozszczepiający Młot",
     "DESCRIPTION": "Zadaj !D! pkt. obrażeń. NL Zadaj !D! pkt. obrażeń WSZYSTKIM przeciwnikom. NL Dwukrotnie runesmith:Przełam swoją najstarszą Runę."
   },
-  "Runesmith:Augmentation": {
+  "Runesmith:Augment": {
     "NAME": "Powiększenie",
     "DESCRIPTION": "Zyskaj !B! pkt. Bloku. NL Utrać całą runesmith:Aqua. NL Zyskaj 1 Hart za każde 2 utracone runesmith:Aqua. NL Wykluczenie.",
     "UPGRADE_DESCRIPTION": "Zyskaj !B! pkt. Bloku. NL Utrać połowę runesmith:Aqua. NL Zyskaj 1 Hart za każdą utraconą runesmith:Aqua. NL Wykluczenie."
