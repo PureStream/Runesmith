@@ -120,7 +120,7 @@ public abstract class AbstractRunicCard extends CustomCard {
         int runeCount = RuneOrb.getRuneCount();
         int maxRunes = RuneOrb.getMaxRune(p);
 
-        if (this.freeElementOnce || p.hasPower(UnlimitedPowerPower.POWER_ID) || p.hasRelic(PocketReactor.ID)) {
+        if (this.freeElementOnce || p.hasRelic(PocketReactor.ID)) {
             if (this.freeElementOnce && !checkOnly)
                 freeElementOnce = false;
 
@@ -139,7 +139,7 @@ public abstract class AbstractRunicCard extends CustomCard {
             if (!checkOnly) {
                 if (runeCount >= maxRunes && !isPotentia)
                     AbstractDungeon.actionManager.addToBottom(new ApplyElementsPowerAction(p, p, ignis, terra, aqua));
-                else
+                else if(!p.hasPower(UnlimitedPowerPower.POWER_ID)) //preserve elements if unlimited power is active
                     AbstractDungeon.actionManager.addToBottom(new ReduceElementsPowerAction(ignis, terra, aqua));
             }
             if (checkOnly)

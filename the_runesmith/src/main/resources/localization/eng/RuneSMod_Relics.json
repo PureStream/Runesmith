@@ -53,7 +53,7 @@
     "NAME": "Pocket Reactor",
     "FLAVOR": "",
     "DESCRIPTIONS": [
-      "#yrunesmith:Elements are no longer used for crafting. All cards lose #b2 #yrunesmith:Potency. "
+      "#yrunesmith:Elements are no longer needed for crafting. All cards lose #b2 #yrunesmith:Potency. "
     ]
   },
   "Runesmith:CoreCrystal": {
