@@ -349,7 +349,7 @@
   },
   "Runesmith:LightningRod": {
     "NAME": "避雷针",
-    "DESCRIPTION": "接下来 !M! 个回合， 你失去 runesmith:元素 而不是生命。获得 1 点三种 runesmith:元素 。"
+    "DESCRIPTION": "接下来 !M! 个回合， 你失去 runesmith:元素 而不是生命。获得 2 点三种 runesmith:元素 。"
   },
   "Runesmith:NegativeSpace": {
     "NAME": "负空间",

@@ -38,8 +38,8 @@ public class ChargedHammer extends CustomCard {
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     public static final String IMG_PATH = "images/cards/ChargedHammer.png"; //<-------------- need some img
     private static final int COST = 2;
-    private static final int ATTACK_DMG = 16;
-    private static final int UPGRADE_PLUS_DMG = 4;
+    private static final int ATTACK_DMG = 15;
+    private static final int UPGRADE_PLUS_DMG = 3;
     private static final int ELEMENT_SPENT = 3;
     private static final int ELEMENT_SPENT_UPG = -1;
 

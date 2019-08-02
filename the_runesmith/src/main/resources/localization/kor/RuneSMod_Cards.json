@@ -350,7 +350,7 @@
   },
   "Runesmith:LightningRod": {
     "NAME": "피뢰침",
-    "DESCRIPTION": "!M! 턴 동안, 체력 대신 runesmith:원소 를 잃습니다. 모든 runesmith:원소 를 1씩 얻습니다."
+    "DESCRIPTION": "!M! 턴 동안, 체력 대신 runesmith:원소 를 잃습니다. 모든 runesmith:원소 를 2씩 얻습니다."
   },
   "Runesmith:NegativeSpace": {
     "NAME": "음의 공간",
