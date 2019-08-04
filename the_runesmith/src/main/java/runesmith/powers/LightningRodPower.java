@@ -30,8 +30,8 @@ public class LightningRodPower extends AbstractPower {
         this.amount = amount;
         this.isTurnBased = true;
         updateDescription();
-        this.region128 = new TextureAtlas.AtlasRegion(TextureLoader.getTexture("images/powers/LightningRod.png"), 0, 0, 84, 84);
-        this.region48 = new TextureAtlas.AtlasRegion(TextureLoader.getTexture("images/powers/LightningRodSmall.png"), 0, 0, 32, 32);
+        this.region128 = new TextureAtlas.AtlasRegion(TextureLoader.getTexture("runesmith/images/powers/LightningRod.png"), 0, 0, 84, 84);
+        this.region48 = new TextureAtlas.AtlasRegion(TextureLoader.getTexture("runesmith/images/powers/LightningRodSmall.png"), 0, 0, 32, 32);
     }
 
     public void stackPower(int stackAmount) {

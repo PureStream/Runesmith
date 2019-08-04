@@ -12,6 +12,9 @@ public class ObretioRune extends RuneOrb {
         super("Obretio",
                 false,
                 potential);
+        if(potential > getOverchargeAmt()){
+            isOvercharged = true;
+        }
     }
 
     @Override
@@ -32,4 +35,8 @@ public class ObretioRune extends RuneOrb {
         return new ObretioRune(this.potential);
     }
 
+    @Override
+    public int getOverchargeAmt(){
+        return OVERCHARGE_MULT * basePotency;
+    }
 }

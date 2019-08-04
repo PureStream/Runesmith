@@ -18,7 +18,7 @@ import static runesmith.ui.ElementsCounter.getElementByID;
 
 public class ConvertAqua extends CustomCard {
     public static final String ID = "Runesmith:ConvertAqua";
-    public static final String IMG_PATH = "images/cards/ConvertAqua.png"; //<-------- Image needed
+    public static final String IMG_PATH = "runesmith/images/cards/ConvertAqua.png"; //<-------- Image needed
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;

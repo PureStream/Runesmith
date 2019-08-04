@@ -20,8 +20,8 @@ public class UnlimitedPowerPower extends AbstractPower {
         this.owner = owner;
         this.type = PowerType.BUFF;
         updateDescription();
-        this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/Unlimited.png"), 0, 0, 84, 84);  //<-------- NEED SOME IMG
-        this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/UnlimitedSmall.png"), 0, 0, 32, 32); //<-------- NEED SOME IMG
+        this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("runesmith/images/powers/Unlimited.png"), 0, 0, 84, 84);  //<-------- NEED SOME IMG
+        this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("runesmith/images/powers/UnlimitedSmall.png"), 0, 0, 32, 32); //<-------- NEED SOME IMG
     }
 
     public void updateDescription() {

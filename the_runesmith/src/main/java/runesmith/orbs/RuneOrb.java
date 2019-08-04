@@ -16,6 +16,7 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.vfx.combat.OrbFlareEffect;
 import com.megacrit.cardcrawl.vfx.combat.PlasmaOrbActivateEffect;
+import runesmith.actions.BreakRuneAction;
 import runesmith.patches.PlayerRuneField;
 import runesmith.powers.ArcReactorPower;
 import runesmith.powers.PotentialPower;
@@ -37,13 +38,15 @@ public abstract class RuneOrb extends AbstractOrb {
     public boolean useMultiBreak = false;
     boolean showPotentialValue = true;
     boolean showBreakValue = false;
+    static int OVERCHARGE_MULT = 8;
+    boolean isOvercharged = false;
     protected int potential;
     private String[] descriptions;
     protected Color tc;
 
     public RuneOrb(String ID, boolean upgraded, int potential) {
         this.ID = ID;
-        this.img = ImageMaster.loadImage("images/orbs/" + ID + ".png");
+        this.img = ImageMaster.loadImage("runesmith/images/orbs/" + ID + ".png");
         if (potential == 0) {
             this.showPotentialValue = false;
         }
@@ -190,6 +193,9 @@ public abstract class RuneOrb extends AbstractOrb {
     }
 
     public void onStartOfTurn() {
+        if(isOvercharged){
+            AbstractDungeon.actionManager.addToTop(new BreakRuneAction(this));
+        }
     }
 
     public void onCraft() {
@@ -200,6 +206,10 @@ public abstract class RuneOrb extends AbstractOrb {
             arcPower.flash();
             int decAmount = arcPower.amount2;
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PotentialPower(p, -decAmount), -decAmount));
+        }
+        //TODO: implement proper visual effect for overcharge
+        if(isOvercharged){
+            this.c = Color.RED.cpy();
         }
     }
 
@@ -304,4 +314,7 @@ public abstract class RuneOrb extends AbstractOrb {
         return playerRune.getMaxRunes();
     }
 
+    public int getOverchargeAmt(){
+        return 0;
+    }
 }

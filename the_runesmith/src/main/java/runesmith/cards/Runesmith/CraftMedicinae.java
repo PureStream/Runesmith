@@ -15,7 +15,7 @@ import static runesmith.patches.CardTagEnum.RS_CRAFT;
 public class CraftMedicinae extends AbstractRunicCard implements NoStasisCard {
 
     public static final String ID = "Runesmith:CraftMedicinae";
-    public static final String IMG_PATH = "images/cards/CraftMedicinae.png";
+    public static final String IMG_PATH = "runesmith/images/cards/CraftMedicinae.png";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;

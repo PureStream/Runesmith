@@ -31,8 +31,8 @@ public class ReplicatingBarrierPower extends AbstractPower {
         this.amount = 2;
         this.POT_AMT = potency;
         updateDescription();
-        this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/ReplicatingBarrier.png"), 0, 0, 84, 84);
-        this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/ReplicatingBarrierSmall.png"), 0, 0, 32, 32);
+        this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("runesmith/images/powers/ReplicatingBarrier.png"), 0, 0, 84, 84);
+        this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("runesmith/images/powers/ReplicatingBarrierSmall.png"), 0, 0, 32, 32);
     }
 
     public void stackPower(int stackAmount) {

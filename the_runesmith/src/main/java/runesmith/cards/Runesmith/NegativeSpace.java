@@ -19,7 +19,7 @@ public class NegativeSpace extends CustomCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    public static final String[] IMG_PATH = {"images/cards/NegativeSpaceSkill.png", "images/cards/NegativeSpaceAttack.png"};
+    public static final String[] IMG_PATH = {"runesmith/images/cards/NegativeSpaceSkill.png", "runesmith/images/cards/NegativeSpaceAttack.png"};
     private static final AbstractCard.CardType[] CARD_TYPE = {CardType.SKILL, CardType.ATTACK};
     private static final AbstractCard.CardTarget[] CARD_TARGET = {CardTarget.SELF, CardTarget.ENEMY};
     private static final int COST = 1;

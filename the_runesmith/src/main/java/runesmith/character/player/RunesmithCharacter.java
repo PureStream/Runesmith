@@ -38,14 +38,14 @@ import java.util.ArrayList;
 public class RunesmithCharacter extends CustomPlayer {
     private static final int ENERGY_PER_TURN = 3;
 
-    private static final String THE_RUNESMITH_SHOULDER_2 = "images/character/shoulder2.png"; // campfire pose
-    private static final String THE_RUNESMITH_SHOULDER_1 = "images/character/shoulder.png"; // another campfire pose
-    private static final String THE_RUNESMITH_CORPSE = "images/character/corpse.png"; // dead corpse
-    private static final String THE_RUNESMITH_SKELETON_ATLAS = "images/character/idle/skeleton.atlas"; // spine animation atlas
-    private static final String THE_RUNESMITH_SKELETON_JSON = "images/character/idle/skeleton.json"; // spine animation json
-    private static final String THE_RUNESMITH_SPRITER = "images/character/idle/animation.scml"; //Spriter File
+    private static final String THE_RUNESMITH_SHOULDER_2 = "runesmith/images/character/shoulder2.png"; // campfire pose
+    private static final String THE_RUNESMITH_SHOULDER_1 = "runesmith/images/character/shoulder.png"; // another campfire pose
+    private static final String THE_RUNESMITH_CORPSE = "runesmith/images/character/corpse.png"; // dead corpse
+    private static final String THE_RUNESMITH_SKELETON_ATLAS = "runesmith/images/character/idle/skeleton.atlas"; // spine animation atlas
+    private static final String THE_RUNESMITH_SKELETON_JSON = "runesmith/images/character/idle/skeleton.json"; // spine animation json
+    private static final String THE_RUNESMITH_SPRITER = "runesmith/images/character/idle/animation.scml"; //Spriter File
 
-    private Texture BEIGE_ORB_FLASH_VFX = ImageMaster.loadImage("images/ui/beige/energyBeigeVFX.png");
+    private Texture BEIGE_ORB_FLASH_VFX = ImageMaster.loadImage("runesmith/images/ui/beige/energyBeigeVFX.png");
     private EnergyOrbInterface energyOrb = new EnergyOrbBeige();
 
     private static final EventStrings heartString = CardCrawlGame.languagePack.getEventString("Runesmith:SpireHeart");
@@ -54,7 +54,7 @@ public class RunesmithCharacter extends CustomPlayer {
     private static final String CHAR_FLAVOR_TEXT = characterString.TEXT[0];
 
     public RunesmithCharacter(String name) {
-        super(name, PlayerClassEnum.RUNESMITH_CLASS, null, "images/vfx.png", new SpriterAnimation(THE_RUNESMITH_SPRITER));
+        super(name, PlayerClassEnum.RUNESMITH_CLASS, null, "runesmith/images/vfx.png", new SpriterAnimation(THE_RUNESMITH_SPRITER));
 
         initializeClass(null, THE_RUNESMITH_SHOULDER_2, // required call to load textures and setup energy/loadout
                 THE_RUNESMITH_SHOULDER_1,
@@ -191,7 +191,7 @@ public class RunesmithCharacter extends CustomPlayer {
     }
 
     public TextureAtlas.AtlasRegion getOrb() {
-        return new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/cardui/description_beige_orb.png"), 0, 0, 24, 24);
+        return new TextureAtlas.AtlasRegion(ImageMaster.loadImage("runesmith/images/cardui/description_beige_orb.png"), 0, 0, 24, 24);
     }
 
     public void updateOrb(int energy) {

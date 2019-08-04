@@ -22,8 +22,8 @@ public class PermafrostPower extends AbstractPower {
         this.type = PowerType.BUFF;
 //		this.atTurnEndBlock = 0;
         updateDescription();
-        this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/Permafrost.png"), 0, 0, 84, 84);
-        this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/PermafrostSmall.png"), 0, 0, 32, 32);
+        this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("runesmith/images/powers/Permafrost.png"), 0, 0, 84, 84);
+        this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("runesmith/images/powers/PermafrostSmall.png"), 0, 0, 32, 32);
     }
 
 //	public void atStartOfTurnPostDraw() {

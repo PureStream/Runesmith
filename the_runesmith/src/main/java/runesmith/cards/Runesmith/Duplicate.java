@@ -13,7 +13,7 @@ import runesmith.powers.DuplicatePower;
 
 public class Duplicate extends CustomCard {
     public static final String ID = "Runesmith:Duplicate";
-    public static final String IMG_PATH = "images/cards/Duplicate.png"; //<-------- Image needed
+    public static final String IMG_PATH = "runesmith/images/cards/Duplicate.png"; //<-------- Image needed
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;

@@ -17,7 +17,7 @@ import static runesmith.patches.CardTagEnum.RS_CRAFT;
 public class CraftPotentia extends AbstractRunicCard {
 
     public static final String ID = "Runesmith:CraftPotentia";
-    public static final String IMG_PATH = "images/cards/CraftPotentia.png";
+    public static final String IMG_PATH = "runesmith/images/cards/CraftPotentia.png";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;

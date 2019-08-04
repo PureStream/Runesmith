@@ -17,7 +17,7 @@ import runesmith.ui.ElementsCounter;
 public class Augment extends CustomCard {
 
     public static final String ID = "Runesmith:Augment";
-    public static final String IMG_PATH = "images/cards/Augment.png";
+    public static final String IMG_PATH = "runesmith/images/cards/Augment.png";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
@@ -49,12 +49,14 @@ public class Augment extends CustomCard {
         int aqua = ElementsCounter.getAqua();
 
         if(upgraded)
-            aqua = (int) Math.round(aqua/2.0);
+            aqua = aqua / 2;
         if(aqua == 0) return;
 
         AbstractDungeon.actionManager.addToBottom(new ReduceElementsPowerAction(0, 0, aqua));
         if(!upgraded)
             aqua = aqua / 2;
+        if(aqua == 0) return;
+
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p,p, new ArtifactPower(p, aqua),aqua));
     }
 

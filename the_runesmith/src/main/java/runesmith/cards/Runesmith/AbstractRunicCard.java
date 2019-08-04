@@ -39,6 +39,8 @@ public abstract class AbstractRunicCard extends CustomCard {
     public boolean potencyUpgraded;
     public boolean isPotencyModified;
 
+    int overchargePot;
+
     public boolean isCraftable = false;
     boolean renderCraftable = true;
 
@@ -48,7 +50,7 @@ public abstract class AbstractRunicCard extends CustomCard {
 
     private Color renderColor = Color.WHITE.cpy();
     private Color textColor =  Settings.CREAM_COLOR.cpy();
-    private static Texture craftableTab = ImageMaster.loadImage("images/cardui/512/craftable_tag_blank.png");
+    private static Texture craftableTab = ImageMaster.loadImage("runesmith/images/cardui/512/craftable_tag_blank.png");
     private static String[] craftableString = CardCrawlGame.languagePack.getUIString("Runesmith:Craftable").TEXT;
 
     @Override
@@ -158,11 +160,11 @@ public abstract class AbstractRunicCard extends CustomCard {
     public void render(SpriteBatch sb, boolean selected) {
         super.render(sb, selected);
         if (!Settings.hideCards) {
-            renderCraftable(sb, selected);
+            renderCraftable(sb);
         }
     }
 
-    private void renderCraftable(SpriteBatch sb, boolean selected) {
+    private void renderCraftable(SpriteBatch sb) {
         float drawX = this.current_x - 256.0F;
         float drawY = this.current_y - 256.0F;
 

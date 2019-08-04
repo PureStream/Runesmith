@@ -11,8 +11,8 @@ import runesmith.actions.DowngradeRandomCardInDeckAction;
 public class UraniumAnvil extends CustomRelic {
 
     public static final String ID = "Runesmith:UraniumAnvil";
-    private static final String IMG = "images/relics/UraniumAnvil.png"; //<--------- Need some img
-    private static final String IMG_O = "images/relics/UraniumAnvil_o.png";
+    private static final String IMG = "runesmith/images/relics/UraniumAnvil.png"; //<--------- Need some img
+    private static final String IMG_O = "runesmith/images/relics/UraniumAnvil_o.png";
     private static final int DOWN_AMT = 1;
 
     public UraniumAnvil() {

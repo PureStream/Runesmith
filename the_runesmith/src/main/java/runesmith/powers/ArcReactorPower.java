@@ -27,8 +27,8 @@ public class ArcReactorPower extends TwoAmountPower {
         this.amount = amount;
         this.amount2 = amount*2;
         updateDescription();
-        this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/ArcReactor.png"), 0, 0, 84, 84);
-        this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/ArcReactorSmall.png"), 0, 0, 32, 32);
+        this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("runesmith/images/powers/ArcReactor.png"), 0, 0, 84, 84);
+        this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("runesmith/images/powers/ArcReactorSmall.png"), 0, 0, 32, 32);
     }
 
     public void stackPower(int stackAmount) {

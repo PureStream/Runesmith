@@ -17,7 +17,7 @@ public class UnlimitedPower extends CustomCard {
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
-    public static final String IMG_PATH = "images/cards/UnlimitedPower.png"; //<-------------- need some img
+    public static final String IMG_PATH = "runesmith/images/cards/UnlimitedPower.png"; //<-------------- need some img
     private static final int COST = 2;
 
     public UnlimitedPower() {

@@ -21,7 +21,7 @@ public class HammerTime extends CustomCard {
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
-    public static final String IMG_PATH = "images/cards/HammerTime.png"; //<-------------- need some img
+    public static final String IMG_PATH = "runesmith/images/cards/HammerTime.png"; //<-------------- need some img
     private static final int COST = 2;
     private static final int ATTACK_DMG = 14;
     private static final int UPGRADE_ATTACK_DMG = 1;

@@ -16,7 +16,9 @@ public class MedicinaeRune extends RuneOrb {
         super("Medicinae",
                 false,
                 potential);
-
+        if(potential > getOverchargeAmt()){
+            isOvercharged = true;
+        }
     }
 
     @Override
@@ -53,4 +55,8 @@ public class MedicinaeRune extends RuneOrb {
         }
     }
 
+    @Override
+    public int getOverchargeAmt(){
+        return OVERCHARGE_MULT * basePotency;
+    }
 }

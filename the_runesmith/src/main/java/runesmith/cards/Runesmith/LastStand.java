@@ -20,7 +20,7 @@ public class LastStand extends CustomCard {
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
-    public static final String IMG_PATH = "images/cards/LastStand.png"; //<-------------- need some img
+    public static final String IMG_PATH = "runesmith/images/cards/LastStand.png"; //<-------------- need some img
     private static final int COST = 3;
     private static final int MULTIPLIER_AMT = 5;
     private static final int UPG_MULTIPLIER_AMT = 2;

@@ -21,19 +21,19 @@ import runesmith.patches.ElementsGainedCountField;
 import runesmith.relics.CoreCrystal;
 
 public class ElementsCounter extends ClickableUIElement {
-    private static Texture ELEMENTS_RED_LAYER1 = ImageMaster.loadImage("images/ui/elements/R1.png");
-    private static Texture ELEMENTS_RED_LAYER2 = ImageMaster.loadImage("images/ui/elements/R2.png");
-    private static Texture ELEMENTS_RED_LAYER3 = ImageMaster.loadImage("images/ui/elements/R3.png");
-    private static Texture ELEMENTS_RED_MASK = ImageMaster.loadImage("images/ui/elements/RMask.png");
-    private static Texture ELEMENTS_GREEN_LAYER1 = ImageMaster.loadImage("images/ui/elements/G1.png");
-    private static Texture ELEMENTS_GREEN_LAYER2 = ImageMaster.loadImage("images/ui/elements/G2.png");
-    private static Texture ELEMENTS_GREEN_LAYER3 = ImageMaster.loadImage("images/ui/elements/G3.png");
-    private static Texture ELEMENTS_GREEN_MASK = ImageMaster.loadImage("images/ui/elements/GMask.png");
-    private static Texture ELEMENTS_BLUE_LAYER1 = ImageMaster.loadImage("images/ui/elements/B1.png");
-    private static Texture ELEMENTS_BLUE_LAYER2 = ImageMaster.loadImage("images/ui/elements/B2.png");
-    private static Texture ELEMENTS_BLUE_LAYER3 = ImageMaster.loadImage("images/ui/elements/B3.png");
-    private static Texture ELEMENTS_BLUE_MASK = ImageMaster.loadImage("images/ui/elements/BMask.png");
-    private static Texture ELEMENTS_FRAME = ImageMaster.loadImage("images/ui/elements/Frame.png");
+    private static Texture ELEMENTS_RED_LAYER1 = ImageMaster.loadImage("runesmith/images/ui/elements/R1.png");
+    private static Texture ELEMENTS_RED_LAYER2 = ImageMaster.loadImage("runesmith/images/ui/elements/R2.png");
+    private static Texture ELEMENTS_RED_LAYER3 = ImageMaster.loadImage("runesmith/images/ui/elements/R3.png");
+    private static Texture ELEMENTS_RED_MASK = ImageMaster.loadImage("runesmith/images/ui/elements/RMask.png");
+    private static Texture ELEMENTS_GREEN_LAYER1 = ImageMaster.loadImage("runesmith/images/ui/elements/G1.png");
+    private static Texture ELEMENTS_GREEN_LAYER2 = ImageMaster.loadImage("runesmith/images/ui/elements/G2.png");
+    private static Texture ELEMENTS_GREEN_LAYER3 = ImageMaster.loadImage("runesmith/images/ui/elements/G3.png");
+    private static Texture ELEMENTS_GREEN_MASK = ImageMaster.loadImage("runesmith/images/ui/elements/GMask.png");
+    private static Texture ELEMENTS_BLUE_LAYER1 = ImageMaster.loadImage("runesmith/images/ui/elements/B1.png");
+    private static Texture ELEMENTS_BLUE_LAYER2 = ImageMaster.loadImage("runesmith/images/ui/elements/B2.png");
+    private static Texture ELEMENTS_BLUE_LAYER3 = ImageMaster.loadImage("runesmith/images/ui/elements/B3.png");
+    private static Texture ELEMENTS_BLUE_MASK = ImageMaster.loadImage("runesmith/images/ui/elements/BMask.png");
+    private static Texture ELEMENTS_FRAME = ImageMaster.loadImage("runesmith/images/ui/elements/Frame.png");
 
     public static float fontScale = 0.6F;
     private float rFontScale = fontScale;

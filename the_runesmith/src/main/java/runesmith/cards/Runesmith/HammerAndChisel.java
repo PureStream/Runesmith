@@ -14,7 +14,7 @@ import runesmith.patches.AbstractCardEnum;
 public class HammerAndChisel extends CustomCard {
 
     public static final String ID = "Runesmith:HammerAndChisel";
-    public static final String IMG_PATH = "images/cards/HammerAndChisel.png";
+    public static final String IMG_PATH = "runesmith/images/cards/HammerAndChisel.png";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;

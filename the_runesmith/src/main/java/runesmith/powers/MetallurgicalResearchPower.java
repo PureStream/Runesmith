@@ -25,8 +25,8 @@ public class MetallurgicalResearchPower extends AbstractPower {
         this.amount = amount;
         this.isTurnBased = true;
         updateDescription();
-        this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/Research.png"), 0, 0, 84, 84);  //<-------- NEED SOME IMG
-        this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/ResearchSmall.png"), 0, 0, 32, 32); //<-------- NEED SOME IMG
+        this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("runesmith/images/powers/Research.png"), 0, 0, 84, 84);  //<-------- NEED SOME IMG
+        this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("runesmith/images/powers/ResearchSmall.png"), 0, 0, 32, 32); //<-------- NEED SOME IMG
     }
 
     public void stackPower(int stackAmount) {

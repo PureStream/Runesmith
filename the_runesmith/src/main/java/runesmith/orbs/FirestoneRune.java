@@ -38,9 +38,9 @@ public class FirestoneRune extends RuneOrb {
                 potential);
 
         if (img1 == null) {
-            img1 = ImageMaster.loadImage("images/orbs/Firestone/FireR.png");
-            img2 = ImageMaster.loadImage("images/orbs/Firestone/FireU.png");
-            img3 = ImageMaster.loadImage("images/orbs/Firestone/FireD.png");
+            img1 = ImageMaster.loadImage("runesmith/images/orbs/Firestone/FireR.png");
+            img2 = ImageMaster.loadImage("runesmith/images/orbs/Firestone/FireU.png");
+            img3 = ImageMaster.loadImage("runesmith/images/orbs/Firestone/FireD.png");
         }
 
         if(potential < TIER2) {
@@ -50,6 +50,9 @@ public class FirestoneRune extends RuneOrb {
             xoffset = -12;
         }
 
+        if(potential > getOverchargeAmt()){
+            isOvercharged = true;
+        }
 //		logger.info("slope is: " + this.slope);
     }
 
@@ -127,5 +130,10 @@ public class FirestoneRune extends RuneOrb {
         this.extraBobEffect1.update();
         this.extraBobEffect2.update();
         super.updateAnimation();
+    }
+
+    @Override
+    public int getOverchargeAmt(){
+        return OVERCHARGE_MULT * basePotency;
     }
 }

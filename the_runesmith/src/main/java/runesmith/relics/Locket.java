@@ -13,8 +13,8 @@ import runesmith.cards.Runesmith.LastStand;
 public class Locket extends CustomRelic {
 
     public static final String ID = "Runesmith:Locket";
-    private static final String IMG = "images/relics/Locket.png"; //<--------- Need some img
-    private static final String IMG_O = "images/relics/Locket_o.png";
+    private static final String IMG = "runesmith/images/relics/Locket.png"; //<--------- Need some img
+    private static final String IMG_O = "runesmith/images/relics/Locket_o.png";
     private boolean isAvailable = false;
     private boolean isUsedThisCombat = false;
 

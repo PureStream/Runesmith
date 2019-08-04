@@ -23,8 +23,8 @@ public class CreatorFormPower extends AbstractPower {
         this.owner = owner;
         this.amount = amount;
         updateDescription();
-        this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/CreatorForm.png"), 0, 0, 84, 84);  //<-------- NEED SOME IMG
-        this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/CreatorFormSmall.png"), 0, 0, 32, 32); //<-------- NEED SOME IMG
+        this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("runesmith/images/powers/CreatorForm.png"), 0, 0, 84, 84);  //<-------- NEED SOME IMG
+        this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("runesmith/images/powers/CreatorFormSmall.png"), 0, 0, 32, 32); //<-------- NEED SOME IMG
     }
 
     public void stackPower(int stackAmount) {

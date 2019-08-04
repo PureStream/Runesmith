@@ -20,7 +20,7 @@ import static runesmith.patches.CardTagEnum.RS_CRAFT;
 public class ConstructBifrost extends AbstractRunicCard {
 
     public static final String ID = "Runesmith:ConstructBifrost";
-    public static final String IMG_PATH = "images/cards/ConstructBifrost.png";
+    public static final String IMG_PATH = "runesmith/images/cards/ConstructBifrost.png";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final UIStrings runeTips = CardCrawlGame.languagePack.getUIString(ID);
     public static final String NAME = cardStrings.NAME;

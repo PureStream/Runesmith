@@ -17,7 +17,7 @@ public class Refine extends CustomCard {
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
-    public static final String IMG_PATH = "images/cards/Refine.png";
+    public static final String IMG_PATH = "runesmith/images/cards/Refine.png";
     private static final int COST = -1;
 
     public Refine() {

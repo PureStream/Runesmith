@@ -15,8 +15,8 @@ import static runesmith.patches.CardTagEnum.RS_CRAFT;
 public class EmergencyProvisions extends CustomRelic {
 
     public static final String ID = "Runesmith:EmergencyProvisions";
-    private static final String IMG = "images/relics/EmergencyProvisions.png"; //<--------- Need some img
-    private static final String IMG_O = "images/relics/EmergencyProvisions_o.png";
+    private static final String IMG = "runesmith/images/relics/EmergencyProvisions.png"; //<--------- Need some img
+    private static final String IMG_O = "runesmith/images/relics/EmergencyProvisions_o.png";
     private static final int ELEMENT_AMT = 1;
 
     public EmergencyProvisions() {

@@ -15,7 +15,7 @@ import runesmith.patches.AbstractCardEnum;
 
 public class Firewall extends AbstractRunicCard {
     public static final String ID = "Runesmith:Firewall";
-    public static final String IMG_PATH = "images/cards/Firewall.png"; //<-------- Image needed
+    public static final String IMG_PATH = "runesmith/images/cards/Firewall.png"; //<-------- Image needed
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;

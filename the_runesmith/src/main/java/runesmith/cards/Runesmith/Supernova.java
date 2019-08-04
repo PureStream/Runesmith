@@ -24,7 +24,7 @@ public class Supernova extends CustomCard implements BreakCard{
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    public static final String IMG_PATH = "images/cards/Supernova.png"; //need some img
+    public static final String IMG_PATH = "runesmith/images/cards/Supernova.png"; //need some img
     private static final int COST = 1;
     private static final int UPG_COST = 0;
 

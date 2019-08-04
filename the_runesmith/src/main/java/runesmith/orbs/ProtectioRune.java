@@ -22,7 +22,7 @@ public class ProtectioRune extends RuneOrb {
     private static Texture img5;
     private static Texture img6;
 
-    private static float dist = 6.0F;
+    private static float dist = 3.0F;
 
     private BobEffect extraBobEffect1 = new BobEffect(dist * Settings.scale, 2.0F);
     private float currOffset = 0.0F;
@@ -40,12 +40,12 @@ public class ProtectioRune extends RuneOrb {
                 potential);
 
         if(img1 == null){
-            img1 = ImageMaster.loadImage("images/orbs/Protectio/Pro1.png");
-            img2 = ImageMaster.loadImage("images/orbs/Protectio/Pro2.png");
-            img3 = ImageMaster.loadImage("images/orbs/Protectio/Pro3.png");
-            img4 = ImageMaster.loadImage("images/orbs/Protectio/Pro4.png");
-            img5 = ImageMaster.loadImage("images/orbs/Protectio/Pro5.png");
-            img6 = ImageMaster.loadImage("images/orbs/Protectio/Pro6.png");
+            img1 = ImageMaster.loadImage("runesmith/images/orbs/Protectio/Pro1.png");
+            img2 = ImageMaster.loadImage("runesmith/images/orbs/Protectio/Pro2.png");
+            img3 = ImageMaster.loadImage("runesmith/images/orbs/Protectio/Pro3.png");
+            img4 = ImageMaster.loadImage("runesmith/images/orbs/Protectio/Pro4.png");
+            img5 = ImageMaster.loadImage("runesmith/images/orbs/Protectio/Pro5.png");
+            img6 = ImageMaster.loadImage("runesmith/images/orbs/Protectio/Pro6.png");
         }
 
         int rune_count;
@@ -78,6 +78,9 @@ public class ProtectioRune extends RuneOrb {
                 }
             }
             remaining_slots--;
+        }
+        if(potential > getOverchargeAmt()){
+            isOvercharged = true;
         }
     }
 
@@ -124,14 +127,14 @@ public class ProtectioRune extends RuneOrb {
         float dX1 = 0F, dY1 = 0F, dX2 = 0F, dY2 = 0F, dX3 = 0F, dY3 = 0F;
         float offset = this.extraBobEffect1.y + dist;
         switch(status){
-            case 0: dX1 = (float) Math.sqrt(offset / (1 + slope1 * slope1));
-                    dY1 = (float) -Math.sqrt(offset / (1 + 1 / (slope1 * slope1)));
+            case 0: dX1 = offset / (1 + slope1);
+                    //dY1 = - offset / (1 + 1 / slope1);
                     break;
-            case 1: dX2 = (float) Math.sqrt(offset / (1 + slope2 * slope2));
-                    dY2 = (float) Math.sqrt(offset / (1 + 1 / (slope2 * slope2)));
+            case 1: dX2 = offset / (1 + slope2);
+                    dY2 = offset / (1 + 1 / slope2);
                     break;
-            case 2: dX3 = (float) -Math.sqrt(offset / (1 + slope3 * slope3));
-                    dY3 = (float) Math.sqrt(offset / (1 + 1 / (slope3 * slope3)));
+            case 2: dX3 = - offset / (1 - slope3);
+                    dY3 = offset / (1 - 1 / slope3);
                     break;
         }
         if(drawloc[0]) {
@@ -174,4 +177,8 @@ public class ProtectioRune extends RuneOrb {
         super.updateAnimation();
     }
 
+    @Override
+    public int getOverchargeAmt(){
+        return OVERCHARGE_MULT * basePotency;
+    }
 }

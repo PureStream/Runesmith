@@ -24,8 +24,8 @@ public class TimeMachinePower extends AbstractPower {
         this.owner = owner;
         this.type = PowerType.BUFF;
 //        this.amount = turns;
-        this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/TimeMachine.png"), 0, 0, 84, 84);
-        this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("images/powers/TimeMachineSmall.png"), 0, 0, 32, 32);
+        this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("runesmith/images/powers/TimeMachine.png"), 0, 0, 84, 84);
+        this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("runesmith/images/powers/TimeMachineSmall.png"), 0, 0, 32, 32);
         this.setValues(health, block, ignis, terra, aqua);
         updateDescription();
     }

@@ -13,7 +13,7 @@ import runesmith.patches.AbstractCardEnum;
 public class Attraction extends CustomCard {
 
     public static final String ID = "Runesmith:Attraction";
-    public static final String IMG_PATH = "images/cards/Attraction.png";
+    public static final String IMG_PATH = "runesmith/images/cards/Attraction.png";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;

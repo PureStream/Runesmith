@@ -20,7 +20,7 @@ import runesmith.patches.AbstractCardEnum;
 public class StaticCage extends CustomCard implements BreakCard{
 
     public static final String ID = "Runesmith:StaticCage";
-    public static final String IMG_PATH = "images/cards/StaticCage.png";
+    public static final String IMG_PATH = "runesmith/images/cards/StaticCage.png";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;

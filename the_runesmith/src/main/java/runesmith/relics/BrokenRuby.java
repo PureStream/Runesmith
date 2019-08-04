@@ -15,8 +15,8 @@ import runesmith.utils.TextureLoader;
 public class BrokenRuby extends CustomRelic {
 
     public static final String ID = "Runesmith:BrokenRuby";
-    private static final String IMG = "images/relics/BrokenRuby.png"; //<--------- Need some img
-    private static final String IMG_O = "images/relics/BrokenRuby_o.png";
+    private static final String IMG = "runesmith/images/relics/BrokenRuby.png"; //<--------- Need some img
+    private static final String IMG_O = "runesmith/images/relics/BrokenRuby_o.png";
     private static final int IGNIS_AMT = 2;
     private static final int NUM_CARDS = 2;
 

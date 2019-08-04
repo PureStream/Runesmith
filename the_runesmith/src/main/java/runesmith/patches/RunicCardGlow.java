@@ -21,7 +21,7 @@ import runesmith.cards.Runesmith.AbstractRunicCard;
 public class RunicCardGlow {
     public static final Logger logger = LogManager.getLogger(RunesmithMod.class.getName());
 
-    private static TextureAtlas CARD_RUNIC_BG_SILHOUETTE = new TextureAtlas(Gdx.files.internal("images/cardui/512/craftable_cardui.atlas"));
+    private static TextureAtlas CARD_RUNIC_BG_SILHOUETTE = new TextureAtlas(Gdx.files.internal("runesmith/images/cardui/512/craftable_cardui.atlas"));
 
     private static TextureAtlas.AtlasRegion CARD_RUNIC_ATTACK_BG_SILHOUETTE = CARD_RUNIC_BG_SILHOUETTE.findRegion("craftable_attack_silhouette");
     private static TextureAtlas.AtlasRegion CARD_RUNIC_SKILL_BG_SILHOUETTE = CARD_RUNIC_BG_SILHOUETTE.findRegion("craftable_skill_silhouette");

@@ -23,6 +23,9 @@ public class SpiculumRune extends RuneOrb {
                 potential);
         this.showPotentialValue = true;
         this.useMultiBreak = true;
+        if(potential > getOverchargeAmt()){
+            isOvercharged = true;
+        }
     }
 
     @Override
@@ -56,4 +59,8 @@ public class SpiculumRune extends RuneOrb {
         return new SpiculumRune(this.potential);
     }
 
+    @Override
+    public int getOverchargeAmt(){
+        return OVERCHARGE_MULT * basePotency;
+    }
 }

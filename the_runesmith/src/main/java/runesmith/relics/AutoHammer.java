@@ -12,8 +12,8 @@ import runesmith.actions.cards.FortifyAction;
 public class AutoHammer extends CustomRelic {
 
     public static final String ID = "Runesmith:AutoHammer";
-    private static final String IMG = "images/relics/AutoHammer.png"; //<--------- Need some img
-    private static final String IMG_O = "images/relics/AutoHammer_o.png";
+    private static final String IMG = "runesmith/images/relics/AutoHammer.png"; //<--------- Need some img
+    private static final String IMG_O = "runesmith/images/relics/AutoHammer_o.png";
     private static final int NUM_CARDS = 3;
 
     public AutoHammer() {

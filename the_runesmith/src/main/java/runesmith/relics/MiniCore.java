@@ -12,8 +12,8 @@ import runesmith.powers.PotentialPower;
 public class MiniCore extends CustomRelic {
 
     public static final String ID = "Runesmith:MiniCore";
-    private static final String IMG = "images/relics/MiniCore.png"; //<--------- Need some img
-    private static final String IMG_O = "images/relics/MiniCore_o.png";
+    private static final String IMG = "runesmith/images/relics/MiniCore.png"; //<--------- Need some img
+    private static final String IMG_O = "runesmith/images/relics/MiniCore_o.png";
     private static final int POWER_AMT = 1;
 
     public MiniCore() {

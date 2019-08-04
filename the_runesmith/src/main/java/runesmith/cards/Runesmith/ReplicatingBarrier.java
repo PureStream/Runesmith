@@ -18,7 +18,7 @@ public class ReplicatingBarrier extends AbstractRunicCard {
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
-    public static final String IMG_PATH = "images/cards/ReplicatingBarrier.png"; //<-------------- need some img
+    public static final String IMG_PATH = "runesmith/images/cards/ReplicatingBarrier.png"; //<-------------- need some img
     private static final int COST = 1;
     private static final int POTENCY_AMT = 3;
     private static final int UPG_POTENCY_AMT = 1;

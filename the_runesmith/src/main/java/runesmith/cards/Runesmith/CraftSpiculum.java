@@ -15,7 +15,7 @@ import static runesmith.patches.CardTagEnum.RS_CRAFT;
 public class CraftSpiculum extends AbstractRunicCard {
 
     public static final String ID = "Runesmith:CraftSpiculum";
-    public static final String IMG_PATH = "images/cards/CraftSpiculum.png";
+    public static final String IMG_PATH = "runesmith/images/cards/CraftSpiculum.png";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;

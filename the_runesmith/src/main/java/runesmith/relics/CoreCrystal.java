@@ -12,8 +12,8 @@ import java.util.stream.IntStream;
 public class CoreCrystal extends CustomRelic {
 
     public static final String ID = "Runesmith:CoreCrystal";
-    private static final String IMG = "images/relics/CoreCrystal.png"; //<--------- Need some img
-    private static final String IMG_O = "images/relics/CoreCrystal_o.png";
+    private static final String IMG = "runesmith/images/relics/CoreCrystal.png"; //<--------- Need some img
+    private static final String IMG_O = "runesmith/images/relics/CoreCrystal_o.png";
 
     public static final int MAX_ELEMENTS = 20;
 

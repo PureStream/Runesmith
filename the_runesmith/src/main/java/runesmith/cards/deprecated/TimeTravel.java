@@ -22,7 +22,7 @@
 //public class TimeTravel extends CustomCard {
 //
 //    public static final String ID = "Runesmith:TimeTravel";
-//    public static final String IMG_PATH = "images/cards/TimeTravel.png";
+//    public static final String IMG_PATH = "runesmith/images/cards/TimeTravel.png";
 //    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 //    public static final String NAME = cardStrings.NAME;
 //    public static final String DESCRIPTION = cardStrings.DESCRIPTION;

@@ -69,20 +69,20 @@ public class RunesmithMod implements PostExhaustSubscriber,
 
     public static final Logger logger = LogManager.getLogger(RunesmithMod.class.getName());
 
-    private static final String RUNESMITH_BUTTON = "images/character/runesmithButton.png";
-    private static final String RUNESMITH_PORTRAIT = "images/character/runesmithPortrait.png";
+    private static final String RUNESMITH_BUTTON = "runesmith/images/character/runesmithButton.png";
+    private static final String RUNESMITH_PORTRAIT = "runesmith/images/character/runesmithPortrait.png";
     public static Color BEIGE = new Color(175f / 255f, 145f / 255f, 100f / 255f, 1f);
 
-    private static final String CARD_STRING = "localization/%s/RuneSMod_Cards.json";
-    private static final String CHARACTER_STRING = "localization/%s/RuneSMod_Character.json";
-    private static final String RELIC_STRING = "localization/%s/RuneSMod_Relics.json";
-    private static final String POWER_STRING = "localization/%s/RuneSMod_Powers.json";
-    private static final String ORB_STRING = "localization/%s/RuneSMod_Orbs.json";
-    private static final String POTION_STRING = "localization/%s/RuneSMod_Potions.json";
-    private static final String UI_STRING = "localization/%s/RuneSMod_UI.json";
-    private static final String TUTORIAL_STRING = "localization/%s/RuneSMod_Tutorials.json";
-    private static final String KEYWORD_STRING = "localization/%s/RuneSMod_Keywords.json";
-    private static final String EVENT_STRING = "localization/%s/RuneSMod_Events.json";
+    private static final String CARD_STRING = "runesmith/localization/%s/RuneSMod_Cards.json";
+    private static final String CHARACTER_STRING = "runesmith/localization/%s/RuneSMod_Character.json";
+    private static final String RELIC_STRING = "runesmith/localization/%s/RuneSMod_Relics.json";
+    private static final String POWER_STRING = "runesmith/localization/%s/RuneSMod_Powers.json";
+    private static final String ORB_STRING = "runesmith/localization/%s/RuneSMod_Orbs.json";
+    private static final String POTION_STRING = "runesmith/localization/%s/RuneSMod_Potions.json";
+    private static final String UI_STRING = "runesmith/localization/%s/RuneSMod_UI.json";
+    private static final String TUTORIAL_STRING = "runesmith/localization/%s/RuneSMod_Tutorials.json";
+    private static final String KEYWORD_STRING = "runesmith/localization/%s/RuneSMod_Keywords.json";
+    private static final String EVENT_STRING = "runesmith/localization/%s/RuneSMod_Events.json";
 
     private List<AbstractCard> cardsToAdd = new ArrayList<>();
     private List<CustomRelic> relicsToAddOnlyThisClass = new ArrayList<>();
@@ -91,7 +91,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
     private static boolean renderElementsCounter = false;
     private static ElementsCounter elementsCounter;
     private static boolean elementalistEnabled = false;
-    private static Texture ELEMENTS_GREEN_MASK = ImageMaster.loadImage("images/ui/elements/GMask.png");
+    private static Texture ELEMENTS_GREEN_MASK = ImageMaster.loadImage("runesmith/images/ui/elements/GMask.png");
 
     private static CardGroup hammerCards;
     private static CardGroup chiselCards;
@@ -105,15 +105,15 @@ public class RunesmithMod implements PostExhaustSubscriber,
         BaseMod.addColor(
                 RUNESMITH_BEIGE,
                 BEIGE.cpy(),
-                "images/cardui/512/bg_attack_beige.png", //attackBg
-                "images/cardui/512/bg_skill_beige.png", //skillBg
-                "images/cardui/512/bg_power_beige.png", //powerBg
-                "images/cardui/512/card_beige_orb.png", //energyOrb
-                "images/cardui/1024/bg_attack_beige.png", //attackBgPortrait
-                "images/cardui/1024/bg_skill_beige.png", //skillBgPortrait
-                "images/cardui/1024/bg_power_beige.png", //powerBgPortrait
-                "images/cardui/1024/card_beige_orb.png", //energyOrbPortrait
-                "images/cardui/description_beige_orb.png"); //cardEnergyOrb
+                "runesmith/images/cardui/512/bg_attack_beige.png", //attackBg
+                "runesmith/images/cardui/512/bg_skill_beige.png", //skillBg
+                "runesmith/images/cardui/512/bg_power_beige.png", //powerBg
+                "runesmith/images/cardui/512/card_beige_orb.png", //energyOrb
+                "runesmith/images/cardui/1024/bg_attack_beige.png", //attackBgPortrait
+                "runesmith/images/cardui/1024/bg_skill_beige.png", //skillBgPortrait
+                "runesmith/images/cardui/1024/bg_power_beige.png", //powerBgPortrait
+                "runesmith/images/cardui/1024/card_beige_orb.png", //energyOrbPortrait
+                "runesmith/images/cardui/description_beige_orb.png"); //cardEnergyOrb
     }
 
     @SuppressWarnings("unused")
@@ -138,7 +138,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
     private void loadAudio() {
         @SuppressWarnings (value="unchecked")
         HashMap<String, Sfx> map = (HashMap<String, Sfx>) ReflectionHacks.getPrivate(CardCrawlGame.sound, SoundMaster.class, "map");
-        map.put("RUNESMITH_HAMMER", new Sfx("audio/HammerDoubleHit.ogg", false));
+        map.put("RUNESMITH_HAMMER", new Sfx("runesmith/audio/HammerDoubleHit.ogg", false));
     }
 
     @Override

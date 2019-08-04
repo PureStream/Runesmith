@@ -13,7 +13,7 @@
 //public class TimeMachine_old extends CustomCard {
 //
 //    public static final String ID = "Runesmith:TimeMachine_old";
-//    public static final String IMG_PATH = "images/cards/TimeMachine.png";
+//    public static final String IMG_PATH = "runesmith/images/cards/TimeMachine.png";
 //    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 //    public static final String NAME = cardStrings.NAME;
 //    public static final String DESCRIPTION = cardStrings.DESCRIPTION;
