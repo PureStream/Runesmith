@@ -23,9 +23,9 @@
   "Runesmith:GrindstonePower": {
     "NAME": "Grindstone",
     "DESCRIPTIONS": [
-      "This turn, all cards played become #yUpgraded. #yEnhance the card if it's already #yUpgraded.",
+      "This turn, all cards played become #yUpgraded. #yEnhance the card if it cannot be #yUpgraded.",
       "For the next #b",
-      " turns, all cards played become #yUpgraded. #yEnhance the card if it's already #yUpgraded."
+      " turns, all cards played become #yUpgraded. #yEnhance the card if it cannot be #yUpgraded."
     ]
   },
   "Runesmith:FirestormPower": {
@@ -63,7 +63,7 @@
   "Runesmith:UnlimitedPowerPower": {
     "NAME": "Unlimited Power",
     "DESCRIPTIONS": [
-      "#yElements are no longer consumed for Crafting."
+      "#yElements are no longer needed for Crafting."
     ]
   },
   "Runesmith:RunesonancePower": {
@@ -150,8 +150,8 @@
       "In #b",
       " turns,",
       " turn,",
-      " 2 #yTerra: #yCraft a #yProtectio rune with #b",
-      " Potency."
+      " #yCraft a #yProtectio rune with #b",
+      " Potency using 2 #yTerra."
     ]
   },
   "Runesmith:LastStandPower": {

@@ -18,9 +18,9 @@ public class PotentiaRune extends RuneOrb {
                 false,
                 potency);
         this.useMultiBreak = true;
-        if(potential > getOverchargeAmt()){
-            isOvercharged = true;
-        }
+//        if(potential > getOverchargeAmt()){
+//            isOvercharged = true;
+//        }
     }
 
     @Override
@@ -57,8 +57,7 @@ public class PotentiaRune extends RuneOrb {
         return new PotentiaRune(potential);
     }
 
-    @Override
-    public int getOverchargeAmt(){
-        return OVERCHARGE_MULT * basePotency;
-    }
+//    public static int getOverchargeAmt(){
+//        return OVERCHARGE_MULT * basePotency;
+//    }
 }

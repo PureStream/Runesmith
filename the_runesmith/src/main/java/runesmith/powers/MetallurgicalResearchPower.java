@@ -1,6 +1,7 @@
 package runesmith.powers;
 
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.NonStackablePower;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -11,7 +12,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import runesmith.actions.cards.MetallurgicalResearchAction;
 
-public class MetallurgicalResearchPower extends AbstractPower {
+public class MetallurgicalResearchPower extends AbstractPower implements NonStackablePower {
 
     public static final String POWER_ID = "Runesmith:MetallurgicalResearchPower";
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
@@ -39,7 +40,7 @@ public class MetallurgicalResearchPower extends AbstractPower {
 
     public void atStartOfTurnPostDraw() {
         flash();
-        AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, "Runesmith:MetallurgicalResearchPower", 1));
+        AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, this, 1));
         if (this.amount == 1) {
             AbstractDungeon.actionManager.addToBottom(new MetallurgicalResearchAction());
         }

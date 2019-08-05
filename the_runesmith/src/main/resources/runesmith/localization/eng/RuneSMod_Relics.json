@@ -3,7 +3,7 @@
     "NAME": "Broken Ruby",
     "FLAVOR": "A crystal that resembles a red gem. Although it is broken, faint energy still remains.",
     "DESCRIPTIONS": [
-      "At the start of each combat, gain #b2 #yrunesmith:Ignis. If you played at least #b2 #yAttacks last turn, #yEnhance a random card in your hand."
+      "At the start of each combat, gain #b2 #yrunesmith:Ignis. At the start of your turn, #yEnhance a random card in your hand."
     ]
   },
   "Runesmith:MiniCore": {
@@ -39,7 +39,7 @@
     "NAME": "AutoHammer",
     "FLAVOR": "An automatic hammer which never stops hammering.",
     "DESCRIPTIONS": [
-      "Every time you play #b3 skills in #b1 turn, #yrunesmith:Enhance a random card in your hand."
+      "Every time you play #b3 #ySkills in #b1 turn, #yrunesmith:Enhance a random card in your hand."
     ]
   },
   "Runesmith:EmergencyProvisions": {

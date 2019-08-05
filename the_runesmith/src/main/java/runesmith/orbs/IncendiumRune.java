@@ -23,7 +23,7 @@ public class IncendiumRune extends RuneOrb {
     private static int TIER1 = 8;
     private static int TIER2 = 16;
 
-    private float slope = (float) Math.tan(Math.toRadians(70));
+    private static float slope = (float) Math.tan(Math.toRadians(70));
 
     private ExtraBob extraBob = new ExtraBob(10F* Settings.scale, 3F, 30F);
 
@@ -38,9 +38,9 @@ public class IncendiumRune extends RuneOrb {
             img3 = ImageMaster.loadImage("runesmith/images/orbs/Incendium/Incen3.png");
         }
 
-        if(potential > getOverchargeAmt()){
-            isOvercharged = true;
-        }
+//        if(potential > getOverchargeAmt()){
+//            isOvercharged = true;
+//        }
     }
 
     @Override
@@ -72,7 +72,7 @@ public class IncendiumRune extends RuneOrb {
         this.activateEffect();
     }
 
-    float[] ft = new float[3],dX = new float[3], dY = new float[3];
+    private float[] ft = new float[3],dX = new float[3], dY = new float[3];
 
     @Override
     public void render(SpriteBatch sb) {
@@ -82,8 +82,8 @@ public class IncendiumRune extends RuneOrb {
         ft[2] = this.extraBob.y3;
 
         for(int i=0;i<3;i++){
-            dX[i] = -ft[i]/(1+this.slope);
-            dY[i] = ft[i]/(1+1/this.slope);
+            dX[i] = -ft[i]/(1+ slope);
+            dY[i] = ft[i]/(1+1/ slope);
         }
         if(potential >= TIER1){
         sb.draw(img1, this.cX - 48.0F + this.bobEffect.y / 4.0F + dX[0]
@@ -101,8 +101,7 @@ public class IncendiumRune extends RuneOrb {
                     , 48.0F, 48.0F, 96.0F, 96.0F, this.scale, this.scale, 0.0F, 0, 0, 96, 96, false, false);
         }
 
-       renderText(sb);
-        this.hb.render(sb);
+        renderOthers(sb);
     }
 
     @Override
@@ -140,8 +139,7 @@ public class IncendiumRune extends RuneOrb {
         return new IncendiumRune(this.potential);
     }
 
-    @Override
-    public int getOverchargeAmt(){
-        return OVERCHARGE_MULT * basePotency;
-    }
+//    public static int getOverchargeAmt(){
+//        return OVERCHARGE_MULT * basePotency;
+//    }
 }

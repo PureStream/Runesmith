@@ -1,5 +1,6 @@
 package runesmith.orbs;
 
+import basemod.helpers.TooltipInfo;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
@@ -12,15 +13,22 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.helpers.MathHelper;
+import com.megacrit.cardcrawl.helpers.TipHelper;
+import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.vfx.combat.OrbFlareEffect;
 import com.megacrit.cardcrawl.vfx.combat.PlasmaOrbActivateEffect;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import runesmith.RunesmithMod;
 import runesmith.actions.BreakRuneAction;
 import runesmith.patches.PlayerRuneField;
 import runesmith.powers.ArcReactorPower;
 import runesmith.powers.PotentialPower;
 import runesmith.relics.PocketReactor;
+import runesmith.utils.MultiTipRender;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,11 +46,17 @@ public abstract class RuneOrb extends AbstractOrb {
     public boolean useMultiBreak = false;
     boolean showPotentialValue = true;
     boolean showBreakValue = false;
-    static int OVERCHARGE_MULT = 8;
-    boolean isOvercharged = false;
+    //boolean doRenderTip = false;
+//    static int OVERCHARGE_MULT = 8;
+//    boolean isOvercharged = false;
     protected int potential;
     private String[] descriptions;
     protected Color tc;
+    private TooltipInfo tip = new TooltipInfo(this.name,this.description);
+    private ArrayList<TooltipInfo> tips = new ArrayList<>();
+
+    private static UIStrings overcharge;
+    private static TooltipInfo overchargeTip;
 
     public RuneOrb(String ID, boolean upgraded, int potential) {
         this.ID = ID;
@@ -55,6 +69,10 @@ public abstract class RuneOrb extends AbstractOrb {
 
         this.descriptions = CardCrawlGame.languagePack.getOrbString(this.ID).DESCRIPTION;
         this.name = CardCrawlGame.languagePack.getOrbString(this.ID).NAME;
+        if(overcharge == null){
+            overcharge = CardCrawlGame.languagePack.getUIString("Runesmith:RuneOvercharged");
+            overchargeTip = new TooltipInfo(overcharge.TEXT[0],overcharge.TEXT[1]);
+        }
         if (this.upgraded) {
             this.name = this.name + "+";
         }
@@ -192,11 +210,7 @@ public abstract class RuneOrb extends AbstractOrb {
         return (potency>=0) ? potency : 0;
     }
 
-    public void onStartOfTurn() {
-        if(isOvercharged){
-            AbstractDungeon.actionManager.addToTop(new BreakRuneAction(this));
-        }
-    }
+    public void onStartOfTurn() {    }
 
     public void onCraft() {
 //        runeCount++;
@@ -207,10 +221,10 @@ public abstract class RuneOrb extends AbstractOrb {
             int decAmount = arcPower.amount2;
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PotentialPower(p, -decAmount), -decAmount));
         }
-        //TODO: implement proper visual effect for overcharge
-        if(isOvercharged){
-            this.c = Color.RED.cpy();
-        }
+
+//        if(isOvercharged){
+//            this.c = Color.RED.cpy();
+//        }
     }
 
     public void onBreak() {
@@ -250,6 +264,19 @@ public abstract class RuneOrb extends AbstractOrb {
         }
     }
 
+    public static final Logger logger = LogManager.getLogger(RunesmithMod.class.getName());
+
+//    private void renderTips(SpriteBatch sb){
+//        tips.clear();
+//        tip.title = this.name; tip.description = this.description;
+//        tips.add(tip);
+////        if(isOvercharged){
+////            tips.add(overchargeTip);
+////        }
+//        MultiTipRender.renderMultiTip(sb, tips,this.tX + 96.0F * Settings.scale, this.tY + 64.0F * Settings.scale);
+//            //TipHelper.renderGenericTip(this.tX + 96.0F * Settings.scale, this.tY + 64.0F * Settings.scale, this.name, this.description);
+//    }
+
     @Override
     public void playChannelSFX() {
         CardCrawlGame.sound.play("AUTOMATON_ORB_SPAWN", 0.1F);
@@ -259,9 +286,15 @@ public abstract class RuneOrb extends AbstractOrb {
     public void render(SpriteBatch sb) {
         sb.setColor(this.c);
         sb.draw(img, this.cX - 48.0F + this.bobEffect.y / 4.0F, this.cY - 48.0F + this.bobEffect.y / 4.0F, 48.0F, 48.0F, 96.0F, 96.0F, this.scale, this.scale, 0.0F, 0, 0, 96, 96, false, false);
+        renderOthers(sb);
+    }
 
+    protected void renderOthers(SpriteBatch sb){
         renderText(sb);
         this.hb.render(sb);
+//        if(hb.hovered) {
+//            renderTips(sb);
+//        }
     }
 
     public static int getRuneCount() {
@@ -314,7 +347,4 @@ public abstract class RuneOrb extends AbstractOrb {
         return playerRune.getMaxRunes();
     }
 
-    public int getOverchargeAmt(){
-        return 0;
-    }
 }

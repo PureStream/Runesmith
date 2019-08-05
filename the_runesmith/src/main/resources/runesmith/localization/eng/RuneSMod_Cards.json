@@ -143,7 +143,7 @@
   },
   "Runesmith:ShiftingStrike": {
     "NAME": "Shifting Strike",
-    "DESCRIPTION": "Deal !D! damage. NL runesmith:Downgrade a card. NL Upgrade a card."
+    "DESCRIPTION": "Deal !D! damage. NL runesmith:Downgrade a card in your hand, then Upgrade one."
   },
   "Runesmith:ChaoticBlast": {
     "NAME": "Chaotic Blast",
@@ -221,8 +221,8 @@
   },
   "Runesmith:UnlimitedPower": {
     "NAME": "Unlimited Power",
-    "DESCRIPTION": "runesmith:Elements are no longer consumed for runesmith:Crafting.",
-    "UPGRADE_DESCRIPTION": "Innate. NL runesmith:Elements are no longer consumed for runesmith:Crafting."
+    "DESCRIPTION": "runesmith:Elements are no longer needed for runesmith:Crafting.",
+    "UPGRADE_DESCRIPTION": "Innate. NL runesmith:Elements are no longer needed for runesmith:Crafting."
   },
   "Runesmith:WhiteBalance": {
     "NAME": "White Balance",
@@ -354,7 +354,7 @@
   },
   "Runesmith:NegativeSpace": {
     "NAME": "Negative Space",
-    "DESCRIPTION": "Gain !B! Block. NL Gain 2 less Block for each active Rune. NL Deal !D! damage for each active Rune."
+    "DESCRIPTION": "Gain !B! Block, reduced by 2 Block for each active Rune. NL Deal !D! damage for each active Rune."
   },
   "Runesmith:Superposition": {
     "NAME": "Superposition",

@@ -38,7 +38,7 @@ public class CraftSpiculum extends AbstractRunicCard {
                 AbstractCard.CardRarity.UNCOMMON,
                 AbstractCard.CardTarget.SELF
         );
-
+//        this.overchargePot = SpiculumRune.getOverchargeAmt();
         this.potency = this.basePotency = POTENCY;
         this.tags.add(RS_CRAFT);
         this.exhaust = true;
@@ -46,6 +46,11 @@ public class CraftSpiculum extends AbstractRunicCard {
 
     public void applyPowers() {
         super.applyPowers();
+//        boolean prevCharge = this.isOvercharge;
+//        this.isOvercharge = this.potency > this.overchargePot;
+//        if(prevCharge!=this.isOvercharge){
+//            initializeDescription();
+//        }
         checkElements(IGNIS_AMT, 0, AQUA_AMT, true);
     }
 

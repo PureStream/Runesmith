@@ -245,13 +245,11 @@ public class RunesmithMod implements PostExhaustSubscriber,
 
     @Override
     public void receivePostDraw(AbstractCard arg0) {
-        // TODO Auto-generated method stub
 
     }
 
     @Override
     public void receivePowersModified() {
-        // TODO Auto-generated method stub
 
     }
 
@@ -439,7 +437,6 @@ public class RunesmithMod implements PostExhaustSubscriber,
 
     @Override
     public void receivePostDungeonInitialize() {
-        // TODO Auto-generated method stub
 
     }
 
@@ -469,7 +466,6 @@ public class RunesmithMod implements PostExhaustSubscriber,
 
     @Override
     public void receivePostExhaust(AbstractCard arg0) {
-        // TODO Auto-generated method stub
 
     }
 

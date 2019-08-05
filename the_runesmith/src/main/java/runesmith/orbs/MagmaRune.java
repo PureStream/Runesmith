@@ -27,8 +27,8 @@ public class MagmaRune extends RuneOrb {
 
     private BobEffect extraBobEffect1 = new BobEffect(22.0F * Settings.scale, 1F);
 
-    private float slope1 = (float) Math.tan(Math.toRadians(43));
-    private float slope2 = (float) Math.tan(Math.toRadians(-27));
+    private static float slope1 = (float) Math.tan(Math.toRadians(43));
+    private static float slope2 = (float) Math.tan(Math.toRadians(-27));
 
     private boolean[] drawloc = new boolean[4];
 
@@ -75,9 +75,9 @@ public class MagmaRune extends RuneOrb {
             remaining_slots--;
         }
 
-        if(potential > getOverchargeAmt()){
-            isOvercharged = true;
-        }
+//        if(potential > getOverchargeAmt()){
+//            isOvercharged = true;
+//        }
     }
 
     @Override
@@ -141,10 +141,10 @@ public class MagmaRune extends RuneOrb {
     public void render(SpriteBatch sb) {
         sb.setColor(this.c);
         float ft = this.extraBobEffect1.y;
-        float dX1 = ft / (1 + this.slope1);
-        float dY1 = ft / (1 + 1 / this.slope1);
-        float dX2 = - ft / (1 - this.slope2);
-        float dY2 = ft / (1 - 1 / this.slope2);
+        float dX1 = ft / (1 + slope1);
+        float dY1 = ft / (1 + 1 / slope1);
+        float dX2 = - ft / (1 - slope2);
+        float dY2 = ft / (1 - 1 / slope2);
 
         if (drawloc[0]) {
             sb.draw(img1, this.cX - 48.0F + this.bobEffect.y / 4.0F - dX2
@@ -170,8 +170,7 @@ public class MagmaRune extends RuneOrb {
                     , 48.0F, 48.0F, 96.0F, 96.0F, this.scale, this.scale, 0.0F, 0, 0, 96, 96, false, false);
 
         }
-        renderText(sb);
-        this.hb.render(sb);
+        renderOthers(sb);
     }
 
     @Override
@@ -180,8 +179,7 @@ public class MagmaRune extends RuneOrb {
         super.updateAnimation();
     }
 
-    @Override
-    public int getOverchargeAmt(){
-        return OVERCHARGE_MULT * basePotency;
-    }
+//    public static int getOverchargeAmt(){
+//        return OVERCHARGE_MULT * basePotency;
+//    }
 }

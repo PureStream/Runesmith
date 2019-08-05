@@ -39,7 +39,7 @@ public class CraftPotentia extends AbstractRunicCard {
                 AbstractCard.CardRarity.UNCOMMON,
                 AbstractCard.CardTarget.SELF
         );
-
+//        this.overchargePot = PotentiaRune.getOverchargeAmt();
         this.potency = this.basePotency = POTENCY;
         this.tags.add(RS_CRAFT);
 
@@ -47,6 +47,11 @@ public class CraftPotentia extends AbstractRunicCard {
 
     public void applyPowers() {
         super.applyPowers();
+//        boolean prevCharge = this.isOvercharge;
+//        this.isOvercharge = this.potency > this.overchargePot;
+//        if(prevCharge!=this.isOvercharge){
+//            initializeDescription();
+//        }
         checkElements(ELEMENT_AMT, ELEMENT_AMT, ELEMENT_AMT, true);
     }
 

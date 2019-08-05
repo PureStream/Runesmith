@@ -1,6 +1,7 @@
 package runesmith.cards.Runesmith;
 
 import basemod.abstracts.CustomCard;
+import basemod.helpers.TooltipInfo;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -14,16 +15,21 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.localization.UIStrings;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import runesmith.RunesmithMod;
 import runesmith.actions.ApplyElementsPowerAction;
 import runesmith.actions.ReduceElementsPowerAction;
 import runesmith.orbs.RuneOrb;
+import runesmith.patches.CardStasisStatus;
 import runesmith.patches.EnhanceCountField;
 import runesmith.powers.PotentialPower;
 import runesmith.powers.UnlimitedPowerPower;
 import runesmith.relics.PocketReactor;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static runesmith.ui.ElementsCounter.*;
 
@@ -39,7 +45,10 @@ public abstract class AbstractRunicCard extends CustomCard {
     public boolean potencyUpgraded;
     public boolean isPotencyModified;
 
-    int overchargePot;
+    protected int[] elementCost = new int[3];
+
+//    int overchargePot;
+//    boolean isOvercharge;
 
     public boolean isCraftable = false;
     boolean renderCraftable = true;
@@ -122,7 +131,7 @@ public abstract class AbstractRunicCard extends CustomCard {
         int runeCount = RuneOrb.getRuneCount();
         int maxRunes = RuneOrb.getMaxRune(p);
 
-        if (this.freeElementOnce || p.hasRelic(PocketReactor.ID)) {
+        if (this.freeElementOnce || p.hasPower(UnlimitedPowerPower.POWER_ID) || p.hasRelic(PocketReactor.ID)) {
             if (this.freeElementOnce && !checkOnly)
                 freeElementOnce = false;
 
@@ -141,7 +150,7 @@ public abstract class AbstractRunicCard extends CustomCard {
             if (!checkOnly) {
                 if (runeCount >= maxRunes && !isPotentia)
                     AbstractDungeon.actionManager.addToBottom(new ApplyElementsPowerAction(p, p, ignis, terra, aqua));
-                else if(!p.hasPower(UnlimitedPowerPower.POWER_ID)) //preserve elements if unlimited power is active
+                else
                     AbstractDungeon.actionManager.addToBottom(new ReduceElementsPowerAction(ignis, terra, aqua));
             }
             if (checkOnly)
@@ -182,6 +191,25 @@ public abstract class AbstractRunicCard extends CustomCard {
         }
     }
 
+    //TODO: Implement element costs rendering
+    private void renderElementsCost(SpriteBatch sb){
+        float drawX = this.current_x - 256.0F;
+        float drawY = this.current_y - 256.0F;
+
+        if (AbstractDungeon.player != null) {
+            if (this.isCraftable && this.renderCraftable) {
+                this.renderHelper(sb, this.renderColor, craftableTab, drawX, drawY);
+                BitmapFont font = FontHelper.menuBannerFont;
+                font.getData().setScale(1.0F);
+                GlyphLayout gl = new GlyphLayout(font, craftableString[0]);
+                float scale = Math.min((82.0F*this.drawScale)/gl.width, (15.0F*this.drawScale)/gl.height);
+                FontHelper.menuBannerFont.getData().setScale(scale*Settings.scale);
+                FontHelper.renderRotatedText(sb, FontHelper.menuBannerFont, craftableString[0], this.current_x, this.current_y, 0.0F, 429.0F * Settings.scale * this.drawScale / 2.0F, this.angle, true, this.textColor);
+                FontHelper.menuBannerFont.getData().setScale(1.0F);
+            }
+        }
+    }
+
     @Override
     public void onMoveToDiscard() {
         this.isCraftable = false;
@@ -200,4 +228,20 @@ public abstract class AbstractRunicCard extends CustomCard {
         }
     }
 
+//    public boolean isOvercharge(){return this.isOvercharge;}
+
+//    private List<TooltipInfo> tips = new ArrayList<>();
+//    private static final UIStrings overchargeTip1 = CardCrawlGame.languagePack.getUIString("Runesmith:Overcharged");
+//    private static final UIStrings overchargeTip2 = CardCrawlGame.languagePack.getUIString("Runesmith:OverchargeAt");
+
+//    @Override
+//    public List<TooltipInfo> getCustomTooltips() {
+//        this.tips.clear();
+//        if(this.isOvercharge){
+//            tips.add(new TooltipInfo(overchargeTip1.TEXT[0], overchargeTip1.TEXT[1]));
+//        }else{
+//            tips.add(new TooltipInfo(overchargeTip2.TEXT[0], overchargeTip2.TEXT[1].replace("{pot}", this.overchargePot+"")));
+//        }
+//        return this.tips;
+//    }
 }

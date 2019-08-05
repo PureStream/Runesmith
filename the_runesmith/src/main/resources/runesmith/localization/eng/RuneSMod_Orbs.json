@@ -39,8 +39,8 @@
   "Prismatic": {
     "NAME": "Prismatic",
     "DESCRIPTION": [
-      "At the start of turn, gain a random card. It costs #b0 this turn.",
-      "At the start of turn, gain a random #yUpgraded card. It costs #b0 this turn."
+      "At the start of turn, add a random card into your hand. It costs #b0 that turn.",
+      "At the start of turn, add a random #yUpgraded cardinto your hand. It costs #b0 that turn."
     ]
   },
   "Industria": {
@@ -53,7 +53,7 @@
   "Medicinae": {
     "NAME": "Medicinae",
     "DESCRIPTION": [
-      "At the end of combat, heals #b{Pot2} HP. NL #yBreak: Heals #b{Pot} HP twice."
+      "At the end of combat, heals #b{Pot2} HP. NL #yBreak: Heals #b{Pot} HP."
     ]
   },
   "Dud": {

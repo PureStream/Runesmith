@@ -80,5 +80,32 @@
     "TEXT": [
       "Craftable"
     ]
+  },
+  "Runesmith:CardOvercharged": {
+    "TEXT": [
+      "[#DB2824]Overcharged[]",
+      "Don't translate this"
+    ]
+  },
+  "Runesmith:Overcharged": {
+    "TEXT": [
+      "[#DB2824]Overcharged[]",
+      "[#DB2824]Overcharged[] Rune has too much #yPotency and will #yBreak itself at the start of your turn.",
+      "Don't translate this"
+    ]
+  },
+  "Runesmith:RuneOvercharged": {
+    "TEXT": [
+      "[#DB2824]Overcharged[]",
+      "This Rune has too much #yPotency and will #yBreak itself at the start of your turn.",
+      "Don't translate this"
+    ]
+  },
+  "Runesmith:OverchargeAt": {
+    "TEXT": [
+      "[#DB2824]Overcharge[]",
+      "This Rune [#DB2824]Overcharges[] at {pot} #yPotency.",
+      "Don't translate this"
+    ]
   }
 }

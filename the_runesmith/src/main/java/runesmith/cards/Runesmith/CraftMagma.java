@@ -38,13 +38,18 @@ public class CraftMagma extends AbstractRunicCard {
                 AbstractCard.CardRarity.COMMON,
                 AbstractCard.CardTarget.SELF
         );
-
+//        this.overchargePot = MagmaRune.getOverchargeAmt();
         this.potency = this.basePotency = POTENCY;
         this.tags.add(RS_CRAFT);
     }
 
     public void applyPowers() {
         super.applyPowers();
+//        boolean prevCharge = this.isOvercharge;
+//        this.isOvercharge = this.potency > this.overchargePot;
+//        if(prevCharge!=this.isOvercharge){
+//            initializeDescription();
+//        }
         checkElements(IGNIS_AMT, TERRA_AMT, 0, true);
     }
 

@@ -40,12 +40,9 @@ public class MetallurgicalResearch extends CustomCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-//        AbstractDungeon.actionManager.addToBottom(
-//                new DowngradeEntireDeckAction(p)
-//        );
-        if (!p.hasPower(MetallurgicalResearchPower.POWER_ID))
-            AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p,
-                    new MetallurgicalResearchPower(p, this.magicNumber), this.magicNumber));
+
+        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p,
+                new MetallurgicalResearchPower(p, this.magicNumber), this.magicNumber));
     }
 
     public AbstractCard makeCopy() {

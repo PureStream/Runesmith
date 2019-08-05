@@ -79,9 +79,9 @@ public class ProtectioRune extends RuneOrb {
             }
             remaining_slots--;
         }
-        if(potential > getOverchargeAmt()){
-            isOvercharged = true;
-        }
+//        if(potential > getOverchargeAmt()){
+//            isOvercharged = true;
+//        }
     }
 
     @Override
@@ -125,7 +125,7 @@ public class ProtectioRune extends RuneOrb {
         }
         this.currOffset = this.extraBobEffect1.y;
         float dX1 = 0F, dY1 = 0F, dX2 = 0F, dY2 = 0F, dX3 = 0F, dY3 = 0F;
-        float offset = this.extraBobEffect1.y + dist;
+        float offset = this.extraBobEffect1.y + dist * Settings.scale;
         switch(status){
             case 0: dX1 = offset / (1 + slope1);
                     //dY1 = - offset / (1 + 1 / slope1);
@@ -167,8 +167,7 @@ public class ProtectioRune extends RuneOrb {
                     this.cY - 48.0F + this.bobEffect.y / 4.0F - dY1 - dY2 - dY3
                     , 48.0F, 48.0F, 96.0F, 96.0F, this.scale, this.scale, 0.0F, 0, 0, 96, 96, false, false);
         }
-        renderText(sb);
-        this.hb.render(sb);
+        renderOthers(sb);
     }
 
     @Override
@@ -177,8 +176,7 @@ public class ProtectioRune extends RuneOrb {
         super.updateAnimation();
     }
 
-    @Override
-    public int getOverchargeAmt(){
-        return OVERCHARGE_MULT * basePotency;
-    }
+//    public static int getOverchargeAmt(){
+//        return OVERCHARGE_MULT * basePotency;
+//    }
 }

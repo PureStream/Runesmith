@@ -36,6 +36,7 @@ public class ReplicatingBarrier extends AbstractRunicCard {
                 CardRarity.RARE,
                 CardTarget.SELF
         );
+//        this.overchargePot = ProtectioRune.getOverchargeAmt();
         this.renderCraftable = false;
         this.basePotency = this.potency = POTENCY_AMT;
     }
@@ -43,6 +44,11 @@ public class ReplicatingBarrier extends AbstractRunicCard {
     @Override
     public void applyPowers() {
         super.applyPowers();
+//        boolean prevCharge = this.isOvercharge;
+//        this.isOvercharge = this.potency > this.overchargePot;
+//        if(prevCharge!=this.isOvercharge){
+//            initializeDescription();
+//        }
         checkElements(0, TERRA_AMT, 0, true);
     }
 

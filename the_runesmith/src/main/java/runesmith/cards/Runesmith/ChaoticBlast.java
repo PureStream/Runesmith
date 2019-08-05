@@ -47,7 +47,7 @@ public class ChaoticBlast extends AbstractRunicCard {
     @Override
     public void applyPowers() {
         super.applyPowers();
-        checkElements(this.magicNumber, this.magicNumber, this.magicNumber, true, false, true);
+        checkElements(this.magicNumber, this.magicNumber, this.magicNumber, true, false);
         this.rawDescription = DESCRIPTION;
         if (this.magicNumber > 1)
             this.rawDescription += EXTENDED_DESCRIPTION[1];
@@ -62,7 +62,7 @@ public class ChaoticBlast extends AbstractRunicCard {
         AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect.NONE));
 
         int playerPot = (p.hasPower(POTENTIAL_ID)) ? p.getPower(POTENTIAL_ID).amount : 0;
-        if (checkElements(this.magicNumber, this.magicNumber, this.magicNumber, false, false, true))
+        if (checkElements(this.magicNumber, this.magicNumber, this.magicNumber, false, false))
             for (int i=0; i<this.magicNumber; i++)
                 AbstractDungeon.actionManager.addToBottom(new RuneChannelAction(RuneOrb.getRandomRune(AbstractDungeon.cardRandomRng, playerPot)));
     }

@@ -37,7 +37,7 @@ public class CraftProtectio extends AbstractRunicCard {
                 AbstractCard.CardRarity.COMMON,
                 AbstractCard.CardTarget.SELF
         );
-
+//        this.overchargePot = ProtectioRune.getOverchargeAmt();
         this.basePotency = POTENCY;
         this.potency = this.basePotency;
         this.tags.add(RS_CRAFT);
@@ -46,6 +46,11 @@ public class CraftProtectio extends AbstractRunicCard {
 
     public void applyPowers() {
         super.applyPowers();
+//        boolean prevCharge = this.isOvercharge;
+//        this.isOvercharge = this.potency > this.overchargePot;
+//        if(prevCharge!=this.isOvercharge){
+//            initializeDescription();
+//        }
         checkElements(0, TERRA_AMT, 0, true);
     }
 

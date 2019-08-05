@@ -18,7 +18,7 @@ public class BrokenRuby extends CustomRelic {
     private static final String IMG = "runesmith/images/relics/BrokenRuby.png"; //<--------- Need some img
     private static final String IMG_O = "runesmith/images/relics/BrokenRuby_o.png";
     private static final int IGNIS_AMT = 2;
-    private static final int NUM_CARDS = 2;
+//    private static final int NUM_CARDS = 2;
 
     public BrokenRuby() {
         super(ID, TextureLoader.getTexture(IMG), TextureLoader.getTexture(IMG_O), RelicTier.STARTER, LandingSound.CLINK);
@@ -29,7 +29,7 @@ public class BrokenRuby extends CustomRelic {
     }
 
     public void atBattleStart() {
-        setCounter(0);
+//        setCounter(0);
         AbstractPlayer p = AbstractDungeon.player;
         flash();
         AbstractDungeon.actionManager.addToTop(new ApplyElementsPowerAction(p, p, IGNIS_AMT, 0, 0));
@@ -37,18 +37,18 @@ public class BrokenRuby extends CustomRelic {
     }
 
     public void atTurnStartPostDraw() {
-        if (this.counter >= NUM_CARDS) {
+//        if (this.counter >= NUM_CARDS) {
             AbstractDungeon.actionManager.addToBottom(new FortifyAction(false));
             flash();
             AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        }
-        setCounter(0);
+//        }
+//        setCounter(0);
     }
 
-    public void onUseCard(AbstractCard card, UseCardAction useCardAction) {
-        if (card.type == AbstractCard.CardType.ATTACK)
-            this.counter += 1;
-    }
+//    public void onUseCard(AbstractCard card, UseCardAction useCardAction) {
+//        if (card.type == AbstractCard.CardType.ATTACK)
+//            this.counter += 1;
+//    }
 
 //    @Override
 //    public void onAfterUseCard(AbstractCard card, UseCardAction useCardAction) {
@@ -66,9 +66,9 @@ public class BrokenRuby extends CustomRelic {
 //        }
 //    }
 
-	public void onVictory() {
-		setCounter(-1);
-	}
+//	public void onVictory() {
+//		setCounter(-1);
+//	}
 
     public AbstractRelic makeCopy() {
         return new BrokenRuby();

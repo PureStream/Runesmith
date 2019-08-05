@@ -28,7 +28,7 @@
       "NAMES": [
         "potency"
       ],
-      "DESCRIPTION": "Potency is the power of a rune when it is #yCrafted."
+      "DESCRIPTION": "Potency is the power of a Rune when it is #yCrafted."
     },
     {
       "PROPER_NAME": "Craft",
@@ -37,7 +37,7 @@
         "crafted",
         "crafting"
       ],
-      "DESCRIPTION": "Create a rune using #yElements. If rune cannot be crafted, gain that many #yElements instead. You can have no more than 7 active runes."
+      "DESCRIPTION": "Create a Rune using #yElements. If the Rune cannot be crafted, gain that many #yElements instead. You can have no more than #b7 active Runes."
     },
     {
       "PROPER_NAME": "Elements",
@@ -48,7 +48,7 @@
         "terra",
         "aqua"
       ],
-      "DESCRIPTION": "Elements (Ignis, Terra and Aqua) are spent to #yCraft runes and are used for other utilities."
+      "DESCRIPTION": "Elements (Ignis, Terra and Aqua) are spent to #yCraft Runes and are used for other utilities."
     },
     {
       "PROPER_NAME": "Break",
@@ -56,7 +56,7 @@
         "break",
         "broken"
       ],
-      "DESCRIPTION": "Destroy a rune and activate its effect twice. Power-based effects will be removed before the start of your next turn."
+      "DESCRIPTION": "Destroy a Rune and activate its effect twice. Power-based effects will be removed before the start of your next turn."
     },
     {
       "PROPER_NAME": "Incendium",
@@ -134,6 +134,13 @@
         "ice-cold"
       ],
       "DESCRIPTION": "Decrease attack damage by #b1 per stack. Stack is reduced by #b1 at the end of turn. NL Remove #ySlow when stack reaches #b0."
+    },
+    {
+      "PROPER_NAME": "Overcharged",
+      "NAMES": [
+        "overcharged"
+      ],
+      "DESCRIPTION": "#rOvercharged Rune has too much #yPotency and will #yBreak itself at the start of your turn."
     }
   ]
 }
