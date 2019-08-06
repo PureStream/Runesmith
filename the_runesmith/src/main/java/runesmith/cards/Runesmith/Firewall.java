@@ -41,6 +41,7 @@ public class Firewall extends AbstractRunicCard {
                 AbstractCard.CardTarget.SELF
         );
 //        this.overchargePot = FirestoneRune.getOverchargeAmt();
+        this.elementCost = new int[]{IGNIS_AMT,0,0};
         this.baseBlock = this.block = BLOCK_AMT;
         this.basePotency = this.potency = POTENCY;
     }

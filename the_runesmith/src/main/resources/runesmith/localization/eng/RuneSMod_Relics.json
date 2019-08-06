@@ -3,7 +3,7 @@
     "NAME": "Broken Ruby",
     "FLAVOR": "A crystal that resembles a red gem. Although it is broken, faint energy still remains.",
     "DESCRIPTIONS": [
-      "At the start of each combat, gain #b2 #yrunesmith:Ignis. At the start of your turn, #yEnhance a random card in your hand."
+      "At the start of each combat, gain #b2 #yrunesmith:Ignis. NL At the start of your turn, #yEnhance a random card in your hand."
     ]
   },
   "Runesmith:MiniCore": {

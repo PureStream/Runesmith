@@ -44,6 +44,7 @@ public class ConstructBifrost extends AbstractRunicCard {
                 AbstractCard.CardRarity.RARE,
                 AbstractCard.CardTarget.SELF
         );
+        this.elementCost = new int[]{ELEMENT_AMT,ELEMENT_AMT,ELEMENT_AMT};
         this.tags.add(RS_CRAFT);
     }
 

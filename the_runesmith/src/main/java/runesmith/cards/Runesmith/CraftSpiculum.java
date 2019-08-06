@@ -22,8 +22,8 @@ public class CraftSpiculum extends AbstractRunicCard {
     public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
     private static final int COST = 0;
     private static final int POTENCY = 3;
-    private static final int UPGRADE_POTENCY = 2;
-    private static final int IGNIS_AMT = 1;
+    private static final int UPGRADE_POTENCY = 1;
+    private static final int IGNIS_AMT = 2;
     private static final int AQUA_AMT = 1;
 
     public CraftSpiculum() {
@@ -39,9 +39,10 @@ public class CraftSpiculum extends AbstractRunicCard {
                 AbstractCard.CardTarget.SELF
         );
 //        this.overchargePot = SpiculumRune.getOverchargeAmt();
+        this.elementCost = new int[]{IGNIS_AMT, 0, AQUA_AMT};
         this.potency = this.basePotency = POTENCY;
         this.tags.add(RS_CRAFT);
-        this.exhaust = true;
+//        this.exhaust = true;
     }
 
     public void applyPowers() {

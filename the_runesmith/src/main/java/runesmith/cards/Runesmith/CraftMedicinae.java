@@ -38,6 +38,7 @@ public class CraftMedicinae extends AbstractRunicCard implements NoStasisCard {
                 AbstractCard.CardTarget.SELF
         );
         this.tags.add(RS_CRAFT);
+        this.elementCost = new int[]{0,TERRA_AMT,0};
         this.potency = this.basePotency = POTENCY;
         this.exhaust = true;
         this.tags.add(AbstractCard.CardTags.HEALING);

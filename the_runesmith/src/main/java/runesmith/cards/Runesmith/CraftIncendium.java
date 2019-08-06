@@ -38,6 +38,7 @@ public class CraftIncendium extends AbstractRunicCard {
                 AbstractCard.CardTarget.SELF
         );
 //        this.overchargePot = IncendiumRune.getOverchargeAmt();
+        this.elementCost = new int[]{IGNIS_AMT,0,0};
         this.basePotency = POTENCY;
         this.potency = this.basePotency;
         this.tags.add(RS_CRAFT);

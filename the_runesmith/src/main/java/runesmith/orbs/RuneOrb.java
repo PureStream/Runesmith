@@ -52,11 +52,9 @@ public abstract class RuneOrb extends AbstractOrb {
     protected int potential;
     private String[] descriptions;
     protected Color tc;
-    private TooltipInfo tip = new TooltipInfo(this.name,this.description);
-    private ArrayList<TooltipInfo> tips = new ArrayList<>();
 
-    private static UIStrings overcharge;
-    private static TooltipInfo overchargeTip;
+//    private static UIStrings overcharge;
+//    private static TooltipInfo overchargeTip;
 
     public RuneOrb(String ID, boolean upgraded, int potential) {
         this.ID = ID;
@@ -69,10 +67,10 @@ public abstract class RuneOrb extends AbstractOrb {
 
         this.descriptions = CardCrawlGame.languagePack.getOrbString(this.ID).DESCRIPTION;
         this.name = CardCrawlGame.languagePack.getOrbString(this.ID).NAME;
-        if(overcharge == null){
-            overcharge = CardCrawlGame.languagePack.getUIString("Runesmith:RuneOvercharged");
-            overchargeTip = new TooltipInfo(overcharge.TEXT[0],overcharge.TEXT[1]);
-        }
+//        if(overcharge == null){
+//            overcharge = CardCrawlGame.languagePack.getUIString("Runesmith:RuneOvercharged");
+//            overchargeTip = new TooltipInfo(overcharge.TEXT[0],overcharge.TEXT[1]);
+//        }
         if (this.upgraded) {
             this.name = this.name + "+";
         }
@@ -190,8 +188,8 @@ public abstract class RuneOrb extends AbstractOrb {
                 potency = potencyCal(MagmaRune.basePotency, playerPotency);
                 return new MagmaRune(potency);
             case 6:
-                potency = potencyCal(PotentiaRune.basePotency, playerPotency);
-                return new PotentiaRune(potency);
+                potency = potencyCal(VitaeRune.basePotency, playerPotency);
+                return new VitaeRune(potency);
             case 7:
                 return new PrismaticRune();
             case 8:
@@ -289,7 +287,7 @@ public abstract class RuneOrb extends AbstractOrb {
         renderOthers(sb);
     }
 
-    protected void renderOthers(SpriteBatch sb){
+    void renderOthers(SpriteBatch sb){
         renderText(sb);
         this.hb.render(sb);
 //        if(hb.hovered) {

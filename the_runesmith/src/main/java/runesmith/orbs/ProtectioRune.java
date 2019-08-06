@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.vfx.BobEffect;
 
 public class ProtectioRune extends RuneOrb {
 
-    public static final int basePotency = 4;
+    public static final int basePotency = 3;
 
     private static Texture img1;
     private static Texture img2;
@@ -51,14 +51,12 @@ public class ProtectioRune extends RuneOrb {
         int rune_count;
 
         if(potential < 6){
-            rune_count = 1;
-        }else if(potential < 8){
             rune_count = 2;
-        }else if(potential < 12){
+        }else if(potential < 9){
             rune_count = 3;
-        }else if(potential < 16){
+        }else if(potential < 12){
             rune_count = 4;
-        }else if(potential < 20){
+        }else if(potential < 15){
             rune_count = 5;
         }else{
             rune_count = 6;

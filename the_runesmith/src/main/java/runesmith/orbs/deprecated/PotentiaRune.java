@@ -1,9 +1,10 @@
-package runesmith.orbs;
+package runesmith.orbs.deprecated;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
+import runesmith.orbs.RuneOrb;
 import runesmith.powers.PotentialDownPower;
 import runesmith.powers.PotentialPower;
 

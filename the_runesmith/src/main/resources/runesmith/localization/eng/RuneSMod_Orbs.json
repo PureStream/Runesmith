@@ -73,5 +73,11 @@
     "DESCRIPTION": [
       "At the end of turn, enemy with highest attack intent loses #b{Pot} #yStrength this turn."
     ]
+  },
+  "Vitae": {
+    "NAME": "Vitae",
+    "DESCRIPTION": [
+      "Lose #yPotency of this rune instead of HP. NL #yBreak: Gain #b{Pot} #yBlock twice."
+    ]
   }
 }

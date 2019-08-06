@@ -45,13 +45,14 @@ public class CraftReservo extends AbstractRunicCard {
                 AbstractCard.CardTarget.SELF
         );
         this.tags.add(RS_CRAFT);
-        this.exhaust = true;
-        this.baseMagicNumber = this.magicNumber = AQUA_AMT;
+        this.elementCost = new int[]{0,0,AQUA_AMT};
+//        this.exhaust = true;
+//        this.baseMagicNumber = this.magicNumber = AQUA_AMT;
     }
 
     public void applyPowers() {
         super.applyPowers();
-        checkElements(0, 0, this.magicNumber, true);
+        checkElements(0, 0, AQUA_AMT, true);
     }
 
     @Override

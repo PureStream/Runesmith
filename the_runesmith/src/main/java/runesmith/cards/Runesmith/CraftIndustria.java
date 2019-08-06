@@ -47,6 +47,7 @@ public class CraftIndustria extends AbstractRunicCard {
                 AbstractCard.CardTarget.SELF
         );
         this.tags.add(RS_CRAFT);
+        this.elementCost = new int[]{0,0,AQUA_AMT};
 //        this.baseMagicNumber = this.magicNumber = AQUA_AMT;
     }
 

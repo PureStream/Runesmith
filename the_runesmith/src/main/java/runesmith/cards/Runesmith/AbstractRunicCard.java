@@ -8,6 +8,8 @@ import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.GlyphLayout;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
+import com.badlogic.gdx.math.Vector2;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.ExceptionHandler;
@@ -16,6 +18,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.UIStrings;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import runesmith.RunesmithMod;
@@ -27,7 +30,9 @@ import runesmith.patches.EnhanceCountField;
 import runesmith.powers.PotentialPower;
 import runesmith.powers.UnlimitedPowerPower;
 import runesmith.relics.PocketReactor;
+import runesmith.ui.ElementsCounter;
 
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -45,6 +50,8 @@ public abstract class AbstractRunicCard extends CustomCard {
     public boolean potencyUpgraded;
     public boolean isPotencyModified;
 
+    public static boolean alwaysFreeToCraft = false;
+
     protected int[] elementCost = new int[3];
 
 //    int overchargePot;
@@ -61,6 +68,8 @@ public abstract class AbstractRunicCard extends CustomCard {
     private Color textColor =  Settings.CREAM_COLOR.cpy();
     private static Texture craftableTab = ImageMaster.loadImage("runesmith/images/cardui/512/craftable_tag_blank.png");
     private static String[] craftableString = CardCrawlGame.languagePack.getUIString("Runesmith:Craftable").TEXT;
+
+    private static Texture ELEMENT_ORB_RED, ELEMENT_ORB_GREEN, ELEMENT_ORB_BLUE;
 
     @Override
     public void applyPowers() {
@@ -112,6 +121,26 @@ public abstract class AbstractRunicCard extends CustomCard {
         this.freeElementOnce = false;
     }
 
+    public int[] getElementCost(){ return elementCost;}
+
+    private boolean hasEnoughElement(Elements elem){
+        if(this.freeElementOnce || alwaysFreeToCraft){
+            return true;
+        }
+        switch (elem){
+            case IGNIS: return elementCost[0] <= ElementsCounter.getIgnis();
+            case TERRA: return elementCost[1] <= ElementsCounter.getTerra();
+            case AQUA:  return elementCost[2] <= ElementsCounter.getAqua();
+            default: return false;
+        }
+    }
+
+    public static boolean checkAlwaysFreeToCraft(){
+        AbstractPlayer p = AbstractDungeon.player;
+        alwaysFreeToCraft = p.hasRelic(PocketReactor.ID)||p.hasPower(UnlimitedPowerPower.POWER_ID);
+        return alwaysFreeToCraft;
+    }
+
     public boolean checkElements(int ignis, int terra, int aqua) {
         return checkElements(ignis, terra, aqua, false, false, false);
     }
@@ -131,12 +160,12 @@ public abstract class AbstractRunicCard extends CustomCard {
         int runeCount = RuneOrb.getRuneCount();
         int maxRunes = RuneOrb.getMaxRune(p);
 
-        if (this.freeElementOnce || p.hasPower(UnlimitedPowerPower.POWER_ID) || p.hasRelic(PocketReactor.ID)) {
+        if (this.freeElementOnce || alwaysFreeToCraft) {
             if (this.freeElementOnce && !checkOnly)
                 freeElementOnce = false;
 
-            if (runeCount >= maxRunes && !checkOnly && !isPotentia)
-                AbstractDungeon.actionManager.addToBottom(new ApplyElementsPowerAction(p, p, ignis, terra, aqua));
+//            if (runeCount >= maxRunes && !checkOnly && !isPotentia)
+//                AbstractDungeon.actionManager.addToBottom(new ApplyElementsPowerAction(p, p, ignis, terra, aqua));
 
             this.isCraftable = true;
 
@@ -169,15 +198,17 @@ public abstract class AbstractRunicCard extends CustomCard {
     public void render(SpriteBatch sb, boolean selected) {
         super.render(sb, selected);
         if (!Settings.hideCards) {
-            renderCraftable(sb);
+            if(!isFlipped) {
+                renderCraftable(sb);
+//                renderElementsCost(sb);
+            }
         }
     }
 
     private void renderCraftable(SpriteBatch sb) {
-        float drawX = this.current_x - 256.0F;
-        float drawY = this.current_y - 256.0F;
-
         if (AbstractDungeon.player != null) {
+            float drawX = this.current_x - 256.0F;
+            float drawY = this.current_y - 256.0F;
             if (this.isCraftable && this.renderCraftable) {
                 this.renderHelper(sb, this.renderColor, craftableTab, drawX, drawY);
                 BitmapFont font = FontHelper.menuBannerFont;
@@ -191,23 +222,90 @@ public abstract class AbstractRunicCard extends CustomCard {
         }
     }
 
-    //TODO: Implement element costs rendering
-    private void renderElementsCost(SpriteBatch sb){
-        float drawX = this.current_x - 256.0F;
-        float drawY = this.current_y - 256.0F;
+    private static Color ENERGY_COST_RESTRICTED_COLOR, ENERGY_COST_MODIFIED_COLOR;
 
-        if (AbstractDungeon.player != null) {
-            if (this.isCraftable && this.renderCraftable) {
-                this.renderHelper(sb, this.renderColor, craftableTab, drawX, drawY);
-                BitmapFont font = FontHelper.menuBannerFont;
-                font.getData().setScale(1.0F);
-                GlyphLayout gl = new GlyphLayout(font, craftableString[0]);
-                float scale = Math.min((82.0F*this.drawScale)/gl.width, (15.0F*this.drawScale)/gl.height);
-                FontHelper.menuBannerFont.getData().setScale(scale*Settings.scale);
-                FontHelper.renderRotatedText(sb, FontHelper.menuBannerFont, craftableString[0], this.current_x, this.current_y, 0.0F, 429.0F * Settings.scale * this.drawScale / 2.0F, this.angle, true, this.textColor);
-                FontHelper.menuBannerFont.getData().setScale(1.0F);
+    private static void getColorConstants(){
+        Field f;
+        try {
+            f = AbstractCard.class.getDeclaredField("ENERGY_COST_RESTRICTED_COLOR");
+            f.setAccessible(true);
+            ENERGY_COST_RESTRICTED_COLOR = (Color) f.get(null);
+
+            f = AbstractCard.class.getDeclaredField("ENERGY_COST_MODIFIED_COLOR");
+            f.setAccessible(true);
+            ENERGY_COST_MODIFIED_COLOR = (Color) f.get(null);
+        } catch (NoSuchFieldException | IllegalAccessException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void renderElementsCost(AbstractRunicCard card, SpriteBatch sb){
+        float drawX = card.current_x - 256.0F;
+        float drawY = card.current_y - 256.0F;
+
+        if(ELEMENT_ORB_RED == null){
+            ELEMENT_ORB_RED = ImageMaster.loadImage("runesmith/images/cardui/512/card_element_orb_red.png");
+            ELEMENT_ORB_GREEN = ImageMaster.loadImage("runesmith/images/cardui/512/card_element_orb_green.png");
+            ELEMENT_ORB_BLUE = ImageMaster.loadImage("runesmith/images/cardui/512/card_element_orb_blue.png");
+        }
+
+        if(ENERGY_COST_MODIFIED_COLOR == null){
+            getColorConstants();
+        }
+        if(!card.isLocked && card.isSeen) {
+
+            float yOffset = 55.0F * Settings.scale * card.drawScale;
+            int counter = 0;
+            //logger.info("attempting render");
+            for (int i = 0; i < 3; i++) {
+                Texture tex;
+                Elements elem;
+                switch (i) {
+                    case 0:
+                        tex = ELEMENT_ORB_RED;
+                        elem = Elements.IGNIS;
+                        break;
+                    case 1:
+                        tex = ELEMENT_ORB_GREEN;
+                        elem = Elements.TERRA;
+                        break;
+                    case 2:
+                        tex = ELEMENT_ORB_BLUE;
+                        elem = Elements.AQUA;
+                        break;
+                    default:
+                        throw new IllegalStateException("Unexpected value: " + i);
+                }
+                if (card.elementCost[i] != 0) {
+                    Vector2 offset = new Vector2(0, -yOffset * counter);
+                    offset.rotate(card.angle);
+                    card.renderHelper(sb, card.renderColor, tex, drawX + offset.x, drawY + offset.y);
+
+                    String msg = card.elementCost[i] + "";
+                    Color costColor = Color.WHITE.cpy();
+                    if (AbstractDungeon.player != null && AbstractDungeon.player.hand.contains(card)){
+                        if (!card.hasEnoughElement(elem)) {
+                            costColor = ENERGY_COST_RESTRICTED_COLOR;
+                        } else if (alwaysFreeToCraft || card.freeElementOnce) {
+                            msg = "0";
+                            costColor = ENERGY_COST_MODIFIED_COLOR;
+                        }
+                    }
+                    costColor.a = card.transparency;
+
+                    FontHelper.renderRotatedText(sb, getElementFont(card), msg, card.current_x,
+                            card.current_y, -132.0F * card.drawScale * Settings.scale,
+                            129.0F * card.drawScale * Settings.scale - yOffset * counter, card.angle,
+                            true, costColor);
+                    counter++;
+                }
             }
         }
+    }
+
+    private static BitmapFont getElementFont(AbstractCard card) {
+        FontHelper.cardEnergyFont_L.getData().setScale(card.drawScale * 0.75f);
+        return FontHelper.cardEnergyFont_L;
     }
 
     @Override
@@ -227,6 +325,7 @@ public abstract class AbstractRunicCard extends CustomCard {
             ExceptionHandler.handleException(e, logger);
         }
     }
+
 
 //    public boolean isOvercharge(){return this.isOvercharge;}
 

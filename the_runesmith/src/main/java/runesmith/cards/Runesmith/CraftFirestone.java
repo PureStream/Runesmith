@@ -37,6 +37,7 @@ public class CraftFirestone extends AbstractRunicCard {
                 AbstractCard.CardRarity.BASIC,
                 AbstractCard.CardTarget.SELF
         );
+        this.elementCost = new int[]{IGNIS_AMT,0,0};
 //        this.overchargePot = FirestoneRune.getOverchargeAmt();
         this.potency = this.basePotency = POTENCY;
         this.tags.add(RS_CRAFT);

@@ -20,7 +20,7 @@ public class ReplicatingBarrier extends AbstractRunicCard {
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     public static final String IMG_PATH = "runesmith/images/cards/ReplicatingBarrier.png"; //<-------------- need some img
     private static final int COST = 1;
-    private static final int POTENCY_AMT = 3;
+    private static final int POTENCY_AMT = 2;
     private static final int UPG_POTENCY_AMT = 1;
     private static final int TERRA_AMT = 2;
 
@@ -37,6 +37,7 @@ public class ReplicatingBarrier extends AbstractRunicCard {
                 CardTarget.SELF
         );
 //        this.overchargePot = ProtectioRune.getOverchargeAmt();
+        this.elementCost = new int[]{0,TERRA_AMT,0};
         this.renderCraftable = false;
         this.basePotency = this.potency = POTENCY_AMT;
     }

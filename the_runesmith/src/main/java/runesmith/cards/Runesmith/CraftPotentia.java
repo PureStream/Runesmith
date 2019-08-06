@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import runesmith.actions.RemoveRuneAction;
 import runesmith.actions.RuneChannelAction;
-import runesmith.orbs.PotentiaRune;
+import runesmith.orbs.deprecated.PotentiaRune;
 import runesmith.orbs.RuneOrb;
 import runesmith.patches.AbstractCardEnum;
 
@@ -39,6 +39,7 @@ public class CraftPotentia extends AbstractRunicCard {
                 AbstractCard.CardRarity.UNCOMMON,
                 AbstractCard.CardTarget.SELF
         );
+        this.elementCost = new int[]{2,2,2};
 //        this.overchargePot = PotentiaRune.getOverchargeAmt();
         this.potency = this.basePotency = POTENCY;
         this.tags.add(RS_CRAFT);

@@ -8,7 +8,7 @@
 //import com.megacrit.cardcrawl.monsters.AbstractMonster;
 //import runesmith.actions.RuneChannelAction;
 //import runesmith.cards.Runesmith.AbstractRunicCard;
-//import runesmith.orbs.FerroRune;
+//import runesmith.orbs.deprecated.FerroRune;
 //import runesmith.patches.AbstractCardEnum;
 //
 //import static runesmith.patches.CardTagEnum.RS_CRAFT;

@@ -39,6 +39,7 @@ public class ChaoticBlast extends AbstractRunicCard {
                 CardRarity.UNCOMMON,
                 CardTarget.ALL_ENEMY
         );
+        this.elementCost = new int[]{ELEMENT_AND_RUNE_AMT,ELEMENT_AND_RUNE_AMT,ELEMENT_AND_RUNE_AMT};
         this.baseDamage = ATTACK_DMG;
         this.isMultiDamage = true;
         this.baseMagicNumber = this.magicNumber = ELEMENT_AND_RUNE_AMT;
@@ -76,6 +77,9 @@ public class ChaoticBlast extends AbstractRunicCard {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
             upgradeMagicNumber(ELEMENT_AND_RUNE_UPG_AMT);
+            this.elementCost = new int[]{ELEMENT_AND_RUNE_AMT+ELEMENT_AND_RUNE_UPG_AMT,
+                    ELEMENT_AND_RUNE_AMT+ELEMENT_AND_RUNE_UPG_AMT,
+                    ELEMENT_AND_RUNE_AMT+ELEMENT_AND_RUNE_UPG_AMT};
             this.rawDescription = DESCRIPTION + EXTENDED_DESCRIPTION[1];
             initializeDescription();
         }

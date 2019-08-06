@@ -16,7 +16,9 @@ import com.megacrit.cardcrawl.audio.Sfx;
 import com.megacrit.cardcrawl.audio.SoundMaster;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -24,6 +26,8 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import elementalist_mod.ElementalistMod;
 import org.apache.logging.log4j.LogManager;
@@ -34,6 +38,7 @@ import runesmith.helpers.PotencyVariable;
 import runesmith.orbs.MedicinaeRune;
 import runesmith.orbs.PlayerRune;
 import runesmith.orbs.RuneOrb;
+import runesmith.orbs.VitaeRune;
 import runesmith.patches.*;
 import runesmith.powers.PermafrostPower;
 import runesmith.relics.*;
@@ -62,7 +67,9 @@ public class RunesmithMod implements PostExhaustSubscriber,
         OnCardUseSubscriber,
         EditKeywordsSubscriber,
         OnPowersModifiedSubscriber,
+        PostPowerApplySubscriber,
         OnPlayerLoseBlockSubscriber,
+        RelicGetSubscriber,
         PostDrawSubscriber,
         PreMonsterTurnSubscriber,
         OnStartBattleSubscriber{
@@ -204,6 +211,19 @@ public class RunesmithMod implements PostExhaustSubscriber,
         return Gdx.files.internal(jsonPath).readString(String.valueOf(StandardCharsets.UTF_8));
     }
 
+    @Override
+    public void receivePostPowerApplySubscriber(AbstractPower abstractPower, AbstractCreature abstractCreature, AbstractCreature abstractCreature1) {
+        AbstractRunicCard.checkAlwaysFreeToCraft();
+    }
+
+
+    @Override
+    public void receiveRelicGet(AbstractRelic abstractRelic) {
+        if(abstractRelic instanceof PocketReactor){
+            AbstractRunicCard.alwaysFreeToCraft = true;
+        }
+    }
+
     class Keywords {
         KeywordWithProper[] keywords;
     }
@@ -250,7 +270,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
 
     @Override
     public void receivePowersModified() {
-
+        AbstractRunicCard.checkAlwaysFreeToCraft();
     }
 
     @Override
@@ -323,7 +343,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
         cardsToAdd.add(new DuctTape());
         cardsToAdd.add(new CraftReservo());
         cardsToAdd.add(new CraftSpiculum());
-        cardsToAdd.add(new CraftPotentia());
+//        cardsToAdd.add(new CraftPotentia());
         cardsToAdd.add(new ChaoticBlast());
         cardsToAdd.add(new MetallurgicalResearch());
         cardsToAdd.add(new GrandSlam());
@@ -362,7 +382,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
         cardsToAdd.add(new LightningRod());
         cardsToAdd.add(new CraftObretio());
         cardsToAdd.add(new Superposition());
-
+        cardsToAdd.add(new CraftVitae());
     }
 
     @Override
@@ -408,7 +428,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
                     hammerCards.addToBottom(card);
                 if (card.hasTag(RS_CHISEL))
                     chiselCards.addToBottom(card);
-                if(card.hasTag(RS_CRAFT))
+                if(card.hasTag(RS_CRAFT)&&!card.hasTag(AbstractCard.CardTags.HEALING))
                     craftCards.addToBottom(card);
             });
         }
@@ -452,6 +472,8 @@ public class RunesmithMod implements PostExhaustSubscriber,
         //Reset Elements gained count.
         ElementsGainedCountField.elementsCount.set(p, 0);
         ElementsCounter.resetElements();
+
+        AbstractRunicCard.checkAlwaysFreeToCraft();
     }
 
     @Override

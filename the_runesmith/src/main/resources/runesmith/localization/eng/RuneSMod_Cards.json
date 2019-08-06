@@ -108,8 +108,8 @@
   },
   "Runesmith:CraftReservo": {
     "NAME": "Craft Reservo",
-    "DESCRIPTION": "2 runesmith:Aqua: runesmith:Craft a [#EFC851]Reservo Rune. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "2 runesmith:Aqua: runesmith:Craft a [#EFC851]Reservo+ Rune. NL Exhaust."
+    "DESCRIPTION": "2 runesmith:Aqua: runesmith:Craft a [#EFC851]Reservo Rune.",
+    "UPGRADE_DESCRIPTION": "2 runesmith:Aqua: runesmith:Craft a [#EFC851]Reservo+ Rune."
   },
   "Runesmith:LithiumIon": {
     "NAME": "Lithium Ion",
@@ -126,7 +126,7 @@
   },
   "Runesmith:CraftSpiculum": {
     "NAME": "Craft Spiculum",
-    "DESCRIPTION": "1 runesmith:Ignis 1 runesmith:Aqua: runesmith:Craft a runesmith:Spiculum Rune with !RS:Pot! runesmith:Potency. NL Exhaust."
+    "DESCRIPTION": "1 runesmith:Ignis 1 runesmith:Aqua: runesmith:Craft a runesmith:Spiculum Rune with !RS:Pot! runesmith:Potency."
   },
   "Runesmith:CraftPotentia": {
     "NAME": "Craft Potentia",
@@ -359,5 +359,9 @@
   "Runesmith:Superposition": {
     "NAME": "Superposition",
     "DESCRIPTION": "Deal !D! damage. NL runesmith:Break your oldest Rune to gain !B! Block."
+  },
+  "Runesmith:CraftVitae": {
+    "NAME": "Craft Vitae",
+    "DESCRIPTION": "2 runesmith:Terra 1 runesmith:Aqua: runesmith:Craft a runesmith:Vitae Rune with !RS:Pot! runesmith:Potency."
   }
 }

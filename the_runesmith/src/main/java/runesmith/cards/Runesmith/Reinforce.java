@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import runesmith.actions.cards.EnchantAction;
+import runesmith.actions.cards.EnhanceAction;
 import runesmith.patches.AbstractCardEnum;
 
 public class Reinforce extends CustomCard {
@@ -39,7 +39,7 @@ public class Reinforce extends CustomCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, this.magicNumber));
-        AbstractDungeon.actionManager.addToBottom(new EnchantAction(upgraded));
+        AbstractDungeon.actionManager.addToBottom(new EnhanceAction(upgraded));
     }
 
     public AbstractCard makeCopy() {

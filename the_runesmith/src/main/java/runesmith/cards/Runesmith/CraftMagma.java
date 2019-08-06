@@ -24,7 +24,7 @@ public class CraftMagma extends AbstractRunicCard {
     private static final int POTENCY = 4;
     private static final int UPGRADE_PLUS_POT = 2;
     private static final int IGNIS_AMT = 2;
-    private static final int TERRA_AMT = 1;
+    private static final int TERRA_AMT = 2;
 
     public CraftMagma() {
         super(
@@ -39,6 +39,7 @@ public class CraftMagma extends AbstractRunicCard {
                 AbstractCard.CardTarget.SELF
         );
 //        this.overchargePot = MagmaRune.getOverchargeAmt();
+        this.elementCost = new int[]{IGNIS_AMT,TERRA_AMT,0};
         this.potency = this.basePotency = POTENCY;
         this.tags.add(RS_CRAFT);
     }

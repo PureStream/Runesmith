@@ -35,7 +35,7 @@ public class UnlimitedPower extends CustomCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (!p.hasPower("UnlimitedPowerPower"))
+        if (!p.hasPower(UnlimitedPowerPower.POWER_ID))
             AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p,
                     new UnlimitedPowerPower(p)));
     }

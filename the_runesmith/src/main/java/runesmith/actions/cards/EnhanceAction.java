@@ -8,11 +8,11 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import runesmith.RunesmithMod;
 import runesmith.actions.EnhanceCard;
 
-public class EnchantAction extends AbstractGameAction {
+public class EnhanceAction extends AbstractGameAction {
 
     private boolean isUpgraded;
 
-    public EnchantAction(boolean isUpgraded) {
+    public EnhanceAction(boolean isUpgraded) {
         this.duration = Settings.ACTION_DUR_MED;
         this.actionType = ActionType.WAIT;
         this.isUpgraded = isUpgraded;

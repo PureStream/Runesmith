@@ -21,8 +21,8 @@ public class CraftProtectio extends AbstractRunicCard {
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
     private static final int COST = 0;
-    private static final int POTENCY = 4;
-    private static final int UPGRADE_POTENCY = 2;
+    private static final int POTENCY = 3;
+    private static final int UPGRADE_POTENCY = 1;
     private static final int TERRA_AMT = 2;
 
     public CraftProtectio() {
@@ -38,6 +38,7 @@ public class CraftProtectio extends AbstractRunicCard {
                 AbstractCard.CardTarget.SELF
         );
 //        this.overchargePot = ProtectioRune.getOverchargeAmt();
+        this.elementCost = new int[]{0, TERRA_AMT, 0};
         this.basePotency = POTENCY;
         this.potency = this.basePotency;
         this.tags.add(RS_CRAFT);
