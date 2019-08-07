@@ -53,6 +53,9 @@ public class VitaeRune extends RuneOrb {
     }
 
     private void updateTier(){
+        for(int i= 0; i< drawLoc.length; i++){
+            drawLoc[0] = false;
+        }
         if(this.potential >= TIER1){
             drawLoc[0] = true;
         }

@@ -126,7 +126,7 @@
   },
   "Runesmith:CraftSpiculum": {
     "NAME": "Craft Spiculum",
-    "DESCRIPTION": "1 runesmith:Ignis 1 runesmith:Aqua: runesmith:Craft a runesmith:Spiculum Rune with !RS:Pot! runesmith:Potency."
+    "DESCRIPTION": "2 runesmith:Ignis 1 runesmith:Aqua: runesmith:Craft a runesmith:Spiculum Rune with !RS:Pot! runesmith:Potency."
   },
   "Runesmith:CraftPotentia": {
     "NAME": "Craft Potentia",
@@ -213,7 +213,7 @@
   },
   "Runesmith:CraftMagma": {
     "NAME": "Craft Magma",
-    "DESCRIPTION": "2 runesmith:Ignis 1 runesmith:Terra: runesmith:Craft a runesmith:Magma Rune with !RS:Pot! runesmith:Potency."
+    "DESCRIPTION": "2 runesmith:Ignis 2 runesmith:Terra: runesmith:Craft a runesmith:Magma Rune with !RS:Pot! runesmith:Potency."
   },
   "Runesmith:Retool": {
     "NAME": "Retool",
