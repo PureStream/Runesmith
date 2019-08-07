@@ -21,7 +21,7 @@ public class RemoveRuneAction extends AbstractGameAction {
     public void update() {
         if (this.duration == Settings.ACTION_DUR_FAST) {
             PlayerRune playerRune = PlayerRuneField.playerRune.get(AbstractDungeon.player);
-            playerRune.removeRune();
+            playerRune.removeRune(this.orb);
 //            AbstractDungeon.actionManager.addToTop(new RemoveRuneAndSlotAction(orb));
 
         }

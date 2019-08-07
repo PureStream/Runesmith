@@ -36,8 +36,8 @@
       "Gain #b{Pot} #yPotency. NL #yBreak: Gain another #b{Pot} #yPotency then lose twice that at the end of turn."
     ]
   },
-  "Prismatic": {
-    "NAME": "Prismatic",
+  "Prismatica": {
+    "NAME": "Prismatica",
     "DESCRIPTION": [
       "At the start of turn, add a random card into your hand. It costs #b0 that turn.",
       "At the start of turn, add a random #yUpgraded cardinto your hand. It costs #b0 that turn."

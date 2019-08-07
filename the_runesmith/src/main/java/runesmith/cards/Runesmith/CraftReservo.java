@@ -67,7 +67,7 @@ public class CraftReservo extends AbstractRunicCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (checkElements(0, 0, this.magicNumber)) {
+        if (checkElements(0, 0, AQUA_AMT)) {
             AbstractDungeon.actionManager.addToBottom(
                     new RuneChannelAction(
                             new ReservoRune(this.upgraded)));

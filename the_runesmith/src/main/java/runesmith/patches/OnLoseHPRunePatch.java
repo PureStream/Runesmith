@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import javassist.CtBehavior;
+import runesmith.effects.VitaeBlockedNumberEffect;
 import runesmith.orbs.PlayerRune;
 import runesmith.orbs.RuneOrb;
 import runesmith.orbs.VitaeRune;
@@ -32,12 +33,18 @@ public class OnLoseHPRunePatch {
         }
     }
 
+//    private static final float OFFSET_Y = -150.0F * Settings.scale;
+
     private static int reduceHpLoss(int i){
         AbstractPlayer p = AbstractDungeon.player;
         PlayerRune playerRune = PlayerRuneField.playerRune.get(p);
         for(RuneOrb r: playerRune.runes){
             if(r instanceof VitaeRune){
+                int pre = i;
                 i -= ((VitaeRune) r).losePotency(i);
+                if(pre > i){
+                    AbstractDungeon.effectList.add(new VitaeBlockedNumberEffect(r.hb.cX, r.hb.cY, pre - i + ""));
+                }
             }
         }
         return i;

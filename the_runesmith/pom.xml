@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>therunesmith</groupId>
     <artifactId>therunesmith</artifactId>
-    <version>v.0.7.0</version>
+    <version>0.7.0-pre3</version>
     <packaging>jar</packaging>
     <name>TheRunesmith</name>
     <description>runesmith</description>
@@ -27,7 +27,7 @@
         <dependency>
             <groupId>basemod</groupId>
             <artifactId>basemod</artifactId>
-            <version>5.12.0</version>
+            <version>5.15.1</version>
             <scope>system</scope>
             <systemPath>${Steam.path}/workshop/content/646570/1605833019/BaseMod.jar</systemPath>
         </dependency>
@@ -41,7 +41,7 @@
         <dependency>
             <groupId>com.evacipated.cardcrawl.mod</groupId>
             <artifactId>StSLib</artifactId>
-            <version>1.14.0</version>
+            <version>1.17.1</version>
             <scope>system</scope>
             <systemPath>${Steam.path}/workshop/content/646570/1609158507/StSLib.jar</systemPath>
         </dependency>

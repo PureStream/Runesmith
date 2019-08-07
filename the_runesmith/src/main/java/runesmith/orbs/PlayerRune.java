@@ -95,6 +95,20 @@ public class PlayerRune {
         }
     }
 
+    public void removeRune(RuneOrb r){
+        if(this.runes.size() > 0){
+            int index = this.runes.indexOf(r);
+            if(index >= 0) {
+                this.runes.get(0).onRemove();
+                this.runes.remove(0);
+
+                for (int i = 0; i < this.runes.size(); i++) {
+                    this.runes.get(i).setSlot(i, this.runes.size());
+                }
+            }
+        }
+    }
+
     public boolean hasRuneSpace(){
         return runes.size() < maxRunes;
     }

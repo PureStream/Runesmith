@@ -167,10 +167,10 @@
     "DESCRIPTION": "This turn, create a copy of the next Rune you runesmith:Craft.",
     "UPGRADE_DESCRIPTION": "This turn, create a copy of the next !M! Runes you runesmith:Craft."
   },
-  "Runesmith:ConstructBifrost": {
-    "NAME": "Construct Bifrost",
-    "DESCRIPTION": "2 of each runesmith:Element: runesmith:Craft a [#EFC851]Prismatic Rune.",
-    "UPGRADE_DESCRIPTION": "2 of each runesmith:Element: runesmith:Craft a [#EFC851]Prismatic+ Rune."
+  "Runesmith:CraftPrismatica": {
+    "NAME": "CraftPrismatica",
+    "DESCRIPTION": "2 of each runesmith:Element: runesmith:Craft a [#EFC851]Prismatica Rune.",
+    "UPGRADE_DESCRIPTION": "2 of each runesmith:Element: runesmith:Craft a [#EFC851]Prismatica+ Rune."
   },
   "Runesmith:CraftIndustria": {
     "NAME": "Craft Industria",

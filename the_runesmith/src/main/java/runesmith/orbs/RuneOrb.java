@@ -1,6 +1,5 @@
 package runesmith.orbs;
 
-import basemod.helpers.TooltipInfo;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
@@ -13,9 +12,6 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
-import com.megacrit.cardcrawl.helpers.MathHelper;
-import com.megacrit.cardcrawl.helpers.TipHelper;
-import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.vfx.combat.OrbFlareEffect;
@@ -23,14 +19,11 @@ import com.megacrit.cardcrawl.vfx.combat.PlasmaOrbActivateEffect;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import runesmith.RunesmithMod;
-import runesmith.actions.BreakRuneAction;
 import runesmith.patches.PlayerRuneField;
 import runesmith.powers.ArcReactorPower;
 import runesmith.powers.PotentialPower;
 import runesmith.relics.PocketReactor;
-import runesmith.utils.MultiTipRender;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -42,8 +35,11 @@ public abstract class RuneOrb extends AbstractOrb {
 //    private static final float ORB_WAVY_DIST = 0.04F;
 //    private static final float PI_4 = 12.566371F;
 
+    static float NUM_X_OFFSET = 30.0F * Settings.scale;
+    static float NUM_Y_OFFSET = -22.0F * Settings.scale;
+
     public boolean upgraded;
-    public boolean useMultiBreak = false;
+    protected boolean useMultiBreak = false;
     boolean showPotentialValue = true;
     boolean showBreakValue = false;
     //boolean doRenderTip = false;
@@ -51,7 +47,7 @@ public abstract class RuneOrb extends AbstractOrb {
 //    boolean isOvercharged = false;
     protected int potential;
     private String[] descriptions;
-    protected Color tc;
+    Color tc;
 
 //    private static UIStrings overcharge;
 //    private static TooltipInfo overchargeTip;
@@ -191,7 +187,7 @@ public abstract class RuneOrb extends AbstractOrb {
                 potency = potencyCal(VitaeRune.basePotency, playerPotency);
                 return new VitaeRune(potency);
             case 7:
-                return new PrismaticRune();
+                return new PrismaticaRune();
             case 8:
                 potency = potencyCal(ProtectioRune.basePotency, playerPotency);
                 return new ProtectioRune(potency);

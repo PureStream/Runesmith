@@ -167,7 +167,7 @@
     "DESCRIPTION": "이번 턴에 만드는 다음 룬 1개를 복제하여 runesmith:제련 합니다.",
     "UPGRADE_DESCRIPTION": "이번 턴에 만드는 다음 룬 !M! 개를 복제하여 runesmith:제련 합니다."
   },
-  "Runesmith:ConstructBifrost": {
+  "Runesmith:CraftPrismatica": {
     "NAME": "무지개다리 건설",
     "DESCRIPTION": "모든 runesmith:원소 2 : [#EFC851]프리즘 룬을 runesmith:제련 합니다.",
     "UPGRADE_DESCRIPTION": "모든 runesmith:원소 2 : [#EFC851]프리즘 룬을 runesmith:제련 합니다."

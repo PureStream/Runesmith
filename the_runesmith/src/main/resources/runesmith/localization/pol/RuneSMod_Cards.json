@@ -212,7 +212,7 @@
     "DESCRIPTION": "Podczas tej tury stwórz kopię następnej runy jaka zostanie runesmith:Wykuta.",
     "UPGRADE_DESCRIPTION": "Podczas tej tury stwórz kopię następnych !M! run jakie zostaną runesmith:Wykute."
   },
-  "Runesmith:ConstructBifrost": {
+  "Runesmith:CraftPrismatica": {
     "NAME": "Wykuj Bifrost",
     "DESCRIPTION": "1 z każdego runesmith:Żywiołu: runesmith:Wykuj runę [#EFC851]Kamień [#EFC851]Pryzmatu.",
     "UPGRADE_DESCRIPTION": "1 z każdego runesmith:Żywiołu: runesmith:Wykuj runę [#EFC851]Kamień [#EFC851]Pryzmatu+.",

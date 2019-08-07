@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.powers.BufferPower;
 import com.megacrit.cardcrawl.relics.ChemicalX;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import runesmith.actions.BreakRuneAction;
+import runesmith.orbs.DudRune;
 import runesmith.orbs.PlayerRune;
 import runesmith.orbs.RuneOrb;
 import runesmith.patches.PlayerRuneField;
@@ -54,9 +55,11 @@ public class GenerateForcefieldAction extends AbstractGameAction {
 
             int count = 0;
             for (RuneOrb rune : playerRune.runes) {
-                AbstractDungeon.actionManager.addToBottom(new BreakRuneAction(rune));
-                if (++count == breakNums)
-                    break;
+                if(!(rune instanceof DudRune)) {
+                    AbstractDungeon.actionManager.addToBottom(new BreakRuneAction(rune));
+                    if (++count == breakNums)
+                        break;
+                }
             }
 
             if (count > 0)

@@ -52,10 +52,10 @@
       "Your current #yAqua count. NL Can be spent to craft runes."
     ]
   },
-  "Runesmith:ConstructBifrost": {
+  "Runesmith:CraftPrismatica": {
     "TEXT": [
-      "Prismatic",
-      "Prismatic+",
+      "Prismatica",
+      "Prismatica+",
       "Rune: Add a random class card to your hand at the start of your turn. The card costs 0 for the turn.",
       "Rune: Add a random upgraded class card to your hand at the start of your turn. The card costs 0 for the turn."
     ]
