@@ -1,9 +1,9 @@
 {
   "Runesmith:BrokenRuby": {
-	"NAME": "부서진 루비",
-	"FLAVOR": "붉은 보석을 닮은 크리스탈입니다. 비록 부서졌지만 희미하나마 에너지가 남아있습니다.",
+    "NAME": "부서진 루비",
+    "FLAVOR": "붉은 보석을 닮은 크리스탈입니다. 비록 부서졌지만 희미하나마 에너지가 남아있습니다.",
     "DESCRIPTIONS": [
-      "전투 시작시 #yrunesmith:화염 을 2 얻습니다. 전 턴에 공격 카드를 #b2 장 이상 사용했다면 손에 있는 무작위 카드 1장을 #yrunesmith:향상 시킵니다."
+      "전투 시작시 #yrunesmith:화염 을 2 얻습니다. NL 매 턴 시작시, 내 손에 있는 무작위 카드 1장을 #yrunesmith:향상 시킵니다."
     ]
   },
   "Runesmith:MiniCore": {

@@ -168,7 +168,7 @@
     "UPGRADE_DESCRIPTION": "This turn, create a copy of the next !M! Runes you runesmith:Craft."
   },
   "Runesmith:CraftPrismatica": {
-    "NAME": "CraftPrismatica",
+    "NAME": "Craft Prismatica",
     "DESCRIPTION": "2 of each runesmith:Element: runesmith:Craft a [#EFC851]Prismatica Rune.",
     "UPGRADE_DESCRIPTION": "2 of each runesmith:Element: runesmith:Craft a [#EFC851]Prismatica+ Rune."
   },
@@ -288,7 +288,8 @@
   },
   "Runesmith:Accelerate": {
     "NAME": "Accelerate",
-    "DESCRIPTION": "Gain !B! Block. NL Draw 1 card. NL runesmith:Break your oldest Rune to draw !M! more cards."
+    "DESCRIPTION": "Gain !B! Block. NL Draw 1 card. NL runesmith:Break your oldest Rune to draw !M! more card.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Draw 1 card. NL runesmith:Break your oldest Rune to draw !M! more cards."
   },
   "Runesmith:NanitesCloud": {
     "NAME": "Nanites Cloud",
@@ -362,6 +363,6 @@
   },
   "Runesmith:CraftVitae": {
     "NAME": "Craft Vitae",
-    "DESCRIPTION": "2 runesmith:Terra 1 runesmith:Aqua: runesmith:Craft a runesmith:Vitae Rune with !RS:Pot! runesmith:Potency."
+    "DESCRIPTION": "1 runesmith:Ignis 2 runesmith:Terra: runesmith:Craft a runesmith:Vitae Rune with !RS:Pot! runesmith:Potency."
   }
 }

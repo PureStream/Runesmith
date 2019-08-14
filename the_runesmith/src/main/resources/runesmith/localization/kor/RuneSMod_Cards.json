@@ -108,8 +108,8 @@
   },
   "Runesmith:CraftReservo": {
     "NAME": "보존석 제련",
-    "DESCRIPTION": "runesmith:바다 2 : runesmith:보존석 을 runesmith:제련 합니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "runesmith:바다 2 : runesmith:보존석+ 을 runesmith:제련 합니다. NL 소멸."
+    "DESCRIPTION": "runesmith:바다 2 : [#EFC851]보존석 을 runesmith:제련 합니다.",
+    "UPGRADE_DESCRIPTION": "runesmith:바다 2 : [#EFC851]보존석+ 을 runesmith:제련 합니다."
   },
   "Runesmith:LithiumIon": {
     "NAME": "리튬 이온",
@@ -121,12 +121,12 @@
     "UPGRADE_DESCRIPTION": "선천성. NL 턴 시작시 runesmith:화염 !M! , runesmith:대지 !M! 을 얻습니다."
   },
   "Runesmith:RunicBlueprint": {
-     "NAME": "룬 청사진",
-    "DESCRIPTION": "무작위 runesmith:제련 카드를 손에 넣습니다. NL 이번 턴 동안 비용이 0이 되고 runesmith:원소 를 소모하지 않습니다. NL runesmith:바다 2 를 얻습니다. NL 소멸."
+    "NAME": "룬 청사진",
+    "DESCRIPTION": "무작위 runesmith:제련 카드를 손에 넣습니다. NL 가져온 카드는 이번 턴 동안 비용이 0이 되고 제련하는데 runesmith:원소 를 사용하지 않습니다. NL runesmith:바다 2 를 얻습니다. NL 소멸."
   },
   "Runesmith:CraftSpiculum": {
     "NAME": "미늘석 제련",
-    "DESCRIPTION": "runesmith:화염 1 runesmith:바다 1: !RS:Pot! runesmith:잠재력 을 가진 runesmith:미늘석 을 runesmith:제련 합니다. NL 소멸."
+    "DESCRIPTION": "runesmith:화염 2 runesmith:바다 1: !RS:Pot! runesmith:잠재력 을 가진 runesmith:미늘석 을 runesmith:제련 합니다."
   },
   "Runesmith:CraftPotentia": {
     "NAME": "잠재석 제련",
@@ -143,7 +143,7 @@
   },
   "Runesmith:ShiftingStrike": {
     "NAME": "속임수 타격",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 1장 runesmith:퇴화 시킵니다 NL 카드를 1장 강화 시킵니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 손에 있는 카드를 1장 runesmith:퇴화 시킨 뒤 다른 카드를 1장 선택하여 강화 시킵니다."
   },
   "Runesmith:ChaoticBlast": {
     "NAME": "혼돈의 폭발",
@@ -168,7 +168,7 @@
     "UPGRADE_DESCRIPTION": "이번 턴에 만드는 다음 룬 !M! 개를 복제하여 runesmith:제련 합니다."
   },
   "Runesmith:CraftPrismatica": {
-    "NAME": "무지개다리 건설",
+    "NAME": "프리즘 제련",
     "DESCRIPTION": "모든 runesmith:원소 2 : [#EFC851]프리즘 룬을 runesmith:제련 합니다.",
     "UPGRADE_DESCRIPTION": "모든 runesmith:원소 2 : [#EFC851]프리즘 룬을 runesmith:제련 합니다."
   },
@@ -213,16 +213,16 @@
   },
   "Runesmith:CraftMagma": {
     "NAME": "용암석 제련",
-    "DESCRIPTION": "runesmith:화염 2 runesmith:대지 1: !RS:Pot! runesmith:잠재력 을 가진 용암석 을 runesmith:제련 합니다."
+    "DESCRIPTION": "runesmith:화염 2 runesmith:대지 2: !RS:Pot! runesmith:잠재력 을 가진 용암석 을 runesmith:제련 합니다."
   },
   "Runesmith:Retool": {
     "NAME": "재정비",
     "DESCRIPTION": "내 버린 카드 더미에 있는 강화, runesmith:향상 된 카드를 모두 뽑을 카드 더미로 섞어 넣습니다. NL 카드를 !M! 장 뽑습니다."
   },
   "Runesmith:UnlimitedPower": {
-    "NAME": "끝 없는 힘으로",
-    "DESCRIPTION": "runesmith:제련 할 때 runesmith:원소 를 소비하지 않습니다.",
-    "UPGRADE_DESCRIPTION": "선천성. NL runesmith:제련 할 때 runesmith:원소 를 소비하지 않습니다."
+    "NAME": "무한한 힘",
+    "DESCRIPTION": "runesmith:제련 할 때 더 이상 runesmith:원소 를 사용하지 않습니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL runesmith:제련 할 때 더 이상 runesmith:원소 를 사용하지 않습니다."
   },
   "Runesmith:WhiteBalance": {
     "NAME": "화이트 밸런스",
@@ -288,7 +288,8 @@
   },
   "Runesmith:Accelerate": {
     "NAME": "가속",
-    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL 카드를 1장 뽑습니다. NL 가장 오래된 룬을 runesmith:파쇄 하고 카드를 !M! 장 더 뽑습니다."
+    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL 카드를 1장 뽑습니다. NL 가장 오래된 룬을 runesmith:파쇄 하고 카드를 !M! 장 더 뽑습니다.",
+    "UPGRADE_DESCRIPTION": "방어도 를 !B! 얻습니다. NL 카드를 1장 뽑습니다. NL 가장 오래된 룬을 runesmith:파쇄 하고 카드를 !M! 장 더 뽑습니다."
   },
   "Runesmith:NanitesCloud": {
     "NAME": "나노봇 대발생",
@@ -354,10 +355,14 @@
   },
   "Runesmith:NegativeSpace": {
     "NAME": "음의 공간",
-    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL 활성화 된 룬 하나 당 방어도 를 2 덜 얻습니다. NL 활성화 된 룬 하나 당 피해를 !D! 줍니다."
+    "DESCRIPTION": "방어도 를 !B! 얻고, 활성화 된 룬 하나 당 얻는 방어도가 2씩 감소합니다. NL 활성화 된 룬 하나 당 피해를 !D! 줍니다."
   },
   "Runesmith:Superposition": {
     "NAME": "중첩",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 가장 오래된 룬을 runesmith:파쇄 하고 방어도 를 !B! 얻습니다."
+  },
+  "Runesmith:CraftVitae": {
+    "NAME": "활력석 제련",
+    "DESCRIPTION": "runesmith:대지 2 , runesmith:바다 1 : !RS:Pot! 잠재력을 가진 runesmith:활력석 을 runesmith:제련 합니다."
   }
 }

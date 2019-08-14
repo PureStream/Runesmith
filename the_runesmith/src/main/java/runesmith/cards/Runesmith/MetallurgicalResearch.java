@@ -52,8 +52,8 @@ public class MetallurgicalResearch extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-//            upgradeBaseCost(COST_UPG);
             this.rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
             upgradeMagicNumber(UPG_WAIT_AMT);
         }
     }

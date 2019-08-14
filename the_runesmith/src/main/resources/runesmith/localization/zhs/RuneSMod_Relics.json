@@ -3,7 +3,7 @@
     "NAME": "破碎红宝石",
     "FLAVOR": "一种类似红色宝石的水晶。 虽然它被打破了，但仍然存在微弱的能量。",
     "DESCRIPTIONS": [
-      "每场战斗开始, 获得 #b2 点  #yrunesmith:火素 。 NL 如果你上回合打出至少 #b2 张 #y攻击牌 ，随机 #y强化 你的一张手牌。"
+      "每场战斗开始, 获得 #b2 点  #yrunesmith:火素 。 NL 每回合随机 #y强化 你的一张手牌。"
     ]
   },
   "Runesmith:MiniCore": {
@@ -37,9 +37,9 @@
   },
   "Runesmith:AutoHammer": {
     "NAME": "自动锤",
-    "FLAVOR": "永不停止锤击的自动锤。",
+    "FLAVOR": "永不停息。",
     "DESCRIPTIONS": [
-      "每回合内你每打出 #b3 张技能牌，随机 #yrunesmith:强化 一张你手牌。"
+      "每回合内你每打出 #b3 张 #y技能牌 ，随机 #yrunesmith:强化 一张你的手牌。"
     ]
   },
   "Runesmith:EmergencyProvisions": {
@@ -53,7 +53,7 @@
     "NAME": "袖珍反应堆",
     "FLAVOR": "",
     "DESCRIPTIONS": [
-      " #yrunesmith:元素 再用于 runesmith:打造。 所有的牌失去 #b2 点 #yrunesmith:动能 。"
+      " #yrunesmith:元素 不再需要 runesmith:打造。 所有的牌失去 #b2 点 #yrunesmith:动能 。"
     ]
   },
   "Runesmith:CoreCrystal": {

@@ -16,22 +16,17 @@
   },
   "Runesmith:CardEnhanced": {
     "TEXT": [
-      "强化"
+      "runesmith:强化"
     ]
   },
   "Runesmith:CardStasis": {
     "TEXT": [
-      "凝滞"
+      "runesmith:凝滞"
     ]
   },
   "Runesmith:DoubleUpAction": {
     "TEXT": [
       "升级并强化"
-    ]
-  },
-  "Runesmith:FlexTapeAction": {
-    "TEXT": [
-      "凝滞"
     ]
   },
   "Runesmith:StasisCardInDeckAction": {
@@ -61,8 +56,8 @@
     "TEXT": [
       "棱镜",
       "棱镜+",
-      "符文: 每回合给予你一个随机角色牌。这张牌本回合费用为零。",
-      "符文: 每回合给予你一个已 升级 的随机角色牌。这张牌本回合费用为零。"
+      "符文: 每回合将一张随机角色牌加入你的手牌。这张牌本回合费用为零。",
+      "符文: 每回合将一张已 #y升级 的随机角色牌加入你的手牌。这张牌本回合费用为零。"
     ]
   },
   "Runesmith:CraftReservo": {
@@ -78,7 +73,7 @@
       "工业",
       "工业+",
       "符文: 回合开始时获得 [E] 。",
-      "Rune: 回合开始时获得 [E] 并抽一张牌。"
+      "符文: 回合开始时获得 [E] 并抽一张牌。"
     ]
   },
   "Runesmith:Craftable": {

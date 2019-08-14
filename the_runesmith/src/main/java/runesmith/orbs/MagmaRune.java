@@ -121,7 +121,7 @@ public class MagmaRune extends RuneOrb {
         if (!this.showBreakValue && this.showPotentialValue) {
             //Block
             FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L,
-                    this.potential / 2 + "", this.cX + NUM_X_OFFSET, this.cY + this.bobEffect.y / 2.0F - NUM_Y_OFFSET,
+                    this.potential / 2 + "", this.cX + NUM_X_OFFSET, this.cY + this.bobEffect.y / 2.0F ,
                     new Color(0.4F, 0.5F, 0.9F, this.c.a), this.fontScale);
             //Damage
             FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L,
@@ -129,7 +129,7 @@ public class MagmaRune extends RuneOrb {
                     this.c, this.fontScale);
         }else if(this.showBreakValue && this.showPotentialValue){
             FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L,
-                    this.potential / 2 + "+" + this.potential / 2, this.cX + NUM_X_OFFSET, this.cY + this.bobEffect.y / 2.0F - NUM_Y_OFFSET,
+                    this.potential / 2 + "+" + this.potential / 2, this.cX + NUM_X_OFFSET, this.cY + this.bobEffect.y / 2.0F ,
                     new Color(0.4F, 0.5F, 0.9F, this.c.a), this.fontScale);
             FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L,
                     this.potential + "+" + this.potential, this.cX + NUM_X_OFFSET, this.cY + this.bobEffect.y / 2.0F + NUM_Y_OFFSET,
