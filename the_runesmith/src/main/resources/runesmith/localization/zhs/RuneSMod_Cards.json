@@ -358,7 +358,7 @@
   },
   "Runesmith:Superposition": {
     "NAME": "叠加",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL runesmith:凋零 你最先生成的符文以获得 !B! 点 格挡 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL runesmith:凋亡 你最先生成的符文以获得 !B! 点 格挡 。"
   },
 	"Runesmith:CraftVitae": {
     "NAME": "打造鲜血",

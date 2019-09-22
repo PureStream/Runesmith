@@ -222,58 +222,6 @@
       "DESCRIPTION": "Runa: Zyskaj #yBlok."
     },
     {
-      "PROPER_NAME": "Kamień rezerwy",
-      "NAMES": [
-        "kamień rezerwy",
-        "kamień_rezerwy",
-        "kamienia rezerwy",
-        "kamienia_rezerwy",
-        "kamieniowi rezerwy",
-        "kamieniowi_rezerwy",
-        "kamieniem rezerwy",
-        "kamieniem_rezerwy",
-        "kamieniu rezerwy",
-        "kamieniu_rezerwy",
-        "kamienie rezerwy",
-        "kamienie_rezerwy",
-        "kamieni rezerwy",
-        "kamieni_rezerwy",
-        "kamieniom rezerwy",
-        "kamieniom_rezerwy",
-        "kamieniami rezerwy",
-        "kamieniami_rezerwy",
-        "kamieniach rezerwy",
-        "kamieniach_rezerwy"
-      ],
-      "DESCRIPTION": "Runa: #yZachowaj kartę."
-    },
-    {
-      "PROPER_NAME": "Kamień rezerwy+",
-      "NAMES": [
-        "kamień rezerwy+",
-        "kamień_rezerwy+",
-        "kamienia rezerwy+",
-        "kamienia_rezerwy+",
-        "kamieniowi rezerwy+",
-        "kamieniowi_rezerwy+",
-        "kamieniem rezerwy+",
-        "kamieniem_rezerwy+",
-        "kamieniu rezerwy+",
-        "kamieniu_rezerwy+",
-        "kamienie rezerwy+",
-        "kamienie_rezerwy+",
-        "kamieni rezerwy+",
-        "kamieni_rezerwy+",
-        "kamieniom rezerwy+",
-        "kamieniom_rezerwy+",
-        "kamieniami rezerwy+",
-        "kamieniami_rezerwy+",
-        "kamieniach rezerwy+",
-        "kamieniach_rezerwy+"
-      ],
-      "DESCRIPTION": "Runa: #yZachowaj dwie karty."
-    },
-    {
       "PROPER_NAME": "Kamień kłucia",
       "NAMES": [
         "kamień kłucia",
@@ -324,32 +272,6 @@
         "kamieniach_potencji"
       ],
       "DESCRIPTION": "Runa: Zyskaj #yPotecję"
-    },
-    {
-      "PROPER_NAME": "Kamień pancerza",
-      "NAMES": [
-        "kamień pancerza",
-        "kamień_pancerza",
-        "kamienia pancerza",
-        "kamienia_pancerza",
-        "kamieniowi pancerza",
-        "kamieniowi_pancerza",
-        "kamieniem pancerza",
-        "kamieniem_pancerza",
-        "kamieniu pancerza",
-        "kamieniu_pancerza",
-        "kamienie pancerza",
-        "kamienie_pancerza",
-        "kamieni pancerza",
-        "kamieni_pancerza",
-        "kamieniom pancerza",
-        "kamieniom_pancerza",
-        "kamieniami pancerza",
-        "kamieniami_pancerza",
-        "kamieniach pancerza",
-        "kamieniach_pancerza"
-      ],
-      "DESCRIPTION": "Runa: Ustawia wartość #yOpancerzenia na co najmniej swoją ilości #yPotencji."
     },
     {
       "PROPER_NAME": "Kamień pryzmatu",
@@ -498,24 +420,79 @@
       "DESCRIPTION": "Runa: Zadaje obrażenia losowemu przeciwnikowi i daje Blok."
     },
     {
-      "PROPER_NAME": "Podróż w czasie",
+      "PROPER_NAME": "Rozpad",
       "NAMES": [
-        "podróż w czasie",
-        "podróż_w_czasie",
-        "podróży w czasie",
-        "podróży_w_czasie",
-        "podróżą w czasie",
-        "podróżą_w_czasie",
-        "podróże w czasie",
-        "podróże_w_czasie",
-        "podróżom w czasie",
-        "podróżom_w_czasie",
-        "podróżami w czasie",
-        "podróżami_w_czasie",
-        "podróżach w czasie",
-        "podróżach_w_czasie"
+        "rozpad",
+        "rozpady",
+        "rozpadu",
+        "rozpadów",
+        "rozpadowi",
+        "rozpadom",
+        "rozpadem",
+        "rozpadami",
+        "rozpadzie",
+        "rozpadach"
       ],
-      "DESCRIPTION": "Ustaw poziom PŻ, Bloku i Żywiołów na zapisany wcześniej."
+      "DESCRIPTION": "Utrać cały wybrany #yŻywioł po czym zyskaj inne #yŻywioły w ilości równej utraconej i wykonaj pewne czynności zależne od wybranego #yŻywiołu."
+    },
+    {
+      "PROPER_NAME": "Kamień obezwładnienia",
+      "NAMES": [
+        "kamień obezwładnienia",
+        "kamień_obezwładnienia",
+        "kamienia obezwładnienia",
+        "kamienia_obezwładnienia",
+        "kamieniowi obezwładnienia",
+        "kamieniowi_obezwładnienia",
+        "kamieniem obezwładnienia",
+        "kamieniem_obezwładnienia",
+        "kamieniu obezwładnienia",
+        "kamieniu_obezwładnienia",
+        "kamienie obezwładnienia",
+        "kamienie_obezwładnienia",
+        "kamieni obezwładnienia",
+        "kamieni_obezwładnienia",
+        "kamieniom obezwładnienia",
+        "kamieniom_obezwładnienia",
+        "kamieniami obezwładnienia",
+        "kamieniami_obezwładnienia",
+        "kamieniach obezwładnienia",
+        "kamieniach_obezwładnienia"
+      ],
+      "DESCRIPTION": "Runa: Zmniejsza #ySiłę przeciwnika na tą turę."
+    },
+    {
+      "PROPER_NAME": "Ice-Cold",
+      "NAMES": [
+        "Zlodowaciały"
+      ],
+      "DESCRIPTION": "Zmniejsz obrażenia od ataku o #b1 pkt. za każde powtórzenie. Ilość powtórzeń zmniejsza się o #b1 pod koniec twojej tury. NL Usuń #ySpowolnienie, gdy powtórzenia osiągną #b0."
+    },
+    {
+      "PROPER_NAME": "Kamień witalności",
+      "NAMES": [
+        "kamień witalności",
+        "kamień_witalności",
+        "kamienia witalności",
+        "kamienia_witalności",
+        "kamieniowi witalności",
+        "kamieniowi_witalności",
+        "kamieniem witalności",
+        "kamieniem_witalności",
+        "kamieniu witalności",
+        "kamieniu_witalności",
+        "kamienie witalności",
+        "kamienie_witalności",
+        "kamieni witalności",
+        "kamieni_witalności",
+        "kamieniom witalności",
+        "kamieniom_witalności",
+        "kamieniami witalności",
+        "kamieniami_witalności",
+        "kamieniach witalności",
+        "kamieniach_witalności"
+      ],
+      "DESCRIPTION": "Runa: Utrać #yPotencję tej Runy zamiast PŻ."
     }
   ]
 }

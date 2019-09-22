@@ -23,9 +23,9 @@
   "Runesmith:GrindstonePower": {
     "NAME": "Osełka",
     "DESCRIPTIONS": [
-      "Podczas tej tury, wsyztskie zagrane karty zostaną #yUlepszone. Jeżeli karta jest już #yUlepszona, zostanie #yWzmocniona.",
+      "Podczas tej tury, wsyztskie zagrane karty zostaną #yUlepszone. Jeżeli ta karta nie może być już #yUlepszona, zostanie #yWzmocniona.",
       "Przez następne #b",
-      " tury, wsyztskie zagrane karty zostaną yUlepszone. Jeżeli karta jest już #yUlepszona, zostanie #yWzmocniona."
+      " tury, wsyztskie zagrane karty zostaną yUlepszone. Jeżeli ta karta nie może być już #yUlepszona, zostanie #yWzmocniona."
     ]
   },
   "Runesmith:FirestormPower": {
@@ -62,7 +62,7 @@
   "Runesmith:UnlimitedPowerPower": {
     "NAME": "Nieograniczona moc",
     "DESCRIPTIONS": [
-      "#yŻywioły nie są zużywane podczas Wykucia."
+      "#yŻywioły nie są potrzebne podczas Wykucia."
     ]
   },
   "Runesmith:RunesonancePower": {
@@ -107,14 +107,14 @@
     "NAME": "Badania metalurgiczne",
     "DESCRIPTIONS": [
       "#yUlepsz i #yWzmocnij WSZYSTKIE swoje karty za #b",
-      " tury.",
-      " turę."
+      " turę.",
+      " tury."
     ]
   },
   "Runesmith:PermafrostPower": {
     "NAME": "Wieczna zmarzlina",
     "DESCRIPTIONS": [
-      "Na początku twojej tury, utrać najwyżej połowę pkt. #yBloku.",
+      "Na początku swojej tury, utrać najwyżej połowę pkt. #yBloku.",
       "Na początku tury, utraci najwyżej połowę pkt. #yBloku."
     ]
   },
@@ -138,40 +138,35 @@
     "NAME": "Zlodowaciały",
     "DESCRIPTIONS": [
       "Odtaje i utraci #yŚlamazarność za #b",
-      " tury.",
-      " turę."
+      " turę.",
+      " tury."
     ]
   },
   "Runesmith:ReplicatingBarrierPower": {
     "NAME": "Odnawialna Bariera",
     "DESCRIPTIONS": [
       "Za #b",
-      " tury,",
       " turę,",
+      " tury,",
       " 2 #yTerra: #yWykuj runę #yKamień #yObrony z #b",
       " Potencji."
-    ]
-  },
-  "Runesmith:TimeMachinePower": {
-    "NAME": "Tunel czasoprzestrzenny",
-    "DESCRIPTIONS": [
-      "Zapisane #b",
-      " PŻ, #b",
-      " pkt. #yBloku, #b",
-      " #yIgnis, #b",
-      " #yTerra, #b",
-      " #yAqua. NL Zostanie wykluczona za #b",
-      " turę.",
-      " tury."
     ]
   },
   "Runesmith:LastStandPower": {
     "NAME": "Ostatni Bastion",
     "DESCRIPTIONS": [
-      "Na końcu następnej rundy, ",
-      "na końcu tej rundy, ",
+      "Na końcu następnej tury, ",
+      "na końcu tej tury, ",
       " zadaj #b",
       " pkt. obrażeń WSZYSTKIM przeciwnikom."
     ]
-  }
+  },
+  "Runesmith:LightningRodPower": {
+    "NAME": "Piorunochron",
+    "DESCRIPTIONS": [
+      "Przez #b",
+      " turę,",
+      " tury,",
+      " utrać #yŻywioły zamiast PŻ."
+    ]
 }

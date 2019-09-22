@@ -36,13 +36,7 @@
       "Daje #b{Pot} pkt. #yPotencji. NL #yPrzełam: Daje kolejne #b{Pot} pkt. #yPotencji na końcu tury zanika ich podwójna ilość."
     ]
   },
-  "Ferro": {
-    "NAME": "Kamień pancerza",
-    "DESCRIPTION": [
-      "Brak efektu co turę. NL #yPrzełam: Ustawia wartość #yOpancerzenia na co najmniej #b{2Pot}."
-    ]
-  },
-  "Prismatic": {
+  "Prismatica": {
     "NAME": "Kamień pryzmatu",
     "DESCRIPTION": [
       "Na początku tury daje losową kartę.",
@@ -73,10 +67,16 @@
       "Na końcu tury zadaje #b{Pot} damage and gain #b{Pot2} #yBlock."
     ]
   },
-  "WWWWWWWWWWWWWW": {
-    "NAME": "ŁŁŁŁŁŁŁŁŁŁŁŁŁŁŁŁŁŁŁŁŁŁŁŁŁŁŁ",
+  "Obretio": {
+    "NAME": "Kamień obezwładnienia",
     "DESCRIPTION": [
-      "ŁŁŁŁŁŁŁŁŁŁŁŁŁŁŁŁŁŁŁŁŁŁŁŁŁŁŁ"
+      "Na końcu tury, przeciwnik z najwyższym atakiem traci #b{Pot} pkt. #ySiły na tą turę."
+    ]
+  },
+  "Vitae": {
+    "NAME": "Kamień witalności",
+    "DESCRIPTION": [
+      "Utrać #yPotencję tej runy zamiast PŻ. NL #yPrzełam: Zyskaj #b{Pot} pkt. #yBloku dwa razy."
     ]
   }
 }

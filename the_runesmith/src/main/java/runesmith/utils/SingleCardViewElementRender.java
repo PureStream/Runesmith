@@ -25,7 +25,7 @@ public class SingleCardViewElementRender {
 
     private static void renderElementHelper(SpriteBatch sb, Texture img, float drawX, float drawY) {
         sb.draw(img, drawX, drawY,
-                    82.0F, 82.0F, 164.0F, 164.0F,
+                    0, 0, 164.0F, 164.0F,
                      Settings.scale,  Settings.scale,
                     0, 0, 0, 164, 164, false, false);
 

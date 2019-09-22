@@ -1,16 +1,9 @@
 {
-  "Blueberries": {
-    "NAME": "Jagody",
-    "FLAVOR": "Tajemnicze jagody pozostawione przez zapomnianego.",
-    "DESCRIPTIONS": [
-      "Zyskaj 8 maksymalnych PŻ."
-    ]
-  },
   "Runesmith:BrokenRuby": {
     "NAME": "Pęknięty Rubin",
-    "FLAVOR": "Kryształ przywodzący na myśl czerwony klejnot. Mimo pęknięcia, zachował odrobinę swojej mocy.",
+    "FLAVOR": "Kryształ przywodzący na myśl czerwony klejnot. Mimo pęknięcia, zachował odrobinę swojej dawnej mocy.",
     "DESCRIPTIONS": [
-      "Na początku każdej potyczki, Zyskaj #b1 #yrunesmith:Ignis. Za kazde zagrane 3 ataki, zyskaj #b1 #yrunesmith:Ignis."
+      "Na początku każdej potyczki, Zyskaj #b2 #yrunesmith:Ignis. Na początku tury, #yWzmocnij losową kartę na swojej ręce."
     ]
   },
   "Runesmith:MiniCore": {

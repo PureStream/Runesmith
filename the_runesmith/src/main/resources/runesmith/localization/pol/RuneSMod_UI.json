@@ -61,8 +61,8 @@
     "TEXT": [
       "Kamień pryzmatu",
       "Kamień pryzmatu+",
-      "Runa: Daje losową klasową kartę na poczatku każdej tury.",
-      "Runa: Daje losową ulepszoną klasową kartę na poczatku każdej tury."
+      "Runa: Daje losową klasową kartę na poczatku każdej tury. Podczas tej tury, koszt tej karty wynosi 0.",
+      "Runa: Daje losową ulepszoną klasową kartę na poczatku każdej tury. Podczas tej tury, koszt tej karty wynosi 0."
     ]
   },
   "Runesmith:CraftReservo": {
@@ -71,6 +71,19 @@
       "Kamień rezerwy+",
       "Runa: #yZachowaj kartę.",
       "Runa: #yZachowaj dwie karty."
+    ]
+  },
+  "Runesmith:CraftIndustria": {
+    "TEXT": [
+      "Kamień Energii ",
+      "Kamień Energii+",
+      "Rune: Zyskaj [E] na początku swojej tury.",
+      "Rune: Zyskaj [E] i dobierz jedną kartę na początku swojej tury."
+    ]
+  },
+  "Runesmith:Craftable": {
+    "TEXT": [
+      "Wykuwalne"
     ]
   }
 }

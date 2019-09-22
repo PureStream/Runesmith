@@ -163,6 +163,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
             }
 
         logger.info("done editing strings");
+//        Settings.lineBreakViaCharacter = false;
     }
 
     private static void loadStrings(String lang) {

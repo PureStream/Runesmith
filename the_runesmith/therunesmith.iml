@@ -20,7 +20,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: basemod:basemod:5.12.0">
+      <library name="Maven: basemod:basemod:5.15.1">
         <CLASSES>
           <root url="jar://C:/Program Files (x86)/Steam/steamapps/workshop/content/646570/1605833019/BaseMod.jar!/" />
         </CLASSES>
@@ -38,7 +38,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: com.evacipated.cardcrawl.mod:StSLib:1.14.0">
+      <library name="Maven: com.evacipated.cardcrawl.mod:StSLib:1.17.1">
         <CLASSES>
           <root url="jar://C:/Program Files (x86)/Steam/steamapps/workshop/content/646570/1609158507/StSLib.jar!/" />
         </CLASSES>
