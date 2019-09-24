@@ -44,6 +44,7 @@ public class RunesmithCharacter extends CustomPlayer {
     private static final String THE_RUNESMITH_SKELETON_ATLAS = "runesmith/images/character/idle/skeleton.atlas"; // spine animation atlas
     private static final String THE_RUNESMITH_SKELETON_JSON = "runesmith/images/character/idle/skeleton.json"; // spine animation json
     private static final String THE_RUNESMITH_SPRITER = "runesmith/images/character/idle/animation.scml"; //Spriter File
+    private static final String RUNESMITH_PORTRAIT = "runesmith/images/character/runesmithPortrait.png";
 
     private Texture BEIGE_ORB_FLASH_VFX = ImageMaster.loadImage("runesmith/images/ui/beige/energyBeigeVFX.png");
     private EnergyOrbInterface energyOrb = new EnergyOrbBeige();
@@ -68,6 +69,11 @@ public class RunesmithCharacter extends CustomPlayer {
 
 //		AnimationState.TrackEntry e = this.state.setAnimation(0, "animation", true);
 //		e.setTime(e.getEndTime() * MathUtils.random());
+    }
+
+    @Override
+    public String getPortraitImageName() {
+        return RUNESMITH_PORTRAIT;
     }
 
     public ArrayList<String> getStartingDeck() { // starting deck 'nuff said

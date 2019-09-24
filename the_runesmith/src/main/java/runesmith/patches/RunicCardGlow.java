@@ -31,10 +31,13 @@ public class RunicCardGlow {
     private static TextureAtlas.AtlasRegion CARD_RUNIC_POWER_BG_SILHOUETTE = CARD_RUNIC_BG_SILHOUETTE.findRegion("attack_silhouette");
 
 
-    @SpirePatch(clz = CardGlowBorder.class, method = SpirePatch.CONSTRUCTOR)
+    @SpirePatch(clz = CardGlowBorder.class, method = SpirePatch.CONSTRUCTOR, paramtypez = {
+            AbstractCard.class,
+            AbstractCard.GlowColor.class
+    })
     public static class CardGlowPatch {
         @SpirePostfixPatch
-        public static void runicCardGlowColor(CardGlowBorder __instance, AbstractCard inputCard) {
+        public static void runicCardGlowColor(CardGlowBorder __instance, AbstractCard inputCard, AbstractCard.GlowColor gColor) {
             if(inputCard.color == AbstractCardEnum.RUNESMITH_BEIGE) {
                 switch (inputCard.type) {
                     case ATTACK:
