@@ -37,8 +37,8 @@ public class AttractionAction extends AbstractGameAction {
             CardGroup temp = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
             drawPile = p.drawPile;
             discardPile = p.discardPile;
-            exhaustPile = p.exhaustPile;
-            List<List<AbstractCard>> allCardsGroup = Arrays.asList(drawPile.group, discardPile.group, exhaustPile.group);
+//            exhaustPile = p.exhaustPile;
+            List<List<AbstractCard>> allCardsGroup = Arrays.asList(drawPile.group, discardPile.group);
             allCardsGroup.forEach(cardGroup -> cardGroup
                     .stream()
                     .filter(c -> c.hasTag(RS_CRAFT))

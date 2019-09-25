@@ -99,12 +99,12 @@
   },
   "Runesmith:Grindstone": {
     "NAME": "Grindstone",
-    "DESCRIPTION": "Gain !B! Block. NL This turn, whenever you play a card, NL Upgrade it. NL runesmith:Enhance the card if it cannot be upgraded.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL For !M! turns, whenever you play a card, NL Upgrade it. NL runesmith:Enhance the card if it cannot be upgraded."
+    "DESCRIPTION": "Gain !B! Block. NL This turn, whenever you play a card, NL Upgrade it. NL runesmith:Enhance the card if it cannot be Upgraded.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL For !M! turns, whenever you play a card, NL Upgrade it. NL runesmith:Enhance the card if it cannot be Upgraded."
   },
   "Runesmith:FieryHammer": {
     "NAME": "Fiery Hammer",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Can be upgraded any number of times."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Can be Upgraded any number of times."
   },
   "Runesmith:CraftReservo": {
     "NAME": "Craft Reservo",
@@ -117,7 +117,7 @@
   },
   "Runesmith:Firestorm": {
     "NAME": "Firestorm",
-    "DESCRIPTION": "At the start of your turn, gain !M! runesmith:Ignis and !M! runesmith:Terra.",
+    "DESCRIPTION": "Innate. NL At the start of your turn, gain !M! runesmith:Ignis and !M! runesmith:Terra.",
     "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain !M! runesmith:Ignis and !M! runesmith:Terra."
   },
   "Runesmith:RunicBlueprint": {
@@ -143,7 +143,7 @@
   },
   "Runesmith:ShiftingStrike": {
     "NAME": "Shifting Strike",
-    "DESCRIPTION": "Deal !D! damage. NL runesmith:Downgrade a card in your hand, then Upgrade one."
+    "DESCRIPTION": "Deal !D! damage. NL Remove all runesmith:Enhancement from a card in your hand, then runesmith:Enhance one that many times."
   },
   "Runesmith:ChaoticBlast": {
     "NAME": "Chaotic Blast",
@@ -183,7 +183,7 @@
   },
   "Runesmith:LastStand": {
     "NAME": "Last Stand",
-    "DESCRIPTION": "runesmith:Downgrade ALL your cards. Lose all runesmith:Elements. At the end of next turn, deal damage equals to !M! times the number of runesmith:downgraded cards to ALL enemies. NL Exhaust.",
+    "DESCRIPTION": "runesmith:Downgrade ALL your cards. ALL cards cost 1 less and Exhaust. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       " NL (Deal !D! damage)"
     ]
@@ -217,7 +217,7 @@
   },
   "Runesmith:Retool": {
     "NAME": "Retool",
-    "DESCRIPTION": "Shuffle all upgraded or runesmith:enhanced cards from your discard pile into your draw pile.  NL Draw !M! cards."
+    "DESCRIPTION": "Shuffle all Upgraded or runesmith:Enhanced cards from your discard pile into your draw pile.  NL Draw !M! cards."
   },
   "Runesmith:UnlimitedPower": {
     "NAME": "Unlimited Power",
@@ -275,12 +275,12 @@
   },
   "Runesmith:Malloc": {
     "NAME": "Malloc",
-    "DESCRIPTION": "runesmith:Downgrade any number of cards in your hand. NL Gain [E] for each card runesmith:Downgraded.",
-    "UPGRADE_DESCRIPTION": "Gain [E] . NL runesmith:Downgrade any number of cards in your hand. NL Gain [E] for each card runesmith:Downgraded."
+    "DESCRIPTION": "runesmith:Downgrade a card in your hand. NL If the card is Upgraded, gain [E]. NL Draw !M! card for each level of runesmith:Enhancement.",
+    "UPGRADE_DESCRIPTION": "runesmith:Downgrade a card in your hand. NL If the card is Upgraded, gain [E] [E]. NL Draw !M! card for each level of runesmith:Enhancement."
   },
   "Runesmith:BackupBattery": {
     "NAME": "Backup Battery",
-    "DESCRIPTION": "Gain !M! of each runesmith:Element. NL Draw 1 card. NL Can be upgraded 4 times. NL Exhaust."
+    "DESCRIPTION": "Gain !M! of each runesmith:Element. NL Draw 1 card. NL Can be Upgraded 4 times. NL Exhaust."
   },
   "Runesmith:FrozenChisel": {
     "NAME": "Frozen Chisel",
@@ -302,7 +302,7 @@
   "Runesmith:HammerAndChisel": {
     "NAME": "Hammer and Chisel",
     "DESCRIPTION": "Add a random Hammer card and a random Chisel card into your hand. They cost 1 less this combat. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add a random upgraded Hammer card and a random upgraded Chisel card into your hand. They cost 1 less this combat. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Add a random Upgraded Hammer card and a random Upgraded Chisel card into your hand. They cost 1 less this combat. NL Exhaust."
   },
   "Runesmith:Firewall": {
     "NAME": "Firewall",
@@ -314,7 +314,7 @@
   },
   "Runesmith:Attraction": {
     "NAME": "Attraction",
-    "DESCRIPTION": "Put !M! runesmith:Craft card from draw, discard or exhaust pile into your hand. NL Exhaust."
+    "DESCRIPTION": "Put !M! runesmith:Craft card from draw or discard pile into your hand. NL Exhaust."
   },
   "Runesmith:ArcReactor": {
     "NAME": "Arc Reactor",

@@ -20,6 +20,7 @@ public class Malloc extends CustomCard {
     public static final String IMG_PATH = "runesmith/images/cards/Malloc.png"; //<-------------- need some img
     private static final int COST = 0;
     private static final int ENERGY_GAIN = 1;
+    private static final int CARD_DRAW = 1;
 
     public Malloc() {
         super(
@@ -33,6 +34,7 @@ public class Malloc extends CustomCard {
                 CardRarity.UNCOMMON,
                 CardTarget.SELF
         );
+        this.baseMagicNumber = this.magicNumber = CARD_DRAW;
     }
 
     public AbstractCard makeCopy() {
@@ -52,6 +54,6 @@ public class Malloc extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (upgraded)
             AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(ENERGY_GAIN));
-        AbstractDungeon.actionManager.addToBottom(new MallocAction(p));
+        AbstractDungeon.actionManager.addToBottom(new MallocAction(p, this.upgraded, this.magicNumber));
     }
 }

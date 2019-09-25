@@ -80,5 +80,11 @@
     "TEXT": [
       "Craftable"
     ]
+  },
+  "Runesmith:ShiftingStrike": {
+    "TEXT": [
+      "remove Enhancement",
+      "add Enhancement"
+    ]
   }
 }

@@ -35,6 +35,7 @@ public class Defend_RS extends CustomCard {
                 AbstractCard.CardTarget.SELF
         );
         this.tags.add(BaseModCardTags.BASIC_DEFEND);
+        this.tags.add(CardTags.STARTER_DEFEND);
         this.baseBlock = BLOCK_AMT;
     }
 
