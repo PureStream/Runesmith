@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import runesmith.actions.DowngradeCardInHandAction;
+import runesmith.actions.cards.ShiftingStrikeAction;
 import runesmith.patches.AbstractCardEnum;
 
 public class ShiftingStrike extends CustomCard {
@@ -21,8 +22,8 @@ public class ShiftingStrike extends CustomCard {
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String IMG_PATH = "runesmith/images/cards/ShiftingStrike.png"; //<-------------- need some img
     private static final int COST = 1;
-    private static final int ATTACK_DMG = 9;
-    private static final int UPGRADE_PLUS_DMG = 4;
+    private static final int ATTACK_DMG = 7;
+    private static final int UPGRADE_PLUS_DMG = 3;
 
     public ShiftingStrike() {
         super(
@@ -63,10 +64,7 @@ public class ShiftingStrike extends CustomCard {
         );
 
         AbstractDungeon.actionManager.addToBottom(
-                new DowngradeCardInHandAction(p, false)
-        );
-        AbstractDungeon.actionManager.addToBottom(
-                new ArmamentsAction(false)
+                new ShiftingStrikeAction(p)
         );
     }
 

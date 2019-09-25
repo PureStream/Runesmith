@@ -40,7 +40,7 @@
     "NAME": "Prismatica",
     "DESCRIPTION": [
       "At the start of turn, add a random card into your hand. It costs #b0 for the turn.",
-      "At the start of turn, add a random #yUpgraded cardinto your hand. It costs #b0 for the turn."
+      "At the start of turn, add a random #yUpgraded card into your hand. It costs #b0 for the turn."
     ]
   },
   "Industria": {

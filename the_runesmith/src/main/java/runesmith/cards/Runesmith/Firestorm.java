@@ -19,6 +19,7 @@ public class Firestorm extends CustomCard {
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     public static final String IMG_PATH = "runesmith/images/cards/Firestorm.png"; //<-------------- need some img
     private static final int COST = 1;
+    private static final int UPG_COST = 0;
     private static final int POWER_AMT = 1;
 //	private static final int UPGRADE_POWER_AMT = 1;
 
@@ -34,6 +35,7 @@ public class Firestorm extends CustomCard {
                 CardRarity.UNCOMMON,
                 CardTarget.SELF
         );
+        this.isInnate = true;
         this.baseMagicNumber = this.magicNumber = POWER_AMT;
     }
 
@@ -50,6 +52,7 @@ public class Firestorm extends CustomCard {
         if (!this.upgraded) {
             upgradeName();
 //		  upgradeMagicNumber(UPGRADE_POWER_AMT);
+            upgradeBaseCost(UPG_COST);
             this.rawDescription = UPGRADE_DESCRIPTION;
             this.isInnate = true;
             initializeDescription();

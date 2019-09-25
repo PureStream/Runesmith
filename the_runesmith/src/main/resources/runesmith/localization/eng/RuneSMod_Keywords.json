@@ -4,7 +4,8 @@
       "PROPER_NAME": "Enhance",
       "NAMES": [
         "enhance",
-        "enhanced"
+        "enhanced",
+        "enhancement"
       ],
       "DESCRIPTION": "Increase damage, #yBlock and #yPotency of a card by #b50%. Can be stacked additively. #yEnhance is removed after the card is played."
     },
