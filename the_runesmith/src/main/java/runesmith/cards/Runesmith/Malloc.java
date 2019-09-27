@@ -52,8 +52,8 @@ public class Malloc extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (upgraded)
-            AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(ENERGY_GAIN));
+//        if (upgraded)
+//            AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(ENERGY_GAIN));
         AbstractDungeon.actionManager.addToBottom(new MallocAction(p, this.upgraded, this.magicNumber));
     }
 }
