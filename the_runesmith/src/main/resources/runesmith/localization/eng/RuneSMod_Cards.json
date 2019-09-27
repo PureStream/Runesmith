@@ -183,7 +183,7 @@
   },
   "Runesmith:LastStand": {
     "NAME": "Last Stand",
-    "DESCRIPTION": "runesmith:Downgrade ALL your cards. ALL cards cost 1 less and Exhaust. NL Exhaust.",
+    "DESCRIPTION": "runesmith:Downgrade ALL your cards. NL ALL cards cost 1 less and Exhaust. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       " NL (Deal !D! damage)"
     ]

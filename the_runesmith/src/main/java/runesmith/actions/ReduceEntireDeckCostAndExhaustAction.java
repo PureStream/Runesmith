@@ -28,7 +28,7 @@ public class ReduceEntireDeckCostAndExhaustAction extends AbstractGameAction{
         List<ArrayList<AbstractCard>> allCardsGroup = Arrays.asList(p.hand.group, p.drawPile.group, p.discardPile.group);
         allCardsGroup.forEach(cardGroup -> cardGroup
                 .forEach(card -> {
-                    if (card.cost >= 0) {
+                    if (card.cost > 0) {
                         card.cost = card.cost-1;
                         card.costForTurn = card.cost;
                         card.isCostModified = true;
