@@ -28,6 +28,7 @@ public abstract class DowngradeCard {
         tmp.baseBlock = manualUpgrade.baseBlock;
         tmp.baseMagicNumber = manualUpgrade.baseMagicNumber;
         tmp.cost = manualUpgrade.cost;
+        tmp.costForTurn = manualUpgrade.costForTurn;
 
         EnhanceCountField.enhanceCount.set(tmp, 0);
         EnhanceCountField.lastEnhance.set(tmp, 0);

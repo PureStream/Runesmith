@@ -121,6 +121,11 @@ public abstract class AbstractRunicCard extends CustomCard {
         this.freeElementOnce = false;
     }
 
+    @Override
+    public void triggerOnGlowCheck(){
+        glowColor = isCraftable ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;
+    }
+
     public int[] getElementCost(){ return elementCost;}
 
     private boolean hasEnoughElement(Elements elem){

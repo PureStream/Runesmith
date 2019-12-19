@@ -19,6 +19,7 @@ public class UnlimitedPower extends CustomCard {
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     public static final String IMG_PATH = "runesmith/images/cards/UnlimitedPower.png"; //<-------------- need some img
     private static final int COST = 2;
+    private static final int COST_UPGRADE = 1;
 
     public UnlimitedPower() {
         super(
@@ -47,9 +48,10 @@ public class UnlimitedPower extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            this.isInnate = true;
-            this.rawDescription = UPGRADE_DESCRIPTION;
-            initializeDescription();
+            upgradeBaseCost(COST_UPGRADE);
+//            this.isInnate = true;
+//            this.rawDescription = UPGRADE_DESCRIPTION;
+//            initializeDescription();
         }
     }
 }

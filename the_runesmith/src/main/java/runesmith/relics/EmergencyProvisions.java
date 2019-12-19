@@ -12,15 +12,15 @@ import runesmith.actions.ApplyElementsPowerAction;
 
 import static runesmith.patches.CardTagEnum.RS_CRAFT;
 
-public class EmergencyProvisions extends CustomRelic {
+public class EmergencyProvisions extends AbstractRunesmithRelic {
 
     public static final String ID = "Runesmith:EmergencyProvisions";
     private static final String IMG = "runesmith/images/relics/EmergencyProvisions.png"; //<--------- Need some img
-    private static final String IMG_O = "runesmith/images/relics/EmergencyProvisions_o.png";
+//    private static final String IMG_O = "runesmith/images/relics/EmergencyProvisions_o.png";
     private static final int ELEMENT_AMT = 1;
 
     public EmergencyProvisions() {
-        super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_O), RelicTier.COMMON, LandingSound.FLAT);
+        super(ID, IMG, RelicTier.COMMON, LandingSound.FLAT, true);
     }
 
     public String getUpdatedDescription() {
@@ -45,5 +45,4 @@ public class EmergencyProvisions extends CustomRelic {
     public AbstractRelic makeCopy() {
         return new EmergencyProvisions();
     }
-
 }

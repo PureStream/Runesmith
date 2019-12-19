@@ -12,16 +12,16 @@ import runesmith.actions.ApplyElementsPowerAction;
 import runesmith.actions.cards.FortifyAction;
 import runesmith.utils.TextureLoader;
 
-public class BrokenRuby extends CustomRelic {
+public class BrokenRuby extends AbstractRunesmithRelic {
 
     public static final String ID = "Runesmith:BrokenRuby";
     private static final String IMG = "runesmith/images/relics/BrokenRuby.png"; //<--------- Need some img
-    private static final String IMG_O = "runesmith/images/relics/BrokenRuby_o.png";
+//    private static final String IMG_O = "runesmith/images/relics/BrokenRuby_o.png";
     private static final int IGNIS_AMT = 2;
 //    private static final int NUM_CARDS = 2;
 
     public BrokenRuby() {
-        super(ID, TextureLoader.getTexture(IMG), TextureLoader.getTexture(IMG_O), RelicTier.STARTER, LandingSound.CLINK);
+        super(ID, IMG, RelicTier.STARTER, LandingSound.CLINK);
     }
 
     public String getUpdatedDescription() {

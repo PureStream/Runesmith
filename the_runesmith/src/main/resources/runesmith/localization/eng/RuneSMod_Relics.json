@@ -22,7 +22,7 @@
   },
   "Runesmith:UraniumAnvil": {
     "NAME": "Uranium Anvil",
-    "FLAVOR": "This block of metal holds massive amount of energy but weakens anyone who come near it.",
+    "FLAVOR": "This block of metal holds massive amount of energy but weakens anyone who comes near it.",
     "DESCRIPTIONS": [
       " at the start of your turn. #yrunesmith:Downgrade a random card in your draw pile, hand, or discard pile each turn.",
       "Gain [E]"
@@ -32,7 +32,7 @@
     "NAME": "Locket",
     "FLAVOR": "An image of unknown yet familiar figure resides within.",
     "DESCRIPTIONS": [
-      "One time each combat, if your health drops below #b15%, add Last Stand to the top of your draw pile."
+      "One time each combat, if your health drops below #b15%, #yUpgrade and #yrunesmith:Enhance ALL your cards for the rest of combat."
     ]
   },
   "Runesmith:AutoHammer": {
@@ -51,14 +51,14 @@
   },
   "Runesmith:PocketReactor": {
     "NAME": "Pocket Reactor",
-    "FLAVOR": "",
+    "FLAVOR": "Atomic power anytime, anywhere.",
     "DESCRIPTIONS": [
       "#yrunesmith:Elements are no longer needed for crafting. All cards lose #b2 #yrunesmith:Potency. "
     ]
   },
   "Runesmith:CoreCrystal": {
     "NAME": "Core Crystal",
-    "FLAVOR": "",
+    "FLAVOR": "The crystal surges with new life.",
     "DESCRIPTIONS": [
       "Replaces #rBroken #rRuby. All #yrunesmith:Element gains are increased by #b50%. Raises maximum #yrunesmith:Elements to #b20."
     ]

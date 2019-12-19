@@ -53,6 +53,11 @@ public class GenerateForcefieldAction extends AbstractGameAction {
                 return;
             }
 
+            if (breakNums <= 0) {
+                this.isDone = true;
+                return;
+            }
+
             int count = 0;
             for (RuneOrb rune : playerRune.runes) {
                 if(!(rune instanceof DudRune)) {

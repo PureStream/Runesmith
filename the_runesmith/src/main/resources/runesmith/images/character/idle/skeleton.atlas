@@ -1,0 +1,118 @@
+
+runesmith.png
+size: 256,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+rs_new2/shadow
+  rotate: false
+  xy: 1, 134
+  size: 194, 28
+  orig: 194, 28
+  offset: 0, 0
+  index: -1
+rs_new2/foot_r
+  rotate: false
+  xy: 65, 216
+  size: 30, 53
+  orig: 30, 53
+  offset: 0, 0
+  index: -1
+rs_new2/leg_ball
+  rotate: false
+  xy: 221, 108
+  size: 19, 19
+  orig: 19, 19
+  offset: 0, 0
+  index: -1
+rs_new2/leg_l2
+  rotate: false
+  xy: 166, 164
+  size: 26, 56
+  orig: 26, 56
+  offset: 0, 0
+  index: -1
+rs_new2/leg_l1
+  rotate: false
+  xy: 197, 134
+  size: 55, 57
+  orig: 55, 57
+  offset: 0, 0
+  index: -1
+rs_new2/foot_l
+  rotate: false
+  xy: 1, 301
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+rs_new2/arm_lb
+  rotate: false
+  xy: 28, 255
+  size: 22, 46
+  orig: 22, 46
+  offset: 0, 0
+  index: -1
+rs_new2/torso
+  rotate: false
+  xy: 1, 164
+  size: 62, 89
+  orig: 62, 89
+  offset: 0, 0
+  index: -1
+rs_new2/cloth
+  rotate: false
+  xy: 143, 1
+  size: 76, 131
+  orig: 76, 131
+  offset: 0, 0
+  index: -1
+rs_new2/arm_r
+  rotate: false
+  xy: 221, 1
+  size: 28, 105
+  orig: 28, 105
+  offset: 0, 0
+  index: -1
+rs_new2/hammer
+  rotate: false
+  xy: 1, 1
+  size: 140, 124
+  orig: 140, 124
+  offset: 0, 0
+  index: -1
+rs_new2/arm_lf
+  rotate: false
+  xy: 119, 164
+  size: 45, 53
+  orig: 45, 53
+  offset: 0, 0
+  index: -1
+rs_new2/fingers_r
+  rotate: false
+  xy: 97, 216
+  size: 19, 15
+  orig: 19, 15
+  offset: 0, 0
+  index: -1
+rs_new2/head
+  rotate: false
+  xy: 65, 164
+  size: 52, 50
+  orig: 52, 50
+  offset: 0, 0
+  index: -1
+rs_new2/hair
+  rotate: false
+  xy: 1, 255
+  size: 25, 44
+  orig: 25, 44
+  offset: 0, 0
+  index: -1
+rs_new2/foot_l2
+  rotate: false
+  xy: 118, 219
+  size: 22, 11
+  orig: 22, 11
+  offset: 0, 0
+  index: -1

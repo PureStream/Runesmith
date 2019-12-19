@@ -8,18 +8,19 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import runesmith.actions.cards.MetallurgicalResearchAction;
 import runesmith.cards.Runesmith.LastStand;
 
-public class Locket extends CustomRelic {
+public class Locket extends AbstractRunesmithRelic {
 
     public static final String ID = "Runesmith:Locket";
     private static final String IMG = "runesmith/images/relics/Locket.png"; //<--------- Need some img
-    private static final String IMG_O = "runesmith/images/relics/Locket_o.png";
+//    private static final String IMG_O = "runesmith/images/relics/Locket_o.png";
     private boolean isAvailable = false;
     private boolean isUsedThisCombat = false;
 
     public Locket() {
-        super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_O), RelicTier.RARE, LandingSound.HEAVY);
+        super(ID, IMG, RelicTier.RARE, LandingSound.CLINK, true);
     }
 
     public String getUpdatedDescription() {
@@ -50,8 +51,9 @@ public class Locket extends CustomRelic {
         if ((AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) && isAvailable && !isUsedThisCombat && p.currentHealth - damageAmount < p.maxHealth * 0.15) {
             flash();
             this.pulse = false;
-            AbstractCard lastStand = new LastStand();
-            p.drawPile.addToTop(lastStand);
+//            AbstractCard lastStand = new LastStand();
+//            p.drawPile.addToTop(lastStand);
+            AbstractDungeon.actionManager.addToTop(new MetallurgicalResearchAction());
             AbstractDungeon.actionManager.addToTop(new RelicAboveCreatureAction(p, this));
             isAvailable = false;
             isUsedThisCombat = true;
