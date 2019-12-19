@@ -9,15 +9,15 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import runesmith.actions.cards.FortifyAction;
 
-public class AutoHammer extends CustomRelic {
+public class AutoHammer extends AbstractRunesmithRelic {
 
     public static final String ID = "Runesmith:AutoHammer";
     private static final String IMG = "runesmith/images/relics/AutoHammer.png"; //<--------- Need some img
-    private static final String IMG_O = "runesmith/images/relics/AutoHammer_o.png";
+//    private static final String IMG_O = "runesmith/images/relics/AutoHammer_o.png";
     private static final int NUM_CARDS = 3;
 
     public AutoHammer() {
-        super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_O), RelicTier.COMMON, LandingSound.SOLID);
+        super(ID, IMG, RelicTier.COMMON, LandingSound.SOLID, true);
     }
 
     public String getUpdatedDescription() {

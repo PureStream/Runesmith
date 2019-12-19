@@ -17,6 +17,7 @@ public class LastStand extends CustomCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     private static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
     public static final String IMG_PATH = "runesmith/images/cards/LastStand.png"; //<-------------- need some img
     private static final int COST = 3;
@@ -36,7 +37,8 @@ public class LastStand extends CustomCard {
                 CardRarity.RARE,
                 CardTarget.NONE
         );
-        this.baseDamage = this.damage = 0;
+//        this.baseDamage = this.damage = 0;
+        this.isEthereal = true;
 //        this.isMultiDamage = true;
 //        this.baseMagicNumber = this.magicNumber = MULTIPLIER_AMT;
         this.exhaust = true;
@@ -90,6 +92,9 @@ public class LastStand extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
+            this.isEthereal = false;
+            this.rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
             //upgradeMagicNumber(UPG_MULTIPLIER_AMT);
         }
     }

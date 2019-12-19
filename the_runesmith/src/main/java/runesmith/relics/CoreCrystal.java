@@ -9,16 +9,16 @@ import runesmith.ui.ElementsCounter;
 
 import java.util.stream.IntStream;
 
-public class CoreCrystal extends CustomRelic {
+public class CoreCrystal extends AbstractRunesmithRelic {
 
     public static final String ID = "Runesmith:CoreCrystal";
     private static final String IMG = "runesmith/images/relics/CoreCrystal.png"; //<--------- Need some img
-    private static final String IMG_O = "runesmith/images/relics/CoreCrystal_o.png";
+//    private static final String IMG_O = "runesmith/images/relics/CoreCrystal_o.png";
 
     public static final int MAX_ELEMENTS = 20;
 
     public CoreCrystal() {
-        super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_O), RelicTier.BOSS, LandingSound.MAGICAL);
+        super(ID, IMG, RelicTier.BOSS, LandingSound.MAGICAL);
     }
 
     public String getUpdatedDescription() {

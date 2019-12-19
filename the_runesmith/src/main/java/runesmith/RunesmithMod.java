@@ -1,8 +1,9 @@
 package runesmith;
 
 import basemod.BaseMod;
+import basemod.ModLabeledToggleButton;
+import basemod.ModPanel;
 import basemod.ReflectionHacks;
-import basemod.abstracts.CustomRelic;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
@@ -10,6 +11,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.utils.GdxRuntimeException;
+import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.audio.Sfx;
@@ -22,6 +24,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
+import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -42,12 +45,11 @@ import runesmith.powers.PermafrostPower;
 import runesmith.relics.*;
 import runesmith.ui.ElementsCounter;
 import runesmith.utils.KeywordWithProper;
+import runesmith.utils.RelicUtils;
 
+import java.io.IOException;
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 import static runesmith.patches.AbstractCardEnum.RUNESMITH_BEIGE;
 import static runesmith.patches.CardTagEnum.*;
@@ -90,8 +92,8 @@ public class RunesmithMod implements PostExhaustSubscriber,
     private static final String EVENT_STRING = "runesmith/localization/%s/RuneSMod_Events.json";
 
     private List<AbstractCard> cardsToAdd = new ArrayList<>();
-    private List<CustomRelic> relicsToAddOnlyThisClass = new ArrayList<>();
-    private List<CustomRelic> relicsToAddAllClass = new ArrayList<>();
+    private List<AbstractRunesmithRelic> relicsToAddOnlyThisClass = new ArrayList<>();
+    private List<AbstractRunesmithRelic> relicsToAddAllClass = new ArrayList<>();
 
     private static boolean renderElementsCounter = false;
     private static ElementsCounter elementsCounter;
@@ -101,6 +103,8 @@ public class RunesmithMod implements PostExhaustSubscriber,
     private static CardGroup hammerCards;
     private static CardGroup chiselCards;
     private static CardGroup craftCards;
+
+    private static SpireConfig modConfig = null;
 
     public static final int DEFAULT_MAX_ELEMENTS = 10;
 
@@ -126,6 +130,14 @@ public class RunesmithMod implements PostExhaustSubscriber,
         logger.info("========================= THE RUNESMITH INIT =========================");
 
         new RunesmithMod();
+
+        try{
+            Properties defaults = new Properties();
+            defaults.put("EnableRunesmithRelicsInAllPools", Boolean.toString(true));
+            modConfig = new SpireConfig("TheRunesmith", "Config", defaults);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         logger.info("======================================================================");
     }
@@ -400,14 +412,21 @@ public class RunesmithMod implements PostExhaustSubscriber,
 
         relicsToAddOnlyThisClass.add(new BrokenRuby());
         relicsToAddOnlyThisClass.add(new MiniCore());
-        relicsToAddOnlyThisClass.add(new Locket());
         relicsToAddOnlyThisClass.add(new EmergencyProvisions());
         relicsToAddOnlyThisClass.add(new CoreCrystal());
         relicsToAddOnlyThisClass.add(new PocketReactor());
 
+        relicsToAddAllClass.add(new Locket());
         relicsToAddAllClass.add(new Nanobots());
         relicsToAddAllClass.add(new AutoHammer());
         relicsToAddAllClass.add(new UraniumAnvil());
+    }
+
+    public static boolean enableRelicAll() {
+        if (modConfig == null) {
+            return false;
+        }
+        return modConfig.getBool("EnableRunesmithRelicsInAllPools");
     }
 
     @Override
@@ -415,6 +434,29 @@ public class RunesmithMod implements PostExhaustSubscriber,
         this.loadAudio();
 
         elementsCounter = new ElementsCounter(ELEMENTS_GREEN_MASK);
+
+        UIStrings UIStrings = CardCrawlGame.languagePack.getUIString("Runesmith:OptionsMenu");
+        String[] TEXT = UIStrings.TEXT;
+
+        int xPos = 350, yPos = 700;
+        ModPanel settingsPanel = new ModPanel();
+        ModLabeledToggleButton RelicBtn = new ModLabeledToggleButton(TEXT[0], xPos, yPos, Settings.CREAM_COLOR, FontHelper.charDescFont, enableRelicAll(), settingsPanel, l -> {
+        },
+                button ->
+                {
+                    if (modConfig != null) {
+                        modConfig.setBool("EnableRunesmithRelicsInAllPools", button.enabled);
+                        try {
+                            modConfig.save();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                });
+        settingsPanel.addUIElement(RelicBtn);
+
+        BaseMod.registerModBadge(ImageMaster.loadImage("runesmith/images/ui/badge.png"), "TheRunesmith",
+                "Blizzarre", "Runesmith character", settingsPanel);
 
         initializeElementalist();
 
@@ -456,7 +498,18 @@ public class RunesmithMod implements PostExhaustSubscriber,
 
     @Override
     public void receivePostDungeonInitialize() {
-
+        if(enableRelicAll()){
+            if(AbstractDungeon.player.chosenClass != PlayerClassEnum.RUNESMITH_CLASS) {
+                AbstractRelic r = new Locket();
+                if (RelicUtils.removeRelicFromPool(r, false)) logger.info(r.relicId + "removed from pool.");
+                r = new Nanobots();
+                if (RelicUtils.removeRelicFromPool(r, false)) logger.info(r.relicId + "removed from pool.");
+                r = new AutoHammer();
+                if (RelicUtils.removeRelicFromPool(r, false)) logger.info(r.relicId + "removed from pool.");
+                r = new UraniumAnvil();
+                if (RelicUtils.removeRelicFromPool(r, false)) logger.info(r.relicId + "removed from pool.");
+            }
+        }
     }
 
     @Override

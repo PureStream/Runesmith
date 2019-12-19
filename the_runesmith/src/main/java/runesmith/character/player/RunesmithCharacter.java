@@ -1,6 +1,7 @@
 package runesmith.character.player;
 
 import basemod.abstracts.CustomPlayer;
+import basemod.animations.SpineAnimation;
 import basemod.animations.SpriterAnimation;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -8,6 +9,7 @@ import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.math.MathUtils;
+import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -15,6 +17,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard.CardColor;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
+import com.megacrit.cardcrawl.cutscenes.CutscenePanel;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
@@ -34,6 +37,7 @@ import runesmith.relics.BrokenRuby;
 import runesmith.ui.EnergyOrbBeige;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class RunesmithCharacter extends CustomPlayer {
     private static final int ENERGY_PER_TURN = 3;
@@ -55,20 +59,20 @@ public class RunesmithCharacter extends CustomPlayer {
     private static final String CHAR_FLAVOR_TEXT = characterString.TEXT[0];
 
     public RunesmithCharacter(String name) {
-        super(name, PlayerClassEnum.RUNESMITH_CLASS, null, "runesmith/images/vfx.png", new SpriterAnimation(THE_RUNESMITH_SPRITER));
+        super(name, PlayerClassEnum.RUNESMITH_CLASS, null, "runesmith/images/vfx.png", new SpineAnimation(THE_RUNESMITH_SKELETON_ATLAS, THE_RUNESMITH_SKELETON_JSON, 1.0F));
 
         initializeClass(null, THE_RUNESMITH_SHOULDER_2, // required call to load textures and setup energy/loadout
                 THE_RUNESMITH_SHOULDER_1,
                 THE_RUNESMITH_CORPSE,
-                getLoadout(), 20.0F, -10.0F, 220.0F, 350.0F, new EnergyManager(ENERGY_PER_TURN));
+                getLoadout(), 20.0F, -10.0F, 220.0F, 330.0F, new EnergyManager(ENERGY_PER_TURN));
 
 //		this.dialogX = (this.drawX + 0.0F * Settings.scale); // set location for text bubbles
 //		this.dialogY = (this.drawY + 220.0F * Settings.scale); // you can just copy these values
 
 //		loadAnimation(THE_RUNESMITH_SKELETON_ATLAS, THE_RUNESMITH_SKELETON_JSON, 1.0F);
 
-//		AnimationState.TrackEntry e = this.state.setAnimation(0, "animation", true);
-//		e.setTime(e.getEndTime() * MathUtils.random());
+		AnimationState.TrackEntry e = this.state.setAnimation(0, "idle", true);
+		e.setTime(e.getEndTime() * MathUtils.random());
     }
 
     @Override
@@ -206,6 +210,18 @@ public class RunesmithCharacter extends CustomPlayer {
 
     public void renderOrb(SpriteBatch sb, boolean enabled, float current_x, float current_y) {
         this.energyOrb.renderOrb(sb, enabled, current_x, current_y);
+    }
+
+    public Texture getCutsceneBg() {
+        return ImageMaster.loadImage("runesmith/images/scenes/beigeBg.jpg");
+    }
+
+    public List<CutscenePanel> getCutscenePanels() {
+        List<CutscenePanel> panels = new ArrayList();
+        panels.add(new CutscenePanel("runesmith/images/scenes/runesmith1.png", "BLUNT_HEAVY"));
+        panels.add(new CutscenePanel("runesmith/images/scenes/runesmith2.png"));
+        panels.add(new CutscenePanel("runesmith/images/scenes/runesmith3.png"));
+        return panels;
     }
 
     public Texture getEnergyImage() {

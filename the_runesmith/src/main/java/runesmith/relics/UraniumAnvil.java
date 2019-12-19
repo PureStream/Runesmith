@@ -8,15 +8,15 @@ import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import runesmith.actions.DowngradeRandomCardInDeckAction;
 
-public class UraniumAnvil extends CustomRelic {
+public class UraniumAnvil extends AbstractRunesmithRelic {
 
     public static final String ID = "Runesmith:UraniumAnvil";
     private static final String IMG = "runesmith/images/relics/UraniumAnvil.png"; //<--------- Need some img
-    private static final String IMG_O = "runesmith/images/relics/UraniumAnvil_o.png";
+//    private static final String IMG_O = "runesmith/images/relics/UraniumAnvil_o.png";
     private static final int DOWN_AMT = 1;
 
     public UraniumAnvil() {
-        super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_O), RelicTier.BOSS, LandingSound.CLINK);
+        super(ID, IMG, RelicTier.BOSS, LandingSound.CLINK, true);
     }
 
     public String getUpdatedDescription() {
