@@ -498,7 +498,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
 
     @Override
     public void receivePostDungeonInitialize() {
-        if(enableRelicAll()){
+        if(!enableRelicAll()){
             if(AbstractDungeon.player.chosenClass != PlayerClassEnum.RUNESMITH_CLASS) {
                 AbstractRelic r = new Locket();
                 if (RelicUtils.removeRelicFromPool(r, false)) logger.info(r.relicId + "removed from pool.");
