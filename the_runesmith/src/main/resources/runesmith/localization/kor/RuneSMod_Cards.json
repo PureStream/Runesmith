@@ -117,7 +117,7 @@
   },
   "Runesmith:Firestorm": {
     "NAME": "화염폭풍",
-    "DESCRIPTION": "턴 시작시 runesmith:화염 !M! , runesmith:대지 !M! 을 얻습니다.",
+    "DESCRIPTION": "선천성. NL 턴 시작시 runesmith:화염 !M! , runesmith:대지 !M! 을 얻습니다.",
     "UPGRADE_DESCRIPTION": "선천성. NL 턴 시작시 runesmith:화염 !M! , runesmith:대지 !M! 을 얻습니다."
   },
   "Runesmith:RunicBlueprint": {
@@ -143,7 +143,7 @@
   },
   "Runesmith:ShiftingStrike": {
     "NAME": "속임수 타격",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 손에 있는 카드를 1장 runesmith:퇴화 시킨 뒤 다른 카드를 1장 선택하여 강화 시킵니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 손에 있는 카드 1 장의 runesmith:향상 을 모두 제거하고 다른 카드를 1장 선택하여 그만큼 강화 시킵니다."
   },
   "Runesmith:ChaoticBlast": {
     "NAME": "혼돈의 폭발",
@@ -183,7 +183,8 @@
   },
   "Runesmith:LastStand": {
     "NAME": "최후의 저항",
-    "DESCRIPTION": "모든 카드를 runesmith:퇴화 시킵니다. runesmith:원소 를 모두 잃습니다. 다음 턴 종료시, runesmith:퇴화 된 카드 수의 !M! 배만큼 모든 적에게 피해를 줍니다. NL 소멸.",
+    "DESCRIPTION": "휘발성. NL 모든 카드를 runesmith:퇴화 시킵니다. NL 모든 카드 의 비용이 1 감소하고 소멸 을 얻습니다. NL 소멸.",
+	"UPGRADE_DESCRIPTION": "모든 카드를 runesmith:퇴화 시킵니다. NL 모든 카드 의 비용이 1 감소하고 소멸 을 얻습니다. NL 소멸.",
     "EXTENDED_DESCRIPTION": [
       " NL (피해를 !D! 줍니다)"
     ]
@@ -222,7 +223,7 @@
   "Runesmith:UnlimitedPower": {
     "NAME": "무한한 힘",
     "DESCRIPTION": "runesmith:제련 할 때 더 이상 runesmith:원소 를 사용하지 않습니다.",
-    "UPGRADE_DESCRIPTION": "선천성. NL runesmith:제련 할 때 더 이상 runesmith:원소 를 사용하지 않습니다."
+    "UPGRADE_DESCRIPTION": "runesmith:제련 할 때 더 이상 runesmith:원소 를 사용하지 않습니다."
   },
   "Runesmith:WhiteBalance": {
     "NAME": "화이트 밸런스",
@@ -275,8 +276,8 @@
   },
   "Runesmith:Malloc": {
     "NAME": "할당",
-    "DESCRIPTION": "내 손에 있는 카드를 원하는 만큼 선택하여 runesmith:퇴화 시킵니다. NL runesmith:퇴화 된 카드 마다 [E] 를 얻습니다.",
-    "UPGRADE_DESCRIPTION": "[E] 를 얻습니다. NL 내 손에 있는 카드를 원하는 만큼 선택하여 runesmith:퇴화 시킵니다. NL runesmith:퇴화 된 카드 마다 [E] 를 얻습니다."
+    "DESCRIPTION": "내 손에 있는 카드를 1장 선택하여 runesmith:퇴화 시킵니다. NL 선택한 카드가 강화 된 카드라면 [E]를 얻습니다. NL runesmith:향상 된 만큼 카드를 !M! 장 뽑습니다.",
+    "UPGRADE_DESCRIPTION": "내 손에 있는 카드를 1장 선택하여 runesmith:퇴화 시킵니다. NL 선택한 카드가 강화 된 카드라면 [E] [E] 를 얻습니다. NL runesmith:향상 된 만큼 카드를 !M! 장 뽑습니다."
   },
   "Runesmith:BackupBattery": {
     "NAME": "보조 배터리",
@@ -314,7 +315,7 @@
   },
   "Runesmith:Attraction": {
     "NAME": "견인",
-    "DESCRIPTION": "뽑을 카드 더미, 버린 카드 더미, 소멸한 카드 더미에서 runesmith:제련 카드를 !M!장 손으로 가져옵니다. NL 소멸."
+    "DESCRIPTION": "뽑을 카드 더미, 버린 카드 더미 에서 runesmith:제련 카드를 !M!장 손으로 가져옵니다. NL 소멸."
   },
   "Runesmith:ArcReactor": {
     "NAME": "아크 원자로",

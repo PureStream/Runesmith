@@ -55,8 +55,9 @@ public class ShiftingStrikeAction extends AbstractGameAction {
                 AbstractCard c = AbstractDungeon.handCardSelectScreen.selectedCards.group.get(0);
 
                 int enhance_amt = EnhanceCountField.enhanceCount.get(c);
-                EnhanceCountField.enhanceCount.set(c, 0);
+//                EnhanceCountField.enhanceCount.set(c, 0);
                 EnhanceCountField.lastEnhance.set(c, 0);
+                EnhanceCountField.enhanceReset.set(c, true);
                 c.initializeDescription();
                 this.p.hand.addToTop(c);
                 returnCards();

@@ -32,7 +32,7 @@
 	 "NAME": "로켓",
 	 "FLAVOR": "무엇인지는 알 수 없지만 친숙한 모습이 들어 있는 로켓입니다.",
 	 "DESCRIPTIONS": [
-	  "매 전투마다 한 번 내 체력이 15% 아래로 떨어질 때 최후의 저항 카드를 뽑기 카드 더미 맨 위에 추가합니다."
+	  "매 전투마다 한 번 내 체력이 #b15% 아래로 내려가면, 모든 카드를 #y강화 하고 #yrunesmith:향상 합니다."
 	]
   },
   "Runesmith:AutoHammer": {
@@ -51,14 +51,14 @@
   },
   "Runesmith:PocketReactor": {
     "NAME": "휴대용 반응로",
-    "FLAVOR": "",
+    "FLAVOR": "어디서나 간편하게 핵 융합.",
     "DESCRIPTIONS": [
       "#yrunesmith:제련 할 때 더 이상 #yrunesmith:원소 를 사용하지 않습니다. 모든 카드가 #b2 #yrunesmith:잠재력 을 잃습니다. "
     ]
   },
   "Runesmith:CoreCrystal": {
     "NAME": "코어 크리스탈",
-    "FLAVOR": "",
+    "FLAVOR": "크리스탈이 생명의 힘에 요동칩니다.",
     "DESCRIPTIONS": [
       "#r부서진 #r루비 를 대체합니다. 모든 #yrunesmith:원소 의 획득량이 #b50% 증가합니다. #yrunesmith:원소 의 최대 보유량이 #b20 으로 증가합니다."
     ]
