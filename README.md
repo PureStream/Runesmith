@@ -1,7 +1,6 @@
 # The Runesmith
 The Runesmith is a Slay the Spire modded character centered around upgrading cards and creating runes. Elements can be gained from various cards and are required to craft powerful runes. These runes grant various passive effect akin to The Defect's orbs. Her cards can become extremely powerful, however they require lengthy setups. 
-This mod is early in development but most of the cards have been implemented. Expect many changes and balancing in the near future. 
-Most of the arts are temporary and will be updated as more refined drawings are made. Character animation is also in the works.
+
 ## Mechanics
 **Enhance**: Enhance allows cards to be powered up beyond what a card upgrade could do. Enhance effect is consumed after an enhanced card is played.
 
@@ -20,13 +19,8 @@ Most of the arts are temporary and will be updated as more refined drawings are 
 **Break**: Destroys a rune and activate its effect twice.
 
 ## Progress
-* Character Sprites (1/4)
-  * Animation (wip)
-  * Portrait (wip)
-* Cards (75(+4)/75(+4) including Basics)
-  * Completed card arts (1/75(+4))
-* Relics (1/?)
-* Energy Orb (wip)
+* Complete
+
 ## Installation
 Head over to this steam workshop page and subscribe (<https://steamcommunity.com/sharedfiles/filedetails/?id=1633549612>). You need ModTheSpire and BaseMod installed.
 
