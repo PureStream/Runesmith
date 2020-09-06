@@ -36,7 +36,7 @@ public class Strike_RS extends CustomCard {
                 CardTarget.ENEMY
         );
         this.tags.add(BaseModCardTags.BASIC_STRIKE);
-//        this.tags.add(CardTags.STARTER_STRIKE);
+        this.tags.add(CardTags.STARTER_STRIKE);
         this.tags.add(CardTags.STRIKE);
         this.baseDamage = ATTACK_DMG;
     }

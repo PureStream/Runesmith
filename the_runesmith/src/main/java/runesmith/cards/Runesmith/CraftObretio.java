@@ -43,6 +43,7 @@ public class CraftObretio extends AbstractRunicCard {
         this.elementCost = new int[]{0, TERRA_AMT, AQUA_AMT};
         this.potency = this.basePotency = POTENCY;
         this.tags.add(RS_CRAFT);
+        this.exhaust = true;
     }
 
     @Override

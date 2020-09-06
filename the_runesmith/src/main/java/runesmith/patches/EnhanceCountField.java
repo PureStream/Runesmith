@@ -8,5 +8,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 public class EnhanceCountField {
     public static SpireField<Integer> enhanceCount = new SpireField<Integer>(() -> 0);
     public static SpireField<Boolean> enhanceReset = new SpireField<Boolean>(() -> false);
+    public static SpireField<String> enhanceString = new SpireField<>(() -> "");
     public static SpireField<Integer> lastEnhance = new SpireField<>(() -> 0);
 }

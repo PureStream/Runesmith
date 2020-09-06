@@ -16,7 +16,8 @@
   },
   "Runesmith:CardEnhanced": {
     "TEXT": [
-      "runesmith:향상"
+      "runesmith:향상",
+      "향상"
     ]
   },
   "Runesmith:CardStasis": {

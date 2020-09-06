@@ -199,14 +199,14 @@ public class PlayerRunePatch {
     public static class callEndOfTurnActions{
         @SpireInsertPatch(locator = Locator.class)
         public static void Insert(GameActionManager __instance){
-            AbstractDungeon.actionManager.addToBottom(new TriggerEndOfTurnRunesAction());
+            __instance.addToBottom(new TriggerEndOfTurnRunesAction());
         }
 
         private static class Locator extends SpireInsertLocator {
             public int[] Locate(CtBehavior ctMethodToPatch) throws CannotCompileException, PatchingException {
                 ArrayList<Matcher> preMatchers = new ArrayList<>();
 
-                Matcher finalMatcher = new Matcher.FieldAccessMatcher(AbstractDungeon.class, "actionManager");
+                Matcher finalMatcher = new Matcher.FieldAccessMatcher(AbstractDungeon.class, "player");
 
                 return LineFinder.findInOrder(ctMethodToPatch, preMatchers, finalMatcher);
             }

@@ -22,7 +22,7 @@
       "NAMES": [
         "stasis"
       ],
-      "DESCRIPTION": "Prevent a card from being #yExhausted once and discard it instead or from losing #yEnhancement once. Cannot be stacked."
+      "DESCRIPTION": "Prevent a card from losing #yEnhancement when played once."
     },
     {
       "PROPER_NAME": "Potency",

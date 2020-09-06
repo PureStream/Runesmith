@@ -59,6 +59,7 @@ public abstract class AdditionalCardDescriptions {
 
         String raw = c.rawDescription;
 
+        EnhanceCountField.enhanceString.set(c, "");
         raw = raw.replace(" " + ENHANCE_TEXT[0] + ".", "");
         raw = raw.replace(" " + ENHANCE_TEXT[0] + " +" + (EnhanceCountField.enhanceCount.get(c) - 1) + ".", "");
         raw = raw.replace(" " + ENHANCE_TEXT[0] + " +" + EnhanceCountField.enhanceCount.get(c) + ".", "");
@@ -67,8 +68,10 @@ public abstract class AdditionalCardDescriptions {
 
         if (!EnhanceCountField.enhanceReset.get(c)) {
             if (EnhanceCountField.enhanceCount.get(c) == 1) {
+                EnhanceCountField.enhanceString.set(c, ENHANCE_TEXT[1]);
                 raw = raw + " " + ENHANCE_TEXT[0] + ".";
             } else if (EnhanceCountField.enhanceCount.get(c) > 1) {
+                EnhanceCountField.enhanceString.set(c, ENHANCE_TEXT[1] + "+" + EnhanceCountField.enhanceCount.get(c));
                 raw = raw + " " + ENHANCE_TEXT[0] + " +" + EnhanceCountField.enhanceCount.get(c) + ".";
             }
         }

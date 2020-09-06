@@ -105,7 +105,7 @@ public class MallocAction extends AbstractGameAction {
                 if(energy_amt > 0)
                     AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(energy_amt));
                 if(enhance_amt > 0)
-                    AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, enhance_amt));
+                    AbstractDungeon.actionManager.addToBottom(new DrawCardAction(enhance_amt));
                 returnCards();
                 AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;
                 AbstractDungeon.handCardSelectScreen.selectedCards.group.clear();

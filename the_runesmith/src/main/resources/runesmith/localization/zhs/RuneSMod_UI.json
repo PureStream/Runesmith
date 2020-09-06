@@ -16,12 +16,13 @@
   },
   "Runesmith:CardEnhanced": {
     "TEXT": [
-      "runesmith:强化"
+      " NL runesmith:强化 ",
+      "强化"
     ]
   },
   "Runesmith:CardStasis": {
     "TEXT": [
-      "runesmith:凝滞"
+      "  NL runesmith:凝滞 "
     ]
   },
   "Runesmith:DoubleUpAction": {
@@ -79,6 +80,17 @@
   "Runesmith:Craftable": {
     "TEXT": [
       "可打造"
+    ]
+  },
+  "Runesmith:ShiftingStrike": {
+    "TEXT": [
+      "移除强化",
+      "进行强化"
+    ]
+  },
+  "Runesmith:OptionsMenu": {
+    "TEXT": [
+      "符文工匠遗物变为非角色专属遗物"
     ]
   }
 }
