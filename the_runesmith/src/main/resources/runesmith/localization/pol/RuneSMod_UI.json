@@ -16,7 +16,8 @@
   },
   "Runesmith:CardEnhanced": {
     "TEXT": [
-      "runesmith:Wzmocniona"
+      "runesmith:Wzmocniona",
+      "Wzmocniona"
     ]
   },
   "Runesmith:CardStasis": {

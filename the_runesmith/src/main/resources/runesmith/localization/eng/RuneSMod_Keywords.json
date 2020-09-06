@@ -22,7 +22,7 @@
       "NAMES": [
         "stasis"
       ],
-      "DESCRIPTION": "Prevent a card from losing #yEnhancement when played."
+      "DESCRIPTION": "Prevent a card from losing #yEnhancement when played once."
     },
     {
       "PROPER_NAME": "Potency",

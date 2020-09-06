@@ -3,22 +3,28 @@ package runesmith.patches;
 import basemod.ReflectionHacks;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.graphics.g2d.GlyphLayout;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.evacipated.cardcrawl.modthespire.patcher.PatchingException;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.localization.UIStrings;
 import javassist.CannotCompileException;
 import javassist.CtBehavior;
-import runesmith.cards.Runesmith.AbstractRunicCard;
 
 import java.util.ArrayList;
 
 public class RenderEnhancedBannerPatch {
 
     private static Texture ENHANCED_BANNER = ImageMaster.loadImage("runesmith/images/cardui/512/enhance_banner.png");
+    private static Color textColor = new Color(1245392127);
+    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("Runesmith:CardEnhanced");
+    public static final String[] ENHANCE_TEXT = uiStrings.TEXT;
 
     @SpirePatch(
             clz = AbstractCard.class,
@@ -47,6 +53,14 @@ public class RenderEnhancedBannerPatch {
     static void renderBanner(SpriteBatch sb, AbstractCard c){
         Color color = (Color) ReflectionHacks.getPrivate(c, AbstractCard.class, "renderColor");
         renderHelper(sb, c, color, ENHANCED_BANNER, c.current_x, c.current_y);
+
+        BitmapFont font = FontHelper.cardDescFont_L;
+        font.getData().setScale(1.0F);
+        GlyphLayout gl = new GlyphLayout(font, EnhanceCountField.enhanceString.get(c));
+        float scale = Math.min((170.0F)/gl.width, (16.0F)/gl.height)*c.drawScale;
+        font.getData().setScale(scale*Settings.scale);
+        FontHelper.renderRotatedText(sb, font, EnhanceCountField.enhanceString.get(c), c.current_x, c.current_y, 0.0F, 139.0F * Settings.scale * c.drawScale, c.angle, true, textColor);
+        font.getData().setScale(1.0F);
     }
 
     private static void renderHelper(SpriteBatch sb, AbstractCard c, Color color, Texture img, float drawX, float drawY) {

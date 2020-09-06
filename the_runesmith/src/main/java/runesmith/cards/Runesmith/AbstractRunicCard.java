@@ -121,10 +121,10 @@ public abstract class AbstractRunicCard extends CustomCard {
         this.freeElementOnce = false;
     }
 
-//    @Override
-//    public void triggerOnGlowCheck(){
-//        glowColor = isCraftable ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;
-//    }
+    @Override
+    public void triggerOnGlowCheck(){
+        glowColor = isCraftable ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;
+    }
 
     public int[] getElementCost(){ return elementCost;}
 
@@ -216,13 +216,13 @@ public abstract class AbstractRunicCard extends CustomCard {
             float drawY = this.current_y - 256.0F;
             if (this.isCraftable && this.renderCraftable) {
                 this.renderHelper(sb, this.renderColor, craftableTab, drawX, drawY);
-                BitmapFont font = FontHelper.menuBannerFont;
+                BitmapFont font = FontHelper.cardDescFont_L;
                 font.getData().setScale(1.0F);
                 GlyphLayout gl = new GlyphLayout(font, craftableString[0]);
-                float scale = Math.min((82.0F*this.drawScale)/gl.width, (15.0F*this.drawScale)/gl.height);
-                FontHelper.menuBannerFont.getData().setScale(scale*Settings.scale);
-                FontHelper.renderRotatedText(sb, FontHelper.menuBannerFont, craftableString[0], this.current_x, this.current_y, 0.0F, 429.0F * Settings.scale * this.drawScale / 2.0F, this.angle, true, this.textColor);
-                FontHelper.menuBannerFont.getData().setScale(1.0F);
+                float scale = Math.min((82.0F)/gl.width, (15.0F)/gl.height)*this.drawScale;
+                font.getData().setScale(scale*Settings.scale);
+                FontHelper.renderRotatedText(sb, font, craftableString[0], this.current_x, this.current_y, 0.0F, 214.5F * Settings.scale * this.drawScale, this.angle, true, this.textColor);
+                font.getData().setScale(1.0F);
             }
         }
     }

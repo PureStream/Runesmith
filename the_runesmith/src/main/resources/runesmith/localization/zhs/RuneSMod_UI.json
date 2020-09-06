@@ -16,7 +16,8 @@
   },
   "Runesmith:CardEnhanced": {
     "TEXT": [
-      " NL runesmith:强化 "
+      " NL runesmith:强化 ",
+      "强化"
     ]
   },
   "Runesmith:CardStasis": {

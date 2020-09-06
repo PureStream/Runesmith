@@ -16,7 +16,8 @@
   },
   "Runesmith:CardEnhanced": {
     "TEXT": [
-      "runesmith:Enhanced"
+      "runesmith:Enhanced",
+      "Enhanced"
     ]
   },
   "Runesmith:CardStasis": {
