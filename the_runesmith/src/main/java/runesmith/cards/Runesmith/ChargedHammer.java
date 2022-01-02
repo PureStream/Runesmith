@@ -38,10 +38,10 @@ public class ChargedHammer extends CustomCard {
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     public static final String IMG_PATH = "runesmith/images/cards/ChargedHammer.png"; //<-------------- need some img
     private static final int COST = 2;
-    private static final int ATTACK_DMG = 15;
-    private static final int UPGRADE_PLUS_DMG = 3;
-    private static final int ELEMENT_SPENT = 3;
-    private static final int ELEMENT_SPENT_UPG = -1;
+    private static final int ATTACK_DMG = 12;
+    private static final int UPGRADE_PLUS_DMG = 4;
+//    private static final int ELEMENT_SPENT = 3;
+//    private static final int ELEMENT_SPENT_UPG = -1;
 
     public ChargedHammer() {
         super(
@@ -57,7 +57,7 @@ public class ChargedHammer extends CustomCard {
         );
         this.baseDamage = ATTACK_DMG;
         this.tags.add(RS_HAMMER);
-        this.baseMagicNumber = this.magicNumber = ELEMENT_SPENT;
+//        this.baseMagicNumber = this.magicNumber = ELEMENT_SPENT;
     }
 
     public AbstractCard makeCopy() {
@@ -68,7 +68,7 @@ public class ChargedHammer extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(ELEMENT_SPENT_UPG);
+//            upgradeMagicNumber(ELEMENT_SPENT_UPG);
             upgradeDamage(UPGRADE_PLUS_DMG);
         }
     }
@@ -89,42 +89,39 @@ public class ChargedHammer extends CustomCard {
                     .filter(o -> o instanceof DudRune)
                     .findFirst().orElse(null);
             if (r != null) {
-                int ignis = getIgnis(), terra = getTerra(), aqua = getAqua();
-
-                if (ignis + terra + aqua >= this.magicNumber) {
-                    for (int i=0; i<this.magicNumber; i++) {
-                        List<Elements> elementsList = new ArrayList<>();
-                        if (ignis > 0)
-                            elementsList.add(Elements.IGNIS);
-                        if (terra > 0)
-                            elementsList.add(Elements.TERRA);
-                        if (aqua > 0)
-                            elementsList.add(Elements.AQUA);
-                        Elements rngElementID = elementsList.get(AbstractDungeon.cardRandomRng.random(elementsList.size()-1));
-                        switch(rngElementID){
-                            case IGNIS: ignis--; break;
-                            case TERRA: terra--; break;
-                            case AQUA: aqua--; break;
-                        }
-                        AbstractDungeon.actionManager.addToBottom(new ReduceElementsPowerAction(rngElementID, 1));
-                    }
-                    float speedTime = 0.1F;
-                    if (Settings.FAST_MODE) {
-                        speedTime = 0.0F;
-                    }
-                    AbstractDungeon.actionManager.addToBottom(new VFXAction(new LightningEffect(p.drawX, p.drawY), speedTime));
-                    AbstractDungeon.actionManager.addToBottom(new SFXAction("ORB_LIGHTNING_EVOKE"));
-                    int playerPot = 0;
-                    if (p.hasPower(PotentialPower.POWER_ID))
-                        playerPot = p.getPower(PotentialPower.POWER_ID).amount;
-                    AbstractDungeon.actionManager.addToBottom(new BreakRuneAction(r));
-                    AbstractDungeon.actionManager.addToBottom(new RuneChannelAction(RuneOrb.getRandomRune(AbstractDungeon.cardRandomRng, playerPot, true)));
+//                int ignis = getIgnis(), terra = getTerra(), aqua = getAqua();
+//
+//                if (ignis + terra + aqua >= this.magicNumber) {
+//                    for (int i=0; i<this.magicNumber; i++) {
+//                        List<Elements> elementsList = new ArrayList<>();
+//                        if (ignis > 0)
+//                            elementsList.add(Elements.IGNIS);
+//                        if (terra > 0)
+//                            elementsList.add(Elements.TERRA);
+//                        if (aqua > 0)
+//                            elementsList.add(Elements.AQUA);
+//                        Elements rngElementID = elementsList.get(AbstractDungeon.cardRandomRng.random(elementsList.size()-1));
+//                        switch(rngElementID){
+//                            case IGNIS: ignis--; break;
+//                            case TERRA: terra--; break;
+//                            case AQUA: aqua--; break;
+//                        }
+//                        AbstractDungeon.actionManager.addToBottom(new ReduceElementsPowerAction(rngElementID, 1));
+//                    }
+//                }
+                float speedTime = 0.1F;
+                if (Settings.FAST_MODE) {
+                    speedTime = 0.0F;
                 }
+                AbstractDungeon.actionManager.addToBottom(new VFXAction(new LightningEffect(p.drawX, p.drawY), speedTime));
+                AbstractDungeon.actionManager.addToBottom(new SFXAction("ORB_LIGHTNING_EVOKE"));
+                int playerPot = 0;
+                if (p.hasPower(PotentialPower.POWER_ID))
+                    playerPot = p.getPower(PotentialPower.POWER_ID).amount;
+                AbstractDungeon.actionManager.addToBottom(new BreakRuneAction(r));
+                AbstractDungeon.actionManager.addToBottom(new RuneChannelAction(RuneOrb.getRandomRune(AbstractDungeon.cardRandomRng, playerPot, true)));
             }
         }
-
-
-
     }
 
 }

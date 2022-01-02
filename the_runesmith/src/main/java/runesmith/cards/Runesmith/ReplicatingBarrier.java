@@ -38,7 +38,6 @@ public class ReplicatingBarrier extends AbstractRunicCard {
         );
 //        this.overchargePot = ProtectioRune.getOverchargeAmt();
         this.elementCost = new int[]{0,TERRA_AMT,0};
-        this.renderCraftable = false;
         this.basePotency = this.potency = POTENCY_AMT;
     }
 

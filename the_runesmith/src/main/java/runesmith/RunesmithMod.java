@@ -247,15 +247,19 @@ public class RunesmithMod implements PostExhaustSubscriber,
 
     public static void renderElementsCounter(SpriteBatch sb, float current_x){
 //        AbstractPlayer p = AbstractDungeon.player;
-        if (elementalistEnabled){
-            if (getRenderElementalistOrbs()) {
-                elementsCounter.setYOffset(95.0F * Settings.scale);
-            } else{
-                elementsCounter.setYOffset(0.0F);
-            }
-        }
-        elementsCounter.update();
+//        if (elementalistEnabled){
+//            if (getRenderElementalistOrbs()) {
+//                elementsCounter.setYOffset(95.0F * Settings.scale);
+//            } else{
+//                elementsCounter.setYOffset(0.0F);
+//            }
+//        }
         elementsCounter.render(sb, current_x);
+    }
+
+    public static void updateElementsCounter()
+    {
+        elementsCounter.update();
     }
 
     private static boolean getRenderElementalistOrbs(){
@@ -287,9 +291,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
     @Override
     public void receiveCardUsed(AbstractCard c) {
         if (CardStasisStatus.isStasis.get(c) || EnhanceCountField.enhanceCount.get(c) > 0) {
-            if (CardStasisStatus.isStasis.get(c) && EnhanceCountField.enhanceCount.get(c) > 0) {
-                CardStasisStatus.isStasis.set(c, false);
-            }else if (EnhanceCountField.enhanceCount.get(c) > 0){
+            if (!CardStasisStatus.isStasis.get(c) && EnhanceCountField.enhanceCount.get(c) > 0) {
                 EnhanceCountField.enhanceReset.set(c, true);
             }
 //			AdditionalCardDescriptions.modifyDescription(c);

@@ -20,7 +20,7 @@ public class MetallurgicalResearch extends CustomCard {
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     private static final int COST = 2;
 //    private static final int COST_UPG = 1;
-    private static final int WAIT_AMT = 2;
+    private static final int WAIT_AMT = 3;
     private static final int UPG_WAIT_AMT = -1;
 
     public MetallurgicalResearch() {

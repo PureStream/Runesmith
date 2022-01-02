@@ -41,7 +41,7 @@ public class LightningRod extends CustomCard {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
                 new LightningRodPower(p, this.magicNumber), this.magicNumber));
         AbstractDungeon.actionManager.addToBottom(
-                new ApplyElementsPowerAction(p, p, 2, 2, 2));
+                new ApplyElementsPowerAction(p, p, this.magicNumber, this.magicNumber, this.magicNumber));
     }
 
     public AbstractCard makeCopy() {

@@ -23,7 +23,7 @@ public class HammerThrow extends CustomCard {
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     public static final String IMG_PATH = "runesmith/images/cards/HammerThrow.png"; //<-------------- need some img
     private static final int COST = 1;
-    private static final int ATTACK_DMG = 6;
+    private static final int ATTACK_DMG = 5;
     private static final int UPGRADE_PLUS_DMG = 1;
     private static final int DRAW_AMT = 1;
     private static final int UPGRADE_DRAW_AMT = 1;

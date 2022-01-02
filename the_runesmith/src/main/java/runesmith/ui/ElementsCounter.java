@@ -9,12 +9,17 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.graphics.glutils.FrameBuffer;
+import com.badlogic.gdx.math.MathUtils;
+import com.badlogic.gdx.math.Matrix4;
+import com.badlogic.gdx.math.Rectangle;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.*;
+import com.megacrit.cardcrawl.helpers.controller.CInputHelper;
+import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import runesmith.RunesmithMod;
 import runesmith.patches.ElementsGainedCountField;
@@ -42,13 +47,18 @@ public class ElementsCounter extends ClickableUIElement {
 
     private static final float ELEMENTS_IMG_SCALE = 1.15F * Settings.scale;
 
-    private static float x = 198.0F * Settings.scale;
-    private static float baseY = 320.0F * Settings.scale;
-    private static float y = 320.0F * Settings.scale;
+    private static final float baseX = 198.0F * Settings.scale;
+    private static final float baseY = 320.0F * Settings.scale;
+    private float x = baseX;
+    private float y = baseY;
     private static float textX = 198.0F * Settings.scale;
     private static float textY = 320.0F * Settings.scale;
     private static float hb_w = 70.0F * ELEMENTS_IMG_SCALE;
     private static float hb_h = 96.0F * ELEMENTS_IMG_SCALE;
+
+    private Rectangle bound = new Rectangle(20.0F * Settings.scale, 160.0F * Settings.scale, 220.0F * Settings.scale, 180.0F * Settings.scale);
+
+    private static int IMG_DIM = 256;
 
     private static String[] IgnisText = CardCrawlGame.languagePack.getUIString("Runesmith:IgnisElement").TEXT;
     private static String[] TerraText = CardCrawlGame.languagePack.getUIString("Runesmith:TerraElement").TEXT;
@@ -68,7 +78,11 @@ public class ElementsCounter extends ClickableUIElement {
     private static float ignisH = 31.0F * ELEMENTS_IMG_SCALE;
     private static float terraH = 34.0F * ELEMENTS_IMG_SCALE;
     private FrameBuffer fbo;
+    private SpriteBatch sb2;
 
+    private boolean isDragging = false;
+    private float mouseOffsetX = 0;
+    private float mouseOffsetY = 0;
     //Elements data for player
     private static int ignis = 0, terra = 0, aqua = 0;
 //    public static String IGNIS_ID = "IGNIS_ID", TERRA_ID = "TERRA_ID", AQUA_ID = "AQUA_ID";
@@ -145,9 +159,7 @@ public class ElementsCounter extends ClickableUIElement {
         int maxElements = (AbstractDungeon.player.hasRelic(CoreCrystal.ID)) ? CoreCrystal.MAX_ELEMENTS : RunesmithMod.DEFAULT_MAX_ELEMENTS;
         if (element > maxElements)
             return maxElements;
-        if (element < 0)
-            return 0;
-        return element;
+        return Math.max(element, 0);
     }
 
     public static void resetElements() {
@@ -157,26 +169,23 @@ public class ElementsCounter extends ClickableUIElement {
     }
 
     public ElementsCounter(Texture image){
-        super(image, x, y , hb_w, hb_h);
-        this.fbo = new FrameBuffer(Pixmap.Format.RGBA8888, Settings.M_W, Settings.M_H, false, false);
-        this.ignisHitbox = new Hitbox(x - hb_w/2,y + terraH/2, hb_w,ignisH);
-        this.terraHitbox = new Hitbox(x - hb_w/2, y - terraH/2, hb_w,terraH);
-        this.aquaHitbox = new Hitbox(x - hb_w/2,y - terraH/2 - ignisH, hb_w,ignisH);
+        super(image, baseX, baseY , hb_w, hb_h);
+        this.fbo = new FrameBuffer(Pixmap.Format.RGBA8888, IMG_DIM, IMG_DIM, false, false);
+        this.ignisHitbox = new Hitbox(baseX - hb_w/2,baseY + terraH/2, hb_w,ignisH);
+        this.terraHitbox = new Hitbox(baseX - hb_w/2, baseY - terraH/2, hb_w,terraH);
+        this.aquaHitbox = new Hitbox(baseX - hb_w/2,baseY - terraH/2 - ignisH, hb_w,ignisH);
         this.setClickable(false);
-    }
 
-    public void setYOffset(float yOffset){
-        this.currentYOffset = yOffset;
-        y = textY = baseY + yOffset;
-        ignisHitbox.translate(ignisHitbox.x, baseY + terraH/2 + yOffset);
-        terraHitbox.translate(terraHitbox.x, baseY - terraH/2 + yOffset);
-        aquaHitbox.translate(aquaHitbox.x, baseY - terraH/2 - ignisH + yOffset);
+        sb2 = new SpriteBatch(20);
+        Matrix4 matrix = new Matrix4();
+        matrix.setToOrtho2D(0,0, IMG_DIM, IMG_DIM);
+        sb2.setProjectionMatrix(matrix);
     }
-
 
     public void render(SpriteBatch sb, float current_x){
-        x = current_x;
-        textX = current_x;
+        float x2 = current_x + x - baseX;
+        updateHitboxPosition(x2, y);
+//        textX = current_x;
         sb.end();
 
         this.fbo.begin();
@@ -184,28 +193,25 @@ public class ElementsCounter extends ClickableUIElement {
             Gdx.gl.glClearColor(0.0F, 0.0F, 0.0F, 0.0F);
             Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT | GL20.GL_DEPTH_BUFFER_BIT);
             Gdx.gl.glColorMask(true, true, true, true);
-            sb.begin();
+            sb2.begin();
             {
-                sb.setColor(Color.WHITE);
-                sb.setBlendFunction(-1, -1);//disable spritebatch blending override
+                sb2.setColor(Color.WHITE);
+                sb2.setBlendFunction(-1, -1);//disable spritebatch blending override
                 Gdx.gl.glBlendFuncSeparate(GL20.GL_SRC_ALPHA, GL20.GL_ONE_MINUS_SRC_ALPHA, GL20.GL_ONE, GL20.GL_ONE_MINUS_SRC_ALPHA);
-                sb.draw(ELEMENTS_RED_LAYER1, x - 128.0F, y - 128.0F, 128.0F, 128.0F, 256.0F, 256.0F, ELEMENTS_IMG_SCALE, ELEMENTS_IMG_SCALE, 0.0F, 0, 0, 256, 256, false, false);
-                sb.draw(ELEMENTS_RED_LAYER2, x - 128.0F, y - 128.0F, 128.0F, 128.0F, 256.0F, 256.0F, ELEMENTS_IMG_SCALE, ELEMENTS_IMG_SCALE, this.angle2, 0, 0, 256, 256, false, false);
-                sb.draw(ELEMENTS_RED_LAYER3, x - 128.0F, y - 128.0F, 128.0F, 128.0F, 256.0F, 256.0F, ELEMENTS_IMG_SCALE, ELEMENTS_IMG_SCALE, this.angle1, 0, 0, 256, 256, false, false);
-                sb.setBlendFunction(0, 770);
-                sb.setColor(new Color(1.0F, 1.0F, 1.0F, 1.0F));
-                sb.draw(ELEMENTS_RED_MASK, x - 128.0F, y - 128.0F, 128.0F, 128.0F, 256.0F, 256.0F, ELEMENTS_IMG_SCALE, ELEMENTS_IMG_SCALE, 0.0F, 0, 0, 256, 256, false, false);
-                sb.setBlendFunction(770, 771);
+                sb2.draw(ELEMENTS_RED_LAYER1, 0, 0, 128.0F, 128.0F, IMG_DIM, IMG_DIM, 1, 1, 0.0F, 0, 0, 256, 256, false, false);
+                sb2.draw(ELEMENTS_RED_LAYER2, 0, 0, 128.0F, 128.0F, IMG_DIM, IMG_DIM, 1, 1, this.angle2, 0, 0, 256, 256, false, false);
+                sb2.draw(ELEMENTS_RED_LAYER3, 0, 0, 128.0F, 128.0F, IMG_DIM, IMG_DIM, 1, 1, this.angle1, 0, 0, 256, 256, false, false);
+                sb2.setBlendFunction(0, 770);
+                sb2.setColor(new Color(1.0F, 1.0F, 1.0F, 1.0F));
+                sb2.draw(ELEMENTS_RED_MASK, 0, 0, 128.0F, 128.0F, IMG_DIM, IMG_DIM, 1, 1, 0.0F, 0, 0, 256, 256, false, false);
+                sb2.setBlendFunction(770, 771);
             }
-            sb.end();
+            sb2.end();
         }
         this.fbo.end();
 
         sb.begin();
-        TextureRegion drawTex = new TextureRegion(this.fbo.getColorBufferTexture());
-        drawTex.flip(false, true);
-        sb.draw(drawTex, 0.0F - Settings.VERT_LETTERBOX_AMT, 0.0F - Settings.HORIZ_LETTERBOX_AMT);
-//        sb.draw(this.fbo.getColorBufferTexture(), 0.0F, 0.0F,Settings.WIDTH,Settings.HEIGHT,0.0F,0.0F,1.0F,1.0F,0.0F,0,0,Settings.WIDTH,Settings.HEIGHT,false,true );
+        sb.draw(this.fbo.getColorBufferTexture(), x2 - 128.0F - Settings.VERT_LETTERBOX_AMT, y - 128.0F - Settings.HORIZ_LETTERBOX_AMT, 128.0F, 128.0F, IMG_DIM, IMG_DIM, ELEMENTS_IMG_SCALE, ELEMENTS_IMG_SCALE, 0.0F, 0, 0, 256, 256, false, true);
         sb.end();
 
         this.fbo.begin();
@@ -213,28 +219,25 @@ public class ElementsCounter extends ClickableUIElement {
 //            Gdx.gl.glClearColor(0.0F, 0.0F, 0.0F, 0.0F);
 //            Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT | GL20.GL_DEPTH_BUFFER_BIT);
 //            Gdx.gl.glColorMask(true, true, true, true);
-            sb.begin();
+            sb2.begin();
             {
-                sb.setColor(Color.WHITE);
-                sb.setBlendFunction(-1, -1);//disable spritebatch blending override
+                sb2.setColor(Color.WHITE);
+                sb2.setBlendFunction(-1, -1);//disable spritebatch blending override
                 Gdx.gl.glBlendFuncSeparate(GL20.GL_SRC_ALPHA, GL20.GL_ONE_MINUS_SRC_ALPHA, GL20.GL_ONE, GL20.GL_ONE_MINUS_SRC_ALPHA);
-                sb.draw(ELEMENTS_GREEN_LAYER1, x - 128.0F, y - 128.0F, 128.0F, 128.0F, 256.0F, 256.0F, ELEMENTS_IMG_SCALE, ELEMENTS_IMG_SCALE, 0.0F, 0, 0, 256, 256, false, false);
-                sb.draw(ELEMENTS_GREEN_LAYER2, x - 128.0F, y - 128.0F, 128.0F, 128.0F, 256.0F, 256.0F, ELEMENTS_IMG_SCALE, ELEMENTS_IMG_SCALE, this.angle3, 0, 0, 256, 256, false, false);
-                sb.draw(ELEMENTS_GREEN_LAYER3, x - 128.0F, y - 128.0F, 128.0F, 128.0F, 256.0F, 256.0F, ELEMENTS_IMG_SCALE, ELEMENTS_IMG_SCALE, this.angle2, 0, 0, 256, 256, false, false);
-                sb.setBlendFunction(0, 770);
-                sb.setColor(new Color(1.0F, 1.0F, 1.0F, 1.0F));
-                sb.draw(ELEMENTS_GREEN_MASK, x - 128.0F, y - 128.0F, 128.0F, 128.0F, 256.0F, 256.0F, ELEMENTS_IMG_SCALE, ELEMENTS_IMG_SCALE, 0.0F, 0, 0, 256, 256, false, false);
-                sb.setBlendFunction(770, 771);
+                sb2.draw(ELEMENTS_GREEN_LAYER1, 0, 0, 128.0F, 128.0F, IMG_DIM, IMG_DIM, 1, 1, 0.0F, 0, 0, 256, 256, false, false);
+                sb2.draw(ELEMENTS_GREEN_LAYER2, 0, 0, 128.0F, 128.0F, IMG_DIM, IMG_DIM, 1, 1, this.angle3, 0, 0, 256, 256, false, false);
+                sb2.draw(ELEMENTS_GREEN_LAYER3, 0, 0, 128.0F, 128.0F, IMG_DIM, IMG_DIM, 1, 1, this.angle2, 0, 0, 256, 256, false, false);
+                sb2.setBlendFunction(0, 770);
+                sb2.setColor(new Color(1.0F, 1.0F, 1.0F, 1.0F));
+                sb2.draw(ELEMENTS_GREEN_MASK, 0, 0, 128.0F, 128.0F, IMG_DIM, IMG_DIM, 1, 1, 0.0F, 0, 0, 256, 256, false, false);
+                sb2.setBlendFunction(770, 771);
             }
-            sb.end();
+            sb2.end();
         }
         this.fbo.end();
 
         sb.begin();
-//        sb.draw(this.fbo.getColorBufferTexture(), 0.0F, (float) (-Settings.HEIGHT) + 2.0F * y);
-        drawTex = new TextureRegion(this.fbo.getColorBufferTexture());
-        drawTex.flip(false, true);
-        sb.draw(drawTex, 0.0F - Settings.VERT_LETTERBOX_AMT, 0.0F - Settings.HORIZ_LETTERBOX_AMT);
+        sb.draw(this.fbo.getColorBufferTexture(), x2 - 128.0F - Settings.VERT_LETTERBOX_AMT, y - 128.0F - Settings.HORIZ_LETTERBOX_AMT, 128.0F, 128.0F, IMG_DIM, IMG_DIM, ELEMENTS_IMG_SCALE, ELEMENTS_IMG_SCALE, 0.0F, 0, 0, 256, 256, false, true);
         sb.end();
 
         this.fbo.begin();
@@ -242,69 +245,99 @@ public class ElementsCounter extends ClickableUIElement {
 //            Gdx.gl.glClearColor(0.0F, 0.0F, 0.0F, 0.0F);
 //            Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT | GL20.GL_DEPTH_BUFFER_BIT);
 //            Gdx.gl.glColorMask(true, true, true, true);
-            sb.begin();
+            sb2.begin();
             {
-                sb.setColor(Color.WHITE);
-                sb.setBlendFunction(-1, -1);//disable spritebatch blending override
+                sb2.setColor(Color.WHITE);
+                sb2.setBlendFunction(-1, -1);//disable spritebatch blending override
                 Gdx.gl.glBlendFuncSeparate(GL20.GL_SRC_ALPHA, GL20.GL_ONE_MINUS_SRC_ALPHA, GL20.GL_ONE, GL20.GL_ONE_MINUS_SRC_ALPHA);
-                sb.draw(ELEMENTS_BLUE_LAYER1, x - 128.0F, y - 128.0F, 128.0F, 128.0F, 256.0F, 256.0F, ELEMENTS_IMG_SCALE, ELEMENTS_IMG_SCALE, 0.0F, 0, 0, 256, 256, false, false);
-                sb.draw(ELEMENTS_BLUE_LAYER2, x - 128.0F, y - 128.0F, 128.0F, 128.0F, 256.0F, 256.0F, ELEMENTS_IMG_SCALE, ELEMENTS_IMG_SCALE, this.angle2, 0, 0, 256, 256, false, false);
-                sb.draw(ELEMENTS_BLUE_LAYER3, x - 128.0F, y - 128.0F, 128.0F, 128.0F, 256.0F, 256.0F, ELEMENTS_IMG_SCALE, ELEMENTS_IMG_SCALE, this.angle1, 0, 0, 256, 256, false, false);
-                sb.setBlendFunction(0, 770);
-                sb.setColor(new Color(1.0F, 1.0F, 1.0F, 1.0F));
-                sb.draw(ELEMENTS_BLUE_MASK, x - 128.0F, y - 128.0F, 128.0F, 128.0F, 256.0F, 256.0F, ELEMENTS_IMG_SCALE, ELEMENTS_IMG_SCALE, 0.0F, 0, 0, 256, 256, false, false);
-                sb.setBlendFunction(770, 771);
+                sb2.draw(ELEMENTS_BLUE_LAYER1, 0, 0, 128.0F, 128.0F, IMG_DIM, IMG_DIM, 1, 1, 0.0F, 0, 0, 256, 256, false, false);
+                sb2.draw(ELEMENTS_BLUE_LAYER2, 0, 0, 128.0F, 128.0F, IMG_DIM, IMG_DIM, 1, 1, this.angle2, 0, 0, 256, 256, false, false);
+                sb2.draw(ELEMENTS_BLUE_LAYER3, 0, 0, 128.0F, 128.0F, IMG_DIM, IMG_DIM, 1, 1, this.angle1, 0, 0, 256, 256, false, false);
+                sb2.setBlendFunction(0, 770);
+                sb2.setColor(new Color(1.0F, 1.0F, 1.0F, 1.0F));
+                sb2.draw(ELEMENTS_BLUE_MASK, 0, 0, 128.0F, 128.0F, IMG_DIM, IMG_DIM, 1, 1, 0.0F, 0, 0, 256, 256, false, false);
+                sb2.setBlendFunction(770, 771);
             }
-            sb.end();
+            sb2.end();
         }
         this.fbo.end();
 
         sb.begin();
-//        sb.draw(this.fbo.getColorBufferTexture(), 0.0F, (float) (-Settings.HEIGHT) + 2.0F * y);
-        drawTex = new TextureRegion(this.fbo.getColorBufferTexture());
-        drawTex.flip(false, true);
-        sb.draw(drawTex, 0.0F - Settings.VERT_LETTERBOX_AMT, 0.0F - Settings.HORIZ_LETTERBOX_AMT);
+        sb.draw(this.fbo.getColorBufferTexture(), x2 - 128.0F - Settings.VERT_LETTERBOX_AMT, y - 128.0F - Settings.HORIZ_LETTERBOX_AMT, 128.0F, 128.0F, IMG_DIM, IMG_DIM, ELEMENTS_IMG_SCALE, ELEMENTS_IMG_SCALE, 0.0F, 0, 0, 256, 256, false, true);
 
-        sb.draw(ELEMENTS_FRAME, x - 128.0F, y - 128.0F, 128.0F, 128.0F, 256.0F, 256.0F, ELEMENTS_IMG_SCALE, ELEMENTS_IMG_SCALE, 0.0F, 0, 0, 256, 256, false, false);
+        sb.draw(ELEMENTS_FRAME, x2 - 128.0F - Settings.VERT_LETTERBOX_AMT, y - 128.0F - Settings.HORIZ_LETTERBOX_AMT, 128.0F, 128.0F, IMG_DIM, IMG_DIM, ELEMENTS_IMG_SCALE, ELEMENTS_IMG_SCALE, 0.0F, 0, 0, 256, 256, false, false);
 
-        FontHelper.renderFontCentered(sb, FontHelper.energyNumFontRed, this.ignisCount+"/"+MAX_ELEMENTS, textX, textY + 31.0F * ELEMENTS_IMG_SCALE, Color.WHITE, rFontScale);
-        FontHelper.renderFontCentered(sb, FontHelper.energyNumFontGreen, this.terraCount+"/"+MAX_ELEMENTS, textX, textY, Color.WHITE, gFontScale);
-        FontHelper.renderFontCentered(sb, FontHelper.energyNumFontBlue, this.aquaCount+"/"+MAX_ELEMENTS, textX, textY - 31.0F * ELEMENTS_IMG_SCALE, Color.WHITE, bFontScale);
+        FontHelper.renderFontCentered(sb, FontHelper.energyNumFontRed, this.ignisCount+"/"+MAX_ELEMENTS, x2, y + 31.0F * ELEMENTS_IMG_SCALE, Color.WHITE, rFontScale);
+        FontHelper.renderFontCentered(sb, FontHelper.energyNumFontGreen, this.terraCount+"/"+MAX_ELEMENTS, x2, y, Color.WHITE, gFontScale);
+        FontHelper.renderFontCentered(sb, FontHelper.energyNumFontBlue, this.aquaCount+"/"+MAX_ELEMENTS, x2, y - 31.0F * ELEMENTS_IMG_SCALE, Color.WHITE, bFontScale);
     }
 
     @Override
     protected void onHover() {
-//        InputHelper.mX
-//        TipHelper.renderGenericTip(300.0F * Settings.scale, 350.0F * Settings.scale, IgnisText[0], IgnisText[1]);
+        if(InputHelper.justClickedLeft && !isDragging) {
+            onClick();
+        }
+    }
+
+    private void onMouseRelease() {
+        isDragging = false;
+        mouseOffsetX = 0;
+        mouseOffsetY = 0;
     }
 
     @Override
     protected void onUnhover() {
-
+//        if (!InputHelper.isMouseDown)
+//        {
+//            isDragging = false;
+//            mouseOffsetX = 0;
+//            mouseOffsetY = 0;
+//        }
     }
 
     @Override
     protected void onClick() {
-
+        isDragging = true;
+        mouseOffsetX = x - InputHelper.mX;
+        mouseOffsetY = y - InputHelper.mY;
     }
 
     private void onIgnisHover(){
-        TipHelper.renderGenericTip(300.0F * Settings.scale, 350.0F * Settings.scale + currentYOffset, IgnisText[0], IgnisText[1]);
+        if(isDragging) return;
+        TipHelper.renderGenericTip(x + 55.0F * Settings.scale, y + 23.0F * Settings.scale, IgnisText[0], IgnisText[1]);
     }
 
     private void onTerraHover(){
-        TipHelper.renderGenericTip(300.0F * Settings.scale, 350.0F * Settings.scale + currentYOffset, TerraText[0], TerraText[1]);
+        if(isDragging) return;
+        TipHelper.renderGenericTip(x + 55.0F * Settings.scale, y + 23.0F * Settings.scale, TerraText[0], TerraText[1]);
     }
 
     private void onAquaHover(){
-        TipHelper.renderGenericTip(300.0F * Settings.scale, 350.0F * Settings.scale + currentYOffset, AquaText[0], AquaText[1]);
+        if(isDragging) return;
+        TipHelper.renderGenericTip(x + 55.0F * Settings.scale, y + 23.0F * Settings.scale, AquaText[0], AquaText[1]);
     }
+
+    private void updatePosition(float x, float y){
+        this.x = MathUtils.clamp(x, bound.x, bound.x + bound.width);
+        this.y = MathUtils.clamp(y, bound.y, bound.y + bound.height);
+    }
+
+    private void updateHitboxPosition(float x, float y){
+        ignisHitbox.translate(x - hb_w/2, y + terraH/2);
+        terraHitbox.translate(x - hb_w/2, y - terraH/2);
+        aquaHitbox.translate(x - hb_w/2, y - terraH/2 - ignisH);
+    }
+
+//    public void setYOffset(float yOffset){
+//        updatePosition(baseX, baseY + yOffset);
+//    }
 
     @Override
     protected void updateHitbox(){
         ignisHitbox.update();
         terraHitbox.update();
         aquaHitbox.update();
+        hitbox.update();
     }
 
     public static void setMaxElements(int elem){
@@ -332,10 +365,20 @@ public class ElementsCounter extends ClickableUIElement {
             updateHitbox();
             if(this.ignisHitbox.hovered){
                 onIgnisHover();
+                onHover();
             } else if (this.terraHitbox.hovered) {
                 onTerraHover();
+                onHover();
             } else if (this.aquaHitbox.hovered){
                 onAquaHover();
+                onHover();
+            } else {
+                onUnhover();
+            }
+
+            if (!InputHelper.isMouseDown)
+            {
+                onMouseRelease();
             }
 //            if(!checkMax) {
 //                if (AbstractDungeon.player.hasRelic(CoreCrystal.ID)) {
@@ -353,6 +396,10 @@ public class ElementsCounter extends ClickableUIElement {
             prev = this.aquaCount;
             this.aquaCount = getAqua();
             if(prev != this.aquaCount) bFontScale = 1.0F;
+
+            if(isDragging){
+                updatePosition(InputHelper.mX + mouseOffsetX, InputHelper.mY + mouseOffsetY);
+            }
         }
     }
 }

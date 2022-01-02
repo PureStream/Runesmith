@@ -5,11 +5,21 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import runesmith.RunesmithMod;
 
-@SpirePatch(clz = EnergyPanel.class, method = "renderOrb", paramtypes = { "com.badlogic.gdx.graphics.g2d.SpriteBatch"})
+
 public class ElementsCounterRenderPatch {
-    public static void Prefix(EnergyPanel __instance, SpriteBatch sb){
-        if(RunesmithMod.getElementsRender()){
-            RunesmithMod.renderElementsCounter(sb, __instance.current_x);
+    @SpirePatch(clz = EnergyPanel.class, method = "renderOrb", paramtypes = { "com.badlogic.gdx.graphics.g2d.SpriteBatch"})
+    public static class RenderPatch{
+        public static void Prefix(EnergyPanel __instance, SpriteBatch sb){
+            if(RunesmithMod.getElementsRender()){
+                RunesmithMod.renderElementsCounter(sb, __instance.current_x);
+            }
+        }
+    }
+
+    @SpirePatch(clz = EnergyPanel.class, method = "update")
+    public static class UpdatePatch{
+        public static void Prefix(){
+            RunesmithMod.updateElementsCounter();
         }
     }
 }

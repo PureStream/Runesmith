@@ -12,7 +12,7 @@ import runesmith.patches.AbstractCardEnum;
 
 import static runesmith.patches.CardTagEnum.RS_CRAFT;
 
-public class CraftMedicinae extends AbstractRunicCard implements NoStasisCard {
+public class CraftMedicinae extends AbstractRunicCard {
 
     public static final String ID = "Runesmith:CraftMedicinae";
     public static final String IMG_PATH = "runesmith/images/cards/CraftMedicinae.png";
@@ -21,7 +21,7 @@ public class CraftMedicinae extends AbstractRunicCard implements NoStasisCard {
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
     private static final int COST = 1;
-    private static final int POTENCY = 3;
+    private static final int POTENCY = 2;
     private static final int UPG_POTENCY = 1;
     private static final int TERRA_AMT = 5;
 

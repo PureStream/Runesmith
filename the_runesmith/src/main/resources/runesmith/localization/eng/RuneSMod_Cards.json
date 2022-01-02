@@ -179,7 +179,7 @@
   },
   "Runesmith:CraftMedicinae": {
     "NAME": "Craft Medicinae",
-    "DESCRIPTION": "5 runesmith:Terra: runesmith:Craft a runesmith:Medicinae Rune with !RS:Pot! runesmith:Potency. NL Exhaust. NL Cannot be runesmith:Stasis."
+    "DESCRIPTION": "5 runesmith:Terra: runesmith:Craft a runesmith:Medicinae Rune with !RS:Pot! runesmith:Potency. NL Exhaust."
   },
   "Runesmith:LastStand": {
     "NAME": "Last Stand",
@@ -340,7 +340,7 @@
   },
   "Runesmith:ChargedHammer": {
     "NAME": "Charged Hammer",
-    "DESCRIPTION": "Deal !D! damage. NL Spend !M! random runesmith:Elements and runesmith:Break your oldest runesmith:Dud Rune to runesmith:Craft a random non-Dud Rune."
+    "DESCRIPTION": "Deal !D! damage. NL runesmith:Break your oldest runesmith:Dud Rune to runesmith:Craft a random non-Dud Rune."
   },
   "Runesmith:Devolution": {
     "NAME": "Devolution",
@@ -352,7 +352,7 @@
   },
   "Runesmith:LightningRod": {
     "NAME": "Lightning Rod",
-    "DESCRIPTION": "For !M! turns, you lose runesmith:Elements instead of HP. Gain 2 of each runesmith:Element."
+    "DESCRIPTION": "For !M! turns, you lose runesmith:Elements before losing HP. Gain !M! of each runesmith:Element."
   },
   "Runesmith:NegativeSpace": {
     "NAME": "Negative Space",
