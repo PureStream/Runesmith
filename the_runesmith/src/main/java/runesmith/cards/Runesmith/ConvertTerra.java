@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import runesmith.actions.ApplyElementsPowerAction;
 import runesmith.actions.ReduceElementsPowerAction;
+import runesmith.patches.AbstractCardEnum;
 import runesmith.ui.ElementsCounter;
 
 import static runesmith.ui.ElementsCounter.getElementByID;
@@ -30,25 +31,26 @@ public class ConvertTerra extends CustomCard {
                 IMG_PATH,
                 COST,
                 DESCRIPTION,
-                AbstractCard.CardType.SKILL,
-                AbstractCard.CardColor.COLORLESS,
-                AbstractCard.CardRarity.SPECIAL,
-                AbstractCard.CardTarget.SELF
+                CardType.SKILL,
+                AbstractCardEnum.RUNESMITH_BEIGE,
+                CardRarity.SPECIAL,
+                CardTarget.NONE
         );
-        this.baseBlock = BLOCK_AMT;
+//        this.baseBlock = BLOCK_AMT;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(
-                new GainBlockAction(p, p, this.block)
-        );
+        this.onChoseThisOption();
+    }
+
+    public void onChoseThisOption() {
+        AbstractPlayer p = AbstractDungeon.player;
         int convertAmt = getElementByID(ElementsCounter.Elements.TERRA);
         if (convertAmt > 0) {
             AbstractDungeon.actionManager.addToBottom(
                     new ReduceElementsPowerAction(p, p, 0, convertAmt, 0));
             AbstractDungeon.actionManager.addToBottom(
                     new ApplyElementsPowerAction(p, p, convertAmt, 0, convertAmt));
-
         }
     }
 

@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import runesmith.actions.ApplyElementsPowerAction;
 import runesmith.actions.ReduceElementsPowerAction;
+import runesmith.patches.AbstractCardEnum;
 import runesmith.powers.PotentialDownPower;
 import runesmith.powers.PotentialPower;
 import runesmith.ui.ElementsCounter;
@@ -32,26 +33,27 @@ public class ConvertAqua extends CustomCard {
                 IMG_PATH,
                 COST,
                 DESCRIPTION,
-                AbstractCard.CardType.POWER,
-                AbstractCard.CardColor.COLORLESS,
-                AbstractCard.CardRarity.SPECIAL,
-                AbstractCard.CardTarget.SELF
+                CardType.POWER,
+                AbstractCardEnum.RUNESMITH_BEIGE,
+                CardRarity.SPECIAL,
+                CardTarget.NONE
         );
-        this.baseMagicNumber = this.magicNumber = POT_AMT;
+//        this.baseMagicNumber = this.magicNumber = POT_AMT;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new PotentialPower(p, this.magicNumber), this.magicNumber));
-        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new PotentialDownPower(p, this.magicNumber), this.magicNumber));
+        this.onChoseThisOption();
+    }
 
+    public void onChoseThisOption() {
+        AbstractPlayer p = AbstractDungeon.player;
         int convertAmt = getElementByID(ElementsCounter.Elements.AQUA);
-        if(convertAmt>0) {
+        if (convertAmt > 0) {
             AbstractDungeon.actionManager.addToBottom(
-                    new ReduceElementsPowerAction(p, p, convertAmt, 0, convertAmt));
+                    new ReduceElementsPowerAction(p, p, 0, 0, convertAmt));
             AbstractDungeon.actionManager.addToBottom(
                     new ApplyElementsPowerAction(p, p, convertAmt, convertAmt, 0));
         }
-
     }
 
     public AbstractCard makeCopy() {

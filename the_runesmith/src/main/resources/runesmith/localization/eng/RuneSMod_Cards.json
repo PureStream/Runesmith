@@ -54,15 +54,15 @@
   },
   "Runesmith:ConvertIgnis": {
     "NAME": "Ignis Decay",
-    "DESCRIPTION": "Deal !D! damage. NL Lose all runesmith:Ignis. NL Gain runesmith:Terra and runesmith:Aqua equal to runesmith:Ignis lost."
+    "DESCRIPTION": "Lose all runesmith:Ignis. NL Gain runesmith:Terra and runesmith:Aqua equal to runesmith:Ignis lost."
   },
   "Runesmith:ConvertTerra": {
     "NAME": "Terra Decay",
-    "DESCRIPTION": "Gain !B! Block. NL Lose all runesmith:Terra. NL Gain runesmith:Ignis and runesmith:Aqua equal to runesmith:Terra lost."
+    "DESCRIPTION": "Lose all runesmith:Terra. NL Gain runesmith:Ignis and runesmith:Aqua equal to runesmith:Terra lost."
   },
   "Runesmith:ConvertAqua": {
     "NAME": "Aqua Decay",
-    "DESCRIPTION": "Gain !M! runesmith:Potency this turn. NL Lose all runesmith:Aqua. NL Gain runesmith:Ignis and runesmith:Terra equal to runesmith:Aqua lost."
+    "DESCRIPTION": "Lose all runesmith:Aqua. NL Gain runesmith:Ignis and runesmith:Terra equal to runesmith:Aqua lost."
   },
   "Runesmith:Repurpose": {
     "NAME": "Repurpose",

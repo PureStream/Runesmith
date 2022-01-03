@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import runesmith.actions.ApplyElementsPowerAction;
 import runesmith.actions.ReduceElementsPowerAction;
+import runesmith.patches.AbstractCardEnum;
 
 import static runesmith.ui.ElementsCounter.Elements;
 import static runesmith.ui.ElementsCounter.getElementByID;
@@ -33,21 +34,19 @@ public class ConvertIgnis extends CustomCard {
                 COST,
                 DESCRIPTION,
                 CardType.ATTACK,
-                AbstractCard.CardColor.COLORLESS,
-                AbstractCard.CardRarity.SPECIAL,
-                CardTarget.ENEMY
+                AbstractCardEnum.RUNESMITH_BEIGE,
+                CardRarity.SPECIAL,
+                CardTarget.NONE
         );
-        this.baseDamage = ATTACK_DMG;
+//        this.baseDamage = ATTACK_DMG;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(
-                new DamageAction(
-                        m,
-                        new DamageInfo(p, this.damage, this.damageTypeForTurn),
-                        AbstractGameAction.AttackEffect.BLUNT_HEAVY
-                )
-        );
+        this.onChoseThisOption();
+    }
+
+    public void onChoseThisOption() {
+        AbstractPlayer p = AbstractDungeon.player;
         int convertAmt = getElementByID(Elements.IGNIS);
         if (convertAmt > 0) {
             AbstractDungeon.actionManager.addToBottom(
