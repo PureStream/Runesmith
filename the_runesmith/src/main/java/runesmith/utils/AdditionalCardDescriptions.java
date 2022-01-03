@@ -57,29 +57,29 @@ public abstract class AdditionalCardDescriptions {
     public static void modifyDescription(AbstractCard c) {
 //		logger.info("updating string");
 
-        String raw = c.rawDescription;
+//        String raw = c.rawDescription;
 
         EnhanceCountField.enhanceString.set(c, "");
-        raw = raw.replace(" " + ENHANCE_TEXT[0] + ".", "");
-        raw = raw.replace(" " + ENHANCE_TEXT[0] + " +" + (EnhanceCountField.enhanceCount.get(c) - 1) + ".", "");
-        raw = raw.replace(" " + ENHANCE_TEXT[0] + " +" + EnhanceCountField.enhanceCount.get(c) + ".", "");
-
-        raw = raw.replace(" " + STASIS_TEXT[0] + ".", "");
+//        raw = raw.replace(" " + ENHANCE_TEXT[0] + ".", "");
+//        raw = raw.replace(" " + ENHANCE_TEXT[0] + " +" + (EnhanceCountField.enhanceCount.get(c) - 1) + ".", "");
+//        raw = raw.replace(" " + ENHANCE_TEXT[0] + " +" + EnhanceCountField.enhanceCount.get(c) + ".", "");
+//
+//        raw = raw.replace(" " + STASIS_TEXT[0] + ".", "");
 
         if (!EnhanceCountField.enhanceReset.get(c)) {
             if (EnhanceCountField.enhanceCount.get(c) == 1) {
                 EnhanceCountField.enhanceString.set(c, ENHANCE_TEXT[1]);
-                raw = raw + " " + ENHANCE_TEXT[0] + ".";
+//                raw = raw + " " + ENHANCE_TEXT[0] + ".";
             } else if (EnhanceCountField.enhanceCount.get(c) > 1) {
                 EnhanceCountField.enhanceString.set(c, ENHANCE_TEXT[1] + "+" + EnhanceCountField.enhanceCount.get(c));
-                raw = raw + " " + ENHANCE_TEXT[0] + " +" + EnhanceCountField.enhanceCount.get(c) + ".";
+//                raw = raw + " " + ENHANCE_TEXT[0] + " +" + EnhanceCountField.enhanceCount.get(c) + ".";
             }
         }
 
-        if (CardStasisStatus.isStasis.get(c)) {
-            raw = raw + " " + STASIS_TEXT[0] + ".";
-        }
-        c.rawDescription = raw;
+//        if (CardStasisStatus.isStasis.get(c)) {
+//            raw = raw + " " + STASIS_TEXT[0] + ".";
+//        }
+//        c.rawDescription = raw;
     }
 
     @SpirePatch(cls = "com.megacrit.cardcrawl.cards.AbstractCard", method = "initializeDescription")

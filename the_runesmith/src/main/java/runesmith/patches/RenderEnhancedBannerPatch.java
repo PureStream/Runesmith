@@ -21,8 +21,9 @@ import java.util.ArrayList;
 
 public class RenderEnhancedBannerPatch {
 
-    private static Texture ENHANCED_BANNER = ImageMaster.loadImage("runesmith/images/cardui/512/enhance_banner.png");
-    private static Color textColor = new Color(1245392127);
+    private static final Texture ENHANCED_BANNER = ImageMaster.loadImage("runesmith/images/cardui/512/enhance_banner.png");
+    private static final Texture STASIS_INDICATOR = ImageMaster.loadImage("runesmith/images/cardui/512/stasis_indicator.png");
+    private static final Color textColor = new Color(1245392127);
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("Runesmith:CardEnhanced");
     public static final String[] ENHANCE_TEXT = uiStrings.TEXT;
 
@@ -33,14 +34,13 @@ public class RenderEnhancedBannerPatch {
     public static class RenderEnhanceBanner {
         @SpireInsertPatch(locator = Locator.class)
         public static void Insert(AbstractCard __instance, SpriteBatch sb, boolean hovered, boolean selected) {
-            if (EnhanceCountField.enhanceCount.get(__instance)>0) {
-                renderBanner(sb,__instance);
+            if (EnhanceCountField.enhanceCount.get(__instance) > 0) {
+                renderBanner(sb, __instance);
             }
         }
 
-        private static class Locator extends SpireInsertLocator{
-            public int[] Locate(CtBehavior ctMethodToPatch) throws CannotCompileException, PatchingException
-            {
+        private static class Locator extends SpireInsertLocator {
+            public int[] Locate(CtBehavior ctMethodToPatch) throws CannotCompileException, PatchingException {
 //                Matcher finalMatcher = new Matcher.MethodCallMatcher(AbstractPower.class, "atDamageFinalGive");
                 ArrayList<Matcher> preMatchers = new ArrayList<>();
 
@@ -48,19 +48,31 @@ public class RenderEnhancedBannerPatch {
                 return new int[]{LineFinder.findAllInOrder(ctMethodToPatch, preMatchers, finalMatcher)[0]};
             }
         }
+
+        @SpirePostfixPatch
+        public static void RenderAfter(AbstractCard __instance, SpriteBatch sb, boolean hovered, boolean selected) {
+            if (CardStasisStatus.isStasis.get(__instance)) {
+                renderStasisIndicator(sb, __instance);
+            }
+        }
     }
 
-    static void renderBanner(SpriteBatch sb, AbstractCard c){
-        Color color = (Color) ReflectionHacks.getPrivate(c, AbstractCard.class, "renderColor");
+    static void renderBanner(SpriteBatch sb, AbstractCard c) {
+        Color color = ReflectionHacks.getPrivate(c, AbstractCard.class, "renderColor");
         renderHelper(sb, c, color, ENHANCED_BANNER, c.current_x, c.current_y);
 
         BitmapFont font = FontHelper.cardDescFont_L;
         font.getData().setScale(1.0F);
         GlyphLayout gl = new GlyphLayout(font, EnhanceCountField.enhanceString.get(c));
-        float scale = Math.min((170.0F)/gl.width, (16.0F)/gl.height)*c.drawScale;
-        font.getData().setScale(scale*Settings.scale);
+        float scale = Math.min((170.0F) / gl.width, (16.0F) / gl.height) * c.drawScale;
+        font.getData().setScale(scale * Settings.scale);
         FontHelper.renderRotatedText(sb, font, EnhanceCountField.enhanceString.get(c), c.current_x, c.current_y, 0.0F, 139.0F * Settings.scale * c.drawScale, c.angle, true, textColor);
         font.getData().setScale(1.0F);
+    }
+
+    static void renderStasisIndicator(SpriteBatch sb, AbstractCard c) {
+        Color color = ReflectionHacks.getPrivate(c, AbstractCard.class, "renderColor");
+        renderHelper(sb, c, color, STASIS_INDICATOR, c.current_x, c.current_y);
     }
 
     private static void renderHelper(SpriteBatch sb, AbstractCard c, Color color, Texture img, float drawX, float drawY) {

@@ -14,6 +14,6 @@ public abstract class StasisCard {
     }
 
     public static boolean canStasis(AbstractCard c) {
-        return !(CardStasisStatus.isStasis.get(c) || (c instanceof NoStasisCard)); //&& !(c.type == CardType.CURSE) && !(c.type == CardType.STATUS);
+        return !(CardStasisStatus.isStasis.get(c) || (c instanceof NoStasisCard)) && EnhanceCard.canEnhance(c); //&& !(c.type == CardType.CURSE) && !(c.type == CardType.STATUS);
     }
 }

@@ -50,7 +50,7 @@ public class GoWithTheFlow extends CustomCard {
                 new DamageAction(
                         m,
                         new DamageInfo(p, this.damage, this.damageTypeForTurn),
-                        AbstractGameAction.AttackEffect.SLASH_DIAGONAL
+                        AbstractGameAction.AttackEffect.BLUNT_LIGHT
                 )
         );
         AbstractDungeon.actionManager.addToBottom(
