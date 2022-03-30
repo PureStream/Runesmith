@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>therunesmith</groupId>
     <artifactId>therunesmith</artifactId>
-    <version>1.0.5</version>
+    <version>1.0.6</version>
     <packaging>jar</packaging>
     <name>TheRunesmith</name>
     <description>runesmith</description>
@@ -96,8 +96,10 @@
 
                             <target>
 
-                                <copy file="target/TheRunesmith.jar" tofile="${Steam.path}/common/SlayTheSpire/mods/${project.name}.jar"/>
-                                <copy file="target/TheRunesmith.jar" tofile="C:/Users/krids/java/Runesmith/mods/TheRunesmith.jar"/>
+                                <copy file="target/TheRunesmith.jar"
+                                      tofile="${Steam.path}/common/SlayTheSpire/mods/${project.name}.jar"/>
+                                <copy file="target/TheRunesmith.jar"
+                                      tofile="C:/Users/USER/Documents/java/Runesmith/mods/TheRunesmith.jar"/>
 
 
                             </target>

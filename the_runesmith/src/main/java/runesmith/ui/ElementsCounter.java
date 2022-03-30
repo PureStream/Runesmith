@@ -364,14 +364,14 @@ public class ElementsCounter extends ClickableUIElement {
 //            super.update();
             updateHitbox();
             if(this.ignisHitbox.hovered){
+                onHover();
                 onIgnisHover();
-                onHover();
             } else if (this.terraHitbox.hovered) {
+                onHover();
                 onTerraHover();
-                onHover();
             } else if (this.aquaHitbox.hovered){
-                onAquaHover();
                 onHover();
+                onAquaHover();
             } else {
                 onUnhover();
             }

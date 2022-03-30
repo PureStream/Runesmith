@@ -246,14 +246,6 @@ public class RunesmithMod implements PostExhaustSubscriber,
     }
 
     public static void renderElementsCounter(SpriteBatch sb, float current_x){
-//        AbstractPlayer p = AbstractDungeon.player;
-//        if (elementalistEnabled){
-//            if (getRenderElementalistOrbs()) {
-//                elementsCounter.setYOffset(95.0F * Settings.scale);
-//            } else{
-//                elementsCounter.setYOffset(0.0F);
-//            }
-//        }
         elementsCounter.render(sb, current_x);
     }
 
@@ -302,7 +294,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
 
     @Override
     public void receiveEditCards() {
-        logger.info("begin editting cards");
+        logger.info("begin editing cards");
         BaseMod.addDynamicVariable(new PotencyVariable());
 
         loadCardsToAdd();

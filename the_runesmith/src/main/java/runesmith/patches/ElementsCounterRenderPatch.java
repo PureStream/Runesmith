@@ -19,7 +19,10 @@ public class ElementsCounterRenderPatch {
     @SpirePatch(clz = EnergyPanel.class, method = "update")
     public static class UpdatePatch{
         public static void Prefix(){
-            RunesmithMod.updateElementsCounter();
+            // Only update when rendering elements counter
+            if (RunesmithMod.getElementsRender()) {
+                RunesmithMod.updateElementsCounter();
+            }
         }
     }
 }

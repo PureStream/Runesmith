@@ -51,7 +51,7 @@ public class ElementalConversion extends CustomCard {
         this.addToBot(new ChooseOneAction(elementChoices));
 
         if (upgraded) {
-            this.addToBot(new DrawCardAction(p, DRAW_AMT));
+            this.addToBot(new DrawCardAction(p, this.magicNumber));
         }
     }
 
