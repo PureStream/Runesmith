@@ -5,9 +5,9 @@
     "Blizzarre",
     "PureStream"
   ],
-  "description": "Add a new class called The Runesmith",
+  "description": "Add a new class called the Runesmith",
   "credits": "\nBDWSSBB - Card descriptions wording improvements.\nDalamzi - Korean translation.\nRita-Bernstein - Chinese translation.\nSlathos - Polish translation.",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "sts_version": "07-17-2019",
   "mts_version": "3.11.0",
   "dependencies": [

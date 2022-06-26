@@ -63,7 +63,7 @@
   "Runesmith:UnlimitedPowerPower": {
     "NAME": "Unlimited Power",
     "DESCRIPTIONS": [
-      "#yElements are no longer needed for Crafting."
+      "ALL #yElement gains are increased by #b%d."
     ]
   },
   "Runesmith:RunesonancePower": {

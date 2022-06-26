@@ -141,7 +141,7 @@
     "NAME": "权宜护甲",
     "DESCRIPTION": "随机 runesmith:降级 抽牌堆，手牌或弃牌堆的一张牌。 NL 获得 !B! 点 格挡 。 NL 获得 1 点 runesmith:土素 。"
   },
-  "Runesmith:ShiftingStrike": {
+  "Runesmith:ShiftingHammer": {
     "NAME": "移动打击",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 将手牌中的一张牌的所有 runesmith:强化 移除， NL 将一张牌 runesmith:强化 等量次。"
   },

@@ -141,7 +141,7 @@
     "NAME": "즉석제작 방어구",
     "DESCRIPTION": "내 손, 버린 카드 runesmith:더미, 뽑을 카드 더미에 있는 무작위 카드를 1장 runesmith:퇴화 시킵니다. NL 방어도 를 !B! 얻습니다. NL runesmith:대지 1을 얻습니다."
   },
-  "Runesmith:ShiftingStrike": {
+  "Runesmith:ShiftingHammer": {
     "NAME": "속임수 타격",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 손에 있는 카드 1 장의 runesmith:향상 을 모두 제거하고 다른 카드를 1장 선택하여 그만큼 강화 시킵니다."
   },

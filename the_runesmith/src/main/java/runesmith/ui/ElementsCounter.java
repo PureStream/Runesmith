@@ -7,7 +7,6 @@ import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Pixmap;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.graphics.glutils.FrameBuffer;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Matrix4;
@@ -18,11 +17,12 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.*;
-import com.megacrit.cardcrawl.helpers.controller.CInputHelper;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import runesmith.RunesmithMod;
 import runesmith.patches.ElementsGainedCountField;
+import runesmith.powers.UnlimitedPowerPower;
 import runesmith.relics.CoreCrystal;
 
 public class ElementsCounter extends ClickableUIElement {
@@ -87,7 +87,7 @@ public class ElementsCounter extends ClickableUIElement {
     private static int ignis = 0, terra = 0, aqua = 0;
 //    public static String IGNIS_ID = "IGNIS_ID", TERRA_ID = "TERRA_ID", AQUA_ID = "AQUA_ID";
 
-    public enum Elements{
+    public enum Elements {
         IGNIS,
         TERRA,
         AQUA
@@ -106,7 +106,7 @@ public class ElementsCounter extends ClickableUIElement {
     }
 
     public static int getElementByID(Elements id) {
-        switch(id){
+        switch (id) {
             case IGNIS:
                 return ignis;
             case TERRA:
@@ -122,13 +122,27 @@ public class ElementsCounter extends ClickableUIElement {
         AbstractPlayer p = AbstractDungeon.player;
         if (ignis > 0 || terra > 0 || aqua > 0) {
             int totalElementsGain = 0;
+            int bonus = 0;
+            if (p.hasPower(UnlimitedPowerPower.POWER_ID)) {
+                AbstractPower unlimitedPow = p.getPower(UnlimitedPowerPower.POWER_ID);
+                unlimitedPow.flash();
+                bonus = unlimitedPow.amount;
+                bonus = Math.max(0, bonus);
+            }
+
             double multiplier = (p.hasRelic(CoreCrystal.ID)) ? 1.5 : 1;
-            if (ignis > 0)
+            if (ignis > 0) {
+                ignis += bonus;
                 totalElementsGain += (ignis *= multiplier);
-            if (terra > 0)
+            }
+            if (terra > 0) {
+                terra += bonus;
                 totalElementsGain += (terra *= multiplier);
-            if (aqua > 0)
+            }
+            if (aqua > 0) {
+                aqua += bonus;
                 totalElementsGain += (aqua *= multiplier);
+            }
             ElementsGainedCountField.elementsCount.set(p, ElementsGainedCountField.elementsCount.get(p) + totalElementsGain);
         }
 
@@ -137,13 +151,13 @@ public class ElementsCounter extends ClickableUIElement {
         if (terra != 0)
             ElementsCounter.terra = limitElementBound(ElementsCounter.terra + terra);
         if (aqua != 0)
-            ElementsCounter.aqua = limitElementBound(ElementsCounter.aqua + aqua) ;
+            ElementsCounter.aqua = limitElementBound(ElementsCounter.aqua + aqua);
 
         p.hand.group.forEach(AbstractCard::applyPowers);
     }
 
     public static void applyElements(Elements id, int amount) {
-        switch(id){
+        switch (id) {
             case IGNIS:
                 applyElements(amount, 0, 0);
                 break;
@@ -151,7 +165,7 @@ public class ElementsCounter extends ClickableUIElement {
                 applyElements(0, amount, 0);
                 break;
             case AQUA:
-                applyElements(0,0,amount);
+                applyElements(0, 0, amount);
         }
     }
 
@@ -168,21 +182,21 @@ public class ElementsCounter extends ClickableUIElement {
         aqua = 0;
     }
 
-    public ElementsCounter(Texture image){
-        super(image, baseX, baseY , hb_w, hb_h);
+    public ElementsCounter(Texture image) {
+        super(image, baseX, baseY, hb_w, hb_h);
         this.fbo = new FrameBuffer(Pixmap.Format.RGBA8888, IMG_DIM, IMG_DIM, false, false);
-        this.ignisHitbox = new Hitbox(baseX - hb_w/2,baseY + terraH/2, hb_w,ignisH);
-        this.terraHitbox = new Hitbox(baseX - hb_w/2, baseY - terraH/2, hb_w,terraH);
-        this.aquaHitbox = new Hitbox(baseX - hb_w/2,baseY - terraH/2 - ignisH, hb_w,ignisH);
+        this.ignisHitbox = new Hitbox(baseX - hb_w / 2, baseY + terraH / 2, hb_w, ignisH);
+        this.terraHitbox = new Hitbox(baseX - hb_w / 2, baseY - terraH / 2, hb_w, terraH);
+        this.aquaHitbox = new Hitbox(baseX - hb_w / 2, baseY - terraH / 2 - ignisH, hb_w, ignisH);
         this.setClickable(false);
 
         sb2 = new SpriteBatch(20);
         Matrix4 matrix = new Matrix4();
-        matrix.setToOrtho2D(0,0, IMG_DIM, IMG_DIM);
+        matrix.setToOrtho2D(0, 0, IMG_DIM, IMG_DIM);
         sb2.setProjectionMatrix(matrix);
     }
 
-    public void render(SpriteBatch sb, float current_x){
+    public void render(SpriteBatch sb, float current_x) {
         float x2 = current_x + x - baseX;
         updateHitboxPosition(x2, y);
 //        textX = current_x;
@@ -267,14 +281,14 @@ public class ElementsCounter extends ClickableUIElement {
 
         sb.draw(ELEMENTS_FRAME, x2 - 128.0F - Settings.VERT_LETTERBOX_AMT, y - 128.0F - Settings.HORIZ_LETTERBOX_AMT, 128.0F, 128.0F, IMG_DIM, IMG_DIM, ELEMENTS_IMG_SCALE, ELEMENTS_IMG_SCALE, 0.0F, 0, 0, 256, 256, false, false);
 
-        FontHelper.renderFontCentered(sb, FontHelper.energyNumFontRed, this.ignisCount+"/"+MAX_ELEMENTS, x2, y + 31.0F * ELEMENTS_IMG_SCALE, Color.WHITE, rFontScale);
-        FontHelper.renderFontCentered(sb, FontHelper.energyNumFontGreen, this.terraCount+"/"+MAX_ELEMENTS, x2, y, Color.WHITE, gFontScale);
-        FontHelper.renderFontCentered(sb, FontHelper.energyNumFontBlue, this.aquaCount+"/"+MAX_ELEMENTS, x2, y - 31.0F * ELEMENTS_IMG_SCALE, Color.WHITE, bFontScale);
+        FontHelper.renderFontCentered(sb, FontHelper.energyNumFontRed, this.ignisCount + "/" + MAX_ELEMENTS, x2, y + 31.0F * ELEMENTS_IMG_SCALE, Color.WHITE, rFontScale);
+        FontHelper.renderFontCentered(sb, FontHelper.energyNumFontGreen, this.terraCount + "/" + MAX_ELEMENTS, x2, y, Color.WHITE, gFontScale);
+        FontHelper.renderFontCentered(sb, FontHelper.energyNumFontBlue, this.aquaCount + "/" + MAX_ELEMENTS, x2, y - 31.0F * ELEMENTS_IMG_SCALE, Color.WHITE, bFontScale);
     }
 
     @Override
     protected void onHover() {
-        if(InputHelper.justClickedLeft && !isDragging) {
+        if (InputHelper.justClickedLeft && !isDragging) {
             onClick();
         }
     }
@@ -302,30 +316,30 @@ public class ElementsCounter extends ClickableUIElement {
         mouseOffsetY = y - InputHelper.mY;
     }
 
-    private void onIgnisHover(){
-        if(isDragging) return;
+    private void onIgnisHover() {
+        if (isDragging) return;
         TipHelper.renderGenericTip(x + 55.0F * Settings.scale, y + 23.0F * Settings.scale, IgnisText[0], IgnisText[1]);
     }
 
-    private void onTerraHover(){
-        if(isDragging) return;
+    private void onTerraHover() {
+        if (isDragging) return;
         TipHelper.renderGenericTip(x + 55.0F * Settings.scale, y + 23.0F * Settings.scale, TerraText[0], TerraText[1]);
     }
 
-    private void onAquaHover(){
-        if(isDragging) return;
+    private void onAquaHover() {
+        if (isDragging) return;
         TipHelper.renderGenericTip(x + 55.0F * Settings.scale, y + 23.0F * Settings.scale, AquaText[0], AquaText[1]);
     }
 
-    private void updatePosition(float x, float y){
+    private void updatePosition(float x, float y) {
         this.x = MathUtils.clamp(x, bound.x, bound.x + bound.width);
         this.y = MathUtils.clamp(y, bound.y, bound.y + bound.height);
     }
 
-    private void updateHitboxPosition(float x, float y){
-        ignisHitbox.translate(x - hb_w/2, y + terraH/2);
-        terraHitbox.translate(x - hb_w/2, y - terraH/2);
-        aquaHitbox.translate(x - hb_w/2, y - terraH/2 - ignisH);
+    private void updateHitboxPosition(float x, float y) {
+        ignisHitbox.translate(x - hb_w / 2, y + terraH / 2);
+        terraHitbox.translate(x - hb_w / 2, y - terraH / 2);
+        aquaHitbox.translate(x - hb_w / 2, y - terraH / 2 - ignisH);
     }
 
 //    public void setYOffset(float yOffset){
@@ -333,19 +347,19 @@ public class ElementsCounter extends ClickableUIElement {
 //    }
 
     @Override
-    protected void updateHitbox(){
+    protected void updateHitbox() {
         ignisHitbox.update();
         terraHitbox.update();
         aquaHitbox.update();
         hitbox.update();
     }
 
-    public static void setMaxElements(int elem){
+    public static void setMaxElements(int elem) {
         MAX_ELEMENTS = elem;
     }
 
     @Override
-    public void update(){
+    public void update() {
         this.angle1 += Gdx.graphics.getDeltaTime() * -20.0F;
         this.angle2 += Gdx.graphics.getDeltaTime() * 10.0F;
         this.angle3 += Gdx.graphics.getDeltaTime() * -8.0F;
@@ -359,25 +373,23 @@ public class ElementsCounter extends ClickableUIElement {
             bFontScale = MathHelper.scaleLerpSnap(bFontScale, fontScale);
         }
         AbstractPlayer p = AbstractDungeon.player;
-        if(CardCrawlGame.dungeon != null && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT )
-        {
+        if (CardCrawlGame.dungeon != null && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
 //            super.update();
             updateHitbox();
-            if(this.ignisHitbox.hovered){
+            if (this.ignisHitbox.hovered) {
                 onHover();
                 onIgnisHover();
             } else if (this.terraHitbox.hovered) {
                 onHover();
                 onTerraHover();
-            } else if (this.aquaHitbox.hovered){
+            } else if (this.aquaHitbox.hovered) {
                 onHover();
                 onAquaHover();
             } else {
                 onUnhover();
             }
 
-            if (!InputHelper.isMouseDown)
-            {
+            if (!InputHelper.isMouseDown) {
                 onMouseRelease();
             }
 //            if(!checkMax) {
@@ -389,15 +401,15 @@ public class ElementsCounter extends ClickableUIElement {
             int prev;
             prev = this.ignisCount;
             this.ignisCount = getIgnis();
-            if(prev != this.ignisCount) rFontScale = 1.0F;
+            if (prev != this.ignisCount) rFontScale = 1.0F;
             prev = this.terraCount;
             this.terraCount = getTerra();
-            if(prev != this.terraCount) gFontScale = 1.0F;
+            if (prev != this.terraCount) gFontScale = 1.0F;
             prev = this.aquaCount;
             this.aquaCount = getAqua();
-            if(prev != this.aquaCount) bFontScale = 1.0F;
+            if (prev != this.aquaCount) bFontScale = 1.0F;
 
-            if(isDragging){
+            if (isDragging) {
                 updatePosition(InputHelper.mX + mouseOffsetX, InputHelper.mY + mouseOffsetY);
             }
         }

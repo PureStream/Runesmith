@@ -20,6 +20,7 @@ public class UnlimitedPower extends CustomCard {
     public static final String IMG_PATH = "runesmith/images/cards/UnlimitedPower.png"; //<-------------- need some img
     private static final int COST = 2;
     private static final int COST_UPGRADE = 1;
+    private static final int BONUS_AMT = 1;
 
     public UnlimitedPower() {
         super(
@@ -33,12 +34,14 @@ public class UnlimitedPower extends CustomCard {
                 CardRarity.RARE,
                 CardTarget.SELF
         );
+
+        this.baseMagicNumber = this.magicNumber = BONUS_AMT;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (!p.hasPower(UnlimitedPowerPower.POWER_ID))
             AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p,
-                    new UnlimitedPowerPower(p)));
+                    new UnlimitedPowerPower(p, this.magicNumber)));
     }
 
     public AbstractCard makeCopy() {

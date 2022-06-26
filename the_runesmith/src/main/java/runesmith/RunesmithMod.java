@@ -153,8 +153,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
     }
 
     private void loadAudio() {
-        @SuppressWarnings (value="unchecked")
-        HashMap<String, Sfx> map = (HashMap<String, Sfx>) ReflectionHacks.getPrivate(CardCrawlGame.sound, SoundMaster.class, "map");
+        HashMap<String, Sfx> map = ReflectionHacks.getPrivate(CardCrawlGame.sound, SoundMaster.class, "map");
         map.put("RUNESMITH_HAMMER", new Sfx("runesmith/audio/HammerDoubleHit.ogg", false));
     }
 
@@ -235,7 +234,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
         }
     }
 
-    class Keywords {
+    static class Keywords {
         KeywordWithProper[] keywords;
     }
 
@@ -323,7 +322,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
         cardsToAdd.add(new EnergizedChisel());
         cardsToAdd.add(new MakeshiftArmor());
         cardsToAdd.add(new HammerThrow());
-        cardsToAdd.add(new ShiftingStrike());
+        cardsToAdd.add(new ShiftingHammer());
         cardsToAdd.add(new Grindstone());
         cardsToAdd.add(new Repurpose());
         cardsToAdd.add(new HammerTime());
@@ -540,7 +539,7 @@ public class RunesmithMod implements PostExhaustSubscriber,
     @Override
     public int receiveOnPlayerLoseBlock(int arg0) {
         AbstractPlayer p = AbstractDungeon.player;
-        logger.info("current block is: " + p.currentBlock);
+//        logger.info("current block is: " + p.currentBlock);
         int blockLoss = arg0;
         if (p.hasPower(PermafrostPower.POWER_ID)) {
             int lostByPermafrost = (int) Math.round(p.currentBlock / 2.0);

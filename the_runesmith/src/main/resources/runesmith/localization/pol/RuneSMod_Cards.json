@@ -159,7 +159,7 @@
     "NAME": "Zbroja ze Złomu",
     "DESCRIPTION": "runesmith:Zdeklasuj losową kartę ze stosu kart rozgrywających, ręki lub ze stosu kart odrzuconych. NL Zyskaj !B! pkt. Bloku. NL Zyskaj 1 runesmith:Terra."
   },
-  "Runesmith:ShiftingStrike": {
+  "Runesmith:ShiftingHammer": {
     "NAME": "Przemieszczające Uderzenie",
     "DESCRIPTION": "Zadaj !D! pkt. obrażeń. NL runesmith:Zdeklasuj kartę ze swojej ręki i Ulepsz kartę ze swojej ręki."
   },

@@ -141,9 +141,9 @@
     "NAME": "Makeshift Armor",
     "DESCRIPTION": "runesmith:Downgrade a random card in your draw pile, hand, or discard pile. NL Gain !B! Block. NL Gain 1 runesmith:Terra."
   },
-  "Runesmith:ShiftingStrike": {
-    "NAME": "Shifting Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Remove all runesmith:Enhancement from a card in your hand, then runesmith:Enhance one that many times."
+  "Runesmith:ShiftingHammer": {
+    "NAME": "Shifting Hammer",
+    "DESCRIPTION": "Deal !D! damage twice. NL runesmith:Enhance a random card in your hand."
   },
   "Runesmith:ChaoticBlast": {
     "NAME": "Chaotic Blast",
@@ -222,8 +222,8 @@
   },
   "Runesmith:UnlimitedPower": {
     "NAME": "Unlimited Power",
-    "DESCRIPTION": "runesmith:Elements are no longer needed for runesmith:Crafting.",
-    "UPGRADE_DESCRIPTION": "Innate. NL runesmith:Elements are no longer needed for runesmith:Crafting."
+    "DESCRIPTION": "Increase ALL runesmith:Element gains by !M!.",
+    "UPGRADE_DESCRIPTION": "Increase ALL runesmith:Element gains by !M!."
   },
   "Runesmith:WhiteBalance": {
     "NAME": "White Balance",
