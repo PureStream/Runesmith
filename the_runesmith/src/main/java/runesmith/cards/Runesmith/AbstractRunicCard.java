@@ -142,7 +142,7 @@ public abstract class AbstractRunicCard extends CustomCard {
 
     public static boolean checkAlwaysFreeToCraft(){
         AbstractPlayer p = AbstractDungeon.player;
-        alwaysFreeToCraft = p.hasRelic(PocketReactor.ID)||p.hasPower(UnlimitedPowerPower.POWER_ID);
+        alwaysFreeToCraft = p.hasRelic(PocketReactor.ID);
         return alwaysFreeToCraft;
     }
 

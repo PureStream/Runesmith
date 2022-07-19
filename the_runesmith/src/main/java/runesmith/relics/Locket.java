@@ -8,6 +8,9 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import runesmith.RunesmithMod;
 import runesmith.actions.cards.MetallurgicalResearchAction;
 import runesmith.cards.Runesmith.LastStand;
 
@@ -38,11 +41,17 @@ public class Locket extends AbstractRunesmithRelic {
 
     public int onPlayerHeal(int healAmount) {
         AbstractPlayer p = AbstractDungeon.player;
-        if (p.currentHealth + healAmount > p.maxHealth * 0.15 && !isAvailable && !isUsedThisCombat && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
-            isAvailable = true;
-            this.pulse = true;
-            beginPulse();
+
+        // try catch to prevent exception when cannot getCurrRoom
+        try {
+            if (p.currentHealth + healAmount > p.maxHealth * 0.15 && !isAvailable && !isUsedThisCombat && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
+                isAvailable = true;
+                this.pulse = true;
+                beginPulse();
+            }
+        } catch (Exception ignored) {
         }
+
         return healAmount;
     }
 

@@ -222,8 +222,8 @@
   },
   "Runesmith:UnlimitedPower": {
     "NAME": "Unlimited Power",
-    "DESCRIPTION": "Increase ALL runesmith:Element gains by !M!.",
-    "UPGRADE_DESCRIPTION": "Increase ALL runesmith:Element gains by !M!."
+    "DESCRIPTION": "Increase ALL runesmith:Element gains by !M!. NL Gain !M! of each runesmith:Element.",
+    "UPGRADE_DESCRIPTION": "Increase ALL runesmith:Element gains by !M!. NL Gain !M! of each runesmith:Element."
   },
   "Runesmith:WhiteBalance": {
     "NAME": "White Balance",

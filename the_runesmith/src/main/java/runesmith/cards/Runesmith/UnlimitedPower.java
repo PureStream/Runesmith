@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import runesmith.actions.ApplyElementsPowerAction;
 import runesmith.patches.AbstractCardEnum;
 import runesmith.powers.UnlimitedPowerPower;
 
@@ -39,9 +40,10 @@ public class UnlimitedPower extends CustomCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (!p.hasPower(UnlimitedPowerPower.POWER_ID))
-            AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p,
-                    new UnlimitedPowerPower(p, this.magicNumber)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
+                new UnlimitedPowerPower(p, this.magicNumber)));
+        AbstractDungeon.actionManager.addToBottom(
+                new ApplyElementsPowerAction(p, p, this.magicNumber, this.magicNumber, this.magicNumber));
     }
 
     public AbstractCard makeCopy() {
